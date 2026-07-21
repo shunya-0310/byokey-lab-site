@@ -245,8 +245,8 @@ function HomePage({ onNavigate }) {
           <div className="eyebrow"><ShieldCheck size={17} /> Bring Your Own Key</div>
           <h1 className="sr-only">BYOKey Lab</h1>
           <div className="brand-lockup"><img src={byokeyLabLogo} alt="BYOKey Lab - The Key is in your hand" /></div>
-          <p className="hero-lead">あらゆるアプリを、<br />LLMで新たな体験へ。</p>
-          <p className="hero-copy">使い慣れたアプリに、自分で選んだAIをつなぐ。BYOKey Labは、ユーザー・アプリ開発者・LLMプロバイダを結び、買い切り型の小さなアプリから新しい体験を育てます。</p>
+          <p className="hero-lead">LLMアプリを、<br />定額に縛られない体験へ。</p>
+          <p className="hero-copy">BYOKey Labは、LLMを組み込んだ買い切り型の小さなアプリをつくります。ユーザーは自分のAPIキーをつなぎ、必要な分だけ従量課金で使えます。</p>
           <div className="hero-actions">
             <button className="button button-primary" type="button" onClick={() => onNavigate("/speak/english/")}>最初のプロダクトを見る<ArrowRight size={18} /></button>
             <button className="button button-secondary" type="button" onClick={() => onNavigate("/guide/api/")}>API設定ガイド<BookOpen size={18} /></button>
@@ -296,6 +296,41 @@ function HomePage({ onNavigate }) {
       </main>
       <Footer onNavigate={onNavigate} />
     </>
+  );
+}
+
+function SpeakFeatureBand() {
+  const features = [
+    {
+      icon: MessageCircle,
+      title: "テーマに沿って長く話せる",
+      body: "旅行、日常、仕事前の雑談など、会話を自然に続けながら表現を増やします。",
+    },
+    {
+      icon: BrainCircuit,
+      title: "ライトなChatsも使える",
+      body: "短い質問や表現確認だけをしたいときは、会話練習とは別にすばやく相談できます。",
+    },
+    {
+      icon: CheckCircle2,
+      title: "その場で直してもらえる",
+      body: "通じるけれど不自然な言い方、語感の違い、より自然な返し方を会話中に確認できます。",
+    },
+  ];
+
+  return (
+    <section className="speak-features" aria-label="BYOKey Speakの基本機能">
+      {features.map((feature) => {
+        const Icon = feature.icon;
+        return (
+          <article key={feature.title}>
+            <Icon size={24} />
+            <h2>{feature.title}</h2>
+            <p>{feature.body}</p>
+          </article>
+        );
+      })}
+    </section>
   );
 }
 
@@ -453,7 +488,7 @@ function CoachSettingsDemo() {
       </div>
       <div className="level-effect" role="status"><strong>{level}の会話レベル</strong><p>{cefrProfiles[level]}</p></div>
       <label htmlFor="coach-skill">Coach Personalities &amp; Skills</label>
-      <textarea id="coach-skill" defaultValue="辛抱強く、会話の流れを保つ先生。日本語の質問も受け付け、返信後に訂正を短く説明してください。" />
+      <textarea id="coach-skill" defaultValue="ビジネスではなく日常会話を強化したいので、かしこまった話し方ではなくフランクに話してほしい。通じはするけど、ネイティブでは使わない表現など、細かなところも「ネイティブではこうだよ」と指摘してほしい。スラングや気の利いた言い回しをよく使う性格。解説部分だけは英語だけでなく日本語も併記して。" />
     </div>
   );
 }
@@ -494,6 +529,7 @@ const faqGroups = [
       ["日本語を混ぜても大丈夫ですか？", "はい。英語が出てこない部分を日本語で尋ね、Quick Assistで文脈に合う英語を提案できます。入力中の文章を消さずに必要な表現だけを追加します。"],
       ["機種変更時に履歴やキーは引き継がれますか？", "自動クラウド同期は行いません。セキュリティ上、APIキーのバックアップも無効です。新しい端末でAPIキーを再設定し、履歴の移行機能は公開版の仕様として別途案内します。"],
       ["アプリを削除するとデータはどうなりますか？", "端末内にある設定、会話履歴、暗号化済みAPIキーはアンインストールにより削除されます。各LLM事業者側に送信済みのデータは、各社の保持方針に従います。"],
+      ["問い合わせ先はどこですか？", "現時点の問い合わせ先はXの @gaju_nft です。Google Play公開時には、審査要件に合わせてメールアドレス等の連絡先も整備します。"],
     ],
   },
 ];
@@ -503,7 +539,7 @@ function FaqSection({ onNavigate }) {
     <section className="faq-section" id="faq">
       <div className="section-intro">
         <p className="section-kicker">FAQ</p>
-        <h2>アプリを使用する前に、知っておきたいこと。</h2>
+        <h2>アプリを使用する前に。</h2>
         <p>APIキーや料金の仕組み、データの取り扱い、安全性について説明します。</p>
       </div>
       <div className="faq-groups">
@@ -560,6 +596,7 @@ function SpeakPage({ onNavigate }) {
           <ConversationPreview />
         </section>
         <TrustBand />
+        <SpeakFeatureBand />
         <section className="speed-section">
           <div className="section-intro">
             <p className="section-kicker">QUICK ASSIST</p>
@@ -651,7 +688,7 @@ function PrivacyPage({ onNavigate }) {
           <h2>5. BYOKey Labによる収集</h2><p>現行版では、独自のユーザー登録、クラウドデータベース、広告SDK、アクセス解析SDKを使用しません。Google Playは購入やインストール等の情報をGoogleの仕組みに基づいて処理する場合があります。</p>
           <h2>6. データの削除</h2><p>アプリ内の削除機能、またはアプリのアンインストールにより端末内データを削除できます。APIキーは設定画面から削除できます。</p>
           <h2>7. セキュリティ</h2><p>APIキーの保護にはAndroid KeystoreとAES-GCM暗号化を使用し、通信はHTTPSに限定します。ただし、端末、通信経路、外部サービスを含むすべてのリスクを完全に排除することはできません。</p>
-          <h2>8. お問い合わせ</h2><p>運営者情報と連絡先は、Google Playでの公開前に本ページへ掲載します。</p>
+          <h2>8. お問い合わせ</h2><p>現時点のお問い合わせ先は <a href="https://x.com/gaju_nft" target="_blank" rel="noreferrer">https://x.com/gaju_nft</a> です。Google Play公開時には、審査要件に合わせてメールアドレス等の連絡先も整備します。</p>
         </article>
       </main>
       <Footer onNavigate={onNavigate} />
@@ -660,12 +697,12 @@ function PrivacyPage({ onNavigate }) {
 }
 
 function FinalCta({ onNavigate }) {
-  return <section className="final-cta"><h2>鍵はあなたの手の中に。</h2><button className="button button-primary" type="button" onClick={() => onNavigate("/speak/english/")}>BYOKey Speakを見る<ArrowRight size={18} /></button></section>;
+  return <section className="final-cta"><h2>鍵は、あなたの手の中に。</h2><button className="button button-primary" type="button" onClick={() => onNavigate("/speak/english/")}>BYOKey Speakを見る<ArrowRight size={18} /></button></section>;
 }
 
 function Footer({ onNavigate }) {
   return (
-    <footer><Brand onNavigate={onNavigate} /><div><button type="button" onClick={() => onNavigate("/privacy/")}>プライバシー</button><button type="button" onClick={() => onNavigate("/guide/api/")}>API設定ガイド</button></div><small>© 2026 BYOKey Lab</small></footer>
+    <footer><Brand onNavigate={onNavigate} /><div><button type="button" onClick={() => onNavigate("/privacy/")}>プライバシー</button><button type="button" onClick={() => onNavigate("/guide/api/")}>API設定ガイド</button><a href="https://x.com/gaju_nft" target="_blank" rel="noreferrer">お問い合わせ</a></div><small>© 2026 BYOKey Lab</small></footer>
   );
 }
 
