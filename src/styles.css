@@ -57,8 +57,10 @@ p { line-height: 1.85; }
 .eyebrow, .section-kicker { display: flex; align-items: center; gap: 8px; color: var(--gold-dark); font-size: .82rem; font-weight: 850; text-transform: uppercase; margin-bottom: 18px; }
 .hero-lead { font-size: clamp(1.45rem, 2.3vw, 2.35rem); line-height: 1.45; font-weight: 800; margin-bottom: 22px; }
 .hero-copy { max-width: 690px; font-size: 1rem; color: var(--muted); }
+.underlined-copy { color: var(--ink); text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 4px; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
 .fine-print { margin: 16px 0 0; font-size: .78rem; color: var(--muted); }
+.fine-print strong { color: var(--green-dark); font-weight: 900; }
 
 .sr-only { position: absolute !important; width: 1px !important; height: 1px !important; padding: 0 !important; margin: -1px !important; overflow: hidden !important; clip: rect(0, 0, 0, 0) !important; white-space: nowrap !important; border: 0 !important; }
 .lab-hero { max-width: 1340px; margin: auto; padding: 28px 28px 50px; text-align: center; }
@@ -69,6 +71,7 @@ p { line-height: 1.85; }
 .lab-hero .hero-copy { margin-left: auto; margin-right: auto; }
 .lab-hero .hero-actions { justify-content: center; margin-top: 22px; }
 .demo-band { background: rgba(244, 248, 245, .88); padding: 70px max(28px, calc((100vw - 1284px) / 2)); border-block: 1px solid rgba(199, 191, 169, .48); }
+.byok-definition { max-width: 1040px; margin: 0 0 38px; padding: 18px 22px; border-left: 4px solid var(--gold); background: rgba(255, 255, 255, .62); color: #46514b; font-size: .96rem; font-weight: 750; line-height: 1.8; }
 .section-intro { max-width: 860px; margin-bottom: 46px; }
 .section-intro h2 { margin-bottom: 20px; }
 .section-intro p:last-child { color: var(--muted); max-width: 700px; }
@@ -219,6 +222,11 @@ footer small { grid-column: 1 / -1; color: var(--muted); }
 .pricing-section, .faq-section { max-width: 1180px; margin: auto; padding: 110px 28px; }
 .pricing-section { border-bottom: 1px solid rgba(199, 191, 169, .68); }
 .pricing-heading { display: grid; grid-template-columns: 1fr auto; align-items: end; gap: 40px; }
+.market-price-card { width: 300px; margin: 0 0 46px; padding: 18px; border: 1px solid var(--line); background: rgba(255, 255, 255, .78); box-shadow: 0 12px 32px rgba(14, 49, 31, .06); }
+.market-price-card span, .market-price-card strong, .market-price-card small { display: block; }
+.market-price-card span { color: var(--gold-dark); font-size: .72rem; font-weight: 850; }
+.market-price-card strong { margin: 8px 0 6px; color: var(--green-dark); font-size: 1.2rem; line-height: 1.35; }
+.market-price-card small { color: var(--muted); font-size: .7rem; line-height: 1.55; }
 .exchange-control { min-width: 220px; margin-bottom: 46px; display: grid; gap: 8px; font-size: .76rem; font-weight: 800; }
 .exchange-input { min-height: 46px; display: grid; grid-template-columns: auto 72px auto; align-items: center; gap: 8px; padding: 0 12px; border: 1px solid #cfc7b3; background: rgba(255, 255, 255, .88); }
 .exchange-input input { width: 72px; height: 32px; border: 1px solid var(--line); border-radius: 4px; padding: 0 7px; background: white; }
@@ -336,6 +344,7 @@ footer small { grid-column: 1 / -1; color: var(--muted); }
   .guide-layout { grid-template-columns: 1fr; gap: 28px; }
   .guide-provider-list { position: static; grid-template-columns: repeat(3, 1fr); }
   .pricing-heading { grid-template-columns: 1fr; gap: 0; }
+  .market-price-card { width: 100%; max-width: 360px; margin: -18px 0 28px; }
   .exchange-control { width: 230px; margin: -20px 0 28px; }
   .pricing-notes { grid-template-columns: 1fr; }
   .faq-group { grid-template-columns: 1fr; gap: 20px; }
@@ -352,6 +361,7 @@ footer small { grid-column: 1 / -1; color: var(--muted); }
   .hero-actions { align-items: stretch; flex-direction: column; }
   .hero-actions .button { width: 100%; }
   .demo-band { padding: 58px 18px; }
+  .byok-definition { margin-bottom: 32px; padding: 15px 16px; font-size: .88rem; line-height: 1.75; }
   .compact-intro { display: block; }
   .compact-intro h2 { margin-bottom: 16px; }
   .setup-step { padding: 22px 18px; }
@@ -378,7 +388,11 @@ footer small { grid-column: 1 / -1; color: var(--muted); }
   .faq-list summary { min-height: 62px; padding: 16px 2px; font-size: .88rem; }
   .faq-list details p { padding: 0 30px 20px 2px; font-size: .82rem; }
   .requirements-block { padding: 22px 18px; }
+  .speed-flow { gap: 10px; }
+  .speed-flow > div { min-height: 0; padding-top: 18px; gap: 8px; }
+  .speed-flow p { margin-bottom: 0; }
   .final-cta { padding: 82px 18px; }
+  .final-cta h2 { max-width: 350px; font-size: clamp(2.15rem, 11vw, 3.1rem); line-height: 1.16; }
   footer { grid-template-columns: 1fr; padding-inline: 18px; }
   footer div { justify-self: start; }
   footer small { grid-column: auto; }

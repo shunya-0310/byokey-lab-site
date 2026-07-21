@@ -245,7 +245,7 @@ function HomePage({ onNavigate }) {
           <div className="eyebrow"><ShieldCheck size={17} /> Bring Your Own Key</div>
           <h1 className="sr-only">BYOKey Lab</h1>
           <div className="brand-lockup"><img src={byokeyLabLogo} alt="BYOKey Lab - The Key is in your hand" /></div>
-          <p className="hero-lead">LLMアプリを、<br />定額に縛られない体験へ。</p>
+          <p className="hero-lead">AIアプリは、もう、<br />定額に縛られない。</p>
           <p className="hero-copy">BYOKey Labは、LLMを組み込んだ買い切り型の小さなアプリをつくります。ユーザーは自分のAPIキーをつなぎ、必要な分だけ従量課金で使えます。</p>
           <div className="hero-actions">
             <button className="button button-primary" type="button" onClick={() => onNavigate("/speak/english/")}>最初のプロダクトを見る<ArrowRight size={18} /></button>
@@ -253,6 +253,7 @@ function HomePage({ onNavigate }) {
           </div>
         </section>
         <section className="demo-band">
+          <p className="byok-definition">BYOK（Bring Your Own Key）アプリとは、LLM（Gemini, ChatGPT, Claudeなど）の「自分のAPIキー」を設定して、AIを使う新しいアプリの形です。</p>
           <div className="section-intro compact-intro">
             <p className="section-kicker">HOW IT WORKS</p>
             <h2 className="steps-heading"><span>選ぶ。</span><span>設定する。</span><span>使い始める。</span></h2>
@@ -287,7 +288,7 @@ function HomePage({ onNavigate }) {
             <p className="section-kicker">FIRST PRODUCT</p>
             <h2 className="product-title"><span>BYOKey</span><span>Speak</span><small>for English</small></h2>
             <p>英語が出てこない瞬間も、Quick Assistが日本語の質問から自然な表現を提案。会話の流れを止めません。</p>
-            <div className="inline-meta"><span>Android</span><span>買い切り予定</span><span>API利用料は別</span></div>
+            <div className="inline-meta"><span>Android</span><span>買い切り。月額なし。</span><span>API代だけ。</span></div>
             <button className="button button-dark" type="button" onClick={() => onNavigate("/speak/english/")}>製品ページへ<ArrowRight size={18} /></button>
           </div>
           <QuickAssistCard compact />
@@ -436,6 +437,11 @@ function PricingSimulator() {
           <p className="section-kicker"><BadgeDollarSign size={17} /> API COST</p>
           <h2>費用は使った分だけ。<br />頑張れない月もお財布に優しい。</h2>
           <p>下記は、毎日10往復または50往復を30日間続けた場合の月額目安です。1往復を「短い入力（約1,000トークン）と回答（約250トークン）」として計算しています。</p>
+        </div>
+        <div className="market-price-card" aria-label="一般的なAI英会話アプリの月額相場">
+          <span>一般的なAI英会話アプリの月額相場</span>
+          <strong>約1,500円〜4,000円台/月</strong>
+          <small>主要サービスの公開料金を月額・年額月換算で見た目安です。</small>
         </div>
         <label className="exchange-control" htmlFor="yen-rate">
           <span>換算レート</span>
@@ -586,12 +592,12 @@ function SpeakPage({ onNavigate }) {
             <p className="eyebrow"><Zap size={17} /> BYOK英会話アプリ</p>
             <h1 className="speak-title"><span className="title-byokey">BYOKey</span><span className="title-speak">Speak</span><span className="title-for">for</span><span className="title-english">English</span></h1>
             <p className="hero-lead">費用は使った分だけ。</p>
-            <p className="hero-copy">英語が出てこないときは、日本語のまま聞く。Quick Assistが自然な表現を提案し、会話の流れを止めません。</p>
+            <p className="hero-copy">英語が出てこないときは、日本語のまま聞く。Quick Assistが自然な表現を提案し、<strong className="underlined-copy">会話の流れを止めません。</strong></p>
             <div className="hero-actions">
               <button className="button button-primary" type="button" onClick={() => document.getElementById("release")?.scrollIntoView({ behavior: "smooth" })}><Play size={18} fill="currentColor" />Google Playで公開予定</button>
               <button className="button button-secondary" type="button" onClick={() => onNavigate("/guide/api/")}><BookOpen size={18} />API設定ガイド</button>
             </div>
-            <p className="fine-print">買い切り予定。Gemini / OpenAI / ClaudeのAPI利用料は別途かかります。</p>
+            <p className="fine-print"><strong>アプリは買い切り！</strong> Gemini / OpenAI / ClaudeのAPI利用料は別途かかります。</p>
           </div>
           <ConversationPreview />
         </section>
@@ -601,7 +607,7 @@ function SpeakPage({ onNavigate }) {
           <div className="section-intro">
             <p className="section-kicker">QUICK ASSIST</p>
             <h2>言葉に詰まっても、会話は止まらない。</h2>
-            <p>言葉に詰まったとき、翻訳アプリへ移動して、コピーして、また戻る。Quick Assistがその場で会話をフォローします。</p>
+            <p>言葉に詰まったとき、翻訳アプリへ移動して、コピーして、また戻る…。こんな手間はQuick Assistがその場で解決します。</p>
           </div>
           <div className="speed-flow">
             <div><span>01</span><Mic size={22} /><strong>日本語で聞く</strong><p>テキストでも音声でも、その場で質問。</p></div>
