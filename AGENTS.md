@@ -17,4 +17,6 @@ When implementing from a selected generated mock, treat that image as the source
 - Speak hero typography should use expressive hierarchy: a lifted gold BYOKey word, blue brush accent for Speak, smaller "for", and red/white/blue English treatment.
 - Quick Assist demos must visibly show that an AI request occurs before a suggestion appears.
 - Use the user-selected transparent keyhole-and-stars logo as the current brand asset. Preserve the complete wordmark and tagline in the parent hero, and crop only transparent whitespace when adapting it to compact header or footer slots.
+- The home page should include the BYOK app diagram as a browser-friendly image generated from the PDF source, with the original PDF available as a secondary link.
+- The API setup guide page should embed provider-specific PDF guides in the browser for Gemini and OpenAI/GPT; Claude remains marked as "作成中" until its guide PDF exists.
 - Keep Cloudflare deployment and configuration behind explicit user confirmation.

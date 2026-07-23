@@ -59,6 +59,7 @@ const providers = [
 
 const providerGuides = {
   gemini: {
+    guidePdf: "/guides/api-key-guide-gemini.pdf",
     requirements: [
       "Googleアカウント",
       "Google AI StudioのプロジェクトとAPIキー",
@@ -75,6 +76,7 @@ const providerGuides = {
     pricingUrl: "https://ai.google.dev/gemini-api/docs/pricing",
   },
   openai: {
+    guidePdf: "/guides/api-key-guide-gpt.pdf",
     requirements: [
       "OpenAI Platformアカウント（ChatGPTの契約とは別会計）",
       "APIプロジェクトとプロジェクト用APIキー",
@@ -91,6 +93,7 @@ const providerGuides = {
     pricingUrl: "https://developers.openai.com/api/docs/models",
   },
   claude: {
+    guidePdfStatus: "作成中",
     requirements: [
       "Claude ConsoleアカウントとOrganization",
       "利用目的などのOrganization情報",
@@ -107,6 +110,24 @@ const providerGuides = {
     pricingUrl: "https://platform.claude.com/docs/en/about-claude/pricing",
   },
 };
+
+function ByokAppDiagram() {
+  return (
+    <section className="diagram-section" aria-labelledby="byok-diagram-title">
+      <div className="section-intro">
+        <p className="section-kicker">BYOK APP DIAGRAM</p>
+        <h2 id="byok-diagram-title">BYOKアプリの流れ</h2>
+        <p>アプリ開発者、ユーザー、LLMプロバイダーの関係を図解しました。キーとデータをどこで扱うのかを、公開前に曖昧にしないための基本図です。</p>
+      </div>
+      <figure className="diagram-frame">
+        <img src="/images/byok-app-diagram.png" alt="BYOKアプリの仕組み。ユーザーが自分のAPIキーをアプリに設定し、アプリから選択したLLMプロバイダーへ直接接続する流れを示した図解。" />
+        <figcaption>
+          <a href="/guides/byok-app-diagram.pdf" target="_blank" rel="noreferrer">PDFで開く<ExternalLink size={15} /></a>
+        </figcaption>
+      </figure>
+    </section>
+  );
+}
 
 const pricingModels = [
   { provider: "Google", model: "Gemini 3.1 Flash-Lite", input: 0.25, output: 1.5, recommended: true },
@@ -254,6 +275,7 @@ function HomePage({ onNavigate }) {
         </section>
         <section className="demo-band">
           <p className="byok-definition">BYOK（Bring Your Own Key）アプリとは、LLM（Gemini, ChatGPT, Claudeなど）の「自分のAPIキー」を設定して、AIを使う新しいアプリの形です。</p>
+          <ByokAppDiagram />
           <div className="section-intro compact-intro">
             <p className="section-kicker">HOW IT WORKS</p>
             <h2 className="steps-heading"><span>選ぶ。</span><span>設定する。</span><span>使い始める。</span></h2>
@@ -494,7 +516,20 @@ function CoachSettingsDemo() {
       </div>
       <div className="level-effect" role="status"><strong>{level}の会話レベル</strong><p>{cefrProfiles[level]}</p></div>
       <label htmlFor="coach-skill">Coach Personalities &amp; Skills</label>
-      <textarea id="coach-skill" defaultValue="ビジネスではなく日常会話を強化したいので、かしこまった話し方ではなくフランクに話してほしい。通じはするけど、ネイティブでは使わない表現など、細かなところも「ネイティブではこうだよ」と指摘してほしい。スラングや気の利いた言い回しをよく使う性格。解説部分だけは英語だけでなく日本語も併記して。" />
+      <textarea id="coach-skill" defaultValue={`# Coach Skills
+
+## 目的
+- ビジネスではなく日常会話を強化したい。
+
+## 性格・口調
+- かしこまった話し方ではなく、フランクに話す。
+- スラングや気の利いた言い回しをよく使う。
+
+## 添削方針
+- 通じるけどネイティブは使わない表現も、「ネイティブではこうだよ」と細かく指摘する。
+
+## 解説の言語
+- 解説部分だけは英語だけでなく日本語も併記する。`} />
     </div>
   );
 }
@@ -535,7 +570,7 @@ const faqGroups = [
       ["日本語を混ぜても大丈夫ですか？", "はい。英語が出てこない部分を日本語で尋ね、Quick Assistで文脈に合う英語を提案できます。入力中の文章を消さずに必要な表現だけを追加します。"],
       ["機種変更時に履歴やキーは引き継がれますか？", "自動クラウド同期は行いません。セキュリティ上、APIキーのバックアップも無効です。新しい端末でAPIキーを再設定し、履歴の移行機能は公開版の仕様として別途案内します。"],
       ["アプリを削除するとデータはどうなりますか？", "端末内にある設定、会話履歴、暗号化済みAPIキーはアンインストールにより削除されます。各LLM事業者側に送信済みのデータは、各社の保持方針に従います。"],
-      ["問い合わせ先はどこですか？", "現時点の問い合わせ先はXの @gaju_nft です。Google Play公開時には、審査要件に合わせてメールアドレス等の連絡先も整備します。"],
+      ["問い合わせ先はどこですか？", "お問い合わせは byokey-lab@gmail.com へお願いします。APIキー、プロバイダーの秘密情報、支払い情報はメールに書かないでください。"],
     ],
   },
 ];
@@ -631,13 +666,45 @@ function SpeakPage({ onNavigate }) {
           <div>
             <p className="section-kicker">RELEASE</p>
             <h2>Google Play公開に向けて準備中です。</h2>
-            <p>販売価格と公開日は、審査準備が整い次第このページでお知らせします。</p>
+            <p>販売価格は500円の買い切り予定です。公開日は、審査準備が整い次第このページでお知らせします。</p>
           </div>
           <button className="button button-dark" type="button" onClick={() => onNavigate("/guide/api/")}>先にAPIキーの準備方法を見る<ArrowRight size={18} /></button>
         </section>
       </main>
       <Footer onNavigate={onNavigate} />
     </>
+  );
+}
+
+function ProviderPdfGuide({ provider, guide }) {
+  if (!guide.guidePdf) {
+    return (
+      <section className="pdf-guide-panel is-pending" aria-labelledby={`${provider.id}-pdf-guide`}>
+        <div>
+          <p className="step-label">DETAILED GUIDE</p>
+          <h2 id={`${provider.id}-pdf-guide`}>{provider.name}の画像付き設定ガイド</h2>
+          <p>Claude版のPDFガイドは作成中です。完成次第、このページでブラウザ閲覧できるように追加します。</p>
+        </div>
+        <span>{guide.guidePdfStatus || "作成中"}</span>
+      </section>
+    );
+  }
+
+  return (
+    <section className="pdf-guide-panel" aria-labelledby={`${provider.id}-pdf-guide`}>
+      <div className="pdf-guide-heading">
+        <div>
+          <p className="step-label">DETAILED GUIDE</p>
+          <h2 id={`${provider.id}-pdf-guide`}>{provider.name}の画像付き設定ガイド</h2>
+          <p>下のPDFをブラウザ上で確認できます。表示されない場合は、PDFを別タブで開いてください。</p>
+        </div>
+        <a className="official-link" href={guide.guidePdf} target="_blank" rel="noreferrer">PDFを別タブで開く<ExternalLink size={16} /></a>
+      </div>
+      <object className="pdf-viewer" data={`${guide.guidePdf}#view=FitH`} type="application/pdf" aria-label={`${provider.name} APIキー設定ガイドPDF`}>
+        <iframe title={`${provider.name} APIキー設定ガイド`} src={`${guide.guidePdf}#view=FitH`} />
+        <p>PDFを表示できませんでした。<a href={guide.guidePdf} target="_blank" rel="noreferrer">こちらからPDFを開いてください。</a></p>
+      </object>
+    </section>
   );
 }
 
@@ -666,7 +733,8 @@ function GuidePage({ onNavigate }) {
             <ol className="guide-steps">
               {selectedGuide.steps.map((step, index) => <li key={step}><span>{index + 1}</span><div><h2>{step}</h2>{index === 0 && <a className="official-link" href={selectedProvider.guideUrl} target="_blank" rel="noreferrer">APIキーの公式ガイドを開く<ExternalLink size={16} /></a>}{index === selectedGuide.steps.length - 1 && <p>APIキーはメール、チャット、問い合わせフォームへ送らず、BYOKey Speakの設定画面にだけ入力してください。</p>}</div></li>)}
             </ol>
-            <div className="guide-callout warning"><ShieldCheck size={21} /><div><strong>最初から被害上限を小さくする</strong><p>専用キー、少額残高、月間上限、利用通知を設定してください。BYOKey Labがサポート対応でAPIキーの送信を求めることはありません。</p></div></div>
+            <ProviderPdfGuide provider={selectedProvider} guide={selectedGuide} />
+            <div className="guide-callout warning"><ShieldCheck size={21} /><div><strong>事前に利用料の上限を設定してください。</strong><p>月間上限、利用通知を設定してください。BYOKey Labがサポート対応でAPIキーの送信を求めることはありません。</p></div></div>
           </section>
         </div>
       </main>
@@ -694,7 +762,7 @@ function PrivacyPage({ onNavigate }) {
           <h2>5. BYOKey Labによる収集</h2><p>現行版では、独自のユーザー登録、クラウドデータベース、広告SDK、アクセス解析SDKを使用しません。Google Playは購入やインストール等の情報をGoogleの仕組みに基づいて処理する場合があります。</p>
           <h2>6. データの削除</h2><p>アプリ内の削除機能、またはアプリのアンインストールにより端末内データを削除できます。APIキーは設定画面から削除できます。</p>
           <h2>7. セキュリティ</h2><p>APIキーの保護にはAndroid KeystoreとAES-GCM暗号化を使用し、通信はHTTPSに限定します。ただし、端末、通信経路、外部サービスを含むすべてのリスクを完全に排除することはできません。</p>
-          <h2>8. お問い合わせ</h2><p>現時点のお問い合わせ先は <a href="https://x.com/gaju_nft" target="_blank" rel="noreferrer">https://x.com/gaju_nft</a> です。Google Play公開時には、審査要件に合わせてメールアドレス等の連絡先も整備します。</p>
+          <h2>8. お問い合わせ</h2><p>お問い合わせは <a href="mailto:byokey-lab@gmail.com">byokey-lab@gmail.com</a> へお願いします。APIキー、プロバイダーの秘密情報、支払い情報はメールに記載しないでください。</p>
         </article>
       </main>
       <Footer onNavigate={onNavigate} />
@@ -708,7 +776,7 @@ function FinalCta({ onNavigate }) {
 
 function Footer({ onNavigate }) {
   return (
-    <footer><Brand onNavigate={onNavigate} /><div><button type="button" onClick={() => onNavigate("/privacy/")}>プライバシー</button><button type="button" onClick={() => onNavigate("/guide/api/")}>API設定ガイド</button><a href="https://x.com/gaju_nft" target="_blank" rel="noreferrer">お問い合わせ</a></div><small>© 2026 BYOKey Lab</small></footer>
+    <footer><Brand onNavigate={onNavigate} /><div><button type="button" onClick={() => onNavigate("/privacy/")}>プライバシー</button><button type="button" onClick={() => onNavigate("/guide/api/")}>API設定ガイド</button><a href="mailto:byokey-lab@gmail.com">お問い合わせ</a></div><small>© 2026 BYOKey Lab</small></footer>
   );
 }
 
