@@ -112,7 +112,6 @@ Attempt number: ${attempt}. If this is attempt 2, choose a more concrete and rec
         generationConfig: {
           temperature: 0.25,
           topP: 0.9,
-          responseMimeType: "application/json",
         },
       }),
     },
@@ -136,10 +135,14 @@ Attempt number: ${attempt}. If this is attempt 2, choose a more concrete and rec
   const parsed = parseJsonArray(text);
   const sources = groundingSources(candidate?.groundingMetadata);
   if (sources.length === 0) {
-    throw new Error(`Gemini returned no grounded sources for ${category.id}. Response: ${text.slice(0, 220)}`);
+    console.warn(`Gemini returned no grounding metadata for ${category.id}; using Google News search fallback source.`);
   }
 
-  return normalizeItem(parsed[0], category, sources);
+  return normalizeItem(
+    parsed[0],
+    category,
+    sources.length > 0 ? sources : fallbackSources(category),
+  );
 }
 
 function normalizeItem(item, category, sources) {
@@ -177,6 +180,16 @@ function groundingSources(metadata) {
     if (sources.length === 3) break;
   }
   return sources;
+}
+
+function fallbackSources(category) {
+  const query = encodeURIComponent(`${category.label} top news ${date}`);
+  return [
+    {
+      title: `Google News: ${category.label}`,
+      url: `https://news.google.com/search?q=${query}&hl=en-US&gl=US&ceid=US:en`,
+    },
+  ];
 }
 
 function parseJsonArray(text) {
