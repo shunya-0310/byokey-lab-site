@@ -1,87 +1,87 @@
 {
   "schemaVersion": 1,
-  "status": "preview",
-  "date": "2026-07-25",
-  "generatedAt": "2026-07-25T00:00:00Z",
-  "model": "editorial-preview",
+  "status": "live",
+  "date": "2026-07-26",
+  "generatedAt": "2026-07-26T04:39:17.431Z",
+  "model": "gemini-3.6-flash",
   "items": [
     {
-      "id": "preview-politics-economy",
+      "id": "2026-07-26-politics_economy",
       "category": "politics_economy",
       "categoryLabel": "Politics & Economy",
-      "headline": "The IMF sees a global economy shaped by conflict and rapid technology change",
-      "summary": "The IMF's July 2026 update describes a world economy facing pressure from war, trade disruption, and fast-moving technology. Its projections show that the effects differ widely across regions.",
-      "question": "Which change do you think will affect everyday life the most?",
+      "headline": "US Pauses Airstrikes on Iran to Pursue Diplomatic Talks",
+      "summary": "The United States military has temporarily paused its airstrikes in Iran while regional mediators push for a de-escalation agreement [1.2.1]. This diplomatic pivot comes after two weeks of heavy bombardment and widespread disruptions to maritime shipping in the Strait of Hormuz.",
+      "question": "How effective do you believe diplomatic negotiations can be when resolving high-stakes international conflicts?",
       "coachLeads": {
-        "friendly": "Hey, have you seen what the IMF is saying about the global economy? There is a lot to unpack here.",
-        "energetic": "This is a big one: war, trade, and technology are all pulling the economy in different directions. What do you make of it?",
-        "calm": "The IMF has published a useful snapshot of the global economy. It may be worth looking at what is changing beneath the headline numbers.",
-        "direct": "The global economy is being reshaped by conflict and technology. Which factor matters most?"
+        "friendly": "Hey, have you caught the news about the US pausing airstrikes on Iran? It seems diplomacy is taking center stage again, and I'd love to hear your take on it!",
+        "energetic": "Big news today—airstrikes in the Middle East have paused as diplomatic talks ramp up! What do you think this means for global markets and peace?",
+        "calm": "Important geopolitical developments are taking place as the US halts airstrikes on Iran to make room for diplomatic negotiations. Whenever you're ready, let me know what you think about this shift.",
+        "direct": "The US has paused its military strikes on Iran to pursue diplomatic negotiations. What's your perspective on whether this diplomatic effort will succeed?"
       },
       "sources": [
         {
-          "title": "IMF World Economic Outlook Update, July 2026",
-          "url": "https://www.imf.org/-/media/files/publications/weo/2026/update/july/english/text.pdf"
+          "title": "washingtonpost.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHauckA7BnEtpNSnOu4wqCCc-wNgvAy76Rj3uXIVppJsYirLx09GQtWO3B-GF0g8s4dQK77HXyo_CsGQLvzv1_yYN03GXZHzPGkn63XTOWbkazm7LVQNoKzbLm6ZD6JWQ5Blo0axeyijKcTGxZadlvDK_9PN7inKT6ePLQ5auQnnTO4uTxKSWZWcr10YUynnb2QkanUxA3O4VOSQ79iJq_vxcQKA7acMB-Pm_l7vAnotNyMv_OKtD1qr37JHg=="
         }
       ]
     },
     {
-      "id": "preview-technology",
+      "id": "2026-07-26-technology",
       "category": "technology",
       "categoryLabel": "Technology",
-      "headline": "Search-grounded AI is becoming a standard part of everyday assistants",
-      "summary": "Major AI platforms now provide tools that let models search current web information and return citations. This changes assistants from static knowledge tools into systems that can discuss events as they unfold.",
-      "question": "When should an AI search the web, and when should it answer without searching?",
+      "headline": "Samsung and Broadcom Announce $200 Billion AI Hardware Partnership",
+      "summary": "Samsung Electronics and Broadcom signed a strategic memorandum of understanding estimated at over $200 billion over five years to power next-generation artificial intelligence infrastructure [1.1.4]. Announced on July 25, the agreement focuses on high-bandwidth memory, two-nanometer process technology, and advanced chip packaging to meet soaring global AI demands.",
+      "question": "How do you think massive multi-billion-dollar corporate deals like this will impact the technology we use in our daily lives?",
       "coachLeads": {
-        "friendly": "You know how AI can sometimes sound confident about old information? Search-grounded answers are starting to change that.",
-        "energetic": "AI that can actually check what is happening right now is becoming normal. That opens up a completely different kind of conversation.",
-        "calm": "AI assistants are increasingly able to search current information and cite their sources. The change is subtle, but important.",
-        "direct": "Static AI knowledge is no longer enough. Search and citations are becoming essential."
+        "friendly": "Hey! Did you hear about the massive tech news that just broke? Samsung and Broadcom are joining forces in a huge $200 billion AI deal.",
+        "energetic": "Check this out! Samsung and Broadcom just announced a mind-blowing $200 billion AI hardware partnership, and it's making huge waves!",
+        "calm": "There is a significant tech development worth looking into today. Samsung and Broadcom have formed a major $200 billion alliance for AI infrastructure.",
+        "direct": "Samsung and Broadcom signed a $200 billion AI hardware agreement on July 25. Let's discuss what this means for the future of tech."
       },
       "sources": [
         {
-          "title": "Google Search grounding in the Gemini API",
-          "url": "https://ai.google.dev/gemini-api/docs/generate-content/google-search"
+          "title": "samsung.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE2tUiRLhIuCT4rIpbLcaF0c4_Pk8dHnz78HcRP3vFdTh9932Yw36-x_upa4OdpYuQxJnXuBVcD6OFt_cARfBgRse20Hh9HqfY2q1ur_Z5ooDVSxM0dLgpQQpY_f9rGa0XSuopdoPb4xq052iTUnQn6VNQTYv1H5byWKobDJE3Uxxe1ErWTPYYzjHHtuMOtZVBDvyRU1FRmd7RxFvPiK5tVOPKvnaB1Z-C8AjkmLA9NivRii-mg1DF-6nBtJb0="
         }
       ]
     },
     {
-      "id": "preview-sports",
+      "id": "2026-07-26-sports",
       "category": "sports",
       "categoryLabel": "Sports",
-      "headline": "The 2026 WNBA All-Star weekend brings the league's biggest names together",
-      "summary": "ESPN, ABC, and Disney+ are carrying the 2026 WNBA All-Star events on July 24 and 25. The weekend highlights the league's growing audience and its leading players.",
-      "question": "What makes an all-star event interesting even when the result does not affect the season?",
+      "headline": "Tadej Pogačar All But Secures Historic Fifth Tour de France Victory",
+      "summary": "Slovenian cyclist Tadej Pogačar effectively locked up his fifth Tour de France overall title after holding his massive lead through Stage 20 at Alpe d'Huez on Saturday. At 27 years old, he is set to become the youngest rider in history to win five Tour titles once he finishes Sunday's final stage in Paris.",
+      "question": "What qualities do you think allow certain athletes to dominate a physically demanding sport for many years?",
       "coachLeads": {
-        "friendly": "The WNBA's biggest stars are all in one place this weekend. Do you enjoy all-star games?",
-        "energetic": "The WNBA All-Star weekend is here, and the league's biggest names are taking center stage. Who would you want to watch?",
-        "calm": "The WNBA All-Star weekend offers a different kind of competition from the regular season. It is an interesting showcase for the league.",
-        "direct": "All-star games are entertainment first and competition second. Is that a good thing?"
+        "friendly": "Hey, have you heard about the big Tour de France update today? We are witnessing a truly legendary sports moment unfold!",
+        "energetic": "Check this out—Tadej Pogačar is on the verge of making cycling history! It is amazing to see someone perform at this level year after year.",
+        "calm": "There is a remarkable result from the world of sports today. Cyclist Tadej Pogačar has virtually secured his fifth Tour de France general classification title.",
+        "direct": "Tadej Pogačar is about to win his fifth Tour de France title. Let's talk about what this accomplishment means for his sporting legacy."
       },
       "sources": [
         {
-          "title": "ESPN Press Room",
-          "url": "https://espnpressroom.com/press-releases/"
+          "title": "Google News: Sports",
+          "url": "https://news.google.com/search?q=Sports%20top%20news%202026-07-26&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     },
     {
-      "id": "preview-entertainment",
+      "id": "2026-07-26-entertainment",
       "category": "entertainment",
       "categoryLabel": "Entertainment",
-      "headline": "Summer entertainment coverage is shifting between cinemas, streaming, music, and games",
-      "summary": "Entertainment audiences now move quickly between theatrical releases, streaming series, music, and games. Industry coverage increasingly treats these formats as parts of one connected attention economy.",
-      "question": "Which kind of entertainment earns most of your attention now?",
+      "headline": "Marvel Studios Unveils Major Film Announcements at San Diego Comic-Con 2026",
+      "summary": "Marvel Studios made a major return to San Diego Comic-Con's Hall H, revealing that Ryan Gosling will star in a new Ghost Rider film and David Jonsson will join Black Panther 3. The high-profile presentation also showcased exclusive footage for Avengers: Doomsday, making it the headline event of the global pop culture convention.",
+      "question": "Which of Marvel's new film announcements or casting reveals are you most excited to see on the big screen?",
       "coachLeads": {
-        "friendly": "Quick question: what has been winning your attention lately, movies, streaming, music, or games?",
-        "energetic": "There is more entertainment competing for our time than ever. What are you actually excited about right now?",
-        "calm": "Movies, streaming, music, and games increasingly compete for the same limited attention. Our habits are changing with them.",
-        "direct": "We have endless entertainment and limited time. What is genuinely worth yours?"
+        "friendly": "Hey, did you catch the big movie news coming out of Comic-Con today? Marvel just unveiled some major superhero casting announcements.",
+        "energetic": "Marvel Studios just blew the roof off Comic-Con with massive new film reveals! Let's check out what's heading to theaters!",
+        "calm": "San Diego Comic-Con delivered some notable entertainment news today with several new blockbuster film reveals. It's a great topic to explore.",
+        "direct": "Marvel Studios announced a fresh slate of major film projects at Comic-Con today. Let's break down the latest news."
       },
       "sources": [
         {
-          "title": "Variety",
-          "url": "https://variety.com/"
+          "title": "Google News: Entertainment",
+          "url": "https://news.google.com/search?q=Entertainment%20top%20news%202026-07-26&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     }
