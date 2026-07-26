@@ -7,7 +7,7 @@ if (!apiKey) {
   throw new Error("GEMINI_API_KEY is required.");
 }
 
-const model = process.env.GEMINI_NEWS_MODEL?.trim() || "gemini-3.5-flash";
+const model = process.env.GEMINI_NEWS_MODEL?.trim() || "gemini-2.5-flash";
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const outputPath = resolve(root, "public", "news", "daily.json");
 const temporaryPath = `${outputPath}.tmp`;
@@ -39,7 +39,7 @@ const categories = [
 
 const items = [];
 for (const category of categories) {
-  items.push(await generateCategory(category));
+  items.push(await generateCategoryWithRetry(category));
 }
 
 if (items.length < categories.length) {
@@ -63,22 +63,39 @@ await writeFile(temporaryPath, `${JSON.stringify(feed, null, 2)}\n`, "utf8");
 await rename(temporaryPath, outputPath);
 console.log(`Wrote ${items.length} grounded news items to ${outputPath}`);
 
-async function generateCategory(category) {
+async function generateCategoryWithRetry(category) {
+  let lastError;
+  for (let attempt = 1; attempt <= 2; attempt += 1) {
+    try {
+      return await generateCategory(category, attempt);
+    } catch (error) {
+      lastError = error;
+      console.warn(`Attempt ${attempt} failed for ${category.id}: ${error.message}`);
+    }
+  }
+  throw lastError;
+}
+
+async function generateCategory(category, attempt) {
   const prompt = `
 Today is ${date} in Japan.
-Search the web for the single most important and conversation-worthy story today about ${category.brief}.
-Choose stories with international relevance. Verify facts against more than one credible source when possible.
+Search the web for the single most important front-page news story from the last 24 hours about ${category.brief}.
+Choose a story that is timely, widely reported, and conversation-worthy for an English learner.
+Prefer breaking, developing, election, market-moving, tournament, award, launch, court, policy, or major incident stories.
+Do not choose evergreen explainers, general trend pieces, old annual reports, generic AI articles, or broad background pages unless the report was released today and is itself a top story.
+Verify facts against more than one credible source when possible.
 Do not copy article prose. Summarize facts in your own words.
 
 Return only a JSON array with exactly one object. The object must have:
 - headline: concise English headline
-- summary: 2 concise English sentences containing only verified facts
+- summary: 2 concise English sentences containing only verified facts and why this is news now
 - question: one open-ended English conversation question
 - coachLeads: an object with friendly, energetic, calm, and direct keys
 
 Each coach lead must be 1 or 2 natural English sentences that sound like a coach starting a chat.
 Examples of the intended feeling are "Hey, have you heard about this?" and "This is worth talking about."
 Do not put source URLs in the JSON. Sources are attached from grounding metadata.
+Attempt number: ${attempt}. If this is attempt 2, choose a more concrete and recent story than before.
   `.trim();
 
   const response = await fetch(
@@ -95,6 +112,7 @@ Do not put source URLs in the JSON. Sources are attached from grounding metadata
         generationConfig: {
           temperature: 0.25,
           topP: 0.9,
+          responseMimeType: "application/json",
         },
       }),
     },
@@ -118,7 +136,7 @@ Do not put source URLs in the JSON. Sources are attached from grounding metadata
   const parsed = parseJsonArray(text);
   const sources = groundingSources(candidate?.groundingMetadata);
   if (sources.length === 0) {
-    throw new Error(`Gemini returned no grounded sources for ${category.id}.`);
+    throw new Error(`Gemini returned no grounded sources for ${category.id}. Response: ${text.slice(0, 220)}`);
   }
 
   return normalizeItem(parsed[0], category, sources);
