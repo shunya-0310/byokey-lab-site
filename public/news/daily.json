@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "status": "preview",
+  "date": "2026-07-25",
+  "generatedAt": "2026-07-25T00:00:00Z",
+  "model": "editorial-preview",
+  "items": [
+    {
+      "id": "preview-politics-economy",
+      "category": "politics_economy",
+      "categoryLabel": "Politics & Economy",
+      "headline": "The IMF sees a global economy shaped by conflict and rapid technology change",
+      "summary": "The IMF's July 2026 update describes a world economy facing pressure from war, trade disruption, and fast-moving technology. Its projections show that the effects differ widely across regions.",
+      "question": "Which change do you think will affect everyday life the most?",
+      "coachLeads": {
+        "friendly": "Hey, have you seen what the IMF is saying about the global economy? There is a lot to unpack here.",
+        "energetic": "This is a big one: war, trade, and technology are all pulling the economy in different directions. What do you make of it?",
+        "calm": "The IMF has published a useful snapshot of the global economy. It may be worth looking at what is changing beneath the headline numbers.",
+        "direct": "The global economy is being reshaped by conflict and technology. Which factor matters most?"
+      },
+      "sources": [
+        {
+          "title": "IMF World Economic Outlook Update, July 2026",
+          "url": "https://www.imf.org/-/media/files/publications/weo/2026/update/july/english/text.pdf"
+        }
+      ]
+    },
+    {
+      "id": "preview-technology",
+      "category": "technology",
+      "categoryLabel": "Technology",
+      "headline": "Search-grounded AI is becoming a standard part of everyday assistants",
+      "summary": "Major AI platforms now provide tools that let models search current web information and return citations. This changes assistants from static knowledge tools into systems that can discuss events as they unfold.",
+      "question": "When should an AI search the web, and when should it answer without searching?",
+      "coachLeads": {
+        "friendly": "You know how AI can sometimes sound confident about old information? Search-grounded answers are starting to change that.",
+        "energetic": "AI that can actually check what is happening right now is becoming normal. That opens up a completely different kind of conversation.",
+        "calm": "AI assistants are increasingly able to search current information and cite their sources. The change is subtle, but important.",
+        "direct": "Static AI knowledge is no longer enough. Search and citations are becoming essential."
+      },
+      "sources": [
+        {
+          "title": "Google Search grounding in the Gemini API",
+          "url": "https://ai.google.dev/gemini-api/docs/generate-content/google-search"
+        }
+      ]
+    },
+    {
+      "id": "preview-sports",
+      "category": "sports",
+      "categoryLabel": "Sports",
+      "headline": "The 2026 WNBA All-Star weekend brings the league's biggest names together",
+      "summary": "ESPN, ABC, and Disney+ are carrying the 2026 WNBA All-Star events on July 24 and 25. The weekend highlights the league's growing audience and its leading players.",
+      "question": "What makes an all-star event interesting even when the result does not affect the season?",
+      "coachLeads": {
+        "friendly": "The WNBA's biggest stars are all in one place this weekend. Do you enjoy all-star games?",
+        "energetic": "The WNBA All-Star weekend is here, and the league's biggest names are taking center stage. Who would you want to watch?",
+        "calm": "The WNBA All-Star weekend offers a different kind of competition from the regular season. It is an interesting showcase for the league.",
+        "direct": "All-star games are entertainment first and competition second. Is that a good thing?"
+      },
+      "sources": [
+        {
+          "title": "ESPN Press Room",
+          "url": "https://espnpressroom.com/press-releases/"
+        }
+      ]
+    },
+    {
+      "id": "preview-entertainment",
+      "category": "entertainment",
+      "categoryLabel": "Entertainment",
+      "headline": "Summer entertainment coverage is shifting between cinemas, streaming, music, and games",
+      "summary": "Entertainment audiences now move quickly between theatrical releases, streaming series, music, and games. Industry coverage increasingly treats these formats as parts of one connected attention economy.",
+      "question": "Which kind of entertainment earns most of your attention now?",
+      "coachLeads": {
+        "friendly": "Quick question: what has been winning your attention lately, movies, streaming, music, or games?",
+        "energetic": "There is more entertainment competing for our time than ever. What are you actually excited about right now?",
+        "calm": "Movies, streaming, music, and games increasingly compete for the same limited attention. Our habits are changing with them.",
+        "direct": "We have endless entertainment and limited time. What is genuinely worth yours?"
+      },
+      "sources": [
+        {
+          "title": "Variety",
+          "url": "https://variety.com/"
+        }
+      ]
+    }
+  ]
+}

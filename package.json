@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "news:generate": "node scripts/generate-daily-news.mjs",
+    "news:validate": "node scripts/validate-daily-news.mjs"
   },
   "dependencies": {
     "@vitejs/plugin-react": "5.0.4",

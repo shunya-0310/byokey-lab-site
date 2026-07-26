@@ -1,0 +1,40 @@
+name: Generate daily BYOKey Speak news
+
+on:
+  schedule:
+    - cron: "15 21 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-news
+  cancel-in-progress: false
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Generate grounded news feed
+        run: node scripts/generate-daily-news.mjs
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_NEWS_MODEL: gemini-3.5-flash
+      - name: Validate feed contract
+        run: npm run news:validate
+      - name: Commit changed feed
+        run: |
+          if git diff --quiet -- public/news/daily.json; then
+            echo "No feed changes."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/news/daily.json
+          git commit -m "Update daily BYOKey Speak news"
+          git push
