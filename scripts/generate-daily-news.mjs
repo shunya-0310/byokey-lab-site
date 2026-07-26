@@ -128,7 +128,7 @@ Attempt number: ${attempt}. If this is attempt 2, choose a more concrete and rec
     throw new Error(`Gemini returned no JSON text for ${category.id}.`);
   }
 
-  const parsed = parseJsonArray(text);
+  const parsed = parseNewsItems(text, category);
   const sources = groundingSources(candidate?.groundingMetadata);
   if (sources.length === 0) {
     console.warn(`Gemini returned no grounding metadata for ${category.id}; using Google News search fallback source.`);
@@ -188,21 +188,68 @@ function fallbackSources(category) {
   ];
 }
 
-function parseJsonArray(text) {
+function parseNewsItems(text, category) {
   const withoutFence = text
     .trim()
     .replace(/^```(?:json)?\s*/i, "")
     .replace(/\s*```$/i, "");
-  const start = withoutFence.indexOf("[");
-  const end = withoutFence.lastIndexOf("]");
+
+  const candidates = [
+    withoutFence,
+    sliceBetween(withoutFence, "[", "]"),
+    sliceBetween(withoutFence, "{", "}"),
+  ].filter(Boolean);
+
+  for (const candidate of candidates) {
+    try {
+      const parsed = JSON.parse(candidate);
+      if (Array.isArray(parsed) && parsed.length > 0) return parsed;
+      if (parsed && typeof parsed === "object") return [parsed];
+    } catch {
+      // Try the next extraction shape.
+    }
+  }
+
+  console.warn(`Gemini response for ${category.id} was not JSON; using text fallback.`);
+  return [fallbackItemFromText(withoutFence, category)];
+}
+
+function sliceBetween(text, open, close) {
+  const start = text.indexOf(open);
+  const end = text.lastIndexOf(close);
   if (start < 0 || end <= start) {
-    throw new Error("Gemini response did not contain a JSON array.");
+    return "";
   }
-  const parsed = JSON.parse(withoutFence.slice(start, end + 1));
-  if (!Array.isArray(parsed) || parsed.length === 0) {
-    throw new Error("Gemini response JSON was empty.");
-  }
-  return parsed;
+  return text.slice(start, end + 1);
+}
+
+function fallbackItemFromText(text, category) {
+  const lines = text
+    .split(/\r?\n/)
+    .map((line) => line.replace(/^[-*#\s]+/, "").trim())
+    .filter(Boolean);
+  const headline = firstReasonableLine(lines) || `${category.label} top story`;
+  const summary = lines
+    .filter((line) => line !== headline)
+    .join(" ")
+    .replace(/\s+/g, " ")
+    .slice(0, 360)
+    || `A current ${category.label.toLowerCase()} story is developing today.`;
+  return {
+    headline,
+    summary,
+    question: "What do you think about this story?",
+    coachLeads: {
+      friendly: `Hey, have you heard about this ${category.label.toLowerCase()} story?`,
+      energetic: `This ${category.label.toLowerCase()} story is worth talking about today.`,
+      calm: `There is a current ${category.label.toLowerCase()} story that may be useful for conversation practice.`,
+      direct: `Let's talk about this ${category.label.toLowerCase()} story.`,
+    },
+  };
+}
+
+function firstReasonableLine(lines) {
+  return lines.find((line) => line.length >= 12 && line.length <= 140);
 }
 
 function requiredText(value, field) {
