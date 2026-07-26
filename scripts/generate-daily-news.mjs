@@ -7,7 +7,7 @@ if (!apiKey) {
   throw new Error("GEMINI_API_KEY is required.");
 }
 
-const model = process.env.GEMINI_NEWS_MODEL?.trim() || "gemini-2.5-flash";
+const model = process.env.GEMINI_NEWS_MODEL?.trim() || "gemini-3.6-flash";
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const outputPath = resolve(root, "public", "news", "daily.json");
 const temporaryPath = `${outputPath}.tmp`;
@@ -109,10 +109,6 @@ Attempt number: ${attempt}. If this is attempt 2, choose a more concrete and rec
       body: JSON.stringify({
         contents: [{ parts: [{ text: prompt }] }],
         tools: [{ google_search: {} }],
-        generationConfig: {
-          temperature: 0.25,
-          topP: 0.9,
-        },
       }),
     },
   );

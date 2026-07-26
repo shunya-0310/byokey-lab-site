@@ -24,7 +24,7 @@ jobs:
         run: node scripts/generate-daily-news.mjs
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          GEMINI_NEWS_MODEL: gemini-2.5-flash
+          GEMINI_NEWS_MODEL: gemini-3.6-flash
       - name: Validate feed contract
         run: npm run news:validate
       - name: Commit changed feed
