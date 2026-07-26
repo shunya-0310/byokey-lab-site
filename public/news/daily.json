@@ -1,87 +1,103 @@
 {
   "schemaVersion": 1,
   "status": "live",
-  "date": "2026-07-26",
-  "generatedAt": "2026-07-26T04:39:17.431Z",
+  "date": "2026-07-27",
+  "generatedAt": "2026-07-26T22:13:14.089Z",
   "model": "gemini-3.6-flash",
   "items": [
     {
-      "id": "2026-07-26-politics_economy",
+      "id": "2026-07-27-politics_economy",
       "category": "politics_economy",
       "categoryLabel": "Politics & Economy",
-      "headline": "US Pauses Airstrikes on Iran to Pursue Diplomatic Talks",
-      "summary": "The United States military has temporarily paused its airstrikes in Iran while regional mediators push for a de-escalation agreement [1.2.1]. This diplomatic pivot comes after two weeks of heavy bombardment and widespread disruptions to maritime shipping in the Strait of Hormuz.",
-      "question": "How effective do you believe diplomatic negotiations can be when resolving high-stakes international conflicts?",
+      "headline": "\"coachLeads\": {",
+      "summary": ", offering a temporary lull after weeks of escalating conflict. The break in combat comes as military advisors urge a shift toward negotiations and Israeli Prime Minister Benjamin Netanyahu prepares to meet President Donald Trump in Washington.\", \"question\": \"Do you think temporary lulls in military action can pave the way for lasting peace agreements, or ar",
+      "question": "What do you think about this story?",
       "coachLeads": {
-        "friendly": "Hey, have you caught the news about the US pausing airstrikes on Iran? It seems diplomacy is taking center stage again, and I'd love to hear your take on it!",
-        "energetic": "Big news today—airstrikes in the Middle East have paused as diplomatic talks ramp up! What do you think this means for global markets and peace?",
-        "calm": "Important geopolitical developments are taking place as the US halts airstrikes on Iran to make room for diplomatic negotiations. Whenever you're ready, let me know what you think about this shift.",
-        "direct": "The US has paused its military strikes on Iran to pursue diplomatic negotiations. What's your perspective on whether this diplomatic effort will succeed?"
+        "friendly": "Hey, have you heard about this politics & economy story?",
+        "energetic": "This politics & economy story is worth talking about today.",
+        "calm": "There is a current politics & economy story that may be useful for conversation practice.",
+        "direct": "Let's talk about this politics & economy story."
       },
       "sources": [
         {
-          "title": "washingtonpost.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHauckA7BnEtpNSnOu4wqCCc-wNgvAy76Rj3uXIVppJsYirLx09GQtWO3B-GF0g8s4dQK77HXyo_CsGQLvzv1_yYN03GXZHzPGkn63XTOWbkazm7LVQNoKzbLm6ZD6JWQ5Blo0axeyijKcTGxZadlvDK_9PN7inKT6ePLQ5auQnnTO4uTxKSWZWcr10YUynnb2QkanUxA3O4VOSQ79iJq_vxcQKA7acMB-Pm_l7vAnotNyMv_OKtD1qr37JHg=="
+          "title": "theguardian.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFp4urjxzwoFC37SKkCOmmzgIq49oChA423zcMWl1ed4NecdYN6wOeYplaAg0wG13NyWOdWbDzQJHKa4ReTS6K2UiVjfywqIAEpZiPAiu8fRL-AD0vIZje6xtWgoaCEbBYaxzEwr_8lRVb5rfXJ7KxLDtcmAe127XKMA6BNODKf7w4gmsObiroVABmgOOORFbtdQJ9QAZWw8hvc"
+        },
+        {
+          "title": "aljazeera.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEnWXOw0nuJYqCmLTzswIH8rZ-MpGltiu-Wgu-AiV4BDdpNpoTsJrnYAO9js0s_aw-NpYjfV0h__NmarYv6Tyc5TYy8siv6NITMhN-8S7sXwhisJbQGaa7edlgXUgIaov8kLHZIfhClnFgziZRiizq5G6Hmr-Gg0GRnN0ME0-WptQFs9UTB_4j-YethdYoP"
+        },
+        {
+          "title": "timesofisrael.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHQVDwwPgESNqlIcpSeX-rZxKp_cMVhZgtL9yz7LZdpf_EDF_IxqB6jNJ2xxhE0nlzp1AGE2KKuJzwO-ZiTWbb8VGo9VoAkMf3l_Wg_LE-Yh5IEZlZkjHoakpRL_s4UyytlmClFgOd0UEMuwee743p6glHN05fBA39PrxYsqsQ3C_plmVX0hSYtGuKZfDwcLju-u2c="
         }
       ]
     },
     {
-      "id": "2026-07-26-technology",
+      "id": "2026-07-27-technology",
       "category": "technology",
       "categoryLabel": "Technology",
-      "headline": "Samsung and Broadcom Announce $200 Billion AI Hardware Partnership",
-      "summary": "Samsung Electronics and Broadcom signed a strategic memorandum of understanding estimated at over $200 billion over five years to power next-generation artificial intelligence infrastructure [1.1.4]. Announced on July 25, the agreement focuses on high-bandwidth memory, two-nanometer process technology, and advanced chip packaging to meet soaring global AI demands.",
-      "question": "How do you think massive multi-billion-dollar corporate deals like this will impact the technology we use in our daily lives?",
+      "headline": "South Korean Chip Giants Partner with U.S. Tech Leaders in $950 Billion AI Supply Deals",
+      "summary": "South Korean semiconductor leaders Samsung Electronics and SK Hynix agreed to supply deals worth up to $950 billion with U.S. tech giants including Nvidia, OpenAI, and Anthropic during President Lee Jae-myung's visit to San Francisco. The landmark agreements highlight an escalating global rush to secure high-performance memory chips required for next-generation artificial intelligence infrastructure.",
+      "question": "How do you think massive global investments in AI hardware will affect the technology we use in daily life over the coming years?",
       "coachLeads": {
-        "friendly": "Hey! Did you hear about the massive tech news that just broke? Samsung and Broadcom are joining forces in a huge $200 billion AI deal.",
-        "energetic": "Check this out! Samsung and Broadcom just announced a mind-blowing $200 billion AI hardware partnership, and it's making huge waves!",
-        "calm": "There is a significant tech development worth looking into today. Samsung and Broadcom have formed a major $200 billion alliance for AI infrastructure.",
-        "direct": "Samsung and Broadcom signed a $200 billion AI hardware agreement on July 25. Let's discuss what this means for the future of tech."
+        "friendly": "Hey! Have you heard about the huge new international tech deal that was just announced?",
+        "energetic": "You won't believe the scale of this fresh AI story! Let me tell you about what just happened in global tech!",
+        "calm": "There is a major development in the global tech industry worth discussing today. Let's take a closer look at the details.",
+        "direct": "Top tech companies just signed a massive $950 billion AI hardware deal. Here is what you need to know."
       },
       "sources": [
         {
-          "title": "samsung.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE2tUiRLhIuCT4rIpbLcaF0c4_Pk8dHnz78HcRP3vFdTh9932Yw36-x_upa4OdpYuQxJnXuBVcD6OFt_cARfBgRse20Hh9HqfY2q1ur_Z5ooDVSxM0dLgpQQpY_f9rGa0XSuopdoPb4xq052iTUnQn6VNQTYv1H5byWKobDJE3Uxxe1ErWTPYYzjHHtuMOtZVBDvyRU1FRmd7RxFvPiK5tVOPKvnaB1Z-C8AjkmLA9NivRii-mg1DF-6nBtJb0="
+          "title": "Google News: Technology",
+          "url": "https://news.google.com/search?q=Technology%20top%20news%202026-07-27&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     },
     {
-      "id": "2026-07-26-sports",
+      "id": "2026-07-27-sports",
       "category": "sports",
       "categoryLabel": "Sports",
-      "headline": "Tadej Pogačar All But Secures Historic Fifth Tour de France Victory",
-      "summary": "Slovenian cyclist Tadej Pogačar effectively locked up his fifth Tour de France overall title after holding his massive lead through Stage 20 at Alpe d'Huez on Saturday. At 27 years old, he is set to become the youngest rider in history to win five Tour titles once he finishes Sunday's final stage in Paris.",
-      "question": "What qualities do you think allow certain athletes to dominate a physically demanding sport for many years?",
+      "headline": "\"coachLeads\": {",
+      "summary": ". He claimed the yellow jersey after three grueling weeks of competition across Spain and France, finishing overall ahead of Belgium's Remco Evenepoel.\", \"question\": \"What kind of physical and mental qualities do you think allow an athlete to stay at the top of an intense sport year after year?\", \"friendly\": \"Hey, have you heard the big sports news from toda",
+      "question": "What do you think about this story?",
       "coachLeads": {
-        "friendly": "Hey, have you heard about the big Tour de France update today? We are witnessing a truly legendary sports moment unfold!",
-        "energetic": "Check this out—Tadej Pogačar is on the verge of making cycling history! It is amazing to see someone perform at this level year after year.",
-        "calm": "There is a remarkable result from the world of sports today. Cyclist Tadej Pogačar has virtually secured his fifth Tour de France general classification title.",
-        "direct": "Tadej Pogačar is about to win his fifth Tour de France title. Let's talk about what this accomplishment means for his sporting legacy."
+        "friendly": "Hey, have you heard about this sports story?",
+        "energetic": "This sports story is worth talking about today.",
+        "calm": "There is a current sports story that may be useful for conversation practice.",
+        "direct": "Let's talk about this sports story."
       },
       "sources": [
         {
-          "title": "Google News: Sports",
-          "url": "https://news.google.com/search?q=Sports%20top%20news%202026-07-26&hl=en-US&gl=US&ceid=US:en"
+          "title": "btpm.org",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGUaECgbHIjMmpMkTs5MB3VE_JxZPrk4U3kt6NxX2qsxBpFPjprf9SolJBk_DKzUksHo2RJ9E2Eohf5-enO9CndPfU2GM_cItw_ZrG8owLl-zHii__Kd4hWutyAD11J1-mOtgNOUVBnyvMaVL2WTVyCzR4gsEQq34-iO9r-bDJegPdwAyqgpYLiUQ4tnqLnHuxEdMnDHo7BeMd3RfA5zoKitN_rNDDYUp8aIg=="
+        },
+        {
+          "title": "cyclingnews.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF6317wllW-RKOEsrqP5Ht8ZCPbSdZI3gxf-vClmMJgUT-PmLoU5Gj9OJWFqmIpeQYQshyI-g1KJLau9powOLLiT73zenF8LaF8DICraRct62kSmB8DBRFyAUItGAzIJrtPH-GNRpulE5VXiDWRY0eGpjjHzKUKahsRv13U5i1zZIqN0TsKmoTm0Xi3mHARpAW1epCz7rsimQMqO9vyubQHBnK61-tNPszODMBMvyPtj6_8c67-Z1IMRiszJQOYeqHytnPAjf4adPj0ds1c"
+        },
+        {
+          "title": "wikipedia.org",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH3WeyxVL7DFhL2mNmh9LhwVZE_63YfC91jluzf817LCeFlTXwDLa0ymWgYXmRoEhfLd-6iYIspDW_LIfARsJaejn4uBUumvm2Ht8OwV1X4kS8rFjpRZh9ASEUIsqm-szAugkxLMnuy"
         }
       ]
     },
     {
-      "id": "2026-07-26-entertainment",
+      "id": "2026-07-27-entertainment",
       "category": "entertainment",
       "categoryLabel": "Entertainment",
-      "headline": "Marvel Studios Unveils Major Film Announcements at San Diego Comic-Con 2026",
-      "summary": "Marvel Studios made a major return to San Diego Comic-Con's Hall H, revealing that Ryan Gosling will star in a new Ghost Rider film and David Jonsson will join Black Panther 3. The high-profile presentation also showcased exclusive footage for Avengers: Doomsday, making it the headline event of the global pop culture convention.",
-      "question": "Which of Marvel's new film announcements or casting reveals are you most excited to see on the big screen?",
+      "headline": "Christopher Nolan's 'The Odyssey' Dominates Global Box Office with $87 Million Second Weekend",
+      "summary": "Director Christopher Nolan's epic film 'The Odyssey' held the top spot at the North American box office with an estimated $87 million in its second weekend, dropping only 30% from its debut. The movie's global total has now surpassed $640 million, marking the strongest second-weekend box office performance of Nolan's career.",
+      "question": "What factors do you think convince people to see a massive epic movie in theaters rather than waiting to stream it at home?",
       "coachLeads": {
-        "friendly": "Hey, did you catch the big movie news coming out of Comic-Con today? Marvel just unveiled some major superhero casting announcements.",
-        "energetic": "Marvel Studios just blew the roof off Comic-Con with massive new film reveals! Let's check out what's heading to theaters!",
-        "calm": "San Diego Comic-Con delivered some notable entertainment news today with several new blockbuster film reveals. It's a great topic to explore.",
-        "direct": "Marvel Studios announced a fresh slate of major film projects at Comic-Con today. Let's break down the latest news."
+        "friendly": "Hey, have you been following the big movie news this weekend? Christopher Nolan's new film is having a massive run at the box office.",
+        "energetic": "Check this out! Christopher Nolan's 'The Odyssey' is absolutely dominating the global box office right now!",
+        "calm": "There is some notable cinema news today as Christopher Nolan's latest release continues its strong theater run.",
+        "direct": "Christopher Nolan's 'The Odyssey' just posted huge second-weekend box office numbers, crossing $640 million worldwide."
       },
       "sources": [
         {
           "title": "Google News: Entertainment",
-          "url": "https://news.google.com/search?q=Entertainment%20top%20news%202026-07-26&hl=en-US&gl=US&ceid=US:en"
+          "url": "https://news.google.com/search?q=Entertainment%20top%20news%202026-07-27&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     }
