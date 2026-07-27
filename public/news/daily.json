@@ -1,95 +1,94 @@
 {
   "schemaVersion": 1,
   "status": "live",
-  "date": "2026-07-27",
-  "generatedAt": "2026-07-26T22:13:14.089Z",
+  "date": "2026-07-28",
+  "generatedAt": "2026-07-27T22:18:43.346Z",
   "model": "gemini-3.6-flash",
+  "fallbackCategories": [],
   "items": [
     {
-      "id": "2026-07-27-politics_economy-source-list",
+      "id": "2026-07-28-politics_economy",
       "category": "politics_economy",
       "categoryLabel": "Politics & Economy",
-      "headline": "Today's Politics & Economy headlines",
-      "summary": "A verified single-story summary could not be prepared safely today. Open the source list to choose a current headline, then use it as a conversation starter.",
-      "question": "Which current politics & economy headline would you like to talk about?",
+      "headline": "US and Iran Pause Military Strikes for Diplomacy, Triggering Sharp Drop in Oil Prices",
+      "summary": "The United States and Iran have temporarily halted military strikes to give diplomatic negotiations mediated by regional partners a chance to resolve ongoing tensions. The unexpected pause in hostilities brought immediate relief to global markets, causing crude oil prices to fall roughly eight to ten percent.",
+      "question": "How do you think sudden shifts in global diplomacy impact everyday consumer costs and the broader economy?",
       "coachLeads": {
-        "friendly": "Let's pick a current politics & economy headline together and talk about it.",
-        "energetic": "There are fresh politics & economy headlines today. Choose one that catches your eye and let's discuss it.",
-        "calm": "A source list is available for today's politics & economy news. We can use one headline as a simple conversation starter.",
-        "direct": "Open today's politics & economy headlines and choose one to discuss."
+        "friendly": "Hey, did you catch the news about the pause in US-Iran tensions? It is really fascinating to see how quickly diplomacy can influence energy markets.",
+        "energetic": "Check this out! A sudden pause in military strikes between the US and Iran just sent global oil prices tumbling!",
+        "calm": "There was a notable turn in global affairs today as US-Iran hostilities came to a temporary halt. Let's talk about how this diplomatic window is affecting the world economy.",
+        "direct": "The US and Iran paused military strikes to allow space for diplomatic talks, driving down global crude prices. Here is why this story is leading headlines today."
       },
-      "fallback": true,
       "sources": [
         {
           "title": "Google News: Politics & Economy",
-          "url": "https://news.google.com/search?q=Politics%20%26%20Economy%20top%20news%202026-07-27&hl=en-US&gl=US&ceid=US:en"
+          "url": "https://news.google.com/search?q=Politics%20%26%20Economy%20top%20news%202026-07-28&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     },
     {
-      "id": "2026-07-27-technology",
+      "id": "2026-07-28-technology",
       "category": "technology",
       "categoryLabel": "Technology",
-      "headline": "South Korean Chip Giants Partner with U.S. Tech Leaders in $950 Billion AI Supply Deals",
-      "summary": "South Korean semiconductor leaders Samsung Electronics and SK Hynix agreed to supply deals worth up to $950 billion with U.S. tech giants including Nvidia, OpenAI, and Anthropic during President Lee Jae-myung's visit to San Francisco. The landmark agreements highlight an escalating global rush to secure high-performance memory chips required for next-generation artificial intelligence infrastructure.",
-      "question": "How do you think massive global investments in AI hardware will affect the technology we use in daily life over the coming years?",
+      "headline": "Nvidia and Tech Leaders Launch Open Secure AI Alliance to Combat Cyber Threats",
+      "summary": "Nvidia and over thirty technology organizations launched the Open Secure AI Alliance on July 27 to develop open-source tools for securing artificial intelligence systems. The coalition aims to strengthen cyber defenses against AI-driven threats, though closed-model developers like OpenAI and Google were notably absent from the group.",
+      "question": "Do you think open-source collaboration is the best way to keep artificial intelligence safe from cyberattacks?",
       "coachLeads": {
-        "friendly": "Hey! Have you heard about the huge new international tech deal that was just announced?",
-        "energetic": "You won't believe the scale of this fresh AI story! Let me tell you about what just happened in global tech!",
-        "calm": "There is a major development in the global tech industry worth discussing today. Let's take a closer look at the details.",
-        "direct": "Top tech companies just signed a massive $950 billion AI hardware deal. Here is what you need to know."
+        "friendly": "Hey, have you heard about this huge tech news today? A bunch of major companies are teaming up to make AI safer.",
+        "energetic": "Did you see this major development in AI cybersecurity? Dozens of tech giants just joined forces to stop AI-driven threats!",
+        "calm": "There is a notable story in tech today worth discussing. Major companies are uniting to create open standards for AI security.",
+        "direct": "Nvidia and over thirty tech leaders just formed a new alliance to guard against AI cyberattacks. Let's talk about what this means."
       },
       "sources": [
         {
           "title": "Google News: Technology",
-          "url": "https://news.google.com/search?q=Technology%20top%20news%202026-07-27&hl=en-US&gl=US&ceid=US:en"
+          "url": "https://news.google.com/search?q=Technology%20top%20news%202026-07-28&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     },
     {
-      "id": "2026-07-27-sports-source-list",
+      "id": "2026-07-28-sports",
       "category": "sports",
       "categoryLabel": "Sports",
-      "headline": "Today's Sports headlines",
-      "summary": "A verified single-story summary could not be prepared safely today. Open the source list to choose a current headline, then use it as a conversation starter.",
-      "question": "Which current sports headline would you like to talk about?",
+      "headline": "Rookie Jackson Koivun Wins PGA Tour 3M Open in Third Pro Start",
+      "summary": "Twenty-one-year-old golfer Jackson Koivun secured his first PGA Tour title at the 3M Open in just his third tournament as a professional. He finished with a tournament-record score of 25-under 259 to hold off world number one Scottie Scheffler by three strokes.",
+      "question": "How do you think young athletes manage the intense pressure when competing against the top players in their sport?",
       "coachLeads": {
-        "friendly": "Let's pick a current sports headline together and talk about it.",
-        "energetic": "There are fresh sports headlines today. Choose one that catches your eye and let's discuss it.",
-        "calm": "A source list is available for today's sports news. We can use one headline as a simple conversation starter.",
-        "direct": "Open today's sports headlines and choose one to discuss."
+        "friendly": "Hey, have you heard about this young golfer making history? It's really inspiring to see someone achieve success so quickly!",
+        "energetic": "You won't believe what happened on the PGA Tour! A 21-year-old rookie beat the world's top player to take home the trophy!",
+        "calm": "There was a remarkable breakthrough in sports recently. A young rookie won a major PGA Tour event in only his third start as a professional.",
+        "direct": "A rookie golfer just won a PGA Tour title against the world's best player. This is definitely worth talking about."
       },
-      "fallback": true,
       "sources": [
         {
           "title": "Google News: Sports",
-          "url": "https://news.google.com/search?q=Sports%20top%20news%202026-07-27&hl=en-US&gl=US&ceid=US:en"
+          "url": "https://news.google.com/search?q=Sports%20top%20news%202026-07-28&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     },
     {
-      "id": "2026-07-27-entertainment",
+      "id": "2026-07-28-entertainment",
       "category": "entertainment",
       "categoryLabel": "Entertainment",
-      "headline": "Christopher Nolan's 'The Odyssey' Dominates Global Box Office with $87 Million Second Weekend",
-      "summary": "Director Christopher Nolan's epic film 'The Odyssey' held the top spot at the North American box office with an estimated $87 million in its second weekend, dropping only 30% from its debut. The movie's global total has now surpassed $640 million, marking the strongest second-weekend box office performance of Nolan's career.",
-      "question": "What factors do you think convince people to see a massive epic movie in theaters rather than waiting to stream it at home?",
+      "headline": "Grammy Winner Carly Simon Reveals Parkinson's Diagnosis and Announces New Album",
+      "summary": "Legendary singer-songwriter Carly Simon announced on July 27 that she has been diagnosed with Parkinson's disease, explaining her recent absence from the public eye [2.1.8]. Despite her health challenges, the 83-year-old music icon shared that she has been recording a new album titled 'Comes in Waves' scheduled for release in August.",
+      "question": "How do you think music or art can help people process and navigate difficult health challenges?",
       "coachLeads": {
-        "friendly": "Hey, have you been following the big movie news this weekend? Christopher Nolan's new film is having a massive run at the box office.",
-        "energetic": "Check this out! Christopher Nolan's 'The Odyssey' is absolutely dominating the global box office right now!",
-        "calm": "There is some notable cinema news today as Christopher Nolan's latest release continues its strong theater run.",
-        "direct": "Christopher Nolan's 'The Odyssey' just posted huge second-weekend box office numbers, crossing $640 million worldwide."
+        "friendly": "Hey there! Have you heard the latest news about music legend Carly Simon?",
+        "energetic": "Check this out—singer Carly Simon just shared a moving personal update along with news about a brand new album!",
+        "calm": "Let me fill you in on singer Carly Simon's recent health update and her upcoming album announcement.",
+        "direct": "Carly Simon recently revealed her Parkinson's diagnosis while announcing her new upcoming album."
       },
       "sources": [
         {
-          "title": "Google News: Entertainment",
-          "url": "https://news.google.com/search?q=Entertainment%20top%20news%202026-07-27&hl=en-US&gl=US&ceid=US:en"
+          "title": "theguardian.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE1jW63G-nJT6pwYXRdRulWZ6UuFGD5XDwrJ0g_l6GRB5hDTZdbSSlEk1gdwKGtvp-BuvnqD55CqTEQtsGDwUDsTmXVb63rGnEbmONPHFmHJD2HMZyd8i2tJgyeKM3awOdtySqODSJsptSKFaxwxIvwwLg6VVHrv1pE41Hcb6pPKOvZ"
+        },
+        {
+          "title": "globalnews.ca",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF09tGpoMtKgt3FvxioM24CSygPrQ4-JjGDKRwjYZAlvziA7Nzlhh5JZ6j0D7FegBx08gJzBICuKm8394SNqjSSHjGcvKN-WBp8jJZS5tnnS_zgWViQeCpuKIOo4-lUksjCwbs_VpO_lcd4ADgJyGoBEtp__FDe0y2I_7gSSs9dI8kCin2gpM6i29o="
         }
       ]
     }
-  ],
-  "fallbackCategories": [
-    "politics_economy",
-    "sports"
   ]
 }
