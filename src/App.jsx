@@ -32,20 +32,22 @@ import {
   Zap,
 } from "lucide-react";
 
+const contactFormUrl = "https://docs.google.com/forms/d/e/1FAIpQLSf14ucq_SU36hxEQSsw0W5eBJ1WVp7PYjCaaEHu9GKRWyWQVw/viewform?usp=publish-editor";
+
 const providers = [
   {
     id: "gemini",
     name: "Gemini",
     owner: "Google",
     mark: "G",
-    guideUrl: "https://ai.google.dev/gemini-api/docs/api-key",
+    guideUrl: "https://aistudio.google.com/app/apikey",
   },
   {
     id: "openai",
     name: "OpenAI",
     owner: "OpenAI",
     mark: "O",
-    guideUrl: "https://help.openai.com/en/articles/4936850-where-do-i-find-my-openai-api-key",
+    guideUrl: "https://platform.openai.com/api-keys",
     clientWarning: "OpenAIは、APIキーをブラウザやモバイルアプリなどのクライアント環境へ配置しないよう公式に案内しています。BYOKey Speakでの提供可否は、公開前に規約と安全面を再確認します。",
   },
   {
@@ -53,7 +55,7 @@ const providers = [
     name: "Claude",
     owner: "Anthropic",
     mark: "C",
-    guideUrl: "https://support.anthropic.com/en/articles/9767949-api-key-best-practices-keeping-your-keys-safe-and-secure",
+    guideUrl: "https://console.anthropic.com/settings/keys",
   },
 ];
 
@@ -326,18 +328,18 @@ function SpeakFeatureBand() {
   const features = [
     {
       icon: MessageCircle,
-      title: "テーマに沿って長く話せる",
-      body: "旅行、日常、仕事前の雑談など、会話を自然に続けながら表現を増やします。",
+      title: "ニュースから話し始める",
+      body: "毎朝届く世界のトップニュースをきっかけに、政治・経済、技術、スポーツ、エンタメの話題で会話できます。",
     },
     {
-      icon: BrainCircuit,
-      title: "ライトなChatsも使える",
-      body: "短い質問や表現確認だけをしたいときは、会話練習とは別にすばやく相談できます。",
+      icon: Sparkles,
+      title: "言葉に詰まっても続けられる",
+      body: "Quick Assistで、日本語の質問から会話の文脈に合う英語表現をその場で提案します。",
     },
     {
       icon: CheckCircle2,
-      title: "その場で直してもらえる",
-      body: "通じるけれど不自然な言い方、語感の違い、より自然な返し方を会話中に確認できます。",
+      title: "話し方の癖を振り返る",
+      body: "会話履歴が溜まると、推定CEFRレベル、よくある間違い、次に伸ばすポイントを分析できます。",
     },
   ];
 
@@ -568,9 +570,9 @@ const faqGroups = [
     items: [
       ["オフラインでも会話できますか？", "会話履歴や設定は端末内で確認できますが、AIから回答を生成するにはインターネット接続が必要です。"],
       ["日本語を混ぜても大丈夫ですか？", "はい。英語が出てこない部分を日本語で尋ね、Quick Assistで文脈に合う英語を提案できます。入力中の文章を消さずに必要な表現だけを追加します。"],
-      ["機種変更時に履歴やキーは引き継がれますか？", "自動クラウド同期は行いません。セキュリティ上、APIキーのバックアップも無効です。新しい端末でAPIキーを再設定し、履歴の移行機能は公開版の仕様として別途案内します。"],
+      ["機種変更時に履歴やキーは引き継がれますか？", "Settingsの「バックアップ／復元」から、会話履歴、Vocabulary List、進捗、会話分析、APIキー以外の設定を暗号化ファイルとして書き出せます。新しい端末ではそのファイルとパスフレーズで復元し、APIキーだけは安全のため再入力します。"],
       ["アプリを削除するとデータはどうなりますか？", "端末内にある設定、会話履歴、暗号化済みAPIキーはアンインストールにより削除されます。各LLM事業者側に送信済みのデータは、各社の保持方針に従います。"],
-      ["問い合わせ先はどこですか？", "お問い合わせは byokey-lab@gmail.com へお願いします。APIキー、プロバイダーの秘密情報、支払い情報はメールに書かないでください。"],
+      ["問い合わせ先はどこですか？", `お問い合わせフォーム（${contactFormUrl}）からお願いします。APIキー、プロバイダーの秘密情報、支払い情報は送信しないでください。`],
     ],
   },
 ];
@@ -748,7 +750,7 @@ function PrivacyPage({ onNavigate }) {
     <>
       <Header onNavigate={onNavigate} />
       <main className="document-page privacy-page">
-        <div className="document-header"><p className="section-kicker">PRIVACY</p><h1>プライバシーポリシー</h1><p>BYOKey Speak for Englishにおけるデータの取り扱い方針です。</p><small>最終更新: 2026年7月20日</small></div>
+        <div className="document-header"><p className="section-kicker">PRIVACY</p><h1>プライバシーポリシー</h1><p>BYOKey Speak for Englishにおけるデータの取り扱い方針です。</p><small>最終更新: 2026年7月27日</small></div>
         <div className="policy-summary">
           <div><LockKeyhole size={22} /><strong>APIキー</strong><span>端末内で暗号化して保存</span></div>
           <div><Smartphone size={22} /><strong>会話と設定</strong><span>原則として端末内に保存</span></div>
@@ -756,13 +758,59 @@ function PrivacyPage({ onNavigate }) {
         </div>
         <article className="policy-body">
           <h2>1. 対象</h2><p>本ポリシーは、BYOKey Labが提供するAndroidアプリ「BYOKey Speak for English」に適用されます。</p>
-          <h2>2. アプリ内で扱う情報</h2><p>APIキー、会話内容、コーチ設定、CEFRレベル、学習メモなどを扱います。これらは原則として利用者の端末内に保存されます。</p>
+          <h2>2. アプリ内で扱う情報</h2><p>APIキー、会話内容、コーチ設定、CEFRレベル、学習メモ、Vocabulary List、会話分析などを扱います。これらは原則として利用者の端末内に保存されます。</p>
           <h2>3. APIキー</h2><p>APIキーはAndroid端末内で暗号化して保存します。BYOKey Labが運営するサーバーには送信しません。キーは、利用者が選択したLLMサービスへの認証にのみ利用します。</p>
           <h2>4. 外部LLMサービスへの送信</h2><p>回答を生成するため、入力した文章、必要な会話履歴、CEFRレベル、コーチ設定を、選択したGoogle Gemini API、OpenAI API、またはAnthropic Claude APIへ直接送信します。送信情報の取り扱いは各社の規約とプライバシーポリシーに従います。</p>
-          <h2>5. BYOKey Labによる収集</h2><p>現行版では、独自のユーザー登録、クラウドデータベース、広告SDK、アクセス解析SDKを使用しません。Google Playは購入やインストール等の情報をGoogleの仕組みに基づいて処理する場合があります。</p>
-          <h2>6. データの削除</h2><p>アプリ内の削除機能、またはアプリのアンインストールにより端末内データを削除できます。APIキーは設定画面から削除できます。</p>
-          <h2>7. セキュリティ</h2><p>APIキーの保護にはAndroid KeystoreとAES-GCM暗号化を使用し、通信はHTTPSに限定します。ただし、端末、通信経路、外部サービスを含むすべてのリスクを完全に排除することはできません。</p>
-          <h2>8. お問い合わせ</h2><p>お問い合わせは <a href="mailto:byokey-lab@gmail.com">byokey-lab@gmail.com</a> へお願いします。APIキー、プロバイダーの秘密情報、支払い情報はメールに記載しないでください。</p>
+          <h2>5. AI返信の報告</h2><p>利用者がアプリ内の報告機能を操作した場合に限り、対象のAI返信、報告理由、任意の補足、利用者が明示的に選んだ場合は直前の利用者発言をBYOKey Labへ送信します。APIキー、端末識別子、メールアドレスは自動送信しません。報告データは確認と品質改善のために使用し、受付から90日以内に削除します。受付先の設定が完了するまでは、報告内容を端末のクリップボードへコピーし、お問い合わせフォームを開きます。</p>
+          <h2>6. BYOKey Labによる収集</h2><p>現行版では、独自のユーザー登録、広告SDK、アクセス解析SDKを使用しません。前項の報告または利用者自身がお問い合わせフォームから送信した情報を除き、BYOKey Labが通常の会話内容を収集することはありません。Google PlayとGoogle Formsは、それぞれの仕組みに基づいて情報を処理する場合があります。</p>
+          <h2>7. バックアップと機種変更</h2><p>利用者は、会話履歴、Vocabulary List、進捗、会話分析、APIキー以外の設定を、パスフレーズで暗号化したファイルとして利用者が選んだ保存先へ書き出せます。APIキー、Android Keystoreの鍵、下書き、ニュースキャッシュはバックアップに含みません。パスフレーズを忘れた場合、BYOKey Labは復元できません。</p>
+          <h2>8. データの削除</h2><p>アプリ内の削除機能、またはアプリのアンインストールにより端末内データを削除できます。APIキーは設定画面から個別に削除できます。</p>
+          <h2>9. セキュリティ</h2><p>APIキーの保護にはAndroid KeystoreとAES-GCM暗号化を使用し、通信はHTTPSに限定します。バックアップファイルはPBKDF2-HMAC-SHA256で導出した鍵とAES-256-GCMで暗号化します。ただし、端末、通信経路、外部サービスを含むすべてのリスクを完全に排除することはできません。</p>
+          <h2>10. お問い合わせ</h2><p>お問い合わせは <a href={contactFormUrl} target="_blank" rel="noreferrer">お問い合わせフォーム</a> からお願いします。APIキー、プロバイダーの秘密情報、支払い情報は送信しないでください。</p>
+        </article>
+      </main>
+      <Footer onNavigate={onNavigate} />
+    </>
+  );
+}
+
+function TermsPage({ onNavigate }) {
+  return (
+    <>
+      <Header onNavigate={onNavigate} />
+      <main className="document-page">
+        <div className="document-header"><p className="section-kicker">TERMS</p><h1>利用規約</h1><p>BYOKey Speak for Englishの利用条件です。</p><small>施行日: 2026年7月27日</small></div>
+        <article className="policy-body">
+          <h2>1. 適用</h2><p>本規約は、BYOKey Labが提供するAndroidアプリ「BYOKey Speak for English」の利用に適用されます。利用者は、本規約とプライバシーポリシーを確認したうえで本アプリを利用します。</p>
+          <h2>2. 本アプリの仕組み</h2><p>本アプリは、利用者自身が取得したGoogle Gemini API、OpenAI API、またはAnthropic Claude APIのキーを使用して英会話機能を提供します。利用できるモデル、料金、利用上限、生成結果は各LLM事業者の仕様に依存します。</p>
+          <h2>3. 料金</h2><p>本アプリの購入代金と、各LLM事業者が請求するAPI利用料は別です。API利用料は利用者とLLM事業者との間で発生し、BYOKey Labは請求、返金、利用上限の設定を代行しません。利用者は各社の管理画面で予算上限と通知を設定してください。</p>
+          <h2>4. APIキー</h2><p>利用者はAPIキーを第三者へ共有せず、安全に管理するものとします。BYOKey Labがサポート、返金、調査を理由にAPIキーの送信を求めることはありません。APIキーの漏えいが疑われる場合は、発行元で直ちに無効化してください。</p>
+          <h2>5. AI生成内容</h2><p>AIの回答は正確性、完全性、安全性を保証するものではありません。医療、法律、金融、安全、その他重要な判断では、一次情報と適切な専門家を確認してください。不適切なAI返信は、アプリ内の旗アイコンから報告できます。</p>
+          <h2>6. 禁止事項</h2><p>法令または各LLM事業者の規約に違反する利用、第三者の権利を侵害する利用、サービスや他の利用者へ不正な負荷を与える行為、APIキーや審査用情報の不正取得、本アプリの安全機能を回避する行為を禁止します。</p>
+          <h2>7. データとバックアップ</h2><p>会話や学習データは原則として端末内に保存されます。利用者は暗号化バックアップを作成できますが、パスフレーズと保存ファイルは利用者自身で管理します。APIキーはバックアップに含まれません。</p>
+          <h2>8. 提供の変更と停止</h2><p>外部LLMの仕様変更、法令、保守、セキュリティ上の必要により、本アプリの機能、対応モデル、提供条件を変更または停止する場合があります。重要な変更は、合理的な方法で案内します。</p>
+          <h2>9. 返金と問い合わせ</h2><p>APIキー設定が困難で会話機能を利用できない場合や、アプリの不具合で利用できない場合は、購入後2週間以内に限り、注文番号と理由を添えて<a href={contactFormUrl} target="_blank" rel="noreferrer">お問い合わせフォーム</a>からご連絡ください。返金はGoogle Playの手続き、適用法令、購入状況に基づいて判断します。</p>
+          <h2>10. 責任の範囲</h2><p>BYOKey Labは、適用法令で認められる範囲において、外部LLMの停止、AI回答、API料金、利用者によるAPIキー管理、バックアップファイルまたはパスフレーズの紛失により生じた損害について責任を負いません。</p>
+          <h2>11. 規約の変更</h2><p>本規約を変更する場合があります。利用者に重要な影響がある変更では、アプリまたは公式サイトで案内します。</p>
+          <h2>12. お問い合わせ</h2><p>本規約に関する連絡は<a href={contactFormUrl} target="_blank" rel="noreferrer">お問い合わせフォーム</a>からお願いします。APIキーや支払い情報は送信しないでください。</p>
+        </article>
+      </main>
+      <Footer onNavigate={onNavigate} />
+    </>
+  );
+}
+
+function SupportPage({ onNavigate }) {
+  return (
+    <>
+      <Header onNavigate={onNavigate} />
+      <main className="document-page">
+        <div className="document-header"><p className="section-kicker">SUPPORT</p><h1>お問い合わせ</h1><p>BYOKey Speak for Englishの問い合わせ、返金相談、AI返信の報告に関する案内です。</p></div>
+        <article className="policy-body">
+          <h2>1. お問い合わせフォーム</h2><p>ご連絡は <a href={contactFormUrl} target="_blank" rel="noreferrer">お問い合わせフォーム</a> からお願いします。APIキー、プロバイダーの秘密情報、支払い情報は送信しないでください。</p>
+          <h2>2. 返金対応について</h2><p>どうしてもAPIキーの設定が難しく会話することができない、アプリの不具合で使用できない、などの場合は、アプリ購入後2週間以内に限り返金対応いたします。お問い合わせフォームより注文番号と理由を添えてご連絡ください。</p>
+          <h2>3. 不適切なAI返信の報告</h2><p>AI返信に問題がある場合は、アプリ内の旗アイコンから報告できます。報告機能では、対象のAI返信、報告理由、任意の補足、利用者が明示的に選んだ場合は直前の利用者発言のみを送信します。APIキーは送信しません。</p>
+          <h2>4. 機種変更時のデータ移行</h2><p>Settingsの「バックアップ／復元」から暗号化バックアップを作成し、新しい端末で復元できます。APIキーはバックアップ対象外のため、新しい端末で再入力してください。パスフレーズを忘れた場合、BYOKey Labは復元できません。</p>
         </article>
       </main>
       <Footer onNavigate={onNavigate} />
@@ -776,7 +824,7 @@ function FinalCta({ onNavigate }) {
 
 function Footer({ onNavigate }) {
   return (
-    <footer><Brand onNavigate={onNavigate} /><div><button type="button" onClick={() => onNavigate("/privacy/")}>プライバシー</button><button type="button" onClick={() => onNavigate("/guide/api/")}>API設定ガイド</button><a href="mailto:byokey-lab@gmail.com">お問い合わせ</a></div><small>© 2026 BYOKey Lab</small></footer>
+    <footer><Brand onNavigate={onNavigate} /><div><button type="button" onClick={() => onNavigate("/privacy/")}>プライバシー</button><button type="button" onClick={() => onNavigate("/terms/")}>利用規約</button><button type="button" onClick={() => onNavigate("/support/")}>お問い合わせ</button><button type="button" onClick={() => onNavigate("/guide/api/")}>API設定ガイド</button></div><small>© 2026 BYOKey Lab</small></footer>
   );
 }
 
@@ -787,11 +835,15 @@ export function App() {
     if (path.startsWith("/speak/english")) document.title = "BYOKey Speak for English | BYOKey Lab";
     else if (path.startsWith("/guide/api")) document.title = "API設定ガイド | BYOKey Lab";
     else if (path.startsWith("/privacy")) document.title = "プライバシーポリシー | BYOKey Lab";
+    else if (path.startsWith("/terms")) document.title = "利用規約 | BYOKey Lab";
+    else if (path.startsWith("/support")) document.title = "お問い合わせ | BYOKey Lab";
     else document.title = "BYOKey Lab";
   }, [path]);
 
   if (path.startsWith("/speak/english")) return <SpeakPage onNavigate={navigate} />;
   if (path.startsWith("/guide/api")) return <GuidePage onNavigate={navigate} />;
   if (path.startsWith("/privacy")) return <PrivacyPage onNavigate={navigate} />;
+  if (path.startsWith("/terms")) return <TermsPage onNavigate={navigate} />;
+  if (path.startsWith("/support")) return <SupportPage onNavigate={navigate} />;
   return <HomePage onNavigate={navigate} />;
 }
