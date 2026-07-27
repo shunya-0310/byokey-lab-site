@@ -38,8 +38,11 @@ const categories = [
 ];
 
 const items = [];
+const fallbackItems = [];
 for (const category of categories) {
-  items.push(await generateCategoryWithRetry(category));
+  const item = await generateCategoryWithRetry(category);
+  items.push(item);
+  if (item.fallback) fallbackItems.push(item.category);
 }
 
 if (items.length < categories.length) {
@@ -55,6 +58,7 @@ const feed = {
   date,
   generatedAt,
   model,
+  fallbackCategories: fallbackItems,
   items,
 };
 
@@ -65,7 +69,7 @@ console.log(`Wrote ${items.length} grounded news items to ${outputPath}`);
 
 async function generateCategoryWithRetry(category) {
   let lastError;
-  for (let attempt = 1; attempt <= 2; attempt += 1) {
+  for (let attempt = 1; attempt <= 3; attempt += 1) {
     try {
       return await generateCategory(category, attempt);
     } catch (error) {
@@ -73,7 +77,8 @@ async function generateCategoryWithRetry(category) {
       console.warn(`Attempt ${attempt} failed for ${category.id}: ${error.message}`);
     }
   }
-  throw lastError;
+  console.warn(`Using safe source-list fallback for ${category.id}: ${lastError.message}`);
+  return fallbackItem(category);
 }
 
 async function generateCategory(category, attempt) {
@@ -96,6 +101,7 @@ Each coach lead must be 1 or 2 natural English sentences that sound like a coach
 Examples of the intended feeling are "Hey, have you heard about this?" and "This is worth talking about."
 Do not put source URLs in the JSON. Sources are attached from grounding metadata.
 Attempt number: ${attempt}. If this is attempt 2, choose a more concrete and recent story than before.
+If this is attempt 3, choose a different current story in the same category and keep the JSON especially simple.
   `.trim();
 
   const response = await fetch(
@@ -147,18 +153,39 @@ function normalizeItem(item, category, sources) {
     id: `${date}-${category.id}`,
     category: category.id,
     categoryLabel: category.label,
-    headline: requiredText(item?.headline, "headline"),
-    summary: requiredText(item?.summary, "summary"),
-    question: requiredText(item?.question, "question"),
+    headline: requiredNewsText(item?.headline, "headline"),
+    summary: requiredNewsText(item?.summary, "summary"),
+    question: requiredNewsText(item?.question, "question"),
     coachLeads: {
-      friendly: requiredText(leads.friendly, "coachLeads.friendly"),
-      energetic: requiredText(leads.energetic, "coachLeads.energetic"),
-      calm: requiredText(leads.calm, "coachLeads.calm"),
-      direct: requiredText(leads.direct, "coachLeads.direct"),
+      friendly: requiredCoachLead(leads.friendly, "coachLeads.friendly"),
+      energetic: requiredCoachLead(leads.energetic, "coachLeads.energetic"),
+      calm: requiredCoachLead(leads.calm, "coachLeads.calm"),
+      direct: requiredCoachLead(leads.direct, "coachLeads.direct"),
     },
     sources,
   };
   return normalized;
+}
+
+function fallbackItem(category) {
+  const sources = fallbackSources(category);
+  const label = category.label;
+  return {
+    id: `${date}-${category.id}-source-list`,
+    category: category.id,
+    categoryLabel: label,
+    headline: `Today's ${label} headlines`,
+    summary: `A verified single-story summary could not be prepared safely today. Open the source list to choose a current headline, then use it as a conversation starter.`,
+    question: `Which current ${label.toLowerCase()} headline would you like to talk about?`,
+    coachLeads: {
+      friendly: `Let's pick a current ${label.toLowerCase()} headline together and talk about it.`,
+      energetic: `There are fresh ${label.toLowerCase()} headlines today. Choose one that catches your eye and let's discuss it.`,
+      calm: `A source list is available for today's ${label.toLowerCase()} news. We can use one headline as a simple conversation starter.`,
+      direct: `Open today's ${label.toLowerCase()} headlines and choose one to discuss.`,
+    },
+    fallback: true,
+    sources,
+  };
 }
 
 function groundingSources(metadata) {
@@ -210,8 +237,7 @@ function parseNewsItems(text, category) {
     }
   }
 
-  console.warn(`Gemini response for ${category.id} was not JSON; using text fallback.`);
-  return [fallbackItemFromText(withoutFence, category)];
+  throw new Error(`Gemini response for ${category.id} was not valid JSON.`);
 }
 
 function sliceBetween(text, open, close) {
@@ -223,40 +249,34 @@ function sliceBetween(text, open, close) {
   return text.slice(start, end + 1);
 }
 
-function fallbackItemFromText(text, category) {
-  const lines = text
-    .split(/\r?\n/)
-    .map((line) => line.replace(/^[-*#\s]+/, "").trim())
-    .filter(Boolean);
-  const headline = firstReasonableLine(lines) || `${category.label} top story`;
-  const summary = lines
-    .filter((line) => line !== headline)
-    .join(" ")
-    .replace(/\s+/g, " ")
-    .slice(0, 360)
-    || `A current ${category.label.toLowerCase()} story is developing today.`;
-  return {
-    headline,
-    summary,
-    question: "What do you think about this story?",
-    coachLeads: {
-      friendly: `Hey, have you heard about this ${category.label.toLowerCase()} story?`,
-      energetic: `This ${category.label.toLowerCase()} story is worth talking about today.`,
-      calm: `There is a current ${category.label.toLowerCase()} story that may be useful for conversation practice.`,
-      direct: `Let's talk about this ${category.label.toLowerCase()} story.`,
-    },
-  };
-}
-
-function firstReasonableLine(lines) {
-  return lines.find((line) => line.length >= 12 && line.length <= 140);
-}
-
 function requiredText(value, field) {
   if (typeof value !== "string" || !value.trim()) {
     throw new Error(`Feed validation failed: ${field} is missing.`);
   }
   return value.trim();
+}
+
+function requiredNewsText(value, field) {
+  const text = requiredText(value, field);
+  if (looksLikeJsonLeak(text)) {
+    throw new Error(`Feed validation failed: ${field} contains leaked JSON.`);
+  }
+  return text;
+}
+
+function requiredCoachLead(value, field) {
+  const text = requiredText(value, field);
+  if (looksLikeJsonLeak(text)) {
+    throw new Error(`Feed validation failed: ${field} contains leaked JSON.`);
+  }
+  return text;
+}
+
+function looksLikeJsonLeak(text) {
+  return /(^|[\s,{])"(?:headline|summary|question|coachLeads|sources|friendly|energetic|calm|direct)"\s*:/i.test(text)
+    || /(?:headline|summary|question|coachLeads|sources|friendly|energetic|calm|direct)\s*:\s*[{"]/i.test(text)
+    || /Treat these sources as the initial factual context/i.test(text)
+    || /Search the web again when the learner/i.test(text);
 }
 
 function tokyoDate(value) {

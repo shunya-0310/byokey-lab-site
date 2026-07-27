@@ -19,12 +19,14 @@ for (const item of feed.items) {
   expectedCategories.delete(item.category);
   for (const field of ["id", "headline", "summary", "question"]) {
     assert(typeof item[field] === "string" && item[field].trim(), `${field} is required.`);
+    assert(!looksLikeJsonLeak(item[field]), `${field} contains leaked JSON.`);
   }
   for (const tone of ["friendly", "energetic", "calm", "direct"]) {
     assert(
       typeof item.coachLeads?.[tone] === "string" && item.coachLeads[tone].trim(),
       `coachLeads.${tone} is required.`,
     );
+    assert(!looksLikeJsonLeak(item.coachLeads[tone]), `coachLeads.${tone} contains leaked JSON.`);
   }
   assert(Array.isArray(item.sources) && item.sources.length > 0, "sources are required.");
   for (const source of item.sources) {
@@ -37,4 +39,11 @@ console.log(`Validated ${feed.items.length} daily news items.`);
 
 function assert(condition, message) {
   if (!condition) throw new Error(message);
+}
+
+function looksLikeJsonLeak(text) {
+  return /(^|[\s,{])"(?:headline|summary|question|coachLeads|sources|friendly|energetic|calm|direct)"\s*:/i.test(text)
+    || /(?:headline|summary|question|coachLeads|sources|friendly|energetic|calm|direct)\s*:\s*[{"]/i.test(text)
+    || /Treat these sources as the initial factual context/i.test(text)
+    || /Search the web again when the learner/i.test(text);
 }

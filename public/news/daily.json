@@ -6,30 +6,23 @@
   "model": "gemini-3.6-flash",
   "items": [
     {
-      "id": "2026-07-27-politics_economy",
+      "id": "2026-07-27-politics_economy-source-list",
       "category": "politics_economy",
       "categoryLabel": "Politics & Economy",
-      "headline": "\"coachLeads\": {",
-      "summary": ", offering a temporary lull after weeks of escalating conflict. The break in combat comes as military advisors urge a shift toward negotiations and Israeli Prime Minister Benjamin Netanyahu prepares to meet President Donald Trump in Washington.\", \"question\": \"Do you think temporary lulls in military action can pave the way for lasting peace agreements, or ar",
-      "question": "What do you think about this story?",
+      "headline": "Today's Politics & Economy headlines",
+      "summary": "A verified single-story summary could not be prepared safely today. Open the source list to choose a current headline, then use it as a conversation starter.",
+      "question": "Which current politics & economy headline would you like to talk about?",
       "coachLeads": {
-        "friendly": "Hey, have you heard about this politics & economy story?",
-        "energetic": "This politics & economy story is worth talking about today.",
-        "calm": "There is a current politics & economy story that may be useful for conversation practice.",
-        "direct": "Let's talk about this politics & economy story."
+        "friendly": "Let's pick a current politics & economy headline together and talk about it.",
+        "energetic": "There are fresh politics & economy headlines today. Choose one that catches your eye and let's discuss it.",
+        "calm": "A source list is available for today's politics & economy news. We can use one headline as a simple conversation starter.",
+        "direct": "Open today's politics & economy headlines and choose one to discuss."
       },
+      "fallback": true,
       "sources": [
         {
-          "title": "theguardian.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFp4urjxzwoFC37SKkCOmmzgIq49oChA423zcMWl1ed4NecdYN6wOeYplaAg0wG13NyWOdWbDzQJHKa4ReTS6K2UiVjfywqIAEpZiPAiu8fRL-AD0vIZje6xtWgoaCEbBYaxzEwr_8lRVb5rfXJ7KxLDtcmAe127XKMA6BNODKf7w4gmsObiroVABmgOOORFbtdQJ9QAZWw8hvc"
-        },
-        {
-          "title": "aljazeera.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEnWXOw0nuJYqCmLTzswIH8rZ-MpGltiu-Wgu-AiV4BDdpNpoTsJrnYAO9js0s_aw-NpYjfV0h__NmarYv6Tyc5TYy8siv6NITMhN-8S7sXwhisJbQGaa7edlgXUgIaov8kLHZIfhClnFgziZRiizq5G6Hmr-Gg0GRnN0ME0-WptQFs9UTB_4j-YethdYoP"
-        },
-        {
-          "title": "timesofisrael.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHQVDwwPgESNqlIcpSeX-rZxKp_cMVhZgtL9yz7LZdpf_EDF_IxqB6jNJ2xxhE0nlzp1AGE2KKuJzwO-ZiTWbb8VGo9VoAkMf3l_Wg_LE-Yh5IEZlZkjHoakpRL_s4UyytlmClFgOd0UEMuwee743p6glHN05fBA39PrxYsqsQ3C_plmVX0hSYtGuKZfDwcLju-u2c="
+          "title": "Google News: Politics & Economy",
+          "url": "https://news.google.com/search?q=Politics%20%26%20Economy%20top%20news%202026-07-27&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     },
@@ -54,30 +47,23 @@
       ]
     },
     {
-      "id": "2026-07-27-sports",
+      "id": "2026-07-27-sports-source-list",
       "category": "sports",
       "categoryLabel": "Sports",
-      "headline": "\"coachLeads\": {",
-      "summary": ". He claimed the yellow jersey after three grueling weeks of competition across Spain and France, finishing overall ahead of Belgium's Remco Evenepoel.\", \"question\": \"What kind of physical and mental qualities do you think allow an athlete to stay at the top of an intense sport year after year?\", \"friendly\": \"Hey, have you heard the big sports news from toda",
-      "question": "What do you think about this story?",
+      "headline": "Today's Sports headlines",
+      "summary": "A verified single-story summary could not be prepared safely today. Open the source list to choose a current headline, then use it as a conversation starter.",
+      "question": "Which current sports headline would you like to talk about?",
       "coachLeads": {
-        "friendly": "Hey, have you heard about this sports story?",
-        "energetic": "This sports story is worth talking about today.",
-        "calm": "There is a current sports story that may be useful for conversation practice.",
-        "direct": "Let's talk about this sports story."
+        "friendly": "Let's pick a current sports headline together and talk about it.",
+        "energetic": "There are fresh sports headlines today. Choose one that catches your eye and let's discuss it.",
+        "calm": "A source list is available for today's sports news. We can use one headline as a simple conversation starter.",
+        "direct": "Open today's sports headlines and choose one to discuss."
       },
+      "fallback": true,
       "sources": [
         {
-          "title": "btpm.org",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGUaECgbHIjMmpMkTs5MB3VE_JxZPrk4U3kt6NxX2qsxBpFPjprf9SolJBk_DKzUksHo2RJ9E2Eohf5-enO9CndPfU2GM_cItw_ZrG8owLl-zHii__Kd4hWutyAD11J1-mOtgNOUVBnyvMaVL2WTVyCzR4gsEQq34-iO9r-bDJegPdwAyqgpYLiUQ4tnqLnHuxEdMnDHo7BeMd3RfA5zoKitN_rNDDYUp8aIg=="
-        },
-        {
-          "title": "cyclingnews.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF6317wllW-RKOEsrqP5Ht8ZCPbSdZI3gxf-vClmMJgUT-PmLoU5Gj9OJWFqmIpeQYQshyI-g1KJLau9powOLLiT73zenF8LaF8DICraRct62kSmB8DBRFyAUItGAzIJrtPH-GNRpulE5VXiDWRY0eGpjjHzKUKahsRv13U5i1zZIqN0TsKmoTm0Xi3mHARpAW1epCz7rsimQMqO9vyubQHBnK61-tNPszODMBMvyPtj6_8c67-Z1IMRiszJQOYeqHytnPAjf4adPj0ds1c"
-        },
-        {
-          "title": "wikipedia.org",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH3WeyxVL7DFhL2mNmh9LhwVZE_63YfC91jluzf817LCeFlTXwDLa0ymWgYXmRoEhfLd-6iYIspDW_LIfARsJaejn4uBUumvm2Ht8OwV1X4kS8rFjpRZh9ASEUIsqm-szAugkxLMnuy"
+          "title": "Google News: Sports",
+          "url": "https://news.google.com/search?q=Sports%20top%20news%202026-07-27&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     },
@@ -101,5 +87,9 @@
         }
       ]
     }
+  ],
+  "fallbackCategories": [
+    "politics_economy",
+    "sports"
   ]
 }
