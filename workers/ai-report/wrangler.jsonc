@@ -1,0 +1,21 @@
+{
+  "$schema": "https://raw.githubusercontent.com/cloudflare/workers-sdk/main/packages/wrangler/config-schema.json",
+  "name": "byokey-ai-report",
+  "main": "src/index.js",
+  "compatibility_date": "2026-07-27",
+  "compatibility_flags": ["nodejs_compat"],
+  "observability": {
+    "enabled": true,
+    "head_sampling_rate": 1
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "byokey-ai-reports",
+      "database_id": "6997acbe-9966-4ad0-8999-45bca8384ab9"
+    }
+  ],
+  "triggers": {
+    "crons": ["17 18 * * *"]
+  }
+}
