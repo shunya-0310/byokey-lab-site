@@ -1,92 +1,92 @@
 {
   "schemaVersion": 1,
   "status": "live",
-  "date": "2026-07-28",
-  "generatedAt": "2026-07-27T22:18:43.346Z",
+  "date": "2026-07-29",
+  "generatedAt": "2026-07-28T22:17:13.363Z",
   "model": "gemini-3.6-flash",
   "fallbackCategories": [],
   "items": [
     {
-      "id": "2026-07-28-politics_economy",
+      "id": "2026-07-29-politics_economy",
       "category": "politics_economy",
       "categoryLabel": "Politics & Economy",
-      "headline": "US and Iran Pause Military Strikes for Diplomacy, Triggering Sharp Drop in Oil Prices",
-      "summary": "The United States and Iran have temporarily halted military strikes to give diplomatic negotiations mediated by regional partners a chance to resolve ongoing tensions. The unexpected pause in hostilities brought immediate relief to global markets, causing crude oil prices to fall roughly eight to ten percent.",
-      "question": "How do you think sudden shifts in global diplomacy impact everyday consumer costs and the broader economy?",
+      "headline": "Netanyahu and Trump Hold High-Stakes White House Talks on Iran Crisis",
+      "summary": "Israeli Prime Minister Benjamin Netanyahu met U.S. President Donald Trump at the White House on July 28 for crucial security discussions [2.2.6]. The meeting comes as Washington pursues delicate diplomatic talks with Tehran amidst a fragile pause in regional military strikes.",
+      "question": "What role do you think international diplomacy plays in preventing regional conflicts from escalating?",
       "coachLeads": {
-        "friendly": "Hey, did you catch the news about the pause in US-Iran tensions? It is really fascinating to see how quickly diplomacy can influence energy markets.",
-        "energetic": "Check this out! A sudden pause in military strikes between the US and Iran just sent global oil prices tumbling!",
-        "calm": "There was a notable turn in global affairs today as US-Iran hostilities came to a temporary halt. Let's talk about how this diplomatic window is affecting the world economy.",
-        "direct": "The US and Iran paused military strikes to allow space for diplomatic talks, driving down global crude prices. Here is why this story is leading headlines today."
+        "friendly": "Hey! Have you seen the news about Netanyahu meeting Trump at the White House today?",
+        "energetic": "There is a huge diplomatic story breaking today! U.S. and Israeli leaders just met in Washington to discuss the Iran conflict.",
+        "calm": "A major diplomatic event took place today as U.S. and Israeli leaders met at the White House to discuss regional security.",
+        "direct": "Trump and Netanyahu met at the White House today to address ongoing negotiations with Iran. Let's discuss what this means for global politics."
       },
       "sources": [
         {
-          "title": "Google News: Politics & Economy",
-          "url": "https://news.google.com/search?q=Politics%20%26%20Economy%20top%20news%202026-07-28&hl=en-US&gl=US&ceid=US:en"
+          "title": "thehindu.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQExQYKfdYE1_N9YLFN3mt1xMRR1p2UnDF2cqe5XSoW_jq2aKNxqFkwjj654zKRMAa90a1iezQP20pe8OzUk1JgBuNbeqJyO6P3NOZqdXRz-cGG-ixdMDwOJsZSYLzQTV7JouM8d9-mlMF7Z37oN3zJGgDiw7d51Hzq7y1kiy2Qn9EFnwE2E0nVRnw7X4s5q05XzvsOGM-YE2RwwBN9y2FbPa0RM7Iiqa75tE4-F1jI7GWCm0tePpjNMZXhMitGXxvv4e5fO7U3cQsSeyVVOr1EbGkWGtg=="
+        },
+        {
+          "title": "courthousenews.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFokwuDhVel44br7KrmLPxBGwMmcZGo5k8CVv1VwpHtOK8zB_73XlZVh2reA01eZWl5SsCuTii_oHkYDU7T-hEnIlJMf-uKe3kdL3u7u7eWAnGE26JBwR49BEQmqaGZ7T7wj1RR2Z6TvAZ8DmdYGsNgy9rP3DgdagwugNUk1pOxmU8VNqwSqI6j152csB1fxC0tUdiz"
         }
       ]
     },
     {
-      "id": "2026-07-28-technology",
+      "id": "2026-07-29-technology",
       "category": "technology",
       "categoryLabel": "Technology",
-      "headline": "Nvidia and Tech Leaders Launch Open Secure AI Alliance to Combat Cyber Threats",
-      "summary": "Nvidia and over thirty technology organizations launched the Open Secure AI Alliance on July 27 to develop open-source tools for securing artificial intelligence systems. The coalition aims to strengthen cyber defenses against AI-driven threats, though closed-model developers like OpenAI and Google were notably absent from the group.",
-      "question": "Do you think open-source collaboration is the best way to keep artificial intelligence safe from cyberattacks?",
+      "headline": "AI Acceleration Drives Record Surge in Discovered Software Security Flaws",
+      "summary": "On July 28, 2026, security reports revealed that artificial intelligence tools are on pace to double the number of software vulnerabilities detected worldwide compared to last year's record. Major tech firms, including Microsoft, Google, and Oracle, released unprecedented numbers of security patches in response to these AI-driven discoveries.",
+      "question": "How do you think tech companies should balance using AI to fix software bugs against the risk of hackers using the same tools?",
       "coachLeads": {
-        "friendly": "Hey, have you heard about this huge tech news today? A bunch of major companies are teaming up to make AI safer.",
-        "energetic": "Did you see this major development in AI cybersecurity? Dozens of tech giants just joined forces to stop AI-driven threats!",
-        "calm": "There is a notable story in tech today worth discussing. Major companies are uniting to create open standards for AI security.",
-        "direct": "Nvidia and over thirty tech leaders just formed a new alliance to guard against AI cyberattacks. Let's talk about what this means."
+        "friendly": "Hey, have you seen how AI is shaking up cybersecurity this week? It is finding software bugs faster than ever before.",
+        "energetic": "Look at this breaking tech news! AI tools are discovering software flaws at double the speed of last year, forcing massive updates from major tech giants!",
+        "calm": "There is a significant development today in cybersecurity regarding how artificial intelligence is detecting software vulnerabilities.",
+        "direct": "Security reports released today show AI tools are on track to double software vulnerability discoveries this year. Let's talk about what this means for digital security."
       },
       "sources": [
         {
           "title": "Google News: Technology",
-          "url": "https://news.google.com/search?q=Technology%20top%20news%202026-07-28&hl=en-US&gl=US&ceid=US:en"
+          "url": "https://news.google.com/search?q=Technology%20top%20news%202026-07-29&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     },
     {
-      "id": "2026-07-28-sports",
+      "id": "2026-07-29-sports",
       "category": "sports",
       "categoryLabel": "Sports",
-      "headline": "Rookie Jackson Koivun Wins PGA Tour 3M Open in Third Pro Start",
-      "summary": "Twenty-one-year-old golfer Jackson Koivun secured his first PGA Tour title at the 3M Open in just his third tournament as a professional. He finished with a tournament-record score of 25-under 259 to hold off world number one Scottie Scheffler by three strokes.",
-      "question": "How do you think young athletes manage the intense pressure when competing against the top players in their sport?",
+      "headline": "Real Madrid Becomes First Sports Club to Cross €1.2 Billion in Annual Revenue",
+      "summary": "On July 28, 2026, Real Madrid approved its official financial results for the 2025–2026 season, reporting a record-breaking €1.221 billion in operating revenue [1.3.2]. This milestone makes the Spanish football club the first sports organization in history to surpass €1.2 billion in annual revenue, driven by expanded stadium operations and commercial growth.",
+      "question": "What factors do you think contribute most to a global sports team achieving this level of financial success?",
       "coachLeads": {
-        "friendly": "Hey, have you heard about this young golfer making history? It's really inspiring to see someone achieve success so quickly!",
-        "energetic": "You won't believe what happened on the PGA Tour! A 21-year-old rookie beat the world's top player to take home the trophy!",
-        "calm": "There was a remarkable breakthrough in sports recently. A young rookie won a major PGA Tour event in only his third start as a professional.",
-        "direct": "A rookie golfer just won a PGA Tour title against the world's best player. This is definitely worth talking about."
+        "friendly": "Hey, have you heard about Real Madrid's latest financial news? It's incredible to see a sports team reach numbers like this!",
+        "energetic": "Real Madrid just smashed an all-time revenue record in global sports history! Let's dive into how they made it happen!",
+        "calm": "Real Madrid released their financial report today, setting a new revenue milestone for world sports. Take a look when you're ready to chat.",
+        "direct": "Real Madrid officially became the first sports organization to clear €1.2 billion in annual revenue today. Let's discuss what this means for the business of sports."
       },
       "sources": [
         {
-          "title": "Google News: Sports",
-          "url": "https://news.google.com/search?q=Sports%20top%20news%202026-07-28&hl=en-US&gl=US&ceid=US:en"
+          "title": "realmadrid.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHCaUv1jPb1KBn54R1OJjntIRLYcFq8ZlD4a0a4g3C9Z3RvBcUujfyi556dwSnD6r1bt-p3nB0NqJQHD2-ldxpiclWXp9mkeCkTl9z-fvSFEcAkpM7MtYGsG_wImixRVvSeDJPXotaBzBs2oCS8g8tTCzloD1bTrto51MJxZ9DIbODFDeOsPkUhPErDqT1vPHgX94arzC_u-9ffg6F3NE8LtFeEA31L7f1p6scm23hyYyKS8jNU6xdz3q5DVgB19mTdCDZR69RTGDCqHzuoHvNSkIkY9zfCijpTxordSVmB"
         }
       ]
     },
     {
-      "id": "2026-07-28-entertainment",
+      "id": "2026-07-29-entertainment",
       "category": "entertainment",
       "categoryLabel": "Entertainment",
-      "headline": "Grammy Winner Carly Simon Reveals Parkinson's Diagnosis and Announces New Album",
-      "summary": "Legendary singer-songwriter Carly Simon announced on July 27 that she has been diagnosed with Parkinson's disease, explaining her recent absence from the public eye [2.1.8]. Despite her health challenges, the 83-year-old music icon shared that she has been recording a new album titled 'Comes in Waves' scheduled for release in August.",
-      "question": "How do you think music or art can help people process and navigate difficult health challenges?",
+      "headline": "Marvel Studios Unveils Major Casting News at San Diego Comic-Con 2026",
+      "summary": "At San Diego Comic-Con 2026, Marvel Studios announced that Ryan Gosling will star as Ghost Rider and David Jonsson will lead the upcoming Black Panther sequel. The reveals headlined the convention's main hall as major studios presented their biggest upcoming film projects to global fans.",
+      "question": "What do you think about well-known actors joining major superhero movie franchises?",
       "coachLeads": {
-        "friendly": "Hey there! Have you heard the latest news about music legend Carly Simon?",
-        "energetic": "Check this out—singer Carly Simon just shared a moving personal update along with news about a brand new album!",
-        "calm": "Let me fill you in on singer Carly Simon's recent health update and her upcoming album announcement.",
-        "direct": "Carly Simon recently revealed her Parkinson's diagnosis while announcing her new upcoming album."
+        "friendly": "Hey, have you heard about the big movie news coming out of Comic-Con this week?",
+        "energetic": "You won't believe the massive casting announcements Marvel just made at Comic-Con!",
+        "calm": "There is some interesting news from the film world today about Marvel's upcoming projects.",
+        "direct": "Marvel just revealed major new casting details at Comic-Con, and it's worth talking about."
       },
       "sources": [
         {
-          "title": "theguardian.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE1jW63G-nJT6pwYXRdRulWZ6UuFGD5XDwrJ0g_l6GRB5hDTZdbSSlEk1gdwKGtvp-BuvnqD55CqTEQtsGDwUDsTmXVb63rGnEbmONPHFmHJD2HMZyd8i2tJgyeKM3awOdtySqODSJsptSKFaxwxIvwwLg6VVHrv1pE41Hcb6pPKOvZ"
-        },
-        {
-          "title": "globalnews.ca",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF09tGpoMtKgt3FvxioM24CSygPrQ4-JjGDKRwjYZAlvziA7Nzlhh5JZ6j0D7FegBx08gJzBICuKm8394SNqjSSHjGcvKN-WBp8jJZS5tnnS_zgWViQeCpuKIOo4-lUksjCwbs_VpO_lcd4ADgJyGoBEtp__FDe0y2I_7gSSs9dI8kCin2gpM6i29o="
+          "title": "Google News: Entertainment",
+          "url": "https://news.google.com/search?q=Entertainment%20top%20news%202026-07-29&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     }
