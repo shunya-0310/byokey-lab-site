@@ -1,92 +1,91 @@
 {
   "schemaVersion": 1,
   "status": "live",
-  "date": "2026-07-29",
-  "generatedAt": "2026-07-28T22:17:13.363Z",
+  "date": "2026-07-30",
+  "generatedAt": "2026-07-29T22:13:35.962Z",
   "model": "gemini-3.6-flash",
-  "fallbackCategories": [],
+  "fallbackCategories": [
+    "technology"
+  ],
   "items": [
     {
-      "id": "2026-07-29-politics_economy",
+      "id": "2026-07-30-politics_economy",
       "category": "politics_economy",
       "categoryLabel": "Politics & Economy",
-      "headline": "Netanyahu and Trump Hold High-Stakes White House Talks on Iran Crisis",
-      "summary": "Israeli Prime Minister Benjamin Netanyahu met U.S. President Donald Trump at the White House on July 28 for crucial security discussions [2.2.6]. The meeting comes as Washington pursues delicate diplomatic talks with Tehran amidst a fragile pause in regional military strikes.",
-      "question": "What role do you think international diplomacy plays in preventing regional conflicts from escalating?",
+      "headline": "US Federal Reserve Holds Benchmark Interest Rate Steady at 3.5 to 3.75 Percent",
+      "summary": "On July 29, 2026, the US Federal Reserve decided to maintain its benchmark interest rate in a target range of 3.5 to 3.75 percent. Three policymakers dissented from the decision, preferring a quarter-point rate increase due to elevated inflation and energy supply shocks.",
+      "question": "How do interest rate decisions by major central banks influence your personal financial decisions or your local economy?",
       "coachLeads": {
-        "friendly": "Hey! Have you seen the news about Netanyahu meeting Trump at the White House today?",
-        "energetic": "There is a huge diplomatic story breaking today! U.S. and Israeli leaders just met in Washington to discuss the Iran conflict.",
-        "calm": "A major diplomatic event took place today as U.S. and Israeli leaders met at the White House to discuss regional security.",
-        "direct": "Trump and Netanyahu met at the White House today to address ongoing negotiations with Iran. Let's discuss what this means for global politics."
+        "friendly": "Hey, did you catch the latest news about the Federal Reserve keeping interest rates steady today? It is a great topic to practice chatting about global finance.",
+        "energetic": "The Federal Reserve just made a major call on interest rates, and it's sparking a lot of discussion! Let me know what you think about this economic update.",
+        "calm": "The US central bank decided to hold interest rates unchanged today. It is a good moment to reflect on how monetary policy impacts global markets.",
+        "direct": "The Fed held interest rates steady today, though three officials voted for a rate hike. Let's discuss what this economic news means."
       },
       "sources": [
         {
-          "title": "thehindu.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQExQYKfdYE1_N9YLFN3mt1xMRR1p2UnDF2cqe5XSoW_jq2aKNxqFkwjj654zKRMAa90a1iezQP20pe8OzUk1JgBuNbeqJyO6P3NOZqdXRz-cGG-ixdMDwOJsZSYLzQTV7JouM8d9-mlMF7Z37oN3zJGgDiw7d51Hzq7y1kiy2Qn9EFnwE2E0nVRnw7X4s5q05XzvsOGM-YE2RwwBN9y2FbPa0RM7Iiqa75tE4-F1jI7GWCm0tePpjNMZXhMitGXxvv4e5fO7U3cQsSeyVVOr1EbGkWGtg=="
-        },
-        {
-          "title": "courthousenews.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFokwuDhVel44br7KrmLPxBGwMmcZGo5k8CVv1VwpHtOK8zB_73XlZVh2reA01eZWl5SsCuTii_oHkYDU7T-hEnIlJMf-uKe3kdL3u7u7eWAnGE26JBwR49BEQmqaGZ7T7wj1RR2Z6TvAZ8DmdYGsNgy9rP3DgdagwugNUk1pOxmU8VNqwSqI6j152csB1fxC0tUdiz"
+          "title": "Google News: Politics & Economy",
+          "url": "https://news.google.com/search?q=Politics%20%26%20Economy%20top%20news%202026-07-30&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     },
     {
-      "id": "2026-07-29-technology",
+      "id": "2026-07-30-technology-source-list",
       "category": "technology",
       "categoryLabel": "Technology",
-      "headline": "AI Acceleration Drives Record Surge in Discovered Software Security Flaws",
-      "summary": "On July 28, 2026, security reports revealed that artificial intelligence tools are on pace to double the number of software vulnerabilities detected worldwide compared to last year's record. Major tech firms, including Microsoft, Google, and Oracle, released unprecedented numbers of security patches in response to these AI-driven discoveries.",
-      "question": "How do you think tech companies should balance using AI to fix software bugs against the risk of hackers using the same tools?",
+      "headline": "Today's Technology headlines",
+      "summary": "A verified single-story summary could not be prepared safely today. Open the source list to choose a current headline, then use it as a conversation starter.",
+      "question": "Which current technology headline would you like to talk about?",
       "coachLeads": {
-        "friendly": "Hey, have you seen how AI is shaking up cybersecurity this week? It is finding software bugs faster than ever before.",
-        "energetic": "Look at this breaking tech news! AI tools are discovering software flaws at double the speed of last year, forcing massive updates from major tech giants!",
-        "calm": "There is a significant development today in cybersecurity regarding how artificial intelligence is detecting software vulnerabilities.",
-        "direct": "Security reports released today show AI tools are on track to double software vulnerability discoveries this year. Let's talk about what this means for digital security."
+        "friendly": "Let's pick a current technology headline together and talk about it.",
+        "energetic": "There are fresh technology headlines today. Choose one that catches your eye and let's discuss it.",
+        "calm": "A source list is available for today's technology news. We can use one headline as a simple conversation starter.",
+        "direct": "Open today's technology headlines and choose one to discuss."
       },
+      "fallback": true,
       "sources": [
         {
           "title": "Google News: Technology",
-          "url": "https://news.google.com/search?q=Technology%20top%20news%202026-07-29&hl=en-US&gl=US&ceid=US:en"
+          "url": "https://news.google.com/search?q=Technology%20top%20news%202026-07-30&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     },
     {
-      "id": "2026-07-29-sports",
+      "id": "2026-07-30-sports",
       "category": "sports",
       "categoryLabel": "Sports",
-      "headline": "Real Madrid Becomes First Sports Club to Cross €1.2 Billion in Annual Revenue",
-      "summary": "On July 28, 2026, Real Madrid approved its official financial results for the 2025–2026 season, reporting a record-breaking €1.221 billion in operating revenue [1.3.2]. This milestone makes the Spanish football club the first sports organization in history to surpass €1.2 billion in annual revenue, driven by expanded stadium operations and commercial growth.",
-      "question": "What factors do you think contribute most to a global sports team achieving this level of financial success?",
+      "headline": "Detroit Tigers Ace Tarik Skubal Hits 1,000th Strikeout Amid Major Trade Rumors",
+      "summary": "On July 29, Detroit Tigers pitcher Tarik Skubal recorded his 1,000th career strikeout in just 857 innings, becoming the fastest player in franchise history to reach the milestone. The historic performance comes at a critical moment as the two-time Cy Young winner is heavily rumored to be traded before Major League Baseball's upcoming deadline.",
+      "question": "Do you think sports teams should trade away top star players to build for the future, or keep them to try winning right now?",
       "coachLeads": {
-        "friendly": "Hey, have you heard about Real Madrid's latest financial news? It's incredible to see a sports team reach numbers like this!",
-        "energetic": "Real Madrid just smashed an all-time revenue record in global sports history! Let's dive into how they made it happen!",
-        "calm": "Real Madrid released their financial report today, setting a new revenue milestone for world sports. Take a look when you're ready to chat.",
-        "direct": "Real Madrid officially became the first sports organization to clear €1.2 billion in annual revenue today. Let's discuss what this means for the business of sports."
+        "friendly": "Hey, have you heard about the big baseball news today? A star pitcher just reached a incredible milestone right as trade rumors are blowing up!",
+        "energetic": "Check this out—Tarik Skubal just broke a massive franchise record right before the trade deadline! You have to hear what happened!",
+        "calm": "There is a compelling story developing in professional baseball today. A star pitcher achieved a historic milestone while his future with the team remains uncertain.",
+        "direct": "Detroit pitcher Tarik Skubal made history with his 1,000th strikeout as trade speculation reaches a high point. Here are the facts you need to know."
       },
       "sources": [
         {
-          "title": "realmadrid.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHCaUv1jPb1KBn54R1OJjntIRLYcFq8ZlD4a0a4g3C9Z3RvBcUujfyi556dwSnD6r1bt-p3nB0NqJQHD2-ldxpiclWXp9mkeCkTl9z-fvSFEcAkpM7MtYGsG_wImixRVvSeDJPXotaBzBs2oCS8g8tTCzloD1bTrto51MJxZ9DIbODFDeOsPkUhPErDqT1vPHgX94arzC_u-9ffg6F3NE8LtFeEA31L7f1p6scm23hyYyKS8jNU6xdz3q5DVgB19mTdCDZR69RTGDCqHzuoHvNSkIkY9zfCijpTxordSVmB"
+          "title": "Google News: Sports",
+          "url": "https://news.google.com/search?q=Sports%20top%20news%202026-07-30&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     },
     {
-      "id": "2026-07-29-entertainment",
+      "id": "2026-07-30-entertainment",
       "category": "entertainment",
       "categoryLabel": "Entertainment",
-      "headline": "Marvel Studios Unveils Major Casting News at San Diego Comic-Con 2026",
-      "summary": "At San Diego Comic-Con 2026, Marvel Studios announced that Ryan Gosling will star as Ghost Rider and David Jonsson will lead the upcoming Black Panther sequel. The reveals headlined the convention's main hall as major studios presented their biggest upcoming film projects to global fans.",
-      "question": "What do you think about well-known actors joining major superhero movie franchises?",
+      "headline": "Apple TV Releases 'Ted Lasso' Season 4 Trailer",
+      "summary": "Apple TV unveiled the official trailer for season four of 'Ted Lasso,' setting the popular comedy's premiere for August 5, 2026. The new season follows Jason Sudeikis' titular character as he returns to England to take on the fresh challenge of coaching a second-division women's soccer team.",
+      "question": "How do you feel about popular television shows returning for new seasons after previously being expected to end?",
       "coachLeads": {
-        "friendly": "Hey, have you heard about the big movie news coming out of Comic-Con this week?",
-        "energetic": "You won't believe the massive casting announcements Marvel just made at Comic-Con!",
-        "calm": "There is some interesting news from the film world today about Marvel's upcoming projects.",
-        "direct": "Marvel just revealed major new casting details at Comic-Con, and it's worth talking about."
+        "friendly": "Hey, have you seen the new trailer for Ted Lasso season four? It looks like Coach Lasso is taking on a whole new challenge this time around!",
+        "energetic": "Get ready, because the official trailer for Ted Lasso season four just dropped! The show is bringing a big new twist to the pitch this August!",
+        "calm": "Apple TV has released the season four trailer for Ted Lasso. It appears the series is taking a fresh direction with its storyline.",
+        "direct": "The trailer for Ted Lasso season four is officially out. Here is what is changing for the comedy's upcoming return."
       },
       "sources": [
         {
           "title": "Google News: Entertainment",
-          "url": "https://news.google.com/search?q=Entertainment%20top%20news%202026-07-29&hl=en-US&gl=US&ceid=US:en"
+          "url": "https://news.google.com/search?q=Entertainment%20top%20news%202026-07-30&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     }
