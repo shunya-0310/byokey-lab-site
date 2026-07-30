@@ -135,13 +135,19 @@ const pricingModels = [
   { provider: "Google", model: "Gemini 3.1 Flash-Lite", input: 0.25, output: 1.5, recommended: true },
   { provider: "Google", model: "Gemini 2.5 Flash", input: 0.3, output: 2.5, lifecycle: "2026年10月16日以降停止予定" },
   { provider: "Google", model: "Gemini 3.5 Flash", input: 1.5, output: 9, quality: true },
-  { provider: "OpenAI", model: "GPT-5 nano", input: 0.05, output: 0.4, review: true },
-  { provider: "OpenAI", model: "GPT-5 mini", input: 0.25, output: 2, review: true },
-  { provider: "OpenAI", model: "GPT-5.6 Luna", input: 1, output: 6, review: true },
+  { provider: "OpenAI", model: "GPT-5.4 nano", input: 0.2, output: 1.25, review: true },
+  { provider: "OpenAI", model: "GPT-5.4 mini", input: 0.75, output: 4.5, review: true },
+  { provider: "OpenAI", model: "GPT-5.5", input: 5, output: 30, review: true },
   { provider: "Anthropic", model: "Claude Haiku 4.5", input: 1, output: 5 },
+  { provider: "Anthropic", model: "Claude Sonnet 5", input: 2, output: 10, lifecycle: "2026年8月31日までの導入価格" },
   { provider: "Anthropic", model: "Claude Sonnet 4.6", input: 3, output: 15 },
   { provider: "Anthropic", model: "Claude Opus 4.8", input: 5, output: 25 },
 ];
+
+const pricingAssumption = {
+  inputTokensPerTurn: 1500,
+  billedOutputTokensPerTurn: 2800,
+};
 
 const cefrProfiles = {
   A1: "短い文と基本語彙を中心に、日本語の助けも多めにします。",
@@ -448,7 +454,7 @@ function PricingSimulator() {
   const [yenRate, setYenRate] = useState(160);
   const monthlyCost = (model, turnsPerDay) => {
     const turns = turnsPerDay * 30;
-    const usd = ((turns * 1000 * model.input) + (turns * 250 * model.output)) / 1_000_000;
+    const usd = ((turns * pricingAssumption.inputTokensPerTurn * model.input) + (turns * pricingAssumption.billedOutputTokensPerTurn * model.output)) / 1_000_000;
     return { usd, yen: Math.round(usd * yenRate) };
   };
   const formatUsd = (amount) => amount < 0.01 ? "<$0.01" : `$${amount.toFixed(2)}`;
@@ -459,8 +465,8 @@ function PricingSimulator() {
       <div className="pricing-heading">
         <div className="section-intro">
           <p className="section-kicker"><BadgeDollarSign size={17} /> API COST</p>
-          <h2>費用は使った分だけ。<br />頑張れない月もお財布に優しい。</h2>
-          <p>下記は、毎日10往復または50往復を30日間続けた場合の月額目安です。1往復を「短い入力（約1,000トークン）と回答（約250トークン）」として計算しています。</p>
+          <h2>費用は使った分だけ。<br />予算上限を決めて使う。</h2>
+          <p>下記は、毎日10往復または50往復を30日間続けた場合の高めの月額目安です。1往復を「入力約1,500トークン」と「思考トークンを含む課金対象出力約2,800トークン」として計算しています。</p>
         </div>
         <div className="market-price-card" aria-label="一般的なAI英会話アプリの月額相場">
           <span>一般的なAI英会話アプリの月額相場</span>
@@ -475,7 +481,7 @@ function PricingSimulator() {
       <div className="pricing-table-wrap" tabIndex="0" aria-label="モデル別API料金表。横方向にスクロールできます。">
         <table className="pricing-table">
           <thead>
-            <tr><th>プロバイダー</th><th>モデル</th><th>API単価 / 100万token</th><th>月額目安<br />毎日10往復 × 30日</th><th>月額目安<br />毎日50往復 × 30日</th></tr>
+            <tr><th>プロバイダー</th><th>モデル</th><th>API単価 / 100万token</th><th>高めの月額目安<br />毎日10往復 × 30日</th><th>高めの月額目安<br />毎日50往復 × 30日</th></tr>
           </thead>
           <tbody>
             {pricingModels.map((model, index) => {
@@ -499,8 +505,8 @@ function PricingSimulator() {
       </div>
       <p className="recommendation-note"><Crown size={18} />英会話の標準利用には、現行の安定版で低コストなGemini 3.1 Flash-Liteを推奨します。より細かな添削や複雑な指示を重視する場合はGemini 3.5 Flashも選べます。</p>
       <div className="pricing-notes">
-        <p><CircleHelp size={18} /><span><strong>試算に含まれないもの</strong> 音声API、税、為替手数料、再送、長い会話履歴、思考トークン、検索などの追加機能。実額は各社の請求画面で確認してください。</span></p>
-        <p><RotateCcw size={18} /><span><strong>2026年7月21日確認</strong> Gemini 2.5 Flashは利用できますが、Googleは2026年10月16日を最短停止日として案内しています。<a href="https://ai.google.dev/gemini-api/docs/deprecations" target="_blank" rel="noreferrer">提供終了予定</a>と<a href="https://ai.google.dev/gemini-api/docs/pricing" target="_blank" rel="noreferrer">Google料金</a>・<a href="https://developers.openai.com/api/docs/models" target="_blank" rel="noreferrer">OpenAI料金</a>・<a href="https://platform.claude.com/docs/en/about-claude/pricing" target="_blank" rel="noreferrer">Anthropic料金</a>の公式情報が正本です。</span></p>
+        <p><CircleHelp size={18} /><span><strong>試算に含まれないもの</strong> 音声API、税、為替手数料、再送、さらに長い会話履歴、検索などの追加機能。実額は各社の請求画面で確認してください。</span></p>
+        <p><RotateCcw size={18} /><span><strong>2026年7月30日確認</strong> Gemini 2.5 Flashは利用できますが、Googleは2026年10月16日を最短停止日として案内しています。<a href="https://ai.google.dev/gemini-api/docs/deprecations" target="_blank" rel="noreferrer">提供終了予定</a>と<a href="https://ai.google.dev/gemini-api/docs/pricing" target="_blank" rel="noreferrer">Google料金</a>・<a href="https://developers.openai.com/api/docs/pricing" target="_blank" rel="noreferrer">OpenAI料金</a>・<a href="https://platform.claude.com/docs/en/about-claude/pricing" target="_blank" rel="noreferrer">Anthropic料金</a>の公式情報が正本です。</span></p>
       </div>
     </section>
   );
