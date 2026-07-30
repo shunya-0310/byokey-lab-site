@@ -1,35 +1,37 @@
 {
   "schemaVersion": 1,
   "status": "live",
-  "date": "2026-07-30",
-  "generatedAt": "2026-07-29T22:13:35.962Z",
+  "date": "2026-07-31",
+  "generatedAt": "2026-07-30T22:19:21.166Z",
   "model": "gemini-3.6-flash",
   "fallbackCategories": [
+    "politics_economy",
     "technology"
   ],
   "items": [
     {
-      "id": "2026-07-30-politics_economy",
+      "id": "2026-07-31-politics_economy-source-list",
       "category": "politics_economy",
       "categoryLabel": "Politics & Economy",
-      "headline": "US Federal Reserve Holds Benchmark Interest Rate Steady at 3.5 to 3.75 Percent",
-      "summary": "On July 29, 2026, the US Federal Reserve decided to maintain its benchmark interest rate in a target range of 3.5 to 3.75 percent. Three policymakers dissented from the decision, preferring a quarter-point rate increase due to elevated inflation and energy supply shocks.",
-      "question": "How do interest rate decisions by major central banks influence your personal financial decisions or your local economy?",
+      "headline": "Today's Politics & Economy headlines",
+      "summary": "A verified single-story summary could not be prepared safely today. Open the source list to choose a current headline, then use it as a conversation starter.",
+      "question": "Which current politics & economy headline would you like to talk about?",
       "coachLeads": {
-        "friendly": "Hey, did you catch the latest news about the Federal Reserve keeping interest rates steady today? It is a great topic to practice chatting about global finance.",
-        "energetic": "The Federal Reserve just made a major call on interest rates, and it's sparking a lot of discussion! Let me know what you think about this economic update.",
-        "calm": "The US central bank decided to hold interest rates unchanged today. It is a good moment to reflect on how monetary policy impacts global markets.",
-        "direct": "The Fed held interest rates steady today, though three officials voted for a rate hike. Let's discuss what this economic news means."
+        "friendly": "Let's pick a current politics & economy headline together and talk about it.",
+        "energetic": "There are fresh politics & economy headlines today. Choose one that catches your eye and let's discuss it.",
+        "calm": "A source list is available for today's politics & economy news. We can use one headline as a simple conversation starter.",
+        "direct": "Open today's politics & economy headlines and choose one to discuss."
       },
+      "fallback": true,
       "sources": [
         {
           "title": "Google News: Politics & Economy",
-          "url": "https://news.google.com/search?q=Politics%20%26%20Economy%20top%20news%202026-07-30&hl=en-US&gl=US&ceid=US:en"
+          "url": "https://news.google.com/search?q=Politics%20%26%20Economy%20top%20news%202026-07-31&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     },
     {
-      "id": "2026-07-30-technology-source-list",
+      "id": "2026-07-31-technology-source-list",
       "category": "technology",
       "categoryLabel": "Technology",
       "headline": "Today's Technology headlines",
@@ -45,47 +47,47 @@
       "sources": [
         {
           "title": "Google News: Technology",
-          "url": "https://news.google.com/search?q=Technology%20top%20news%202026-07-30&hl=en-US&gl=US&ceid=US:en"
+          "url": "https://news.google.com/search?q=Technology%20top%20news%202026-07-31&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     },
     {
-      "id": "2026-07-30-sports",
+      "id": "2026-07-31-sports",
       "category": "sports",
       "categoryLabel": "Sports",
-      "headline": "Detroit Tigers Ace Tarik Skubal Hits 1,000th Strikeout Amid Major Trade Rumors",
-      "summary": "On July 29, Detroit Tigers pitcher Tarik Skubal recorded his 1,000th career strikeout in just 857 innings, becoming the fastest player in franchise history to reach the milestone. The historic performance comes at a critical moment as the two-time Cy Young winner is heavily rumored to be traded before Major League Baseball's upcoming deadline.",
-      "question": "Do you think sports teams should trade away top star players to build for the future, or keep them to try winning right now?",
+      "headline": "UEFA Announces FIFA World Cup Boycott Over Controversial Private Equity Investment Plan",
+      "summary": "On July 30, UEFA announced an unprecedented boycott of all FIFA competitions, including future World Cups, following an emergency vote by its 55 member nations. European football leaders rejected FIFA President Gianni Infantino's proposal to sell a minority stake in World Cup commercial rights to private equity investors.",
+      "question": "Do you think sports governing bodies should allow private equity investors to buy stakes in international tournaments like the World Cup?",
       "coachLeads": {
-        "friendly": "Hey, have you heard about the big baseball news today? A star pitcher just reached a incredible milestone right as trade rumors are blowing up!",
-        "energetic": "Check this out—Tarik Skubal just broke a massive franchise record right before the trade deadline! You have to hear what happened!",
-        "calm": "There is a compelling story developing in professional baseball today. A star pitcher achieved a historic milestone while his future with the team remains uncertain.",
-        "direct": "Detroit pitcher Tarik Skubal made history with his 1,000th strikeout as trade speculation reaches a high point. Here are the facts you need to know."
+        "friendly": "Hey, have you caught the latest drama in international soccer? European leaders are taking a huge stand against commercial changes to the World Cup.",
+        "energetic": "You won't believe this major twist in global sports! UEFA just voted to boycott FIFA tournaments over a multi-billion-dollar investor deal.",
+        "calm": "There is an important dispute developing in global sports leadership right now. European soccer federations have decided to boycott upcoming FIFA events over a proposed investment plan.",
+        "direct": "UEFA's decision to boycott FIFA competitions is making massive headlines today. Let me break down why this soccer dispute matters."
       },
       "sources": [
         {
           "title": "Google News: Sports",
-          "url": "https://news.google.com/search?q=Sports%20top%20news%202026-07-30&hl=en-US&gl=US&ceid=US:en"
+          "url": "https://news.google.com/search?q=Sports%20top%20news%202026-07-31&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     },
     {
-      "id": "2026-07-30-entertainment",
+      "id": "2026-07-31-entertainment",
       "category": "entertainment",
       "categoryLabel": "Entertainment",
-      "headline": "Apple TV Releases 'Ted Lasso' Season 4 Trailer",
-      "summary": "Apple TV unveiled the official trailer for season four of 'Ted Lasso,' setting the popular comedy's premiere for August 5, 2026. The new season follows Jason Sudeikis' titular character as he returns to England to take on the fresh challenge of coaching a second-division women's soccer team.",
-      "question": "How do you feel about popular television shows returning for new seasons after previously being expected to end?",
+      "headline": "Producer Sues Netflix for $105 Million Over Stolen Nicolas Cage Film Copy",
+      "summary": "Filmmaker Simon Afram filed a $105 million lawsuit against Netflix after an unencrypted master copy of his unreleased World War II movie starring Nicolas Cage was stolen from the streamer's Los Angeles office. The lawsuit claims the physical theft ruined the film's commercial value due to piracy risks, while Netflix argues it is not responsible for materials submitted without standard digital safeguards.",
+      "question": "How do you think streaming companies should balance content security with convenience when screening unreleased projects?",
       "coachLeads": {
-        "friendly": "Hey, have you seen the new trailer for Ted Lasso season four? It looks like Coach Lasso is taking on a whole new challenge this time around!",
-        "energetic": "Get ready, because the official trailer for Ted Lasso season four just dropped! The show is bringing a big new twist to the pitch this August!",
-        "calm": "Apple TV has released the season four trailer for Ted Lasso. It appears the series is taking a fresh direction with its storyline.",
-        "direct": "The trailer for Ted Lasso season four is officially out. Here is what is changing for the comedy's upcoming return."
+        "friendly": "Hey! Did you hear about the movie drive that went missing at Netflix's studio? It's a really wild Hollywood story that is worth talking about!",
+        "energetic": "You won't believe this breaking entertainment news! A master copy of an unreleased Nicolas Cage film vanished from Netflix's offices, sparking a massive $105 million lawsuit!",
+        "calm": "There is a fascinating legal dispute unfolding in the film industry today. A producer is suing Netflix after a hard drive containing his unreleased movie was stolen from their headquarters.",
+        "direct": "Netflix is facing a $105 million lawsuit over a stolen hard drive holding an unreleased Nicolas Cage movie. Let's discuss what this means for studio security and digital piracy."
       },
       "sources": [
         {
           "title": "Google News: Entertainment",
-          "url": "https://news.google.com/search?q=Entertainment%20top%20news%202026-07-30&hl=en-US&gl=US&ceid=US:en"
+          "url": "https://news.google.com/search?q=Entertainment%20top%20news%202026-07-31&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     }
