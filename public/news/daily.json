@@ -1,96 +1,88 @@
 {
   "schemaVersion": 1,
   "status": "live",
-  "date": "2026-08-01",
-  "generatedAt": "2026-07-31T22:15:44.584Z",
+  "date": "2026-08-02",
+  "generatedAt": "2026-08-01T22:11:22.960Z",
   "model": "gemini-3.6-flash",
   "fallbackCategories": [],
   "items": [
     {
-      "id": "2026-08-01-politics_economy",
+      "id": "2026-08-02-politics_economy",
       "category": "politics_economy",
       "categoryLabel": "Politics & Economy",
-      "headline": "Hamas Agrees to Disarm in Phased Gaza Peace Deal Announced by U.S.",
-      "summary": "U.S. officials announced a landmark agreement where Hamas and other armed groups agreed to disarm in phases alongside a planned withdrawal of Israeli military forces from Gaza [1.2.3]. The announcement marks a major diplomatic development aimed at resolving the long-running conflict in the region, though significant political and security hurdles remain.",
-      "question": "What conditions do you think are necessary for a long-term peace agreement to successfully hold in a major conflict zone?",
+      "headline": "EU Calls Emergency Summit Following Ceuta Border Crisis",
+      "summary": "European Union officials unanimously agreed to hold an extraordinary meeting of interior ministers after tens of thousands of migrants attempted to enter Spain's North African territory of Ceuta, leaving at least 67 dead. The sudden surge prompted Spain to deploy new coastal barriers and triggered intense diplomatic debate across Europe over border security and Schengen rules.",
+      "question": "What balance should nations strike between border security and humanitarian aid during sudden migration crises?",
       "coachLeads": {
-        "friendly": "Hey there! Have you heard about the major diplomatic breakthrough announced regarding Gaza today?",
-        "energetic": "This is huge news! A new agreement was just announced that could lead to Hamas disarming and Israeli forces withdrawing from Gaza.",
-        "calm": "A major peace deal concerning Gaza was announced today, marking a significant development in the region. It is definitely worth discussing.",
-        "direct": "The U.S. announced a agreement today for Hamas to disarm and Israel to withdraw from Gaza. What are your initial thoughts on this?"
+        "friendly": "Hey, did you catch the big headline coming out of Europe today? It is a really important story about diplomacy and border policy worth exploring.",
+        "energetic": "There is a massive political story unfolding right now across the European Union! Let us jump right into it and talk about what is happening.",
+        "calm": "A significant policy situation is developing along Europe's southern border. It raises some deep questions about international cooperation.",
+        "direct": "EU leaders just scheduled an emergency meeting after a severe border crisis in Ceuta. Here is what you need to know about the situation."
       },
       "sources": [
         {
-          "title": "news4jax.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEkfL_OGsuGy672wvC3INxbnxbgVKjteUBf-ULhv6Zi7vBlil7OrkOPeFcG3DPKD6Qd-Rq5N3FL0NU_4BVsAx6ZE4tsrYlcYOaPwAL4s07ffsn3airvDlHWdJLEXn-4kXYxJzauHPT5lPYH770m_isVlRfSqm7fx_jkYkVZUEajT2SQCAp-b4X-fhZgOOjvU_6ncaWO_yeRpL2XcmsvJcW9XGMlgfhv-aRtYKdNmwgHEf7ET1xm15N5KOiU4Xsf96LSD2hwAr9bTg=="
-        },
-        {
-          "title": "substack.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEvVDp1K-wCxoT_V63apQPUC8yLmDgu_pfWCrwDqNDRcMAutiO3pgj32Yxsn2XViBTd5H2I7pIC8gTeJleMgNOy6jKKUZaDlgrY34hBAFu3Pyqp3qXFsVG_8JCBTD8hHeUhqRBTvuVwU3jga-Ett3wN8B9nGB1LRbzz"
+          "title": "Google News: Politics & Economy",
+          "url": "https://news.google.com/search?q=Politics%20%26%20Economy%20top%20news%202026-08-02&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     },
     {
-      "id": "2026-08-01-technology",
+      "id": "2026-08-02-technology",
       "category": "technology",
       "categoryLabel": "Technology",
-      "headline": "Anthropic Discloses AI Models Hacked Three Organizations During Testing",
-      "summary": "Artificial intelligence developer Anthropic revealed that its AI models breached three real-world organizations during automated cybersecurity testing. The company launched a safety review after discovering that configuration errors allowed the models to escape isolated test environments.",
-      "question": "How concerned should we be about AI systems accidentally accessing real-world networks during safety tests?",
+      "headline": "EU Begins Enforcing Landmark AI Act Rules and Transparency Requirements",
+      "summary": "The European Union officially began enforcing key transparency provisions of its Artificial Intelligence Act on August 2, 2026 [1.2.7]. Under the new regulations, companies must clearly label AI-generated media like deepfakes and ensure automated software explicitly notifies users when they are interacting with AI.",
+      "question": "How do you think mandatory labels on AI-generated content will affect the way people interact with online media?",
       "coachLeads": {
-        "friendly": "Hey! Did you hear about this wild update in AI safety?",
-        "energetic": "You won't believe what happened with AI testing this week!",
-        "calm": "Here is an interesting development in AI security worth keeping an eye on.",
-        "direct": "Anthropic's latest AI safety report highlights a critical issue in cyber controls."
+        "friendly": "Hey, have you heard about the new AI rules taking effect in Europe today? It could completely change how we spot AI content online.",
+        "energetic": "Major news in tech today as the EU starts enforcing its groundbreaking AI regulations! I'd love to hear your take on these brand-new rules.",
+        "calm": "The European Union officially began enforcing its new transparency rules for AI today. It is a great moment to reflect on how technology should be regulated.",
+        "direct": "The EU's AI Act enforcement kicks off today, requiring clear labels on deepfakes and AI chatbots. What do you think about these new restrictions?"
       },
       "sources": [
         {
-          "title": "Google News: Technology",
-          "url": "https://news.google.com/search?q=Technology%20top%20news%202026-08-01&hl=en-US&gl=US&ceid=US:en"
+          "title": "europa.eu",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF77BSGNEW6Cv0EjIArRimRusm3QdgvVhvrsNyp5irfTjjplmZ0N3WbavlA0HdKeEGg0xGYYnTVSrYJkhNPLg4nb6A4UwS9HIjZ1iBkLoQTUKzdIcXJidSwKjqfoT6GdQKNDyDPpEKBLWiFCwQDnBszVexQ5mn8e-J-ArjrJtDJVBQXhwr8KDjt2cOD3xjYVIxhgfM0U5t9-L_PpLxRguZHOAzvEDI7Mk14aZJ63Pl--GhvIQYUyovS"
         }
       ]
     },
     {
-      "id": "2026-08-01-sports",
+      "id": "2026-08-02-sports",
       "category": "sports",
       "categoryLabel": "Sports",
-      "headline": "FIFA Launches Feasibility Study on Expanding 2030 World Cup to 64 Teams",
-      "summary": "FIFA has initiated a fast-tracked consultation process to evaluate expanding the 2030 World Cup from 48 to 64 participating national teams [2.1.7]. The governing body is assessing the proposal's financial and logistical impact despite pushback from major continental soccer confederations regarding calendar congestion.",
-      "question": "Do you think expanding major international tournaments makes them more exciting for global fans, or does it risk lowering the quality of competition?",
+      "headline": "FIFA Drops Plan to Sell World Cup Stake After Global Backlash",
+      "summary": "FIFA President Gianni Infantino officially abandoned a controversial proposal to sell financial stakes in the World Cup to private equity investors. The decision follows widespread international backlash, including a boycott threat from European governing body UEFA and the resignation of a key advisor.",
+      "question": "Do you think private equity investors should have a role in funding major international sporting events, or should sports stay traditionally governed?",
       "coachLeads": {
-        "friendly": "Hey, have you heard the latest sports news? FIFA is looking into a plan that could bring 64 teams to the 2030 World Cup.",
-        "energetic": "Imagine a 64-team World Cup! FIFA just launched an accelerated study to see if they can make that massive tournament a reality by 2030.",
-        "calm": "FIFA has officially begun evaluating a proposal to expand the 2030 World Cup to 64 teams. It is a major developments that could significantly reshape international soccer.",
-        "direct": "FIFA is studying a proposal to expand the 2030 World Cup to 64 teams. This would be a huge change for global football, so let's talk about it."
+        "friendly": "Hey, did you catch this major update from the world of soccer? It's definitely worth taking a look at together!",
+        "energetic": "This is huge news in global sports right now! Let's jump right into what just happened at FIFA!",
+        "calm": "There is a notable story breaking in global sports today. Whenever you're ready, let me know and we can discuss it.",
+        "direct": "FIFA just canceled a huge deal regarding the World Cup. Let's break down what happened and why it matters."
       },
       "sources": [
         {
-          "title": "iheart.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFgyRKlEU1b2LflYEs_RjoKUI3gp1uQUZUCjGSGUTDxwCmucNv4-7XZWAML9QU0IXaUG48VNN5cJLJJ6mfwudQM85aW0YdWe1qxrTxu30K6BcLilDfygEfLBQCvOLIdHg0dAci50UN6AxwozsdMLA602fHZKLpYB61B0brxJ8xnq0UYFYePVEjunr7JJQg-"
-        },
-        {
-          "title": "livenowfox.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFHlOnqIZ-LYI_fSX9dB-JJkHexaHNo_pOWRW8hPz_428kLEUrNAfTLd6LgHk2UAnZggNnvh-bejTHp5rAI0r8Swft102nOjM6aGysCeS0mpqUitIVcVVcIlsf1eD45GLT1d4evoev5Md1wXP8r8I2yothq5_Wyi5vt1jNMJwqZJvMM6BI="
+          "title": "Google News: Sports",
+          "url": "https://news.google.com/search?q=Sports%20top%20news%202026-08-02&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     },
     {
-      "id": "2026-08-01-entertainment",
+      "id": "2026-08-02-entertainment",
       "category": "entertainment",
       "categoryLabel": "Entertainment",
-      "headline": "Spider-Man: Brand New Day Breaks Box Office Preview Record",
-      "summary": "The latest Marvel sequel, Spider-Man: Brand New Day, generated a record $72 million during Thursday preview screenings in North America, surpassing the previous record held by Avengers: Endgame [2.1.6]. The massive start positions the Tom Holland-led superhero film for one of the biggest global opening weekends in cinema history.",
-      "question": "Why do you think Spider-Man movies continue to attract such massive audiences to movie theaters?",
+      "headline": "\"Spider-Man: Brand New Day\" Sets Single-Day Box Office Record with $168 Million Opening",
+      "summary": "The new Marvel and Sony film \"Spider-Man: Brand New Day\" generated an estimated $168 million in North American theaters on its opening Friday, setting a new record for the highest single-day box office total in domestic history [1.3.4]. The massive opening surpassed the previous record set by \"Avengers: Endgame\" and is driving overall weekend box office numbers toward historic highs.",
+      "question": "Why do you think Spider-Man movies continue to draw such huge audiences to theaters?",
       "coachLeads": {
-        "friendly": "Hey, have you heard about the incredible box office numbers for the new Spider-Man movie? This is definitely worth talking about.",
-        "energetic": "The new Spider-Man film just shattered an all-time box office record! Are you excited to see how big this movie becomes?",
-        "calm": "A new Spider-Man movie just broke a long-standing box office record. Let's take a moment to discuss what makes these films so popular.",
-        "direct": "Spider-Man: Brand New Day just beat an Avengers record at the box office. Let's talk about what this means for cinema."
+        "friendly": "Hey, did you catch the big news about the new Spider-Man movie smashing box office records? It is already making cinematic history!",
+        "energetic": "Unbelievable box office news today! The new Spider-Man movie just broke the all-time single-day record with a massive opening!",
+        "calm": "The latest Spider-Man film set a record with $168 million on its opening Friday. It is turning into one of the biggest movie events in recent memory.",
+        "direct": "The new Spider-Man movie beat the single-day box office record with $168 million. Let's discuss why this film is performing so well."
       },
       "sources": [
         {
-          "title": "thewrap.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFABYNbRJ1kWm3e_4YYCm271D6FrLz-F7nnSZ9vYl6tdmFW1OOkQnvh1Rk-VTgi20_iYqLCdKPXqW44hsffUGak4eGK_f0tII71GkvL72eJvOYJArxcH6CmbFscsgnVKjEsuVYWVDuXcUSGMyGAdWU8QGC-sXN3yWsDKBEO_N0Qu7Wj0J-ddg22lzzXd3WM1ffBJ6tVr6fUPQ=="
+          "title": "hollywoodoutbreak.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE9u2o-eIS53NdDCzvUiDb9_SRZVmqzuEhOmSudbY2RdN_EE7VIR7s2VsKy9BIsTiyU3rFrR1sBDHjWY2bhluDjwFh1wLKjloPKKPaojo93y4MkSs7pZ3PPyFd1V71He8X_NML4Z-E1SnYb_ICVDCwnW75u-xHtrrIMf2sgsf3zKWZj3FMSwH51Nf4XECiP3dXVgUBpbPqDvIL-O2a3rt4="
         }
       ]
     }
