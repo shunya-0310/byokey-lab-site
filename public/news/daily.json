@@ -1,91 +1,92 @@
 {
   "schemaVersion": 1,
   "status": "live",
-  "date": "2026-08-04",
-  "generatedAt": "2026-08-03T22:17:51.794Z",
+  "date": "2026-08-05",
+  "generatedAt": "2026-08-04T22:29:53.012Z",
   "model": "gemini-3.6-flash",
-  "fallbackCategories": [
-    "technology"
-  ],
+  "fallbackCategories": [],
   "items": [
     {
-      "id": "2026-08-04-politics_economy",
+      "id": "2026-08-05-politics_economy",
       "category": "politics_economy",
       "categoryLabel": "Politics & Economy",
-      "headline": "Tensions Rise as Trump Calls Iran Talks 'Last Chance' While Tehran Denies Direct Negotiations",
-      "summary": "U.S. President Donald Trump warned that upcoming diplomatic talks are Iran's last opportunity to reach an agreement on the Strait of Hormuz after he halted planned military strikes. However, Iranian officials pushed back by denying direct negotiations with Washington, stating their discussions are currently limited to regional mediator Oman.",
-      "question": "Do you think diplomatic negotiations or international sanctions are more effective at resolving major geopolitical conflicts?",
+      "headline": "Mediators Report Diplomatic Progress to Reopen Strait of Hormuz as Oil Prices Drop",
+      "summary": "Mediators from Qatar and Oman reported significant progress in diplomatic efforts aimed at easing U.S.-Iran tensions and reopening the Strait of Hormuz to international shipping [1.2.9]. The prospective de-escalation drove global benchmark crude oil prices down by over five percent, lifting stock markets as fears of major energy supply disruptions eased.",
+      "question": "How do you think diplomatic breakthroughs over major international shipping lanes impact everyday consumer costs in your country?",
       "coachLeads": {
-        "friendly": "Hey, have you been following the big geopolitical developments between the U.S. and Iran today?",
-        "energetic": "There's massive international news breaking right now about U.S. and Iran diplomacy! Let me fill you in on what's going down.",
-        "calm": "There are important international diplomacy developments happening right now between the U.S. and Iran. It's a key story worth looking at.",
-        "direct": "Trump just issued a major ultimatum to Iran regarding diplomatic talks. Let's talk about what this means for global affairs."
+        "friendly": "Hey there! Have you heard about the latest breakthrough in global diplomacy that's sending energy prices lower today?",
+        "energetic": "Check this out! Global crude oil prices just plunged after major progress in international peace talks!",
+        "calm": "There is a notable development in global diplomacy today regarding major international shipping routes and energy markets.",
+        "direct": "Diplomats are making real headway in reopening the Strait of Hormuz, causing crude oil prices to tumble today."
       },
       "sources": [
         {
-          "title": "Google News: Politics & Economy",
-          "url": "https://news.google.com/search?q=Politics%20%26%20Economy%20top%20news%202026-08-04&hl=en-US&gl=US&ceid=US:en"
+          "title": "al-monitor.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGlktc54c2wxowaDIwxo946y7R4SAubmrva4fY8MQI9J4knmqA-yvlFrh5V6ET9kKt0G1kF2tRA0rT5kioqOyTqRRyatt-wV9jCanjrByPf3kcN9J73XmnNTEnP363P19WXFrRbQ39yY1Ul0neX64dZzTNZO7bOSbPtQkMDYo2G_PzjCiPrYs0KhgrkTljDkIkGlSW_zMDwXb2_fGHg"
+        },
+        {
+          "title": "businesstimes.com.sg",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGLRYhmUM3x95qR6gfxKuSPvLzm800KmtcFWuSPiY3SCilOG2DifmdE8yaDzz-Gu0brooa75iz1Ak7IjyASEA-7rG5twnWvdra2qCCangKRvqXeWsF0mvaMbl-6uhzXOqC7BGMIelefAQbPHAHUYmXePDtYI6VydQpu3f__dFNCClrvkVmWlrxlPcV4jmJ_-ITLggHtrxr61qydTg1TL2Vmk-NR92Efh6RNW4FMqOVHmhzb0-oCNdXsEtYD7vPMXVg="
         }
       ]
     },
     {
-      "id": "2026-08-04-technology-source-list",
+      "id": "2026-08-05-technology",
       "category": "technology",
       "categoryLabel": "Technology",
-      "headline": "Today's Technology headlines",
-      "summary": "A verified single-story summary could not be prepared safely today. Open the source list to choose a current headline, then use it as a conversation starter.",
-      "question": "Which current technology headline would you like to talk about?",
+      "headline": "White House Exempts Open-Source AI Models from New Security Vetting Framework",
+      "summary": "The U.S. government announced a new voluntary framework for evaluating cutting-edge artificial intelligence models for cybersecurity and safety risks [1.2.1]. Under the policy, open-source AI models will be exempt from government vetting, focusing official scrutiny primarily on proprietary models from major developers.",
+      "question": "Do you think open-source AI tools should face the same safety regulations as private commercial AI systems?",
       "coachLeads": {
-        "friendly": "Let's pick a current technology headline together and talk about it.",
-        "energetic": "There are fresh technology headlines today. Choose one that catches your eye and let's discuss it.",
-        "calm": "A source list is available for today's technology news. We can use one headline as a simple conversation starter.",
-        "direct": "Open today's technology headlines and choose one to discuss."
+        "friendly": "Hey there! Did you hear about the new White House rules for artificial intelligence?",
+        "energetic": "Check this out! The White House just made a huge announcement about which AI models get government safety reviews!",
+        "calm": "There is an interesting new development in tech policy regarding how governments regulate artificial intelligence.",
+        "direct": "The White House just released a new AI safety framework that exempts open-source models."
       },
-      "fallback": true,
       "sources": [
         {
-          "title": "Google News: Technology",
-          "url": "https://news.google.com/search?q=Technology%20top%20news%202026-08-04&hl=en-US&gl=US&ceid=US:en"
+          "title": "washingtonpost.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH7YviEe7LfftY_n0hi3A47o1jmyZEd-EiK9eJnUfPEOePjGS_w_zZ_1TQol4pi-6swgWU-UENkcgZz7IyNSwCpExYar6NAobeE3TnzQb2TzUM7qaW-3ZC0IxAGFBADair8uZDweEhpejtydPjCAeP5dRXjSOSUwb7TdUVmqZx1TFrMZ0GKek2imKDVkKv0hzHI-b1K79yQJZ2xeCzkMOyeN0Om"
         }
       ]
     },
     {
-      "id": "2026-08-04-sports",
+      "id": "2026-08-05-sports",
       "category": "sports",
       "categoryLabel": "Sports",
-      "headline": "Alexandra Eala Becomes First Filipino Player to Win WTA Singles Title",
-      "summary": "Filipina tennis player Alexandra Eala made history by winning the Washington DC Open on Monday, defeating world number three Jessica Pegula 4-6, 6-4, 6-0 in a weather-delayed final. The 21-year-old's breakthrough victory marks the first time an athlete from the Philippines has won a WTA Tour singles title.",
-      "question": "What kind of impact do you think historic sporting achievements have on inspiring young athletes in a country?",
+      "headline": "UEFA Serves Legal Notice to FIFA Over Collapsed World Cup Deal",
+      "summary": "European soccer governing body UEFA confirmed serving a formal document preservation letter to FIFA following the collapse of a controversial plan to sell future World Cup commercial rights to private investors [1.2.3]. The legal step follows widespread backlash and boycott threats from European federations, marking a major escalation in global sports governance.",
+      "question": "How much influence do you think private investment firms should have over international sports tournaments?",
       "coachLeads": {
-        "friendly": "Hey, have you heard about the big tennis news today? A young player just made history by winning her nation's first major WTA title!",
-        "energetic": "Check this out—we just saw a historic breakthrough in professional tennis! You definitely want to talk about this incredible victory!",
-        "calm": "There is a remarkable sports story from yesterday that is worth taking a look at. A young athlete just achieved a major milestone for her country.",
-        "direct": "Let's discuss today's top sports story. Alexandra Eala became the first Filipino player to win a WTA singles title."
+        "friendly": "Hey, have you heard about the drama brewing in international soccer? UEFA just took legal steps against FIFA after a multi-billion dollar plan fell apart.",
+        "energetic": "This is a huge story in global sports right now! FIFA and UEFA are locked in a high-stakes power struggle that is making major headlines.",
+        "calm": "There is an important development in international sports governance today. UEFA has formally issued a legal notice to FIFA following a failed commercial proposal.",
+        "direct": "UEFA just served FIFA a formal legal notice after a four-billion-dollar World Cup proposal collapsed. Let's look at why this matters."
       },
       "sources": [
         {
-          "title": "Google News: Sports",
-          "url": "https://news.google.com/search?q=Sports%20top%20news%202026-08-04&hl=en-US&gl=US&ceid=US:en"
+          "title": "aljazeera.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHJEguYfY3XH8NjRb00MlCP4MefPK89mOarFXKDNGckBFD0q-VPAOs-P8BfNfY0SGr-dK0jP2Y7F6vS6GrLu2azCnekAI8WY2p-hZyouxcx811Nd5vaSukMF6VwP3ASIAv7ja8RI4Z0SprZ5VjlHys0b0-p4Q9pI6DGopXWk0fRWFJgmVqEcbr0TPyaK1KPKuukb3pC-K_73kgT0HYAZhdNBdvol8fK1g=="
         }
       ]
     },
     {
-      "id": "2026-08-04-entertainment",
+      "id": "2026-08-05-entertainment",
       "category": "entertainment",
       "categoryLabel": "Entertainment",
-      "headline": "Spider-Man: Brand New Day Sets Domestic Box Office Record With $360 Million Debut",
-      "summary": "Marvel and Sony's superhero sequel Spider-Man: Brand New Day grossed $360 million in North America during its opening weekend, surpassing the record previously held by Avengers: Endgame. Sony Pictures confirmed the updated totals on August 3 after stronger-than-expected Sunday ticket sales pushed the film's global opening past $920 million.",
-      "question": "Do you think superhero blockbusters still have the power to regularly bring massive crowds back to movie theaters?",
+      "headline": "\"Spider-Man: Brand New Day\" Tops $1 Billion Worldwide in Just Six Days",
+      "summary": "Sony and Marvel's \"Spider-Man: Brand New Day\" has crossed $1 billion at the global box office in six days, becoming the second-fastest film in history to reach the milestone. The blockbuster superhero sequel, starring Tom Holland, also set a new record for the biggest domestic opening weekend in cinematic history with $360 million.",
+      "question": "Why do you think Spider-Man films continue to draw such massive global audiences to movie theaters?",
       "coachLeads": {
-        "friendly": "Hey, have you heard the latest movie news today? The new Spider-Man film just shattered a huge box office record over the weekend!",
-        "energetic": "You won't believe how massive this weekend was at the movies! Spider-Man: Brand New Day officially beat Avengers: Endgame for the biggest domestic debut ever!",
-        "calm": "There's notable news from the global film industry today. The newest Spider-Man release has officially set the all-time opening weekend record at the domestic box office.",
-        "direct": "Spider-Man: Brand New Day just set the record for the biggest domestic opening weekend in box office history. This is definitely worth talking about."
+        "friendly": "Hey, have you seen the huge movie news today? The latest Spider-Man film is shattering box office records worldwide!",
+        "energetic": "You won't believe how fast the new Spider-Man movie hit one billion dollars! It is completely crushing box office history right now.",
+        "calm": "There is a notable story from the film industry today. The new Spider-Man movie crossed one billion dollars globally in just six days.",
+        "direct": "The latest Spider-Man blockbuster just made history by crossing one billion dollars in six days. Let's talk about why it is dominating theaters."
       },
       "sources": [
         {
           "title": "Google News: Entertainment",
-          "url": "https://news.google.com/search?q=Entertainment%20top%20news%202026-08-04&hl=en-US&gl=US&ceid=US:en"
+          "url": "https://news.google.com/search?q=Entertainment%20top%20news%202026-08-05&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     }
