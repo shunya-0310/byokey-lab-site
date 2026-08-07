@@ -1,91 +1,88 @@
 {
   "schemaVersion": 1,
   "status": "live",
-  "date": "2026-08-07",
-  "generatedAt": "2026-08-07T01:02:23.920Z",
+  "date": "2026-08-08",
+  "generatedAt": "2026-08-07T21:55:47.115Z",
   "model": "gemini-3.6-flash",
-  "fallbackCategories": [
-    "technology"
-  ],
+  "fallbackCategories": [],
   "items": [
     {
-      "id": "2026-08-07-politics_economy",
+      "id": "2026-08-08-politics_economy",
       "category": "politics_economy",
       "categoryLabel": "Politics & Economy",
-      "headline": "Iran and Oman Near Deal on Strait of Hormuz Traffic as Oil Prices Rise",
-      "summary": "Iranian officials stated on August 6 that a developing maritime agreement with Oman will not fully reopen the Strait of Hormuz to unrestricted international transit [2.2.4]. The statement caused global crude oil prices to surge, making the diplomatic talks a central market-moving issue as nations negotiate control over the strategic shipping passage.",
-      "question": "How do you think fluctuations in global energy routes and oil prices impact everyday life in your home country?",
+      "headline": "U.S. Economy Unexpectedly Loses 23,000 Jobs in July as Markets Rally",
+      "summary": "On August 7, 2026, official data showed that the U.S. labor market unexpectedly shed 23,000 jobs in July, while the overall unemployment rate held at 4.1 percent. Despite the sudden contraction, major stock indices surged as investors anticipated that the Federal Reserve would pause further interest rate increases.",
+      "question": "How do you think central banks should balance controlling inflation with protecting employment during uncertain economic times?",
       "coachLeads": {
-        "friendly": "Hey, have you caught the latest updates on international trade and energy routes? It is a really interesting topic to practice your English with today.",
-        "energetic": "Major news is breaking in global energy markets right now! Let's jump into this story and discuss what it means for the world economy.",
-        "calm": "Diplomatic talks over the Strait of Hormuz are having an immediate effect on global markets. Take a moment to read the update, and let's share our perspectives.",
-        "direct": "Iran and Oman are finalizing a new framework for shipping lanes in the Middle East. Let me know your thoughts on how energy news like this affects global stability."
+        "friendly": "Hey! Have you had a chance to check out today's surprising economic news?",
+        "energetic": "Look at this—the stock market actually jumped today despite an unexpected drop in jobs!",
+        "calm": "Let's take a look at a noteworthy economic development that unfolded today.",
+        "direct": "Today's employment report showed an unexpected job decline, and financial markets reacted immediately."
       },
       "sources": [
         {
-          "title": "washingtonpost.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE4iD73E5X9svlYgpg5vzAKBnW8HVVfvKa3t6QDchuK2d_UZ9SoJI7bWD7dBsAEbWmHEgcu98TeLWxELospwTFYqijMPEOO6M7wuGi5e9jj2RAU6ex76zJSB5r71c75XjqUVo5LnnpgtS7YnyxfKtRCDr8jqJlyaSQneglasob1NrIQhI4W81eIeRhjLClpnZ7eMfaVHCI4QvnIs2mYgQY="
+          "title": "Google News: Politics & Economy",
+          "url": "https://news.google.com/search?q=Politics%20%26%20Economy%20top%20news%202026-08-08&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     },
     {
-      "id": "2026-08-07-technology-source-list",
+      "id": "2026-08-08-technology",
       "category": "technology",
       "categoryLabel": "Technology",
-      "headline": "Today's Technology headlines",
-      "summary": "A verified single-story summary could not be prepared safely today. Open the source list to choose a current headline, then use it as a conversation starter.",
-      "question": "Which current technology headline would you like to talk about?",
+      "headline": "OpenAI Triggers Safety Protocols over Unreleased Model's Cybersecurity Risks",
+      "summary": "OpenAI announced that internal testing of an upcoming model named Astra showed advanced coding and cybersecurity capabilities that could reach the Critical risk threshold under its safety framework. The preliminary finding prompted immediate containment measures, including stricter security controls, a partial pause on internal development, and plans for third-party government testing.",
+      "question": "How should AI companies balance developing powerful tools with managing potential cybersecurity risks?",
       "coachLeads": {
-        "friendly": "Let's pick a current technology headline together and talk about it.",
-        "energetic": "There are fresh technology headlines today. Choose one that catches your eye and let's discuss it.",
-        "calm": "A source list is available for today's technology news. We can use one headline as a simple conversation starter.",
-        "direct": "Open today's technology headlines and choose one to discuss."
+        "friendly": "Hey there! OpenAI just shared an eye-opening safety update about one of its upcoming AI models, and I thought you might find it interesting.",
+        "energetic": "Check this out—OpenAI had to enact strict safety controls because a new model performed too well on cybersecurity tests! Let's dive into what this means for the AI industry.",
+        "calm": "OpenAI recently flagged potential cybersecurity risks with an unreleased model called Astra. It is a notable moment in AI safety that is worth discussing together.",
+        "direct": "OpenAI just activated safety protocols after preliminary tests showed an unreleased model might cross a critical cybersecurity threat threshold. Let's talk about the details."
       },
-      "fallback": true,
       "sources": [
         {
           "title": "Google News: Technology",
-          "url": "https://news.google.com/search?q=Technology%20top%20news%202026-08-07&hl=en-US&gl=US&ceid=US:en"
+          "url": "https://news.google.com/search?q=Technology%20top%20news%202026-08-08&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     },
     {
-      "id": "2026-08-07-sports",
+      "id": "2026-08-08-sports",
       "category": "sports",
       "categoryLabel": "Sports",
-      "headline": "Astros Star Yordan Alvarez Tops MLB Hitter Rankings Amid Triple Crown Pursuit",
-      "summary": "Major League Baseball published its latest hitter power rankings on August 6, with Houston Astros slugger Yordan Alvarez retaining the top spot [3.2.2]. Alvarez currently leads the American League in batting average, home runs, and RBIs as he aims to become baseball's first Triple Crown winner since 2012.",
-      "question": "What qualities or skills do you think an athlete needs to dominate a sport across multiple statistical categories at the same time?",
+      "headline": "USA Basketball Unveils Star-Studded Roster for 2026 Women's World Cup",
+      "summary": "USA Basketball officially announced its 12-player roster for the 2026 FIBA Women's World Cup in Berlin, featuring superstars Caitlin Clark, Paige Bueckers, and A'ja Wilson [1.2.9]. The announcement is drawing global attention as seven players prepare to make their tournament debuts while the team pursues a fifth consecutive gold medal.",
+      "question": "Which athlete or team do you enjoy following the most during international tournaments, and why?",
       "coachLeads": {
-        "friendly": "Hey, have you been following what Yordan Alvarez is doing in Major League Baseball right now? His performance this season is really worth checking out!",
-        "energetic": "Yordan Alvarez is putting on an absolute hitting clinic this year! Did you hear he is currently leading the race for a rare baseball Triple Crown?",
-        "calm": "There is a remarkable story unfolding in baseball as Yordan Alvarez continues his pursuit of a Triple Crown. It is rare to see a player lead in so many key categories at once.",
-        "direct": "Yordan Alvarez just topped MLB's latest hitter rankings while leading the American League in batting average, home runs, and RBIs. Let's talk about how impressive this run is."
+        "friendly": "Hey, have you heard the news? USA Basketball just announced their squad for the upcoming Women's World Cup.",
+        "energetic": "This is huge news for sports fans today! The official roster for the 2026 FIBA Women's World Cup was just revealed!",
+        "calm": "USA Basketball has finalized its squad for the Women's World Cup in Berlin. It is a very impressive lineup worth looking at.",
+        "direct": "USA Basketball just named its 12-player roster for the World Cup. Let's talk about who made the team."
       },
       "sources": [
         {
-          "title": "mlb.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHg7BT1F_FtHwk3ZUrIWO48gQsqGOsyDq3UQl9LZL-qROA-x9XhpEHXGCpnocbAhM31GqIVwLxbbeWppAlS3GK9AViy2tTgaqIq3pMzege0KDBwe9G-nYKrfvdK8ggC4clwSj-xkXqYVUXUr_GKViQkkLwZdVU="
+          "title": "usab.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGYaPISPbE6bgXhexyonmjTIW5wphabce8xxUn2FQFyb6VRRvT6APiV381SKOZJhVJUyEP2F2nKoVrOuPUsLjc36eBR2GYmW5qkW5cQdO8CCa5ohaWU5Re8eFM3IsSlrore4k1Lunb_rXUg2PfZTx-ZMtwpzIQBctYyjF6L3a4jnGUylOI9wr2R9KI="
         }
       ]
     },
     {
-      "id": "2026-08-07-entertainment",
+      "id": "2026-08-08-entertainment",
       "category": "entertainment",
       "categoryLabel": "Entertainment",
-      "headline": "Michelle Yeoh Named Asian Filmmaker of the Year for 31st Busan International Film Festival",
-      "summary": "Oscar-winning actor Michelle Yeoh was named Asian Filmmaker of the Year for the 31st Busan International Film Festival on August 6 [3.3.3]. She will accept the prestigious honor in person during the festival's opening ceremony in October, marking her first visit to the South Korean event in 15 years.",
-      "question": "Which movie performance by Michelle Yeoh has made the biggest impression on you, and why?",
+      "headline": "Christopher Nolan's 'The Odyssey' Crosses $1 Billion at Global Box Office",
+      "summary": "Director Christopher Nolan's epic film 'The Odyssey' officially surpassed $1 billion at the global box office on Friday. The achievement marks Nolan's third movie to hit ten figures worldwide and makes it the fifth film to reach the milestone this year.",
+      "question": "What factors do you think help a movie become a massive global box office success today?",
       "coachLeads": {
-        "friendly": "Hey, have you seen the latest news about Michelle Yeoh? She's being honored with a major film festival award in South Korea!",
-        "energetic": "Big news for movie fans today! Oscar winner Michelle Yeoh was just named Asian Filmmaker of the Year!",
-        "calm": "There is a nice update from the film world today. Michelle Yeoh is receiving a prestigious honor at the Busan International Film Festival.",
-        "direct": "Michelle Yeoh was named Asian Filmmaker of the Year for the upcoming Busan International Film Festival. Let's talk about her career and favorite roles."
+        "friendly": "Hey, have you heard about Christopher Nolan's latest movie hitting a massive box office milestone?",
+        "energetic": "This is huge news for film fans—Christopher Nolan's latest epic just crossed one billion dollars worldwide!",
+        "calm": "Director Christopher Nolan's new film, The Odyssey, has officially surpassed one billion dollars at the global box office.",
+        "direct": "Christopher Nolan's epic movie The Odyssey crossed the one billion dollar box office mark today."
       },
       "sources": [
         {
-          "title": "koreajoongangdaily.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHJcr7MTVH4AusRRkb7KRwnXfSIXvdWwz0XrJ-__a34AvR7MMUDyFRXk6OeI3fCJF_CZFr-p-4A4JniTaD9dDLyiDMs2wBAdMQwl0V_cS9pyfQR4Yuh9l7-gbELZ29yQ2UNoBUoe8nkL-WJetguunS9ZleEaJSLpUtCeUZCCIO4yU_b13djP5UMyWaJI_A5eH9iB0k-RI3cxdSYvM7lS2pKFj5yjV9Q7cdAXEyYu62wrDXy8CUKzlw5PJ9yECANwQo="
+          "title": "Google News: Entertainment",
+          "url": "https://news.google.com/search?q=Entertainment%20top%20news%202026-08-08&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     }
