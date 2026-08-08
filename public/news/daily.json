@@ -1,88 +1,92 @@
 {
   "schemaVersion": 1,
   "status": "live",
-  "date": "2026-08-08",
-  "generatedAt": "2026-08-07T21:55:47.115Z",
+  "date": "2026-08-09",
+  "generatedAt": "2026-08-08T21:45:55.515Z",
   "model": "gemini-3.6-flash",
   "fallbackCategories": [],
   "items": [
     {
-      "id": "2026-08-08-politics_economy",
+      "id": "2026-08-09-politics_economy",
       "category": "politics_economy",
       "categoryLabel": "Politics & Economy",
-      "headline": "U.S. Economy Unexpectedly Loses 23,000 Jobs in July as Markets Rally",
-      "summary": "On August 7, 2026, official data showed that the U.S. labor market unexpectedly shed 23,000 jobs in July, while the overall unemployment rate held at 4.1 percent. Despite the sudden contraction, major stock indices surged as investors anticipated that the Federal Reserve would pause further interest rate increases.",
-      "question": "How do you think central banks should balance controlling inflation with protecting employment during uncertain economic times?",
+      "headline": "Saudi Arabia, Turkey, and Pakistan Sign Historic Mutual Defense Pact in Mecca",
+      "summary": "Saudi Arabia, Turkey, and Pakistan have signed the Mecca Joint Defense Agreement, establishing a landmark alliance where an attack on one member is treated as an attack on all three. The pact is major news today as the three influential nations seek to bolster collective deterrence and regional security amid heightened Middle East tensions.",
+      "question": "How do you think this new mutual defense alliance between major regional powers will impact international diplomacy and global security?",
       "coachLeads": {
-        "friendly": "Hey! Have you had a chance to check out today's surprising economic news?",
-        "energetic": "Look at this—the stock market actually jumped today despite an unexpected drop in jobs!",
-        "calm": "Let's take a look at a noteworthy economic development that unfolded today.",
-        "direct": "Today's employment report showed an unexpected job decline, and financial markets reacted immediately."
+        "friendly": "Hey, have you caught the news about the new defense agreement between Saudi Arabia, Turkey, and Pakistan? It's a huge diplomatic move that is definitely worth talking about!",
+        "energetic": "Did you see this major global security story breaking today? Three powerful nations just formed a brand-new mutual defense alliance in Mecca!",
+        "calm": "Saudi Arabia, Turkey, and Pakistan have officially signed a landmark defense pact. Let's take a moment to look at what this collective agreement means for regional stability.",
+        "direct": "Saudi Arabia, Turkey, and Pakistan just agreed to a mutual defense treaty. This is a major geopolitical development, so let me know when you're ready to break it down."
       },
       "sources": [
         {
           "title": "Google News: Politics & Economy",
-          "url": "https://news.google.com/search?q=Politics%20%26%20Economy%20top%20news%202026-08-08&hl=en-US&gl=US&ceid=US:en"
+          "url": "https://news.google.com/search?q=Politics%20%26%20Economy%20top%20news%202026-08-09&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     },
     {
-      "id": "2026-08-08-technology",
+      "id": "2026-08-09-technology",
       "category": "technology",
       "categoryLabel": "Technology",
-      "headline": "OpenAI Triggers Safety Protocols over Unreleased Model's Cybersecurity Risks",
-      "summary": "OpenAI announced that internal testing of an upcoming model named Astra showed advanced coding and cybersecurity capabilities that could reach the Critical risk threshold under its safety framework. The preliminary finding prompted immediate containment measures, including stricter security controls, a partial pause on internal development, and plans for third-party government testing.",
-      "question": "How should AI companies balance developing powerful tools with managing potential cybersecurity risks?",
+      "headline": "OpenAI Pauses Development of New Astra Model Over Cybersecurity Risks",
+      "summary": "OpenAI has paused internal development and triggered safety protocols for its upcoming artificial intelligence model, Astra, after evaluations revealed critical cybersecurity capabilities. The model demonstrated the ability to autonomously identify and exploit severe real-world software vulnerabilities without human intervention, sparking fresh debate over AI containment and safety.",
+      "question": "Do you think tech companies should pause AI development when models show autonomous capabilities, or should they focus on building better defensive security tools?",
       "coachLeads": {
-        "friendly": "Hey there! OpenAI just shared an eye-opening safety update about one of its upcoming AI models, and I thought you might find it interesting.",
-        "energetic": "Check this out—OpenAI had to enact strict safety controls because a new model performed too well on cybersecurity tests! Let's dive into what this means for the AI industry.",
-        "calm": "OpenAI recently flagged potential cybersecurity risks with an unreleased model called Astra. It is a notable moment in AI safety that is worth discussing together.",
-        "direct": "OpenAI just activated safety protocols after preliminary tests showed an unreleased model might cross a critical cybersecurity threat threshold. Let's talk about the details."
+        "friendly": "Hey, have you heard about OpenAI pausing its new model over security concerns? It's a really fascinating story about where AI technology is heading right now.",
+        "energetic": "Check this out—OpenAI just halted its next big AI model because it got too good at hacking! What do you think about AI developing these kinds of skills?",
+        "calm": "There is a significant development in AI safety today that is worth talking about. OpenAI has paused work on its Astra model after discovering advanced cyber attack capabilities.",
+        "direct": "OpenAI just paused development on its new model Astra due to cybersecurity risks. Let's talk about what this means for the future of artificial intelligence."
       },
       "sources": [
         {
           "title": "Google News: Technology",
-          "url": "https://news.google.com/search?q=Technology%20top%20news%202026-08-08&hl=en-US&gl=US&ceid=US:en"
+          "url": "https://news.google.com/search?q=Technology%20top%20news%202026-08-09&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     },
     {
-      "id": "2026-08-08-sports",
+      "id": "2026-08-09-sports",
       "category": "sports",
       "categoryLabel": "Sports",
-      "headline": "USA Basketball Unveils Star-Studded Roster for 2026 Women's World Cup",
-      "summary": "USA Basketball officially announced its 12-player roster for the 2026 FIBA Women's World Cup in Berlin, featuring superstars Caitlin Clark, Paige Bueckers, and A'ja Wilson [1.2.9]. The announcement is drawing global attention as seven players prepare to make their tournament debuts while the team pursues a fifth consecutive gold medal.",
-      "question": "Which athlete or team do you enjoy following the most during international tournaments, and why?",
+      "headline": "NFL Legends Drew Brees and Larry Fitzgerald Inducted Into Pro Football Hall of Fame",
+      "summary": "Five football greats, including quarterback Drew Brees and receiver Larry Fitzgerald, were officially enshrined into the Pro Football Hall of Fame in Canton, Ohio, on August 8, 2026. The enshrinement ceremony celebrated their landmark career achievements alongside fellow inductees Luke Kuechly, Adam Vinatieri, and Roger Craig.",
+      "question": "What qualities or career achievements do you think make an athlete truly legendary?",
       "coachLeads": {
-        "friendly": "Hey, have you heard the news? USA Basketball just announced their squad for the upcoming Women's World Cup.",
-        "energetic": "This is huge news for sports fans today! The official roster for the 2026 FIBA Women's World Cup was just revealed!",
-        "calm": "USA Basketball has finalized its squad for the Women's World Cup in Berlin. It is a very impressive lineup worth looking at.",
-        "direct": "USA Basketball just named its 12-player roster for the World Cup. Let's talk about who made the team."
+        "friendly": "Hey, did you catch the news about the new football legends joining the Hall of Fame?",
+        "energetic": "Five absolute icons of the game were just enshrined into the Hall of Fame, and their speeches were incredible!",
+        "calm": "Honoring career excellence is always a great topic, and this year's Hall of Fame class offers plenty of inspiration.",
+        "direct": "Five iconic players were officially inducted into the Pro Football Hall of Fame today, so let's break down their impact on the sport."
       },
       "sources": [
         {
-          "title": "usab.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGYaPISPbE6bgXhexyonmjTIW5wphabce8xxUn2FQFyb6VRRvT6APiV381SKOZJhVJUyEP2F2nKoVrOuPUsLjc36eBR2GYmW5qkW5cQdO8CCa5ohaWU5Re8eFM3IsSlrore4k1Lunb_rXUg2PfZTx-ZMtwpzIQBctYyjF6L3a4jnGUylOI9wr2R9KI="
+          "title": "Google News: Sports",
+          "url": "https://news.google.com/search?q=Sports%20top%20news%202026-08-09&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     },
     {
-      "id": "2026-08-08-entertainment",
+      "id": "2026-08-09-entertainment",
       "category": "entertainment",
       "categoryLabel": "Entertainment",
-      "headline": "Christopher Nolan's 'The Odyssey' Crosses $1 Billion at Global Box Office",
-      "summary": "Director Christopher Nolan's epic film 'The Odyssey' officially surpassed $1 billion at the global box office on Friday. The achievement marks Nolan's third movie to hit ten figures worldwide and makes it the fifth film to reach the milestone this year.",
-      "question": "What factors do you think help a movie become a massive global box office success today?",
+      "headline": "\"Spider-Man: Brand New Day\" Shatters Box Office Record Set by \"Avengers: Endgame\"",
+      "summary": "Marvel and Sony's \"Spider-Man: Brand New Day\" became the fastest film in North American box office history to cross $500 million, reaching the milestone in just seven days [2.1.1]. The superhero blockbuster surpassed the previous record set by \"Avengers: Endgame\" and is projected to pass $1.4 billion globally by the end of its second weekend.",
+      "question": "Why do you think Spider-Man movies continue to draw such massive audiences to movie theaters worldwide?",
       "coachLeads": {
-        "friendly": "Hey, have you heard about Christopher Nolan's latest movie hitting a massive box office milestone?",
-        "energetic": "This is huge news for film fans—Christopher Nolan's latest epic just crossed one billion dollars worldwide!",
-        "calm": "Director Christopher Nolan's new film, The Odyssey, has officially surpassed one billion dollars at the global box office.",
-        "direct": "Christopher Nolan's epic movie The Odyssey crossed the one billion dollar box office mark today."
+        "friendly": "Hey there! Have you heard about the big box office news that just came out today?",
+        "energetic": "The new Spider-Man movie is smashing box office records faster than ever! Have you had a chance to see it yet?",
+        "calm": "It is fascinating to see how full movie theaters are getting again. A major superhero release just set a huge record worth talking about.",
+        "direct": "The new Spider-Man film just broke a major box office record previously held by Avengers: Endgame. Let's discuss why it is such a huge success."
       },
       "sources": [
         {
-          "title": "Google News: Entertainment",
-          "url": "https://news.google.com/search?q=Entertainment%20top%20news%202026-08-08&hl=en-US&gl=US&ceid=US:en"
+          "title": "cosmicbook.news",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFG5Pdcp1qs2MT5io5eWz07l79v26OIJvnJ_NeG9OJGoTncacT1uLfSyNRPvZ-6NlL8Ir9OuwViPot_dTEkW9phWja4qXs6YwgF0OunH_MmYkhYNHC4WMU6Q7OYPk82RzBySzmlYVg3-0HVLiNEn0Cu4m_7SK-1H8KQJjF0wl7gGNXhUgGtZ2g="
+        },
+        {
+          "title": "thewrap.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEAv_jvIu4KSDe6RuI79OhXDkVO_riSqPMx49Jn2yUTo311JuDsGFIaxWFbeRCNJn_3Cnn5AI8eeS2ZrzYdNJs14BVCalaSLHy6ltO-PbOaQpcurSumHTnzfPQAvfSheLm3dUikOHI_kFeX9nvtY0kv2pKUxl0MCvAJS9w8OXPNpOacSrLALaLD9MUTUioAR2qKjcbqYsxcl-5B"
         }
       ]
     }
