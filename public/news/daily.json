@@ -1,95 +1,88 @@
 {
   "schemaVersion": 1,
   "status": "live",
-  "date": "2026-08-10",
-  "generatedAt": "2026-08-09T21:48:09.015Z",
+  "date": "2026-08-11",
+  "generatedAt": "2026-08-10T22:00:04.823Z",
   "model": "gemini-3.6-flash",
-  "fallbackCategories": [
-    "entertainment"
-  ],
+  "fallbackCategories": [],
   "items": [
     {
-      "id": "2026-08-10-politics_economy",
+      "id": "2026-08-11-politics_economy",
       "category": "politics_economy",
       "categoryLabel": "Politics & Economy",
-      "headline": "Iran and Oman Near Deal on New Strait of Hormuz Shipping Route",
-      "summary": "Iranian Foreign Minister Abbas Araghchi announced that Iran and mediator Oman are close to finalizing an agreement on a new commercial transit route through the Strait of Hormuz [1.4.8]. The potential breakthrough is major news now because it could help stabilize global energy markets and ease months of severe trade disruptions in the strategic waterway.",
-      "question": "How do you think global trade and energy supply chains should adapt when strategic shipping routes face diplomatic conflicts?",
+      "headline": "Russian Court Bars Anti-War Yabloko Party From Parliamentary Election",
+      "summary": "Russia's Supreme Court ruled on Monday to bar Yabloko, the only registered political party opposing the conflict in Ukraine, from next month's parliamentary elections [1.3.5]. The decision disqualifies the nation's primary anti-war opposition group from the ballot following a legal challenge by a pro-Kremlin party.",
+      "question": "How do you think court decisions that disqualify opposition groups affect public trust in democratic elections?",
       "coachLeads": {
-        "friendly": "Hey, have you caught the latest news about international diplomacy and global shipping routes today?",
-        "energetic": "Check this out! There is major breaking news about a diplomatic breakthrough in global energy trade!",
-        "calm": "There is a notable diplomatic update today regarding international trade and maritime shipping.",
-        "direct": "Iran and Oman are nearing a deal on a major global trade route today. Let's discuss what this means for international relations."
+        "friendly": "Hey! Have you heard about the big political ruling that just came out of Russia?",
+        "energetic": "There's a major political story breaking today that is definitely worth discussing!",
+        "calm": "A significant legal decision in Russia today is reshaping the upcoming parliamentary vote.",
+        "direct": "Russia's top court just removed the main anti-war party from next month's election ballot."
       },
       "sources": [
         {
-          "title": "thedailystar.net",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG9a-eNMcTUVQTo1NtHni_CnozC4zu4fD8Y2ktW0uTgxaQdjca7mIOkrzYxVRHhQ39Wv8Ehlkv9vqIyPYfAu4uRjeiRZMmYZxzxUtK3Kn39punGJkFOAuHqVt8rucVuxof4_RUDzUPz0YRWadp6bPQ2tnyel0QTi3uT67pciVG4lPcKEK0="
-        },
-        {
-          "title": "anewz.tv",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFlmLmzuMowzRRIrgcGVfc7wuoKub9BAUF1jjP4JAznsMk89XC04mpGA2BapETDH52GPWKq1EwGQS39mbtOrxX0O72k6nfl95YyPKN7DulY8Ea4o6Xj03FQnw5sgfUIMZY0vj92zgmjvNPE3VF8EkYuLqj5KIMAQ2-_xGRc9PBgHcYE7HcvsXU="
+          "title": "wsls.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH8f6Auw-P8ISa0lBTvD9pgqqkd9NCZIe9O4juw1BfP_iOcGD8AiHbr0Tj-byDTsQiaHUiqzoM-fXhGD1gCmsOTlHhR0SYiH3Y1t_V73S2nB-n80G35oVGRhwmIAhRyvVtS60JErkyZ7YCEvWyMe9mjDG5nLbGsCbb-hAofMu64yqnL0Yg3N2dhYwhEGEIxPevpDC21xKgVJ9FkJPSFu4YxNpKDGl8g26mn_MyFi84Ant5xWJJDegECwabrf_QM"
         }
       ]
     },
     {
-      "id": "2026-08-10-technology",
+      "id": "2026-08-11-technology",
       "category": "technology",
       "categoryLabel": "Technology",
-      "headline": "Perseid Meteor Shower Set to Peak with Ideal Dark-Sky Conditions",
-      "summary": "The annual Perseid meteor shower is reaching its peak this week, offering stargazers across the Northern Hemisphere a chance to see up to 100 meteors per hour. Astronomers report that viewing conditions this year are exceptionally favorable because a new moon phase will leave the night sky dark and clear of bright moonlight.",
-      "question": "Have you ever watched a meteor shower or stargazed, and what do you think makes celestial events so fascinating to people around the world?",
+      "headline": "NASA Extends Voyager 2 Spacecraft Mission with Power-Saving Maneuver",
+      "summary": "NASA engineers executed a clever power-saving operation nicknamed the Big Bang to extend the operational lifespan of the Voyager 2 probe. By shutting down non-essential components and switching to lower-power alternatives, the team bought the nearly 50-year-old spacecraft at least another year of scientific data collection in interstellar space.",
+      "question": "How do you feel about humanity continuing to communicate with space probes that were launched nearly half a century ago?",
       "coachLeads": {
-        "friendly": "Hey there! Have you had a chance to look up at the night sky recently?",
-        "energetic": "Get ready for a spectacular cosmic show this week! The Perseid meteor shower is peaking, and the viewing conditions couldn't be better.",
-        "calm": "There is something truly peaceful about gathering under a dark sky to watch shooting stars. Let's take a moment to talk about this week's meteor shower.",
-        "direct": "The annual Perseid meteor shower is reaching its peak under ideal viewing conditions. Here is what you need to know about this week's event."
+        "friendly": "Hey, have you heard about Voyager 2? NASA engineers found a clever way to keep the legendary space probe running even longer.",
+        "energetic": "This is so cool—NASA just figured out how to squeeze another year of deep-space science out of Voyager 2!",
+        "calm": "It is remarkable to think about Voyager 2 still operating far beyond our solar system. NASA just completed a power maneuver to extend its mission.",
+        "direct": "NASA just extended Voyager 2's mission with a smart power update. Here is what you should know about how they did it."
       },
       "sources": [
         {
           "title": "Google News: Technology",
-          "url": "https://news.google.com/search?q=Technology%20top%20news%202026-08-10&hl=en-US&gl=US&ceid=US:en"
+          "url": "https://news.google.com/search?q=Technology%20top%20news%202026-08-11&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     },
     {
-      "id": "2026-08-10-sports",
+      "id": "2026-08-11-sports",
       "category": "sports",
       "categoryLabel": "Sports",
-      "headline": "Demi Vollering Wins Tour de France Femmes for Second Career Title",
-      "summary": "Dutch cyclist Demi Vollering secured her second overall Tour de France Femmes title on Sunday after winning the final stage in Nice with a solo attack on the Col d'Èze. Her decisive victory on stage nine made her the first two-time overall champion in the history of the modern women's race.",
-      "question": "What kind of mental and physical preparation do you think it takes to win a grueling multi-day endurance event like the Tour de France?",
+      "headline": "Jakob Ingebrigtsen Wins European 5,000-Meter Gold in Thrilling Comeback",
+      "summary": "Norwegian runner Jakob Ingebrigtsen claimed his fourth consecutive 5,000-meter title at the European Athletics Championships in Birmingham after surging past competitors in the final 50 meters. The victory marks a triumphant return for the two-time Olympic champion, who was competing in his first race since undergoing Achilles tendon surgery earlier this year.",
+      "question": "What qualities do you think allow elite athletes to perform at a championship level right after recovering from major surgery?",
       "coachLeads": {
-        "friendly": "Hey, did you see the big cycling news today? Demi Vollering just won her second Tour de France Femmes title after an incredible ride in Nice!",
-        "energetic": "What an sensational finish to the Tour de France Femmes today! Demi Vollering launched a late attack on the final climb to lock up the overall trophy!",
-        "calm": "There was a major milestone in international cycling today as Demi Vollering secured her second Tour de France Femmes victory. It was a impressive solo effort on the final stage in Nice.",
-        "direct": "Demi Vollering won the Tour de France Femmes for the second time today. She sealed the yellow jersey with a solo victory on the final stage."
+        "friendly": "Hey, have you heard about Jakob Ingebrigtsen's amazing comeback victory today? It is so inspiring to see an athlete win gold right after recovering from surgery.",
+        "energetic": "You won't believe the incredible finish at the European Championships today! Jakob Ingebrigtsen made a wild late surge to take gold in his very first race back from Achilles surgery!",
+        "calm": "Jakob Ingebrigtsen made a remarkable return to competition today by securing another European 5,000-meter gold medal. His comeback story after surgery is definitely worth talking about.",
+        "direct": "Jakob Ingebrigtsen just won his fourth consecutive European 5,000-meter title in his first race since Achilles surgery. Take a look at this story and tell me what you think."
       },
       "sources": [
         {
           "title": "Google News: Sports",
-          "url": "https://news.google.com/search?q=Sports%20top%20news%202026-08-10&hl=en-US&gl=US&ceid=US:en"
+          "url": "https://news.google.com/search?q=Sports%20top%20news%202026-08-11&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     },
     {
-      "id": "2026-08-10-entertainment-source-list",
+      "id": "2026-08-11-entertainment",
       "category": "entertainment",
       "categoryLabel": "Entertainment",
-      "headline": "Today's Entertainment headlines",
-      "summary": "A verified single-story summary could not be prepared safely today. Open the source list to choose a current headline, then use it as a conversation starter.",
-      "question": "Which current entertainment headline would you like to talk about?",
+      "headline": "Jury Selection Begins in Las Vegas Trial for 1996 Killing of Tupac Shakur",
+      "summary": "Jury selection officially began in Las Vegas for the trial of Duane 'Keffe D' Davis, who faces murder charges in connection with the 1996 shooting of rap icon Tupac Shakur. The landmark proceedings mark a major milestone in seeking legal resolution for one of hip-hop's most famous cold cases nearly thirty years later.",
+      "question": "Why do you think high-profile unsolved cases in pop culture continue to fascinate people decades after they happen?",
       "coachLeads": {
-        "friendly": "Let's pick a current entertainment headline together and talk about it.",
-        "energetic": "There are fresh entertainment headlines today. Choose one that catches your eye and let's discuss it.",
-        "calm": "A source list is available for today's entertainment news. We can use one headline as a simple conversation starter.",
-        "direct": "Open today's entertainment headlines and choose one to discuss."
+        "friendly": "Hey! Did you hear that the trial regarding Tupac Shakur's 1996 death just kicked off in Las Vegas?",
+        "energetic": "This is huge news for music history! Jury selection has officially started in the trial over Tupac Shakur's murder!",
+        "calm": "A major moment in music history unfolded today as jury selection began for the trial into Tupac Shakur's 1996 killing. It is worth talking about.",
+        "direct": "Jury selection just started in Las Vegas for the trial connected to Tupac Shakur's death. Let's discuss why this long-unsolved case is back in the headlines."
       },
-      "fallback": true,
       "sources": [
         {
           "title": "Google News: Entertainment",
-          "url": "https://news.google.com/search?q=Entertainment%20top%20news%202026-08-10&hl=en-US&gl=US&ceid=US:en"
+          "url": "https://news.google.com/search?q=Entertainment%20top%20news%202026-08-11&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     }
