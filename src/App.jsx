@@ -33,6 +33,7 @@ import {
 } from "lucide-react";
 
 const contactFormUrl = "https://docs.google.com/forms/d/e/1FAIpQLSf14ucq_SU36hxEQSsw0W5eBJ1WVp7PYjCaaEHu9GKRWyWQVw/viewform?usp=publish-editor";
+const speakAppUrl = "https://speak.byokey-lab.com/";
 
 const providers = [
   {
@@ -324,7 +325,7 @@ function HomePage({ onNavigate }) {
             <p className="section-kicker">FIRST PRODUCT</p>
             <h2 className="product-title"><span>BYOKey</span><span>Speak</span><small>for English</small></h2>
             <p>英語が出てこない瞬間も、Quick Assistが日本語の質問から自然な表現を提案。会話の流れを止めません。</p>
-            <div className="inline-meta"><span>PWA準備中</span><span>Gemini APIのみ</span><span>API代は利用者負担</span></div>
+            <div className="inline-meta"><span>PWA公開中</span><span>Gemini APIのみ</span><span>API代は利用者負担</span></div>
             <button className="button button-dark" type="button" onClick={() => onNavigate("/speak/english/")}>製品ページへ<ArrowRight size={18} /></button>
           </div>
           <QuickAssistCard compact />
@@ -643,10 +644,10 @@ function SpeakPage({ onNavigate }) {
             <p className="hero-lead">費用は使った分だけ。</p>
             <p className="hero-copy">英語が出てこないときは、日本語のまま聞く。Quick Assistが自然な表現を提案し、<strong className="underlined-copy">会話の流れを止めません。</strong></p>
             <div className="hero-actions">
-              <button className="button button-primary" type="button" onClick={() => document.getElementById("release")?.scrollIntoView({ behavior: "smooth" })}><Play size={18} fill="currentColor" />PWA版を準備中</button>
+              <a className="button button-primary" href={speakAppUrl} target="_blank" rel="noreferrer"><Play size={18} fill="currentColor" />BYOKey Speakを開く</a>
               <button className="button button-secondary" type="button" onClick={() => onNavigate("/guide/api/")}><BookOpen size={18} />API設定ガイド</button>
             </div>
-            <p className="fine-print"><strong>PWA版はGemini APIのみ対応予定。</strong> Gemini API利用料はGoogleから直接請求されます。</p>
+            <p className="fine-print"><strong>PWA版はGemini APIのみ対応。</strong> Gemini API利用料はGoogleから直接請求されます。</p>
           </div>
           <ConversationPreview />
         </section>
@@ -679,10 +680,22 @@ function SpeakPage({ onNavigate }) {
         <section className="release-section" id="release">
           <div>
             <p className="section-kicker">RELEASE</p>
-            <h2>PWA版の公開に向けて準備中です。</h2>
-            <p>本文書の記載時点では、モバイルアプリ版は公開しません。まずはGemini APIキーで試せるPWAとして、Git公開による透明性と明示同意を前提に提供します。</p>
+            <h2>BYOKey Speak PWAを公開しました。</h2>
+            <p>Gemini APIキーで試せるPWAとして公開しています。利用前に重要事項とAPI設定ガイドを確認し、専用キーと利用上限を設定したうえでお使いください。</p>
+            <div className="install-steps">
+              <strong>ホーム画面に追加して使う</strong>
+              <ol>
+                <li>SafariまたはChromeでBYOKey Speakを開く。</li>
+                <li>iPhoneは共有ボタン、Androidはメニューから「ホーム画面に追加」を選ぶ。</li>
+                <li>追加後はホーム画面のアイコンから起動する。</li>
+              </ol>
+            </div>
           </div>
-          <button className="button button-dark" type="button" onClick={() => onNavigate("/important/")}>重要事項を見る<ArrowRight size={18} /></button>
+          <div className="release-actions">
+            <a className="button button-dark" href={speakAppUrl} target="_blank" rel="noreferrer">BYOKey Speakを開く<ExternalLink size={18} /></a>
+            <button className="button button-secondary" type="button" onClick={() => onNavigate("/guide/api/")}>API設定ガイド<ArrowRight size={18} /></button>
+            <button className="text-link" type="button" onClick={() => onNavigate("/important/")}>重要事項を見る<ArrowRight size={17} /></button>
+          </div>
         </section>
       </main>
       <Footer onNavigate={onNavigate} />
