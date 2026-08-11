@@ -1,88 +1,92 @@
 {
   "schemaVersion": 1,
   "status": "live",
-  "date": "2026-08-11",
-  "generatedAt": "2026-08-10T22:00:04.823Z",
+  "date": "2026-08-12",
+  "generatedAt": "2026-08-11T22:05:05.298Z",
   "model": "gemini-3.6-flash",
   "fallbackCategories": [],
   "items": [
     {
-      "id": "2026-08-11-politics_economy",
+      "id": "2026-08-12-politics_economy",
       "category": "politics_economy",
       "categoryLabel": "Politics & Economy",
-      "headline": "Russian Court Bars Anti-War Yabloko Party From Parliamentary Election",
-      "summary": "Russia's Supreme Court ruled on Monday to bar Yabloko, the only registered political party opposing the conflict in Ukraine, from next month's parliamentary elections [1.3.5]. The decision disqualifies the nation's primary anti-war opposition group from the ballot following a legal challenge by a pro-Kremlin party.",
-      "question": "How do you think court decisions that disqualify opposition groups affect public trust in democratic elections?",
+      "headline": "U.S. Treasury Permanently Ends Beneficial Ownership Reporting for American Small Businesses",
+      "summary": "The U.S. Department of the Treasury's Financial Crimes Enforcement Network issued a final rule permanently exempting domestic companies and individuals from reporting beneficial ownership information under the Corporate Transparency Act [2.1.1]. FinCEN also confirmed it will purge previously collected data on U.S. persons while retaining disclosure mandates for foreign entities operating in the country.",
+      "question": "What balance should governments strike between easing administrative burdens for small businesses and preventing financial crime?",
       "coachLeads": {
-        "friendly": "Hey! Have you heard about the big political ruling that just came out of Russia?",
-        "energetic": "There's a major political story breaking today that is definitely worth discussing!",
-        "calm": "A significant legal decision in Russia today is reshaping the upcoming parliamentary vote.",
-        "direct": "Russia's top court just removed the main anti-war party from next month's election ballot."
+        "friendly": "Hey, did you catch the latest update from the U.S. Treasury? It's a major regulatory shift for small business owners that is getting a lot of attention.",
+        "energetic": "Big policy news today! The U.S. government just made a huge change to business rules, and it impacts millions of small companies!",
+        "calm": "There is an interesting regulatory update from the U.S. Treasury today. Let's take a look at what this change means for financial transparency.",
+        "direct": "The U.S. Treasury finalized a rule rolling back ownership disclosure requirements for domestic companies. Here is why this policy move matters."
       },
       "sources": [
         {
-          "title": "wsls.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH8f6Auw-P8ISa0lBTvD9pgqqkd9NCZIe9O4juw1BfP_iOcGD8AiHbr0Tj-byDTsQiaHUiqzoM-fXhGD1gCmsOTlHhR0SYiH3Y1t_V73S2nB-n80G35oVGRhwmIAhRyvVtS60JErkyZ7YCEvWyMe9mjDG5nLbGsCbb-hAofMu64yqnL0Yg3N2dhYwhEGEIxPevpDC21xKgVJ9FkJPSFu4YxNpKDGl8g26mn_MyFi84Ant5xWJJDegECwabrf_QM"
+          "title": "treasury.gov",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQExQWlu9uqrviXkekRkpPs_xRd8qvY6TiHO1XvovQ8GtKdo9dK3DMALFmsWMqTu4BIx_QP7BHoeCua-2BwXIOJZeFQNhDfMtkKP2gg4oUzhD3eGy7oxH4ObKeBWrbrPcFbN-ln139vnb8qG"
+        },
+        {
+          "title": "aba.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHi8TRiYyr9m_ADwF4qSUzzOezuzaMuJTPxQIP1p5GvhMYerJ87AhtgaHu0ul2FW7vP6jIWXudkZyk_1xnO_i_H1xLcxK7ieJaIGOGjmwCK9VdFEq9yU_jAI5AGIxxMAu0yDtD5ajXNBGr5JCRUxM-MPw3sWrqVMq9L4Q8X3sxQB1XTW7ongbfDKnMvYOQAjGvdMiqEtZVMtjp6F91J7ITaoXQ="
         }
       ]
     },
     {
-      "id": "2026-08-11-technology",
+      "id": "2026-08-12-technology",
       "category": "technology",
       "categoryLabel": "Technology",
-      "headline": "NASA Extends Voyager 2 Spacecraft Mission with Power-Saving Maneuver",
-      "summary": "NASA engineers executed a clever power-saving operation nicknamed the Big Bang to extend the operational lifespan of the Voyager 2 probe. By shutting down non-essential components and switching to lower-power alternatives, the team bought the nearly 50-year-old spacecraft at least another year of scientific data collection in interstellar space.",
-      "question": "How do you feel about humanity continuing to communicate with space probes that were launched nearly half a century ago?",
+      "headline": "Rare Total Solar Eclipse Sweeps Across Europe and the Arctic",
+      "summary": "On August 12, 2026, a total solar eclipse is sweeping across Greenland, Iceland, and northern Spain, marking the first total solar eclipse visible in mainland Europe in 27 years. Space agencies including NASA are deploying high-altitude research aircraft and scientific balloons along the path of totality to study the sun's outer atmosphere during the event.",
+      "question": "Have you ever witnessed a solar eclipse, or is there a natural phenomenon you would love to see in person?",
       "coachLeads": {
-        "friendly": "Hey, have you heard about Voyager 2? NASA engineers found a clever way to keep the legendary space probe running even longer.",
-        "energetic": "This is so cool—NASA just figured out how to squeeze another year of deep-space science out of Voyager 2!",
-        "calm": "It is remarkable to think about Voyager 2 still operating far beyond our solar system. NASA just completed a power maneuver to extend its mission.",
-        "direct": "NASA just extended Voyager 2's mission with a smart power update. Here is what you should know about how they did it."
+        "friendly": "Hey, have you heard about the total solar eclipse happening today? It's bringing a rare moment of darkness to millions of people across Europe.",
+        "energetic": "This is so exciting—a total solar eclipse is sweeping across Europe right now! Imagine seeing the sky go completely dark in the middle of the afternoon!",
+        "calm": "A rare total solar eclipse is darkening the skies across parts of Europe today. It's a fascinating natural event that scientists have been preparing for years to study.",
+        "direct": "Today, Europe is experiencing its first total solar eclipse in nearly three decades. Let's discuss what makes this event such a big deal for both scientists and skywatchers."
       },
       "sources": [
         {
           "title": "Google News: Technology",
-          "url": "https://news.google.com/search?q=Technology%20top%20news%202026-08-11&hl=en-US&gl=US&ceid=US:en"
+          "url": "https://news.google.com/search?q=Technology%20top%20news%202026-08-12&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     },
     {
-      "id": "2026-08-11-sports",
+      "id": "2026-08-12-sports",
       "category": "sports",
       "categoryLabel": "Sports",
-      "headline": "Jakob Ingebrigtsen Wins European 5,000-Meter Gold in Thrilling Comeback",
-      "summary": "Norwegian runner Jakob Ingebrigtsen claimed his fourth consecutive 5,000-meter title at the European Athletics Championships in Birmingham after surging past competitors in the final 50 meters. The victory marks a triumphant return for the two-time Olympic champion, who was competing in his first race since undergoing Achilles tendon surgery earlier this year.",
-      "question": "What qualities do you think allow elite athletes to perform at a championship level right after recovering from major surgery?",
+      "headline": "Iga Świątek Reaches First WTA 1000 Semifinal of 2026 at Canadian Open",
+      "summary": "Six-time Grand Slam champion Iga Świątek defeated Diana Shnaider 6-2, 6-1 in 68 minutes at the Canadian Open in Toronto. The dominant quarterfinal win advances Świątek to her first WTA 1000 semifinal of the 2026 season as top players build momentum ahead of the US Open.",
+      "question": "How important do you think momentum in warm-up tournaments is for professional tennis players before competing in a Grand Slam?",
       "coachLeads": {
-        "friendly": "Hey, have you heard about Jakob Ingebrigtsen's amazing comeback victory today? It is so inspiring to see an athlete win gold right after recovering from surgery.",
-        "energetic": "You won't believe the incredible finish at the European Championships today! Jakob Ingebrigtsen made a wild late surge to take gold in his very first race back from Achilles surgery!",
-        "calm": "Jakob Ingebrigtsen made a remarkable return to competition today by securing another European 5,000-meter gold medal. His comeback story after surgery is definitely worth talking about.",
-        "direct": "Jakob Ingebrigtsen just won his fourth consecutive European 5,000-meter title in his first race since Achilles surgery. Take a look at this story and tell me what you think."
+        "friendly": "Hey, did you catch Iga Świątek's latest match at the Canadian Open? She put on a dominant performance in Toronto to reach her first WTA 1000 semifinal of the year!",
+        "energetic": "Iga Świątek is finding her top game at just the right time! She completely powered past her opponent in Toronto to lock in a spot in the semifinals!",
+        "calm": "Iga Świątek delivered a very impressive performance at the Canadian Open today. Reaching her first WTA 1000 semifinal of the season is a major step forward for her momentum.",
+        "direct": "Iga Świątek swept Diana Shnaider 6-2, 6-1 to advance to the Canadian Open semifinals. It is her first WTA 1000 semifinal of 2026, and it is a result worth talking about."
       },
       "sources": [
         {
           "title": "Google News: Sports",
-          "url": "https://news.google.com/search?q=Sports%20top%20news%202026-08-11&hl=en-US&gl=US&ceid=US:en"
+          "url": "https://news.google.com/search?q=Sports%20top%20news%202026-08-12&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     },
     {
-      "id": "2026-08-11-entertainment",
+      "id": "2026-08-12-entertainment",
       "category": "entertainment",
       "categoryLabel": "Entertainment",
-      "headline": "Jury Selection Begins in Las Vegas Trial for 1996 Killing of Tupac Shakur",
-      "summary": "Jury selection officially began in Las Vegas for the trial of Duane 'Keffe D' Davis, who faces murder charges in connection with the 1996 shooting of rap icon Tupac Shakur. The landmark proceedings mark a major milestone in seeking legal resolution for one of hip-hop's most famous cold cases nearly thirty years later.",
-      "question": "Why do you think high-profile unsolved cases in pop culture continue to fascinate people decades after they happen?",
+      "headline": "Brad Pitt Suggests AI Could Help Save Mid-Budget Hollywood Films",
+      "summary": "In a newly released cover story for Esquire, Oscar-winning actor Brad Pitt stated that artificial intelligence could help mid-budget movies get produced by lowering visual effects costs [3.1.1]. His comments have stirred widespread industry debate over the practical and creative boundaries of AI in filmmaking.",
+      "question": "Do you think artificial intelligence will ultimately help or harm the movie industry, and why?",
       "coachLeads": {
-        "friendly": "Hey! Did you hear that the trial regarding Tupac Shakur's 1996 death just kicked off in Las Vegas?",
-        "energetic": "This is huge news for music history! Jury selection has officially started in the trial over Tupac Shakur's murder!",
-        "calm": "A major moment in music history unfolded today as jury selection began for the trial into Tupac Shakur's 1996 killing. It is worth talking about.",
-        "direct": "Jury selection just started in Las Vegas for the trial connected to Tupac Shakur's death. Let's discuss why this long-unsolved case is back in the headlines."
+        "friendly": "Hey, have you seen what Brad Pitt said about AI in movies recently? I'd love to hear your thoughts on where Hollywood is heading!",
+        "energetic": "Brad Pitt just jumped into the big debate about AI in Hollywood! What do you think about using AI to make mid-budget movies?",
+        "calm": "Brad Pitt recently shared a thoughtful perspective on using artificial intelligence to help produce mid-budget films. It raises some interesting questions about the future of film.",
+        "direct": "Brad Pitt recently argued that AI could help save mid-budget Hollywood movies. Do you agree with his take on AI in cinema?"
       },
       "sources": [
         {
-          "title": "Google News: Entertainment",
-          "url": "https://news.google.com/search?q=Entertainment%20top%20news%202026-08-11&hl=en-US&gl=US&ceid=US:en"
+          "title": "variety.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHqUzlnUmNKllhw2z588uR5tgLvsqvuHpDMGvhKoLnyqHnxVCEfbB-KybAnLkevhquuOjoRYTDzyp1j74DOp0gvhc7pp_sIoBV8V2KS51ISE1fddpuvgLi2KvKtmiYQGzywyZz6scatpSAMoVSUwj3KmmsBS3x9GLZ00Rk1KIvTQUmpmaKVbfSRQRF5b2VbUXmpVKFjvw=="
         }
       ]
     }
