@@ -98,7 +98,7 @@ const providerGuides = {
     pricingUrl: "https://developers.openai.com/api/docs/models",
   },
   claude: {
-    guidePdfStatus: "作成中",
+    guidePdf: "/guides/api-key-guide-claude.pdf",
     requirements: [
       "Claude ConsoleアカウントとOrganization",
       "利用目的などのOrganization情報",
@@ -771,7 +771,7 @@ function ProviderPdfGuide({ provider, guide }) {
         <div>
           <p className="step-label">DETAILED GUIDE</p>
           <h2 id={`${provider.id}-pdf-guide`}>{provider.name}の画像付き設定ガイド</h2>
-          <p>Claude版のPDFガイドは作成中です。完成次第、このページでブラウザ閲覧できるように追加します。</p>
+          <p>このプロバイダーのPDFガイドは作成中です。完成次第、このページでブラウザ閲覧できるように追加します。</p>
         </div>
         <span>{guide.guidePdfStatus || "作成中"}</span>
       </section>
