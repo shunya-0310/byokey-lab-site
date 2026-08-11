@@ -77,8 +77,11 @@ async function generateCategoryWithRetry(category) {
       console.warn(`Attempt ${attempt} failed for ${category.id}: ${error.message}`);
     }
   }
-  console.warn(`Using safe source-list fallback for ${category.id}: ${lastError.message}`);
-  return fallbackItem(category);
+  console.warn(`Using RSS headline fallback for ${category.id}: ${lastError.message}`);
+  return await rssHeadlineFallbackItem(category).catch((error) => {
+    console.warn(`Using safe source-list fallback for ${category.id}: ${error.message}`);
+    return sourceListFallbackItem(category);
+  });
 }
 
 async function generateCategory(category, attempt) {
@@ -167,7 +170,86 @@ function normalizeItem(item, category, sources) {
   return normalized;
 }
 
-function fallbackItem(category) {
+async function rssHeadlineFallbackItem(category) {
+  const candidates = await fetchGoogleNewsRss(category);
+  const story = candidates[0];
+  if (!story) {
+    throw new Error("Google News RSS returned no usable headlines.");
+  }
+  const label = category.label;
+  return {
+    id: `${date}-${category.id}-rss-headline`,
+    category: category.id,
+    categoryLabel: label,
+    headline: story.title,
+    summary: `This headline is currently listed by Google News for ${label}. Open the source before discussing details beyond the headline.`,
+    question: `What caught your attention about this ${label.toLowerCase()} headline?`,
+    coachLeads: {
+      friendly: `I found a current ${label.toLowerCase()} headline we can use for conversation practice. Let's open the source if we need more details.`,
+      energetic: `Here's a fresh ${label.toLowerCase()} headline to talk about today. We can check the source together before going deeper.`,
+      calm: `There is a current ${label.toLowerCase()} headline available from Google News. We can use it as a careful conversation starter.`,
+      direct: `Use this current ${label.toLowerCase()} headline as today's discussion topic. Check the source before adding details.`,
+    },
+    fallback: true,
+    fallbackKind: "rss_headline",
+    sources: [
+      {
+        title: story.source || `Google News: ${label}`,
+        url: story.link,
+      },
+    ],
+  };
+}
+
+async function fetchGoogleNewsRss(category) {
+  const response = await fetch(googleNewsRssUrl(category), {
+    headers: {
+      "Accept": "application/rss+xml, application/xml;q=0.9, text/xml;q=0.8",
+      "User-Agent": "BYOKey-Speak-News-Generator/1.0",
+    },
+  });
+  if (!response.ok) {
+    throw new Error(`Google News RSS ${response.status} for ${category.id}.`);
+  }
+  const xml = await response.text();
+  return [...xml.matchAll(/<item\b[\s\S]*?<\/item>/gi)]
+    .map((match) => parseRssItem(match[0]))
+    .filter((item) => item.title && /^https:\/\//i.test(item.link))
+    .slice(0, 5);
+}
+
+function parseRssItem(xml) {
+  const source = decodeXml(firstXmlValue(xml, "source"));
+  return {
+    title: stripSourceSuffix(decodeXml(firstXmlValue(xml, "title")), source),
+    link: decodeXml(firstXmlValue(xml, "link")),
+    source,
+  };
+}
+
+function firstXmlValue(xml, tagName) {
+  const pattern = new RegExp(`<${tagName}(?:\\s[^>]*)?>([\\s\\S]*?)<\\/${tagName}>`, "i");
+  return xml.match(pattern)?.[1]?.trim() || "";
+}
+
+function decodeXml(value) {
+  return value
+    .replace(/<!\[CDATA\[([\s\S]*?)\]\]>/g, "$1")
+    .replace(/&amp;/g, "&")
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">")
+    .replace(/&quot;/g, "\"")
+    .replace(/&#39;|&apos;/g, "'")
+    .trim();
+}
+
+function stripSourceSuffix(title, source) {
+  if (!source) return title;
+  const suffix = ` - ${source}`;
+  return title.endsWith(suffix) ? title.slice(0, -suffix.length).trim() : title;
+}
+
+function sourceListFallbackItem(category) {
   const sources = fallbackSources(category);
   const label = category.label;
   return {
@@ -184,6 +266,7 @@ function fallbackItem(category) {
       direct: `Open today's ${label.toLowerCase()} headlines and choose one to discuss.`,
     },
     fallback: true,
+    fallbackKind: "source_list",
     sources,
   };
 }
@@ -213,6 +296,11 @@ function fallbackSources(category) {
       url: `https://news.google.com/search?q=${query}&hl=en-US&gl=US&ceid=US:en`,
     },
   ];
+}
+
+function googleNewsRssUrl(category) {
+  const query = encodeURIComponent(`${category.label} top news ${date}`);
+  return `https://news.google.com/rss/search?q=${query}&hl=en-US&gl=US&ceid=US:en`;
 }
 
 function parseNewsItems(text, category) {

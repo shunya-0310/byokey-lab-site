@@ -48,7 +48,7 @@ const providers = [
     owner: "OpenAI",
     mark: "O",
     guideUrl: "https://platform.openai.com/api-keys",
-    clientWarning: "OpenAIは、APIキーをブラウザやモバイルアプリなどのクライアント環境へ配置しないよう公式に案内しています。BYOKey Speakでの提供可否は、公開前に規約と安全面を再確認します。",
+    clientWarning: "OpenAIは、APIキーをブラウザやモバイルアプリなどのクライアント環境へ配置しないよう公式に案内しています。BYOKey LabのPWA版では、本文書の記載時点でOpenAI APIキーには対応しません。",
   },
   {
     id: "claude",
@@ -56,6 +56,7 @@ const providers = [
     owner: "Anthropic",
     mark: "C",
     guideUrl: "https://console.anthropic.com/settings/keys",
+    clientWarning: "AnthropicのTypeScript SDKはブラウザ利用を明示的な設定で許可できますが、クライアント側APIキーには追加の注意が必要です。BYOKey LabのPWA版では、本文書の記載時点でClaude APIキーには対応しません。",
   },
 ];
 
@@ -105,13 +106,15 @@ const providerGuides = {
     steps: [
       "Claude Consoleへ登録し、Organization情報と利用目的を入力する",
       "Billingで支払い方法を登録し、Usage Creditsを購入する",
-      "API KeysでBYOKey Speak専用のキーを作成する",
+      "API Keysで用途を分けた新しいキーを作成する",
       "使用量と残高を確認し、BYOKey Speakで接続を確認する",
     ],
     billingUrl: "https://support.claude.com/en/articles/8977456-how-do-i-pay-for-my-claude-api-usage",
     pricingUrl: "https://platform.claude.com/docs/en/about-claude/pricing",
   },
 };
+
+const productProviders = providers.filter((provider) => provider.id === "gemini");
 
 function ByokAppDiagram() {
   return (
@@ -122,7 +125,7 @@ function ByokAppDiagram() {
         <p>アプリ開発者、ユーザー、LLMプロバイダーの関係を図解しました。キーとデータをどこで扱うのかを、公開前に曖昧にしないための基本図です。</p>
       </div>
       <figure className="diagram-frame">
-        <img src="/images/byok-app-diagram.png" alt="BYOKアプリの仕組み。ユーザーが自分のAPIキーをアプリに設定し、アプリから選択したLLMプロバイダーへ直接接続する流れを示した図解。" />
+        <img src="/images/byok-app-diagram.png" alt="BYOKアプリの仕組み。開発者がアプリを提供し、ユーザーがAPIキーとAPI利用料をLLMプロバイダーへ用意する関係を示した図解。" />
         <figcaption>
           <a href="/guides/byok-app-diagram.pdf" target="_blank" rel="noreferrer">PDFで開く<ExternalLink size={15} /></a>
         </figcaption>
@@ -204,6 +207,7 @@ function Header({ onNavigate, active = "home" }) {
         <nav className={open ? "nav-links is-open" : "nav-links"} aria-label="メインナビゲーション">
           <button type="button" onClick={() => go("/#principles")}>考え方</button>
           <button className={active === "speak" ? "is-active" : ""} type="button" onClick={() => go("/speak/english/")}>プロダクト</button>
+          <button type="button" onClick={() => go("/important/")}>重要事項</button>
           <button type="button" onClick={() => go("/privacy/")}>プライバシー</button>
           <button type="button" onClick={() => go("/speak/english/#faq")}>FAQ</button>
           <button type="button" onClick={() => go("/guide/api/")}>API設定ガイド</button>
@@ -221,25 +225,26 @@ function ByokeyFlow() {
     <div className="setup-demo" aria-label="BYOKアプリを使い始めるまでの3ステップ">
       <article className="setup-step provider-step">
         <p className="step-label">01 / プロバイダー</p>
-        <h2>好きなAIを選ぶ</h2>
-        <div className="provider-list" aria-label="選択できるLLMプロバイダーの例">
-          {providers.map((provider) => (
+        <h2>Geminiを選ぶ</h2>
+        <div className="provider-list" aria-label="BYOKey Speak PWA版で対応予定のLLMプロバイダー">
+          {productProviders.map((provider) => (
             <div className="provider-option" key={provider.id}>
               <span className={`provider-mark provider-${provider.id}`}>{provider.mark}</span>
-              <span><strong>{provider.name}</strong><small>{provider.owner}</small></span>
+              <span><strong>{provider.name}</strong><small>{provider.owner} / PWA版で対応予定</small></span>
             </div>
           ))}
         </div>
+        <p className="flow-description">Geminiのみから開始する理由は、APIキーの扱いに関する重要事項で説明しています。</p>
       </article>
       <article className="setup-step key-step">
         <p className="step-label">02 / APIキー</p>
-        <h2>端末に設定する</h2>
+        <h2>ブラウザで入力する</h2>
         <div className="flow-visual key-visual" aria-hidden="true">
           <span><Smartphone size={44} /></span>
           <ArrowRight size={22} />
           <span><LockKeyhole size={40} /></span>
         </div>
-        <p className="flow-description">取得したAPIキーをアプリへ設定。キーはアプリ開発者のサーバーへ預けず、端末内で管理します。</p>
+        <p className="flow-description">取得したGemini APIキーをPWAへ入力。キーはBYOKey Labのサーバーへ預けず、利用者のブラウザ内で扱います。</p>
       </article>
       <article className="setup-step conversation-step">
         <p className="step-label">03 / アプリ</p>
@@ -249,7 +254,7 @@ function ByokeyFlow() {
           <ArrowRight size={22} />
           <span><BrainCircuit size={42} /></span>
         </div>
-        <p className="flow-description">アプリから選んだAIへ直接接続。月額会員登録を挟まず、必要な機能をすぐに使えます。</p>
+        <p className="flow-description">ブラウザからGemini APIへ接続。月額会員登録を挟まず、必要な機能をすぐに試せます。</p>
       </article>
     </div>
   );
@@ -258,9 +263,9 @@ function ByokeyFlow() {
 function TrustBand() {
   return (
     <section className="trust-band" aria-label="BYOKey Labの基本方針">
-      <div className="trust-item"><LockKeyhole size={25} /><div><strong>キーは端末内で暗号化</strong><span>BYOKey Labのサーバーへ保存しません</span></div></div>
-      <div className="trust-item"><Smartphone size={25} /><div><strong>アカウント登録は不要</strong><span>設定と履歴は端末で管理</span></div></div>
-      <div className="trust-item"><BrainCircuit size={25} /><div><strong>AIを選べる設計</strong><span>Gemini・OpenAI・Claudeから自由に選択可能</span></div></div>
+      <div className="trust-item"><LockKeyhole size={25} /><div><strong>キーはサーバーへ預けない</strong><span>PWAでは利用者のブラウザ内で扱います</span></div></div>
+      <div className="trust-item"><Smartphone size={25} /><div><strong>透明性を優先</strong><span>Git公開できるWeb構成を採用します</span></div></div>
+      <div className="trust-item"><BrainCircuit size={25} /><div><strong>Gemini専用から開始</strong><span>BYOK検証を小さく始めます</span></div></div>
     </section>
   );
 }
@@ -275,19 +280,20 @@ function HomePage({ onNavigate }) {
           <h1 className="sr-only">BYOKey Lab</h1>
           <div className="brand-lockup"><img src={byokeyLabLogo} alt="BYOKey Lab - The Key is in your hand" /></div>
           <p className="hero-lead">AIアプリは、もう、<br />定額に縛られない。</p>
-          <p className="hero-copy">BYOKey Labは、LLMを組み込んだ買い切り型の小さなアプリをつくります。ユーザーは自分のAPIキーをつなぎ、必要な分だけ従量課金で使えます。</p>
+          <p className="hero-copy">BYOKey Labは、利用者自身のAPIキーで動く小さなAIツールをつくります。本文書の記載時点では、モバイルアプリではなく、PWAとPCアプリを中心に進めます。PWAとは、ブラウザから使えるWebアプリで、ホーム画面にも追加できる形式です。</p>
           <div className="hero-actions">
             <button className="button button-primary" type="button" onClick={() => onNavigate("/speak/english/")}>最初のプロダクトを見る<ArrowRight size={18} /></button>
+            <button className="button button-secondary" type="button" onClick={() => onNavigate("/important/")}>重要事項を見る<ShieldAlert size={18} /></button>
             <button className="button button-secondary" type="button" onClick={() => onNavigate("/guide/api/")}>API設定ガイド<BookOpen size={18} /></button>
           </div>
         </section>
         <section className="demo-band">
-          <p className="byok-definition">BYOK（Bring Your Own Key）アプリとは、LLM（Gemini, ChatGPT, Claudeなど）の「自分のAPIキー」を設定して、AIを使う新しいアプリの形です。</p>
+          <p className="byok-definition">BYOK（Bring Your Own Key）アプリとは、LLM（Geminiなど）の「自分のAPIキー」を設定してAIを使う形です。ただし、APIキーをクライアント環境に置く構成にはリスクがあるため、BYOKey Labでは公開形態ごとに扱いを分けます。</p>
           <ByokAppDiagram />
           <div className="section-intro compact-intro">
             <p className="section-kicker">HOW IT WORKS</p>
             <h2 className="steps-heading"><span>選ぶ。</span><span>設定する。</span><span>使い始める。</span></h2>
-            <p>複雑な会員登録や月額プランはありません。好きなAIを選び、APIキーを端末へ設定したら、対応アプリからすぐに使い始められます。</p>
+            <p>複雑な会員登録や月額プランはありません。PWA版ではGeminiを対象に、利用者がAPIキーのリスクを理解し同意したうえで使い始めます。</p>
           </div>
           <ByokeyFlow />
         </section>
@@ -301,8 +307,8 @@ function HomePage({ onNavigate }) {
             <article>
               <div className="principle-icon local"><Smartphone size={23} /></div>
               <h3>ユーザー</h3>
-              <p>アカウント登録は不要。APIキー、アプリ設定、会話履歴などは、原則として利用者のAndroid端末内に保存します。買い切りアプリと従量課金APIを組み合わせ、使わない月の自動更新を気にせず利用できます。</p>
-              <ul><li><Check size={17} />APIキーは端末内で暗号化</li><li><Check size={17} />開発者のデータベースへ収集しない</li><li><Check size={17} />月額サブスクリプションなし</li></ul>
+              <p>アカウント登録なしで試せる構成を優先します。PWA版ではAPIキーをBYOKey Labのサーバーへ送らず、PCアプリでは環境変数など利用者本人のローカル実行環境で扱う方針です。</p>
+              <ul><li><Check size={17} />APIキーをBYOKey Labへ預けない</li><li><Check size={17} />専用キーと利用上限の設定を前提にする</li><li><Check size={17} />モバイルアプリ公開は見送る</li></ul>
             </article>
             <article>
               <div className="principle-icon direct"><ExternalLink size={23} /></div>
@@ -311,14 +317,14 @@ function HomePage({ onNavigate }) {
               <ul><li><ChevronRight size={17} />ユーザー情報の複雑な管理を減らす</li><li><ChevronRight size={17} />API従量課金を直接負担しない</li><li><ChevronRight size={17} />同じ仕組みを複数アプリへ展開</li></ul>
             </article>
           </div>
-          <button className="text-link" type="button" onClick={() => onNavigate("/privacy/")}>データの取り扱いを詳しく見る<ArrowRight size={17} /></button>
+          <button className="text-link" type="button" onClick={() => onNavigate("/important/")}>重要事項を詳しく見る<ArrowRight size={17} /></button>
         </section>
         <section className="product-section">
           <div className="product-copy">
             <p className="section-kicker">FIRST PRODUCT</p>
             <h2 className="product-title"><span>BYOKey</span><span>Speak</span><small>for English</small></h2>
             <p>英語が出てこない瞬間も、Quick Assistが日本語の質問から自然な表現を提案。会話の流れを止めません。</p>
-            <div className="inline-meta"><span>Android</span><span>買い切り。月額なし。</span><span>API代だけ。</span></div>
+            <div className="inline-meta"><span>PWA準備中</span><span>Gemini APIのみ</span><span>API代は利用者負担</span></div>
             <button className="button button-dark" type="button" onClick={() => onNavigate("/speak/english/")}>製品ページへ<ArrowRight size={18} /></button>
           </div>
           <QuickAssistCard compact />
@@ -493,7 +499,7 @@ function PricingSimulator() {
               return (
                 <tr className={recommended ? "is-recommended" : ""} key={`${model.provider}-${model.model}`}>
                   {firstOfProvider && <th className={`price-provider price-${model.provider.toLowerCase()}`} scope="rowgroup" rowSpan={providerCount}>{model.provider}</th>}
-                  <th scope="row"><span>{model.model}</span>{recommended && <small className="recommend-label"><Crown size={14} />推奨</small>}{model.quality && <small className="quality-label">品質重視</small>}{model.lifecycle && <small className="lifecycle-label">{model.lifecycle}</small>}{model.review && <small>アプリ対応は審査中</small>}</th>
+                  <th scope="row"><span>{model.model}</span>{recommended && <small className="recommend-label"><Crown size={14} />推奨</small>}{model.quality && <small className="quality-label">品質重視</small>}{model.lifecycle && <small className="lifecycle-label">{model.lifecycle}</small>}{model.review && <small>PWA版は非対応</small>}</th>
                   <td><span>入力 ${model.input}</span><span>出力 ${model.output}</span></td>
                   <td><strong>{recommended && <Crown size={18} aria-hidden="true" />}{formatYen(light.yen)}</strong><small>{formatUsd(light.usd)}</small></td>
                   <td><strong>{recommended && <Crown size={18} aria-hidden="true" />}{formatYen(heavy.yen)}</strong><small>{formatUsd(heavy.usd)}</small></td>
@@ -548,13 +554,13 @@ const faqGroups = [
     title: "セキュリティとプライバシー",
     icon: ShieldCheck,
     items: [
-      ["APIキーはどのように保存されますか？", "Android Keystoreで生成した256bit AES鍵を使い、APIキーをAES-GCMで暗号化して端末内に保存します。暗号鍵自体はKeystore外へ書き出さず、暗号化済みデータのバックアップも無効にします。通信はHTTPSのみを許可します。"],
-      ["暗号化していれば、キーは絶対に漏れませんか？", "いいえ。暗号化は端末内の保存データを読む攻撃には有効ですが、アプリがAPIへ接続するときはキーを復号してメモリ上で使用します。ロック解除済み・root化済み端末、悪意あるアプリ、デバッグや動的解析、OSの脆弱性、プロバイダーアカウントの侵害までは完全に防げません。BYOKはリスクをゼロにする仕組みではなく、運営者のサーバーへキーを預けない設計です。"],
-      ["会話内容はどこへ送信されますか？", "回答に必要な入力、会話履歴、CEFRレベル、Coach Personalities & Skillsは、選択したLLM事業者のAPIへ端末から直接送信されます。BYOKey Labのサーバーやデータベースは経由しません。送信後の保存期間や不正利用監視は各社のAPI規約に従います。"],
-      ["会話はAIの学習に使われますか？", "契約形態で異なります。Googleは有料Gemini APIの入出力を製品改善に使わない一方、無料枠では利用する場合があります。OpenAI APIは明示的にオプトインしない限り学習に使わず、標準では不正利用監視ログを最大30日保持します。Anthropic APIも通常は学習に使わず、標準では入出力を30日以内に削除します。必ず利用時点の各社規約を確認してください。"],
-      ["OpenAIのAPIキーをAndroidアプリに入れてもよいですか？", "OpenAIは公式に、APIキーをモバイルアプリなどのクライアント環境へ配置しないよう案内しています。このためOpenAIへの直接接続は公開版への搭載可否を審査中です。暗号化しても実行時の抽出リスクは残るため、公式方針に反して安全だとは説明しません。"],
-      ["被害額を小さくするには何を設定すべきですか？", "BYOKey Speak専用のプロジェクトとキーを作り、少額のプリペイド残高、低い月間上限、利用通知を設定してください。キーを使い回さず、使用量を定期確認します。不審な利用があれば各社の管理画面で直ちにキーを無効化し、新しいキーへ交換してください。"],
-      ["アプリ運営者は利用状況を収集しますか？", "現行設計では独自ユーザー登録、広告SDK、アクセス解析SDK、クラウド会話履歴を使用しません。ただし、Google Playと選択したLLM事業者は、それぞれの規約に基づき購入情報、技術情報、API利用情報などを処理します。"],
+      ["APIキーはどのように扱われますか？", "PWA版ではGemini APIキーをBYOKey Labのサーバーへ送信しません。利用者のブラウザ内で扱い、保存する場合もブラウザの保存領域に限定します。公開時にはGitHubで実装を確認できる形にします。"],
+      ["PWAならキーは安全ですか？", "いいえ。PWAもブラウザ上で動くクライアント環境です。サーバーへ預けない透明性はありますが、利用者の端末やブラウザが侵害された場合、APIキーの露出リスクは残ります。専用キー、低い上限、利用通知、定期的なキー交換を前提にしてください。"],
+      ["会話内容はどこへ送信されますか？", "回答に必要な入力、会話履歴、CEFRレベル、Coach Personalities & Skillsは、Gemini APIへブラウザから送信されます。BYOKey Labのサーバーやデータベースは経由しません。送信後の保存期間や不正利用監視はGoogleのAPI規約に従います。"],
+      ["会話はAIの学習に使われますか？", "契約形態で異なります。Googleは有料Gemini APIの入出力を製品改善に使わない一方、無料枠では利用する場合があります。必ず利用時点のGoogle公式情報を確認してください。"],
+      ["OpenAIやClaudeには対応しますか？", "本文書の記載時点では対応しません。OpenAIとAnthropicにもブラウザ利用の技術的な導線はありますが、クライアント側APIキーの扱いに追加の注意が必要です。まずはGemini APIのみで、リスク説明、同意、利用上限、透明性を含むBYOK体験を小さく検証します。"],
+      ["被害額を小さくするには何を設定すべきですか？", "BYOKey Labのアプリ専用のプロジェクトとキーを作り、少額のプリペイド残高、低い月間上限、利用通知を設定してください。キーを使い回さず、使用量を定期確認します。不審な利用があれば各社の管理画面で直ちにキーを無効化し、新しいキーへ交換してください。"],
+      ["アプリ運営者は利用状況を収集しますか？", "PWA版では、独自ユーザー登録、広告SDK、クラウド会話履歴を使用しない設計から開始します。ただし、ホスティング事業者とGoogle Gemini APIは、それぞれの規約に基づき技術情報やAPI利用情報などを処理する場合があります。"],
     ],
   },
   {
@@ -576,8 +582,8 @@ const faqGroups = [
     items: [
       ["オフラインでも会話できますか？", "会話履歴や設定は端末内で確認できますが、AIから回答を生成するにはインターネット接続が必要です。"],
       ["日本語を混ぜても大丈夫ですか？", "はい。英語が出てこない部分を日本語で尋ね、Quick Assistで文脈に合う英語を提案できます。入力中の文章を消さずに必要な表現だけを追加します。"],
-      ["機種変更時に履歴やキーは引き継がれますか？", "Settingsの「バックアップ／復元」から、会話履歴、Vocabulary List、進捗、会話分析、APIキー以外の設定を暗号化ファイルとして書き出せます。新しい端末ではそのファイルとパスフレーズで復元し、APIキーだけは安全のため再入力します。"],
-      ["アプリを削除するとデータはどうなりますか？", "端末内にある設定、会話履歴、暗号化済みAPIキーはアンインストールにより削除されます。各LLM事業者側に送信済みのデータは、各社の保持方針に従います。"],
+      ["端末を変えたときに履歴やキーは引き継がれますか？", "PWA版の初期方針では、APIキーを自動同期しません。履歴の保存や移行機能を提供する場合も、APIキーは含めず、新しいブラウザで再入力してもらいます。"],
+      ["ブラウザのデータを削除するとどうなりますか？", "ブラウザに保存された設定、履歴、APIキーは削除されます。Google Gemini APIへ送信済みのデータは、Google側の保持方針に従います。"],
       ["問い合わせ先はどこですか？", `お問い合わせフォーム（${contactFormUrl}）からお願いします。APIキー、プロバイダーの秘密情報、支払い情報は送信しないでください。`],
     ],
   },
@@ -612,15 +618,15 @@ function FaqSection({ onNavigate }) {
       <div className="security-references">
         <strong>セキュリティ記述の根拠</strong>
         <div>
-          <a href="https://developer.android.com/privacy-and-security/keystore" target="_blank" rel="noreferrer">Android Keystore<ExternalLink size={14} /></a>
           <a href="https://help.openai.com/en/articles/5112595-best-practices-for-api-key-safety" target="_blank" rel="noreferrer">OpenAI APIキー安全指針<ExternalLink size={14} /></a>
+          <a href="https://ai.google.dev/gemini-api/docs/api-key?hl=ja" target="_blank" rel="noreferrer">Gemini APIキー<ExternalLink size={14} /></a>
           <a href="https://docs.cloud.google.com/docs/authentication/api-keys-best-practices" target="_blank" rel="noreferrer">Google APIキー安全指針<ExternalLink size={14} /></a>
           <a href="https://ai.google.dev/gemini-api/docs/zdr" target="_blank" rel="noreferrer">Geminiデータ保持<ExternalLink size={14} /></a>
           <a href="https://platform.openai.com/docs/models/default-usage-policies-by-endpoint" target="_blank" rel="noreferrer">OpenAIデータ管理<ExternalLink size={14} /></a>
           <a href="https://privacy.claude.com/en/articles/7996866-how-long-do-you-store-my-organization-s-data" target="_blank" rel="noreferrer">Anthropicデータ保持<ExternalLink size={14} /></a>
         </div>
       </div>
-      <div className="faq-links"><button className="text-link" type="button" onClick={() => onNavigate("/guide/api/")}>API設定ガイドを見る<ArrowRight size={17} /></button><button className="text-link" type="button" onClick={() => onNavigate("/privacy/")}>プライバシーポリシーを見る<ArrowRight size={17} /></button></div>
+      <div className="faq-links"><button className="text-link" type="button" onClick={() => onNavigate("/important/")}>重要事項を見る<ArrowRight size={17} /></button><button className="text-link" type="button" onClick={() => onNavigate("/guide/api/")}>API設定ガイドを見る<ArrowRight size={17} /></button><button className="text-link" type="button" onClick={() => onNavigate("/privacy/")}>プライバシーポリシーを見る<ArrowRight size={17} /></button></div>
     </section>
   );
 }
@@ -637,10 +643,10 @@ function SpeakPage({ onNavigate }) {
             <p className="hero-lead">費用は使った分だけ。</p>
             <p className="hero-copy">英語が出てこないときは、日本語のまま聞く。Quick Assistが自然な表現を提案し、<strong className="underlined-copy">会話の流れを止めません。</strong></p>
             <div className="hero-actions">
-              <button className="button button-primary" type="button" onClick={() => document.getElementById("release")?.scrollIntoView({ behavior: "smooth" })}><Play size={18} fill="currentColor" />Google Playで公開予定</button>
+              <button className="button button-primary" type="button" onClick={() => document.getElementById("release")?.scrollIntoView({ behavior: "smooth" })}><Play size={18} fill="currentColor" />PWA版を準備中</button>
               <button className="button button-secondary" type="button" onClick={() => onNavigate("/guide/api/")}><BookOpen size={18} />API設定ガイド</button>
             </div>
-            <p className="fine-print"><strong>アプリは買い切り！</strong> Gemini / OpenAI / ClaudeのAPI利用料は別途かかります。</p>
+            <p className="fine-print"><strong>PWA版はGemini APIのみ対応予定。</strong> Gemini API利用料はGoogleから直接請求されます。</p>
           </div>
           <ConversationPreview />
         </section>
@@ -673,10 +679,10 @@ function SpeakPage({ onNavigate }) {
         <section className="release-section" id="release">
           <div>
             <p className="section-kicker">RELEASE</p>
-            <h2>Google Play公開に向けて準備中です。</h2>
-            <p>販売価格は500円の買い切り予定です。公開日は、審査準備が整い次第このページでお知らせします。</p>
+            <h2>PWA版の公開に向けて準備中です。</h2>
+            <p>本文書の記載時点では、モバイルアプリ版は公開しません。まずはGemini APIキーで試せるPWAとして、Git公開による透明性と明示同意を前提に提供します。</p>
           </div>
-          <button className="button button-dark" type="button" onClick={() => onNavigate("/guide/api/")}>先にAPIキーの準備方法を見る<ArrowRight size={18} /></button>
+          <button className="button button-dark" type="button" onClick={() => onNavigate("/important/")}>重要事項を見る<ArrowRight size={18} /></button>
         </section>
       </main>
       <Footer onNavigate={onNavigate} />
@@ -724,22 +730,22 @@ function GuidePage({ onNavigate }) {
     <>
       <Header onNavigate={onNavigate} />
       <main className="document-page">
-        <div className="document-header"><p className="section-kicker">API SETUP GUIDE</p><h1>APIキーの準備と接続</h1><p>BYOKey Speakを使うには、対応するLLM事業者でAPIキーを取得します。ChatGPTやClaudeの月額プランとは別の仕組みです。</p></div>
+        <div className="document-header"><p className="section-kicker">API SETUP GUIDE</p><h1>APIキーの準備と接続</h1><p>BYOKey Speak PWA版を使うには、Google AI StudioでGemini APIキーを取得します。ChatGPTやClaudeの月額プランとは別の仕組みです。</p></div>
         <div className="guide-layout">
           <aside className="guide-provider-list" aria-label="プロバイダー選択">
             {providers.map((item) => <button className={provider === item.id ? "is-selected" : ""} type="button" key={item.id} onClick={() => setProvider(item.id)}><span className={`provider-mark provider-${item.id}`}>{item.mark}</span>{item.name}</button>)}
           </aside>
           <section className="guide-content">
-            <div className="guide-callout"><CircleHelp size={21} /><div><strong>月額プランとは別の準備が必要です</strong><p>API利用料は{selectedProvider.name}から直接請求されます。一般向けの有料プランを契約中でも、APIの支払い設定とAPIキーは別途必要です。</p></div></div>
+            <div className="guide-callout"><CircleHelp size={21} /><div><strong>月額プランとは別の準備が必要です</strong><p>API利用料は{selectedProvider.name}から直接請求されます。一般向けの有料プランを契約中でも、APIの支払い設定とAPIキーは別途必要です。なお、BYOKey Speak PWA版の対応APIキーはGeminiのみです。</p></div></div>
             <div className="requirements-block">
               <div className="requirements-title"><Database size={21} /><div><p className="step-label">BEFORE YOU START</p><h2>{selectedProvider.name}で必要なもの</h2></div></div>
               <ul>{selectedGuide.requirements.map((requirement) => <li key={requirement}><CheckCircle2 size={18} />{requirement}</li>)}</ul>
               <p>{selectedGuide.notes}</p>
               <div className="guide-resource-links"><a href={selectedGuide.billingUrl} target="_blank" rel="noreferrer">請求設定の公式説明<ExternalLink size={15} /></a><a href={selectedGuide.pricingUrl} target="_blank" rel="noreferrer">公式料金表<ExternalLink size={15} /></a></div>
             </div>
-            {selectedProvider.clientWarning && <div className="guide-callout provider-warning"><ShieldAlert size={21} /><div><strong>公開版への搭載可否を審査中</strong><p>{selectedProvider.clientWarning}</p></div></div>}
+            {selectedProvider.clientWarning && <div className="guide-callout provider-warning"><ShieldAlert size={21} /><div><strong>PWA版では非対応</strong><p>{selectedProvider.clientWarning}</p></div></div>}
             <ol className="guide-steps">
-              {selectedGuide.steps.map((step, index) => <li key={step}><span>{index + 1}</span><div><h2>{step}</h2>{index === 0 && <a className="official-link" href={selectedProvider.guideUrl} target="_blank" rel="noreferrer">APIキーの公式ガイドを開く<ExternalLink size={16} /></a>}{index === selectedGuide.steps.length - 1 && <p>APIキーはメール、チャット、問い合わせフォームへ送らず、BYOKey Speakの設定画面にだけ入力してください。</p>}</div></li>)}
+              {selectedGuide.steps.map((step, index) => <li key={step}><span>{index + 1}</span><div><h2>{step}</h2>{index === 0 && <a className="official-link" href={selectedProvider.guideUrl} target="_blank" rel="noreferrer">APIキーの公式ガイドを開く<ExternalLink size={16} /></a>}{index === selectedGuide.steps.length - 1 && <p>APIキーはメール、チャット、問い合わせフォームへ送らず、BYOKey Speakの入力画面にだけ入力してください。OpenAIとClaudeのガイドは参考資料であり、PWA版の対応予定ではありません。</p>}</div></li>)}
             </ol>
             <ProviderPdfGuide provider={selectedProvider} guide={selectedGuide} />
             <div className="guide-callout warning"><ShieldCheck size={21} /><div><strong>事前に利用料の上限を設定してください。</strong><p>月間上限、利用通知を設定してください。BYOKey Labがサポート対応でAPIキーの送信を求めることはありません。</p></div></div>
@@ -751,27 +757,97 @@ function GuidePage({ onNavigate }) {
   );
 }
 
+function ImportantPage({ onNavigate }) {
+  return (
+    <>
+      <Header onNavigate={onNavigate} />
+      <main className="document-page important-page">
+        <div className="document-header">
+          <p className="section-kicker">IMPORTANT MATTERS</p>
+          <h1>重要事項</h1>
+          <p>BYOKey LabにおけるAPIキーの扱い、公開形態、対応プロダクトの判断基準です。APIキーは利用者の費用と権限に直結するため、技術的に実装できることと、公式に推奨される構成を分けて説明します。</p>
+          <small>最終更新: 2026年8月11日</small>
+        </div>
+        <div className="important-summary" aria-label="BYOKey Labの公開方針">
+          <article>
+            <ShieldAlert size={24} />
+            <strong>モバイルアプリ</strong>
+            <span>本文書の記載時点では公開しません。</span>
+          </article>
+          <article>
+            <ExternalLink size={24} />
+            <strong>PWA</strong>
+            <span>Gemini APIのみ対応し、Git公開と明示同意を前提に検証します。</span>
+          </article>
+          <article>
+            <LockKeyhole size={24} />
+            <strong>PCアプリ</strong>
+            <span>環境変数などのローカル実行環境でAPIキーを扱います。</span>
+          </article>
+        </div>
+        <article className="policy-body">
+          <h2>1. 基本方針</h2>
+          <p>BYOKey Labは、利用者自身が取得したLLM APIキーを使うBYOK型のAIツールを扱います。APIキーは利用者のプロバイダーアカウント、利用上限、請求に紐づく重要な認証情報です。そのため、BYOKey LabがAPIキーを預かる構成、問い合わせやサポートでAPIキーの送信を求める構成、ログや公開リポジトリにAPIキーが残る構成は採用しません。</p>
+          <p>本ページは、法的助言ではありません。各LLMプロバイダーの仕様、規約、セキュリティガイドラインは変更される可能性があるため、公開時点および主要アップデート時点で公式情報を確認します。</p>
+
+          <h2>2. モバイルアプリの公開方針</h2>
+          <p>モバイルアプリにAPIキーを配置する構成は、各社のセキュリティガイドライン上、暗号化して保存する場合でも推奨されにくいクライアント側の構成です。暗号化は保存データの偶発的な露出を減らしますが、アプリがAPIへ接続する時点ではキーを実行環境で使用するため、侵害端末、root化端末、動的解析、悪意あるアプリなどのリスクを完全には排除できません。</p>
+          <p>また、配布済みモバイルアプリは、利用者から見て内部処理の透明性を確認しにくい面があります。BYOKey Labは、この透明性の不足を課題と判断し、本文書の記載時点では、APIキーをアプリ内に配置するモバイルアプリを公開しません。</p>
+
+          <h2>3. PWAの公開方針</h2>
+          <p>PWAもブラウザ上で動作するクライアント環境であり、APIキーの露出リスクがなくなるわけではありません。一方で、実装をGitHubなどで公開することで「APIキーをBYOKey Labのサーバーへ送っていない」ことを確認しやすい構成にできます。</p>
+          <p>Gemini APIについても、本番のWeb/モバイルクライアントでAPIキーを露出させる構成が推奨されるわけではありません。GoogleのAPIキー安全指針では、APIキーを秘密情報として扱うこと、必要に応じてバックエンドを使うこと、利用制限や請求通知を設定することが案内されています。したがって、BYOKey LabではPWAを「リスクがない構成」とは説明しません。</p>
+          <p>一方で、GeminiはGoogle AI StudioでAPIキー作成、請求、利用状況、上限管理を確認しやすく、BYOKの基本体験を小さく検証する初期対象として扱いやすいと判断しています。BYOKey Labでは、ユーザーの明示同意、専用APIキー、利用上限、利用通知、Git公開による透明性を前提に、まずGemini APIのみ対応のPWAを公開する方針とします。</p>
+
+          <h2>4. OpenAI APIおよびAnthropic APIについて</h2>
+          <p>OpenAIとAnthropicのJavaScript/TypeScript SDKにも、ブラウザからの利用を明示的に許可するための設定があります。ただし、いずれもクライアント側で秘密のAPIキーが露出する危険性を避けるため、通常は無効化または注意付きの扱いになっています。</p>
+          <p>BYOKey Labでは、初期のPWA版においてOpenAI APIキーおよびAnthropic APIキーには対応しません。Gemini APIだけでBYOKの基本体験を検証できるため、対応範囲を広げる前に、実装の単純さと検証範囲の管理を優先します。</p>
+
+          <h2>5. PCアプリの公開方針</h2>
+          <p>PCアプリについては、利用者本人のローカル実行環境でAPIキーを環境変数やローカル設定ファイルとして管理する構成を採用できます。この方式は、APIキーをソースコードへ埋め込まず、公開リポジトリへコミットせず、利用者自身のOS環境で扱うものです。</p>
+          <p>そのため、BYOKey Labでは、PCアプリを公開可能な構成として整理します。PCアプリでもAPIキーの漏えいリスクがゼロになるわけではありませんが、モバイルアプリやブラウザアプリのような配布クライアントへキーを直接組み込む構成とは区別して扱います。</p>
+
+          <h2>6. 利用者にお願いすること</h2>
+          <p>BYOK構成を使う場合は、BYOKey Labのアプリ専用のAPIキーを作成してください。メインプロジェクトや他サービスと同じキーを使い回さないでください。月間上限、利用通知、必要に応じた課金上限を設定し、利用状況を定期的に確認してください。漏えいが疑われる場合は、発行元で直ちにキーを無効化し、新しいキーへ交換してください。</p>
+          <p>APIキー、プロバイダーの秘密情報、支払い情報を、問い合わせフォーム、メール、チャット、SNSへ送信しないでください。BYOKey Labがこれらの情報を求めることはありません。</p>
+
+          <h2>7. 参照する公式情報</h2>
+          <p>APIキーの扱いは、次の公式情報を確認対象とします。最新の内容が本ページと異なる場合は、公式情報を優先して方針を見直します。</p>
+          <ul className="source-list">
+            <li><a href="https://help.openai.com/en/articles/5112595-best-practices-for-api-key-safety" target="_blank" rel="noreferrer">OpenAI APIキー安全指針<ExternalLink size={14} /></a></li>
+            <li><a href="https://github.com/openai/openai-node#requirements" target="_blank" rel="noreferrer">OpenAI JavaScript/TypeScript SDK<ExternalLink size={14} /></a></li>
+            <li><a href="https://github.com/anthropics/anthropic-sdk-typescript#requirements" target="_blank" rel="noreferrer">Anthropic TypeScript SDK<ExternalLink size={14} /></a></li>
+            <li><a href="https://ai.google.dev/gemini-api/docs/api-key?hl=ja" target="_blank" rel="noreferrer">Gemini APIキーの公式説明<ExternalLink size={14} /></a></li>
+            <li><a href="https://docs.cloud.google.com/docs/authentication/api-keys-best-practices" target="_blank" rel="noreferrer">Google APIキー安全指針<ExternalLink size={14} /></a></li>
+          </ul>
+        </article>
+      </main>
+      <Footer onNavigate={onNavigate} />
+    </>
+  );
+}
+
 function PrivacyPage({ onNavigate }) {
   return (
     <>
       <Header onNavigate={onNavigate} />
       <main className="document-page privacy-page">
-        <div className="document-header"><p className="section-kicker">PRIVACY</p><h1>プライバシーポリシー</h1><p>BYOKey Speak for Englishにおけるデータの取り扱い方針です。</p><small>最終更新: 2026年7月27日</small></div>
+        <div className="document-header"><p className="section-kicker">PRIVACY</p><h1>プライバシーポリシー</h1><p>BYOKey Speak for English PWA版におけるデータの取り扱い方針です。</p><small>最終更新: 2026年8月10日</small></div>
         <div className="policy-summary">
-          <div><LockKeyhole size={22} /><strong>APIキー</strong><span>端末内で暗号化して保存</span></div>
-          <div><Smartphone size={22} /><strong>会話と設定</strong><span>原則として端末内に保存</span></div>
-          <div><ExternalLink size={22} /><strong>回答生成</strong><span>選択したLLM事業者へ直接送信</span></div>
+          <div><LockKeyhole size={22} /><strong>APIキー</strong><span>BYOKey Labのサーバーへ送信しません</span></div>
+          <div><Smartphone size={22} /><strong>会話と設定</strong><span>原則としてブラウザ内に保存</span></div>
+          <div><ExternalLink size={22} /><strong>回答生成</strong><span>Gemini APIへ直接送信</span></div>
         </div>
         <article className="policy-body">
-          <h2>1. 対象</h2><p>本ポリシーは、BYOKey Labが提供するAndroidアプリ「BYOKey Speak for English」に適用されます。</p>
-          <h2>2. アプリ内で扱う情報</h2><p>APIキー、会話内容、コーチ設定、CEFRレベル、学習メモ、Vocabulary List、会話分析などを扱います。これらは原則として利用者の端末内に保存されます。</p>
-          <h2>3. APIキー</h2><p>APIキーはAndroid端末内で暗号化して保存します。BYOKey Labが運営するサーバーには送信しません。キーは、利用者が選択したLLMサービスへの認証にのみ利用します。</p>
-          <h2>4. 外部LLMサービスへの送信</h2><p>回答を生成するため、入力した文章、必要な会話履歴、CEFRレベル、コーチ設定を、選択したGoogle Gemini API、OpenAI API、またはAnthropic Claude APIへ直接送信します。送信情報の取り扱いは各社の規約とプライバシーポリシーに従います。</p>
-          <h2>5. AI返信の報告</h2><p>利用者がアプリ内の報告機能を操作した場合に限り、対象のAI返信、報告理由、任意の補足、利用者が明示的に選んだ場合は直前の利用者発言をBYOKey Labへ送信します。APIキー、端末識別子、メールアドレスは自動送信しません。報告データは確認と品質改善のために使用し、受付から90日以内に削除します。受付先の設定が完了するまでは、報告内容を端末のクリップボードへコピーし、お問い合わせフォームを開きます。</p>
-          <h2>6. BYOKey Labによる収集</h2><p>現行版では、独自のユーザー登録、広告SDK、アクセス解析SDKを使用しません。前項の報告または利用者自身がお問い合わせフォームから送信した情報を除き、BYOKey Labが通常の会話内容を収集することはありません。Google PlayとGoogle Formsは、それぞれの仕組みに基づいて情報を処理する場合があります。</p>
-          <h2>7. バックアップと機種変更</h2><p>利用者は、会話履歴、Vocabulary List、進捗、会話分析、APIキー以外の設定を、パスフレーズで暗号化したファイルとして利用者が選んだ保存先へ書き出せます。APIキー、Android Keystoreの鍵、下書き、ニュースキャッシュはバックアップに含みません。パスフレーズを忘れた場合、BYOKey Labは復元できません。</p>
-          <h2>8. データの削除</h2><p>アプリ内の削除機能、またはアプリのアンインストールにより端末内データを削除できます。APIキーは設定画面から個別に削除できます。</p>
-          <h2>9. セキュリティ</h2><p>APIキーの保護にはAndroid KeystoreとAES-GCM暗号化を使用し、通信はHTTPSに限定します。バックアップファイルはPBKDF2-HMAC-SHA256で導出した鍵とAES-256-GCMで暗号化します。ただし、端末、通信経路、外部サービスを含むすべてのリスクを完全に排除することはできません。</p>
+          <h2>1. 対象</h2><p>本ポリシーは、BYOKey Labが提供予定のPWA「BYOKey Speak for English」に適用されます。本文書の記載時点では、モバイルアプリ版は公開しません。</p>
+          <h2>2. アプリ内で扱う情報</h2><p>Gemini APIキー、会話内容、コーチ設定、CEFRレベル、学習メモ、Vocabulary List、会話分析などを扱います。これらは原則として利用者のブラウザ内に保存されます。</p>
+          <h2>3. APIキー</h2><p>Gemini APIキーは、BYOKey Labが運営するサーバーには送信しません。キーは、Google Gemini APIへの認証にのみ利用します。PWAもクライアント環境であるため、APIキーの露出リスクがなくなるわけではありません。</p>
+          <h2>4. 外部LLMサービスへの送信</h2><p>回答を生成するため、入力した文章、必要な会話履歴、CEFRレベル、コーチ設定をGoogle Gemini APIへブラウザから送信します。送信情報の取り扱いはGoogleの規約とプライバシーポリシーに従います。</p>
+          <h2>5. AI返信の報告</h2><p>報告機能を提供する場合、利用者が明示的に操作したときに限り、対象のAI返信、報告理由、任意の補足、利用者が明示的に選んだ場合は直前の利用者発言をBYOKey Labへ送信します。APIキー、支払い情報、プロバイダーの秘密情報は送信しません。報告データは確認と品質改善のために使用し、受付から90日以内に削除します。</p>
+          <h2>6. BYOKey Labによる収集</h2><p>初期方針では、独自のユーザー登録、広告SDK、クラウド会話履歴を使用しません。前項の報告または利用者自身がお問い合わせフォームから送信した情報を除き、BYOKey Labが通常の会話内容を収集することはありません。ホスティング事業者、Google Gemini API、Google Formsは、それぞれの仕組みに基づいて情報を処理する場合があります。</p>
+          <h2>7. バックアップと端末変更</h2><p>履歴や設定のエクスポート機能を提供する場合でも、APIキーはバックアップに含めません。新しい端末やブラウザでは、Gemini APIキーを再入力してください。</p>
+          <h2>8. データの削除</h2><p>ブラウザの保存データを削除すると、ブラウザ内に保存された設定、会話履歴、APIキーは削除されます。Google Gemini APIへ送信済みのデータは、Google側の保持方針に従います。</p>
+          <h2>9. セキュリティ</h2><p>通信はHTTPSに限定し、APIキーをBYOKey Labのサーバーへ送信しない構成を採用します。ただし、端末、ブラウザ、通信経路、外部サービスを含むすべてのリスクを完全に排除することはできません。</p>
           <h2>10. お問い合わせ</h2><p>お問い合わせは <a href={contactFormUrl} target="_blank" rel="noreferrer">お問い合わせフォーム</a> からお願いします。APIキー、プロバイダーの秘密情報、支払い情報は送信しないでください。</p>
         </article>
       </main>
@@ -785,18 +861,18 @@ function TermsPage({ onNavigate }) {
     <>
       <Header onNavigate={onNavigate} />
       <main className="document-page">
-        <div className="document-header"><p className="section-kicker">TERMS</p><h1>利用規約</h1><p>BYOKey Speak for Englishの利用条件です。</p><small>施行日: 2026年7月27日</small></div>
+        <div className="document-header"><p className="section-kicker">TERMS</p><h1>利用規約</h1><p>BYOKey Speak for English PWA版の利用条件です。</p><small>施行日: 2026年8月10日</small></div>
         <article className="policy-body">
-          <h2>1. 適用</h2><p>本規約は、BYOKey Labが提供するAndroidアプリ「BYOKey Speak for English」の利用に適用されます。利用者は、本規約とプライバシーポリシーを確認したうえで本アプリを利用します。</p>
-          <h2>2. 本アプリの仕組み</h2><p>本アプリは、利用者自身が取得したGoogle Gemini API、OpenAI API、またはAnthropic Claude APIのキーを使用して英会話機能を提供します。利用できるモデル、料金、利用上限、生成結果は各LLM事業者の仕様に依存します。</p>
-          <h2>3. 料金</h2><p>本アプリの購入代金と、各LLM事業者が請求するAPI利用料は別です。API利用料は利用者とLLM事業者との間で発生し、BYOKey Labは請求、返金、利用上限の設定を代行しません。利用者は各社の管理画面で予算上限と通知を設定してください。</p>
+          <h2>1. 適用</h2><p>本規約は、BYOKey Labが提供予定のPWA「BYOKey Speak for English」の利用に適用されます。利用者は、本規約、プライバシーポリシー、重要事項を確認したうえで本アプリを利用します。</p>
+          <h2>2. 本アプリの仕組み</h2><p>本アプリは、利用者自身が取得したGoogle Gemini APIキーを使用して英会話機能を提供します。利用できるモデル、料金、利用上限、生成結果はGoogle Gemini APIの仕様に依存します。本文書の記載時点では、OpenAI APIキーおよびAnthropic APIキーには対応しません。</p>
+          <h2>3. 料金</h2><p>本アプリの提供条件と、Googleが請求するAPI利用料は別です。API利用料は利用者とGoogleとの間で発生し、BYOKey Labは請求、返金、利用上限の設定を代行しません。利用者はGoogle AI Studioまたは関連する管理画面で予算上限と通知を設定してください。</p>
           <h2>4. APIキー</h2><p>利用者はAPIキーを第三者へ共有せず、安全に管理するものとします。BYOKey Labがサポート、返金、調査を理由にAPIキーの送信を求めることはありません。APIキーの漏えいが疑われる場合は、発行元で直ちに無効化してください。</p>
           <h2>5. AI生成内容</h2><p>AIの回答は正確性、完全性、安全性を保証するものではありません。医療、法律、金融、安全、その他重要な判断では、一次情報と適切な専門家を確認してください。不適切なAI返信は、アプリ内の旗アイコンから報告できます。</p>
           <h2>6. 禁止事項</h2><p>法令または各LLM事業者の規約に違反する利用、第三者の権利を侵害する利用、サービスや他の利用者へ不正な負荷を与える行為、APIキーや審査用情報の不正取得、本アプリの安全機能を回避する行為を禁止します。</p>
-          <h2>7. データとバックアップ</h2><p>会話や学習データは原則として端末内に保存されます。利用者は暗号化バックアップを作成できますが、パスフレーズと保存ファイルは利用者自身で管理します。APIキーはバックアップに含まれません。</p>
+          <h2>7. データとバックアップ</h2><p>会話や学習データは原則として利用者のブラウザ内に保存されます。エクスポート機能を提供する場合でも、APIキーはバックアップに含めません。</p>
           <h2>8. 提供の変更と停止</h2><p>外部LLMの仕様変更、法令、保守、セキュリティ上の必要により、本アプリの機能、対応モデル、提供条件を変更または停止する場合があります。重要な変更は、合理的な方法で案内します。</p>
-          <h2>9. 返金と問い合わせ</h2><p>APIキー設定が困難で会話機能を利用できない場合や、アプリの不具合で利用できない場合は、購入後2週間以内に限り、注文番号と理由を添えて<a href={contactFormUrl} target="_blank" rel="noreferrer">お問い合わせフォーム</a>からご連絡ください。返金はGoogle Playの手続き、適用法令、購入状況に基づいて判断します。</p>
-          <h2>10. 責任の範囲</h2><p>BYOKey Labは、適用法令で認められる範囲において、外部LLMの停止、AI回答、API料金、利用者によるAPIキー管理、バックアップファイルまたはパスフレーズの紛失により生じた損害について責任を負いません。</p>
+          <h2>9. 問い合わせ</h2><p>不具合や確認事項がある場合は、<a href={contactFormUrl} target="_blank" rel="noreferrer">お問い合わせフォーム</a>からご連絡ください。APIキー、支払い情報、プロバイダーの秘密情報は送信しないでください。</p>
+          <h2>10. 責任の範囲</h2><p>BYOKey Labは、適用法令で認められる範囲において、外部LLMの停止、AI回答、API料金、利用者によるAPIキー管理、ブラウザ保存データの削除または消失により生じた損害について責任を負いません。</p>
           <h2>11. 規約の変更</h2><p>本規約を変更する場合があります。利用者に重要な影響がある変更では、アプリまたは公式サイトで案内します。</p>
           <h2>12. お問い合わせ</h2><p>本規約に関する連絡は<a href={contactFormUrl} target="_blank" rel="noreferrer">お問い合わせフォーム</a>からお願いします。APIキーや支払い情報は送信しないでください。</p>
         </article>
@@ -811,12 +887,12 @@ function SupportPage({ onNavigate }) {
     <>
       <Header onNavigate={onNavigate} />
       <main className="document-page">
-        <div className="document-header"><p className="section-kicker">SUPPORT</p><h1>お問い合わせ</h1><p>BYOKey Speak for Englishの問い合わせ、返金相談、AI返信の報告に関する案内です。</p></div>
+        <div className="document-header"><p className="section-kicker">SUPPORT</p><h1>お問い合わせ</h1><p>BYOKey Speak for English PWA版の問い合わせ、AI返信の報告に関する案内です。</p></div>
         <article className="policy-body">
           <h2>1. お問い合わせフォーム</h2><p>ご連絡は <a href={contactFormUrl} target="_blank" rel="noreferrer">お問い合わせフォーム</a> からお願いします。APIキー、プロバイダーの秘密情報、支払い情報は送信しないでください。</p>
-          <h2>2. 返金対応について</h2><p>どうしてもAPIキーの設定が難しく会話することができない、アプリの不具合で使用できない、などの場合は、アプリ購入後2週間以内に限り返金対応いたします。お問い合わせフォームより注文番号と理由を添えてご連絡ください。</p>
+          <h2>2. APIキー設定について</h2><p>Gemini APIキーの作成、利用上限、請求設定はGoogle側の管理画面で行います。BYOKey LabはAPIキーの発行、請求、返金、利用上限設定を代行しません。</p>
           <h2>3. 不適切なAI返信の報告</h2><p>AI返信に問題がある場合は、アプリ内の旗アイコンから報告できます。報告機能では、対象のAI返信、報告理由、任意の補足、利用者が明示的に選んだ場合は直前の利用者発言のみを送信します。APIキーは送信しません。</p>
-          <h2>4. 機種変更時のデータ移行</h2><p>Settingsの「バックアップ／復元」から暗号化バックアップを作成し、新しい端末で復元できます。APIキーはバックアップ対象外のため、新しい端末で再入力してください。パスフレーズを忘れた場合、BYOKey Labは復元できません。</p>
+          <h2>4. 端末変更時の注意</h2><p>APIキーを自動同期する設計にはしません。新しい端末やブラウザで使う場合は、Gemini APIキーを再入力してください。</p>
         </article>
       </main>
       <Footer onNavigate={onNavigate} />
@@ -830,7 +906,7 @@ function FinalCta({ onNavigate }) {
 
 function Footer({ onNavigate }) {
   return (
-    <footer><Brand onNavigate={onNavigate} /><div><button type="button" onClick={() => onNavigate("/privacy/")}>プライバシー</button><button type="button" onClick={() => onNavigate("/terms/")}>利用規約</button><button type="button" onClick={() => onNavigate("/support/")}>お問い合わせ</button><button type="button" onClick={() => onNavigate("/guide/api/")}>API設定ガイド</button></div><small>© 2026 BYOKey Lab</small></footer>
+    <footer><Brand onNavigate={onNavigate} /><div><button type="button" onClick={() => onNavigate("/important/")}>重要事項</button><button type="button" onClick={() => onNavigate("/privacy/")}>プライバシー</button><button type="button" onClick={() => onNavigate("/terms/")}>利用規約</button><button type="button" onClick={() => onNavigate("/support/")}>お問い合わせ</button><button type="button" onClick={() => onNavigate("/guide/api/")}>API設定ガイド</button></div><small>© 2026 BYOKey Lab</small></footer>
   );
 }
 
@@ -840,6 +916,7 @@ export function App() {
   useEffect(() => {
     if (path.startsWith("/speak/english")) document.title = "BYOKey Speak for English | BYOKey Lab";
     else if (path.startsWith("/guide/api")) document.title = "API設定ガイド | BYOKey Lab";
+    else if (path.startsWith("/important")) document.title = "重要事項 | BYOKey Lab";
     else if (path.startsWith("/privacy")) document.title = "プライバシーポリシー | BYOKey Lab";
     else if (path.startsWith("/terms")) document.title = "利用規約 | BYOKey Lab";
     else if (path.startsWith("/support")) document.title = "お問い合わせ | BYOKey Lab";
@@ -848,6 +925,7 @@ export function App() {
 
   if (path.startsWith("/speak/english")) return <SpeakPage onNavigate={navigate} />;
   if (path.startsWith("/guide/api")) return <GuidePage onNavigate={navigate} />;
+  if (path.startsWith("/important")) return <ImportantPage onNavigate={navigate} />;
   if (path.startsWith("/privacy")) return <PrivacyPage onNavigate={navigate} />;
   if (path.startsWith("/terms")) return <TermsPage onNavigate={navigate} />;
   if (path.startsWith("/support")) return <SupportPage onNavigate={navigate} />;

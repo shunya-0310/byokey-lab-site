@@ -21,6 +21,13 @@ for (const item of feed.items) {
     assert(typeof item[field] === "string" && item[field].trim(), `${field} is required.`);
     assert(!looksLikeJsonLeak(item[field]), `${field} contains leaked JSON.`);
   }
+  if (item.fallbackKind !== undefined) {
+    assert(
+      ["rss_headline", "source_list"].includes(item.fallbackKind),
+      `Unknown fallbackKind: ${item.fallbackKind}`,
+    );
+    assert(item.fallback === true, "fallbackKind requires fallback: true.");
+  }
   for (const tone of ["friendly", "energetic", "calm", "direct"]) {
     assert(
       typeof item.coachLeads?.[tone] === "string" && item.coachLeads[tone].trim(),
