@@ -26,7 +26,7 @@ html { scroll-behavior: smooth; }
 body { margin: 0; min-width: 320px; min-height: 100vh; background-color: #fbf8ef; background-image: url("./assets/papyrus-texture.png"); background-repeat: repeat; background-size: 768px 512px; color: var(--ink); -webkit-font-smoothing: antialiased; }
 button, input, textarea { font: inherit; }
 button { color: inherit; }
-button:focus-visible, input:focus-visible, textarea:focus-visible { outline: 3px solid rgba(161, 123, 61, .3); outline-offset: 2px; }
+button:focus-visible, input:focus-visible, textarea:focus-visible, a:focus-visible { outline: 3px solid rgba(161, 123, 61, .3); outline-offset: 2px; }
 h1, h2, h3, p { margin-top: 0; }
 h1, h2, h3 { letter-spacing: 0; }
 h1 { font-size: clamp(3.2rem, 7.4vw, 7.1rem); line-height: .92; margin-bottom: 28px; }
@@ -35,12 +35,12 @@ p { line-height: 1.85; }
 
 .site-header { position: sticky; top: 0; z-index: 20; background: rgba(255, 253, 247, .95); border-bottom: 1px solid rgba(161, 123, 61, .32); backdrop-filter: blur(12px); }
 .header-inner { max-width: 1340px; height: 74px; padding: 0 28px; margin: auto; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
-.brand { border: 0; background: transparent; display: inline-flex; align-items: center; gap: 9px; color: var(--gold-dark); font-family: Georgia, "Times New Roman", serif; font-size: 1.3rem; font-weight: 700; cursor: pointer; padding: 4px 0; white-space: nowrap; }
+.brand { border: 0; background: transparent; display: inline-flex; align-items: center; gap: 9px; color: var(--gold-dark); font-family: Georgia, "Times New Roman", serif; font-size: 1.3rem; font-weight: 700; cursor: pointer; padding: 4px 0; white-space: nowrap; text-decoration: none; }
 .brand-mark { width: 34px; height: 38px; display: block; position: relative; overflow: hidden; flex: 0 0 auto; }
 .brand-logo-crop img { position: absolute; width: 116px; max-width: none; left: 50%; top: -37px; transform: translateX(-50%); }
 .nav-links { display: flex; align-items: center; gap: 28px; }
-.nav-links button, footer button, footer a { border: 0; background: transparent; cursor: pointer; padding: 10px 0; font-size: .9rem; font-weight: 700; }
-.nav-links button:hover, .nav-links button.is-active, footer button:hover, footer a:hover { color: var(--gold-dark); }
+.nav-links a, footer button, footer a { border: 0; background: transparent; color: inherit; cursor: pointer; padding: 10px 0; font-size: .9rem; font-weight: 700; text-decoration: none; }
+.nav-links a:hover, .nav-links a.is-active, footer button:hover, footer a:hover { color: var(--gold-dark); }
 .icon-button { width: 38px; height: 38px; display: inline-grid; place-items: center; padding: 0; border: 1px solid var(--line); border-radius: 7px; background: white; cursor: pointer; flex: 0 0 auto; }
 .icon-button:hover { background: var(--soft); }
 .menu-button { display: none; }
@@ -127,7 +127,7 @@ p { line-height: 1.85; }
 .principle-icon { width: 46px; height: 46px; border-radius: 7px; display: grid; place-items: center; }
 .principle-icon.local { color: var(--green); background: var(--mint); }
 .principle-icon.direct { color: var(--red); background: var(--red-soft); }
-.text-link, .reset-link { border: 0; background: transparent; color: var(--green); cursor: pointer; font-weight: 800; display: inline-flex; align-items: center; gap: 8px; padding: 0; }
+.text-link, .reset-link { border: 0; background: transparent; color: var(--green); cursor: pointer; font-weight: 800; display: inline-flex; align-items: center; gap: 8px; padding: 0; text-decoration: none; }
 .principles-section > .text-link { margin-top: 28px; }
 
 .product-section { background: var(--ink); color: white; padding: 90px max(28px, calc((100vw - 1180px) / 2)); display: grid; grid-template-columns: .85fr 1.15fr; align-items: center; gap: 80px; }
@@ -359,7 +359,7 @@ footer small { grid-column: 1 / -1; color: var(--muted); }
   .menu-button { display: grid; }
   .nav-links { display: none; position: absolute; top: 74px; left: 0; right: 0; padding: 18px 28px 28px; background: #fffefa; border-bottom: 1px solid var(--line); align-items: stretch; }
   .nav-links.is-open { display: grid; }
-  .nav-links button { text-align: left; }
+  .nav-links a { text-align: left; }
   .compact-intro, .speak-hero, .coach-section, .product-section, .speak-features { grid-template-columns: 1fr; }
   .setup-demo { grid-template-columns: 1fr; }
   .setup-step { min-height: 0; }

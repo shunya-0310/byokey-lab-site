@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && node scripts/prerender-seo.mjs",
     "preview": "vite preview",
     "news:generate": "node scripts/generate-daily-news.mjs",
     "news:validate": "node scripts/validate-daily-news.mjs"

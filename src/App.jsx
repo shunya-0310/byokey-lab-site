@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import byokeyLabLogo from "./assets/byokey-lab-logo.png";
+import { SPEAK_APP_URL, absoluteUrl, buildJsonLd, getSeoForPath } from "./seo.js";
 import {
   ArrowRight,
   BadgeDollarSign,
@@ -33,7 +34,7 @@ import {
 } from "lucide-react";
 
 const contactFormUrl = "https://docs.google.com/forms/d/e/1FAIpQLSf14ucq_SU36hxEQSsw0W5eBJ1WVp7PYjCaaEHu9GKRWyWQVw/viewform?usp=publish-editor";
-const speakAppUrl = "https://speak.byokey-lab.com/";
+const speakAppUrl = SPEAK_APP_URL;
 
 const providers = [
   {
@@ -185,12 +186,72 @@ function usePath() {
   return [path, navigate];
 }
 
+function setMetaAttribute(attribute, key, content) {
+  let element = document.head.querySelector(`meta[${attribute}="${key}"]`);
+  if (!element) {
+    element = document.createElement("meta");
+    element.setAttribute(attribute, key);
+    document.head.appendChild(element);
+  }
+  element.setAttribute("content", content);
+}
+
+function updateSeo(path) {
+  const route = getSeoForPath(path);
+  const canonicalUrl = absoluteUrl(route.path);
+
+  document.title = route.title;
+  setMetaAttribute("name", "description", route.description);
+  setMetaAttribute("property", "og:site_name", "BYOKey Lab");
+  setMetaAttribute("property", "og:type", "website");
+  setMetaAttribute("property", "og:locale", "ja_JP");
+  setMetaAttribute("property", "og:title", route.title);
+  setMetaAttribute("property", "og:description", route.description);
+  setMetaAttribute("property", "og:url", canonicalUrl);
+  setMetaAttribute("property", "og:image", `${absoluteUrl("/")}images/byok-app-diagram.png`);
+  setMetaAttribute("name", "twitter:card", "summary_large_image");
+  setMetaAttribute("name", "twitter:title", route.title);
+  setMetaAttribute("name", "twitter:description", route.description);
+  setMetaAttribute("name", "twitter:image", `${absoluteUrl("/")}images/byok-app-diagram.png`);
+
+  let canonical = document.head.querySelector('link[rel="canonical"]');
+  if (!canonical) {
+    canonical = document.createElement("link");
+    canonical.setAttribute("rel", "canonical");
+    document.head.appendChild(canonical);
+  }
+  canonical.setAttribute("href", canonicalUrl);
+
+  let structuredData = document.head.querySelector('script[type="application/ld+json"][data-byokey-seo="true"]');
+  if (!structuredData) {
+    structuredData = document.createElement("script");
+    structuredData.setAttribute("type", "application/ld+json");
+    structuredData.setAttribute("data-byokey-seo", "true");
+    document.head.appendChild(structuredData);
+  }
+  structuredData.textContent = JSON.stringify(buildJsonLd(route));
+}
+
+function InternalLink({ to, onNavigate, children, ...props }) {
+  const handleClick = (event) => {
+    if (event.defaultPrevented || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey || event.button !== 0) return;
+    event.preventDefault();
+    onNavigate(to);
+  };
+
+  return (
+    <a href={to} onClick={handleClick} {...props}>
+      {children}
+    </a>
+  );
+}
+
 function Brand({ onNavigate }) {
   return (
-    <button className="brand" type="button" onClick={() => onNavigate("/")} aria-label="BYOKey Lab ホーム">
+    <InternalLink className="brand" to="/" onNavigate={onNavigate} aria-label="BYOKey Lab ホーム">
       <span className="brand-mark brand-logo-crop" aria-hidden="true"><img src={byokeyLabLogo} alt="" /></span>
       <span>BYOKey Lab</span>
-    </button>
+    </InternalLink>
   );
 }
 
@@ -206,12 +267,12 @@ function Header({ onNavigate, active = "home" }) {
       <div className="header-inner">
         <Brand onNavigate={go} />
         <nav className={open ? "nav-links is-open" : "nav-links"} aria-label="メインナビゲーション">
-          <button type="button" onClick={() => go("/#principles")}>考え方</button>
-          <button className={active === "speak" ? "is-active" : ""} type="button" onClick={() => go("/speak/english/")}>プロダクト</button>
-          <button type="button" onClick={() => go("/important/")}>重要事項</button>
-          <button type="button" onClick={() => go("/privacy/")}>プライバシー</button>
-          <button type="button" onClick={() => go("/speak/english/#faq")}>FAQ</button>
-          <button type="button" onClick={() => go("/guide/api/")}>API設定ガイド</button>
+          <InternalLink to="/#principles" onNavigate={go}>考え方</InternalLink>
+          <InternalLink className={active === "speak" ? "is-active" : ""} to="/speak/english/" onNavigate={go}>プロダクト</InternalLink>
+          <InternalLink to="/important/" onNavigate={go}>重要事項</InternalLink>
+          <InternalLink to="/privacy/" onNavigate={go}>プライバシー</InternalLink>
+          <InternalLink to="/speak/english/#faq" onNavigate={go}>FAQ</InternalLink>
+          <InternalLink to="/guide/api/" onNavigate={go}>API設定ガイド</InternalLink>
         </nav>
         <button className="icon-button menu-button" type="button" onClick={() => setOpen(!open)} aria-label={open ? "メニューを閉じる" : "メニューを開く"}>
           {open ? <X size={22} /> : <Menu size={22} />}
@@ -283,9 +344,9 @@ function HomePage({ onNavigate }) {
           <p className="hero-lead">AIアプリは、もう、<br />定額に縛られない。</p>
           <p className="hero-copy">BYOKey Labは、利用者自身のAPIキーで動く小さなAIツールをつくります。本文書の記載時点では、モバイルアプリではなく、PWAとPCアプリを中心に進めます。PWAとは、ブラウザから使えるWebアプリで、ホーム画面にも追加できる形式です。</p>
           <div className="hero-actions">
-            <button className="button button-primary" type="button" onClick={() => onNavigate("/speak/english/")}>最初のプロダクトを見る<ArrowRight size={18} /></button>
-            <button className="button button-secondary" type="button" onClick={() => onNavigate("/important/")}>重要事項を見る<ShieldAlert size={18} /></button>
-            <button className="button button-secondary" type="button" onClick={() => onNavigate("/guide/api/")}>API設定ガイド<BookOpen size={18} /></button>
+            <InternalLink className="button button-primary" to="/speak/english/" onNavigate={onNavigate}>最初のプロダクトを見る<ArrowRight size={18} /></InternalLink>
+            <InternalLink className="button button-secondary" to="/important/" onNavigate={onNavigate}>重要事項を見る<ShieldAlert size={18} /></InternalLink>
+            <InternalLink className="button button-secondary" to="/guide/api/" onNavigate={onNavigate}>API設定ガイド<BookOpen size={18} /></InternalLink>
           </div>
         </section>
         <section className="demo-band">
@@ -318,7 +379,7 @@ function HomePage({ onNavigate }) {
               <ul><li><ChevronRight size={17} />ユーザー情報の複雑な管理を減らす</li><li><ChevronRight size={17} />API従量課金を直接負担しない</li><li><ChevronRight size={17} />同じ仕組みを複数アプリへ展開</li></ul>
             </article>
           </div>
-          <button className="text-link" type="button" onClick={() => onNavigate("/important/")}>重要事項を詳しく見る<ArrowRight size={17} /></button>
+          <InternalLink className="text-link" to="/important/" onNavigate={onNavigate}>重要事項を詳しく見る<ArrowRight size={17} /></InternalLink>
         </section>
         <section className="product-section">
           <div className="product-copy">
@@ -326,7 +387,7 @@ function HomePage({ onNavigate }) {
             <h2 className="product-title"><span>BYOKey</span><span>Speak</span><small>for English</small></h2>
             <p>英語が出てこない瞬間も、Quick Assistが日本語の質問から自然な表現を提案。会話の流れを止めません。</p>
             <div className="inline-meta"><span>PWA公開中</span><span>Gemini APIのみ</span><span>API代は利用者負担</span></div>
-            <button className="button button-dark" type="button" onClick={() => onNavigate("/speak/english/")}>製品ページへ<ArrowRight size={18} /></button>
+            <InternalLink className="button button-dark" to="/speak/english/" onNavigate={onNavigate}>製品ページへ<ArrowRight size={18} /></InternalLink>
           </div>
           <QuickAssistCard compact />
         </section>
@@ -627,7 +688,7 @@ function FaqSection({ onNavigate }) {
           <a href="https://privacy.claude.com/en/articles/7996866-how-long-do-you-store-my-organization-s-data" target="_blank" rel="noreferrer">Anthropicデータ保持<ExternalLink size={14} /></a>
         </div>
       </div>
-      <div className="faq-links"><button className="text-link" type="button" onClick={() => onNavigate("/important/")}>重要事項を見る<ArrowRight size={17} /></button><button className="text-link" type="button" onClick={() => onNavigate("/guide/api/")}>API設定ガイドを見る<ArrowRight size={17} /></button><button className="text-link" type="button" onClick={() => onNavigate("/privacy/")}>プライバシーポリシーを見る<ArrowRight size={17} /></button></div>
+      <div className="faq-links"><InternalLink className="text-link" to="/important/" onNavigate={onNavigate}>重要事項を見る<ArrowRight size={17} /></InternalLink><InternalLink className="text-link" to="/guide/api/" onNavigate={onNavigate}>API設定ガイドを見る<ArrowRight size={17} /></InternalLink><InternalLink className="text-link" to="/privacy/" onNavigate={onNavigate}>プライバシーポリシーを見る<ArrowRight size={17} /></InternalLink></div>
     </section>
   );
 }
@@ -645,7 +706,7 @@ function SpeakPage({ onNavigate }) {
             <p className="hero-copy">英語が出てこないときは、日本語のまま聞く。Quick Assistが自然な表現を提案し、<strong className="underlined-copy">会話の流れを止めません。</strong></p>
             <div className="hero-actions">
               <a className="button button-primary" href={speakAppUrl} target="_blank" rel="noreferrer"><Play size={18} fill="currentColor" />BYOKey Speakを開く</a>
-              <button className="button button-secondary" type="button" onClick={() => onNavigate("/guide/api/")}><BookOpen size={18} />API設定ガイド</button>
+              <InternalLink className="button button-secondary" to="/guide/api/" onNavigate={onNavigate}><BookOpen size={18} />API設定ガイド</InternalLink>
             </div>
             <p className="fine-print"><strong>PWA版はGemini APIのみ対応。</strong> Gemini API利用料はGoogleから直接請求されます。</p>
           </div>
@@ -693,8 +754,8 @@ function SpeakPage({ onNavigate }) {
           </div>
           <div className="release-actions">
             <a className="button button-dark" href={speakAppUrl} target="_blank" rel="noreferrer">BYOKey Speakを開く<ExternalLink size={18} /></a>
-            <button className="button button-secondary" type="button" onClick={() => onNavigate("/guide/api/")}>API設定ガイド<ArrowRight size={18} /></button>
-            <button className="text-link" type="button" onClick={() => onNavigate("/important/")}>重要事項を見る<ArrowRight size={17} /></button>
+            <InternalLink className="button button-secondary" to="/guide/api/" onNavigate={onNavigate}>API設定ガイド<ArrowRight size={18} /></InternalLink>
+            <InternalLink className="text-link" to="/important/" onNavigate={onNavigate}>重要事項を見る<ArrowRight size={17} /></InternalLink>
           </div>
         </section>
       </main>
@@ -914,12 +975,12 @@ function SupportPage({ onNavigate }) {
 }
 
 function FinalCta({ onNavigate }) {
-  return <section className="final-cta"><h2>鍵は、あなたの手の中に。</h2><button className="button button-primary" type="button" onClick={() => onNavigate("/speak/english/")}>BYOKey Speakを見る<ArrowRight size={18} /></button></section>;
+  return <section className="final-cta"><h2>鍵は、あなたの手の中に。</h2><InternalLink className="button button-primary" to="/speak/english/" onNavigate={onNavigate}>BYOKey Speakを見る<ArrowRight size={18} /></InternalLink></section>;
 }
 
 function Footer({ onNavigate }) {
   return (
-    <footer><Brand onNavigate={onNavigate} /><div><button type="button" onClick={() => onNavigate("/important/")}>重要事項</button><button type="button" onClick={() => onNavigate("/privacy/")}>プライバシー</button><button type="button" onClick={() => onNavigate("/terms/")}>利用規約</button><button type="button" onClick={() => onNavigate("/support/")}>お問い合わせ</button><button type="button" onClick={() => onNavigate("/guide/api/")}>API設定ガイド</button></div><small>© 2026 BYOKey Lab</small></footer>
+    <footer><Brand onNavigate={onNavigate} /><div><InternalLink to="/important/" onNavigate={onNavigate}>重要事項</InternalLink><InternalLink to="/privacy/" onNavigate={onNavigate}>プライバシー</InternalLink><InternalLink to="/terms/" onNavigate={onNavigate}>利用規約</InternalLink><InternalLink to="/support/" onNavigate={onNavigate}>お問い合わせ</InternalLink><InternalLink to="/guide/api/" onNavigate={onNavigate}>API設定ガイド</InternalLink></div><small>© 2026 BYOKey Lab</small></footer>
   );
 }
 
@@ -927,13 +988,7 @@ export function App() {
   const [path, navigate] = usePath();
 
   useEffect(() => {
-    if (path.startsWith("/speak/english")) document.title = "BYOKey Speak for English | BYOKey Lab";
-    else if (path.startsWith("/guide/api")) document.title = "API設定ガイド | BYOKey Lab";
-    else if (path.startsWith("/important")) document.title = "重要事項 | BYOKey Lab";
-    else if (path.startsWith("/privacy")) document.title = "プライバシーポリシー | BYOKey Lab";
-    else if (path.startsWith("/terms")) document.title = "利用規約 | BYOKey Lab";
-    else if (path.startsWith("/support")) document.title = "お問い合わせ | BYOKey Lab";
-    else document.title = "BYOKey Lab";
+    updateSeo(path);
   }, [path]);
 
   if (path.startsWith("/speak/english")) return <SpeakPage onNavigate={navigate} />;
