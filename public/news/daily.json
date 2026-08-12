@@ -1,92 +1,88 @@
 {
   "schemaVersion": 1,
   "status": "live",
-  "date": "2026-08-12",
-  "generatedAt": "2026-08-11T22:05:05.298Z",
+  "date": "2026-08-13",
+  "generatedAt": "2026-08-12T22:02:35.132Z",
   "model": "gemini-3.6-flash",
   "fallbackCategories": [],
   "items": [
     {
-      "id": "2026-08-12-politics_economy",
+      "id": "2026-08-13-politics_economy",
       "category": "politics_economy",
       "categoryLabel": "Politics & Economy",
-      "headline": "U.S. Treasury Permanently Ends Beneficial Ownership Reporting for American Small Businesses",
-      "summary": "The U.S. Department of the Treasury's Financial Crimes Enforcement Network issued a final rule permanently exempting domestic companies and individuals from reporting beneficial ownership information under the Corporate Transparency Act [2.1.1]. FinCEN also confirmed it will purge previously collected data on U.S. persons while retaining disclosure mandates for foreign entities operating in the country.",
-      "question": "What balance should governments strike between easing administrative burdens for small businesses and preventing financial crime?",
+      "headline": "U.S. Inflation Slows to 3.4% in July as Gas Prices Decline",
+      "summary": "Official economic data released on Wednesday shows that U.S. annual inflation slowed for a second consecutive month to 3.4% in July, supported by a 2.9% drop in gasoline costs. The easing consumer price index provides relief for households and could reduce pressure on the Federal Reserve to raise interest rates.",
+      "question": "How do changes in everyday prices impact your personal spending habits and local economy?",
       "coachLeads": {
-        "friendly": "Hey, did you catch the latest update from the U.S. Treasury? It's a major regulatory shift for small business owners that is getting a lot of attention.",
-        "energetic": "Big policy news today! The U.S. government just made a huge change to business rules, and it impacts millions of small companies!",
-        "calm": "There is an interesting regulatory update from the U.S. Treasury today. Let's take a look at what this change means for financial transparency.",
-        "direct": "The U.S. Treasury finalized a rule rolling back ownership disclosure requirements for domestic companies. Here is why this policy move matters."
+        "friendly": "Hey, did you catch the latest update on the U.S. economy? Inflation slowed down again last month, which is encouraging news for everyday consumers.",
+        "energetic": "Check out this fresh economic story! U.S. inflation numbers just came in lower for July, giving markets and shoppers a solid boost!",
+        "calm": "There is some notable economic news today worth looking into. U.S. inflation cooled for the second straight month in July, easing some pressure on central bankers.",
+        "direct": "The U.S. inflation report released today shows price increases slowed to 3.4% in July. Let me know if you want to talk about how this influences global markets."
       },
       "sources": [
         {
-          "title": "treasury.gov",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQExQWlu9uqrviXkekRkpPs_xRd8qvY6TiHO1XvovQ8GtKdo9dK3DMALFmsWMqTu4BIx_QP7BHoeCua-2BwXIOJZeFQNhDfMtkKP2gg4oUzhD3eGy7oxH4ObKeBWrbrPcFbN-ln139vnb8qG"
-        },
-        {
-          "title": "aba.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHi8TRiYyr9m_ADwF4qSUzzOezuzaMuJTPxQIP1p5GvhMYerJ87AhtgaHu0ul2FW7vP6jIWXudkZyk_1xnO_i_H1xLcxK7ieJaIGOGjmwCK9VdFEq9yU_jAI5AGIxxMAu0yDtD5ajXNBGr5JCRUxM-MPw3sWrqVMq9L4Q8X3sxQB1XTW7ongbfDKnMvYOQAjGvdMiqEtZVMtjp6F91J7ITaoXQ="
+          "title": "Google News: Politics & Economy",
+          "url": "https://news.google.com/search?q=Politics%20%26%20Economy%20top%20news%202026-08-13&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     },
     {
-      "id": "2026-08-12-technology",
+      "id": "2026-08-13-technology",
       "category": "technology",
       "categoryLabel": "Technology",
-      "headline": "Rare Total Solar Eclipse Sweeps Across Europe and the Arctic",
-      "summary": "On August 12, 2026, a total solar eclipse is sweeping across Greenland, Iceland, and northern Spain, marking the first total solar eclipse visible in mainland Europe in 27 years. Space agencies including NASA are deploying high-altitude research aircraft and scientific balloons along the path of totality to study the sun's outer atmosphere during the event.",
-      "question": "Have you ever witnessed a solar eclipse, or is there a natural phenomenon you would love to see in person?",
+      "headline": "Total Solar Eclipse Darkens Skies Across Greenland, Iceland, and Spain",
+      "summary": "On August 12, 2026, the year's only total solar eclipse swept across the Northern Hemisphere, plunging parts of Greenland, Iceland, and Spain into daytime darkness. Millions of spectators gathered to watch the rare event while space agencies collected high-altitude data to study the sun's outer atmosphere.",
+      "question": "Would you ever travel to another country just to experience a total solar eclipse in person?",
       "coachLeads": {
-        "friendly": "Hey, have you heard about the total solar eclipse happening today? It's bringing a rare moment of darkness to millions of people across Europe.",
-        "energetic": "This is so exciting—a total solar eclipse is sweeping across Europe right now! Imagine seeing the sky go completely dark in the middle of the afternoon!",
-        "calm": "A rare total solar eclipse is darkening the skies across parts of Europe today. It's a fascinating natural event that scientists have been preparing for years to study.",
-        "direct": "Today, Europe is experiencing its first total solar eclipse in nearly three decades. Let's discuss what makes this event such a big deal for both scientists and skywatchers."
+        "friendly": "Hey, did you catch any news about the total solar eclipse today? Millions of people got to see a truly incredible view!",
+        "energetic": "A total solar eclipse just turned day into night across parts of Europe today! How amazing would it be to watch that live?",
+        "calm": "Today brought a rare astronomical event as a total solar eclipse crossed the Northern Hemisphere. It's a fascinating topic for us to explore together.",
+        "direct": "The only total solar eclipse of 2026 swept across Greenland, Iceland, and Spain today. Let's talk about why this captured global attention."
       },
       "sources": [
         {
           "title": "Google News: Technology",
-          "url": "https://news.google.com/search?q=Technology%20top%20news%202026-08-12&hl=en-US&gl=US&ceid=US:en"
+          "url": "https://news.google.com/search?q=Technology%20top%20news%202026-08-13&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     },
     {
-      "id": "2026-08-12-sports",
+      "id": "2026-08-13-sports",
       "category": "sports",
       "categoryLabel": "Sports",
-      "headline": "Iga Świątek Reaches First WTA 1000 Semifinal of 2026 at Canadian Open",
-      "summary": "Six-time Grand Slam champion Iga Świątek defeated Diana Shnaider 6-2, 6-1 in 68 minutes at the Canadian Open in Toronto. The dominant quarterfinal win advances Świątek to her first WTA 1000 semifinal of the 2026 season as top players build momentum ahead of the US Open.",
-      "question": "How important do you think momentum in warm-up tournaments is for professional tennis players before competing in a Grand Slam?",
+      "headline": "Josh Kushner and Bob Iger Agree to Buy Los Angeles Lakers in Record $12.5 Billion Deal",
+      "summary": "Businessmen Josh Kushner and Bob Iger have reached an agreement to acquire a majority stake in the Los Angeles Lakers at a record valuation of $12.5 billion. The deal makes front-page international sports news as the most expensive team purchase in professional sports history.",
+      "question": "What factors do you think drive such extraordinary multi-billion-dollar price tags for iconic sports franchises today?",
       "coachLeads": {
-        "friendly": "Hey, did you catch Iga Świątek's latest match at the Canadian Open? She put on a dominant performance in Toronto to reach her first WTA 1000 semifinal of the year!",
-        "energetic": "Iga Świątek is finding her top game at just the right time! She completely powered past her opponent in Toronto to lock in a spot in the semifinals!",
-        "calm": "Iga Świątek delivered a very impressive performance at the Canadian Open today. Reaching her first WTA 1000 semifinal of the season is a major step forward for her momentum.",
-        "direct": "Iga Świątek swept Diana Shnaider 6-2, 6-1 to advance to the Canadian Open semifinals. It is her first WTA 1000 semifinal of 2026, and it is a result worth talking about."
+        "friendly": "Hey, have you caught the big news in sports today? The Los Angeles Lakers are being sold in a historic deal!",
+        "energetic": "You won't believe these giant headline numbers today! The Los Angeles Lakers just set a world record with a twelve point five billion dollar team sale!",
+        "calm": "This is a major sports story worth taking a moment to look at. The Los Angeles Lakers have agreed to a landmark ownership change.",
+        "direct": "The Los Angeles Lakers are changing hands in an unprecedented twelve point five billion dollar agreement. Let's talk about why this deal is making headlines everywhere."
       },
       "sources": [
         {
           "title": "Google News: Sports",
-          "url": "https://news.google.com/search?q=Sports%20top%20news%202026-08-12&hl=en-US&gl=US&ceid=US:en"
+          "url": "https://news.google.com/search?q=Sports%20top%20news%202026-08-13&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     },
     {
-      "id": "2026-08-12-entertainment",
+      "id": "2026-08-13-entertainment",
       "category": "entertainment",
       "categoryLabel": "Entertainment",
-      "headline": "Brad Pitt Suggests AI Could Help Save Mid-Budget Hollywood Films",
-      "summary": "In a newly released cover story for Esquire, Oscar-winning actor Brad Pitt stated that artificial intelligence could help mid-budget movies get produced by lowering visual effects costs [3.1.1]. His comments have stirred widespread industry debate over the practical and creative boundaries of AI in filmmaking.",
-      "question": "Do you think artificial intelligence will ultimately help or harm the movie industry, and why?",
+      "headline": "Netflix Releases First Trailer for Ben Affleck's New Thriller Film 'Animals'",
+      "summary": "Netflix released the debut trailer for 'Animals,' an upcoming thriller film directed by and starring Ben Affleck alongside co-star Kerry Washington [2.1.5]. The newly revealed footage highlights Affleck as a mayoral candidate whose son is kidnapped, pulling his family into a tense web of deception and ransom demands.",
+      "question": "Do you enjoy watching suspenseful thriller movies, and what makes a story like this exciting for you?",
       "coachLeads": {
-        "friendly": "Hey, have you seen what Brad Pitt said about AI in movies recently? I'd love to hear your thoughts on where Hollywood is heading!",
-        "energetic": "Brad Pitt just jumped into the big debate about AI in Hollywood! What do you think about using AI to make mid-budget movies?",
-        "calm": "Brad Pitt recently shared a thoughtful perspective on using artificial intelligence to help produce mid-budget films. It raises some interesting questions about the future of film.",
-        "direct": "Brad Pitt recently argued that AI could help save mid-budget Hollywood movies. Do you agree with his take on AI in cinema?"
+        "friendly": "Hey, have you had a chance to see the new movie trailer for Ben Affleck's upcoming thriller? It looks like a really exciting story worth talking about!",
+        "energetic": "Wow, Netflix just dropped the very first trailer for Ben Affleck's latest film! You have to check this out—it looks super intense!",
+        "calm": "Netflix released the first trailer for Ben Affleck's new movie today. It seems like a very intriguing film to discuss together.",
+        "direct": "Netflix just revealed the first trailer for Ben Affleck's new thriller film. Let's talk about what caught your attention."
       },
       "sources": [
         {
-          "title": "variety.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHqUzlnUmNKllhw2z588uR5tgLvsqvuHpDMGvhKoLnyqHnxVCEfbB-KybAnLkevhquuOjoRYTDzyp1j74DOp0gvhc7pp_sIoBV8V2KS51ISE1fddpuvgLi2KvKtmiYQGzywyZz6scatpSAMoVSUwj3KmmsBS3x9GLZ00Rk1KIvTQUmpmaKVbfSRQRF5b2VbUXmpVKFjvw=="
+          "title": "thewrap.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH0ky3bCzmEFX9ittraj4jF_mM2FEOyhZ8SuW6FjkyhGxQrP14ovHGFIJ5wu3pHViwpWSbuB5y8lhQqj9_oQJwR9W-jeJ-hrFLFVUgias-EyowQEUs4iDhxsY5A7ckeeamHWvgrZLx5pRr4hxnOIxqhG4lDP7oqOSvdNpCdqmPq6Zp8yaHYCFYYUi0MBnfPfWjIXabigQC0FfViUg=="
         }
       ]
     }
