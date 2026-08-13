@@ -1,88 +1,92 @@
 {
   "schemaVersion": 1,
   "status": "live",
-  "date": "2026-08-13",
-  "generatedAt": "2026-08-12T22:02:35.132Z",
+  "date": "2026-08-14",
+  "generatedAt": "2026-08-13T22:03:13.299Z",
   "model": "gemini-3.6-flash",
   "fallbackCategories": [],
   "items": [
     {
-      "id": "2026-08-13-politics_economy",
+      "id": "2026-08-14-politics_economy",
       "category": "politics_economy",
       "categoryLabel": "Politics & Economy",
-      "headline": "U.S. Inflation Slows to 3.4% in July as Gas Prices Decline",
-      "summary": "Official economic data released on Wednesday shows that U.S. annual inflation slowed for a second consecutive month to 3.4% in July, supported by a 2.9% drop in gasoline costs. The easing consumer price index provides relief for households and could reduce pressure on the Federal Reserve to raise interest rates.",
-      "question": "How do changes in everyday prices impact your personal spending habits and local economy?",
+      "headline": "Putin's First Visit to Disputed Kuril Islands Sparks Diplomatic Protest from Japan",
+      "summary": "Russian President Vladimir Putin made his first personal visit to the disputed Kuril Islands on Thursday, touring facilities on Iturup Island following regional naval exercises [2.1.3]. The trip prompted an immediate diplomatic protest from Japan, which claims sovereignty over the territory and considers the visit unacceptable.",
+      "question": "How do you think territorial disputes like this affect long-term diplomatic relations and trade between neighboring countries?",
       "coachLeads": {
-        "friendly": "Hey, did you catch the latest update on the U.S. economy? Inflation slowed down again last month, which is encouraging news for everyday consumers.",
-        "energetic": "Check out this fresh economic story! U.S. inflation numbers just came in lower for July, giving markets and shoppers a solid boost!",
-        "calm": "There is some notable economic news today worth looking into. U.S. inflation cooled for the second straight month in July, easing some pressure on central bankers.",
-        "direct": "The U.S. inflation report released today shows price increases slowed to 3.4% in July. Let me know if you want to talk about how this influences global markets."
+        "friendly": "Hey, have you heard about Vladimir Putin's latest trip to the disputed Kuril Islands? It triggered a major diplomatic response from Japan that's really interesting to talk about.",
+        "energetic": "Check out this major world news story! Russian President Vladimir Putin made his first-ever visit to the disputed Kuril Islands, prompting an instant protest from Japan!",
+        "calm": "A noteworthy diplomatic conflict flared up today after Vladimir Putin visited the disputed Kuril Islands. It is a story worth discussing to understand current geopolitical tensions.",
+        "direct": "Vladimir Putin made his first visit to the disputed Kuril Islands today, drawing a strong protest from Japan. Here is what you need to know about this developing story."
       },
       "sources": [
         {
-          "title": "Google News: Politics & Economy",
-          "url": "https://news.google.com/search?q=Politics%20%26%20Economy%20top%20news%202026-08-13&hl=en-US&gl=US&ceid=US:en"
+          "title": "thehindu.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHoZfKA89nfEeahOD4n-YcCz2mTnCxNvIlVuAHICBpyiJHkY8QXVEDCvTNazvTYEOISb26Lil6SRZLXKif433SDxp8tbTqnyZf2hLwJJHtwFffT9ElsEiaIMX1O4Qr-aDOI42FDFL8QrB2q11FXDp755_lLyH3fD4Bl7eR6CRbQf7b3N_i34CKh2OfG-zGgYOZP0Id__BvdPvWFuL2igvb59RMS5yqrz2jmnfvfL8Sm0xt9nULy9mMnqI2b7CEGBOOi-NaBpcifmouVQJXzw7RQ_Q8HrDI="
+        },
+        {
+          "title": "themoscowtimes.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGjzkns_cLlsDVcxjvE8A9ADjPlrzZ2xhbTAnSeHGaxMj7DP4IZFxsR7WibIKNY8L-R87GYI8yneRsq0-4PpDs4gzwV4-DYb5LwacUxUyDNPJ5tGx-R2ibKApdyYzVL9s7kT0QUwYME3a_7-EjUrsvj7FKleiXQ5brdnqHtgEnndyTX46a3e0KIdSBHvvKLWCPhkvAlIt33_uKcHeWqShLRg0hPNMbQ0bpQMSvYp7pxjqtGqoxd"
         }
       ]
     },
     {
-      "id": "2026-08-13-technology",
+      "id": "2026-08-14-technology",
       "category": "technology",
       "categoryLabel": "Technology",
-      "headline": "Total Solar Eclipse Darkens Skies Across Greenland, Iceland, and Spain",
-      "summary": "On August 12, 2026, the year's only total solar eclipse swept across the Northern Hemisphere, plunging parts of Greenland, Iceland, and Spain into daytime darkness. Millions of spectators gathered to watch the rare event while space agencies collected high-altitude data to study the sun's outer atmosphere.",
-      "question": "Would you ever travel to another country just to experience a total solar eclipse in person?",
+      "headline": "Taiwan Reports Near-Autonomous AI Cyberattack Targeting Government and Infrastructure",
+      "summary": "Taiwan's Ministry of Digital Affairs and cybersecurity researchers disclosed a multi-day cyberattack in which open-source AI agents breached government systems, a nuclear safety agency, and energy providers. The incident marks one of the first publicly documented cases of a near-autonomous AI campaign targeting state infrastructure, raising urgent global concerns about AI-driven threats.",
+      "question": "How do you think governments should balance promoting open-source AI development while preventing its misuse in cyberattacks?",
       "coachLeads": {
-        "friendly": "Hey, did you catch any news about the total solar eclipse today? Millions of people got to see a truly incredible view!",
-        "energetic": "A total solar eclipse just turned day into night across parts of Europe today! How amazing would it be to watch that live?",
-        "calm": "Today brought a rare astronomical event as a total solar eclipse crossed the Northern Hemisphere. It's a fascinating topic for us to explore together.",
-        "direct": "The only total solar eclipse of 2026 swept across Greenland, Iceland, and Spain today. Let's talk about why this captured global attention."
+        "friendly": "Hey, have you heard about the recent cyberattack in Taiwan involving autonomous AI? It's a really fascinating story to talk about.",
+        "energetic": "This is a massive story in tech and security right now! Hackers just used autonomous AI agents to target government systems in Taiwan.",
+        "calm": "There's a significant development in cybersecurity today regarding an AI-assisted attack on Taiwan's infrastructure. It's worth taking a moment to discuss.",
+        "direct": "You should know about this major news: researchers detected one of the first near-autonomous AI cyberattacks targeting government networks."
       },
       "sources": [
         {
           "title": "Google News: Technology",
-          "url": "https://news.google.com/search?q=Technology%20top%20news%202026-08-13&hl=en-US&gl=US&ceid=US:en"
+          "url": "https://news.google.com/search?q=Technology%20top%20news%202026-08-14&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     },
     {
-      "id": "2026-08-13-sports",
+      "id": "2026-08-14-sports",
       "category": "sports",
       "categoryLabel": "Sports",
-      "headline": "Josh Kushner and Bob Iger Agree to Buy Los Angeles Lakers in Record $12.5 Billion Deal",
-      "summary": "Businessmen Josh Kushner and Bob Iger have reached an agreement to acquire a majority stake in the Los Angeles Lakers at a record valuation of $12.5 billion. The deal makes front-page international sports news as the most expensive team purchase in professional sports history.",
-      "question": "What factors do you think drive such extraordinary multi-billion-dollar price tags for iconic sports franchises today?",
+      "headline": "Six Arab Football Federations Back Embattled FIFA President Gianni Infantino",
+      "summary": "Six Arab soccer federations have officially declared their support for FIFA President Gianni Infantino as he faces pressure to resign from several regional governing bodies. The governance crisis follows widespread backlash over a controversial proposal to sell a commercial stake in World Cup rights to private investors.",
+      "question": "How do you think financial investments and commercial deals affect the way major international sports tournaments are managed?",
       "coachLeads": {
-        "friendly": "Hey, have you caught the big news in sports today? The Los Angeles Lakers are being sold in a historic deal!",
-        "energetic": "You won't believe these giant headline numbers today! The Los Angeles Lakers just set a world record with a twelve point five billion dollar team sale!",
-        "calm": "This is a major sports story worth taking a moment to look at. The Los Angeles Lakers have agreed to a landmark ownership change.",
-        "direct": "The Los Angeles Lakers are changing hands in an unprecedented twelve point five billion dollar agreement. Let's talk about why this deal is making headlines everywhere."
+        "friendly": "Hey! Have you been following the big shake-up happening at FIFA recently? Six Arab football federations just stepped up to back Gianni Infantino during a major leadership dispute.",
+        "energetic": "Check this out! International soccer is in the middle of some huge governance drama over a controversial World Cup business proposal.",
+        "calm": "There is a significant story unfolding in international sports governance right now. Six Arab federations have publicly supported FIFA's president as regional bodies debate the future of soccer's leadership.",
+        "direct": "Here is the top international sports story today. FIFA President Gianni Infantino secured backing from six Arab federations following intense pushback against a proposed World Cup commercial deal."
       },
       "sources": [
         {
           "title": "Google News: Sports",
-          "url": "https://news.google.com/search?q=Sports%20top%20news%202026-08-13&hl=en-US&gl=US&ceid=US:en"
+          "url": "https://news.google.com/search?q=Sports%20top%20news%202026-08-14&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     },
     {
-      "id": "2026-08-13-entertainment",
+      "id": "2026-08-14-entertainment",
       "category": "entertainment",
       "categoryLabel": "Entertainment",
-      "headline": "Netflix Releases First Trailer for Ben Affleck's New Thriller Film 'Animals'",
-      "summary": "Netflix released the debut trailer for 'Animals,' an upcoming thriller film directed by and starring Ben Affleck alongside co-star Kerry Washington [2.1.5]. The newly revealed footage highlights Affleck as a mayoral candidate whose son is kidnapped, pulling his family into a tense web of deception and ransom demands.",
-      "question": "Do you enjoy watching suspenseful thriller movies, and what makes a story like this exciting for you?",
+      "headline": "Academy Museum Names Charlize Theron, Colman Domingo, and John Carpenter 2026 Gala Honorees",
+      "summary": "The Academy Museum of Motion Pictures announced on August 13 that Charlize Theron, Colman Domingo, and John Carpenter will be honored at its sixth annual fundraising gala on October 17, 2026. Theron will receive the Icon Award, Carpenter the Luminary Award, and Domingo the Vantage Award in recognition of their major contributions to global cinema.",
+      "question": "Which of these three film icons' work has had the biggest influence on your movie taste?",
       "coachLeads": {
-        "friendly": "Hey, have you had a chance to see the new movie trailer for Ben Affleck's upcoming thriller? It looks like a really exciting story worth talking about!",
-        "energetic": "Wow, Netflix just dropped the very first trailer for Ben Affleck's latest film! You have to check this out—it looks super intense!",
-        "calm": "Netflix released the first trailer for Ben Affleck's new movie today. It seems like a very intriguing film to discuss together.",
-        "direct": "Netflix just revealed the first trailer for Ben Affleck's new thriller film. Let's talk about what caught your attention."
+        "friendly": "Hey, have you heard the big film news today? The Academy Museum just announced the legend-filled lineup for its upcoming annual gala.",
+        "energetic": "This is huge news for movie lovers! Three incredible cinema icons were just named as the top honorees for this year's Academy Museum Gala.",
+        "calm": "Here is an interesting story from the film world today. The Academy Museum has officially revealed who will be celebrated at its major October event.",
+        "direct": "The Academy Museum just named Charlize Theron, Colman Domingo, and John Carpenter as its 2026 gala honorees. Let's talk about their careers."
       },
       "sources": [
         {
-          "title": "thewrap.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH0ky3bCzmEFX9ittraj4jF_mM2FEOyhZ8SuW6FjkyhGxQrP14ovHGFIJ5wu3pHViwpWSbuB5y8lhQqj9_oQJwR9W-jeJ-hrFLFVUgias-EyowQEUs4iDhxsY5A7ckeeamHWvgrZLx5pRr4hxnOIxqhG4lDP7oqOSvdNpCdqmPq6Zp8yaHYCFYYUi0MBnfPfWjIXabigQC0FfViUg=="
+          "title": "Google News: Entertainment",
+          "url": "https://news.google.com/search?q=Entertainment%20top%20news%202026-08-14&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     }
