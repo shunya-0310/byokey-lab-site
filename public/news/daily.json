@@ -1,92 +1,88 @@
 {
   "schemaVersion": 1,
   "status": "live",
-  "date": "2026-08-14",
-  "generatedAt": "2026-08-13T22:03:13.299Z",
+  "date": "2026-08-15",
+  "generatedAt": "2026-08-14T21:41:25.604Z",
   "model": "gemini-3.6-flash",
   "fallbackCategories": [],
   "items": [
     {
-      "id": "2026-08-14-politics_economy",
+      "id": "2026-08-15-politics_economy",
       "category": "politics_economy",
       "categoryLabel": "Politics & Economy",
-      "headline": "Putin's First Visit to Disputed Kuril Islands Sparks Diplomatic Protest from Japan",
-      "summary": "Russian President Vladimir Putin made his first personal visit to the disputed Kuril Islands on Thursday, touring facilities on Iturup Island following regional naval exercises [2.1.3]. The trip prompted an immediate diplomatic protest from Japan, which claims sovereignty over the territory and considers the visit unacceptable.",
-      "question": "How do you think territorial disputes like this affect long-term diplomatic relations and trade between neighboring countries?",
+      "headline": "U.S. Navy Deploys USS George Washington to Relieve Long-Deployed USS Abraham Lincoln",
+      "summary": "The U.S. Navy has dispatched the aircraft carrier USS George Washington to the Middle East to relieve the USS Abraham Lincoln after an extended operational deployment. The carrier swap comes as officials address growing concerns from military families and lawmakers regarding supply shortages and crew morale following more than eight months at sea.",
+      "question": "How should military leadership balance demanding operational commitments with the physical and mental well-being of service members?",
       "coachLeads": {
-        "friendly": "Hey, have you heard about Vladimir Putin's latest trip to the disputed Kuril Islands? It triggered a major diplomatic response from Japan that's really interesting to talk about.",
-        "energetic": "Check out this major world news story! Russian President Vladimir Putin made his first-ever visit to the disputed Kuril Islands, prompting an instant protest from Japan!",
-        "calm": "A noteworthy diplomatic conflict flared up today after Vladimir Putin visited the disputed Kuril Islands. It is a story worth discussing to understand current geopolitical tensions.",
-        "direct": "Vladimir Putin made his first visit to the disputed Kuril Islands today, drawing a strong protest from Japan. Here is what you need to know about this developing story."
+        "friendly": "Hey, have you seen this recent update on U.S. naval deployments? A new aircraft carrier is heading to the Middle East to replace a crew that has been at sea for over eight months.",
+        "energetic": "Here is a major defense story breaking right now! The U.S. Navy is finally sending a replacement carrier to relieve sailors who have been deployed for more than 250 days.",
+        "calm": "This news about global military operations is worth reflecting on. The U.S. Navy is rotating an aircraft carrier out of the Middle East after an extended deployment created severe fatigue and supply issues.",
+        "direct": "Take a look at this global security update. The U.S. Navy is deploying the USS George Washington to relieve the long-deployed USS Abraham Lincoln in the Middle East."
       },
       "sources": [
         {
-          "title": "thehindu.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHoZfKA89nfEeahOD4n-YcCz2mTnCxNvIlVuAHICBpyiJHkY8QXVEDCvTNazvTYEOISb26Lil6SRZLXKif433SDxp8tbTqnyZf2hLwJJHtwFffT9ElsEiaIMX1O4Qr-aDOI42FDFL8QrB2q11FXDp755_lLyH3fD4Bl7eR6CRbQf7b3N_i34CKh2OfG-zGgYOZP0Id__BvdPvWFuL2igvb59RMS5yqrz2jmnfvfL8Sm0xt9nULy9mMnqI2b7CEGBOOi-NaBpcifmouVQJXzw7RQ_Q8HrDI="
-        },
-        {
-          "title": "themoscowtimes.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGjzkns_cLlsDVcxjvE8A9ADjPlrzZ2xhbTAnSeHGaxMj7DP4IZFxsR7WibIKNY8L-R87GYI8yneRsq0-4PpDs4gzwV4-DYb5LwacUxUyDNPJ5tGx-R2ibKApdyYzVL9s7kT0QUwYME3a_7-EjUrsvj7FKleiXQ5brdnqHtgEnndyTX46a3e0KIdSBHvvKLWCPhkvAlIt33_uKcHeWqShLRg0hPNMbQ0bpQMSvYp7pxjqtGqoxd"
+          "title": "Google News: Politics & Economy",
+          "url": "https://news.google.com/search?q=Politics%20%26%20Economy%20top%20news%202026-08-15&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     },
     {
-      "id": "2026-08-14-technology",
+      "id": "2026-08-15-technology",
       "category": "technology",
       "categoryLabel": "Technology",
-      "headline": "Taiwan Reports Near-Autonomous AI Cyberattack Targeting Government and Infrastructure",
-      "summary": "Taiwan's Ministry of Digital Affairs and cybersecurity researchers disclosed a multi-day cyberattack in which open-source AI agents breached government systems, a nuclear safety agency, and energy providers. The incident marks one of the first publicly documented cases of a near-autonomous AI campaign targeting state infrastructure, raising urgent global concerns about AI-driven threats.",
-      "question": "How do you think governments should balance promoting open-source AI development while preventing its misuse in cyberattacks?",
+      "headline": "James Webb Space Telescope Detects Water Near Milky Way's Supermassive Black Hole",
+      "summary": "Astronomers using the James Webb Space Telescope have discovered water vapor and cosmic dust surrounding a star located just 0.55 light-years from Sagittarius A*, the supermassive black hole at the center of the Milky Way [1.2.7]. The discovery challenges previous assumptions that intense radiation near black holes destroys water, offering new insight into how chemical building blocks survive in extreme galactic environments.",
+      "question": "How do you think discoveries like finding water in extreme space environments change our understanding of the universe?",
       "coachLeads": {
-        "friendly": "Hey, have you heard about the recent cyberattack in Taiwan involving autonomous AI? It's a really fascinating story to talk about.",
-        "energetic": "This is a massive story in tech and security right now! Hackers just used autonomous AI agents to target government systems in Taiwan.",
-        "calm": "There's a significant development in cybersecurity today regarding an AI-assisted attack on Taiwan's infrastructure. It's worth taking a moment to discuss.",
-        "direct": "You should know about this major news: researchers detected one of the first near-autonomous AI cyberattacks targeting government networks."
+        "friendly": "Hey, check out this incredible new space story! Scientists just found water much closer to a giant black hole than anyone thought possible.",
+        "energetic": "You're not going to believe what the James Webb Space Telescope just spotted! Astronomers found actual water right near the supermassive black hole at the center of our galaxy!",
+        "calm": "Here is an intriguing science update from space today. Researchers using the James Webb Telescope detected water vapor in a surprisingly harsh environment near our galaxy's core.",
+        "direct": "This space breakthrough is definitely worth discussing. The James Webb Telescope just found water surviving right next to a supermassive black hole."
       },
       "sources": [
         {
-          "title": "Google News: Technology",
-          "url": "https://news.google.com/search?q=Technology%20top%20news%202026-08-14&hl=en-US&gl=US&ceid=US:en"
+          "title": "space.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGZY7PaZf6hgoqaDrs2RoI2mJ1FRVWD2tIn9v5vygVqNAMy0acxueke4iSeOI59cLNbBi56jY4g0085rt0XL5TKfGyv87mqvOzIu7niePiCkErGy0lKQ7EUEnbpo8_7533cUfyxvMCq8KfjuVtToxgU5SoJTYnd9nk9a56VpZspfy-DpCClPH3KqDS-f-IaJK_nj0jIdwGSo0cQ7r50J1BEMRs_O0jN8xAqebMShlcKn27_1wj_vDbWNWer6euXWQMgevbBkdg7ctGhP8f39qfe9MZwQFZPOVURyDiTw3_o3h4="
         }
       ]
     },
     {
-      "id": "2026-08-14-sports",
+      "id": "2026-08-15-sports",
       "category": "sports",
       "categoryLabel": "Sports",
-      "headline": "Six Arab Football Federations Back Embattled FIFA President Gianni Infantino",
-      "summary": "Six Arab soccer federations have officially declared their support for FIFA President Gianni Infantino as he faces pressure to resign from several regional governing bodies. The governance crisis follows widespread backlash over a controversial proposal to sell a commercial stake in World Cup rights to private investors.",
-      "question": "How do you think financial investments and commercial deals affect the way major international sports tournaments are managed?",
+      "headline": "Venus Williams Falls in Cincinnati Open First Round as Singles Streak Reaches 13 Losses",
+      "summary": "Seven-time Grand Slam champion Venus Williams was defeated 6-2, 6-2 by Colombian qualifier Emiliana Arango in the first round of the Cincinnati Open on August 14 [1.3.2]. The result extends the 46-year-old tennis icon's singles losing streak to 13 matches as she competed at the WTA 1000 tournament via a wild-card entry.",
+      "question": "How long do you think legendary athletes should continue competing at the highest level when victories become rare?",
       "coachLeads": {
-        "friendly": "Hey! Have you been following the big shake-up happening at FIFA recently? Six Arab football federations just stepped up to back Gianni Infantino during a major leadership dispute.",
-        "energetic": "Check this out! International soccer is in the middle of some huge governance drama over a controversial World Cup business proposal.",
-        "calm": "There is a significant story unfolding in international sports governance right now. Six Arab federations have publicly supported FIFA's president as regional bodies debate the future of soccer's leadership.",
-        "direct": "Here is the top international sports story today. FIFA President Gianni Infantino secured backing from six Arab federations following intense pushback against a proposed World Cup commercial deal."
+        "friendly": "Hey, did you catch the latest tennis results from Cincinnati today? There's a really interesting story about Venus Williams that's worth chatting about.",
+        "energetic": "Check this out—tennis icon Venus Williams was back on court in Cincinnati today! It's a huge talking point about endurance in pro sports, so let me know what you think!",
+        "calm": "Venus Williams made headlines today following her opening match at the Cincinnati Open. It brings up a thoughtful conversation about perseverance and legacy in elite sports.",
+        "direct": "Venus Williams lost her opening-round match at the Cincinnati Open today, extending her singles losing streak to 13 matches. Let's talk about her choice to keep playing at age 46."
       },
       "sources": [
         {
-          "title": "Google News: Sports",
-          "url": "https://news.google.com/search?q=Sports%20top%20news%202026-08-14&hl=en-US&gl=US&ceid=US:en"
+          "title": "foxsports.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG9w7zHFnj8M3_lblvQfXZw9xNhT42Uk0nqCY3qvjTJ2ne-5__OoA8CJPny4HkoTrpghuRMWByuouhpnv9jkeWhi-LCbVWLpThggFZeDkXVI2GQaeNj_8VLZEGtF9rTPPTtigroELgPzqw_YGLMppG5_Y9rh2YltTQckINNqAP60-gM6TaHyitKgBx1TIRs1wtKnlWkHN7Ab3X09GM0Gtxe7JKgldQjFvujTV_J_S75z-AJ4L7VbMhS0B3QT2eX_mI="
         }
       ]
     },
     {
-      "id": "2026-08-14-entertainment",
+      "id": "2026-08-15-entertainment",
       "category": "entertainment",
       "categoryLabel": "Entertainment",
-      "headline": "Academy Museum Names Charlize Theron, Colman Domingo, and John Carpenter 2026 Gala Honorees",
-      "summary": "The Academy Museum of Motion Pictures announced on August 13 that Charlize Theron, Colman Domingo, and John Carpenter will be honored at its sixth annual fundraising gala on October 17, 2026. Theron will receive the Icon Award, Carpenter the Luminary Award, and Domingo the Vantage Award in recognition of their major contributions to global cinema.",
-      "question": "Which of these three film icons' work has had the biggest influence on your movie taste?",
+      "headline": "Phoebe Bridgers Releases 'Lost Weekend', Her First Solo Album in Six Years",
+      "summary": "On August 14, 2026, indie rock singer-songwriter Phoebe Bridgers released her long-awaited third solo studio album, titled 'Lost Weekend'. The 16-track record is her first solo LP in six years and features notable collaborations with artists including Jack Antonoff, Lucy Dacus, and Julien Baker.",
+      "question": "What is an album or musical artist you enjoy listening to, and what makes their music special to you?",
       "coachLeads": {
-        "friendly": "Hey, have you heard the big film news today? The Academy Museum just announced the legend-filled lineup for its upcoming annual gala.",
-        "energetic": "This is huge news for movie lovers! Three incredible cinema icons were just named as the top honorees for this year's Academy Museum Gala.",
-        "calm": "Here is an interesting story from the film world today. The Academy Museum has officially revealed who will be celebrated at its major October event.",
-        "direct": "The Academy Museum just named Charlize Theron, Colman Domingo, and John Carpenter as its 2026 gala honorees. Let's talk about their careers."
+        "friendly": "Hey there! Do you enjoy following new music releases? A major new indie rock album just dropped today, and I would love to hear your thoughts on it.",
+        "energetic": "Big news for music fans today! Phoebe Bridgers has officially released her first solo album in six years!",
+        "calm": "If you enjoy keeping up with current music news, a long-awaited album released today is well worth discussing.",
+        "direct": "Phoebe Bridgers just released her third studio album after a six-year break. Let's talk about it."
       },
       "sources": [
         {
           "title": "Google News: Entertainment",
-          "url": "https://news.google.com/search?q=Entertainment%20top%20news%202026-08-14&hl=en-US&gl=US&ceid=US:en"
+          "url": "https://news.google.com/search?q=Entertainment%20top%20news%202026-08-15&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     }
