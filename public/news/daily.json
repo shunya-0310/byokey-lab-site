@@ -1,88 +1,88 @@
 {
   "schemaVersion": 1,
   "status": "live",
-  "date": "2026-08-15",
-  "generatedAt": "2026-08-14T21:41:25.604Z",
+  "date": "2026-08-16",
+  "generatedAt": "2026-08-15T21:34:50.443Z",
   "model": "gemini-3.6-flash",
   "fallbackCategories": [],
   "items": [
     {
-      "id": "2026-08-15-politics_economy",
+      "id": "2026-08-16-politics_economy",
       "category": "politics_economy",
       "categoryLabel": "Politics & Economy",
-      "headline": "U.S. Navy Deploys USS George Washington to Relieve Long-Deployed USS Abraham Lincoln",
-      "summary": "The U.S. Navy has dispatched the aircraft carrier USS George Washington to the Middle East to relieve the USS Abraham Lincoln after an extended operational deployment. The carrier swap comes as officials address growing concerns from military families and lawmakers regarding supply shortages and crew morale following more than eight months at sea.",
-      "question": "How should military leadership balance demanding operational commitments with the physical and mental well-being of service members?",
+      "headline": "U.S. and Canada Race to Avert 50 Percent Tariffs Ahead of Looming Deadline",
+      "summary": "United States and Canadian trade officials held urgent weekend negotiations in Washington to secure an agreement ahead of an August 19 deadline. Without a deal, the U.S. is scheduled to impose 50 percent tariffs on roughly $20 billion worth of Canadian exports, threatening major economic disruptions across North America.",
+      "question": "How do you think high tariffs on imported goods impact everyday consumers and international relations?",
       "coachLeads": {
-        "friendly": "Hey, have you seen this recent update on U.S. naval deployments? A new aircraft carrier is heading to the Middle East to replace a crew that has been at sea for over eight months.",
-        "energetic": "Here is a major defense story breaking right now! The U.S. Navy is finally sending a replacement carrier to relieve sailors who have been deployed for more than 250 days.",
-        "calm": "This news about global military operations is worth reflecting on. The U.S. Navy is rotating an aircraft carrier out of the Middle East after an extended deployment created severe fatigue and supply issues.",
-        "direct": "Take a look at this global security update. The U.S. Navy is deploying the USS George Washington to relieve the long-deployed USS Abraham Lincoln in the Middle East."
+        "friendly": "Hey there! Have you seen the latest news about the trade negotiations between the U.S. and Canada?",
+        "energetic": "This trade story is huge news right now! Let's dive in and talk about how these proposed tariffs could impact global markets.",
+        "calm": "Take a look at this developing international trade story. It is a great opportunity for us to discuss foreign policy and economics together.",
+        "direct": "The U.S. and Canada are racing to prevent major new tariffs before a key deadline. Let's talk about what is happening."
       },
       "sources": [
         {
           "title": "Google News: Politics & Economy",
-          "url": "https://news.google.com/search?q=Politics%20%26%20Economy%20top%20news%202026-08-15&hl=en-US&gl=US&ceid=US:en"
+          "url": "https://news.google.com/search?q=Politics%20%26%20Economy%20top%20news%202026-08-16&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     },
     {
-      "id": "2026-08-15-technology",
+      "id": "2026-08-16-technology",
       "category": "technology",
       "categoryLabel": "Technology",
-      "headline": "James Webb Space Telescope Detects Water Near Milky Way's Supermassive Black Hole",
-      "summary": "Astronomers using the James Webb Space Telescope have discovered water vapor and cosmic dust surrounding a star located just 0.55 light-years from Sagittarius A*, the supermassive black hole at the center of the Milky Way [1.2.7]. The discovery challenges previous assumptions that intense radiation near black holes destroys water, offering new insight into how chemical building blocks survive in extreme galactic environments.",
-      "question": "How do you think discoveries like finding water in extreme space environments change our understanding of the universe?",
+      "headline": "U.S. Urges Partner Nations to Choose Between American and Chinese AI Coalitions",
+      "summary": "The U.S. State Department has drafted warnings to over thirty partner nations requiring them to align with a U.S.-led artificial intelligence framework instead of Beijing's rival initiative [1.2.5]. American officials stated that countries joining China's AI framework will be excluded from U.S. technology partnerships and semiconductor supply chain networks.",
+      "question": "Do you think countries should be forced to choose between competing global powers when adopting advanced technologies?",
       "coachLeads": {
-        "friendly": "Hey, check out this incredible new space story! Scientists just found water much closer to a giant black hole than anyone thought possible.",
-        "energetic": "You're not going to believe what the James Webb Space Telescope just spotted! Astronomers found actual water right near the supermassive black hole at the center of our galaxy!",
-        "calm": "Here is an intriguing science update from space today. Researchers using the James Webb Telescope detected water vapor in a surprisingly harsh environment near our galaxy's core.",
-        "direct": "This space breakthrough is definitely worth discussing. The James Webb Telescope just found water surviving right next to a supermassive black hole."
+        "friendly": "Hey, have you heard about this latest move in global AI policy?",
+        "energetic": "This is major news for the future of global tech! Check out how international AI alliances are shaping up!",
+        "calm": "Here is an important story about international AI regulation that is worth reflecting on.",
+        "direct": "The U.S. is requiring partner nations to pick between American and Chinese AI frameworks. Let's discuss this."
       },
       "sources": [
         {
-          "title": "space.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGZY7PaZf6hgoqaDrs2RoI2mJ1FRVWD2tIn9v5vygVqNAMy0acxueke4iSeOI59cLNbBi56jY4g0085rt0XL5TKfGyv87mqvOzIu7niePiCkErGy0lKQ7EUEnbpo8_7533cUfyxvMCq8KfjuVtToxgU5SoJTYnd9nk9a56VpZspfy-DpCClPH3KqDS-f-IaJK_nj0jIdwGSo0cQ7r50J1BEMRs_O0jN8xAqebMShlcKn27_1wj_vDbWNWer6euXWQMgevbBkdg7ctGhP8f39qfe9MZwQFZPOVURyDiTw3_o3h4="
+          "title": "japantimes.co.jp",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHqSWNj9yyK_eTePv7VRvypGj0T8tmbIsOBcFPpW7x9nfMaOJSWzEDiU_KMvCM7L01aZ5_7rWtt_6D6T3YbvalDwzyqdcqGr0f9hqFWBeSVLiN0ZqaNVvpiflTlEj0Mg4R5islrbGuvrY4D9VbWa2FlVRIpl6LJgA4atiRZLLwdwfPzdqZEwwO2L0Q="
         }
       ]
     },
     {
-      "id": "2026-08-15-sports",
+      "id": "2026-08-16-sports",
       "category": "sports",
       "categoryLabel": "Sports",
-      "headline": "Venus Williams Falls in Cincinnati Open First Round as Singles Streak Reaches 13 Losses",
-      "summary": "Seven-time Grand Slam champion Venus Williams was defeated 6-2, 6-2 by Colombian qualifier Emiliana Arango in the first round of the Cincinnati Open on August 14 [1.3.2]. The result extends the 46-year-old tennis icon's singles losing streak to 13 matches as she competed at the WTA 1000 tournament via a wild-card entry.",
-      "question": "How long do you think legendary athletes should continue competing at the highest level when victories become rare?",
+      "headline": "Kate Douglass Reclaims Women's 50m Freestyle World Record",
+      "summary": "American swimmer Kate Douglass set a new world record in the women's 50-meter freestyle on Saturday, posting a time of 23.49 seconds at the Pan Pacific Swimming Championships in California [2.3.3]. She reclaimed the global mark by lowering the previous record of 23.55 seconds set in June by her teammate Gretchen Walsh.",
+      "question": "How do you think friendly rivalries between teammates help top athletes perform at their absolute best?",
       "coachLeads": {
-        "friendly": "Hey, did you catch the latest tennis results from Cincinnati today? There's a really interesting story about Venus Williams that's worth chatting about.",
-        "energetic": "Check this out—tennis icon Venus Williams was back on court in Cincinnati today! It's a huge talking point about endurance in pro sports, so let me know what you think!",
-        "calm": "Venus Williams made headlines today following her opening match at the Cincinnati Open. It brings up a thoughtful conversation about perseverance and legacy in elite sports.",
-        "direct": "Venus Williams lost her opening-round match at the Cincinnati Open today, extending her singles losing streak to 13 matches. Let's talk about her choice to keep playing at age 46."
+        "friendly": "Hey, have you heard about this amazing new swimming record? An American swimmer just made world history, and it's worth taking a look at.",
+        "energetic": "Get ready for some exciting news from the pool! A swimmer just smashed a world record, and the story behind it is incredible!",
+        "calm": "A major global record was broken in swimming yesterday. It is a great moment to discuss how elite athletes push each other to new heights.",
+        "direct": "American swimmer Kate Douglass just set a new world record in the 50-meter freestyle. Here are the key details you need to know."
       },
       "sources": [
         {
-          "title": "foxsports.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG9w7zHFnj8M3_lblvQfXZw9xNhT42Uk0nqCY3qvjTJ2ne-5__OoA8CJPny4HkoTrpghuRMWByuouhpnv9jkeWhi-LCbVWLpThggFZeDkXVI2GQaeNj_8VLZEGtF9rTPPTtigroELgPzqw_YGLMppG5_Y9rh2YltTQckINNqAP60-gM6TaHyitKgBx1TIRs1wtKnlWkHN7Ab3X09GM0Gtxe7JKgldQjFvujTV_J_S75z-AJ4L7VbMhS0B3QT2eX_mI="
+          "title": "wtvbam.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFd9rWWqQBcFRQnUG6maI5x6eQ5QRxmEp8yU9KXiK-OCou7t7QEH05-9gtDQIPUzJ5M1_59xBAos1R1Pl2B3CVgDsdSfu1xaBHJvDwRi5t02immFXHJ0ROQFjFEuLBhv8muwCAzoUSJFahLw86YNld2J70k6F172nf37UnXdVYN1_eg4Hz6xQ4iqQs-JnXLNIdrJa9x"
         }
       ]
     },
     {
-      "id": "2026-08-15-entertainment",
+      "id": "2026-08-16-entertainment",
       "category": "entertainment",
       "categoryLabel": "Entertainment",
-      "headline": "Phoebe Bridgers Releases 'Lost Weekend', Her First Solo Album in Six Years",
-      "summary": "On August 14, 2026, indie rock singer-songwriter Phoebe Bridgers released her long-awaited third solo studio album, titled 'Lost Weekend'. The 16-track record is her first solo LP in six years and features notable collaborations with artists including Jack Antonoff, Lucy Dacus, and Julien Baker.",
-      "question": "What is an album or musical artist you enjoy listening to, and what makes their music special to you?",
+      "headline": "Disney Unveils Major Film and TV Slate at D23 Fan Event in California",
+      "summary": "The Walt Disney Company hosted its headline Entertainment Showcase at the D23 fan event in Anaheim, California, revealing major updates on upcoming film and television projects. Company leaders and stars took the stage at the Honda Center to share exclusive trailers, release dates, and casting announcements for upcoming Disney and Marvel releases.",
+      "question": "Which upcoming movie or television show from Disney or Marvel are you most looking forward to, and why?",
       "coachLeads": {
-        "friendly": "Hey there! Do you enjoy following new music releases? A major new indie rock album just dropped today, and I would love to hear your thoughts on it.",
-        "energetic": "Big news for music fans today! Phoebe Bridgers has officially released her first solo album in six years!",
-        "calm": "If you enjoy keeping up with current music news, a long-awaited album released today is well worth discussing.",
-        "direct": "Phoebe Bridgers just released her third studio album after a six-year break. Let's talk about it."
+        "friendly": "Hey! Disney just made some big movie and TV announcements at their huge fan event in California. Have you heard about any of the upcoming shows?",
+        "energetic": "Get ready for huge entertainment news! Disney filled an entire stadium to reveal their next massive slate of movies and series!",
+        "calm": "Disney just held its main entertainment showcase, sharing details about its upcoming film and television slate. It's a great moment to chat about what you like to watch.",
+        "direct": "Disney announced its major upcoming movie and TV slate at the D23 fan convention. Let's talk about what caught your attention."
       },
       "sources": [
         {
           "title": "Google News: Entertainment",
-          "url": "https://news.google.com/search?q=Entertainment%20top%20news%202026-08-15&hl=en-US&gl=US&ceid=US:en"
+          "url": "https://news.google.com/search?q=Entertainment%20top%20news%202026-08-16&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     }
