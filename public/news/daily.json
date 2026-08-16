@@ -1,88 +1,88 @@
 {
   "schemaVersion": 1,
   "status": "live",
-  "date": "2026-08-16",
-  "generatedAt": "2026-08-15T21:34:50.443Z",
+  "date": "2026-08-17",
+  "generatedAt": "2026-08-16T21:34:04.122Z",
   "model": "gemini-3.6-flash",
   "fallbackCategories": [],
   "items": [
     {
-      "id": "2026-08-16-politics_economy",
+      "id": "2026-08-17-politics_economy",
       "category": "politics_economy",
       "categoryLabel": "Politics & Economy",
-      "headline": "U.S. and Canada Race to Avert 50 Percent Tariffs Ahead of Looming Deadline",
-      "summary": "United States and Canadian trade officials held urgent weekend negotiations in Washington to secure an agreement ahead of an August 19 deadline. Without a deal, the U.S. is scheduled to impose 50 percent tariffs on roughly $20 billion worth of Canadian exports, threatening major economic disruptions across North America.",
-      "question": "How do you think high tariffs on imported goods impact everyday consumers and international relations?",
+      "headline": "Brazil's Presidential Campaign Officially Kicks Off with Major Rival Rallies",
+      "summary": "Brazilian President Luiz Inácio Lula da Silva and rival candidate Flávio Bolsonaro officially launched their presidential campaigns on Sunday with massive rallies in São Paulo and Rio de Janeiro [1.4.2]. The upcoming vote in October will decide the political and economic direction of Latin America's largest nation.",
+      "question": "What issues do you think are most important to voters during a national election?",
       "coachLeads": {
-        "friendly": "Hey there! Have you seen the latest news about the trade negotiations between the U.S. and Canada?",
-        "energetic": "This trade story is huge news right now! Let's dive in and talk about how these proposed tariffs could impact global markets.",
-        "calm": "Take a look at this developing international trade story. It is a great opportunity for us to discuss foreign policy and economics together.",
-        "direct": "The U.S. and Canada are racing to prevent major new tariffs before a key deadline. Let's talk about what is happening."
+        "friendly": "Hey, have you heard that Brazil's presidential election campaign officially started?",
+        "energetic": "Big news today out of South America as Brazil's presidential race kicks into high gear! Want to talk about it?",
+        "calm": "Brazil officially launched its presidential election campaign on Sunday. This is a great topic to practice discussing world politics.",
+        "direct": "Brazil's presidential election campaign officially began on Sunday with rival rallies. Let's discuss your thoughts on this story."
       },
       "sources": [
         {
-          "title": "Google News: Politics & Economy",
-          "url": "https://news.google.com/search?q=Politics%20%26%20Economy%20top%20news%202026-08-16&hl=en-US&gl=US&ceid=US:en"
+          "title": "aljazeera.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGE7Izh5SRb6zrPxZXoKhqalu8MAsctexQQ_K3rfb6hkY8QolHLkygebkzBQYmaPLdyVuK4Weso2Fb7s2rguk-Kd066zM4mlnBWybITuDXo8YG1qSlRg2jaf-Bk5YqL9aFpTuff-K1J8m4CX1tXQpkFg-vshrH1dGBfUT5JB-MSqF1pV77sL3RLw8TEJA3y2NjMvjFRXgb3Nh8zduOOBAlgRRp30s9XTA=="
         }
       ]
     },
     {
-      "id": "2026-08-16-technology",
+      "id": "2026-08-17-technology",
       "category": "technology",
       "categoryLabel": "Technology",
-      "headline": "U.S. Urges Partner Nations to Choose Between American and Chinese AI Coalitions",
-      "summary": "The U.S. State Department has drafted warnings to over thirty partner nations requiring them to align with a U.S.-led artificial intelligence framework instead of Beijing's rival initiative [1.2.5]. American officials stated that countries joining China's AI framework will be excluded from U.S. technology partnerships and semiconductor supply chain networks.",
-      "question": "Do you think countries should be forced to choose between competing global powers when adopting advanced technologies?",
+      "headline": "U.S. Pressures Global Partners to Choose Sides in AI Race with China",
+      "summary": "The United States State Department has drafted letters warning international partner nations that they must choose between joining the U.S.-led AI coalition or China's competing initiative. This move aims to prevent sensitive technology sharing and secure critical supply chains as global competition over artificial intelligence intensifies.",
+      "question": "How do you think smaller countries should navigate the growing artificial intelligence rivalry between major global powers?",
       "coachLeads": {
-        "friendly": "Hey, have you heard about this latest move in global AI policy?",
-        "energetic": "This is major news for the future of global tech! Check out how international AI alliances are shaping up!",
-        "calm": "Here is an important story about international AI regulation that is worth reflecting on.",
-        "direct": "The U.S. is requiring partner nations to pick between American and Chinese AI frameworks. Let's discuss this."
+        "friendly": "Hey, have you seen this major news about global AI policy? It looks like nations are being asked to pick sides in the AI race.",
+        "energetic": "Check this out—the global competition over AI just reached a whole new level! The U.S. is pushing international partners to make a choice.",
+        "calm": "This is a notable development in technology diplomacy. Major powers are taking a firmer stance on international AI partnerships.",
+        "direct": "The U.S. is telling foreign partners to choose between its AI framework and China's. This could significantly reshape international tech policy."
       },
       "sources": [
         {
-          "title": "japantimes.co.jp",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHqSWNj9yyK_eTePv7VRvypGj0T8tmbIsOBcFPpW7x9nfMaOJSWzEDiU_KMvCM7L01aZ5_7rWtt_6D6T3YbvalDwzyqdcqGr0f9hqFWBeSVLiN0ZqaNVvpiflTlEj0Mg4R5islrbGuvrY4D9VbWa2FlVRIpl6LJgA4atiRZLLwdwfPzdqZEwwO2L0Q="
+          "title": "Google News: Technology",
+          "url": "https://news.google.com/search?q=Technology%20top%20news%202026-08-17&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     },
     {
-      "id": "2026-08-16-sports",
+      "id": "2026-08-17-sports",
       "category": "sports",
       "categoryLabel": "Sports",
-      "headline": "Kate Douglass Reclaims Women's 50m Freestyle World Record",
-      "summary": "American swimmer Kate Douglass set a new world record in the women's 50-meter freestyle on Saturday, posting a time of 23.49 seconds at the Pan Pacific Swimming Championships in California [2.3.3]. She reclaimed the global mark by lowering the previous record of 23.55 seconds set in June by her teammate Gretchen Walsh.",
-      "question": "How do you think friendly rivalries between teammates help top athletes perform at their absolute best?",
+      "headline": "Arsenal Dominates Manchester City to Claim 2026 FA Community Shield",
+      "summary": "Premier League champions Arsenal defeated Manchester City 3-0 at Cardiff's Principality Stadium on Sunday to win the 2026 FA Community Shield. The commanding victory delivered the first silverware of the English soccer season and marked a challenging competitive debut for new Manchester City manager Enzo Maresca.",
+      "question": "Do you think Arsenal can build on this decisive performance to successfully defend their Premier League title this season?",
       "coachLeads": {
-        "friendly": "Hey, have you heard about this amazing new swimming record? An American swimmer just made world history, and it's worth taking a look at.",
-        "energetic": "Get ready for some exciting news from the pool! A swimmer just smashed a world record, and the story behind it is incredible!",
-        "calm": "A major global record was broken in swimming yesterday. It is a great moment to discuss how elite athletes push each other to new heights.",
-        "direct": "American swimmer Kate Douglass just set a new world record in the 50-meter freestyle. Here are the key details you need to know."
+        "friendly": "Hey, have you heard about Arsenal's big win over Manchester City yesterday? It is a fantastic topic for us to chat about today!",
+        "energetic": "What a massive statement to kick off the new English soccer season! Arsenal looked completely unstoppable in Cardiff, so let's jump right into it!",
+        "calm": "Arsenal secured the first trophy of the new season with a smooth 3-0 victory on Sunday. Take a moment to review the result, and let me know your thoughts when you are ready.",
+        "direct": "Arsenal crushed Manchester City 3-0 in the Community Shield on Sunday. Let's discuss what this result means for both teams heading into the new season."
       },
       "sources": [
         {
-          "title": "wtvbam.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFd9rWWqQBcFRQnUG6maI5x6eQ5QRxmEp8yU9KXiK-OCou7t7QEH05-9gtDQIPUzJ5M1_59xBAos1R1Pl2B3CVgDsdSfu1xaBHJvDwRi5t02immFXHJ0ROQFjFEuLBhv8muwCAzoUSJFahLw86YNld2J70k6F172nf37UnXdVYN1_eg4Hz6xQ4iqQs-JnXLNIdrJa9x"
+          "title": "Google News: Sports",
+          "url": "https://news.google.com/search?q=Sports%20top%20news%202026-08-17&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     },
     {
-      "id": "2026-08-16-entertainment",
+      "id": "2026-08-17-entertainment",
       "category": "entertainment",
       "categoryLabel": "Entertainment",
-      "headline": "Disney Unveils Major Film and TV Slate at D23 Fan Event in California",
-      "summary": "The Walt Disney Company hosted its headline Entertainment Showcase at the D23 fan event in Anaheim, California, revealing major updates on upcoming film and television projects. Company leaders and stars took the stage at the Honda Center to share exclusive trailers, release dates, and casting announcements for upcoming Disney and Marvel releases.",
-      "question": "Which upcoming movie or television show from Disney or Marvel are you most looking forward to, and why?",
+      "headline": "Spider-Man: Brand New Day Crosses $2 Billion at Global Box Office",
+      "summary": "Sony and Marvel's Spider-Man: Brand New Day officially passed $2 billion at the global box office following its third weekend in theaters [1.2.5]. The blockbuster achieved the landmark milestone in record time, becoming only the eighth film in history to cross the two-billion-dollar threshold.",
+      "question": "What do you think makes Spider-Man movies consistently so popular with moviegoers around the world?",
       "coachLeads": {
-        "friendly": "Hey! Disney just made some big movie and TV announcements at their huge fan event in California. Have you heard about any of the upcoming shows?",
-        "energetic": "Get ready for huge entertainment news! Disney filled an entire stadium to reveal their next massive slate of movies and series!",
-        "calm": "Disney just held its main entertainment showcase, sharing details about its upcoming film and television slate. It's a great moment to chat about what you like to watch.",
-        "direct": "Disney announced its major upcoming movie and TV slate at the D23 fan convention. Let's talk about what caught your attention."
+        "friendly": "Hey, did you see the massive news from the box office this weekend? Spider-Man just hit another incredible milestone!",
+        "energetic": "Unbelievable news for movie fans today! The new Spider-Man film just blew past two billion dollars worldwide!",
+        "calm": "There is some notable box office news today. The latest Spider-Man movie has officially joined a very exclusive group of global hits.",
+        "direct": "The new Spider-Man movie just crossed two billion dollars globally. Let's talk about why it's breaking so many records."
       },
       "sources": [
         {
-          "title": "Google News: Entertainment",
-          "url": "https://news.google.com/search?q=Entertainment%20top%20news%202026-08-16&hl=en-US&gl=US&ceid=US:en"
+          "title": "thewrap.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE0j8TnVOgipGgqW4VDZ1QK6rZORw6Jib39xoAbi8eAPb7ybHc1M8YOvD6pPc4BFKXPEatD1Fx7r4HIVSXt8XpkDCJJXmKTB_CYM4TruYk2EHsnUQrClyN8qcm7zlVKOw3qqDOZ0LdeA248cqFw3GYwFwKrrzhWNUuwiXPfbsN_7gpV9sxMtfkC-zmAOIUjgHmAkHk="
         }
       ]
     }
