@@ -1,88 +1,92 @@
 {
   "schemaVersion": 1,
   "status": "live",
-  "date": "2026-08-17",
-  "generatedAt": "2026-08-16T21:34:04.122Z",
+  "date": "2026-08-18",
+  "generatedAt": "2026-08-17T21:41:22.272Z",
   "model": "gemini-3.6-flash",
   "fallbackCategories": [],
   "items": [
     {
-      "id": "2026-08-17-politics_economy",
+      "id": "2026-08-18-politics_economy",
       "category": "politics_economy",
       "categoryLabel": "Politics & Economy",
-      "headline": "Brazil's Presidential Campaign Officially Kicks Off with Major Rival Rallies",
-      "summary": "Brazilian President Luiz Inácio Lula da Silva and rival candidate Flávio Bolsonaro officially launched their presidential campaigns on Sunday with massive rallies in São Paulo and Rio de Janeiro [1.4.2]. The upcoming vote in October will decide the political and economic direction of Latin America's largest nation.",
-      "question": "What issues do you think are most important to voters during a national election?",
+      "headline": "President Trump Orders Pentagon to Scale Back U.S.-South Korea Military Drills",
+      "summary": "On August 17, 2026, U.S. President Donald Trump directed the Pentagon to downsize upcoming joint military exercises with South Korea. The decision is intended to encourage diplomatic negotiations with North Korea, though it has raised concerns regarding regional security commitments.",
+      "question": "Do you think scaling back military exercises is an effective way to promote diplomatic negotiations between nations?",
       "coachLeads": {
-        "friendly": "Hey, have you heard that Brazil's presidential election campaign officially started?",
-        "energetic": "Big news today out of South America as Brazil's presidential race kicks into high gear! Want to talk about it?",
-        "calm": "Brazil officially launched its presidential election campaign on Sunday. This is a great topic to practice discussing world politics.",
-        "direct": "Brazil's presidential election campaign officially began on Sunday with rival rallies. Let's discuss your thoughts on this story."
+        "friendly": "Hey, have you caught the latest news about U.S. military policy in East Asia? It's a really interesting topic for our conversation today.",
+        "energetic": "There's a major new diplomatic move unfolding right now! Let's dive into what this shift means for global security.",
+        "calm": "A significant policy decision was just announced regarding U.S. and South Korean defense cooperation. Let me share the key facts with you.",
+        "direct": "This news on U.S. military drills and diplomacy is worth talking about. Let me summarize the main details for you."
       },
       "sources": [
         {
-          "title": "aljazeera.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGE7Izh5SRb6zrPxZXoKhqalu8MAsctexQQ_K3rfb6hkY8QolHLkygebkzBQYmaPLdyVuK4Weso2Fb7s2rguk-Kd066zM4mlnBWybITuDXo8YG1qSlRg2jaf-Bk5YqL9aFpTuff-K1J8m4CX1tXQpkFg-vshrH1dGBfUT5JB-MSqF1pV77sL3RLw8TEJA3y2NjMvjFRXgb3Nh8zduOOBAlgRRp30s9XTA=="
+          "title": "Google News: Politics & Economy",
+          "url": "https://news.google.com/search?q=Politics%20%26%20Economy%20top%20news%202026-08-18&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     },
     {
-      "id": "2026-08-17-technology",
+      "id": "2026-08-18-technology",
       "category": "technology",
       "categoryLabel": "Technology",
-      "headline": "U.S. Pressures Global Partners to Choose Sides in AI Race with China",
-      "summary": "The United States State Department has drafted letters warning international partner nations that they must choose between joining the U.S.-led AI coalition or China's competing initiative. This move aims to prevent sensitive technology sharing and secure critical supply chains as global competition over artificial intelligence intensifies.",
-      "question": "How do you think smaller countries should navigate the growing artificial intelligence rivalry between major global powers?",
+      "headline": "NASA Begins Testing AI-Ready Microprocessor 500 Times Faster Than Current Space Chips",
+      "summary": "NASA's Jet Propulsion Laboratory has begun testing a compact microprocessor that delivers 500 times the performance of current radiation-hardened spaceflight computers [1.4.8]. This development is significant now because the chip will allow future deep-space probes to run artificial intelligence and make real-time decisions without waiting for delayed radio signals from Earth.",
+      "question": "How do you think giving spacecraft autonomous decision-making power will change our search for life on other planets?",
       "coachLeads": {
-        "friendly": "Hey, have you seen this major news about global AI policy? It looks like nations are being asked to pick sides in the AI race.",
-        "energetic": "Check this out—the global competition over AI just reached a whole new level! The U.S. is pushing international partners to make a choice.",
-        "calm": "This is a notable development in technology diplomacy. Major powers are taking a firmer stance on international AI partnerships.",
-        "direct": "The U.S. is telling foreign partners to choose between its AI framework and China's. This could significantly reshape international tech policy."
+        "friendly": "Hey, check this out! NASA is testing a brand-new microchip designed to bring AI to deep space.",
+        "energetic": "Get ready for this! NASA is testing a tiny AI chip that is 500 times faster than current space computers!",
+        "calm": "Space technology has reached an intriguing milestone. NASA has started testing a high-performance processor built for deep-space AI.",
+        "direct": "NASA is testing a compact chip that will let spacecraft run AI models autonomously. Here is why that matters for future space missions."
       },
       "sources": [
         {
-          "title": "Google News: Technology",
-          "url": "https://news.google.com/search?q=Technology%20top%20news%202026-08-17&hl=en-US&gl=US&ceid=US:en"
+          "title": "indiatimes.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFGLqXPyFIe9ausialqNlDLaxYmyf0mH7hfxHGglza4Ocs2K0gMfSMQwmYkWZjpKVOGHc948sJ673sXVd9OOEbyeRSy2VECTZlyIrIlv_vING9vZDj1KYlGIat1isoHS1WGafja2GjCl8rH--dju8g0OMAqr4GKr24gcGSBBtZ8c_FfOKoATtsl-GItzU5XJSLpuNyxFy6yEUi672PtF3LUKe26nC-rA-QudmEsRymueflHM1bGifbr2NXwXGwWj8KnCL4_DnqY-d5Vpl7advaiQ06LwMFloskYpyY="
         }
       ]
     },
     {
-      "id": "2026-08-17-sports",
+      "id": "2026-08-18-sports",
       "category": "sports",
       "categoryLabel": "Sports",
-      "headline": "Arsenal Dominates Manchester City to Claim 2026 FA Community Shield",
-      "summary": "Premier League champions Arsenal defeated Manchester City 3-0 at Cardiff's Principality Stadium on Sunday to win the 2026 FA Community Shield. The commanding victory delivered the first silverware of the English soccer season and marked a challenging competitive debut for new Manchester City manager Enzo Maresca.",
-      "question": "Do you think Arsenal can build on this decisive performance to successfully defend their Premier League title this season?",
+      "headline": "Iga Swiatek Rallies Past Maria Sakkari at 2026 Cincinnati Open",
+      "summary": "Defending champion Iga Swiatek rallied from a set down to defeat Maria Sakkari 4-6, 6-1, 6-1 in the third round of the Cincinnati Open on August 17, 2026 [3.1.1]. The victory extended her winning streak to eight straight matches following her recent title win in Toronto, maintaining her hard-court momentum ahead of the US Open.",
+      "question": "Do you think momentum from winning back-to-back tournaments is more important for a tennis player's confidence than getting extra rest before a Grand Slam?",
       "coachLeads": {
-        "friendly": "Hey, have you heard about Arsenal's big win over Manchester City yesterday? It is a fantastic topic for us to chat about today!",
-        "energetic": "What a massive statement to kick off the new English soccer season! Arsenal looked completely unstoppable in Cardiff, so let's jump right into it!",
-        "calm": "Arsenal secured the first trophy of the new season with a smooth 3-0 victory on Sunday. Take a moment to review the result, and let me know your thoughts when you are ready.",
-        "direct": "Arsenal crushed Manchester City 3-0 in the Community Shield on Sunday. Let's discuss what this result means for both teams heading into the new season."
+        "friendly": "Hey, did you see Iga Swiatek's comeback match in Cincinnati today? She really showed her mental strength out there.",
+        "energetic": "What an incredible comeback! Swiatek just won her eighth straight match and looks completely unstoppable on hard courts right now!",
+        "calm": "Swiatek dropping the first set and then dominating the rest of the match was a great display of composure. It is worth talking about how she adjusted her game.",
+        "direct": "Swiatek just rallied past Sakkari in Cincinnati to keep her winning streak alive. Let's break down what made the difference in her performance."
       },
       "sources": [
         {
-          "title": "Google News: Sports",
-          "url": "https://news.google.com/search?q=Sports%20top%20news%202026-08-17&hl=en-US&gl=US&ceid=US:en"
+          "title": "wtatennis.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFtyi1SRT2MU-km7gAJI3ZtSq-53-MDmHB-gZxDKOWma6m5nw6eCT7occmcDhr85Ux_A3SRtVDpt8uYYRLIjYCwcULSJh7KBqXkT0YvRtUHLX-rVt5QPcSPLDDiLeE90bjhmIqeo7kz2B8ncqF5oJs1pXrahp8IbU0tPZMceMvkZw3-zNrvsPFC0S1WZPlXMEXj_p4zL-2fI96B4KBgqnsjc6WkCe8="
+        },
+        {
+          "title": "tennisworldusa.org",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFZ7CiwD6j1eSUN_jSwumZLMGS-2eJRMgjgjbMYRKoJLPAMQH9QLzhkRwuaetQENluFaxkT1VXPjFPcNBF98axGIBRb6hQGouBvjDx-vr9zRnK56S_nd8dX12DkzQZCui2mxvqiC4PLsKS8MNZVKwuabymrGG7YohdqhwTItHqwsnNLKED8vLko8oP59EgHOHtdE9ASRAjNHSnwQdTwyVrOnKY8sARIMpDAkZnQ-8yFBzucoDNXjCiXtQQY2g=="
         }
       ]
     },
     {
-      "id": "2026-08-17-entertainment",
+      "id": "2026-08-18-entertainment",
       "category": "entertainment",
       "categoryLabel": "Entertainment",
-      "headline": "Spider-Man: Brand New Day Crosses $2 Billion at Global Box Office",
-      "summary": "Sony and Marvel's Spider-Man: Brand New Day officially passed $2 billion at the global box office following its third weekend in theaters [1.2.5]. The blockbuster achieved the landmark milestone in record time, becoming only the eighth film in history to cross the two-billion-dollar threshold.",
-      "question": "What do you think makes Spider-Man movies consistently so popular with moviegoers around the world?",
+      "headline": "Spider-Man: Brand New Day Crosses $2 Billion Worldwide Box Office Record",
+      "summary": "Sony and Marvel's \"Spider-Man: Brand New Day\" officially passed the $2 billion mark at the global box office in just 19 days of release. This milestone makes it the second-fastest movie in cinema history to reach $2 billion and the highest-grossing Spider-Man film of all time.",
+      "question": "Why do you think Spider-Man films continue to draw such massive global audiences compared to other superhero franchises?",
       "coachLeads": {
-        "friendly": "Hey, did you see the massive news from the box office this weekend? Spider-Man just hit another incredible milestone!",
-        "energetic": "Unbelievable news for movie fans today! The new Spider-Man film just blew past two billion dollars worldwide!",
-        "calm": "There is some notable box office news today. The latest Spider-Man movie has officially joined a very exclusive group of global hits.",
-        "direct": "The new Spider-Man movie just crossed two billion dollars globally. Let's talk about why it's breaking so many records."
+        "friendly": "Hey, have you seen the latest movie news? The new Spider-Man film just crossed the two billion dollar mark at the box office!",
+        "energetic": "Spider-Man is breaking records left and right! It just became the second-fastest movie in history to hit two billion dollars globally!",
+        "calm": "There is a major milestone in global cinema today. The newest Spider-Man movie has joined the exclusive two billion dollar box office club.",
+        "direct": "The latest Spider-Man film just topped two billion dollars worldwide in under three weeks. This is worth talking about."
       },
       "sources": [
         {
-          "title": "thewrap.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE0j8TnVOgipGgqW4VDZ1QK6rZORw6Jib39xoAbi8eAPb7ybHc1M8YOvD6pPc4BFKXPEatD1Fx7r4HIVSXt8XpkDCJJXmKTB_CYM4TruYk2EHsnUQrClyN8qcm7zlVKOw3qqDOZ0LdeA248cqFw3GYwFwKrrzhWNUuwiXPfbsN_7gpV9sxMtfkC-zmAOIUjgHmAkHk="
+          "title": "Google News: Entertainment",
+          "url": "https://news.google.com/search?q=Entertainment%20top%20news%202026-08-18&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     }
