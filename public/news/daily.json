@@ -1,92 +1,88 @@
 {
   "schemaVersion": 1,
   "status": "live",
-  "date": "2026-08-18",
-  "generatedAt": "2026-08-17T21:41:22.272Z",
+  "date": "2026-08-19",
+  "generatedAt": "2026-08-18T21:37:56.564Z",
   "model": "gemini-3.6-flash",
   "fallbackCategories": [],
   "items": [
     {
-      "id": "2026-08-18-politics_economy",
+      "id": "2026-08-19-politics_economy",
       "category": "politics_economy",
       "categoryLabel": "Politics & Economy",
-      "headline": "President Trump Orders Pentagon to Scale Back U.S.-South Korea Military Drills",
-      "summary": "On August 17, 2026, U.S. President Donald Trump directed the Pentagon to downsize upcoming joint military exercises with South Korea. The decision is intended to encourage diplomatic negotiations with North Korea, though it has raised concerns regarding regional security commitments.",
-      "question": "Do you think scaling back military exercises is an effective way to promote diplomatic negotiations between nations?",
+      "headline": "Chinese Foreign Minister Wang Yi Begins First Official Visit to South Korea in Five Years",
+      "summary": "Chinese Foreign Minister Wang Yi arrived in South Korea on August 19 for a two-day official visit, marking his first bilateral trip to the country since 2021. The high-level discussions with South Korean leaders focus on strengthening diplomatic relations, addressing Korean Peninsula security, and preparing for the upcoming APEC summit.",
+      "question": "How do you think high-level diplomatic visits like this influence peace and trade relations across East Asia?",
       "coachLeads": {
-        "friendly": "Hey, have you caught the latest news about U.S. military policy in East Asia? It's a really interesting topic for our conversation today.",
-        "energetic": "There's a major new diplomatic move unfolding right now! Let's dive into what this shift means for global security.",
-        "calm": "A significant policy decision was just announced regarding U.S. and South Korean defense cooperation. Let me share the key facts with you.",
-        "direct": "This news on U.S. military drills and diplomacy is worth talking about. Let me summarize the main details for you."
+        "friendly": "Hey, have you heard about China's foreign minister visiting South Korea today? It is a big moment for regional diplomacy, and I'd love to hear your thoughts on it!",
+        "energetic": "There is major diplomatic news breaking in East Asia today! China's top diplomat is in Seoul for high-stakes talks, so let's dive right into this topic!",
+        "calm": "China's foreign minister has started his first official visit to South Korea in five years. It provides a great opportunity to discuss how neighboring nations handle global political issues.",
+        "direct": "Chinese Foreign Minister Wang Yi is in South Korea today for his first official visit there in five years. Let's discuss why this meeting matters for regional security and cooperation."
       },
       "sources": [
         {
           "title": "Google News: Politics & Economy",
-          "url": "https://news.google.com/search?q=Politics%20%26%20Economy%20top%20news%202026-08-18&hl=en-US&gl=US&ceid=US:en"
+          "url": "https://news.google.com/search?q=Politics%20%26%20Economy%20top%20news%202026-08-19&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     },
     {
-      "id": "2026-08-18-technology",
+      "id": "2026-08-19-technology",
       "category": "technology",
       "categoryLabel": "Technology",
-      "headline": "NASA Begins Testing AI-Ready Microprocessor 500 Times Faster Than Current Space Chips",
-      "summary": "NASA's Jet Propulsion Laboratory has begun testing a compact microprocessor that delivers 500 times the performance of current radiation-hardened spaceflight computers [1.4.8]. This development is significant now because the chip will allow future deep-space probes to run artificial intelligence and make real-time decisions without waiting for delayed radio signals from Earth.",
-      "question": "How do you think giving spacecraft autonomous decision-making power will change our search for life on other planets?",
+      "headline": "Apple Overhauls European App Store Rules Following Regulatory Agreement",
+      "summary": "Apple announced major revisions to its European Union app distribution policies after reaching an agreement with European Commission regulators [1.1.5]. Effective October 1, 2026, the tech giant is replacing its controversial per-download fee with a simplified commission structure and lowering overall transaction fees for developers.",
+      "question": "Do you think government regulations should dictate how major tech companies run their app stores?",
       "coachLeads": {
-        "friendly": "Hey, check this out! NASA is testing a brand-new microchip designed to bring AI to deep space.",
-        "energetic": "Get ready for this! NASA is testing a tiny AI chip that is 500 times faster than current space computers!",
-        "calm": "Space technology has reached an intriguing milestone. NASA has started testing a high-performance processor built for deep-space AI.",
-        "direct": "NASA is testing a compact chip that will let spacecraft run AI models autonomously. Here is why that matters for future space missions."
+        "friendly": "Hey! Have you heard about the big changes Apple is making to its app store rules in Europe?",
+        "energetic": "Apple just announced a massive shift in how it handles European app fees, and it's making huge news today!",
+        "calm": "Apple has agreed to update its European app distribution policies, settling a long-standing debate with regulators.",
+        "direct": "Apple updated its European Union app rules today, scrapping its per-install fee in favor of lower commission rates."
       },
       "sources": [
         {
-          "title": "indiatimes.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFGLqXPyFIe9ausialqNlDLaxYmyf0mH7hfxHGglza4Ocs2K0gMfSMQwmYkWZjpKVOGHc948sJ673sXVd9OOEbyeRSy2VECTZlyIrIlv_vING9vZDj1KYlGIat1isoHS1WGafja2GjCl8rH--dju8g0OMAqr4GKr24gcGSBBtZ8c_FfOKoATtsl-GItzU5XJSLpuNyxFy6yEUi672PtF3LUKe26nC-rA-QudmEsRymueflHM1bGifbr2NXwXGwWj8KnCL4_DnqY-d5Vpl7advaiQ06LwMFloskYpyY="
+          "title": "apple.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHOCrzN84S5xWj7su_JPoIW1tAZ7nTtUZbYCyTHYrUWL3LZk9ER7eM_s3u6qhrkIbMI8xjdA2MVY3aY_kzR8x3OYiczTUX09WLjtVEbly3ZFOWZcM_CAg2p8_67diDzU09t9J3ar8EMm3ViQKwfYF7dAI7znBVVe6AakgDuz3_tXUfFwdfn0zQzkfhWxHxx9gURw74="
         }
       ]
     },
     {
-      "id": "2026-08-18-sports",
+      "id": "2026-08-19-sports",
       "category": "sports",
       "categoryLabel": "Sports",
-      "headline": "Iga Swiatek Rallies Past Maria Sakkari at 2026 Cincinnati Open",
-      "summary": "Defending champion Iga Swiatek rallied from a set down to defeat Maria Sakkari 4-6, 6-1, 6-1 in the third round of the Cincinnati Open on August 17, 2026 [3.1.1]. The victory extended her winning streak to eight straight matches following her recent title win in Toronto, maintaining her hard-court momentum ahead of the US Open.",
-      "question": "Do you think momentum from winning back-to-back tournaments is more important for a tennis player's confidence than getting extra rest before a Grand Slam?",
+      "headline": "Venus Williams Granted US Open Main Draw Wild Card at Age 46",
+      "summary": "On August 18, 2026, the United States Tennis Association announced that two-time champion Venus Williams received a main-draw wild card for the upcoming US Open. The invitation makes the 46-year-old tennis legend the tournament's oldest singles entrant since 1981, making headline news across international sports.",
+      "question": "Do you think giving wild card entries to legendary veteran players adds value to major tournaments, or should those spots be reserved for younger players?",
       "coachLeads": {
-        "friendly": "Hey, did you see Iga Swiatek's comeback match in Cincinnati today? She really showed her mental strength out there.",
-        "energetic": "What an incredible comeback! Swiatek just won her eighth straight match and looks completely unstoppable on hard courts right now!",
-        "calm": "Swiatek dropping the first set and then dominating the rest of the match was a great display of composure. It is worth talking about how she adjusted her game.",
-        "direct": "Swiatek just rallied past Sakkari in Cincinnati to keep her winning streak alive. Let's break down what made the difference in her performance."
+        "friendly": "Hey, did you catch the big tennis news today? Venus Williams was given a wild card spot to play in the upcoming US Open.",
+        "energetic": "You won't believe this incredible sports story! Venus Williams just secured a spot in the US Open at 46 years old!",
+        "calm": "Venus Williams received a main-draw wild card for the US Open today. It's a noteworthy milestone that highlights her incredible longevity in professional tennis.",
+        "direct": "Venus Williams was awarded a US Open wild card today. At 46, she will be the oldest singles player in the draw since 1981."
       },
       "sources": [
         {
-          "title": "wtatennis.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFtyi1SRT2MU-km7gAJI3ZtSq-53-MDmHB-gZxDKOWma6m5nw6eCT7occmcDhr85Ux_A3SRtVDpt8uYYRLIjYCwcULSJh7KBqXkT0YvRtUHLX-rVt5QPcSPLDDiLeE90bjhmIqeo7kz2B8ncqF5oJs1pXrahp8IbU0tPZMceMvkZw3-zNrvsPFC0S1WZPlXMEXj_p4zL-2fI96B4KBgqnsjc6WkCe8="
-        },
-        {
-          "title": "tennisworldusa.org",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFZ7CiwD6j1eSUN_jSwumZLMGS-2eJRMgjgjbMYRKoJLPAMQH9QLzhkRwuaetQENluFaxkT1VXPjFPcNBF98axGIBRb6hQGouBvjDx-vr9zRnK56S_nd8dX12DkzQZCui2mxvqiC4PLsKS8MNZVKwuabymrGG7YohdqhwTItHqwsnNLKED8vLko8oP59EgHOHtdE9ASRAjNHSnwQdTwyVrOnKY8sARIMpDAkZnQ-8yFBzucoDNXjCiXtQQY2g=="
+          "title": "Google News: Sports",
+          "url": "https://news.google.com/search?q=Sports%20top%20news%202026-08-19&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     },
     {
-      "id": "2026-08-18-entertainment",
+      "id": "2026-08-19-entertainment",
       "category": "entertainment",
       "categoryLabel": "Entertainment",
-      "headline": "Spider-Man: Brand New Day Crosses $2 Billion Worldwide Box Office Record",
-      "summary": "Sony and Marvel's \"Spider-Man: Brand New Day\" officially passed the $2 billion mark at the global box office in just 19 days of release. This milestone makes it the second-fastest movie in cinema history to reach $2 billion and the highest-grossing Spider-Man film of all time.",
-      "question": "Why do you think Spider-Man films continue to draw such massive global audiences compared to other superhero franchises?",
+      "headline": "Madonna and Taylor Swift Top 2026 MTV Video Music Awards Nominations",
+      "summary": "MTV announced the nominees for the 2026 Video Music Awards on Tuesday, with pop legend Madonna leading all artists with 11 nominations. Taylor Swift earned nine nominations, leaving her just one award win away from becoming the most-decorated artist in VMA history.",
+      "question": "Which artist or music video do you think deserves to win big at award shows this year?",
       "coachLeads": {
-        "friendly": "Hey, have you seen the latest movie news? The new Spider-Man film just crossed the two billion dollar mark at the box office!",
-        "energetic": "Spider-Man is breaking records left and right! It just became the second-fastest movie in history to hit two billion dollars globally!",
-        "calm": "There is a major milestone in global cinema today. The newest Spider-Man movie has joined the exclusive two billion dollar box office club.",
-        "direct": "The latest Spider-Man film just topped two billion dollars worldwide in under three weeks. This is worth talking about."
+        "friendly": "Hey, did you catch the news about this year's MTV VMA nominations?",
+        "energetic": "The MTV VMA nominations just dropped, and two massive pop icons are leading the pack! Let's dive in!",
+        "calm": "MTV recently announced the nominations for the 2026 Video Music Awards. It is worth taking a look at who made the list.",
+        "direct": "Madonna and Taylor Swift are leading this year's VMA nominations. What are your thoughts on music award shows?"
       },
       "sources": [
         {
           "title": "Google News: Entertainment",
-          "url": "https://news.google.com/search?q=Entertainment%20top%20news%202026-08-18&hl=en-US&gl=US&ceid=US:en"
+          "url": "https://news.google.com/search?q=Entertainment%20top%20news%202026-08-19&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     }
