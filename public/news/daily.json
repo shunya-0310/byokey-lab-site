@@ -1,88 +1,92 @@
 {
   "schemaVersion": 1,
   "status": "live",
-  "date": "2026-08-19",
-  "generatedAt": "2026-08-18T21:37:56.564Z",
+  "date": "2026-08-20",
+  "generatedAt": "2026-08-19T21:41:21.998Z",
   "model": "gemini-3.6-flash",
-  "fallbackCategories": [],
+  "fallbackCategories": [
+    "politics_economy"
+  ],
   "items": [
     {
-      "id": "2026-08-19-politics_economy",
+      "id": "2026-08-20-politics_economy-rss-headline",
       "category": "politics_economy",
       "categoryLabel": "Politics & Economy",
-      "headline": "Chinese Foreign Minister Wang Yi Begins First Official Visit to South Korea in Five Years",
-      "summary": "Chinese Foreign Minister Wang Yi arrived in South Korea on August 19 for a two-day official visit, marking his first bilateral trip to the country since 2021. The high-level discussions with South Korean leaders focus on strengthening diplomatic relations, addressing Korean Peninsula security, and preparing for the upcoming APEC summit.",
-      "question": "How do you think high-level diplomatic visits like this influence peace and trade relations across East Asia?",
+      "headline": "School Assembly News Headlines, August 20, 2026: Top national, international, business, sports updates and",
+      "summary": "This headline is currently listed by Google News for Politics & Economy. Open the source before discussing details beyond the headline.",
+      "question": "What caught your attention about this politics & economy headline?",
       "coachLeads": {
-        "friendly": "Hey, have you heard about China's foreign minister visiting South Korea today? It is a big moment for regional diplomacy, and I'd love to hear your thoughts on it!",
-        "energetic": "There is major diplomatic news breaking in East Asia today! China's top diplomat is in Seoul for high-stakes talks, so let's dive right into this topic!",
-        "calm": "China's foreign minister has started his first official visit to South Korea in five years. It provides a great opportunity to discuss how neighboring nations handle global political issues.",
-        "direct": "Chinese Foreign Minister Wang Yi is in South Korea today for his first official visit there in five years. Let's discuss why this meeting matters for regional security and cooperation."
+        "friendly": "I found a current politics & economy headline we can use for conversation practice. Let's open the source if we need more details.",
+        "energetic": "Here's a fresh politics & economy headline to talk about today. We can check the source together before going deeper.",
+        "calm": "There is a current politics & economy headline available from Google News. We can use it as a careful conversation starter.",
+        "direct": "Use this current politics & economy headline as today's discussion topic. Check the source before adding details."
       },
+      "fallback": true,
+      "fallbackKind": "rss_headline",
       "sources": [
         {
-          "title": "Google News: Politics & Economy",
-          "url": "https://news.google.com/search?q=Politics%20%26%20Economy%20top%20news%202026-08-19&hl=en-US&gl=US&ceid=US:en"
+          "title": "The Economic Times",
+          "url": "https://news.google.com/rss/articles/CBMimgJBVV95cUxNMUZodlo2aTFWY1RpeXZxcUI2VGdsOVJ5THczWUltNmRMWGQ1UzNNbFBjbWNuQ18zRGRQRnBBNHMxTGJXcS1BRS1zanNJdFpaSGNCWC1VQkcxcWltYkRHT25kblgzaTZZazh1ZHY1YU1qWnB4NzFnT3l3ZEViTEU4bXA2NE0wWDRCRWRNLUsxRkh0czdIMEpmTUhzODRlZ0lJWDFObmpkbVZhTm1hWUVhRzJXVmVfMXZ3SHowd2d3Q1FqczhudVM0bWlYWHRWQ2ZfRkVjb1pEV1BxZjZpLTJkVHFiZzVuS21IX3VvelEyN0NXbHVsR0JjOW0ydkpQOUIyT2MwREUtaGhFVGY2VVZFWXpNTkFheDFlUWfSAZ8CQVVfeXFMTTlURWxPTl81NmN3N1VBV2EyVkVZQnE0bXlZSnF4aFRra284SWJSUHhkU3EtLW5sd0NmSW5UTkRMQWUtMWFNNnZEdkpINjF1ZG1ZbUpjNTRUbVdGX1JEZFJNUC1UZjZqTXMxVGtaNzM3T1ExQ1RrMEdpa1phOUhrYWJ1ZkVRYXBPNzdnb3hYa29jazdTdzAyTWJzQW5TWEpUQUVQTW9qWDhNM2NGMUpCcjlUak92c3RpbjBucWVLazVqajJ2YWRxdDJVT28tZ2JsV0wtOHEyZDdCdnBDUlo4eC10TVR2OWo4N2RCaF9tdUxQbUtoZ0hIU01WcTBVSURCa1VzU3ZvQm02MHk0cXJtYWp0NGU0SjI5MVpyQXVWRmc?oc=5"
         }
       ]
     },
     {
-      "id": "2026-08-19-technology",
+      "id": "2026-08-20-technology",
       "category": "technology",
       "categoryLabel": "Technology",
-      "headline": "Apple Overhauls European App Store Rules Following Regulatory Agreement",
-      "summary": "Apple announced major revisions to its European Union app distribution policies after reaching an agreement with European Commission regulators [1.1.5]. Effective October 1, 2026, the tech giant is replacing its controversial per-download fee with a simplified commission structure and lowering overall transaction fees for developers.",
-      "question": "Do you think government regulations should dictate how major tech companies run their app stores?",
+      "headline": "NASA Calls Off Rescue Mission for Swift Space Telescope",
+      "summary": "On August 19, 2026, NASA and private startup Katalyst Space Technologies officially called off a planned rescue mission for the aging Swift space telescope [1.1.1]. The decision means the historic observatory will not have its orbit raised and is now doomed to a fiery atmospheric reentry later this year.",
+      "question": "How do you feel about space agencies partnering with private startups to maintain high-value scientific hardware in orbit?",
       "coachLeads": {
-        "friendly": "Hey! Have you heard about the big changes Apple is making to its app store rules in Europe?",
-        "energetic": "Apple just announced a massive shift in how it handles European app fees, and it's making huge news today!",
-        "calm": "Apple has agreed to update its European app distribution policies, settling a long-standing debate with regulators.",
-        "direct": "Apple updated its European Union app rules today, scrapping its per-install fee in favor of lower commission rates."
+        "friendly": "Hey, have you heard the latest news about NASA's space telescope? It is a really interesting topic to talk about today!",
+        "energetic": "Check this out—a high-stakes space rescue mission was just called off! Let's dive into what happened and why it is making headlines.",
+        "calm": "NASA recently decided to end a mission aimed at saving an orbiting observatory. Whenever you are ready, let's chat about what this means.",
+        "direct": "NASA and a space startup just abandoned plans to save an aging space telescope. Let me know what you think about this decision."
       },
       "sources": [
         {
-          "title": "apple.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHOCrzN84S5xWj7su_JPoIW1tAZ7nTtUZbYCyTHYrUWL3LZk9ER7eM_s3u6qhrkIbMI8xjdA2MVY3aY_kzR8x3OYiczTUX09WLjtVEbly3ZFOWZcM_CAg2p8_67diDzU09t9J3ar8EMm3ViQKwfYF7dAI7znBVVe6AakgDuz3_tXUfFwdfn0zQzkfhWxHxx9gURw74="
+          "title": "wsls.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHuZGomPtI_qc3-0k46c3NeCjWQ_QAIg2i9VMw5tWBEZrdVYmy0USq7yYMKZqMx_ZhRoPtUdyIFsrN3o7dISpmpgIiE6Dhut09zAPoFIByR2ssvPmTGuib36qHvHhh7anioYh_LImsZHuOMzxGE6yWyyzc00_plpkKPk3BeE2Yih-OJWU2BsUBCnw9P0ha3fIIOh4aehleOPTXXQMyyvQ=="
         }
       ]
     },
     {
-      "id": "2026-08-19-sports",
+      "id": "2026-08-20-sports",
       "category": "sports",
       "categoryLabel": "Sports",
-      "headline": "Venus Williams Granted US Open Main Draw Wild Card at Age 46",
-      "summary": "On August 18, 2026, the United States Tennis Association announced that two-time champion Venus Williams received a main-draw wild card for the upcoming US Open. The invitation makes the 46-year-old tennis legend the tournament's oldest singles entrant since 1981, making headline news across international sports.",
-      "question": "Do you think giving wild card entries to legendary veteran players adds value to major tournaments, or should those spots be reserved for younger players?",
+      "headline": "Rory McIlroy Warns LIV Golf Defectors Face Tough Path Back to PGA Tour",
+      "summary": "Ahead of the BMW Championship, Rory McIlroy questioned the value top stars like Jon Rahm brought to LIV Golf as the breakaway league faces major financial uncertainty. McIlroy warned that defecting players hoping to rejoin the PGA Tour will face a difficult, penalty-laden path back rather than an immediate welcome.",
+      "question": "Do you think sports leagues should allow players who left for rival competitions to return without major penalties?",
       "coachLeads": {
-        "friendly": "Hey, did you catch the big tennis news today? Venus Williams was given a wild card spot to play in the upcoming US Open.",
-        "energetic": "You won't believe this incredible sports story! Venus Williams just secured a spot in the US Open at 46 years old!",
-        "calm": "Venus Williams received a main-draw wild card for the US Open today. It's a noteworthy milestone that highlights her incredible longevity in professional tennis.",
-        "direct": "Venus Williams was awarded a US Open wild card today. At 46, she will be the oldest singles player in the draw since 1981."
+        "friendly": "Hey, have you caught the latest updates on the drama between the PGA Tour and LIV Golf? Rory McIlroy made some really interesting comments today that are worth talking about.",
+        "energetic": "Check this out—Rory McIlroy just threw down a huge challenge to LIV Golf stars trying to return to the PGA Tour! This is turning into a massive story across the sports world.",
+        "calm": "Rory McIlroy offered some thoughtful perspective on LIV Golf's financial struggles and potential player returns today. It opens up a great conversation about fairness in professional sports.",
+        "direct": "Rory McIlroy warned that LIV Golf defectors won't get an easy route back to the PGA Tour. What is your take on how the tour should handle returning athletes?"
       },
       "sources": [
         {
           "title": "Google News: Sports",
-          "url": "https://news.google.com/search?q=Sports%20top%20news%202026-08-19&hl=en-US&gl=US&ceid=US:en"
+          "url": "https://news.google.com/search?q=Sports%20top%20news%202026-08-20&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     },
     {
-      "id": "2026-08-19-entertainment",
+      "id": "2026-08-20-entertainment",
       "category": "entertainment",
       "categoryLabel": "Entertainment",
-      "headline": "Madonna and Taylor Swift Top 2026 MTV Video Music Awards Nominations",
-      "summary": "MTV announced the nominees for the 2026 Video Music Awards on Tuesday, with pop legend Madonna leading all artists with 11 nominations. Taylor Swift earned nine nominations, leaving her just one award win away from becoming the most-decorated artist in VMA history.",
-      "question": "Which artist or music video do you think deserves to win big at award shows this year?",
+      "headline": "Leaked Grand Theft Auto VI Gameplay Videos Surface Online Ahead of Official Reveal",
+      "summary": "A hacker group leaked multiple unreleased Grand Theft Auto VI gameplay videos and map images online, displaying features like vehicle driving, mini-games, and combat mechanics. Publisher Take-Two Interactive quickly issued copyright takedowns to remove the footage, making it a major story just days before an official showcase event.",
+      "question": "How do you think unexpected leaks affect a video game's excitement and official promotional plans?",
       "coachLeads": {
-        "friendly": "Hey, did you catch the news about this year's MTV VMA nominations?",
-        "energetic": "The MTV VMA nominations just dropped, and two massive pop icons are leading the pack! Let's dive in!",
-        "calm": "MTV recently announced the nominations for the 2026 Video Music Awards. It is worth taking a look at who made the list.",
-        "direct": "Madonna and Taylor Swift are leading this year's VMA nominations. What are your thoughts on music award shows?"
+        "friendly": "Hey! Have you heard about the massive video game leak that everyone is talking about today?",
+        "energetic": "You won't believe the huge news in gaming today! Unreleased gameplay footage from Grand Theft Auto VI was leaked online!",
+        "calm": "There is a lot of buzz today after leaked gameplay footage from Grand Theft Auto VI appeared online. Let's talk about what happened.",
+        "direct": "Leaked Grand Theft Auto VI gameplay clips hit the internet today. It's worth discussing how this impacts the gaming industry."
       },
       "sources": [
         {
           "title": "Google News: Entertainment",
-          "url": "https://news.google.com/search?q=Entertainment%20top%20news%202026-08-19&hl=en-US&gl=US&ceid=US:en"
+          "url": "https://news.google.com/search?q=Entertainment%20top%20news%202026-08-20&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     }
