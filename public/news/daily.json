@@ -1,92 +1,88 @@
 {
   "schemaVersion": 1,
   "status": "live",
-  "date": "2026-08-20",
-  "generatedAt": "2026-08-19T21:41:21.998Z",
+  "date": "2026-08-21",
+  "generatedAt": "2026-08-20T21:43:18.779Z",
   "model": "gemini-3.6-flash",
-  "fallbackCategories": [
-    "politics_economy"
-  ],
+  "fallbackCategories": [],
   "items": [
     {
-      "id": "2026-08-20-politics_economy-rss-headline",
+      "id": "2026-08-21-politics_economy",
       "category": "politics_economy",
       "categoryLabel": "Politics & Economy",
-      "headline": "School Assembly News Headlines, August 20, 2026: Top national, international, business, sports updates and",
-      "summary": "This headline is currently listed by Google News for Politics & Economy. Open the source before discussing details beyond the headline.",
-      "question": "What caught your attention about this politics & economy headline?",
+      "headline": "India and Japan Sign Maritime Security Pact to Expand Strategic Defense Cooperation",
+      "summary": "On August 20, 2026, Japanese Defense Minister Shinjiro Koizumi and Indian Defense Minister Rajnath Singh signed a landmark memorandum in New Delhi to deepen bilateral maritime security cooperation. The agreement enhances joint naval coordination, intelligence sharing, and potential collaboration in naval shipbuilding to help maintain stability across the Indo-Pacific region.",
+      "question": "How do you think increased defense cooperation between major Asian nations impacts long-term regional stability?",
       "coachLeads": {
-        "friendly": "I found a current politics & economy headline we can use for conversation practice. Let's open the source if we need more details.",
-        "energetic": "Here's a fresh politics & economy headline to talk about today. We can check the source together before going deeper.",
-        "calm": "There is a current politics & economy headline available from Google News. We can use it as a careful conversation starter.",
-        "direct": "Use this current politics & economy headline as today's discussion topic. Check the source before adding details."
+        "friendly": "Hey, have you heard about the latest diplomatic news from Asia? India and Japan just signed a major defense agreement, and it is a really great topic for us to talk about!",
+        "energetic": "Big moves in international diplomacy today! India and Japan are stepping up their maritime partnership, and this story is packed with fantastic conversation points!",
+        "calm": "There is an important diplomatic development worth reflecting on today. India and Japan have agreed to deepen their maritime security ties to foster regional stability.",
+        "direct": "India and Japan just finalized a new maritime security agreement in New Delhi. Let's break down what this means for global security and defense strategy."
       },
-      "fallback": true,
-      "fallbackKind": "rss_headline",
       "sources": [
         {
-          "title": "The Economic Times",
-          "url": "https://news.google.com/rss/articles/CBMimgJBVV95cUxNMUZodlo2aTFWY1RpeXZxcUI2VGdsOVJ5THczWUltNmRMWGQ1UzNNbFBjbWNuQ18zRGRQRnBBNHMxTGJXcS1BRS1zanNJdFpaSGNCWC1VQkcxcWltYkRHT25kblgzaTZZazh1ZHY1YU1qWnB4NzFnT3l3ZEViTEU4bXA2NE0wWDRCRWRNLUsxRkh0czdIMEpmTUhzODRlZ0lJWDFObmpkbVZhTm1hWUVhRzJXVmVfMXZ3SHowd2d3Q1FqczhudVM0bWlYWHRWQ2ZfRkVjb1pEV1BxZjZpLTJkVHFiZzVuS21IX3VvelEyN0NXbHVsR0JjOW0ydkpQOUIyT2MwREUtaGhFVGY2VVZFWXpNTkFheDFlUWfSAZ8CQVVfeXFMTTlURWxPTl81NmN3N1VBV2EyVkVZQnE0bXlZSnF4aFRra284SWJSUHhkU3EtLW5sd0NmSW5UTkRMQWUtMWFNNnZEdkpINjF1ZG1ZbUpjNTRUbVdGX1JEZFJNUC1UZjZqTXMxVGtaNzM3T1ExQ1RrMEdpa1phOUhrYWJ1ZkVRYXBPNzdnb3hYa29jazdTdzAyTWJzQW5TWEpUQUVQTW9qWDhNM2NGMUpCcjlUak92c3RpbjBucWVLazVqajJ2YWRxdDJVT28tZ2JsV0wtOHEyZDdCdnBDUlo4eC10TVR2OWo4N2RCaF9tdUxQbUtoZ0hIU01WcTBVSURCa1VzU3ZvQm02MHk0cXJtYWp0NGU0SjI5MVpyQXVWRmc?oc=5"
+          "title": "Google News: Politics & Economy",
+          "url": "https://news.google.com/search?q=Politics%20%26%20Economy%20top%20news%202026-08-21&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     },
     {
-      "id": "2026-08-20-technology",
+      "id": "2026-08-21-technology",
       "category": "technology",
       "categoryLabel": "Technology",
-      "headline": "NASA Calls Off Rescue Mission for Swift Space Telescope",
-      "summary": "On August 19, 2026, NASA and private startup Katalyst Space Technologies officially called off a planned rescue mission for the aging Swift space telescope [1.1.1]. The decision means the historic observatory will not have its orbit raised and is now doomed to a fiery atmospheric reentry later this year.",
-      "question": "How do you feel about space agencies partnering with private startups to maintain high-value scientific hardware in orbit?",
+      "headline": "US Cybersecurity Agencies Warn of Active AI-Driven Attacks on Critical Infrastructure",
+      "summary": "Multiple federal agencies issued a joint advisory warning that hackers are using AI-generated scripts to target industrial control systems across critical energy, water, and manufacturing facilities. The alert is drawing urgent global attention because it marks a concrete shift toward adversaries leveraging artificial intelligence to automate cyberattacks against essential public infrastructure.",
+      "question": "How do you think governments and technology companies should address the growing risk of artificial intelligence being used in cyberattacks?",
       "coachLeads": {
-        "friendly": "Hey, have you heard the latest news about NASA's space telescope? It is a really interesting topic to talk about today!",
-        "energetic": "Check this out—a high-stakes space rescue mission was just called off! Let's dive into what happened and why it is making headlines.",
-        "calm": "NASA recently decided to end a mission aimed at saving an orbiting observatory. Whenever you are ready, let's chat about what this means.",
-        "direct": "NASA and a space startup just abandoned plans to save an aging space telescope. Let me know what you think about this decision."
+        "friendly": "Hey, have you heard about the latest government warning on AI-driven cyberattacks? It's a really fascinating story to chat about today!",
+        "energetic": "Check this out—hackers are now using AI to target critical energy and water infrastructure! This is worth talking about, so let's dive right in.",
+        "calm": "There's an important update in cybersecurity today regarding AI-generated threats aimed at industrial control systems. Whenever you're ready, let's discuss what this means.",
+        "direct": "US agencies just issued a major warning about active AI-powered cyber threats against essential infrastructure. Let's break down why this matters."
       },
       "sources": [
         {
-          "title": "wsls.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHuZGomPtI_qc3-0k46c3NeCjWQ_QAIg2i9VMw5tWBEZrdVYmy0USq7yYMKZqMx_ZhRoPtUdyIFsrN3o7dISpmpgIiE6Dhut09zAPoFIByR2ssvPmTGuib36qHvHhh7anioYh_LImsZHuOMzxGE6yWyyzc00_plpkKPk3BeE2Yih-OJWU2BsUBCnw9P0ha3fIIOh4aehleOPTXXQMyyvQ=="
+          "title": "Google News: Technology",
+          "url": "https://news.google.com/search?q=Technology%20top%20news%202026-08-21&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     },
     {
-      "id": "2026-08-20-sports",
+      "id": "2026-08-21-sports",
       "category": "sports",
       "categoryLabel": "Sports",
-      "headline": "Rory McIlroy Warns LIV Golf Defectors Face Tough Path Back to PGA Tour",
-      "summary": "Ahead of the BMW Championship, Rory McIlroy questioned the value top stars like Jon Rahm brought to LIV Golf as the breakaway league faces major financial uncertainty. McIlroy warned that defecting players hoping to rejoin the PGA Tour will face a difficult, penalty-laden path back rather than an immediate welcome.",
-      "question": "Do you think sports leagues should allow players who left for rival competitions to return without major penalties?",
+      "headline": "FIFA President Gianni Infantino Faces Potential No-Confidence Vote",
+      "summary": "Major soccer governing bodies including UEFA, AFC, and CONCACAF are reportedly considering a vote of no confidence against FIFA President Gianni Infantino [1.4.4]. The potential move follows widespread opposition from regional federations over his proposal to sell private investment stakes in major FIFA tournaments.",
+      "question": "Do you think changing FIFA's top leadership would help improve how international soccer is managed?",
       "coachLeads": {
-        "friendly": "Hey, have you caught the latest updates on the drama between the PGA Tour and LIV Golf? Rory McIlroy made some really interesting comments today that are worth talking about.",
-        "energetic": "Check this out—Rory McIlroy just threw down a huge challenge to LIV Golf stars trying to return to the PGA Tour! This is turning into a massive story across the sports world.",
-        "calm": "Rory McIlroy offered some thoughtful perspective on LIV Golf's financial struggles and potential player returns today. It opens up a great conversation about fairness in professional sports.",
-        "direct": "Rory McIlroy warned that LIV Golf defectors won't get an easy route back to the PGA Tour. What is your take on how the tour should handle returning athletes?"
+        "friendly": "Hey, have you heard about the huge news involving FIFA's leadership today? Several major soccer organizations are considering a vote of no confidence against the president.",
+        "energetic": "This is major news! Football federations from around the globe are taking a stand against FIFA's president, and it could change international sports forever!",
+        "calm": "There is a notable development in global sports governance today. Multiple regional federations are considering a vote of no confidence against FIFA President Gianni Infantino.",
+        "direct": "FIFA President Gianni Infantino is facing a potential no-confidence vote from key soccer federations over controversial commercial proposals. Let's discuss what this means for the sport."
       },
       "sources": [
         {
-          "title": "Google News: Sports",
-          "url": "https://news.google.com/search?q=Sports%20top%20news%202026-08-20&hl=en-US&gl=US&ceid=US:en"
+          "title": "aljazeera.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHJej5SY444A07-a-iYaO87XBT68cXvh-i4h2SEAFoTpYnvxcfjeGhDeyO6-brzudgROKiIDr6_StR-h9JTeQwKc2o2ZGiU5B5PzKRF25FEkgLL90OGGwGCJhsE1C0fm20T00oODdpqAn9IxqXDogEgOarCLZi_S3PichgIndGZYvpFpQCi8o2YxF6t_TTJ1mbTJpy8z7-KoxFrBoWF8fx2bYMg2WG0"
         }
       ]
     },
     {
-      "id": "2026-08-20-entertainment",
+      "id": "2026-08-21-entertainment",
       "category": "entertainment",
       "categoryLabel": "Entertainment",
-      "headline": "Leaked Grand Theft Auto VI Gameplay Videos Surface Online Ahead of Official Reveal",
-      "summary": "A hacker group leaked multiple unreleased Grand Theft Auto VI gameplay videos and map images online, displaying features like vehicle driving, mini-games, and combat mechanics. Publisher Take-Two Interactive quickly issued copyright takedowns to remove the footage, making it a major story just days before an official showcase event.",
-      "question": "How do you think unexpected leaks affect a video game's excitement and official promotional plans?",
+      "headline": "Christopher Nolan's 'The Odyssey' Becomes Highest-Grossing R-Rated Movie of All Time",
+      "summary": "Director Christopher Nolan's epic feature \"The Odyssey\" has reached $1.35 billion at the global box office [2.1.1]. This milestone officially makes it the highest-grossing R-rated film in cinema history, surpassing the record previously held by \"Deadpool & Wolverine\".",
+      "question": "What factors do you think help a movie break major global box office records?",
       "coachLeads": {
-        "friendly": "Hey! Have you heard about the massive video game leak that everyone is talking about today?",
-        "energetic": "You won't believe the huge news in gaming today! Unreleased gameplay footage from Grand Theft Auto VI was leaked online!",
-        "calm": "There is a lot of buzz today after leaked gameplay footage from Grand Theft Auto VI appeared online. Let's talk about what happened.",
-        "direct": "Leaked Grand Theft Auto VI gameplay clips hit the internet today. It's worth discussing how this impacts the gaming industry."
+        "friendly": "Hey, have you heard the latest news from the movie world? A huge blockbuster just broke a major box office record.",
+        "energetic": "Big news for movie fans today! Christopher Nolan's latest film just officially set a massive world box office record!",
+        "calm": "There is notable news from the film industry today. A major release has officially become the highest-grossing R-rated movie in history.",
+        "direct": "Christopher Nolan's 'The Odyssey' is now the highest-grossing R-rated film ever made. Let's chat about what made it such a huge hit."
       },
       "sources": [
         {
-          "title": "Google News: Entertainment",
-          "url": "https://news.google.com/search?q=Entertainment%20top%20news%202026-08-20&hl=en-US&gl=US&ceid=US:en"
+          "title": "avclub.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG3q3Jbiw5VtdmRgXS1EUUHRgrTc-3J7gCZhetToxGSPcxGmXfkCnQGC-2r9J-mj_6bXy45OslgrnSBBM6tkSto5zE7JCTKKrFzdAOurxK5ypZ4-FiGHAobDwfb5ZeqZ21ljnnMcQegbdYejWPdUXUUEkTuzZnfB4-vDSWasU0KvIKTqKw="
         }
       ]
     }
