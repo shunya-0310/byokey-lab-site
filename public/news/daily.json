@@ -1,88 +1,92 @@
 {
   "schemaVersion": 1,
   "status": "live",
-  "date": "2026-08-21",
-  "generatedAt": "2026-08-20T21:43:18.779Z",
+  "date": "2026-08-22",
+  "generatedAt": "2026-08-21T21:38:57.981Z",
   "model": "gemini-3.6-flash",
   "fallbackCategories": [],
   "items": [
     {
-      "id": "2026-08-21-politics_economy",
+      "id": "2026-08-22-politics_economy",
       "category": "politics_economy",
       "categoryLabel": "Politics & Economy",
-      "headline": "India and Japan Sign Maritime Security Pact to Expand Strategic Defense Cooperation",
-      "summary": "On August 20, 2026, Japanese Defense Minister Shinjiro Koizumi and Indian Defense Minister Rajnath Singh signed a landmark memorandum in New Delhi to deepen bilateral maritime security cooperation. The agreement enhances joint naval coordination, intelligence sharing, and potential collaboration in naval shipbuilding to help maintain stability across the Indo-Pacific region.",
-      "question": "How do you think increased defense cooperation between major Asian nations impacts long-term regional stability?",
+      "headline": "Hong Kong Court Convicts Tiananmen Vigil Organizers of Subversion",
+      "summary": "A Hong Kong court convicted two prominent activists of incitement to subversion on August 21 under the city's Beijing-imposed national security law for organizing annual Tiananmen Square vigils [2.2.4]. The decision marks a major escalation in the crackdown on dissent in Hong Kong, with both defendants now facing up to ten years in prison.",
+      "question": "How do you think international organizations and foreign governments should respond when a country restricts free speech?",
       "coachLeads": {
-        "friendly": "Hey, have you heard about the latest diplomatic news from Asia? India and Japan just signed a major defense agreement, and it is a really great topic for us to talk about!",
-        "energetic": "Big moves in international diplomacy today! India and Japan are stepping up their maritime partnership, and this story is packed with fantastic conversation points!",
-        "calm": "There is an important diplomatic development worth reflecting on today. India and Japan have agreed to deepen their maritime security ties to foster regional stability.",
-        "direct": "India and Japan just finalized a new maritime security agreement in New Delhi. Let's break down what this means for global security and defense strategy."
+        "friendly": "Hey, have you heard about the recent court decision in Hong Kong? It's a really important story about world politics and free speech.",
+        "energetic": "Check this out—there's major news breaking out of Hong Kong today regarding a landmark trial! Let's talk about what just happened.",
+        "calm": "A significant legal verdict was handed down in Hong Kong today. It shows how the region's political landscape continues to shift.",
+        "direct": "Two Hong Kong pro-democracy activists were convicted of subversion today. This decision is drawing major international attention."
       },
       "sources": [
         {
-          "title": "Google News: Politics & Economy",
-          "url": "https://news.google.com/search?q=Politics%20%26%20Economy%20top%20news%202026-08-21&hl=en-US&gl=US&ceid=US:en"
+          "title": "courthousenews.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHWL32fhDBs59H9Ru17ywbMwN6YyWREuk0wnXb74N76EQSrX9LLI7WcXnAlVyizJ3FDBzaHkmOqBtXBt5wPSCnD9kqKDc8Ni98h_WHg6baDD3AyloclxgIIm42w7Y202RvmQM3GSS25tuTJU5tgBoLTDxxsX40eGjh34rFxf_FX5laS-7Y0w3w7V53pezHkB_Lohs_Ui3DR_8eMP2_Le5Sxqg=="
         }
       ]
     },
     {
-      "id": "2026-08-21-technology",
+      "id": "2026-08-22-technology",
       "category": "technology",
       "categoryLabel": "Technology",
-      "headline": "US Cybersecurity Agencies Warn of Active AI-Driven Attacks on Critical Infrastructure",
-      "summary": "Multiple federal agencies issued a joint advisory warning that hackers are using AI-generated scripts to target industrial control systems across critical energy, water, and manufacturing facilities. The alert is drawing urgent global attention because it marks a concrete shift toward adversaries leveraging artificial intelligence to automate cyberattacks against essential public infrastructure.",
-      "question": "How do you think governments and technology companies should address the growing risk of artificial intelligence being used in cyberattacks?",
+      "headline": "SpaceX Booster Achieves Record 30th Launch and Landing",
+      "summary": "On August 21, 2026, SpaceX launched 29 Starlink satellites into orbit using a Falcon 9 rocket whose first-stage booster successfully completed its 30th recovery landing [1.3.7]. This milestone makes tech headlines today by proving that reusable rocket hardware can operate far beyond its original ten-flight design target to lower the cost of space access.",
+      "question": "Do you think reusable rocket technology will make commercial space travel practical in our lifetime?",
       "coachLeads": {
-        "friendly": "Hey, have you heard about the latest government warning on AI-driven cyberattacks? It's a really fascinating story to chat about today!",
-        "energetic": "Check this out—hackers are now using AI to target critical energy and water infrastructure! This is worth talking about, so let's dive right in.",
-        "calm": "There's an important update in cybersecurity today regarding AI-generated threats aimed at industrial control systems. Whenever you're ready, let's discuss what this means.",
-        "direct": "US agencies just issued a major warning about active AI-powered cyber threats against essential infrastructure. Let's break down why this matters."
+        "friendly": "Hey, have you heard about the latest record broken in space exploration?",
+        "energetic": "Check this out—a single SpaceX rocket booster just completed its 30th launch and landing!",
+        "calm": "This is a quiet yet remarkable achievement in space engineering worth talking about.",
+        "direct": "SpaceX set a major milestone in rocket reusability today."
       },
       "sources": [
         {
-          "title": "Google News: Technology",
-          "url": "https://news.google.com/search?q=Technology%20top%20news%202026-08-21&hl=en-US&gl=US&ceid=US:en"
+          "title": "basenor.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGsMN_jpgP_dGNxkmQ6Ma6JQFe5190MCQpPilmFJmnCIQo-_rk-axZfhKyuaTuBmeXgIev89UvRwzQKdXqs55BmZ1usTq6EsJNFXr-MTH1oqM9WO0s5y2FKMsAHTWTISqLoYttXcNR0HbZrnMvlRLb6L4Wcli6b6R_31Xvs0vC9tjhIPjLYg7tNrGabccerzXgq99as"
         }
       ]
     },
     {
-      "id": "2026-08-21-sports",
+      "id": "2026-08-22-sports",
       "category": "sports",
       "categoryLabel": "Sports",
-      "headline": "FIFA President Gianni Infantino Faces Potential No-Confidence Vote",
-      "summary": "Major soccer governing bodies including UEFA, AFC, and CONCACAF are reportedly considering a vote of no confidence against FIFA President Gianni Infantino [1.4.4]. The potential move follows widespread opposition from regional federations over his proposal to sell private investment stakes in major FIFA tournaments.",
-      "question": "Do you think changing FIFA's top leadership would help improve how international soccer is managed?",
+      "headline": "FIFA Hands Heavy Bans to Argentina Players After World Cup Final Brawl",
+      "summary": "On August 21, 2026, FIFA announced major suspensions and fines against several Argentina national team members following a post-match brawl at the World Cup final against Spain [2.2.8]. Midfielder Leandro Paredes received a 10-match international ban for his role in the altercations, while the Argentine Football Association was also sanctioned with substantial fines.",
+      "question": "Do you think long suspensions are effective in discouraging unsportsmanlike behavior during high-stakes sporting events?",
       "coachLeads": {
-        "friendly": "Hey, have you heard about the huge news involving FIFA's leadership today? Several major soccer organizations are considering a vote of no confidence against the president.",
-        "energetic": "This is major news! Football federations from around the globe are taking a stand against FIFA's president, and it could change international sports forever!",
-        "calm": "There is a notable development in global sports governance today. Multiple regional federations are considering a vote of no confidence against FIFA President Gianni Infantino.",
-        "direct": "FIFA President Gianni Infantino is facing a potential no-confidence vote from key soccer federations over controversial commercial proposals. Let's discuss what this means for the sport."
+        "friendly": "Hey, did you see the latest news about the World Cup disciplinary rulings? It looks like FIFA just handed down some huge suspensions.",
+        "energetic": "You won't believe the massive story breaking in global soccer right now! FIFA just slapped key players with long bans after that World Cup final clash!",
+        "calm": "FIFA has officially issued its rulings regarding the altercations after the World Cup final. It is a significant decision that will impact international soccer for months to come.",
+        "direct": "FIFA just suspended several Argentina players following their post-match fight with Spain. Let's discuss whether these punishments fit the offense."
       },
       "sources": [
         {
-          "title": "aljazeera.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHJej5SY444A07-a-iYaO87XBT68cXvh-i4h2SEAFoTpYnvxcfjeGhDeyO6-brzudgROKiIDr6_StR-h9JTeQwKc2o2ZGiU5B5PzKRF25FEkgLL90OGGwGCJhsE1C0fm20T00oODdpqAn9IxqXDogEgOarCLZi_S3PichgIndGZYvpFpQCi8o2YxF6t_TTJ1mbTJpy8z7-KoxFrBoWF8fx2bYMg2WG0"
+          "title": "complex.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHHyXHG64oUD--_dc91sjg3g3eQQZJU6NGcZijR-kCAOuvveZy9oJtu4vIH6p8b2K0e7VpGYWdsY4w_Go9aMUE8HsV4BVbB2ysTyhgwa61wnezBdcA8T3wane6JPRuq1Yr2e8wbA74KI_Gp9VUO0to2qmmruC6eqm7WT3NeVmRRZHVsdyAWMSP6kCM="
+        },
+        {
+          "title": "si.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGtUSg4MtLjldWiWBKCZ4Bj57ghjq1Kb2s2j2CP506IjwJLtEI8Wq2OZOE6Kf5e4LM1dwI5sh59Gg9iPoNv22ILrcOcrwLEWFoyvLyoMKTVFpWoGyRUcBuJ7yF7PVi9ppYpYVieiBfRjYd9WTkNMywCLlzZeQ9r0WUVs4u5eevyGOuk"
         }
       ]
     },
     {
-      "id": "2026-08-21-entertainment",
+      "id": "2026-08-22-entertainment",
       "category": "entertainment",
       "categoryLabel": "Entertainment",
-      "headline": "Christopher Nolan's 'The Odyssey' Becomes Highest-Grossing R-Rated Movie of All Time",
-      "summary": "Director Christopher Nolan's epic feature \"The Odyssey\" has reached $1.35 billion at the global box office [2.1.1]. This milestone officially makes it the highest-grossing R-rated film in cinema history, surpassing the record previously held by \"Deadpool & Wolverine\".",
-      "question": "What factors do you think help a movie break major global box office records?",
+      "headline": "Shakira Pledges $1.25 Million to Rebuild Colombian Schools After Earthquake",
+      "summary": "Global music star Shakira has committed $1.25 million in partnership with Live Nation and Global Citizen to rebuild schools damaged by a recent earthquake in Colombia's Chocó region. The effort aims to quickly restore safe classrooms and access to education for thousands of affected children.",
+      "question": "What impact do you think celebrity fundraising can have during major natural disasters?",
       "coachLeads": {
-        "friendly": "Hey, have you heard the latest news from the movie world? A huge blockbuster just broke a major box office record.",
-        "energetic": "Big news for movie fans today! Christopher Nolan's latest film just officially set a massive world box office record!",
-        "calm": "There is notable news from the film industry today. A major release has officially become the highest-grossing R-rated movie in history.",
-        "direct": "Christopher Nolan's 'The Odyssey' is now the highest-grossing R-rated film ever made. Let's chat about what made it such a huge hit."
+        "friendly": "Hey, check out this inspiring news about Shakira supporting school relief in Colombia. Ready to chat about it?",
+        "energetic": "Shakira is stepping up in a huge way to help rebuild schools after a disaster! Let's jump right into this story!",
+        "calm": "Here is a positive story about a global artist giving back to her home country. Take a look whenever you're ready.",
+        "direct": "Shakira just pledged over a million dollars for earthquake relief in Colombia. Let me know your thoughts on this story."
       },
       "sources": [
         {
-          "title": "avclub.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG3q3Jbiw5VtdmRgXS1EUUHRgrTc-3J7gCZhetToxGSPcxGmXfkCnQGC-2r9J-mj_6bXy45OslgrnSBBM6tkSto5zE7JCTKKrFzdAOurxK5ypZ4-FiGHAobDwfb5ZeqZ21ljnnMcQegbdYejWPdUXUUEkTuzZnfB4-vDSWasU0KvIKTqKw="
+          "title": "Google News: Entertainment",
+          "url": "https://news.google.com/search?q=Entertainment%20top%20news%202026-08-22&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     }
