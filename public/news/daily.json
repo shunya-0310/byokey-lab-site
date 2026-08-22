@@ -1,92 +1,92 @@
 {
   "schemaVersion": 1,
   "status": "live",
-  "date": "2026-08-22",
-  "generatedAt": "2026-08-21T21:38:57.981Z",
+  "date": "2026-08-23",
+  "generatedAt": "2026-08-22T21:35:45.581Z",
   "model": "gemini-3.6-flash",
-  "fallbackCategories": [],
+  "fallbackCategories": [
+    "sports"
+  ],
   "items": [
     {
-      "id": "2026-08-22-politics_economy",
+      "id": "2026-08-23-politics_economy",
       "category": "politics_economy",
       "categoryLabel": "Politics & Economy",
-      "headline": "Hong Kong Court Convicts Tiananmen Vigil Organizers of Subversion",
-      "summary": "A Hong Kong court convicted two prominent activists of incitement to subversion on August 21 under the city's Beijing-imposed national security law for organizing annual Tiananmen Square vigils [2.2.4]. The decision marks a major escalation in the crackdown on dissent in Hong Kong, with both defendants now facing up to ten years in prison.",
-      "question": "How do you think international organizations and foreign governments should respond when a country restricts free speech?",
+      "headline": "U.S.-Canada Trade Talks Collapse as High Tariffs Take Effect",
+      "summary": "Trade negotiations between the United States and Canada collapsed after the two nations failed to reach a last-minute agreement, allowing steep 50 percent tariffs to come into effect [1.1.7]. In response, Canadian Prime Minister Mark Carney suspended ongoing trade talks and pledged to match the U.S. tariffs dollar for dollar.",
+      "question": "How do you think heavy tariffs between major trading partners affect everyday consumers and businesses?",
       "coachLeads": {
-        "friendly": "Hey, have you heard about the recent court decision in Hong Kong? It's a really important story about world politics and free speech.",
-        "energetic": "Check this out—there's major news breaking out of Hong Kong today regarding a landmark trial! Let's talk about what just happened.",
-        "calm": "A significant legal verdict was handed down in Hong Kong today. It shows how the region's political landscape continues to shift.",
-        "direct": "Two Hong Kong pro-democracy activists were convicted of subversion today. This decision is drawing major international attention."
+        "friendly": "Hey, have you heard about the sudden trade dispute breaking out between the U.S. and Canada?",
+        "energetic": "Trade talks between the U.S. and Canada just completely broke down, and it's making huge news worldwide!",
+        "calm": "Trade relations between the U.S. and Canada have taken a serious turn, which is definitely worth discussing.",
+        "direct": "The U.S. and Canada failed to strike a trade deal, leading to immediate retaliatory tariffs."
       },
       "sources": [
         {
-          "title": "courthousenews.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHWL32fhDBs59H9Ru17ywbMwN6YyWREuk0wnXb74N76EQSrX9LLI7WcXnAlVyizJ3FDBzaHkmOqBtXBt5wPSCnD9kqKDc8Ni98h_WHg6baDD3AyloclxgIIm42w7Y202RvmQM3GSS25tuTJU5tgBoLTDxxsX40eGjh34rFxf_FX5laS-7Y0w3w7V53pezHkB_Lohs_Ui3DR_8eMP2_Le5Sxqg=="
+          "title": "bnnbloomberg.ca",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGcI5QTjBqgilgw3QLccdcRGedrcDfh_SM1Ma5mZQsAP7ffT68lkfq5AXgcrqCwrqIphBEQKxaMPOtDiJi-EjvvSlRNkg6xtIDTbK775jLy7Fs4DcRLmBGXAzgMY1xI-w6e6erjp_eiSaTwyLHbWrS8MYt-JQe4u6CjpeRojx9xPx61mI2oig97D5hi2tg9051H7NMSoDHPdvT12cTdJEJNm4F6Zf9u_jkkdKZo2Z7uL3RutqaYU-fiKUQe0nkLtdp7"
         }
       ]
     },
     {
-      "id": "2026-08-22-technology",
+      "id": "2026-08-23-technology",
       "category": "technology",
       "categoryLabel": "Technology",
-      "headline": "SpaceX Booster Achieves Record 30th Launch and Landing",
-      "summary": "On August 21, 2026, SpaceX launched 29 Starlink satellites into orbit using a Falcon 9 rocket whose first-stage booster successfully completed its 30th recovery landing [1.3.7]. This milestone makes tech headlines today by proving that reusable rocket hardware can operate far beyond its original ten-flight design target to lower the cost of space access.",
-      "question": "Do you think reusable rocket technology will make commercial space travel practical in our lifetime?",
+      "headline": "Chinese Humanoid Robots Break Sprint Record at Beijing Games",
+      "summary": "At the World Humanoid Robot Games opening in Beijing, a Chinese humanoid robot completed a 100-meter sprint in 9.39 seconds, beating Usain Bolt's human world record [1.1.3]. The five-day event showcases over 2,000 robots competing in 51 athletic events, highlighting rapid global advances in high-speed robotics.",
+      "question": "How do you feel about robots becoming faster and stronger than human athletes?",
       "coachLeads": {
-        "friendly": "Hey, have you heard about the latest record broken in space exploration?",
-        "energetic": "Check this out—a single SpaceX rocket booster just completed its 30th launch and landing!",
-        "calm": "This is a quiet yet remarkable achievement in space engineering worth talking about.",
-        "direct": "SpaceX set a major milestone in rocket reusability today."
+        "friendly": "Hey, have you heard about this amazing tech news from Beijing? A humanoid robot just ran faster than Usain Bolt!",
+        "energetic": "You won't believe this breaking story! Robots just smashed world athletic records at a massive competition in Beijing!",
+        "calm": "An interesting milestone in technology occurred today in Beijing. Humanoid robots have officially outperformed human world sprint records.",
+        "direct": "Robots just beat human speed records at an athletic event in Beijing. Let's talk about what this step forward means for AI and robotics."
       },
       "sources": [
         {
-          "title": "basenor.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGsMN_jpgP_dGNxkmQ6Ma6JQFe5190MCQpPilmFJmnCIQo-_rk-axZfhKyuaTuBmeXgIev89UvRwzQKdXqs55BmZ1usTq6EsJNFXr-MTH1oqM9WO0s5y2FKMsAHTWTISqLoYttXcNR0HbZrnMvlRLb6L4Wcli6b6R_31Xvs0vC9tjhIPjLYg7tNrGabccerzXgq99as"
+          "title": "wsls.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEpaH8nwbYX1yX926Yg98XMI7TfM2rKNi-aB23LBo91Km3F_99y-F2o-oEVcQMrvKkA2iDC8Rxer-YcmYr045tlAn54XdColR6at6CjN_HJioS1ON36YBcOO34JzGteCaJ5J33tTGkMv73_3H2VJF1JWa89wi_C_8wXi5lhnk5qC95JOY7SEnYEorC60WWIRUoqhCl7-3SPuXSTBN4QiN8JHFjS3lKAP9PyWtXiCBlVMzccOIKkdxusE0iaLrUAUWM="
         }
       ]
     },
     {
-      "id": "2026-08-22-sports",
+      "id": "2026-08-23-sports-rss-headline",
       "category": "sports",
       "categoryLabel": "Sports",
-      "headline": "FIFA Hands Heavy Bans to Argentina Players After World Cup Final Brawl",
-      "summary": "On August 21, 2026, FIFA announced major suspensions and fines against several Argentina national team members following a post-match brawl at the World Cup final against Spain [2.2.8]. Midfielder Leandro Paredes received a 10-match international ban for his role in the altercations, while the Argentine Football Association was also sanctioned with substantial fines.",
-      "question": "Do you think long suspensions are effective in discouraging unsportsmanlike behavior during high-stakes sporting events?",
+      "headline": "2026 MLB Schedule 08/23/2026 - The Athletic",
+      "summary": "This headline is currently listed by Google News for Sports. Open the source before discussing details beyond the headline.",
+      "question": "What caught your attention about this sports headline?",
       "coachLeads": {
-        "friendly": "Hey, did you see the latest news about the World Cup disciplinary rulings? It looks like FIFA just handed down some huge suspensions.",
-        "energetic": "You won't believe the massive story breaking in global soccer right now! FIFA just slapped key players with long bans after that World Cup final clash!",
-        "calm": "FIFA has officially issued its rulings regarding the altercations after the World Cup final. It is a significant decision that will impact international soccer for months to come.",
-        "direct": "FIFA just suspended several Argentina players following their post-match fight with Spain. Let's discuss whether these punishments fit the offense."
+        "friendly": "I found a current sports headline we can use for conversation practice. Let's open the source if we need more details.",
+        "energetic": "Here's a fresh sports headline to talk about today. We can check the source together before going deeper.",
+        "calm": "There is a current sports headline available from Google News. We can use it as a careful conversation starter.",
+        "direct": "Use this current sports headline as today's discussion topic. Check the source before adding details."
       },
+      "fallback": true,
+      "fallbackKind": "rss_headline",
       "sources": [
         {
-          "title": "complex.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHHyXHG64oUD--_dc91sjg3g3eQQZJU6NGcZijR-kCAOuvveZy9oJtu4vIH6p8b2K0e7VpGYWdsY4w_Go9aMUE8HsV4BVbB2ysTyhgwa61wnezBdcA8T3wane6JPRuq1Yr2e8wbA74KI_Gp9VUO0to2qmmruC6eqm7WT3NeVmRRZHVsdyAWMSP6kCM="
-        },
-        {
-          "title": "si.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGtUSg4MtLjldWiWBKCZ4Bj57ghjq1Kb2s2j2CP506IjwJLtEI8Wq2OZOE6Kf5e4LM1dwI5sh59Gg9iPoNv22ILrcOcrwLEWFoyvLyoMKTVFpWoGyRUcBuJ7yF7PVi9ppYpYVieiBfRjYd9WTkNMywCLlzZeQ9r0WUVs4u5eevyGOuk"
+          "title": "The New York Times",
+          "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9fYmdvbWdNNVdwUUhNSk1IYWhMdTd0WHBVUFNsY1YyanMtOU4xQTBoWi01ZXo4Y1FjaTBwLVFXcGttdUw4aTFHd2F2UkZCVDFWVFc0VXZZbEE2MF8xQXVRZmZJMy1jNzNK?oc=5"
         }
       ]
     },
     {
-      "id": "2026-08-22-entertainment",
+      "id": "2026-08-23-entertainment",
       "category": "entertainment",
       "categoryLabel": "Entertainment",
-      "headline": "Shakira Pledges $1.25 Million to Rebuild Colombian Schools After Earthquake",
-      "summary": "Global music star Shakira has committed $1.25 million in partnership with Live Nation and Global Citizen to rebuild schools damaged by a recent earthquake in Colombia's Chocó region. The effort aims to quickly restore safe classrooms and access to education for thousands of affected children.",
-      "question": "What impact do you think celebrity fundraising can have during major natural disasters?",
+      "headline": "Sony Claims Top Two Box Office Spots as 'Insidious' Surprises 'Spider-Man'",
+      "summary": "Sony Pictures dominated the North American box office this weekend as horror sequel 'Insidious: Out of the Further' narrowly edged out 'Spider-Man: Brand New Day' on Friday with a $10.6 million opening day. The strong performance gives the studio the top two theatrical positions nationwide, highlighting strong audience demand for horror releases alongside blockbuster superhero films.",
+      "question": "Do you prefer watching horror movies or superhero blockbusters when you go to the cinema, and why?",
       "coachLeads": {
-        "friendly": "Hey, check out this inspiring news about Shakira supporting school relief in Colombia. Ready to chat about it?",
-        "energetic": "Shakira is stepping up in a huge way to help rebuild schools after a disaster! Let's jump right into this story!",
-        "calm": "Here is a positive story about a global artist giving back to her home country. Take a look whenever you're ready.",
-        "direct": "Shakira just pledged over a million dollars for earthquake relief in Colombia. Let me know your thoughts on this story."
+        "friendly": "Hey, have you caught up on the latest movie news today? Sony is having a massive weekend at the box office with horror and superhero hits!",
+        "energetic": "Look at this weekend's box office numbers! Sony just claimed both top spots as a brand-new horror sequel surprised the latest Spider-Man movie!",
+        "calm": "Here is an interesting story from the film world today. Sony has taken the top two positions at the domestic box office with a horror release and its Spider-Man blockbuster.",
+        "direct": "Sony dominated the box office this weekend by holding both the number one and number two spots. Let's discuss why horror and superhero films continue to pull in big crowds."
       },
       "sources": [
         {
           "title": "Google News: Entertainment",
-          "url": "https://news.google.com/search?q=Entertainment%20top%20news%202026-08-22&hl=en-US&gl=US&ceid=US:en"
+          "url": "https://news.google.com/search?q=Entertainment%20top%20news%202026-08-23&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     }
