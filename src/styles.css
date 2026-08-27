@@ -291,6 +291,16 @@ footer small { grid-column: 1 / -1; color: var(--muted); }
 .release-section p { color: var(--muted); }
 .release-actions { flex: 0 0 260px; display: grid; gap: 12px; justify-items: stretch; }
 .release-actions .text-link { justify-self: start; margin-top: 6px; }
+.edition-comparison { max-width: 1180px; margin: auto; padding: 96px 28px; border-top: 1px solid var(--line); }
+.edition-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; margin-top: 38px; }
+.edition-grid article { padding: 28px; border: 1px solid var(--line); background: rgba(255,255,255,.76); }
+.edition-grid article.is-featured { border: 2px solid var(--gold); background: #fffaf0; }
+.edition-grid h3 { margin: 0 0 10px; font-size: 1.45rem; }
+.edition-grid p { color: var(--muted); font-size: .88rem; }
+.edition-label { color: var(--gold-dark) !important; font-size: .72rem !important; font-weight: 900; letter-spacing: .08em; }
+.edition-grid ul { display: grid; gap: 10px; padding: 0; margin: 22px 0 28px; list-style: none; font-size: .86rem; }
+.edition-grid li { display: flex; align-items: flex-start; gap: 8px; }
+.edition-grid li svg { flex: 0 0 auto; color: var(--green); margin-top: 2px; }
 .install-steps { max-width: 720px; margin-top: 24px; padding: 22px 24px; border: 1px solid var(--line); background: rgba(255, 255, 255, .7); }
 .install-steps strong { display: block; margin-bottom: 10px; color: var(--ink); }
 .install-steps ol { margin: 0; padding-left: 1.35em; color: #46514b; line-height: 1.8; }
@@ -399,7 +409,8 @@ footer small { grid-column: 1 / -1; color: var(--muted); }
   .compact-intro { display: block; }
   .compact-intro h2 { margin-bottom: 16px; }
   .setup-step { padding: 22px 18px; }
-  .principles-section, .speed-section, .coach-section, .pricing-section, .faq-section, .release-section { padding: 78px 18px; }
+  .principles-section, .speed-section, .coach-section, .pricing-section, .faq-section, .release-section, .edition-comparison { padding: 78px 18px; }
+  .edition-grid { grid-template-columns: 1fr; }
   .speak-features { padding: 62px 18px 12px; }
   .speak-features article { padding: 24px 18px; min-height: 0; }
   .data-columns { grid-template-columns: 1fr; }
