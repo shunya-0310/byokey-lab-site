@@ -16,9 +16,9 @@ export const seoRoutes = [
   },
   {
     path: "/speak/english/",
-    title: "BYOKey Speak | 無料体験版とAndroid製品版のAI英会話",
+    title: "BYOKey Speak for English | Gemini APIキーで使う英会話PWA",
     description:
-      "BYOKey Speakは、Gemini APIキーで使うAI英会話です。無料のPWA体験版と、Daily News・会話分析・Gemini TTSを使えるAndroid製品版を用意しています。",
+      "BYOKey Speak for Englishは、Gemini APIキーで使える英会話学習PWAです。Quick Assistで日本語から自然な英語表現を提案し、会話練習を続けやすくします。",
     priority: "0.9",
     changefreq: "weekly",
     schemaType: "WebPage",
@@ -153,7 +153,7 @@ export function buildJsonLd(route) {
         "@type": "Offer",
         price: "0",
         priceCurrency: "JPY",
-        description: "PWA体験版のアプリ利用料は無料。Gemini API利用料は利用者がGoogleへ直接支払います。",
+        description: "アプリ利用料は無料。Gemini API利用料は利用者がGoogleへ直接支払います。",
       },
     });
   }
