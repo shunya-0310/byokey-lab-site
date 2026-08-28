@@ -35,7 +35,6 @@ import {
 
 const contactFormUrl = "https://docs.google.com/forms/d/e/1FAIpQLSf14ucq_SU36hxEQSsw0W5eBJ1WVp7PYjCaaEHu9GKRWyWQVw/viewform?usp=publish-editor";
 const speakAppUrl = SPEAK_APP_URL;
-const playStoreUrl = "https://play.google.com/store/apps/details?id=com.byokeylab.speak";
 
 const providers = [
   {
@@ -343,9 +342,9 @@ function HomePage({ onNavigate }) {
           <h1 className="sr-only">BYOKey Lab</h1>
           <div className="brand-lockup"><img src={byokeyLabLogo} alt="BYOKey Lab - The Key is in your hand" /></div>
           <p className="hero-lead">AIアプリは、もう、<br />定額に縛られない。</p>
-          <p className="hero-copy">BYOKey Labは、利用者自身のAPIキーで動く小さなAIツールをつくります。PWA体験版とAndroid製品版を中心に、BYOK型AIアプリの使い方と注意点を整理します。PWAとは、ブラウザから使え、ホーム画面にも追加できるWebアプリです。</p>
+          <p className="hero-copy">BYOKey Labは、利用者自身のAPIキーで動く小さなAIツールをつくります。本文書の記載時点では、モバイルアプリではなく、PWAとPCアプリを中心に進めます。PWAとは、ブラウザから使えるWebアプリで、ホーム画面にも追加できる形式です。</p>
           <div className="hero-actions">
-            <InternalLink className="button button-primary" to="/speak/english/" onNavigate={onNavigate}>BYOKey Speakを見る<ArrowRight size={18} /></InternalLink>
+            <InternalLink className="button button-primary" to="/speak/english/" onNavigate={onNavigate}>最初のプロダクトを見る<ArrowRight size={18} /></InternalLink>
             <InternalLink className="button button-secondary" to="/important/" onNavigate={onNavigate}>重要事項を見る<ShieldAlert size={18} /></InternalLink>
             <InternalLink className="button button-secondary" to="/guide/api/" onNavigate={onNavigate}>API設定ガイド<BookOpen size={18} /></InternalLink>
           </div>
@@ -371,7 +370,7 @@ function HomePage({ onNavigate }) {
               <div className="principle-icon local"><Smartphone size={23} /></div>
               <h3>ユーザー</h3>
               <p>アカウント登録なしで試せる構成を優先します。PWA版ではAPIキーをBYOKey Labのサーバーへ送らず、PCアプリでは環境変数など利用者本人のローカル実行環境で扱う方針です。</p>
-              <ul><li><Check size={17} />APIキーをBYOKey Labへ預けない</li><li><Check size={17} />専用キーと利用上限の設定を前提にする</li><li><Check size={17} />公開形態ごとの注意事項を明示する</li></ul>
+              <ul><li><Check size={17} />APIキーをBYOKey Labへ預けない</li><li><Check size={17} />専用キーと利用上限の設定を前提にする</li><li><Check size={17} />モバイルアプリ公開は見送る</li></ul>
             </article>
             <article>
               <div className="principle-icon direct"><ExternalLink size={23} /></div>
@@ -387,7 +386,7 @@ function HomePage({ onNavigate }) {
             <p className="section-kicker">FIRST PRODUCT</p>
             <h2 className="product-title"><span>BYOKey</span><span>Speak</span><small>for English</small></h2>
             <p>英語が出てこない瞬間も、Quick Assistが日本語の質問から自然な表現を提案。会話の流れを止めません。</p>
-            <div className="inline-meta"><span>PWA体験版を公開中</span><span>Android製品版を販売中</span><span>Gemini APIのみ</span></div>
+            <div className="inline-meta"><span>PWA公開中</span><span>Gemini APIのみ</span><span>API代は利用者負担</span></div>
             <InternalLink className="button button-dark" to="/speak/english/" onNavigate={onNavigate}>製品ページへ<ArrowRight size={18} /></InternalLink>
           </div>
           <QuickAssistCard compact />
@@ -403,8 +402,8 @@ function SpeakFeatureBand() {
   const features = [
     {
       icon: MessageCircle,
-      title: "体験版でも会話を始められる",
-      body: "PWA体験版では、Geminiによる英会話、Quick Assist、端末の音声入力・読み上げを無料で試せます。",
+      title: "ニュースから話し始める",
+      body: "毎朝届く世界のトップニュースをきっかけに、政治・経済、技術、スポーツ、エンタメの話題で会話できます。",
     },
     {
       icon: Sparkles,
@@ -413,8 +412,8 @@ function SpeakFeatureBand() {
     },
     {
       icon: CheckCircle2,
-      title: "製品版で学習を深める",
-      body: "Android製品版では、Daily News、会話分析、CEFR B1〜C2、Gemini TTSを利用できます。",
+      title: "話し方の癖を振り返る",
+      body: "会話履歴が溜まると、推定CEFRレベル、よくある間違い、次に伸ばすポイントを分析できます。",
     },
   ];
 
@@ -706,11 +705,10 @@ function SpeakPage({ onNavigate }) {
             <p className="hero-lead">費用は使った分だけ。</p>
             <p className="hero-copy">英語が出てこないときは、日本語のまま聞く。Quick Assistが自然な表現を提案し、<strong className="underlined-copy">会話の流れを止めません。</strong></p>
             <div className="hero-actions">
-              <a className="button button-primary" href={speakAppUrl} target="_blank" rel="noreferrer"><Play size={18} fill="currentColor" />PWA体験版を使う</a>
-              <a className="button button-dark" href={playStoreUrl} target="_blank" rel="noreferrer"><Smartphone size={18} />Android製品版を見る</a>
+              <a className="button button-primary" href={speakAppUrl} target="_blank" rel="noreferrer"><Play size={18} fill="currentColor" />BYOKey Speakを開く</a>
               <InternalLink className="button button-secondary" to="/guide/api/" onNavigate={onNavigate}><BookOpen size={18} />API設定ガイド</InternalLink>
             </div>
-            <p className="fine-print"><strong>PWA版は無料の体験版です。</strong> Gemini API利用料はGoogleから直接請求されます。</p>
+            <p className="fine-print"><strong>PWA版はGemini APIのみ対応。</strong> Gemini API利用料はGoogleから直接請求されます。</p>
           </div>
           <ConversationPreview />
         </section>
@@ -734,24 +732,17 @@ function SpeakPage({ onNavigate }) {
           <div className="coach-copy">
             <p className="section-kicker">YOUR COACH</p>
             <h2>レベルも、話し方も、自分で決める。</h2>
-            <p>PWA体験版ではCEFR A1〜A2、Android製品版ではA1〜C2から、語彙や文の長さを調整できます。さらに「Coach Personalities & Skills」へ希望を書くと、解説の仕方や会話のテンポも変えられます。</p>
+            <p>CEFR A1からC2まで、語彙や文の長さを調整。さらに「Coach Personalities & Skills」へ希望を書くと、解説の仕方や会話のテンポも変えられます。</p>
           </div>
           <CoachSettingsDemo />
         </section>
         <PricingSimulator />
-        <section className="edition-comparison" aria-labelledby="edition-comparison-title">
-          <div className="section-intro"><p className="section-kicker">EDITIONS</p><h2 id="edition-comparison-title">まずは体験。続けるなら製品版へ。</h2><p>どちらもGemini APIキーを利用者自身で設定するBYOK方式です。アプリ利用料とGemini API利用料は別で、API利用料はGoogleから直接請求されます。</p></div>
-          <div className="edition-grid">
-            <article><p className="edition-label">FREE</p><h3>PWA体験版</h3><p>ブラウザから登録不要で使えます。</p><ul><li><Check size={16} />Geminiテキスト会話・Quick Assist</li><li><Check size={16} />端末の音声入力・読み上げ</li><li><Check size={16} />CEFR A1〜A2、Vocabulary、学習記録</li><li><X size={16} />Daily News・会話分析・Gemini TTS</li></ul><a className="button button-secondary" href={speakAppUrl} target="_blank" rel="noreferrer">ブラウザで体験版を使う<ExternalLink size={18} /></a></article>
-            <article className="is-featured"><p className="edition-label">ANDROID / ¥500</p><h3>Android製品版</h3><p>学習を続けるためのフル機能版です。</p><ul><li><Check size={16} />PWA体験版の全機能</li><li><Check size={16} />Daily News・会話分析</li><li><Check size={16} />CEFR A1〜C2・Gemini TTS</li><li><Check size={16} />Google Playからインストール</li></ul><a className="button button-primary" href={playStoreUrl} target="_blank" rel="noreferrer">Google Playで製品版を見る<ExternalLink size={18} /></a></article>
-          </div>
-        </section>
         <FaqSection onNavigate={onNavigate} />
         <section className="release-section" id="release">
           <div>
             <p className="section-kicker">RELEASE</p>
-            <h2>BYOKey Speakを選んで始める。</h2>
-            <p>登録不要のPWA体験版と、フル機能のAndroid製品版を用意しています。利用前に重要事項とAPI設定ガイドを確認し、専用キーと利用上限を設定したうえでお使いください。</p>
+            <h2>BYOKey Speak PWAを公開しました。</h2>
+            <p>Gemini APIキーで試せるPWAとして公開しています。利用前に重要事項とAPI設定ガイドを確認し、専用キーと利用上限を設定したうえでお使いください。</p>
             <div className="install-steps">
               <strong>ホーム画面に追加して使う</strong>
               <ol>
@@ -762,8 +753,7 @@ function SpeakPage({ onNavigate }) {
             </div>
           </div>
           <div className="release-actions">
-            <a className="button button-dark" href={speakAppUrl} target="_blank" rel="noreferrer">PWA体験版を開く<ExternalLink size={18} /></a>
-            <a className="button button-primary" href={playStoreUrl} target="_blank" rel="noreferrer">Android製品版を見る<ExternalLink size={18} /></a>
+            <a className="button button-dark" href={speakAppUrl} target="_blank" rel="noreferrer">BYOKey Speakを開く<ExternalLink size={18} /></a>
             <InternalLink className="button button-secondary" to="/guide/api/" onNavigate={onNavigate}>API設定ガイド<ArrowRight size={18} /></InternalLink>
             <InternalLink className="text-link" to="/important/" onNavigate={onNavigate}>重要事項を見る<ArrowRight size={17} /></InternalLink>
           </div>
@@ -856,7 +846,7 @@ function ImportantPage({ onNavigate }) {
           <article>
             <ShieldAlert size={24} />
             <strong>モバイルアプリ</strong>
-            <span>Android製品版は、注意事項への同意を前提に公開しています。</span>
+            <span>本文書の記載時点では公開しません。</span>
           </article>
           <article>
             <ExternalLink size={24} />
@@ -874,9 +864,9 @@ function ImportantPage({ onNavigate }) {
           <p>BYOKey Labは、利用者自身が取得したLLM APIキーを使うBYOK型のAIツールを扱います。APIキーは利用者のプロバイダーアカウント、利用上限、請求に紐づく重要な認証情報です。そのため、BYOKey LabがAPIキーを預かる構成、問い合わせやサポートでAPIキーの送信を求める構成、ログや公開リポジトリにAPIキーが残る構成は採用しません。</p>
           <p>本ページは、法的助言ではありません。各LLMプロバイダーの仕様、規約、セキュリティガイドラインは変更される可能性があるため、公開時点および主要アップデート時点で公式情報を確認します。</p>
 
-          <h2>2. モバイルアプリの公開における注意事項</h2>
+          <h2>2. モバイルアプリの公開方針</h2>
           <p>モバイルアプリにAPIキーを配置する構成は、各社のセキュリティガイドライン上、暗号化して保存する場合でも推奨されにくいクライアント側の構成です。暗号化は保存データの偶発的な露出を減らしますが、アプリがAPIへ接続する時点ではキーを実行環境で使用するため、侵害端末、root化端末、動的解析、悪意あるアプリなどのリスクを完全には排除できません。</p>
-          <p>BYOKey SpeakのAndroid製品版は、このリスクを理解した利用者が自分のAPIキーを自分の責任で扱うBYOK方式です。初回案内でリスクと外部送信を説明し、同意を得たうえで利用できます。アプリのソースコードはGitHubで公開し、APIキーをBYOKey Labのサーバーへ送信・保存・照会しない構成を確認できるようにしています。</p>
+          <p>また、配布済みモバイルアプリは、利用者から見て内部処理の透明性を確認しにくい面があります。BYOKey Labは、この透明性の不足を課題と判断し、本文書の記載時点では、APIキーをアプリ内に配置するモバイルアプリを公開しません。</p>
 
           <h2>3. PWAの公開方針</h2>
           <p>PWAもブラウザ上で動作するクライアント環境であり、APIキーの露出リスクがなくなるわけではありません。一方で、実装をGitHubなどで公開することで「APIキーをBYOKey Labのサーバーへ送っていない」ことを確認しやすい構成にできます。</p>
@@ -923,7 +913,7 @@ function PrivacyPage({ onNavigate }) {
           <div><ExternalLink size={22} /><strong>回答生成</strong><span>Gemini APIへ直接送信</span></div>
         </div>
         <article className="policy-body">
-          <h2>1. 対象</h2><p>本ポリシーは、BYOKey Labが提供するPWA体験版「BYOKey Speak for English」に適用されます。Android製品版の取り扱いは、アプリ内およびGoogle Playで案内する内容に従います。</p>
+          <h2>1. 対象</h2><p>本ポリシーは、BYOKey Labが提供予定のPWA「BYOKey Speak for English」に適用されます。本文書の記載時点では、モバイルアプリ版は公開しません。</p>
           <h2>2. アプリ内で扱う情報</h2><p>Gemini APIキー、会話内容、コーチ設定、CEFRレベル、学習メモ、Vocabulary List、会話分析などを扱います。これらは原則として利用者のブラウザ内に保存されます。</p>
           <h2>3. APIキー</h2><p>Gemini APIキーは、BYOKey Labが運営するサーバーには送信しません。キーは、Google Gemini APIへの認証にのみ利用します。PWAもクライアント環境であるため、APIキーの露出リスクがなくなるわけではありません。</p>
           <h2>4. 外部LLMサービスへの送信</h2><p>回答を生成するため、入力した文章、必要な会話履歴、CEFRレベル、コーチ設定をGoogle Gemini APIへブラウザから送信します。送信情報の取り扱いはGoogleの規約とプライバシーポリシーに従います。</p>
@@ -947,7 +937,7 @@ function TermsPage({ onNavigate }) {
       <main className="document-page">
         <div className="document-header"><p className="section-kicker">TERMS</p><h1>利用規約</h1><p>BYOKey Speak for English PWA版の利用条件です。</p><small>施行日: 2026年8月10日</small></div>
         <article className="policy-body">
-          <h2>1. 適用</h2><p>本規約は、BYOKey Labが提供するPWA体験版「BYOKey Speak for English」の利用に適用されます。利用者は、本規約、プライバシーポリシー、重要事項を確認したうえで本アプリを利用します。</p>
+          <h2>1. 適用</h2><p>本規約は、BYOKey Labが提供予定のPWA「BYOKey Speak for English」の利用に適用されます。利用者は、本規約、プライバシーポリシー、重要事項を確認したうえで本アプリを利用します。</p>
           <h2>2. 本アプリの仕組み</h2><p>本アプリは、利用者自身が取得したGoogle Gemini APIキーを使用して英会話機能を提供します。利用できるモデル、料金、利用上限、生成結果はGoogle Gemini APIの仕様に依存します。本文書の記載時点では、OpenAI APIキーおよびAnthropic APIキーには対応しません。</p>
           <h2>3. 料金</h2><p>本アプリの提供条件と、Googleが請求するAPI利用料は別です。API利用料は利用者とGoogleとの間で発生し、BYOKey Labは請求、返金、利用上限の設定を代行しません。利用者はGoogle AI Studioまたは関連する管理画面で予算上限と通知を設定してください。</p>
           <h2>4. APIキー</h2><p>利用者はAPIキーを第三者へ共有せず、安全に管理するものとします。BYOKey Labがサポート、返金、調査を理由にAPIキーの送信を求めることはありません。APIキーの漏えいが疑われる場合は、発行元で直ちに無効化してください。</p>
