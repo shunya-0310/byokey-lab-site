@@ -1,92 +1,108 @@
 {
   "schemaVersion": 1,
   "status": "live",
-  "date": "2026-08-28",
-  "generatedAt": "2026-08-28T05:24:38.483Z",
+  "date": "2026-08-29",
+  "generatedAt": "2026-08-29T03:10:55.199Z",
   "model": "gemini-3.6-flash",
-  "fallbackCategories": [
-    "technology"
-  ],
+  "fallbackCategories": [],
   "items": [
     {
-      "id": "2026-08-28-politics_economy",
+      "id": "2026-08-29-politics_economy",
       "category": "politics_economy",
       "categoryLabel": "Politics & Economy",
-      "headline": "Meta Agrees to $18 Billion Settlement Over Teen Social Media Addiction Lawsuits",
-      "summary": "Meta has agreed to pay up to $18 billion to settle landmark lawsuits brought by dozens of U.S. states alleging that its platforms harm youth mental health through addictive design features. The story is front-page news today because the agreement requires sweeping changes, including strict daily screen time limits and nighttime app restrictions for teenage users on Instagram and Facebook.",
-      "question": "Do you think government-enforced time limits on social media are an effective way to protect teenagers, or should screen time be managed entirely by parents?",
+      "headline": "Federal Reserve Chair Kevin Warsh Signals Potential Rate Increase at Jackson Hole Speech",
+      "summary": "Speaking at the annual Jackson Hole Economic Policy Symposium on August 28, Federal Reserve Chair Kevin Warsh warned that persistent inflation could compel the central bank to raise interest rates further. His hawkish tone led financial markets to immediately raise the probability of an interest rate hike at the upcoming September meeting.",
+      "question": "How do you think central bank decisions on interest rates affect everyday consumers and local businesses?",
       "coachLeads": {
-        "friendly": "Hey, have you heard about the massive tech settlement that was just announced? It's a really interesting story to chat about.",
-        "energetic": "This huge story about social media and teen safety is making front-page news everywhere! I'd love to hear your thoughts on it.",
-        "calm": "A major legal settlement involving social media platforms was recently reached in court. It raises some important questions worth reflecting on.",
-        "direct": "Meta has agreed to pay up to $18 billion to settle nationwide lawsuits regarding teenage social media addiction. Let's discuss what this means."
+        "friendly": "Hey, did you catch the latest economic news today? The Federal Reserve head gave a major speech about interest rates that everyone is talking about.",
+        "energetic": "Big economic news just broke from the Jackson Hole meeting! The Fed is signaling possible interest rate hikes, and markets are reacting fast!",
+        "calm": "Federal Reserve Chair Kevin Warsh gave his first Jackson Hole speech today, focusing on inflation and interest rates. It is a quiet but important moment for global markets that is worth discussing.",
+        "direct": "The Federal Reserve chairman signaled today that interest rate hikes remain on the table due to persistent inflation. Let's discuss how central bank policies impact the broader economy."
       },
       "sources": [
         {
-          "title": "Google News: Politics & Economy",
-          "url": "https://news.google.com/search?q=Politics%20%26%20Economy%20top%20news%202026-08-28&hl=en-US&gl=US&ceid=US:en"
+          "title": "washingtonpost.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH9rjhmetqXVZl0QAQvl7kuP5-H0QSZF0Shh-xk_dMhvdhh19bWROsmLAw8tWNHFww4TDhPM0povrjgG2nVdWWY461LGT2DcvDIyeu1wmsUQt3k5QNM35mfYQ-PKvTvNGwJPPu5wGwVyCkhxbUpINJ0pMnpcuFEqXoFbLa9WwS-MX3dOEntgMhZlHaaKOgUvRVtS_t5Wu1CpA=="
+        },
+        {
+          "title": "aljazeera.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGIbHA6JRUU_O5fBeCuKOwqxkAyHpoeUKVmqNmexDJQSEFDilR-Or_csWeQdLvPPEznuc0woi827Gte6kXQ6GYGu-S1wTLgWGrlxwMGmlQXEtocdUeoeI7RiKXjb7sjfa3pJSr5kNVLpy4xLTU94jIwXou8tpk3JZHTwGfkT3F6K2cFCjfaF4rk2T9pRS8mpTFVc5Q9wUq3KnwV-1Zya8NG0DIU95GgDeE="
+        },
+        {
+          "title": "morningstar.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGUYwG3SKxIppVQeVI9hRKuhz-Kr-B3ZqKcvI_QkNV_TJcc_RnV8A4fuNxDhpgXMJF7ZsChQBYVkWz237v-A7dZr5X_PhmLpplF0pWmqACSZRPrvrFmeZYIVjKUGQ7WLFdmpUBhtGN3H_C8pS-3JTBLsbwT-OUEpwOENYRqXERmTbFDavstP8NZATyKh0KmSDT1NBHsMn-6riFU56ejyx5B4D1iF6-ELvdXHTB3xPj2UYQ4gXApdn1TwR2uHGxXD3k="
         }
       ]
     },
     {
-      "id": "2026-08-28-technology-rss-headline",
+      "id": "2026-08-29-technology",
       "category": "technology",
       "categoryLabel": "Technology",
-      "headline": "ZTE and AIS Launch ZTE Day Thailand 2026 to Advance Intelligent Networks and Thailand's Digital Infrastructure",
-      "summary": "This headline is currently listed by Google News for Technology. Open the source before discussing details beyond the headline.",
-      "question": "What caught your attention about this technology headline?",
+      "headline": "Anthropic Unveils System Allowing AI to Autonomously Control Lab Equipment",
+      "summary": "Anthropic has released a research preview of its Model Hardware Standard, which enables AI systems like Claude to programmatically control physical tools such as robotic arms, lasers, and microscopes. The initiative marks the company's first step into physical-world operations, allowing automated systems to run continuous scientific experiments.",
+      "question": "How do you feel about artificial intelligence being given direct control over physical laboratory equipment and scientific experiments?",
       "coachLeads": {
-        "friendly": "I found a current technology headline we can use for conversation practice. Let's open the source if we need more details.",
-        "energetic": "Here's a fresh technology headline to talk about today. We can check the source together before going deeper.",
-        "calm": "There is a current technology headline available from Google News. We can use it as a careful conversation starter.",
-        "direct": "Use this current technology headline as today's discussion topic. Check the source before adding details."
+        "friendly": "Hey, have you heard about this big new step for AI? It's pretty amazing to see how quickly things are moving, so let's talk about it!",
+        "energetic": "This is huge news in the tech world today! AI is finally stepping into physical laboratories, and we have to discuss what that means!",
+        "calm": "There was a significant update in AI research today regarding physical laboratory automation. Whenever you're ready, let me know what you think about it.",
+        "direct": "Anthropic just released a system that lets AI operate physical lab machines. This is worth talking about today."
       },
-      "fallback": true,
-      "fallbackKind": "rss_headline",
       "sources": [
         {
-          "title": "ZTE",
-          "url": "https://news.google.com/rss/articles/CBMilgJBVV95cUxQS0Y5XzdJeWt6UU5keHBTUmVhQUpJcWZJS0kyMTlOYy1JcmVyQUhxcEpCSTBvNl9TYTViUC14SGZhaVVvbXUwZUFGWjF3cGxoZGZQcGt2bWh1WlN5NW1DbVNSVGZPMU0tZGJ2SXdxRkVkYzY4ZUJnV3dKRmdzMnJaRHI4czNNb3ZhN3Foc1JVdXVCVXM5OWFIc3hlc0hBcDJXRGVQSlVSQWM4cHFYRGdVQThHd082OXNaYkdULTlOVkVfbFNvSG5KM3ZFeW9BSXJOdHBrUXFoZWp2WFl4SmZEUFA2dHFyYXZ0eFJ5dUpXZGl5TENuR2IxdjBRZnRwWGVZa1p3T0hEZHZxT2N2empoVjd6X3ZiQQ?oc=5"
+          "title": "bignewsnetwork.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH4vEVpLRl3Fd5uRXzX2JnXZV4DPCvdOnR-j011-ngRwZDdFhjtvdhda8VsPYiKkY3TewvnpvCe8KC2iczNMAtDZ1R7RraIkhVKjRnPWDBzRJEMSkZx1z8ABvIB0YNA_MaUwbzIX_B_z4tvF_X9J2XX0FpPQ8xN_qSAMRVAsfAql571nsjYQS8plBf_AInDWcPGxZkD_ifIcM59U64="
         }
       ]
     },
     {
-      "id": "2026-08-28-sports",
+      "id": "2026-08-29-sports",
       "category": "sports",
       "categoryLabel": "Sports",
-      "headline": "UEFA Prepares Criminal Complaint Against FIFA President Gianni Infantino",
-      "summary": "European soccer's governing body, UEFA, announced it is preparing a criminal complaint in Switzerland against FIFA President Gianni Infantino over alleged criminal mismanagement. The legal action follows Infantino's controversial and now-abandoned proposal to sell a portion of future World Cup commercial profits to private investors.",
-      "question": "How do you think high-level legal battles among sports officials affect fans' trust in international soccer?",
+      "headline": "Andreas Leknessund Wins Emotional Vuelta Stage in Norwegian 1-2 Finish",
+      "summary": "Norwegian cyclist Andreas Leknessund won stage seven of the Vuelta a España on Friday, leading a memorable one-two finish for team Uno-X Mobility alongside teammate Tobias Halland Johannessen. The team rode in black armbands following the death of King Harald V of Norway earlier in the day, while overall race leader Tadej Pogačar extended his lead.",
+      "question": "How do you think athletes manage to stay focused and perform at their best during emotional news or personal challenges?",
       "coachLeads": {
-        "friendly": "Hey! Have you heard about the big legal drama breaking in international soccer today?",
-        "energetic": "You won't believe the huge sports headline that just dropped regarding FIFA's leadership!",
-        "calm": "There is a major legal dispute unfolding in world soccer governance that is worth discussing today.",
-        "direct": "UEFA is taking legal action against FIFA's president, and it is making major front-page news right now."
+        "friendly": "Hey there! Did you catch the incredible and emotional finish in yesterday's stage of the Vuelta a España?",
+        "energetic": "Check this out! Team Uno-X Mobility just pulled off an unforgettable one-two finish under huge pressure at the Vuelta!",
+        "calm": "There was a deeply moving story in international sports yesterday that is worth taking a moment to discuss.",
+        "direct": "Here is a major international sports story from the last 24 hours that you should know about."
       },
       "sources": [
         {
-          "title": "Google News: Sports",
-          "url": "https://news.google.com/search?q=Sports%20top%20news%202026-08-28&hl=en-US&gl=US&ceid=US:en"
+          "title": "cyclinguptodate.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGaoofamB0oDV8etxsODdfm2QxLHWzxCBsBEXU3VhYqd5u_65wsGbQvCw1BCZFzJebQ-AOzYrHBw_WKuls9YFoBTVZWKtw6yK42HxvaqMOWuDeM9btXRPbD9iamgm61En_8BFwEd90_HRzNGcze8wnKe0OV4Z8IM7juOh1cdwoPfA_LKtPTaSy0FsD7nrrSbExIz1gwowrgvnN7HguQ4tXJh1ux5bwO4c0KoGAzK1rKCslyeC2UWhFY_AeXX_XV4RHsoKcIu4-5BSjPKbdtFtkgXg=="
+        },
+        {
+          "title": "the-independent.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFUAxdqNyaXwWRF447btVzZQU27FCZiuG7msdAQw7TKn9BaL7KBe6VbTtUSRm7H0uQj99cXTNM6Ly-pKMKbbV3_deB-K2eoNnM-b3xFwsS8iZs2apIP8wXFc-XnMuO3JxgJ1IOZAPqxXxKQMsySYdEryT2QKSbqdDR_ex7WsepcsHkdtGGGGSbsB_YkLGv7SpbDw9v6XbMS7bZj-Gkufdn6"
         }
       ]
     },
     {
-      "id": "2026-08-28-entertainment",
+      "id": "2026-08-29-entertainment",
       "category": "entertainment",
       "categoryLabel": "Entertainment",
-      "headline": "BBC Confirms the Return of Hit Motoring Show Top Gear",
-      "summary": "The BBC announced at the Edinburgh TV Festival that it will bring back its flagship motoring series Top Gear after pausing production for nearly four years. The show was put on hold following a serious filming crash in 2022, though the broadcaster has not yet revealed who will host the new series [1.1.6].",
-      "question": "Do you enjoy watching television shows about cars or travel, and what do you think makes a host entertaining?",
+      "headline": "Apple TV Increases Monthly Subscription Fee to $14.99",
+      "summary": "Apple announced on August 28 that the monthly price for its Apple TV streaming service is rising from $12.99 to $14.99, alongside a price increase for the Apple One individual bundle. This marks the platform's fourth price hike in four years as major streaming companies continue to raise subscription costs across the industry.",
+      "question": "Do you think streaming services are still worth keeping as monthly subscription prices continue to rise?",
       "coachLeads": {
-        "friendly": "Hey, have you heard the news about Top Gear coming back to television? I'd love to hear your thoughts on it!",
-        "energetic": "Big television news today—Top Gear is officially making a comeback! Are you excited to see how they refresh the show?",
-        "calm": "The BBC just announced that Top Gear will return after nearly four years off the air. It's a great story for us to discuss today.",
-        "direct": "Top Gear is returning to television after a long hiatus caused by a filming accident. Let's talk about what you think of the news."
+        "friendly": "Hey, have you heard about the latest streaming price hike? Apple TV is raising its monthly cost again, and it's definitely worth chatting about!",
+        "energetic": "Another major price increase just dropped in the streaming world! Apple TV is putting up its rates, so let's jump right into what this means for subscribers!",
+        "calm": "Here is a timely update from the entertainment world. Apple TV has just raised its monthly subscription price to $14.99.",
+        "direct": "Apple TV just increased its monthly subscription price to $14.99. Let's break down why this is happening and talk about how it affects viewers."
       },
       "sources": [
         {
-          "title": "Google News: Entertainment",
-          "url": "https://news.google.com/search?q=Entertainment%20top%20news%202026-08-28&hl=en-US&gl=US&ceid=US:en"
+          "title": "macrumors.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHQM48AXOQ-f1rjRX1yLpEAGvJ-dSCDV1lA8V9o3_XNlbMoGU8wYrXRDJCo9ve9vdydQyoDeVV3jrN-oP4hUr_6Q_ZNsK9pKBFA1kg-7Jo_z8-L18aY-08YnNfflUGMnlER6GngbcfHGS7cs4bgko6NwdI="
+        },
+        {
+          "title": "9to5mac.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGWeftxLR6SfQC3598eKRRgr3wCLEhDTf_Fy08dIN1AM1BckW0SA9k7_YhYf18kZLgf9SEkBdyPzVRXaABst17sH9gI1uTyGAGULrZxjLCfpVZv3QqqTaqx6lyiOAIPytibpdwWKHT_f3OKxcNpAVDSoZe9NP_ldzU_0gAWP1gs4zPWZA2CujszAdVjTb0hCN9l6ACZ6jQqXTnZGx4="
+        },
+        {
+          "title": "abc10.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGX7zFE-HZKZmbT-MaL6EWvFOH9eD7VBglgKlntF0tt0rx_BCwPVh9fulVok-767BEebBRhI4QGnxo1kE9zP2lEW4Ze8quBursT4nGOlTJWSSZrBNhe5SwpTbBoP_JKRBHBd0nWPH6hyVTa5ge3-jQH3okdXwNRLHvGF-NsSlWilk5U6oVlXCgzzpwykl9imIT9q7DUSCN0BtRNdL6CoH_IkinXqQ=="
         }
       ]
     }
