@@ -1,101 +1,88 @@
 {
   "schemaVersion": 1,
   "status": "live",
-  "date": "2026-08-30",
-  "generatedAt": "2026-08-29T23:20:29.210Z",
+  "date": "2026-08-31",
+  "generatedAt": "2026-08-30T23:30:09.222Z",
   "model": "gemini-3.6-flash",
-  "fallbackCategories": [
-    "politics_economy",
-    "technology",
-    "sports",
-    "entertainment"
-  ],
+  "fallbackCategories": [],
   "items": [
     {
-      "id": "2026-08-30-politics_economy-rss-headline",
+      "id": "2026-08-31-politics_economy",
       "category": "politics_economy",
       "categoryLabel": "Politics & Economy",
-      "headline": "ET Wealth Edition 30 August 2026",
-      "summary": "This headline is currently listed by Google News for Politics & Economy. Open the source before discussing details beyond the headline.",
-      "question": "What caught your attention about this politics & economy headline?",
+      "headline": "US Forces Strike Iranian Launchers on Larak Island",
+      "summary": "On Sunday, United States forces carried out strikes against two Iranian rocket launchers located on Larak Island in the Strait of Hormuz. American officials stated the targeted forces were preparing to deploy sea mines into the strategic shipping route, marking the first acknowledged US strike on Iranian targets in nearly a month.",
+      "question": "How do you think military tension in key international shipping routes affects global trade and daily life around the world?",
       "coachLeads": {
-        "friendly": "I found a current politics & economy headline we can use for conversation practice. Let's open the source if we need more details.",
-        "energetic": "Here's a fresh politics & economy headline to talk about today. We can check the source together before going deeper.",
-        "calm": "There is a current politics & economy headline available from Google News. We can use it as a careful conversation starter.",
-        "direct": "Use this current politics & economy headline as today's discussion topic. Check the source before adding details."
+        "friendly": "Hey there! Have you seen the breaking news about military developments in the Middle East today?",
+        "energetic": "There's major global news breaking right now! Let's dive into the latest updates from the Middle East.",
+        "calm": "Let's take a moment to look at the security developments reported today near the Strait of Hormuz.",
+        "direct": "The US military just struck targets on Iran's Larak Island. Let's talk about why this is making major headlines."
       },
-      "fallback": true,
-      "fallbackKind": "rss_headline",
       "sources": [
         {
-          "title": "The Economic Times",
-          "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9QeDRMMWdqVW5CTmR6VElSa0FsN0g3MXBfRW9MSko2UEg2UmZSVWExU3MwNmNqaTBXSE55VEV3TlplZi1IYVlOS3M0eG1kd1lURjJfSjJkR3NqOGd5ZnFhRlln?oc=5"
+          "title": "Google News: Politics & Economy",
+          "url": "https://news.google.com/search?q=Politics%20%26%20Economy%20top%20news%202026-08-31&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     },
     {
-      "id": "2026-08-30-technology-rss-headline",
+      "id": "2026-08-31-technology",
       "category": "technology",
       "categoryLabel": "Technology",
-      "headline": "Weekend Buzz: 29-30 August 2026",
-      "summary": "This headline is currently listed by Google News for Technology. Open the source before discussing details beyond the headline.",
-      "question": "What caught your attention about this technology headline?",
+      "headline": "NASA Launches $4.3 Billion Roman Space Telescope to Explore Dark Energy and Exoplanets",
+      "summary": "On August 30, 2026, NASA successfully launched the Nancy Grace Roman Space Telescope aboard a SpaceX Falcon Heavy rocket from Kennedy Space Center in Florida. The flagship observatory is traveling 1.5 million kilometers to Lagrange Point 2 to survey dark energy, dark matter, and thousands of new exoplanets.",
+      "question": "What kind of discoveries about distant planets or outer space do you hope scientists will make next?",
       "coachLeads": {
-        "friendly": "I found a current technology headline we can use for conversation practice. Let's open the source if we need more details.",
-        "energetic": "Here's a fresh technology headline to talk about today. We can check the source together before going deeper.",
-        "calm": "There is a current technology headline available from Google News. We can use it as a careful conversation starter.",
-        "direct": "Use this current technology headline as today's discussion topic. Check the source before adding details."
+        "friendly": "Hey, have you heard about NASA's newest space telescope launch? It is a pretty fascinating story if you want to chat about it!",
+        "energetic": "This is incredible news! NASA just launched a giant new space telescope to hunt for alien worlds and explore the universe!",
+        "calm": "NASA launched its latest flagship observatory, the Roman Space Telescope, into space today. Let me know whenever you'd like to discuss the mission.",
+        "direct": "NASA launched its $4.3 billion Roman Space Telescope on Sunday. Let's dive into what this major space mission aims to accomplish."
       },
-      "fallback": true,
-      "fallbackKind": "rss_headline",
       "sources": [
         {
-          "title": "citynewsservice.cn",
-          "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQUkg2cDQtWFZhREg1SDhJUGctSlZ1SGtMdGREb1FTWFNVUEdKdkNCV1hvekhTanNQdkVmUlJscU5lbXM0T1lMNHVnV2V2QzlJRUc2RkZwZlZCTVVIQV9fWlp2eFhOdmk2Q3c4dGtEQTBfV041N3RfM1JaU240UTYtanZib055cGdNbVFpUkkybXpGVkFRSjJsWEp3TlBZYThhNzQwcXZpNjI?oc=5"
+          "title": "Google News: Technology",
+          "url": "https://news.google.com/search?q=Technology%20top%20news%202026-08-31&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     },
     {
-      "id": "2026-08-30-sports-rss-headline",
+      "id": "2026-08-31-sports",
       "category": "sports",
       "categoryLabel": "Sports",
-      "headline": "16 live team boxing events are scheduled for Fubo Sports Network in 2027",
-      "summary": "This headline is currently listed by Google News for Sports. Open the source before discussing details beyond the headline.",
-      "question": "What caught your attention about this sports headline?",
+      "headline": "2026 US Open Kicks Off in New York with Early Wins for Top Seeds",
+      "summary": "The 2026 US Open officially began at Flushing Meadows on August 30, launching the final Grand Slam tennis tournament of the year. Opening-day action saw third seed Jessica Pegula and former champion Daniil Medvedev secure straight-set victories to advance to the second round.",
+      "question": "Which tennis player are you most excited to follow during this year's US Open, and why?",
       "coachLeads": {
-        "friendly": "I found a current sports headline we can use for conversation practice. Let's open the source if we need more details.",
-        "energetic": "Here's a fresh sports headline to talk about today. We can check the source together before going deeper.",
-        "calm": "There is a current sports headline available from Google News. We can use it as a careful conversation starter.",
-        "direct": "Use this current sports headline as today's discussion topic. Check the source before adding details."
+        "friendly": "Hey, did you catch the opening matches of the US Open? It's always exciting when the year's final Grand Slam gets underway!",
+        "energetic": "The US Open is officially underway in New York! Big names are already picking up major victories on day one!",
+        "calm": "The year's final Grand Slam tennis tournament kicked off on Sunday. It is a great moment to watch how top players handle the hard courts in New York.",
+        "direct": "The 2026 US Open started on Sunday with early wins for several top seeds. Let's look at what happened on opening day."
       },
-      "fallback": true,
-      "fallbackKind": "rss_headline",
       "sources": [
         {
-          "title": "Stock Titan",
-          "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNaTllcDlvUnY5SHAtS3kzX2lUTHJ3SnZvYkNzLVgteXNFcVhyS1RzZ3V0TWNXQWo0MEZwSHg0bVlsanZfaFN2R2FHWks1YWtzS0loTTVoVU1NQXVYUnBFeW1JckQyamdhNDV6Y0NvNFpkU3Fob2hBMGtzVEhxRm5URGpxSEV4OHEwZ25qdk1DUzBPUzhZMXk3QV9BUV9SR1pGeXJxR3VJcTFvbW9aSU9uZ2d5dXRTenNtNnVwcGQ4T3c?oc=5"
+          "title": "Google News: Sports",
+          "url": "https://news.google.com/search?q=Sports%20top%20news%202026-08-31&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     },
     {
-      "id": "2026-08-30-entertainment-rss-headline",
+      "id": "2026-08-31-entertainment",
       "category": "entertainment",
       "categoryLabel": "Entertainment",
-      "headline": "NAGRAVISION Selected by Narrative Entertainment to Accelerate Streaming Innovation with OpenTV® ENTera",
-      "summary": "This headline is currently listed by Google News for Entertainment. Open the source before discussing details beyond the headline.",
-      "question": "What caught your attention about this entertainment headline?",
+      "headline": "Shelved 'Coyote vs. Acme' Scores $15.5 Million Box Office Comeback",
+      "summary": "After being famously shelved by Warner Bros. for a tax write-off, the Looney Tunes movie Coyote vs. Acme finally premiered in theaters and earned $15.5 million to secure second place at the weekend box office. The strong debut and high audience scores mark a rare theatrical triumph for a project that was nearly erased from public release.",
+      "question": "Do you think movie studios should be allowed to scrap completed films for tax write-offs, or should finished projects always be released to audiences?",
       "coachLeads": {
-        "friendly": "I found a current entertainment headline we can use for conversation practice. Let's open the source if we need more details.",
-        "energetic": "Here's a fresh entertainment headline to talk about today. We can check the source together before going deeper.",
-        "calm": "There is a current entertainment headline available from Google News. We can use it as a careful conversation starter.",
-        "direct": "Use this current entertainment headline as today's discussion topic. Check the source before adding details."
+        "friendly": "Hey, have you heard about the movie that was almost erased forever finally making a huge splash at the box office this weekend?",
+        "energetic": "What an incredible box office comeback! A film that was completely shelved by its original studio just debuted to over fifteen million dollars!",
+        "calm": "It is quite rare for a cancelled film to get a wide theatrical release years later. Coyote vs. Acme just pulled off a solid opening weekend after an indie distributor saved it.",
+        "direct": "Coyote vs. Acme just earned fifteen million dollars in its debut after spending years in studio limbo. What is your take on movies being shelved for financial reasons?"
       },
-      "fallback": true,
-      "fallbackKind": "rss_headline",
       "sources": [
         {
-          "title": "TradingView",
-          "url": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxOQUQyQzRmemFVTF9qb1NiWGhKZy1ZamFSeDZGMUprVFJXNGlic2hDR2Zia0VuZkFhcTkxY1F2OGJTamotOVJTT0IzWE1vSmVndkdCSWJ2RnRSR3JuT245UGdVMHpUcGxoTTNCZFRUR0MwYjZEMzdFZ2FCeVAwVlpuZXJiN3Nkbk9GX2NMeGJ0d3R3b1pzbFBPdHIyR0EzZjBIU0ZUbExJMHFsbWlva29EdktWUlZZVElMTFh0N1p5NFBOTm5HY0xlVU9fZzJseUl5WlJGWlFjcjdVa0tabUFtQ3VmYjVpZkwxcXdj?oc=5"
+          "title": "Google News: Entertainment",
+          "url": "https://news.google.com/search?q=Entertainment%20top%20news%202026-08-31&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     }
