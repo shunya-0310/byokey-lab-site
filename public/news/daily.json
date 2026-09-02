@@ -1,96 +1,96 @@
 {
   "schemaVersion": 1,
   "status": "live",
-  "date": "2026-09-02",
-  "generatedAt": "2026-09-01T23:18:22.042Z",
+  "date": "2026-09-03",
+  "generatedAt": "2026-09-02T23:19:13.877Z",
   "model": "gemini-3.6-flash",
   "fallbackCategories": [],
   "items": [
     {
-      "id": "2026-09-02-politics_economy",
+      "id": "2026-09-03-politics_economy",
       "category": "politics_economy",
       "categoryLabel": "Politics & Economy",
-      "headline": "Iranian President Signals Readiness for Peace Talks Amid Regional Tensions",
-      "summary": "At the Shanghai Cooperation Organisation summit on September 1, Iranian President Masoud Pezeshkian expressed a willingness to resume diplomatic commitments and restore free navigation through the Strait of Hormuz. The statement comes as Washington weighs potential limited military strikes following recent security escalations in the key energy corridor.",
-      "question": "How do you think international diplomacy can effectively balance military deterrence with open negotiations?",
+      "headline": "U.S. and Iran Exchange Military Strikes in Major Escalation Near Strait of Hormuz",
+      "summary": "Following a month-long lull in fighting, United States forces launched extensive airstrikes targeting Iranian military sites, radar equipment, and naval vessels near the Strait of Hormuz. Iran retaliated with drone and missile strikes directed at U.S. allies across the Persian Gulf, renewing volatility in global energy markets as both sides signal readiness for further confrontation.",
+      "question": "How do you think rising tensions in vital international shipping waterways might impact the global economy and everyday consumers?",
       "coachLeads": {
-        "friendly": "Hey, have you seen the latest diplomatic developments in the Middle East? It's a major story that could impact global trade and international relations.",
-        "energetic": "Big news on the global stage today! Iran's president just signaled he's open to returning to peace talks during a high-profile summit.",
-        "calm": "A major diplomatic story unfolded today regarding maritime security and international relations. Let's take a look at what was announced.",
-        "direct": "Iran's leadership signaled a willingness to resume peace talks as tensions rise in the Strait of Hormuz. Here are the key details you need to know."
+        "friendly": "Hey, have you caught up on the latest news from the Middle East? The renewed military exchanges near the Strait of Hormuz are making headlines today.",
+        "energetic": "Check this out—there's huge news today as direct military exchanges between the U.S. and Iran flared up again! This is a major global story worth talking about.",
+        "calm": "Military strikes between the U.S. and Iran escalated overnight near the Strait of Hormuz after a brief period of calm. It's a complex situation with broad economic implications worth examining.",
+        "direct": "The U.S. and Iran have engaged in a new round of direct military strikes, threatening global energy routes. Let's discuss what this means for international affairs."
       },
       "sources": [
         {
-          "title": "Google News: Politics & Economy",
-          "url": "https://news.google.com/search?q=Politics%20%26%20Economy%20top%20news%202026-09-02&hl=en-US&gl=US&ceid=US:en"
+          "title": "cbsnews.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG8xbTU2ip48DImQkJZtJDbju9NQ0s1eB0Qc4fa0BZ8lbHi5hL_58ILQKr9cc5osUjvIYipS8x1JvEAwYGjGjv4oPzkk21J3P05jxVahDYcte5MvyLP0Ug8SWA7pXPLw0beoHH7QnpSjqZLox--VcjYtdk5gpNrTSjZo4eNKbrbK1Es0kI8S9lg-XOka3HrQg5kCmmzWsE-05LDfunXwVA-2bHr"
+        },
+        {
+          "title": "axios.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEl5UxnEfez42tbV18FqZpMavHv9v2de5gA4Ksem6LHXjGvPu1iqApaM6YLOuP_NQLLZ0zZhOGd9Le6sQ8q-hgg_OtZafQeITFFsqPt44utfsOI41TtqHHHvlExlb7smf1pAaN040XLbKDT16041cITc9vcknR8"
+        },
+        {
+          "title": "thehindu.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFBWluUDFGZMq0pKth3RB2RmAzGXcKcm5xUP_thWY9TymDRkPx-RWXcLfXgZsolu4k6cJX9JOVG7lQx4WVkcwZyLgFkQd-qiEUWdCARQjXS0X3ECvBhR4xoPsRpCivxBlzvJl18W0fVb3hZD2WTEaiM54HT3l1TlGkYUHT6D2JCByxuqCx-uZU7SabIZU4xx8sIn46BCO8YkuhgWSUAO54Fz6sDlIAR_FCRO9fIioN7VettFNMdCNUgzu_GiY1kbytyF8rO3J-6v2IToTq20XkHuPFhLZBeoQ=="
         }
       ]
     },
     {
-      "id": "2026-09-02-technology",
+      "id": "2026-09-03-technology",
       "category": "technology",
       "categoryLabel": "Technology",
-      "headline": "Nvidia Invests $3.5 Billion in MediaTek to Expand Custom AI Chip Production",
-      "summary": "Nvidia has invested $3.5 billion in Taiwanese chip designer MediaTek to expand their partnership into building custom artificial intelligence hardware for data centers and vehicles. The news sent MediaTek's stock surging 10% on Tuesday, highlighting how tech leaders are moving aggressively to control the future of global AI infrastructure.",
-      "question": "How do you think massive investments in custom AI hardware will shape consumer technology in the coming years?",
+      "headline": "Uber and Wayve Launch the United Kingdom's First Autonomous Ride-Hailing Service",
+      "summary": "Uber and artificial intelligence company Wayve have launched supervised autonomous vehicle rides in London, marking the first time self-driving ride-hailing is available to the public in the United Kingdom. Uber users in London can now be matched with electric self-driving cars monitored by safety drivers, signaling a major European milestone for commercial driverless technology.",
+      "question": "Would you feel comfortable riding in a self-driving taxi, or do you prefer having a human driver behind the wheel?",
       "coachLeads": {
-        "friendly": "Hey, have you seen the latest tech headline? Nvidia just poured $3.5 billion into a custom AI chip partnership!",
-        "energetic": "This is massive news for the tech industry! Nvidia is making a huge $3.5 billion bet on MediaTek, and the stock market is already reacting!",
-        "calm": "There is a major development in global technology today. Nvidia has invested $3.5 billion in MediaTek to co-develop specialized artificial intelligence chips.",
-        "direct": "Nvidia just closed a $3.5 billion deal with MediaTek to scale custom AI hardware. Let's break down why this story is making headlines."
+        "friendly": "Hey! Did you hear that Uber just launched its first self-driving taxi service in London today?",
+        "energetic": "Self-driving taxis have officially hit the streets of London today thanks to a major new Uber partnership!",
+        "calm": "Uber and Wayve have launched autonomous rides in London, marking an important step forward for driverless transit in Europe.",
+        "direct": "Uber officially began offering autonomous ride-hailing service in the United Kingdom today."
       },
       "sources": [
         {
-          "title": "Google News: Technology",
-          "url": "https://news.google.com/search?q=Technology%20top%20news%202026-09-02&hl=en-US&gl=US&ceid=US:en"
+          "title": "uber.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGtuaDCMK1my-QOkxrrybx3ufpm-ij9VTsRZ8Gtu3qeJxQC5D_uU6trjn3hUzU98GmSmSAO9h8iEC8VYLFZU_axVGPFRSS0y0_hfPehShsL2hG22HsU8vo8rFwtmsbJzfhb1viXIXsMUz8MOZd83U8k4B1lvbGq7g3_6EvnOc_mFg55Ry_KzJ_huFXDv_QRPSyjZKc--SnoSeJRgN9cYLEAQTXig6qDkycVjO8yghclDNpJ1lN49xGgS6SIabfgLdKVnZuVex9PqOK3MtuStW7gey3oTQ=="
         }
       ]
     },
     {
-      "id": "2026-09-02-sports",
+      "id": "2026-09-03-sports",
       "category": "sports",
       "categoryLabel": "Sports",
-      "headline": "Manchester City Signs Enzo Fernández for £125 Million as Summer Transfer Window Closes",
-      "summary": "European football clubs completed their final summer trades on September 1 as the transfer deadline passed across major leagues. Manchester City landed Chelsea midfielder Enzo Fernández in a £125 million deal, capping a record-breaking summer spending window for English Premier League teams.",
-      "question": "What do you think about top football clubs spending such massive sums of money to buy new players?",
+      "headline": "Ronald Acuña Jr. Becomes Fastest MLB Player to Reach 200 Home Runs and 200 Steals",
+      "summary": "Atlanta Braves outfielder Ronald Acuña Jr. hit a three-run home run against the Washington Nationals on Wednesday to become the fastest player in Major League Baseball history to reach 200 home runs and 200 stolen bases. Reaching the milestone in 904 career games, he surpassed the previous record of 929 games set by Alfonso Soriano.",
+      "question": "What kind of qualities do you think allow an athlete to excel at both power and speed in top-level sports?",
       "coachLeads": {
-        "friendly": "Hey, did you catch the big football transfer news from deadline day? Let's talk about it!",
-        "energetic": "European football had huge deadline-day excitement with a record-matching £125 million transfer! Let's jump right into the details.",
-        "calm": "The European football summer transfer window closed with some extraordinary spending. Here is what you should know.",
-        "direct": "European football's transfer window closed on September 1 with a major multi-million pound deal. Let me fill you in."
+        "friendly": "Hey, have you heard about this amazing baseball milestone from today? It is a really cool story.",
+        "energetic": "You won't believe what just happened in baseball! A major league record was absolutely shattered today!",
+        "calm": "Take a look at this major sports story from the last 24 hours. It is a milestone worth reflecting on.",
+        "direct": "Ronald Acuña Jr. just set a new Major League Baseball speed-and-power record. This is definitely worth talking about."
       },
       "sources": [
         {
-          "title": "Google News: Sports",
-          "url": "https://news.google.com/search?q=Sports%20top%20news%202026-09-02&hl=en-US&gl=US&ceid=US:en"
+          "title": "washingtonpost.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGcA9kisdN7_fcH7H4KhtyH7ieG9LAe9F9ckYY5AYzjHIabtPNAbSYeL2Eo_6EbhY0gHb3R1mZegGO_eEng3VLIGJhkIMpkTM_iUqCc4qpKCqcJBY-cgwT57zVjS-JooeNaQ6J3i7I7mfqQh3urU9DFRFvOZ9i-mnsOUldUjq1O_wJr81XLPkhxYOZH-FPN3ui2hUDGBMfZRioSa3CDM614FFDKUXo-FLGupTKu8fGUKVU="
         }
       ]
     },
     {
-      "id": "2026-09-02-entertainment",
+      "id": "2026-09-03-entertainment",
       "category": "entertainment",
       "categoryLabel": "Entertainment",
-      "headline": "83rd Venice International Film Festival Kicks Off in Italy",
-      "summary": "The 83rd Venice International Film Festival opens on September 2, 2026, marking the official start of the global fall film awards season. Running through September 12, the festival features 21 films in main competition for the Golden Lion award, alongside lifetime achievement honors for George Clooney and Ellen Burstyn.",
-      "question": "What kind of movies or film festivals do you usually like to follow?",
+      "headline": "83rd Venice Film Festival Opens as George Clooney Receives Lifetime Achievement Award",
+      "summary": "The 83rd Venice International Film Festival officially kicked off on September 2, 2026, with the world premiere of director Danny Boyle's film 'Ink.' During the opening ceremony on the Lido, actor and director George Clooney was honored with a Golden Lion for Lifetime Achievement.",
+      "question": "Which film or actor from this year's Venice festival lineup are you most interested in following?",
       "coachLeads": {
-        "friendly": "Hey, have you heard about this? The Venice Film Festival is starting today, and it's bringing some huge movie updates.",
-        "energetic": "Guess what? Fall movie season is officially here with the opening of the Venice Film Festival today!",
-        "calm": "The 83rd Venice Film Festival is beginning today in Italy. It's a nice moment to chat about global cinema.",
-        "direct": "The 83rd Venice International Film Festival opens today. Here is why this story is worth talking about."
+        "friendly": "Hey, have you heard the latest from the movie world? The Venice Film Festival just started!",
+        "energetic": "Cinema's biggest stars are back on the red carpet! Let's talk about the opening of the Venice Film Festival!",
+        "calm": "The annual Venice Film Festival opened today in Italy, marking the start of the autumn movie season.",
+        "direct": "The 83rd Venice Film Festival officially opened today. Here is what you need to know."
       },
       "sources": [
         {
-          "title": "labiennale.org",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEIldn-xWIXu7-5tnoQCnfjDeyMf_Gl4s9N0eLKPw15S1E16gUUvR_J-Pt0z8PquIF0fgtiSEKiKQ360Gy9IxeIEpZV4l82Qec9v-wjeYT9R2kBJzv7Y8vE8SczzWWi"
-        },
-        {
-          "title": "wmbdradio.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFjNwhqBrj-h9yyra8nEm_lqYJRvuKZRMLIPmtl0fLFAljO62ZhKyapyA63gqkQaq-bFT-_keei2UiAaqNDNzIasXb7T9m2JO1J4pGT10WyDzzU-toWHnpGo44jILy6hD7ItJvPybeIN9GTEL4MxxShfuqnzruSFNV9MwmmeEJ7aDUQEBaYs3QZ0RxyCMEDl_oF7voL3Mcx"
-        },
-        {
-          "title": "wikipedia.org",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFM7Bj5ipLN3idVjQceh0ZGfC4bLKL0beFFgrWuXEzJp81mC8Ewe0rCWv0fhP288dGncASERe1tUg8FoVWj5ZcTl-ICreJN_wlph-rrEDSE8U9PRTzlmqOtufDn24NUox-BuxYEtfv56dHNTVXgUxmSFI7USGyE-DxQCg=="
+          "title": "Google News: Entertainment",
+          "url": "https://news.google.com/search?q=Entertainment%20top%20news%202026-09-03&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     }
