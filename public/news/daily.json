@@ -1,96 +1,116 @@
 {
   "schemaVersion": 1,
   "status": "live",
-  "date": "2026-09-03",
-  "generatedAt": "2026-09-02T23:19:13.877Z",
+  "date": "2026-09-04",
+  "generatedAt": "2026-09-03T23:17:04.946Z",
   "model": "gemini-3.6-flash",
   "fallbackCategories": [],
   "items": [
     {
-      "id": "2026-09-03-politics_economy",
+      "id": "2026-09-04-politics_economy",
       "category": "politics_economy",
       "categoryLabel": "Politics & Economy",
-      "headline": "U.S. and Iran Exchange Military Strikes in Major Escalation Near Strait of Hormuz",
-      "summary": "Following a month-long lull in fighting, United States forces launched extensive airstrikes targeting Iranian military sites, radar equipment, and naval vessels near the Strait of Hormuz. Iran retaliated with drone and missile strikes directed at U.S. allies across the Persian Gulf, renewing volatility in global energy markets as both sides signal readiness for further confrontation.",
-      "question": "How do you think rising tensions in vital international shipping waterways might impact the global economy and everyday consumers?",
+      "headline": "US Vice President Vance Downplays Iran Conflict and Refuses Timeline for Resolution",
+      "summary": "During a White House press briefing on September 3, U.S. Vice President JD Vance stated he would not describe the ongoing conflict with Iran as an active war and declined to offer a timeline for its end. His comments come as persistent tensions surrounding Middle Eastern shipping routes continue to impact global energy markets and international policy.",
+      "question": "How do you think global political instability and changing energy prices impact daily life and business in your region?",
       "coachLeads": {
-        "friendly": "Hey, have you caught up on the latest news from the Middle East? The renewed military exchanges near the Strait of Hormuz are making headlines today.",
-        "energetic": "Check this out—there's huge news today as direct military exchanges between the U.S. and Iran flared up again! This is a major global story worth talking about.",
-        "calm": "Military strikes between the U.S. and Iran escalated overnight near the Strait of Hormuz after a brief period of calm. It's a complex situation with broad economic implications worth examining.",
-        "direct": "The U.S. and Iran have engaged in a new round of direct military strikes, threatening global energy routes. Let's discuss what this means for international affairs."
+        "friendly": "Hey! Have you had a chance to catch up on the latest diplomatic news from Washington today?",
+        "energetic": "Check this out—a major White House news briefing just reframed the situation in the Middle East, and it's making global headlines!",
+        "calm": "Let's take a look at a major story from the past 24 hours regarding global policy and international relations.",
+        "direct": "This update on the U.S.-Iran situation is one of the biggest political stories today, so let me give you the quick breakdown."
       },
       "sources": [
         {
-          "title": "cbsnews.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG8xbTU2ip48DImQkJZtJDbju9NQ0s1eB0Qc4fa0BZ8lbHi5hL_58ILQKr9cc5osUjvIYipS8x1JvEAwYGjGjv4oPzkk21J3P05jxVahDYcte5MvyLP0Ug8SWA7pXPLw0beoHH7QnpSjqZLox--VcjYtdk5gpNrTSjZo4eNKbrbK1Es0kI8S9lg-XOka3HrQg5kCmmzWsE-05LDfunXwVA-2bHr"
+          "title": "straitstimes.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGm_4oyHN5e6iY1Si8l-eEDk7TrEVJcoMuvJsIH-ViRcD3EOTcIc_APcepBYE_rVkbJTW4_N3QcBtpEnf66R04RUGd0HudurdICvlnceHZ8gIC6uv6z6PA5P_5F1L7VxZuNN59KGGwbbDm6fzqn7PMWlGJkk73u0SU02DgoufeSO2pqOREFTBW3IWGcMfWK0-c1mNZJ_rglcMwjQSw="
         },
-        {
-          "title": "axios.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEl5UxnEfez42tbV18FqZpMavHv9v2de5gA4Ksem6LHXjGvPu1iqApaM6YLOuP_NQLLZ0zZhOGd9Le6sQ8q-hgg_OtZafQeITFFsqPt44utfsOI41TtqHHHvlExlb7smf1pAaN040XLbKDT16041cITc9vcknR8"
-        },
-        {
-          "title": "thehindu.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFBWluUDFGZMq0pKth3RB2RmAzGXcKcm5xUP_thWY9TymDRkPx-RWXcLfXgZsolu4k6cJX9JOVG7lQx4WVkcwZyLgFkQd-qiEUWdCARQjXS0X3ECvBhR4xoPsRpCivxBlzvJl18W0fVb3hZD2WTEaiM54HT3l1TlGkYUHT6D2JCByxuqCx-uZU7SabIZU4xx8sIn46BCO8YkuhgWSUAO54Fz6sDlIAR_FCRO9fIioN7VettFNMdCNUgzu_GiY1kbytyF8rO3J-6v2IToTq20XkHuPFhLZBeoQ=="
-        }
-      ]
-    },
-    {
-      "id": "2026-09-03-technology",
-      "category": "technology",
-      "categoryLabel": "Technology",
-      "headline": "Uber and Wayve Launch the United Kingdom's First Autonomous Ride-Hailing Service",
-      "summary": "Uber and artificial intelligence company Wayve have launched supervised autonomous vehicle rides in London, marking the first time self-driving ride-hailing is available to the public in the United Kingdom. Uber users in London can now be matched with electric self-driving cars monitored by safety drivers, signaling a major European milestone for commercial driverless technology.",
-      "question": "Would you feel comfortable riding in a self-driving taxi, or do you prefer having a human driver behind the wheel?",
-      "coachLeads": {
-        "friendly": "Hey! Did you hear that Uber just launched its first self-driving taxi service in London today?",
-        "energetic": "Self-driving taxis have officially hit the streets of London today thanks to a major new Uber partnership!",
-        "calm": "Uber and Wayve have launched autonomous rides in London, marking an important step forward for driverless transit in Europe.",
-        "direct": "Uber officially began offering autonomous ride-hailing service in the United Kingdom today."
-      },
-      "sources": [
-        {
-          "title": "uber.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGtuaDCMK1my-QOkxrrybx3ufpm-ij9VTsRZ8Gtu3qeJxQC5D_uU6trjn3hUzU98GmSmSAO9h8iEC8VYLFZU_axVGPFRSS0y0_hfPehShsL2hG22HsU8vo8rFwtmsbJzfhb1viXIXsMUz8MOZd83U8k4B1lvbGq7g3_6EvnOc_mFg55Ry_KzJ_huFXDv_QRPSyjZKc--SnoSeJRgN9cYLEAQTXig6qDkycVjO8yghclDNpJ1lN49xGgS6SIabfgLdKVnZuVex9PqOK3MtuStW7gey3oTQ=="
-        }
-      ]
-    },
-    {
-      "id": "2026-09-03-sports",
-      "category": "sports",
-      "categoryLabel": "Sports",
-      "headline": "Ronald Acuña Jr. Becomes Fastest MLB Player to Reach 200 Home Runs and 200 Steals",
-      "summary": "Atlanta Braves outfielder Ronald Acuña Jr. hit a three-run home run against the Washington Nationals on Wednesday to become the fastest player in Major League Baseball history to reach 200 home runs and 200 stolen bases. Reaching the milestone in 904 career games, he surpassed the previous record of 929 games set by Alfonso Soriano.",
-      "question": "What kind of qualities do you think allow an athlete to excel at both power and speed in top-level sports?",
-      "coachLeads": {
-        "friendly": "Hey, have you heard about this amazing baseball milestone from today? It is a really cool story.",
-        "energetic": "You won't believe what just happened in baseball! A major league record was absolutely shattered today!",
-        "calm": "Take a look at this major sports story from the last 24 hours. It is a milestone worth reflecting on.",
-        "direct": "Ronald Acuña Jr. just set a new Major League Baseball speed-and-power record. This is definitely worth talking about."
-      },
-      "sources": [
         {
           "title": "washingtonpost.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGcA9kisdN7_fcH7H4KhtyH7ieG9LAe9F9ckYY5AYzjHIabtPNAbSYeL2Eo_6EbhY0gHb3R1mZegGO_eEng3VLIGJhkIMpkTM_iUqCc4qpKCqcJBY-cgwT57zVjS-JooeNaQ6J3i7I7mfqQh3urU9DFRFvOZ9i-mnsOUldUjq1O_wJr81XLPkhxYOZH-FPN3ui2hUDGBMfZRioSa3CDM614FFDKUXo-FLGupTKu8fGUKVU="
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHMEY1Gb8V_Cs-A1zx9Q9LT0CyqDHh3Qmecxhtt06zYvwN8sI1LyIrn10foAig_jenue5HI68jW7wVlQsgm0oV_n5JO4H-ovTbl8OYDJiJKs42lw4Gmq8KaPIjSa3jjwayFXjS8pH8diGA9so-7F13YaMM8sY-Zp02TVmdvgdMF6ph4xosq1vr3ku1-fIVYF2jKb64I1Dn0fC2ItXB3kns4GKvJX3q9dlMr8H8="
+        },
+        {
+          "title": "facebook.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEwMlWn_COegzzb9zzHHIcJNPhy6ct5qRxTZ-Nuit51uHP9-rrOzKoKEnjur1IOR8Vn3hAX3SqE1BytVV0Wgo1nR_kd87GSlG2fX2mmi-2_Iav1mSfhGWCBZhY0E7y8dpjqTcsfKQw1apspRaulCIIBvnzNFwIPh5qhj7jSMRmEBaRjBt1I1DbF4kjS-aoDfeXGPIXWqyDwwnnbXqQXcTqv0w=="
         }
       ]
     },
     {
-      "id": "2026-09-03-entertainment",
-      "category": "entertainment",
-      "categoryLabel": "Entertainment",
-      "headline": "83rd Venice Film Festival Opens as George Clooney Receives Lifetime Achievement Award",
-      "summary": "The 83rd Venice International Film Festival officially kicked off on September 2, 2026, with the world premiere of director Danny Boyle's film 'Ink.' During the opening ceremony on the Lido, actor and director George Clooney was honored with a Golden Lion for Lifetime Achievement.",
-      "question": "Which film or actor from this year's Venice festival lineup are you most interested in following?",
+      "id": "2026-09-04-technology",
+      "category": "technology",
+      "categoryLabel": "Technology",
+      "headline": "Nvidia Agrees to Acquire Open-Source AI Hub Hugging Face for $12.93 Billion",
+      "summary": "Nvidia announced on September 3 a $12.93 billion agreement to acquire Hugging Face, the world's premier developer platform for open-source AI models. The acquisition places the primary distribution hub for open-weight artificial intelligence under the dominant chip manufacturer, though Nvidia promised to maintain the platform's multi-cloud independence.",
+      "question": "Do you think big tech companies acquiring open-source AI platforms is good or bad for overall innovation?",
       "coachLeads": {
-        "friendly": "Hey, have you heard the latest from the movie world? The Venice Film Festival just started!",
-        "energetic": "Cinema's biggest stars are back on the red carpet! Let's talk about the opening of the Venice Film Festival!",
-        "calm": "The annual Venice Film Festival opened today in Italy, marking the start of the autumn movie season.",
-        "direct": "The 83rd Venice Film Festival officially opened today. Here is what you need to know."
+        "friendly": "Hey, have you heard about Nvidia's huge announcement today? They are buying open-source platform Hugging Face for nearly thirteen billion dollars!",
+        "energetic": "Check out this massive news in the AI world today! Nvidia just agreed to acquire Hugging Face in a major $12.93 billion deal!",
+        "calm": "Nvidia has announced an agreement to acquire Hugging Face for $12.93 billion. It marks a significant shift in the tech industry that is worth talking about.",
+        "direct": "Nvidia is acquiring open-source AI hub Hugging Face for $12.93 billion. Let's discuss what this means for the technology landscape."
       },
       "sources": [
         {
-          "title": "Google News: Entertainment",
-          "url": "https://news.google.com/search?q=Entertainment%20top%20news%202026-09-03&hl=en-US&gl=US&ceid=US:en"
+          "title": "nvidia.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH11VHqcyQp0jYLfC7wnoxoKCW8fN1N_YDwl-4HxcUHP_7YffYZhUJyBAwHBvo9JTAgrR0swa2iXc9VEK1HTwFfyqLRjyP-GC3CSVRszQ7pvBk1zqXV085QTZCfNTqjdfGjkKx8bClPRl9MxDz2IBGqLpYE"
+        },
+        {
+          "title": "whbl.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGLGq6PKRxjpCYF0NcmJOy9Iz4UBGIpk6FgfrQU6m_7S9RXmVVSTV8SBIeRCcm8kexKeCELFesm3Y06MNSx_nYgRLZYQk04Ruixb6n2-BNK1R6c8460Ord5Uq9XWsmpqZ3m5MOVvxaye-B6gv2lcY9lTypM3p8Nyxht0Und2KOUIKZmEXYXy-Uwv0Wwz00NkqFstRHhagCNmdQTfDu5Cw5n"
+        },
+        {
+          "title": "theguardian.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHuZe4W811fNqIN-HntWeAeLlA0PzxBnIvGITA3uyaPCwQ_ZaqFr1tGfsRCBFHxII555JiqSFgjWrEsAli88DnOCeDcu22e-sG47Oqku1jdQWXglyPFcD9HezqIkyJI6SrRlARAD_DtE31C7t9392_1A4ymrYgAjgJ1s_BRJmiWBfSzvigwcnp3epcR5tVjCMGF"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-04-sports",
+      "category": "sports",
+      "categoryLabel": "Sports",
+      "headline": "Naomi Osaka Battles Past Siniakova to Reach US Open Third Round",
+      "summary": "Two-time tournament champion Naomi Osaka defeated Katerina Siniakova 6-2, 5-7, 6-1 on Thursday to advance to the third round of the 2026 US Open. The result is making top headlines as the Japanese star successfully regrouped at Arthur Ashe Stadium after a challenging mid-match lapse.",
+      "question": "What techniques or mental strategies do you think help athletes regain focus when momentum shifts against them?",
+      "coachLeads": {
+        "friendly": "Hey, did you catch Naomi Osaka's victory at the US Open today? It was quite a match, and I'd love to hear what you thought about her performance!",
+        "energetic": "Naomi Osaka just pulled off an awesome three-set win at Flushing Meadows! She really dug deep to advance, and it's definitely worth talking about!",
+        "calm": "Naomi Osaka showed impressive composure to move on to the third round of the US Open today. It is a great example of staying focused under pressure.",
+        "direct": "Naomi Osaka secured her spot in the US Open third round after a tough three-set match today. Let's talk about what made the difference in her victory."
+      },
+      "sources": [
+        {
+          "title": "sportsnet.ca",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEhl20xDERTXWtOcIjUO3igbKd5jkCce9AuMtt-Z8a6kUma-hbcItnUV78VBerBcEvKSQgrjfdwlNIWmwOLEoce1e4w6DPs2pxUwMjB0HGxBzf1y1q4ps2MylsemrNqkp_Mnhf_LporDEMqtOGAmm1KHkeZrbWEefl9ICuPoecO3-GJQH29qeOhk1g="
+        },
+        {
+          "title": "usopen.org",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQENflbajGUc5tAqbgZ2_U8R_Og-14HHKjqbhQAcMvolkpYLXXD6zmx6vMORyi0rDoFZFnbViyBml-Di8dL6x49P-wnmiRtCd78CKDkBZE_9pAG3ExRr1m6JS5Vl0FpCLKeSEFpG1bNLZraXNDcmX9iW0HrfXnbzHyuJtBZ6ZQ9_-B4xkt7E5xiM7jEu8_Yuo6D1sRsGTHZVdJD9Dd9spG38wlBOflqQofgdYbvDTo57j92beQ=="
+        }
+      ]
+    },
+    {
+      "id": "2026-09-04-entertainment",
+      "category": "entertainment",
+      "categoryLabel": "Entertainment",
+      "headline": "George Clooney Receives Lifetime Achievement Golden Lion at Venice Film Festival",
+      "summary": "Hollywood star George Clooney was presented with the Golden Lion for Lifetime Achievement at the opening ceremony of the 83rd Venice Film Festival in Italy. Presented by actress Laura Dern, the prestigious award recognizes his four-decade career across acting, directing, and producing.",
+      "question": "If you could receive a lifetime achievement award for any personal skill or hobby, what would you want to be recognized for?",
+      "coachLeads": {
+        "friendly": "Hey, have you heard the news from the Venice Film Festival today? It's a great topic to practice your English with!",
+        "energetic": "Check this out! One of Hollywood's biggest icons just won a huge lifetime achievement award in Italy!",
+        "calm": "There's some notable film news today. George Clooney was honored with a lifetime achievement award at the Venice Film Festival.",
+        "direct": "George Clooney was just awarded the Golden Lion for Lifetime Achievement in Venice. Let's discuss his movie legacy."
+      },
+      "sources": [
+        {
+          "title": "labiennale.org",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGPwtuLDFUIep7WgL8XRo6kIina294DOKQ_4tIKAfAyrZsD6PYYsXiyPx6AQ6puLEs4zIKqdAGFYvWi3uoU2-r1VJ4Ox0zSS8vzm7HeSoFgW25uCnONTHWqRpe9JzF0Hg=="
+        },
+        {
+          "title": "facebook.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGKSFvot9G8PPWvt71ocQR1K5BHm4cumHp6kW6TjF6ZGimbmrrqSfdZ60nS-wrw3hPg5yQaWeqdndUvKmC93xZeSKPvmdypXYyuI_YBI1bISPPXcHRY5yPxVEJQIqeLFRMsK_Fhgq3uCwQ7ytIqan-99A44yfW37OpwstMNyqae2ouFw8JtDsjvmAn5q4P0JnYUhNqWzEKGp-_RVYxc7dRe7A7tkslzfDMFkiqAIUO1nXlW0F4lJkBzlNwUiq5ABe-jsHqDR48="
+        },
+        {
+          "title": "labiennale.org",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHuR9yaGyoCa4k3bdrigXJUz7qkX0dOo2Vpu4J63SHd6gP-9xwy631nZLHPyifEhWh4qcI4yjnKX-f7tTsOEIRVlGCV9lpM9eja77soYNyoX5Ub6_zWRPZskKjEuPyBDpzb3osCxaOQpDhbE3lVnE_P21jGjl0XDcABdygTYDkqBcVAXhtjJ_yk"
         }
       ]
     }
