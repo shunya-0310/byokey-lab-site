@@ -1,116 +1,92 @@
 {
   "schemaVersion": 1,
   "status": "live",
-  "date": "2026-09-04",
-  "generatedAt": "2026-09-03T23:17:04.946Z",
+  "date": "2026-09-05",
+  "generatedAt": "2026-09-04T23:03:05.113Z",
   "model": "gemini-3.6-flash",
   "fallbackCategories": [],
   "items": [
     {
-      "id": "2026-09-04-politics_economy",
+      "id": "2026-09-05-politics_economy",
       "category": "politics_economy",
       "categoryLabel": "Politics & Economy",
-      "headline": "US Vice President Vance Downplays Iran Conflict and Refuses Timeline for Resolution",
-      "summary": "During a White House press briefing on September 3, U.S. Vice President JD Vance stated he would not describe the ongoing conflict with Iran as an active war and declined to offer a timeline for its end. His comments come as persistent tensions surrounding Middle Eastern shipping routes continue to impact global energy markets and international policy.",
-      "question": "How do you think global political instability and changing energy prices impact daily life and business in your region?",
+      "headline": "Russian Drone Strikes Ukraine's Security Headquarters Ahead of Peace Talks",
+      "summary": "A Russian drone struck the central Kyiv headquarters of Ukraine's Security Service on Friday, injuring several people in a direct hit on a major government facility. Ukrainian officials described the strike as a major escalation that occurred just as diplomatic discussions with U.S. representatives were set to begin.",
+      "question": "How do you think unexpected military actions impact the success of diplomatic talks?",
       "coachLeads": {
-        "friendly": "Hey! Have you had a chance to catch up on the latest diplomatic news from Washington today?",
-        "energetic": "Check this out—a major White House news briefing just reframed the situation in the Middle East, and it's making global headlines!",
-        "calm": "Let's take a look at a major story from the past 24 hours regarding global policy and international relations.",
-        "direct": "This update on the U.S.-Iran situation is one of the biggest political stories today, so let me give you the quick breakdown."
+        "friendly": "Hey, have you heard about the breaking news out of Kyiv today? It's a really critical moment for international diplomacy.",
+        "energetic": "There is a huge story breaking today in world politics! A sudden escalation in Kyiv is creating major tension right before peace negotiations.",
+        "calm": "This is an important front-page development worth looking into today. A direct strike in Kyiv is raising fresh questions about the future of upcoming diplomatic talks.",
+        "direct": "A Russian drone hit Ukraine's security headquarters in central Kyiv today. This is worth talking about as diplomats prepare for negotiations."
       },
       "sources": [
         {
-          "title": "straitstimes.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGm_4oyHN5e6iY1Si8l-eEDk7TrEVJcoMuvJsIH-ViRcD3EOTcIc_APcepBYE_rVkbJTW4_N3QcBtpEnf66R04RUGd0HudurdICvlnceHZ8gIC6uv6z6PA5P_5F1L7VxZuNN59KGGwbbDm6fzqn7PMWlGJkk73u0SU02DgoufeSO2pqOREFTBW3IWGcMfWK0-c1mNZJ_rglcMwjQSw="
+          "title": "pbs.org",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEnd9G04vMLwINsNVR4AZKvwUrm0kBwaONz3KlyBJZU4ticuNjOCfguSAwhOO0A7bRif5P_J5LAvjPS7NRCVa1z9fYK5WCA0cXACAnZ-LAssDrue42O36lav-JlfDBHBwOA4vrJXMtUIr-jKAZnpDpOhrSaH405rti3uRVTnWod-_5P94uKKl0ePlecQEsoRXnOYjRF_E5yQDht4v01lPjIy46CMivI2AC74i_NxvioXOr6VhtTVNUhUA=="
         },
         {
-          "title": "washingtonpost.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHMEY1Gb8V_Cs-A1zx9Q9LT0CyqDHh3Qmecxhtt06zYvwN8sI1LyIrn10foAig_jenue5HI68jW7wVlQsgm0oV_n5JO4H-ovTbl8OYDJiJKs42lw4Gmq8KaPIjSa3jjwayFXjS8pH8diGA9so-7F13YaMM8sY-Zp02TVmdvgdMF6ph4xosq1vr3ku1-fIVYF2jKb64I1Dn0fC2ItXB3kns4GKvJX3q9dlMr8H8="
-        },
-        {
-          "title": "facebook.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEwMlWn_COegzzb9zzHHIcJNPhy6ct5qRxTZ-Nuit51uHP9-rrOzKoKEnjur1IOR8Vn3hAX3SqE1BytVV0Wgo1nR_kd87GSlG2fX2mmi-2_Iav1mSfhGWCBZhY0E7y8dpjqTcsfKQw1apspRaulCIIBvnzNFwIPh5qhj7jSMRmEBaRjBt1I1DbF4kjS-aoDfeXGPIXWqyDwwnnbXqQXcTqv0w=="
+          "title": "substack.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFp4t-ZwN8eseZU5tRuIOGhKVS7KNLDDZsiaAZiiMWBsl-ETPHJQRmhJr2b3prujzq2czwIFrCDzBK6hqFowfyiq5dka1iXTM-qhjsU9zvSAomba_kXal4l7or3T283653pSC8Fu89EYaugpjPWyESnE-5NYXoUpyIVH2tt"
         }
       ]
     },
     {
-      "id": "2026-09-04-technology",
+      "id": "2026-09-05-technology",
       "category": "technology",
       "categoryLabel": "Technology",
-      "headline": "Nvidia Agrees to Acquire Open-Source AI Hub Hugging Face for $12.93 Billion",
-      "summary": "Nvidia announced on September 3 a $12.93 billion agreement to acquire Hugging Face, the world's premier developer platform for open-source AI models. The acquisition places the primary distribution hub for open-weight artificial intelligence under the dominant chip manufacturer, though Nvidia promised to maintain the platform's multi-cloud independence.",
-      "question": "Do you think big tech companies acquiring open-source AI platforms is good or bad for overall innovation?",
+      "headline": "Google Issues Emergency Security Patch for Actively Exploited Chrome Zero-Day Vulnerability",
+      "summary": "Google has released an emergency security update for its Chrome browser to address a high-severity zero-day flaw in its V8 JavaScript engine. Tracked as CVE-2026-85046, the vulnerability is already being actively exploited in real-world attacks, prompting security experts to advise immediate browser updates.",
+      "question": "How do you usually manage software and browser updates, and do emergency security warnings change your habits?",
       "coachLeads": {
-        "friendly": "Hey, have you heard about Nvidia's huge announcement today? They are buying open-source platform Hugging Face for nearly thirteen billion dollars!",
-        "energetic": "Check out this massive news in the AI world today! Nvidia just agreed to acquire Hugging Face in a major $12.93 billion deal!",
-        "calm": "Nvidia has announced an agreement to acquire Hugging Face for $12.93 billion. It marks a significant shift in the tech industry that is worth talking about.",
-        "direct": "Nvidia is acquiring open-source AI hub Hugging Face for $12.93 billion. Let's discuss what this means for the technology landscape."
+        "friendly": "Hey, have you checked your web browser today? Google just issued an urgent security update that is definitely worth taking care of right away.",
+        "energetic": "Check this out—Google just pushed out a critical fix for Chrome! It is a great moment to chat about how we keep our devices safe online.",
+        "calm": "Google has released an emergency security patch for Chrome following reports of active cyber exploits. Let's take a quick look at what happened and why keeping software updated matters.",
+        "direct": "Google just patched a serious zero-day flaw in Chrome that attackers are actively using. Here is what you need to know about keeping your browser secure."
       },
       "sources": [
         {
-          "title": "nvidia.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH11VHqcyQp0jYLfC7wnoxoKCW8fN1N_YDwl-4HxcUHP_7YffYZhUJyBAwHBvo9JTAgrR0swa2iXc9VEK1HTwFfyqLRjyP-GC3CSVRszQ7pvBk1zqXV085QTZCfNTqjdfGjkKx8bClPRl9MxDz2IBGqLpYE"
-        },
-        {
-          "title": "whbl.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGLGq6PKRxjpCYF0NcmJOy9Iz4UBGIpk6FgfrQU6m_7S9RXmVVSTV8SBIeRCcm8kexKeCELFesm3Y06MNSx_nYgRLZYQk04Ruixb6n2-BNK1R6c8460Ord5Uq9XWsmpqZ3m5MOVvxaye-B6gv2lcY9lTypM3p8Nyxht0Und2KOUIKZmEXYXy-Uwv0Wwz00NkqFstRHhagCNmdQTfDu5Cw5n"
-        },
-        {
-          "title": "theguardian.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHuZe4W811fNqIN-HntWeAeLlA0PzxBnIvGITA3uyaPCwQ_ZaqFr1tGfsRCBFHxII555JiqSFgjWrEsAli88DnOCeDcu22e-sG47Oqku1jdQWXglyPFcD9HezqIkyJI6SrRlARAD_DtE31C7t9392_1A4ymrYgAjgJ1s_BRJmiWBfSzvigwcnp3epcR5tVjCMGF"
+          "title": "Google News: Technology",
+          "url": "https://news.google.com/search?q=Technology%20top%20news%202026-09-05&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     },
     {
-      "id": "2026-09-04-sports",
+      "id": "2026-09-05-sports",
       "category": "sports",
       "categoryLabel": "Sports",
-      "headline": "Naomi Osaka Battles Past Siniakova to Reach US Open Third Round",
-      "summary": "Two-time tournament champion Naomi Osaka defeated Katerina Siniakova 6-2, 5-7, 6-1 on Thursday to advance to the third round of the 2026 US Open. The result is making top headlines as the Japanese star successfully regrouped at Arthur Ashe Stadium after a challenging mid-match lapse.",
-      "question": "What techniques or mental strategies do you think help athletes regain focus when momentum shifts against them?",
+      "headline": "Top Seed Alexander Zverev Survives Another Five-Set Marathon at US Open",
+      "summary": "Top-seeded Alexander Zverev defeated Quentin Halys in a four-hour and 33-minute epic to advance to the third round of the 2026 US Open. The hard-fought victory marked Zverev's second consecutive five-set thriller in New York, bringing his total court time to over nine hours across his first two matches.",
+      "question": "How do you think professional athletes stay mentally tough during high-stakes matches that last for hours?",
       "coachLeads": {
-        "friendly": "Hey, did you catch Naomi Osaka's victory at the US Open today? It was quite a match, and I'd love to hear what you thought about her performance!",
-        "energetic": "Naomi Osaka just pulled off an awesome three-set win at Flushing Meadows! She really dug deep to advance, and it's definitely worth talking about!",
-        "calm": "Naomi Osaka showed impressive composure to move on to the third round of the US Open today. It is a great example of staying focused under pressure.",
-        "direct": "Naomi Osaka secured her spot in the US Open third round after a tough three-set match today. Let's talk about what made the difference in her victory."
+        "friendly": "Hey, did you hear about the incredible drama at the US Open? Alexander Zverev just survived another wild five-set match!",
+        "energetic": "You won't believe the endurance test happening at the US Open right now! Top seed Alexander Zverev just pushed through back-to-back five-set marathons!",
+        "calm": "There is an incredible test of physical endurance unfolding at the US Open. Alexander Zverev has already spent over nine hours on court after playing just two rounds.",
+        "direct": "Alexander Zverev just survived another grueling five-set match at the US Open. Let's discuss how top athletes handle that level of extreme physical fatigue."
       },
       "sources": [
         {
-          "title": "sportsnet.ca",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEhl20xDERTXWtOcIjUO3igbKd5jkCce9AuMtt-Z8a6kUma-hbcItnUV78VBerBcEvKSQgrjfdwlNIWmwOLEoce1e4w6DPs2pxUwMjB0HGxBzf1y1q4ps2MylsemrNqkp_Mnhf_LporDEMqtOGAmm1KHkeZrbWEefl9ICuPoecO3-GJQH29qeOhk1g="
-        },
-        {
           "title": "usopen.org",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQENflbajGUc5tAqbgZ2_U8R_Og-14HHKjqbhQAcMvolkpYLXXD6zmx6vMORyi0rDoFZFnbViyBml-Di8dL6x49P-wnmiRtCd78CKDkBZE_9pAG3ExRr1m6JS5Vl0FpCLKeSEFpG1bNLZraXNDcmX9iW0HrfXnbzHyuJtBZ6ZQ9_-B4xkt7E5xiM7jEu8_Yuo6D1sRsGTHZVdJD9Dd9spG38wlBOflqQofgdYbvDTo57j92beQ=="
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEmGYsX6gDYY7s8ib4F-IZ4lI0mAA7woWYINHlg0PuodDAAcDOaawaB48mwFD0AraDZ6gPXCznZgSGtd6CRjkOmvl7PrcIAC-0bIXAAMpB89wx1uyWXF_yBhE4alR2faxNq03OnTkSsfAXxCNbF7E4H_vGxLij1woWmdM3W4ZQdTWFsu56f6u3tL7ldnQUA1E_a_GJosDfjWzdfCuYIaRwLw5tI1FfK2j9f_QVdhQ=="
         }
       ]
     },
     {
-      "id": "2026-09-04-entertainment",
+      "id": "2026-09-05-entertainment",
       "category": "entertainment",
       "categoryLabel": "Entertainment",
-      "headline": "George Clooney Receives Lifetime Achievement Golden Lion at Venice Film Festival",
-      "summary": "Hollywood star George Clooney was presented with the Golden Lion for Lifetime Achievement at the opening ceremony of the 83rd Venice Film Festival in Italy. Presented by actress Laura Dern, the prestigious award recognizes his four-decade career across acting, directing, and producing.",
-      "question": "If you could receive a lifetime achievement award for any personal skill or hobby, what would you want to be recognized for?",
+      "headline": "George Clooney Honored with Golden Lion Lifetime Achievement Award at Venice Film Festival",
+      "summary": "Oscar-winning actor and filmmaker George Clooney was awarded the Golden Lion for Lifetime Achievement at the opening of the 83rd Venice International Film Festival in Italy. Presented by actress Laura Dern, the prestigious award celebrates Clooney's four-decade career as an actor, director, and producer in global cinema.",
+      "question": "Which of George Clooney's movies or roles has made the biggest impression on you, and why?",
       "coachLeads": {
-        "friendly": "Hey, have you heard the news from the Venice Film Festival today? It's a great topic to practice your English with!",
-        "energetic": "Check this out! One of Hollywood's biggest icons just won a huge lifetime achievement award in Italy!",
-        "calm": "There's some notable film news today. George Clooney was honored with a lifetime achievement award at the Venice Film Festival.",
-        "direct": "George Clooney was just awarded the Golden Lion for Lifetime Achievement in Venice. Let's discuss his movie legacy."
+        "friendly": "Hey, have you heard the latest news about George Clooney? He was just honored with a major lifetime achievement award in Venice!",
+        "energetic": "Guess what! George Clooney took center stage at the Venice Film Festival to accept a prestigious Golden Lion lifetime achievement award!",
+        "calm": "George Clooney was awarded a Golden Lion for Lifetime Achievement at the Venice Film Festival. It offers a nice opportunity to reflect on his impressive body of work in cinema.",
+        "direct": "George Clooney just received the Golden Lion for Lifetime Achievement at the 83rd Venice Film Festival. Let's discuss his legacy and your favorite roles of his."
       },
       "sources": [
         {
-          "title": "labiennale.org",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGPwtuLDFUIep7WgL8XRo6kIina294DOKQ_4tIKAfAyrZsD6PYYsXiyPx6AQ6puLEs4zIKqdAGFYvWi3uoU2-r1VJ4Ox0zSS8vzm7HeSoFgW25uCnONTHWqRpe9JzF0Hg=="
-        },
-        {
-          "title": "facebook.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGKSFvot9G8PPWvt71ocQR1K5BHm4cumHp6kW6TjF6ZGimbmrrqSfdZ60nS-wrw3hPg5yQaWeqdndUvKmC93xZeSKPvmdypXYyuI_YBI1bISPPXcHRY5yPxVEJQIqeLFRMsK_Fhgq3uCwQ7ytIqan-99A44yfW37OpwstMNyqae2ouFw8JtDsjvmAn5q4P0JnYUhNqWzEKGp-_RVYxc7dRe7A7tkslzfDMFkiqAIUO1nXlW0F4lJkBzlNwUiq5ABe-jsHqDR48="
-        },
-        {
-          "title": "labiennale.org",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHuR9yaGyoCa4k3bdrigXJUz7qkX0dOo2Vpu4J63SHd6gP-9xwy631nZLHPyifEhWh4qcI4yjnKX-f7tTsOEIRVlGCV9lpM9eja77soYNyoX5Ub6_zWRPZskKjEuPyBDpzb3osCxaOQpDhbE3lVnE_P21jGjl0XDcABdygTYDkqBcVAXhtjJ_yk"
+          "title": "Google News: Entertainment",
+          "url": "https://news.google.com/search?q=Entertainment%20top%20news%202026-09-05&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     }
