@@ -1,92 +1,108 @@
 {
   "schemaVersion": 1,
   "status": "live",
-  "date": "2026-09-05",
-  "generatedAt": "2026-09-04T23:03:05.113Z",
+  "date": "2026-09-06",
+  "generatedAt": "2026-09-05T22:54:59.506Z",
   "model": "gemini-3.6-flash",
   "fallbackCategories": [],
   "items": [
     {
-      "id": "2026-09-05-politics_economy",
+      "id": "2026-09-06-politics_economy",
       "category": "politics_economy",
       "categoryLabel": "Politics & Economy",
-      "headline": "Russian Drone Strikes Ukraine's Security Headquarters Ahead of Peace Talks",
-      "summary": "A Russian drone struck the central Kyiv headquarters of Ukraine's Security Service on Friday, injuring several people in a direct hit on a major government facility. Ukrainian officials described the strike as a major escalation that occurred just as diplomatic discussions with U.S. representatives were set to begin.",
-      "question": "How do you think unexpected military actions impact the success of diplomatic talks?",
+      "headline": "US Envoys Meet Putin in Moscow for Peace Talks as Both Sides Pause Strikes on Capitals",
+      "summary": "U.S. envoys Steve Witkoff and Jared Kushner met with Russian President Vladimir Putin in Moscow on Saturday to present a new proposal aimed at ending the war in Ukraine. The high-stakes diplomatic visit prompted both Russia and Ukraine to temporarily halt airstrikes against each other's capitals as negotiators prepare to visit Kyiv next.",
+      "question": "Do you believe temporary pauses in military attacks can help build enough trust between nations for lasting peace talks?",
       "coachLeads": {
-        "friendly": "Hey, have you heard about the breaking news out of Kyiv today? It's a really critical moment for international diplomacy.",
-        "energetic": "There is a huge story breaking today in world politics! A sudden escalation in Kyiv is creating major tension right before peace negotiations.",
-        "calm": "This is an important front-page development worth looking into today. A direct strike in Kyiv is raising fresh questions about the future of upcoming diplomatic talks.",
-        "direct": "A Russian drone hit Ukraine's security headquarters in central Kyiv today. This is worth talking about as diplomats prepare for negotiations."
+        "friendly": "Hey, have you heard about the new diplomatic effort to negotiate an end to the conflict in Ukraine?",
+        "energetic": "Major world news is breaking as high-stakes peace negotiations get underway in Moscow!",
+        "calm": "A temporary pause in capital airstrikes has created a brief diplomatic window for new peace talks.",
+        "direct": "U.S. envoys have arrived in Moscow with a fresh proposal to negotiate peace between Russia and Ukraine."
       },
       "sources": [
         {
-          "title": "pbs.org",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEnd9G04vMLwINsNVR4AZKvwUrm0kBwaONz3KlyBJZU4ticuNjOCfguSAwhOO0A7bRif5P_J5LAvjPS7NRCVa1z9fYK5WCA0cXACAnZ-LAssDrue42O36lav-JlfDBHBwOA4vrJXMtUIr-jKAZnpDpOhrSaH405rti3uRVTnWod-_5P94uKKl0ePlecQEsoRXnOYjRF_E5yQDht4v01lPjIy46CMivI2AC74i_NxvioXOr6VhtTVNUhUA=="
+          "title": "theguardian.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGULfSPbOFaWmlN7USpQhlDnjlio7vkqn7iexoVWmc_WdC-GQQwvl1dMSJ8L_llFbopILwxiODDqZOKQu6PHFcriuAKwBvxe3LV6CCvxe0OBuMDTVjcX3EyxrM57ktX26dro6-OHTfPEMGXHFELdAjVmEyuZL8-3iZHKdvR8V0IukCJROnjaxF4SKqrkI5qVp-kS-KkW6Fu2DlKjg=="
         },
         {
-          "title": "substack.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFp4t-ZwN8eseZU5tRuIOGhKVS7KNLDDZsiaAZiiMWBsl-ETPHJQRmhJr2b3prujzq2czwIFrCDzBK6hqFowfyiq5dka1iXTM-qhjsU9zvSAomba_kXal4l7or3T283653pSC8Fu89EYaugpjPWyESnE-5NYXoUpyIVH2tt"
+          "title": "cbsnews.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHqz2KzwVNTd455WHOqcE76bOfX5kknJWz4JIi2BwCkInjUVhk0OQjUYBxH0cniJ_LUl9O7lhrqoPkeC_c0YfU9ippOYk6eKVBfkFUHu0gdFQ_-OFiQ93SL0O05xLjpo2C92EWLBN0waDUaWUI9LOLxvwPdH3c9zYd770MFf_fD38T61nMYc-YqDbHa"
         }
       ]
     },
     {
-      "id": "2026-09-05-technology",
+      "id": "2026-09-06-technology",
       "category": "technology",
       "categoryLabel": "Technology",
-      "headline": "Google Issues Emergency Security Patch for Actively Exploited Chrome Zero-Day Vulnerability",
-      "summary": "Google has released an emergency security update for its Chrome browser to address a high-severity zero-day flaw in its V8 JavaScript engine. Tracked as CVE-2026-85046, the vulnerability is already being actively exploited in real-world attacks, prompting security experts to advise immediate browser updates.",
-      "question": "How do you usually manage software and browser updates, and do emergency security warnings change your habits?",
+      "headline": "OpenAI Launches GPT-6 Astra Featuring Autonomous Digital Capabilities",
+      "summary": "OpenAI has officially launched its newest flagship AI model, GPT-6 Astra, which introduces advanced capabilities for autonomous computer use and multi-step problem solving. The debut is drawing widespread attention because Astra is the company's first model to cross its critical cybersecurity risk threshold, triggering strict safety protocols and controlled rollout tiers.",
+      "question": "How do you feel about AI systems gaining the ability to autonomously operate software and complete complex tasks on computers?",
       "coachLeads": {
-        "friendly": "Hey, have you checked your web browser today? Google just issued an urgent security update that is definitely worth taking care of right away.",
-        "energetic": "Check this out—Google just pushed out a critical fix for Chrome! It is a great moment to chat about how we keep our devices safe online.",
-        "calm": "Google has released an emergency security patch for Chrome following reports of active cyber exploits. Let's take a quick look at what happened and why keeping software updated matters.",
-        "direct": "Google just patched a serious zero-day flaw in Chrome that attackers are actively using. Here is what you need to know about keeping your browser secure."
+        "friendly": "Hey, have you heard about OpenAI's latest AI model release? It's making big waves in tech right now!",
+        "energetic": "This is incredible news in tech! OpenAI just unveiled a brand-new model that can autonomously navigate and use computers!",
+        "calm": "OpenAI has released its newest flagship model, GPT-6 Astra, bringing notable advances in AI autonomy and cybersecurity governance. It's a story worth reflecting on.",
+        "direct": "OpenAI just launched GPT-6 Astra, marking a key milestone in autonomous AI capabilities and cybersecurity risks."
       },
       "sources": [
         {
-          "title": "Google News: Technology",
-          "url": "https://news.google.com/search?q=Technology%20top%20news%202026-09-05&hl=en-US&gl=US&ceid=US:en"
+          "title": "openai.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF6wDH4LSw9oGdkgI-LaJHz8wnPuw5pQXlaru-esqWGfljf8H_iJ5Pz_gRcMVS8qWK71pTbMe4vNdBnf95EsdBc6EUX4jB2s8IboXDMRyd8LrLCJN1tfmU1SEbj"
+        },
+        {
+          "title": "itvoice.in",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGQL48sjGOjZl2ZK9D6ht3Q4aUit7bOeZkow5FX3AuNqKA29yMd4zYsvlwbu4xhwJMJ4cFpHX4F8Vp08gzyOn_VICGiAKchAoHWdPLPPYP-j1MmRZ3pwo9F0_7GeXb1YOM454zmGX6upc6xSeIntjgRQnkLQVWFrfN_GOc8zrJ45WZ7hiwpwhntaHy8xxdgXHEYXboR-SG0HHGKdROpHuiXfg=="
+        },
+        {
+          "title": "futurumgroup.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH9OxC9uwa5Sq7bMDHiCJNVRb638OspCyBo0p7zYfHujqGd5YSnBDJiM-vklb_Xu1k16p2eMtv0bM6bPTTur84zkQO6xKshi5GFeuM0AyNp9Rt1HDckNGxf6TkpyevCkPtVZAFFOOxaxxUb2mqr0xgQ5FjNGBrltI93ZOHhzATh9r5J0mDAYSYyQsBHfZ_24DB3zUAb4Q=="
         }
       ]
     },
     {
-      "id": "2026-09-05-sports",
+      "id": "2026-09-06-sports",
       "category": "sports",
       "categoryLabel": "Sports",
-      "headline": "Top Seed Alexander Zverev Survives Another Five-Set Marathon at US Open",
-      "summary": "Top-seeded Alexander Zverev defeated Quentin Halys in a four-hour and 33-minute epic to advance to the third round of the 2026 US Open. The hard-fought victory marked Zverev's second consecutive five-set thriller in New York, bringing his total court time to over nine hours across his first two matches.",
-      "question": "How do you think professional athletes stay mentally tough during high-stakes matches that last for hours?",
+      "headline": "Zheng Qinwen Stuns Madison Keys in Dramatic US Open Comeback",
+      "summary": "Olympic champion Zheng Qinwen mounted a dramatic comeback at the US Open on Saturday, saving a match point when trailing 5-1 in the final set to defeat Madison Keys 1-6, 7-6 (3), 7-5. Her seven-game winning streak to end the match moved her into the tournament's round of 16.",
+      "question": "What strategies do you use to stay focused and keep going when you face a difficult challenge?",
       "coachLeads": {
-        "friendly": "Hey, did you hear about the incredible drama at the US Open? Alexander Zverev just survived another wild five-set match!",
-        "energetic": "You won't believe the endurance test happening at the US Open right now! Top seed Alexander Zverev just pushed through back-to-back five-set marathons!",
-        "calm": "There is an incredible test of physical endurance unfolding at the US Open. Alexander Zverev has already spent over nine hours on court after playing just two rounds.",
-        "direct": "Alexander Zverev just survived another grueling five-set match at the US Open. Let's discuss how top athletes handle that level of extreme physical fatigue."
+        "friendly": "Hey, have you seen the latest news from the US Open? There was an unbelievable comeback match today that is really worth talking about.",
+        "energetic": "What an incredible rally at the US Open today! Zheng Qinwen was on the brink of elimination and somehow completely turned the match around!",
+        "calm": "A remarkable comeback took place at the US Open today. It serves as a classic example of mental resilience under extreme pressure.",
+        "direct": "Zheng Qinwen just pulled off a major third-round comeback at the US Open today. Let's look at how she managed to stay in the match."
       },
       "sources": [
         {
-          "title": "usopen.org",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEmGYsX6gDYY7s8ib4F-IZ4lI0mAA7woWYINHlg0PuodDAAcDOaawaB48mwFD0AraDZ6gPXCznZgSGtd6CRjkOmvl7PrcIAC-0bIXAAMpB89wx1uyWXF_yBhE4alR2faxNq03OnTkSsfAXxCNbF7E4H_vGxLij1woWmdM3W4ZQdTWFsu56f6u3tL7ldnQUA1E_a_GJosDfjWzdfCuYIaRwLw5tI1FfK2j9f_QVdhQ=="
+          "title": "washingtonpost.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEeOj-Fz3vUE6ABJzQ524s3QR60FnTNUqtn6SlgNmKE9_FBhDBIugvp81pSVS3Oj0OtjPyQ7Eq_0fD5TkfUa1AL87qNewGtIT4L0Ze-7KTVQGJb2SayNrFpPE2YGbruxqG2giQuz1lOlgNl0uSjo3jF3y49ZHyg-OevJmPWjlPVBj_M3fUip-2QGM2tK2y7gGyihMgE7xN4VS8SO5AwSauazDoA7Xwj_H_GDbmnVx5opi506N9m7Q=="
+        },
+        {
+          "title": "ksat.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH2wRXYPQydwlDJqP-K7aYlbLcZPYq-oqhFZJgSOS0by-hoyjuSnHYYQFLiUJtWwByqeAYv0hUYyXq0DuHqOaUjN6iGp9tVco4rFP1rUUSg-oFIPMWfDDBikDt2V0_DZJLtViwHZznQGF6fLnjDPU-HEXoX_ccpOKOtEsurPcS6LFuNWUCF6r-dN_n1QCq6Q9MMbLjvInsPBpde-1ywCO_vm76uIgeYi3G8sqNA9BB1YtKsITPALyad79JZvEE="
         }
       ]
     },
     {
-      "id": "2026-09-05-entertainment",
+      "id": "2026-09-06-entertainment",
       "category": "entertainment",
       "categoryLabel": "Entertainment",
-      "headline": "George Clooney Honored with Golden Lion Lifetime Achievement Award at Venice Film Festival",
-      "summary": "Oscar-winning actor and filmmaker George Clooney was awarded the Golden Lion for Lifetime Achievement at the opening of the 83rd Venice International Film Festival in Italy. Presented by actress Laura Dern, the prestigious award celebrates Clooney's four-decade career as an actor, director, and producer in global cinema.",
-      "question": "Which of George Clooney's movies or roles has made the biggest impression on you, and why?",
+      "headline": "Robert Pattinson's Drama 'Primetime' Premieres at Venice Film Festival",
+      "summary": "The dark thriller 'Primetime', starring Robert Pattinson, made its world premiere in competition at the 83rd Venice Film Festival on September 5, 2026. Directed by Lance Oppenheim, the film dramatizes the controversy surrounding mid-2000s reality television and has quickly generated major festival buzz.",
+      "question": "How do you feel about movies that explore controversial moments from real-life television history?",
       "coachLeads": {
-        "friendly": "Hey, have you heard the latest news about George Clooney? He was just honored with a major lifetime achievement award in Venice!",
-        "energetic": "Guess what! George Clooney took center stage at the Venice Film Festival to accept a prestigious Golden Lion lifetime achievement award!",
-        "calm": "George Clooney was awarded a Golden Lion for Lifetime Achievement at the Venice Film Festival. It offers a nice opportunity to reflect on his impressive body of work in cinema.",
-        "direct": "George Clooney just received the Golden Lion for Lifetime Achievement at the 83rd Venice Film Festival. Let's discuss his legacy and your favorite roles of his."
+        "friendly": "Hey, have you heard about the new Robert Pattinson movie making waves at the Venice Film Festival?",
+        "energetic": "The Venice Film Festival is in full swing, and Robert Pattinson's latest premiere is stealing all the headlines today!",
+        "calm": "A major film premiere at the Venice Film Festival today has sparked quite a bit of discussion in the entertainment world.",
+        "direct": "Robert Pattinson's new film 'Primetime' premiered at the Venice Film Festival today, generating major media attention."
       },
       "sources": [
         {
-          "title": "Google News: Entertainment",
-          "url": "https://news.google.com/search?q=Entertainment%20top%20news%202026-09-05&hl=en-US&gl=US&ceid=US:en"
+          "title": "thefilmstage.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGOuEcS1ml_ANytKhByFT_UbnHIQC-9l-_g2EuiFIJnVWfB8gEus0QJKnyuSmKYztF5-6XzHMbFgL6cKVZwcO3Q1oMiY7IbWDXOCcC3A2CpYSKV21gaRGKoAsII3TFjD0_aiGF3Tv5iioIF8ZgxvCFxgZkTyp8VCoTxt3pBgjmzyzqGXymMCZNtr4vQHyb3Z6qm"
+        },
+        {
+          "title": "turkiyetoday.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHV7upXjabJpaek_bhSA4oMuCYR-S6wc-6oJmDmMG0FMrnSmwyaHa2_se1goLroC-HslxeOgmbX7kCTybI27MQbQxR07FpnH2v4ptwKqbgO93hscB_eYb2iFLrgzlGVYfeDZq2qfyDJeu4K2tJreJgXck7FuuBKho6q1CD0T-g1Uc03WCVV6UfDEc9_oIjRJMGuE2UzDBJoW0WCxXK0yiY="
         }
       ]
     }
