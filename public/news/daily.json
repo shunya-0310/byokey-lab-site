@@ -1,108 +1,92 @@
 {
   "schemaVersion": 1,
   "status": "live",
-  "date": "2026-09-06",
-  "generatedAt": "2026-09-05T22:54:59.506Z",
+  "date": "2026-09-07",
+  "generatedAt": "2026-09-06T22:53:40.477Z",
   "model": "gemini-3.6-flash",
   "fallbackCategories": [],
   "items": [
     {
-      "id": "2026-09-06-politics_economy",
+      "id": "2026-09-07-politics_economy",
       "category": "politics_economy",
       "categoryLabel": "Politics & Economy",
-      "headline": "US Envoys Meet Putin in Moscow for Peace Talks as Both Sides Pause Strikes on Capitals",
-      "summary": "U.S. envoys Steve Witkoff and Jared Kushner met with Russian President Vladimir Putin in Moscow on Saturday to present a new proposal aimed at ending the war in Ukraine. The high-stakes diplomatic visit prompted both Russia and Ukraine to temporarily halt airstrikes against each other's capitals as negotiators prepare to visit Kyiv next.",
-      "question": "Do you believe temporary pauses in military attacks can help build enough trust between nations for lasting peace talks?",
+      "headline": "US Envoys Hold Peace Talks in Kyiv Following Moscow Summit",
+      "summary": "U.S. envoys Jared Kushner and Steve Witkoff met with Ukrainian President Volodymyr Zelenskyy in Kyiv to discuss potential peace frameworks after holding talks with Russian President Vladimir Putin in Moscow. The high-stakes diplomatic effort marks a critical moment in negotiations to end the war, with discussions expected to expand to include European allies.",
+      "question": "What role do you think international diplomacy should play in resolving complex global conflicts?",
       "coachLeads": {
-        "friendly": "Hey, have you heard about the new diplomatic effort to negotiate an end to the conflict in Ukraine?",
-        "energetic": "Major world news is breaking as high-stakes peace negotiations get underway in Moscow!",
-        "calm": "A temporary pause in capital airstrikes has created a brief diplomatic window for new peace talks.",
-        "direct": "U.S. envoys have arrived in Moscow with a fresh proposal to negotiate peace between Russia and Ukraine."
+        "friendly": "Hey, have you heard about the high-level peace talks happening in Kyiv? It is a really interesting story to talk about today.",
+        "energetic": "Major news just broke on the global stage! U.S. envoys are holding high-stakes peace negotiations in Ukraine after meeting in Moscow!",
+        "calm": "There is a significant diplomatic development today regarding peace negotiations in Ukraine. Let's take a closer look at what happened.",
+        "direct": "U.S. negotiators just met with President Zelenskyy in Kyiv following talks with Vladimir Putin in Moscow. Let's discuss why this matters right now."
       },
       "sources": [
         {
           "title": "theguardian.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGULfSPbOFaWmlN7USpQhlDnjlio7vkqn7iexoVWmc_WdC-GQQwvl1dMSJ8L_llFbopILwxiODDqZOKQu6PHFcriuAKwBvxe3LV6CCvxe0OBuMDTVjcX3EyxrM57ktX26dro6-OHTfPEMGXHFELdAjVmEyuZL8-3iZHKdvR8V0IukCJROnjaxF4SKqrkI5qVp-kS-KkW6Fu2DlKjg=="
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF1i3zziW5LDcIiHasqwx8ukLYzVA0J309qqxzJY47OMd3luR3pZyw888FKkWJAuJvaPC7oeCUD1WiqeBoefA240RiyWOZwB7XyGGHe1Pl2Q0Igbs5tDIkQaG5Rq-7y4k3GneosZ1MSgccHWrec0SHjLBJ5jV9bzm36_3XSM2zFEGSn1XnzcXmFoY1-s_kz9mJ74dyXzJS3B7E4JRThhalYA_BimJOHoKft"
         },
         {
-          "title": "cbsnews.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHqz2KzwVNTd455WHOqcE76bOfX5kknJWz4JIi2BwCkInjUVhk0OQjUYBxH0cniJ_LUl9O7lhrqoPkeC_c0YfU9ippOYk6eKVBfkFUHu0gdFQ_-OFiQ93SL0O05xLjpo2C92EWLBN0waDUaWUI9LOLxvwPdH3c9zYd770MFf_fD38T61nMYc-YqDbHa"
+          "title": "aa.com.tr",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFSb6jrv8klEf-Bren3hwJSX2hGsxIJpXeGbdlCMtncpiKgKRjdGrnnjE53JPMfmstK6uo4N6mBCt4B57uBr3VF3gLx0-WXr_adsO36JoIzEAqZbL0wXysFXFknTAPa13aCuMbgXKgM4aCiwr69BdZmUfWgNH_bxHWl"
         }
       ]
     },
     {
-      "id": "2026-09-06-technology",
+      "id": "2026-09-07-technology",
       "category": "technology",
       "categoryLabel": "Technology",
-      "headline": "OpenAI Launches GPT-6 Astra Featuring Autonomous Digital Capabilities",
-      "summary": "OpenAI has officially launched its newest flagship AI model, GPT-6 Astra, which introduces advanced capabilities for autonomous computer use and multi-step problem solving. The debut is drawing widespread attention because Astra is the company's first model to cross its critical cybersecurity risk threshold, triggering strict safety protocols and controlled rollout tiers.",
-      "question": "How do you feel about AI systems gaining the ability to autonomously operate software and complete complex tasks on computers?",
+      "headline": "German Startup Isar Aerospace Achieves First Private Rocket Launch to Orbit from Continental Europe",
+      "summary": "German space startup Isar Aerospace successfully launched its Spectrum rocket into orbit from the Andøya Spaceport in Arctic Norway on September 5, 2026. The uncrewed mission safely deployed five small satellites, marking the first time a privately funded launch vehicle has achieved orbit from continental Europe.",
+      "question": "How do you think private rocket launches in Europe will impact global satellite technology and space exploration?",
       "coachLeads": {
-        "friendly": "Hey, have you heard about OpenAI's latest AI model release? It's making big waves in tech right now!",
-        "energetic": "This is incredible news in tech! OpenAI just unveiled a brand-new model that can autonomously navigate and use computers!",
-        "calm": "OpenAI has released its newest flagship model, GPT-6 Astra, bringing notable advances in AI autonomy and cybersecurity governance. It's a story worth reflecting on.",
-        "direct": "OpenAI just launched GPT-6 Astra, marking a key milestone in autonomous AI capabilities and cybersecurity risks."
+        "friendly": "Hey, check this out! A German startup just made space history by launching a rocket into orbit from continental Europe.",
+        "energetic": "This is huge news for space technology! A European startup just successfully reached orbit with its own rocket launched from Norway!",
+        "calm": "Here is a noteworthy development in the space sector. Europe has just achieved its first private rocket launch into orbit from the continent.",
+        "direct": "A German startup made space history this weekend by reaching orbit from continental Europe. Let's talk about why this launch matters."
       },
       "sources": [
         {
-          "title": "openai.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF6wDH4LSw9oGdkgI-LaJHz8wnPuw5pQXlaru-esqWGfljf8H_iJ5Pz_gRcMVS8qWK71pTbMe4vNdBnf95EsdBc6EUX4jB2s8IboXDMRyd8LrLCJN1tfmU1SEbj"
-        },
-        {
-          "title": "itvoice.in",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGQL48sjGOjZl2ZK9D6ht3Q4aUit7bOeZkow5FX3AuNqKA29yMd4zYsvlwbu4xhwJMJ4cFpHX4F8Vp08gzyOn_VICGiAKchAoHWdPLPPYP-j1MmRZ3pwo9F0_7GeXb1YOM454zmGX6upc6xSeIntjgRQnkLQVWFrfN_GOc8zrJ45WZ7hiwpwhntaHy8xxdgXHEYXboR-SG0HHGKdROpHuiXfg=="
-        },
-        {
-          "title": "futurumgroup.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH9OxC9uwa5Sq7bMDHiCJNVRb638OspCyBo0p7zYfHujqGd5YSnBDJiM-vklb_Xu1k16p2eMtv0bM6bPTTur84zkQO6xKshi5GFeuM0AyNp9Rt1HDckNGxf6TkpyevCkPtVZAFFOOxaxxUb2mqr0xgQ5FjNGBrltI93ZOHhzATh9r5J0mDAYSYyQsBHfZ_24DB3zUAb4Q=="
+          "title": "Google News: Technology",
+          "url": "https://news.google.com/search?q=Technology%20top%20news%202026-09-07&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     },
     {
-      "id": "2026-09-06-sports",
+      "id": "2026-09-07-sports",
       "category": "sports",
       "categoryLabel": "Sports",
-      "headline": "Zheng Qinwen Stuns Madison Keys in Dramatic US Open Comeback",
-      "summary": "Olympic champion Zheng Qinwen mounted a dramatic comeback at the US Open on Saturday, saving a match point when trailing 5-1 in the final set to defeat Madison Keys 1-6, 7-6 (3), 7-5. Her seven-game winning streak to end the match moved her into the tournament's round of 16.",
-      "question": "What strategies do you use to stay focused and keep going when you face a difficult challenge?",
+      "headline": "Alcaraz and Sabalenka Advance to US Open Quarterfinals",
+      "summary": "Defending champions Carlos Alcaraz and Aryna Sabalenka both earned straight-set victories on Sunday to advance to the quarterfinals of the US Open. Alcaraz defeated American Tommy Paul, while Sabalenka overcame Taylor Townsend to keep her title defense and top world ranking on track.",
+      "question": "Which player do you think faces the tougher road ahead as the US Open enters its final stages?",
       "coachLeads": {
-        "friendly": "Hey, have you seen the latest news from the US Open? There was an unbelievable comeback match today that is really worth talking about.",
-        "energetic": "What an incredible rally at the US Open today! Zheng Qinwen was on the brink of elimination and somehow completely turned the match around!",
-        "calm": "A remarkable comeback took place at the US Open today. It serves as a classic example of mental resilience under extreme pressure.",
-        "direct": "Zheng Qinwen just pulled off a major third-round comeback at the US Open today. Let's look at how she managed to stay in the match."
+        "friendly": "Hey, did you catch the latest tennis results from New York? Both defending champions secured big wins today to reach the quarterfinals!",
+        "energetic": "What an incredible day of tennis at Flushing Meadows! Carlos Alcaraz and Aryna Sabalenka both powered their way into the US Open quarterfinals!",
+        "calm": "The US Open is moving into its crucial final week as top competitors maintain their composure. Both Alcaraz and Sabalenka smoothly picked up fourth-round victories.",
+        "direct": "Carlos Alcaraz and Aryna Sabalenka have both moved into the US Open quarterfinals with straight-set wins. Let's discuss their tournament chances."
       },
       "sources": [
         {
-          "title": "washingtonpost.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEeOj-Fz3vUE6ABJzQ524s3QR60FnTNUqtn6SlgNmKE9_FBhDBIugvp81pSVS3Oj0OtjPyQ7Eq_0fD5TkfUa1AL87qNewGtIT4L0Ze-7KTVQGJb2SayNrFpPE2YGbruxqG2giQuz1lOlgNl0uSjo3jF3y49ZHyg-OevJmPWjlPVBj_M3fUip-2QGM2tK2y7gGyihMgE7xN4VS8SO5AwSauazDoA7Xwj_H_GDbmnVx5opi506N9m7Q=="
-        },
-        {
-          "title": "ksat.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH2wRXYPQydwlDJqP-K7aYlbLcZPYq-oqhFZJgSOS0by-hoyjuSnHYYQFLiUJtWwByqeAYv0hUYyXq0DuHqOaUjN6iGp9tVco4rFP1rUUSg-oFIPMWfDDBikDt2V0_DZJLtViwHZznQGF6fLnjDPU-HEXoX_ccpOKOtEsurPcS6LFuNWUCF6r-dN_n1QCq6Q9MMbLjvInsPBpde-1ywCO_vm76uIgeYi3G8sqNA9BB1YtKsITPALyad79JZvEE="
+          "title": "Google News: Sports",
+          "url": "https://news.google.com/search?q=Sports%20top%20news%202026-09-07&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     },
     {
-      "id": "2026-09-06-entertainment",
+      "id": "2026-09-07-entertainment",
       "category": "entertainment",
       "categoryLabel": "Entertainment",
-      "headline": "Robert Pattinson's Drama 'Primetime' Premieres at Venice Film Festival",
-      "summary": "The dark thriller 'Primetime', starring Robert Pattinson, made its world premiere in competition at the 83rd Venice Film Festival on September 5, 2026. Directed by Lance Oppenheim, the film dramatizes the controversy surrounding mid-2000s reality television and has quickly generated major festival buzz.",
-      "question": "How do you feel about movies that explore controversial moments from real-life television history?",
+      "headline": "\"Spider-Man: Brand New Day\" Tops Box Office for Sixth Consecutive Week as Summer Revenue Nears Record",
+      "summary": "\"Spider-Man: Brand New Day\" remained the top film at the domestic box office for a sixth consecutive weekend, earning an estimated $18 million over the three-day frame. The achievement comes as total North American summer theater revenues closed in on a near-record $4.75 billion over the holiday weekend.",
+      "question": "Why do you think certain blockbuster movies are able to stay popular in theaters for so many weeks?",
       "coachLeads": {
-        "friendly": "Hey, have you heard about the new Robert Pattinson movie making waves at the Venice Film Festival?",
-        "energetic": "The Venice Film Festival is in full swing, and Robert Pattinson's latest premiere is stealing all the headlines today!",
-        "calm": "A major film premiere at the Venice Film Festival today has sparked quite a bit of discussion in the entertainment world.",
-        "direct": "Robert Pattinson's new film 'Primetime' premiered at the Venice Film Festival today, generating major media attention."
+        "friendly": "Hey, did you catch the latest movie news today? It looks like people spent a lot of time at the theaters this summer!",
+        "energetic": "You won't believe how big the movie box office was this season! Spider-Man is still holding down the top spot after six full weeks!",
+        "calm": "It is interesting to see how cinema attendance is holding up. Spider-Man has stayed at the top of the box office for a sixth straight weekend.",
+        "direct": "The latest weekend box office numbers were released today. Spider-Man kept the top spot as summer movie revenues reached near-record highs."
       },
       "sources": [
         {
-          "title": "thefilmstage.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGOuEcS1ml_ANytKhByFT_UbnHIQC-9l-_g2EuiFIJnVWfB8gEus0QJKnyuSmKYztF5-6XzHMbFgL6cKVZwcO3Q1oMiY7IbWDXOCcC3A2CpYSKV21gaRGKoAsII3TFjD0_aiGF3Tv5iioIF8ZgxvCFxgZkTyp8VCoTxt3pBgjmzyzqGXymMCZNtr4vQHyb3Z6qm"
-        },
-        {
-          "title": "turkiyetoday.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHV7upXjabJpaek_bhSA4oMuCYR-S6wc-6oJmDmMG0FMrnSmwyaHa2_se1goLroC-HslxeOgmbX7kCTybI27MQbQxR07FpnH2v4ptwKqbgO93hscB_eYb2iFLrgzlGVYfeDZq2qfyDJeu4K2tJreJgXck7FuuBKho6q1CD0T-g1Uc03WCVV6UfDEc9_oIjRJMGuE2UzDBJoW0WCxXK0yiY="
+          "title": "Google News: Entertainment",
+          "url": "https://news.google.com/search?q=Entertainment%20top%20news%202026-09-07&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     }
