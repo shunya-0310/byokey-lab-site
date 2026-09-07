@@ -1,92 +1,100 @@
 {
   "schemaVersion": 1,
   "status": "live",
-  "date": "2026-09-07",
-  "generatedAt": "2026-09-06T22:53:40.477Z",
+  "date": "2026-09-08",
+  "generatedAt": "2026-09-07T23:29:58.195Z",
   "model": "gemini-3.6-flash",
   "fallbackCategories": [],
   "items": [
     {
-      "id": "2026-09-07-politics_economy",
+      "id": "2026-09-08-politics_economy",
       "category": "politics_economy",
       "categoryLabel": "Politics & Economy",
-      "headline": "US Envoys Hold Peace Talks in Kyiv Following Moscow Summit",
-      "summary": "U.S. envoys Jared Kushner and Steve Witkoff met with Ukrainian President Volodymyr Zelenskyy in Kyiv to discuss potential peace frameworks after holding talks with Russian President Vladimir Putin in Moscow. The high-stakes diplomatic effort marks a critical moment in negotiations to end the war, with discussions expected to expand to include European allies.",
-      "question": "What role do you think international diplomacy should play in resolving complex global conflicts?",
+      "headline": "Far-Right AfD Wins Historic Victory in Germany's Saxony-Anhalt State Election",
+      "summary": "Germany's far-right Alternative for Germany party scored a record victory in Saxony-Anhalt's state election by winning approximately 44 percent of the vote. The historic result presents a significant challenge to Chancellor Friedrich Merz's governing coalition and highlights shifting political dynamics in Europe's largest economy.",
+      "question": "How do you think significant shifts toward populist political parties might affect national policies and international relations?",
       "coachLeads": {
-        "friendly": "Hey, have you heard about the high-level peace talks happening in Kyiv? It is a really interesting story to talk about today.",
-        "energetic": "Major news just broke on the global stage! U.S. envoys are holding high-stakes peace negotiations in Ukraine after meeting in Moscow!",
-        "calm": "There is a significant diplomatic development today regarding peace negotiations in Ukraine. Let's take a closer look at what happened.",
-        "direct": "U.S. negotiators just met with President Zelenskyy in Kyiv following talks with Vladimir Putin in Moscow. Let's discuss why this matters right now."
+        "friendly": "Hey, have you seen the big political news coming out of Germany today? It's a really interesting topic to practice your English with!",
+        "energetic": "There's a major political shift happening in Europe right now! You won't want to miss this huge update on Germany's latest election results.",
+        "calm": "A significant election result unfolded in Germany over the weekend. Let me share a quick summary so we can discuss its broader impact.",
+        "direct": "Germany's latest state election results are making major international headlines. Let's talk about why this vote is such a big deal."
       },
       "sources": [
-        {
-          "title": "theguardian.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF1i3zziW5LDcIiHasqwx8ukLYzVA0J309qqxzJY47OMd3luR3pZyw888FKkWJAuJvaPC7oeCUD1WiqeBoefA240RiyWOZwB7XyGGHe1Pl2Q0Igbs5tDIkQaG5Rq-7y4k3GneosZ1MSgccHWrec0SHjLBJ5jV9bzm36_3XSM2zFEGSn1XnzcXmFoY1-s_kz9mJ74dyXzJS3B7E4JRThhalYA_BimJOHoKft"
-        },
         {
           "title": "aa.com.tr",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFSb6jrv8klEf-Bren3hwJSX2hGsxIJpXeGbdlCMtncpiKgKRjdGrnnjE53JPMfmstK6uo4N6mBCt4B57uBr3VF3gLx0-WXr_adsO36JoIzEAqZbL0wXysFXFknTAPa13aCuMbgXKgM4aCiwr69BdZmUfWgNH_bxHWl"
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHYzSQO1DKiSzrF3sw2XYz64QZ5fkd7W3cjFqGwBew7_QPmWordGInMxU7eEGRUtOykWuboFALMTN9ySePmPAk3GBJkICtT0BXg5BS-ZZePaprMkSVVn0HnLWo-7wyRAd98_rLeRM-QVofkZM4bX6svWXl3YlTV1BA="
+        },
+        {
+          "title": "ksat.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE5E45KvI1rSWVEH0JyD0IIovEWshGaOo8Q65LOqsyfSZJlxeoGJgxsKPogLeP4Ke98XYLG4s0aJkrSW2rHX_1OthkyBPfr8jEGhxguYR7_1vA5--9fJsG7ml1XdmHpIP8DJbdi5daEydaWCC36PLKl94IepdJ59AHlLSfcl0K0pIGnrsZyXA08rx2wMPl-gYn3fqM8MNKiH5X6_zFSu12PDslfl1MInfyc5dlbBBIsxcMAqWdFesQpQLEpq3bLP6NO"
         }
       ]
     },
     {
-      "id": "2026-09-07-technology",
+      "id": "2026-09-08-technology",
       "category": "technology",
       "categoryLabel": "Technology",
-      "headline": "German Startup Isar Aerospace Achieves First Private Rocket Launch to Orbit from Continental Europe",
-      "summary": "German space startup Isar Aerospace successfully launched its Spectrum rocket into orbit from the Andøya Spaceport in Arctic Norway on September 5, 2026. The uncrewed mission safely deployed five small satellites, marking the first time a privately funded launch vehicle has achieved orbit from continental Europe.",
-      "question": "How do you think private rocket launches in Europe will impact global satellite technology and space exploration?",
+      "headline": "OpenAI Classifies New Astra Model as Critical Cybersecurity Risk and Launches $1B Defense Initiative",
+      "summary": "OpenAI has designated its newest model, GPT-6 Astra, as reaching a critical cybersecurity capability threshold due to its ability to independently identify and exploit software vulnerabilities. To address these growing risks, the organization launched a $1 billion initiative to provide AI-powered defensive tools to critical infrastructure operators.",
+      "question": "How do you think society should balance the benefits of highly capable AI tools with the potential security risks they bring?",
       "coachLeads": {
-        "friendly": "Hey, check this out! A German startup just made space history by launching a rocket into orbit from continental Europe.",
-        "energetic": "This is huge news for space technology! A European startup just successfully reached orbit with its own rocket launched from Norway!",
-        "calm": "Here is a noteworthy development in the space sector. Europe has just achieved its first private rocket launch into orbit from the continent.",
-        "direct": "A German startup made space history this weekend by reaching orbit from continental Europe. Let's talk about why this launch matters."
+        "friendly": "Hey, have you heard about OpenAI's latest safety milestone? It's a really interesting story to explore together!",
+        "energetic": "Check out this massive update on AI and cybersecurity! It's generating a lot of buzz today, so let's dive right in!",
+        "calm": "There's an important development today regarding advanced AI capabilities and cybersecurity. It's worth taking a few minutes to discuss.",
+        "direct": "OpenAI just flagged its newest model for severe cyber risks while committing a billion dollars to digital defense. What are your thoughts on this move?"
       },
       "sources": [
         {
-          "title": "Google News: Technology",
-          "url": "https://news.google.com/search?q=Technology%20top%20news%202026-09-07&hl=en-US&gl=US&ceid=US:en"
+          "title": "openai.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHdzNB9WuiXZIrDRwsDW_xrNWstBON4eLpYm54Th10nVurmEe2CRRJhbqpVRv16hCVCAOFuJYTdQsoqvCPg7mx1kbTU9d7g6CWLhJ18PH0bKfjSVZ0xadIQdvAVog=="
+        },
+        {
+          "title": "facebook.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGeg6i3sONraGROEnYuxAESnzE3LIVqbAFgLUmIwd5A2ErDt-1ivz2M-QijaCXc_LicWJ7fmUoSahLtRcZVggIY6b96fGtcWnPhdmDM2anmDnDvAxesLMMM3mS7u7Q5EIzdb4veKd8Ixn1_WRS-X_dplDaetDa4k41WfgVhh7Ed7Qvbp-Z0AX1FJbDafk7jZMTDjjS3FnltTbyq3r_-cU5styisXYBjGfRzPpK1NSFE6USR0VuxFU_KRNwYAk5qojfvAyM="
+        },
+        {
+          "title": "distilinfo.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFwI3_UqcQCs2PtX_De5zKucd6HdR5IO1LEk0TVOB6s3t5Ct5yvlTAzzVqOZTxH-hZnUmYvt6gkgPZZglcvxE65kYHhP8_wISjCJs_jDv0mgw5tVJe5aHZcLFI_LLG05LpCKl75KKUfFE9gIIi-t4dZlaG3qPI2V2b2bymQY2a_Xw=="
         }
       ]
     },
     {
-      "id": "2026-09-07-sports",
+      "id": "2026-09-08-sports",
       "category": "sports",
       "categoryLabel": "Sports",
-      "headline": "Alcaraz and Sabalenka Advance to US Open Quarterfinals",
-      "summary": "Defending champions Carlos Alcaraz and Aryna Sabalenka both earned straight-set victories on Sunday to advance to the quarterfinals of the US Open. Alcaraz defeated American Tommy Paul, while Sabalenka overcame Taylor Townsend to keep her title defense and top world ranking on track.",
-      "question": "Which player do you think faces the tougher road ahead as the US Open enters its final stages?",
+      "headline": "Zheng Qinwen Overcomes 0-5 Deficit to Upset Iga Swiatek at US Open",
+      "summary": "China's Zheng Qinwen rallied from a 0-5 opening-set deficit to defeat 2022 champion Iga Swiatek 7-5, 6-3 on Monday, advancing to the 2026 US Open quarterfinals. The victory marked Zheng's second consecutive miraculous comeback from 0-5 down as she continues a remarkable deep run at Flushing Meadows.",
+      "question": "What mental strategies do you think help athletes stay calm and turn a match around when they are trailing so heavily?",
       "coachLeads": {
-        "friendly": "Hey, did you catch the latest tennis results from New York? Both defending champions secured big wins today to reach the quarterfinals!",
-        "energetic": "What an incredible day of tennis at Flushing Meadows! Carlos Alcaraz and Aryna Sabalenka both powered their way into the US Open quarterfinals!",
-        "calm": "The US Open is moving into its crucial final week as top competitors maintain their composure. Both Alcaraz and Sabalenka smoothly picked up fourth-round victories.",
-        "direct": "Carlos Alcaraz and Aryna Sabalenka have both moved into the US Open quarterfinals with straight-set wins. Let's discuss their tournament chances."
+        "friendly": "Hey, have you caught the latest tennis news from the US Open today? It is a fantastic example of unbelievable mental resilience on the big stage!",
+        "energetic": "You won't believe the thriller that just happened at Flushing Meadows! Zheng Qinwen pulled off a stunning upset against Iga Swiatek after being down 0-5!",
+        "calm": "There is a compelling story out of New York today about perseverance under pressure. Let's chat about how Zheng Qinwen turned her match around against a former champion.",
+        "direct": "Zheng Qinwen just knocked former champion Iga Swiatek out of the US Open after trailing 0-5 in the opening set. Let's dive into this huge sports story."
       },
       "sources": [
         {
           "title": "Google News: Sports",
-          "url": "https://news.google.com/search?q=Sports%20top%20news%202026-09-07&hl=en-US&gl=US&ceid=US:en"
+          "url": "https://news.google.com/search?q=Sports%20top%20news%202026-09-08&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     },
     {
-      "id": "2026-09-07-entertainment",
+      "id": "2026-09-08-entertainment",
       "category": "entertainment",
       "categoryLabel": "Entertainment",
-      "headline": "\"Spider-Man: Brand New Day\" Tops Box Office for Sixth Consecutive Week as Summer Revenue Nears Record",
-      "summary": "\"Spider-Man: Brand New Day\" remained the top film at the domestic box office for a sixth consecutive weekend, earning an estimated $18 million over the three-day frame. The achievement comes as total North American summer theater revenues closed in on a near-record $4.75 billion over the holiday weekend.",
-      "question": "Why do you think certain blockbuster movies are able to stay popular in theaters for so many weeks?",
+      "headline": "Actress Ellen Burstyn Receives Lifetime Achievement Award at Venice Film Festival",
+      "summary": "At 93 years old, Oscar-winning actress Ellen Burstyn was honored with the Golden Lion for Lifetime Achievement at the Venice Film Festival on Monday. Despite recently suffering a fall, Burstyn walked onto the stage with a walker to accept the prestigious award during a standing ovation.",
+      "question": "Which actor or actress do you think deserves a lifetime achievement award for their career, and why?",
       "coachLeads": {
-        "friendly": "Hey, did you catch the latest movie news today? It looks like people spent a lot of time at the theaters this summer!",
-        "energetic": "You won't believe how big the movie box office was this season! Spider-Man is still holding down the top spot after six full weeks!",
-        "calm": "It is interesting to see how cinema attendance is holding up. Spider-Man has stayed at the top of the box office for a sixth straight weekend.",
-        "direct": "The latest weekend box office numbers were released today. Spider-Man kept the top spot as summer movie revenues reached near-record highs."
+        "friendly": "Hey there! Did you catch the story about Ellen Burstyn receiving a lifetime achievement award in Venice today?",
+        "energetic": "This is so inspiring! 93-year-old acting legend Ellen Burstyn just received the Golden Lion in Venice to a massive standing ovation!",
+        "calm": "At age 93, actress Ellen Burstyn was presented with the Golden Lion for Lifetime Achievement at the Venice Film Festival. It's a nice moment to reflect on classic cinema.",
+        "direct": "Ellen Burstyn just accepted a lifetime achievement award at the Venice Film Festival at age 93. Let's talk about performance and legacy in film."
       },
       "sources": [
         {
           "title": "Google News: Entertainment",
-          "url": "https://news.google.com/search?q=Entertainment%20top%20news%202026-09-07&hl=en-US&gl=US&ceid=US:en"
+          "url": "https://news.google.com/search?q=Entertainment%20top%20news%202026-09-08&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     }
