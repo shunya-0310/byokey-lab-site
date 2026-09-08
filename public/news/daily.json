@@ -1,100 +1,104 @@
 {
   "schemaVersion": 1,
   "status": "live",
-  "date": "2026-09-08",
-  "generatedAt": "2026-09-07T23:29:58.195Z",
+  "date": "2026-09-09",
+  "generatedAt": "2026-09-08T23:24:06.554Z",
   "model": "gemini-3.6-flash",
   "fallbackCategories": [],
   "items": [
     {
-      "id": "2026-09-08-politics_economy",
+      "id": "2026-09-09-politics_economy",
       "category": "politics_economy",
       "categoryLabel": "Politics & Economy",
-      "headline": "Far-Right AfD Wins Historic Victory in Germany's Saxony-Anhalt State Election",
-      "summary": "Germany's far-right Alternative for Germany party scored a record victory in Saxony-Anhalt's state election by winning approximately 44 percent of the vote. The historic result presents a significant challenge to Chancellor Friedrich Merz's governing coalition and highlights shifting political dynamics in Europe's largest economy.",
-      "question": "How do you think significant shifts toward populist political parties might affect national policies and international relations?",
+      "headline": "U.S. Destroys Five Iranian Oil Tankers After Missile Attacks on Navy Warship",
+      "summary": "On September 8, United States Central Command disabled or destroyed five Iranian crude oil tankers in response to Iranian ballistic missile strikes targeted at an American warship. The military action marks a major escalation in Middle East maritime security that is driving global oil prices higher and heightening regional diplomatic tensions.",
+      "question": "How do you think escalating conflicts in major international shipping routes impact global trade and everyday consumers?",
       "coachLeads": {
-        "friendly": "Hey, have you seen the big political news coming out of Germany today? It's a really interesting topic to practice your English with!",
-        "energetic": "There's a major political shift happening in Europe right now! You won't want to miss this huge update on Germany's latest election results.",
-        "calm": "A significant election result unfolded in Germany over the weekend. Let me share a quick summary so we can discuss its broader impact.",
-        "direct": "Germany's latest state election results are making major international headlines. Let's talk about why this vote is such a big deal."
+        "friendly": "Hey! Have you heard about the latest global news regarding the Middle East? It's a major front-page story right now, and I'd love to hear your perspective.",
+        "energetic": "There's massive news breaking today about escalating maritime strikes and rising oil prices! Let's dive in and discuss what this means for world politics and markets.",
+        "calm": "There's significant international news today regarding military strikes on oil tankers in the Middle East. Let's take a moment to unpack what this means for global trade and diplomacy.",
+        "direct": "The U.S. military just destroyed five Iranian oil tankers following missile attacks on a warship. What are your thoughts on how this situation might unfold?"
       },
       "sources": [
         {
-          "title": "aa.com.tr",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHYzSQO1DKiSzrF3sw2XYz64QZ5fkd7W3cjFqGwBew7_QPmWordGInMxU7eEGRUtOykWuboFALMTN9ySePmPAk3GBJkICtT0BXg5BS-ZZePaprMkSVVn0HnLWo-7wyRAd98_rLeRM-QVofkZM4bX6svWXl3YlTV1BA="
+          "title": "iheart.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHCMNTxEOO8m-PrW-cPo_CZgXIsyNmkQi1aEZ0mqr1i9FED-oDAYlwdpl1nesQ6qspIJ8up874WUdaS79tesMc-2SV8VVlphHEYVl1bsxI6oulo2wPgoxaO0xLAfNkp5PSzfrV4Ro1XoQI7iHf9I0IbwogtpjuVzw6RY9JhPLFLQhS2N_wW0u9tbuFLdbI--Y9i0gWvo0FC8Rf0O35URIbklMsB80_5iw=="
         },
         {
-          "title": "ksat.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE5E45KvI1rSWVEH0JyD0IIovEWshGaOo8Q65LOqsyfSZJlxeoGJgxsKPogLeP4Ke98XYLG4s0aJkrSW2rHX_1OthkyBPfr8jEGhxguYR7_1vA5--9fJsG7ml1XdmHpIP8DJbdi5daEydaWCC36PLKl94IepdJ59AHlLSfcl0K0pIGnrsZyXA08rx2wMPl-gYn3fqM8MNKiH5X6_zFSu12PDslfl1MInfyc5dlbBBIsxcMAqWdFesQpQLEpq3bLP6NO"
+          "title": "airandspaceforces.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHOzOJ-lUf_wm5A_Uu6654mgKzWvRbBMjhKVPHKU0HdBGFYoMAWgpqQfKdNwPw6h3C6UHNl9oC5ahzryKkBWGOep8XG04AhcbAkK3h75Krqm-dENLetRd5PMdCp77JI1ULyuaeumFO5AVik_uq-HvKgsunBApUQEtNEPBNCDkMQKsfGaZUy0h6DZBVE8Gagia1UVbled2LpIleCsnaL0ss_guWVHQo="
+        },
+        {
+          "title": "cbsnews.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFeOg0n3NWU0g1yzww-8za36GRJcf1cTaQHKH8szRwDXGrcbXqjpUb6mv1nYA5ajeKauhv51TbuTM2kNPLLDp33ePD_qBgni6_BfABxdil7z3-j1Lm-dBO2F9mukUQOD_D6a7fDVQ8HnYKvC8fFSB3wC1L7x6hJrIxR1vCwXuaKGy-YEqhFEOmGHoiuavTG"
         }
       ]
     },
     {
-      "id": "2026-09-08-technology",
+      "id": "2026-09-09-technology",
       "category": "technology",
       "categoryLabel": "Technology",
-      "headline": "OpenAI Classifies New Astra Model as Critical Cybersecurity Risk and Launches $1B Defense Initiative",
-      "summary": "OpenAI has designated its newest model, GPT-6 Astra, as reaching a critical cybersecurity capability threshold due to its ability to independently identify and exploit software vulnerabilities. To address these growing risks, the organization launched a $1 billion initiative to provide AI-powered defensive tools to critical infrastructure operators.",
-      "question": "How do you think society should balance the benefits of highly capable AI tools with the potential security risks they bring?",
+      "headline": "US Security Agencies Accuse Chinese AI Firms of Mass Tech Extraction",
+      "summary": "Three top US intelligence and security agencies issued a joint advisory accusing several Chinese tech companies of systematically extracting proprietary capabilities from leading American AI models. US officials allege that firms used unauthorized knowledge distillation on an industrial scale, marking a major escalation in international technology competition and cyber governance.",
+      "question": "How do you think governments and tech companies should balance protecting proprietary AI technology with maintaining open global research?",
       "coachLeads": {
-        "friendly": "Hey, have you heard about OpenAI's latest safety milestone? It's a really interesting story to explore together!",
-        "energetic": "Check out this massive update on AI and cybersecurity! It's generating a lot of buzz today, so let's dive right in!",
-        "calm": "There's an important development today regarding advanced AI capabilities and cybersecurity. It's worth taking a few minutes to discuss.",
-        "direct": "OpenAI just flagged its newest model for severe cyber risks while committing a billion dollars to digital defense. What are your thoughts on this move?"
+        "friendly": "Hey, have you seen this tech story today? It raises some really interesting questions about global AI competition.",
+        "energetic": "This is a huge development in technology! Let's jump right into what's happening on the international AI stage.",
+        "calm": "Take a look at this headline. It highlights growing international friction over how artificial intelligence models are built and guarded.",
+        "direct": "This is worth talking about. US security agencies just released a major report on international AI technology extraction."
       },
       "sources": [
         {
-          "title": "openai.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHdzNB9WuiXZIrDRwsDW_xrNWstBON4eLpYm54Th10nVurmEe2CRRJhbqpVRv16hCVCAOFuJYTdQsoqvCPg7mx1kbTU9d7g6CWLhJ18PH0bKfjSVZ0xadIQdvAVog=="
-        },
-        {
-          "title": "facebook.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGeg6i3sONraGROEnYuxAESnzE3LIVqbAFgLUmIwd5A2ErDt-1ivz2M-QijaCXc_LicWJ7fmUoSahLtRcZVggIY6b96fGtcWnPhdmDM2anmDnDvAxesLMMM3mS7u7Q5EIzdb4veKd8Ixn1_WRS-X_dplDaetDa4k41WfgVhh7Ed7Qvbp-Z0AX1FJbDafk7jZMTDjjS3FnltTbyq3r_-cU5styisXYBjGfRzPpK1NSFE6USR0VuxFU_KRNwYAk5qojfvAyM="
-        },
-        {
-          "title": "distilinfo.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFwI3_UqcQCs2PtX_De5zKucd6HdR5IO1LEk0TVOB6s3t5Ct5yvlTAzzVqOZTxH-hZnUmYvt6gkgPZZglcvxE65kYHhP8_wISjCJs_jDv0mgw5tVJe5aHZcLFI_LLG05LpCKl75KKUfFE9gIIi-t4dZlaG3qPI2V2b2bymQY2a_Xw=="
+          "title": "Google News: Technology",
+          "url": "https://news.google.com/search?q=Technology%20top%20news%202026-09-09&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     },
     {
-      "id": "2026-09-08-sports",
+      "id": "2026-09-09-sports",
       "category": "sports",
       "categoryLabel": "Sports",
-      "headline": "Zheng Qinwen Overcomes 0-5 Deficit to Upset Iga Swiatek at US Open",
-      "summary": "China's Zheng Qinwen rallied from a 0-5 opening-set deficit to defeat 2022 champion Iga Swiatek 7-5, 6-3 on Monday, advancing to the 2026 US Open quarterfinals. The victory marked Zheng's second consecutive miraculous comeback from 0-5 down as she continues a remarkable deep run at Flushing Meadows.",
-      "question": "What mental strategies do you think help athletes stay calm and turn a match around when they are trailing so heavily?",
+      "headline": "Zheng Qinwen Stuns Iga Swiatek to Reach 2026 US Open Quarterfinals",
+      "summary": "Olympic gold medalist Zheng Qinwen pulled off a major upset at the 2026 US Open by defeating top contender Iga Swiatek in the fourth round. The victory advances the Chinese tennis star into the quarterfinals at Flushing Meadows and dramatically reshapes the women's draw at the final Grand Slam of the year.",
+      "question": "What do you think makes unexpected upsets in major sports tournaments so exciting for fans to watch?",
       "coachLeads": {
-        "friendly": "Hey, have you caught the latest tennis news from the US Open today? It is a fantastic example of unbelievable mental resilience on the big stage!",
-        "energetic": "You won't believe the thriller that just happened at Flushing Meadows! Zheng Qinwen pulled off a stunning upset against Iga Swiatek after being down 0-5!",
-        "calm": "There is a compelling story out of New York today about perseverance under pressure. Let's chat about how Zheng Qinwen turned her match around against a former champion.",
-        "direct": "Zheng Qinwen just knocked former champion Iga Swiatek out of the US Open after trailing 0-5 in the opening set. Let's dive into this huge sports story."
+        "friendly": "Hey, did you catch the big news from the US Open? There was a massive upset in the women's tennis draw that everyone is talking about.",
+        "energetic": "What an unbelievable match at the US Open! Zheng Qinwen just knocked out Iga Swiatek in a total thriller!",
+        "calm": "There was a notable result at Flushing Meadows yesterday. Zheng Qinwen defeated Iga Swiatek to secure her spot in the quarterfinals.",
+        "direct": "Zheng Qinwen pulled off a huge upset against Iga Swiatek at the US Open. Let's talk about what this means for the rest of the tournament."
       },
       "sources": [
         {
           "title": "Google News: Sports",
-          "url": "https://news.google.com/search?q=Sports%20top%20news%202026-09-08&hl=en-US&gl=US&ceid=US:en"
+          "url": "https://news.google.com/search?q=Sports%20top%20news%202026-09-09&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     },
     {
-      "id": "2026-09-08-entertainment",
+      "id": "2026-09-09-entertainment",
       "category": "entertainment",
       "categoryLabel": "Entertainment",
-      "headline": "Actress Ellen Burstyn Receives Lifetime Achievement Award at Venice Film Festival",
-      "summary": "At 93 years old, Oscar-winning actress Ellen Burstyn was honored with the Golden Lion for Lifetime Achievement at the Venice Film Festival on Monday. Despite recently suffering a fall, Burstyn walked onto the stage with a walker to accept the prestigious award during a standing ovation.",
-      "question": "Which actor or actress do you think deserves a lifetime achievement award for their career, and why?",
+      "headline": "Stevie Wonder Announces World Tour for 'Songs in the Key of Life' 50th Anniversary",
+      "summary": "Stevie Wonder announced an 18-date international tour to celebrate the 50th anniversary of his landmark 1976 album, Songs in the Key of Life. The legendary musician will perform the acclaimed double album in its entirety across Europe and North America starting in October 2026.",
+      "question": "If you could see any legendary musician perform a classic album live in its entirety, which album would you choose?",
       "coachLeads": {
-        "friendly": "Hey there! Did you catch the story about Ellen Burstyn receiving a lifetime achievement award in Venice today?",
-        "energetic": "This is so inspiring! 93-year-old acting legend Ellen Burstyn just received the Golden Lion in Venice to a massive standing ovation!",
-        "calm": "At age 93, actress Ellen Burstyn was presented with the Golden Lion for Lifetime Achievement at the Venice Film Festival. It's a nice moment to reflect on classic cinema.",
-        "direct": "Ellen Burstyn just accepted a lifetime achievement award at the Venice Film Festival at age 93. Let's talk about performance and legacy in film."
+        "friendly": "Hey, have you heard the exciting news about Stevie Wonder? He just announced a brand-new world tour, and I'd love to chat about it with you!",
+        "energetic": "Guess what huge music news dropped today? Stevie Wonder is hitting the road to perform one of his most iconic albums live in full!",
+        "calm": "Stevie Wonder recently announced a tour celebrating fifty years of his masterpiece album. Take a look when you are ready to discuss it.",
+        "direct": "Stevie Wonder announced an 18-date world tour for Songs in the Key of Life. Let's practice talking about this major music story."
       },
       "sources": [
         {
-          "title": "Google News: Entertainment",
-          "url": "https://news.google.com/search?q=Entertainment%20top%20news%202026-09-08&hl=en-US&gl=US&ceid=US:en"
+          "title": "seatgeek.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGOMov-iL2oTRaOfnu2HbxuLuZxCxhdExOStPaXT0Vw6OCy7M4B76nrFRng9z4yLYZOFmqBtDF77ky12ZGqLX3l_AozlztMZUCwkfbEKdh4NRbDrAiVD_cFAmxnV1C92rQfov1Wn3HFRCe33NXw5Z5VcVIc3AS90sWGvFIoOgzONDeQl0eNK9Bh6LrFOUD1NGdYzOkwPPgcPvMuxz44d_Damxi1zU_COiFlAsym"
+        },
+        {
+          "title": "fox61.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHKihNpZrvMxwUZC2oFvLwpPa_SKbUZYTjcOp7d21ptMgua8nFk1L7uBUsmSz13CPukP8e6dm0RftZ45uUHrMdACZ39xFxZqjHrIxCTEzcjCL7MtU9mlhpVddQI24Lqq2FUh0XLSzmDycgXjdDzlXuoQv_frBDpRb46870BLudFHPQPfEKr3DJjjb2_feZX6F99N3lomEjTL7mon-pDSHq-fob2Sgvl0oBBxI7C-JluMG4Grc5z6OvHG5H5_CVoKNZSz4pGkR2QYPKPbVEu"
+        },
+        {
+          "title": "ultimateclassicrock.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQELAuX4vwhhbhzc3sfAkGgvxkt5lOxfV5CDl1fsO29Swg8BGkN5WGe5qH16uLScNpSYHsjuqJ8JUD6PrYFfi-nIlvjbapm2xn7OyKRsMZjN-AGH9OxGbl3LzVu9CJlS4Ba64mhLvbB7DbF0TvvmcXIOOg17m5WCqUTjUT02ZaEB7Pdi16W1Q6_gQoDA36e0s_U2l81wJ4e_"
         }
       ]
     }
