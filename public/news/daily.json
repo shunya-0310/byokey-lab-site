@@ -1,104 +1,104 @@
 {
   "schemaVersion": 1,
   "status": "live",
-  "date": "2026-09-09",
-  "generatedAt": "2026-09-08T23:24:06.554Z",
+  "date": "2026-09-10",
+  "generatedAt": "2026-09-09T23:15:13.959Z",
   "model": "gemini-3.6-flash",
   "fallbackCategories": [],
   "items": [
     {
-      "id": "2026-09-09-politics_economy",
+      "id": "2026-09-10-politics_economy",
       "category": "politics_economy",
       "categoryLabel": "Politics & Economy",
-      "headline": "U.S. Destroys Five Iranian Oil Tankers After Missile Attacks on Navy Warship",
-      "summary": "On September 8, United States Central Command disabled or destroyed five Iranian crude oil tankers in response to Iranian ballistic missile strikes targeted at an American warship. The military action marks a major escalation in Middle East maritime security that is driving global oil prices higher and heightening regional diplomatic tensions.",
-      "question": "How do you think escalating conflicts in major international shipping routes impact global trade and everyday consumers?",
+      "headline": "Global Crude Oil Prices Surge Past $100 Per Barrel as Middle East Conflicts Escalate",
+      "summary": "Global benchmark Brent crude oil surged past $100 per barrel following intensified military strikes on energy infrastructure and shipping routes in the Middle East. The sudden price jump has heightened international inflation concerns and triggered notable losses across global stock markets.",
+      "question": "How do you think rising fuel and energy prices might impact daily life and businesses in your country?",
       "coachLeads": {
-        "friendly": "Hey! Have you heard about the latest global news regarding the Middle East? It's a major front-page story right now, and I'd love to hear your perspective.",
-        "energetic": "There's massive news breaking today about escalating maritime strikes and rising oil prices! Let's dive in and discuss what this means for world politics and markets.",
-        "calm": "There's significant international news today regarding military strikes on oil tankers in the Middle East. Let's take a moment to unpack what this means for global trade and diplomacy.",
-        "direct": "The U.S. military just destroyed five Iranian oil tankers following missile attacks on a warship. What are your thoughts on how this situation might unfold?"
+        "friendly": "Hey there! Have you heard about today's news regarding global oil prices jumping past $100 a barrel?",
+        "energetic": "Oil prices just shot past $100 a barrel, and it's making huge waves across global financial markets right now!",
+        "calm": "Let's review today's major economic news, as global crude oil prices have climbed past $100 per barrel.",
+        "direct": "Crude oil prices surpassed $100 a barrel following fresh military clashes, so let's examine why this matters right now."
       },
       "sources": [
         {
-          "title": "iheart.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHCMNTxEOO8m-PrW-cPo_CZgXIsyNmkQi1aEZ0mqr1i9FED-oDAYlwdpl1nesQ6qspIJ8up874WUdaS79tesMc-2SV8VVlphHEYVl1bsxI6oulo2wPgoxaO0xLAfNkp5PSzfrV4Ro1XoQI7iHf9I0IbwogtpjuVzw6RY9JhPLFLQhS2N_wW0u9tbuFLdbI--Y9i0gWvo0FC8Rf0O35URIbklMsB80_5iw=="
+          "title": "thebusinessjournal.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEaopp4HAteD5TLZzluiDxt9uYGnodxQN1pSVBpeeMxalvnwdTyY6gf8kPHnK62mHceiAarGLpiAWLjKmUPDUNk_xav4mKYXSiJImyMJCjIg_jwBj8qyh71Z7Td05vLSUAiaxiVUh09RUrH3_f1ayVuZ0IhRGsx6Jnacg=="
         },
         {
-          "title": "airandspaceforces.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHOzOJ-lUf_wm5A_Uu6654mgKzWvRbBMjhKVPHKU0HdBGFYoMAWgpqQfKdNwPw6h3C6UHNl9oC5ahzryKkBWGOep8XG04AhcbAkK3h75Krqm-dENLetRd5PMdCp77JI1ULyuaeumFO5AVik_uq-HvKgsunBApUQEtNEPBNCDkMQKsfGaZUy0h6DZBVE8Gagia1UVbled2LpIleCsnaL0ss_guWVHQo="
+          "title": "egyptoil-gas.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGfuA2rkgzluueB48pPD2r2MgdEYecnph__47DLsKaBwrh2s4WG7xzmE_980E0aUvG_mM-Sj55DTcWAYa8r7B_DWCKT-p1oiOcRAEvD8N3Qh7Zq3mPi84c08Leb8qi5iIlknEINkDwK5Slx6xzRjmsGPzAry7J3bCssSkpkqP2C"
         },
         {
-          "title": "cbsnews.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFeOg0n3NWU0g1yzww-8za36GRJcf1cTaQHKH8szRwDXGrcbXqjpUb6mv1nYA5ajeKauhv51TbuTM2kNPLLDp33ePD_qBgni6_BfABxdil7z3-j1Lm-dBO2F9mukUQOD_D6a7fDVQ8HnYKvC8fFSB3wC1L7x6hJrIxR1vCwXuaKGy-YEqhFEOmGHoiuavTG"
+          "title": "247wallst.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFtQejxpCOtuaJC15zKdw8L2ciPsYolEgWnclG26Dl8wB8LyIAc8WTe-zqdBQwXlUJkejlqp3PCX2BiruZJqnsA9KGEZdK9ifzmRLGISnl6E3zgOCtzE1Ly0qjJH7YQJVeJzK0872ZYWLcYJNIjyO1Pgz_e8MYZaqgVcLeqN_WZIBLPAZmrR2R9YEXYzV1zNMoGZl_qCOhdR_b7O-mF5O34DgPZxpyKshE="
         }
       ]
     },
     {
-      "id": "2026-09-09-technology",
+      "id": "2026-09-10-technology",
       "category": "technology",
       "categoryLabel": "Technology",
-      "headline": "US Security Agencies Accuse Chinese AI Firms of Mass Tech Extraction",
-      "summary": "Three top US intelligence and security agencies issued a joint advisory accusing several Chinese tech companies of systematically extracting proprietary capabilities from leading American AI models. US officials allege that firms used unauthorized knowledge distillation on an industrial scale, marking a major escalation in international technology competition and cyber governance.",
-      "question": "How do you think governments and tech companies should balance protecting proprietary AI technology with maintaining open global research?",
+      "headline": "Apple Unveils First Foldable Smartphone and AI Upgrades at Annual Showcase",
+      "summary": "On September 9, Apple announced its first foldable device, the iPhone Duo, alongside the new iPhone 18 lineup and enhanced Siri AI features. The launch event marked the first major hardware showcase presented by chief executive John Ternus following his transition into the role.",
+      "question": "What do you think about foldable smartphones, and would you ever consider using one in your daily life?",
       "coachLeads": {
-        "friendly": "Hey, have you seen this tech story today? It raises some really interesting questions about global AI competition.",
-        "energetic": "This is a huge development in technology! Let's jump right into what's happening on the international AI stage.",
-        "calm": "Take a look at this headline. It highlights growing international friction over how artificial intelligence models are built and guarded.",
-        "direct": "This is worth talking about. US security agencies just released a major report on international AI technology extraction."
+        "friendly": "Hey, did you catch the news about Apple's latest product event? They just announced their very first foldable phone!",
+        "energetic": "Apple just revealed its first foldable smartphone and new AI features! Are you excited to see where mobile tech is heading next?",
+        "calm": "Apple held its annual fall event and introduced a foldable phone alongside updated AI capabilities. I'd love to hear your thoughts on these new devices.",
+        "direct": "Apple just announced its new foldable phone and Siri AI upgrades. Let's chat about whether foldable devices are actually practical."
       },
       "sources": [
         {
-          "title": "Google News: Technology",
-          "url": "https://news.google.com/search?q=Technology%20top%20news%202026-09-09&hl=en-US&gl=US&ceid=US:en"
+          "title": "cbsnews.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGiwpfm1UCeUiJXmN72trPAmehWBJR6VMPTJBbuJqyMY-T3LZL7vG1bvxK1QB9SOV7UcKClF0DWuFA9cYsWnovpGiAlxlgoYZl3d0yQHfOjQzU5cHJ6pIz4wIX_aEqT_9PAOg_oxKrlk39yeeol_A0mC2Gbtdo="
+        },
+        {
+          "title": "apple.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGRQy7nG6KyQ-R9vfYWeWfjVQSQcqCcAPp7twqzjdPTuY151ZmNQyl4u_N4nYYDICCsx0M1KXcdMY1GP4D2E0jCF3cpWaprxmJ2Qm45XPUV0Fm7-HiDPZ_WRtuxZXE8u3RHGagSWXqSp6-abCq8iy3UeyrgTHRGp2i231ZD-St_ejDyHOAKOfyO2Y4PEaqx"
+        },
+        {
+          "title": "mashable.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE1252p2QXwO0HP0qSQd5qcDJKyEQ9ks63GdYHHVTbEblX2vUp6NuETpFL2afWexIWhvkoMlJ_2_b-VA1yjLhgJfOHX0yY3IeNxWVNGNsOniFR1EA0GudO-IG56kqgvuoh-BDb0PypuGgsiS_cqG6I9dJZLUrdVeDRsMqLymYM6oBd0aA=="
         }
       ]
     },
     {
-      "id": "2026-09-09-sports",
+      "id": "2026-09-10-sports",
       "category": "sports",
       "categoryLabel": "Sports",
-      "headline": "Zheng Qinwen Stuns Iga Swiatek to Reach 2026 US Open Quarterfinals",
-      "summary": "Olympic gold medalist Zheng Qinwen pulled off a major upset at the 2026 US Open by defeating top contender Iga Swiatek in the fourth round. The victory advances the Chinese tennis star into the quarterfinals at Flushing Meadows and dramatically reshapes the women's draw at the final Grand Slam of the year.",
-      "question": "What do you think makes unexpected upsets in major sports tournaments so exciting for fans to watch?",
+      "headline": "Ben Shelton Upsets Carlos Alcaraz in Record Late-Night US Open Quarterfinal",
+      "summary": "American Ben Shelton dethroned defending champion Carlos Alcaraz in a five-set quarterfinal match at the US Open. The epic marathon concluded at 3:33 a.m., marking the latest match finish in tournament history and sending Shelton into the semifinals.",
+      "question": "How do you think competing late into the early morning hours impacts an athlete's physical performance and recovery?",
       "coachLeads": {
-        "friendly": "Hey, did you catch the big news from the US Open? There was a massive upset in the women's tennis draw that everyone is talking about.",
-        "energetic": "What an unbelievable match at the US Open! Zheng Qinwen just knocked out Iga Swiatek in a total thriller!",
-        "calm": "There was a notable result at Flushing Meadows yesterday. Zheng Qinwen defeated Iga Swiatek to secure her spot in the quarterfinals.",
-        "direct": "Zheng Qinwen pulled off a huge upset against Iga Swiatek at the US Open. Let's talk about what this means for the rest of the tournament."
+        "friendly": "Hey, did you hear about the incredible late-night tennis match at the US Open? It was an absolute thriller!",
+        "energetic": "What a massive upset at the US Open! Finishing a five-set marathon after 3:30 in the morning is unbelievable!",
+        "calm": "A major story unfolded at the US Open overnight with a record-breaking late finish. It's definitely worth taking a look at.",
+        "direct": "Ben Shelton just knocked defending champion Carlos Alcaraz out of the US Open in a match that ran past 3:30 a.m. Let's discuss this record-setting win."
       },
       "sources": [
         {
           "title": "Google News: Sports",
-          "url": "https://news.google.com/search?q=Sports%20top%20news%202026-09-09&hl=en-US&gl=US&ceid=US:en"
+          "url": "https://news.google.com/search?q=Sports%20top%20news%202026-09-10&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     },
     {
-      "id": "2026-09-09-entertainment",
+      "id": "2026-09-10-entertainment",
       "category": "entertainment",
       "categoryLabel": "Entertainment",
-      "headline": "Stevie Wonder Announces World Tour for 'Songs in the Key of Life' 50th Anniversary",
-      "summary": "Stevie Wonder announced an 18-date international tour to celebrate the 50th anniversary of his landmark 1976 album, Songs in the Key of Life. The legendary musician will perform the acclaimed double album in its entirety across Europe and North America starting in October 2026.",
-      "question": "If you could see any legendary musician perform a classic album live in its entirety, which album would you choose?",
+      "headline": "Nirvana Named Recipient of the Video Vanguard Award for the 2026 MTV VMAs",
+      "summary": "MTV announced that iconic rock band Nirvana will receive the prestigious Video Vanguard Award at the 2026 MTV Video Music Awards on September 27 in Los Angeles. The honor comes 35 years after the filming of their groundbreaking 'Smells Like Teen Spirit' music video, celebrating the group's lasting impact on music culture.",
+      "question": "How do you think music videos impact a band's legacy compared to their songs alone?",
       "coachLeads": {
-        "friendly": "Hey, have you heard the exciting news about Stevie Wonder? He just announced a brand-new world tour, and I'd love to chat about it with you!",
-        "energetic": "Guess what huge music news dropped today? Stevie Wonder is hitting the road to perform one of his most iconic albums live in full!",
-        "calm": "Stevie Wonder recently announced a tour celebrating fifty years of his masterpiece album. Take a look when you are ready to discuss it.",
-        "direct": "Stevie Wonder announced an 18-date world tour for Songs in the Key of Life. Let's practice talking about this major music story."
+        "friendly": "Hey, did you catch the news about Nirvana? They're receiving a major honor at this year's MTV Video Music Awards!",
+        "energetic": "This is huge news for music fans! Nirvana is officially getting the Video Vanguard Award at the upcoming VMAs!",
+        "calm": "MTV announced that Nirvana will receive the Video Vanguard Award later this month. It is a fitting tribute to a band that reshaped music culture.",
+        "direct": "Nirvana was named the recipient of MTV's Video Vanguard Award today. Let's talk about what made their music videos so iconic."
       },
       "sources": [
         {
-          "title": "seatgeek.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGOMov-iL2oTRaOfnu2HbxuLuZxCxhdExOStPaXT0Vw6OCy7M4B76nrFRng9z4yLYZOFmqBtDF77ky12ZGqLX3l_AozlztMZUCwkfbEKdh4NRbDrAiVD_cFAmxnV1C92rQfov1Wn3HFRCe33NXw5Z5VcVIc3AS90sWGvFIoOgzONDeQl0eNK9Bh6LrFOUD1NGdYzOkwPPgcPvMuxz44d_Damxi1zU_COiFlAsym"
-        },
-        {
-          "title": "fox61.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHKihNpZrvMxwUZC2oFvLwpPa_SKbUZYTjcOp7d21ptMgua8nFk1L7uBUsmSz13CPukP8e6dm0RftZ45uUHrMdACZ39xFxZqjHrIxCTEzcjCL7MtU9mlhpVddQI24Lqq2FUh0XLSzmDycgXjdDzlXuoQv_frBDpRb46870BLudFHPQPfEKr3DJjjb2_feZX6F99N3lomEjTL7mon-pDSHq-fob2Sgvl0oBBxI7C-JluMG4Grc5z6OvHG5H5_CVoKNZSz4pGkR2QYPKPbVEu"
-        },
-        {
-          "title": "ultimateclassicrock.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQELAuX4vwhhbhzc3sfAkGgvxkt5lOxfV5CDl1fsO29Swg8BGkN5WGe5qH16uLScNpSYHsjuqJ8JUD6PrYFfi-nIlvjbapm2xn7OyKRsMZjN-AGH9OxGbl3LzVu9CJlS4Ba64mhLvbB7DbF0TvvmcXIOOg17m5WCqUTjUT02ZaEB7Pdi16W1Q6_gQoDA36e0s_U2l81wJ4e_"
+          "title": "Google News: Entertainment",
+          "url": "https://news.google.com/search?q=Entertainment%20top%20news%202026-09-10&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     }
