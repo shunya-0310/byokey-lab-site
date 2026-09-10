@@ -1,104 +1,96 @@
 {
   "schemaVersion": 1,
   "status": "live",
-  "date": "2026-09-10",
-  "generatedAt": "2026-09-09T23:15:13.959Z",
+  "date": "2026-09-11",
+  "generatedAt": "2026-09-10T23:11:04.664Z",
   "model": "gemini-3.6-flash",
   "fallbackCategories": [],
   "items": [
     {
-      "id": "2026-09-10-politics_economy",
+      "id": "2026-09-11-politics_economy",
       "category": "politics_economy",
       "categoryLabel": "Politics & Economy",
-      "headline": "Global Crude Oil Prices Surge Past $100 Per Barrel as Middle East Conflicts Escalate",
-      "summary": "Global benchmark Brent crude oil surged past $100 per barrel following intensified military strikes on energy infrastructure and shipping routes in the Middle East. The sudden price jump has heightened international inflation concerns and triggered notable losses across global stock markets.",
-      "question": "How do you think rising fuel and energy prices might impact daily life and businesses in your country?",
+      "headline": "UN Nuclear Watchdog Board Refers Iran to Security Council",
+      "summary": "The International Atomic Energy Agency's Board of Governors voted to report Iran to the United Nations Security Council for failing to comply with its nuclear non-proliferation obligations. This decision marks the first time in twenty years that the agency has formally referred Iran to the Security Council, escalating international diplomatic pressure over restricted access to nuclear sites.",
+      "question": "How do you think international organizations should handle countries that restrict access to mandated nuclear inspectors?",
       "coachLeads": {
-        "friendly": "Hey there! Have you heard about today's news regarding global oil prices jumping past $100 a barrel?",
-        "energetic": "Oil prices just shot past $100 a barrel, and it's making huge waves across global financial markets right now!",
-        "calm": "Let's review today's major economic news, as global crude oil prices have climbed past $100 per barrel.",
-        "direct": "Crude oil prices surpassed $100 a barrel following fresh military clashes, so let's examine why this matters right now."
+        "friendly": "Hey! Have you seen the latest diplomatic news about the UN nuclear watchdog? It's a really important global story worth discussing.",
+        "energetic": "There's a huge front-page world politics story breaking right now! The UN nuclear agency just made a landmark move for the first time in two decades, so let's jump right into it!",
+        "calm": "A major diplomatic decision took place regarding global nuclear oversight. Whenever you're ready, let me know your thoughts on the situation.",
+        "direct": "The IAEA board voted to report Iran to the UN Security Council for the first time in 20 years. Take a look at the summary and tell me what you think."
       },
       "sources": [
         {
-          "title": "thebusinessjournal.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEaopp4HAteD5TLZzluiDxt9uYGnodxQN1pSVBpeeMxalvnwdTyY6gf8kPHnK62mHceiAarGLpiAWLjKmUPDUNk_xav4mKYXSiJImyMJCjIg_jwBj8qyh71Z7Td05vLSUAiaxiVUh09RUrH3_f1ayVuZ0IhRGsx6Jnacg=="
+          "title": "fdd.org",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEdOHOXaMzqb9fiOh4_fIpvrp7x_6u-VjVnioEfkHfBjUQbZMwFpiarRbban_bvBrx0Zj1QivQmZFjjnySamqLreTNSriihKbqLJO2iGs7PCBQz6_1oYjN4MH0MJ547IKjG_RmoZai52X8saHK0Jy__1N5yJhtMwoYYELXlqSW4pBDcMH_STk7yeI5DkYV6QiIU_Q7Y"
         },
         {
-          "title": "egyptoil-gas.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGfuA2rkgzluueB48pPD2r2MgdEYecnph__47DLsKaBwrh2s4WG7xzmE_980E0aUvG_mM-Sj55DTcWAYa8r7B_DWCKT-p1oiOcRAEvD8N3Qh7Zq3mPi84c08Leb8qi5iIlknEINkDwK5Slx6xzRjmsGPzAry7J3bCssSkpkqP2C"
+          "title": "apnews.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGNp67ZHj3z2XeS1Hb5YNu35UTP-FScaRF55mgSJgeSU-giAF6tVuS0RoF2hrMtg1CyAGBC0wWL2KS96IQqk7JBZiDWhWBE606A_68L08r4VuPeCJ30tumEpWOM9iwPH6DMAOnWYlBT_EyCh7yZZmumHe2TmwTIVZVhNdQRV0EOyesQBgYFYRQKqex7ZDyE1yvA56QIVm1rF3v9"
         },
         {
-          "title": "247wallst.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFtQejxpCOtuaJC15zKdw8L2ciPsYolEgWnclG26Dl8wB8LyIAc8WTe-zqdBQwXlUJkejlqp3PCX2BiruZJqnsA9KGEZdK9ifzmRLGISnl6E3zgOCtzE1Ly0qjJH7YQJVeJzK0872ZYWLcYJNIjyO1Pgz_e8MYZaqgVcLeqN_WZIBLPAZmrR2R9YEXYzV1zNMoGZl_qCOhdR_b7O-mF5O34DgPZxpyKshE="
+          "title": "al-monitor.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGXxrzcef-U3Mcv1RFvUK7678nlX_5PNQ_HurfJQuPBDPdu5Am2lp2Lp2s35zca6Pd6p1A-hNmrtAsTxL2wIapYtqgGd1nE1ueGe4FByCf_p221SlEYSKlv7btdroCQ5N1XDb3Px4en8aGFqrfl7O_Wqze90jS8VbiHcyPnHgbkoLcfiURwu4Tfs3u1pUg="
         }
       ]
     },
     {
-      "id": "2026-09-10-technology",
+      "id": "2026-09-11-technology",
       "category": "technology",
       "categoryLabel": "Technology",
-      "headline": "Apple Unveils First Foldable Smartphone and AI Upgrades at Annual Showcase",
-      "summary": "On September 9, Apple announced its first foldable device, the iPhone Duo, alongside the new iPhone 18 lineup and enhanced Siri AI features. The launch event marked the first major hardware showcase presented by chief executive John Ternus following his transition into the role.",
-      "question": "What do you think about foldable smartphones, and would you ever consider using one in your daily life?",
+      "headline": "California Enacts New Laws Regulating AI Chatbots and Social Media Platforms",
+      "summary": "California Governor Gavin Newsom signed a suite of 13 new state bills establishing tighter oversight for artificial intelligence and social media platforms. The landmark package includes measures requiring AI chatbot developers to implement strict age verification and default safety settings to protect underage users.",
+      "question": "Do you think governments should set strict safety guardrails on how AI chatbots communicate with teenagers and children?",
       "coachLeads": {
-        "friendly": "Hey, did you catch the news about Apple's latest product event? They just announced their very first foldable phone!",
-        "energetic": "Apple just revealed its first foldable smartphone and new AI features! Are you excited to see where mobile tech is heading next?",
-        "calm": "Apple held its annual fall event and introduced a foldable phone alongside updated AI capabilities. I'd love to hear your thoughts on these new devices.",
-        "direct": "Apple just announced its new foldable phone and Siri AI upgrades. Let's chat about whether foldable devices are actually practical."
+        "friendly": "Hey, have you caught the news about California's new AI regulations yet? It is a really interesting topic to dive into together!",
+        "energetic": "Check out this major new story about AI safety! California just signed landmark legislation that could change how tech companies design chatbots for young users!",
+        "calm": "California has just passed a significant group of laws aimed at regulating AI chatbots and social media platforms. Let's take a thoughtful look at what these new protections mean.",
+        "direct": "California just enacted 13 new laws to regulate AI chatbots and protect younger users online. Here is what you need to know about this major policy move."
       },
       "sources": [
         {
-          "title": "cbsnews.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGiwpfm1UCeUiJXmN72trPAmehWBJR6VMPTJBbuJqyMY-T3LZL7vG1bvxK1QB9SOV7UcKClF0DWuFA9cYsWnovpGiAlxlgoYZl3d0yQHfOjQzU5cHJ6pIz4wIX_aEqT_9PAOg_oxKrlk39yeeol_A0mC2Gbtdo="
-        },
-        {
-          "title": "apple.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGRQy7nG6KyQ-R9vfYWeWfjVQSQcqCcAPp7twqzjdPTuY151ZmNQyl4u_N4nYYDICCsx0M1KXcdMY1GP4D2E0jCF3cpWaprxmJ2Qm45XPUV0Fm7-HiDPZ_WRtuxZXE8u3RHGagSWXqSp6-abCq8iy3UeyrgTHRGp2i231ZD-St_ejDyHOAKOfyO2Y4PEaqx"
-        },
-        {
-          "title": "mashable.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE1252p2QXwO0HP0qSQd5qcDJKyEQ9ks63GdYHHVTbEblX2vUp6NuETpFL2afWexIWhvkoMlJ_2_b-VA1yjLhgJfOHX0yY3IeNxWVNGNsOniFR1EA0GudO-IG56kqgvuoh-BDb0PypuGgsiS_cqG6I9dJZLUrdVeDRsMqLymYM6oBd0aA=="
+          "title": "courthousenews.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGcG-gXsxAcEo0Z_0Y-ZBItDUcIycIZsqxUMDtzM73a1lPw1AUY_yq8lFRFzxXz78nY2dg8LJ7Kbla9a82P1v1tCMSydFd40FT15OyctZESiKXds18gp1LwaOoDm0FrUzvKKxdhpYxjIyvw9wUA37mKfR_h4N7CnLLgMuftLmydMloAWm3Vq4sx9f1eEip62xGKWEDWiM3_3chIG2Vi"
         }
       ]
     },
     {
-      "id": "2026-09-10-sports",
+      "id": "2026-09-11-sports",
       "category": "sports",
       "categoryLabel": "Sports",
-      "headline": "Ben Shelton Upsets Carlos Alcaraz in Record Late-Night US Open Quarterfinal",
-      "summary": "American Ben Shelton dethroned defending champion Carlos Alcaraz in a five-set quarterfinal match at the US Open. The epic marathon concluded at 3:33 a.m., marking the latest match finish in tournament history and sending Shelton into the semifinals.",
-      "question": "How do you think competing late into the early morning hours impacts an athlete's physical performance and recovery?",
+      "headline": "Ben Shelton Dethrones Carlos Alcaraz in Historic US Open Quarterfinal Thriller",
+      "summary": "American tennis player Ben Shelton defeated defending champion Carlos Alcaraz in a dramatic five-set quarterfinal to advance to the US Open semifinals. Finishing at 3:33 a.m. local time, the marathon four-hour match set a record for the latest finish in tournament history.",
+      "question": "What mental qualities do you think help athletes stay focused during high-pressure, late-night matches like this?",
       "coachLeads": {
-        "friendly": "Hey, did you hear about the incredible late-night tennis match at the US Open? It was an absolute thriller!",
-        "energetic": "What a massive upset at the US Open! Finishing a five-set marathon after 3:30 in the morning is unbelievable!",
-        "calm": "A major story unfolded at the US Open overnight with a record-breaking late finish. It's definitely worth taking a look at.",
-        "direct": "Ben Shelton just knocked defending champion Carlos Alcaraz out of the US Open in a match that ran past 3:30 a.m. Let's discuss this record-setting win."
+        "friendly": "Hey, did you hear about the late-night tennis drama at the US Open?",
+        "energetic": "What an incredible match! Ben Shelton just pulled off a huge upset in the latest finish in US Open history!",
+        "calm": "Late-night sports matches always test an athlete's endurance, and this one was especially memorable.",
+        "direct": "Ben Shelton knocked out defending champion Carlos Alcaraz in a record-breaking US Open quarterfinal."
       },
       "sources": [
         {
           "title": "Google News: Sports",
-          "url": "https://news.google.com/search?q=Sports%20top%20news%202026-09-10&hl=en-US&gl=US&ceid=US:en"
+          "url": "https://news.google.com/search?q=Sports%20top%20news%202026-09-11&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     },
     {
-      "id": "2026-09-10-entertainment",
+      "id": "2026-09-11-entertainment",
       "category": "entertainment",
       "categoryLabel": "Entertainment",
-      "headline": "Nirvana Named Recipient of the Video Vanguard Award for the 2026 MTV VMAs",
-      "summary": "MTV announced that iconic rock band Nirvana will receive the prestigious Video Vanguard Award at the 2026 MTV Video Music Awards on September 27 in Los Angeles. The honor comes 35 years after the filming of their groundbreaking 'Smells Like Teen Spirit' music video, celebrating the group's lasting impact on music culture.",
-      "question": "How do you think music videos impact a band's legacy compared to their songs alone?",
+      "headline": "51st Toronto International Film Festival Kicks Off with Major Premieres and First Dedicated Film Market",
+      "summary": "The 51st Toronto International Film Festival officially opened on September 10, 2026, showcasing over 200 global films and launching its first dedicated official film market. Director Siân Heder's biographical drama \"Being Heumann,\" centered on disability rights activist Judy Heumann, headlined the event as the opening night film.",
+      "question": "If you could attend a major international film festival, what kind of movie premiere would you be most excited to watch?",
       "coachLeads": {
-        "friendly": "Hey, did you catch the news about Nirvana? They're receiving a major honor at this year's MTV Video Music Awards!",
-        "energetic": "This is huge news for music fans! Nirvana is officially getting the Video Vanguard Award at the upcoming VMAs!",
-        "calm": "MTV announced that Nirvana will receive the Video Vanguard Award later this month. It is a fitting tribute to a band that reshaped music culture.",
-        "direct": "Nirvana was named the recipient of MTV's Video Vanguard Award today. Let's talk about what made their music videos so iconic."
+        "friendly": "Hey! The Toronto International Film Festival just started today, and it's packed with exciting new movies. Have you been following any film news lately?",
+        "energetic": "Film festival season is officially in full swing as TIFF opens in Toronto with huge red carpets! This is definitely worth talking about.",
+        "calm": "The 51st Toronto International Film Festival began today, marking an important week for cinema fans around the world.",
+        "direct": "TIFF 2026 has officially kicked off in Toronto with major premieres and a new film market. Let's talk about it."
       },
       "sources": [
         {
           "title": "Google News: Entertainment",
-          "url": "https://news.google.com/search?q=Entertainment%20top%20news%202026-09-10&hl=en-US&gl=US&ceid=US:en"
+          "url": "https://news.google.com/search?q=Entertainment%20top%20news%202026-09-11&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     }
