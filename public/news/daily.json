@@ -1,96 +1,112 @@
 {
   "schemaVersion": 1,
   "status": "live",
-  "date": "2026-09-11",
-  "generatedAt": "2026-09-10T23:11:04.664Z",
+  "date": "2026-09-12",
+  "generatedAt": "2026-09-11T23:16:03.387Z",
   "model": "gemini-3.6-flash",
   "fallbackCategories": [],
   "items": [
     {
-      "id": "2026-09-11-politics_economy",
+      "id": "2026-09-12-politics_economy",
       "category": "politics_economy",
       "categoryLabel": "Politics & Economy",
-      "headline": "UN Nuclear Watchdog Board Refers Iran to Security Council",
-      "summary": "The International Atomic Energy Agency's Board of Governors voted to report Iran to the United Nations Security Council for failing to comply with its nuclear non-proliferation obligations. This decision marks the first time in twenty years that the agency has formally referred Iran to the Security Council, escalating international diplomatic pressure over restricted access to nuclear sites.",
-      "question": "How do you think international organizations should handle countries that restrict access to mandated nuclear inspectors?",
+      "headline": "United States Commemorates 25th Anniversary of September 11 Attacks",
+      "summary": "On September 11, official ceremonies took place across the United States to mark the 25th anniversary of the 2001 terrorist attacks. Memorial events at Ground Zero, the Pentagon, and Shanksville honored the victims while leaders reflected on the long-term impact on global security.",
+      "question": "How do major historical events like this shape a country's national identity and foreign policy over time?",
       "coachLeads": {
-        "friendly": "Hey! Have you seen the latest diplomatic news about the UN nuclear watchdog? It's a really important global story worth discussing.",
-        "energetic": "There's a huge front-page world politics story breaking right now! The UN nuclear agency just made a landmark move for the first time in two decades, so let's jump right into it!",
-        "calm": "A major diplomatic decision took place regarding global nuclear oversight. Whenever you're ready, let me know your thoughts on the situation.",
-        "direct": "The IAEA board voted to report Iran to the UN Security Council for the first time in 20 years. Take a look at the summary and tell me what you think."
+        "friendly": "Hey, have you seen the news about the 25th anniversary of September 11 today? It is definitely a story worth discussing.",
+        "energetic": "This is a major historical milestone making headlines around the world today! Millions of people are reflecting on 25 years since the event.",
+        "calm": "Today marks 25 years since the September 11 attacks. It is a quiet moment of reflection on an event that shaped modern history.",
+        "direct": "The U.S. commemorated the 25th anniversary of September 11 today. Let's talk about how this event influenced world politics."
       },
       "sources": [
         {
-          "title": "fdd.org",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEdOHOXaMzqb9fiOh4_fIpvrp7x_6u-VjVnioEfkHfBjUQbZMwFpiarRbban_bvBrx0Zj1QivQmZFjjnySamqLreTNSriihKbqLJO2iGs7PCBQz6_1oYjN4MH0MJ547IKjG_RmoZai52X8saHK0Jy__1N5yJhtMwoYYELXlqSW4pBDcMH_STk7yeI5DkYV6QiIU_Q7Y"
+          "title": "aljazeera.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHcNcnDpLkWE7OM9ZEoMq5l7fBJTIn5lJklwRH-q5uCzSqhYux1tKa5nm3vLiUCqXFLfBOCrGuXKENKTiev9dwdSUd1nzux7LwxSej30_LFJQvArY4FYjnmIPqOCGT0XhUd62ctlvar4eLWauFrO4vryZHR5Y7DAQ1c5jDDpSyEPjSLLl3DXQ-lqb9li-IG6u0g20jq6S9Ez9U="
         },
         {
-          "title": "apnews.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGNp67ZHj3z2XeS1Hb5YNu35UTP-FScaRF55mgSJgeSU-giAF6tVuS0RoF2hrMtg1CyAGBC0wWL2KS96IQqk7JBZiDWhWBE606A_68L08r4VuPeCJ30tumEpWOM9iwPH6DMAOnWYlBT_EyCh7yZZmumHe2TmwTIVZVhNdQRV0EOyesQBgYFYRQKqex7ZDyE1yvA56QIVm1rF3v9"
+          "title": "wttw.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGQzf5vhC8xXsHkI4QvSyKc-QSHf0w9BYzh-OXhvM8SS5A9ztU3HyOZLy82chZOqFKDNt6ps4JziWxThnPVEfiqSNBeia_K8Vytoc4-T8MdAd4XwGztLAtqsU5QQ6P_JULnUPjNoqAoUB_jnKK2gEex8fM-X0ySX1TzENTAq9zbklICb8hDOKnnsw=="
         },
         {
-          "title": "al-monitor.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGXxrzcef-U3Mcv1RFvUK7678nlX_5PNQ_HurfJQuPBDPdu5Am2lp2Lp2s35zca6Pd6p1A-hNmrtAsTxL2wIapYtqgGd1nE1ueGe4FByCf_p221SlEYSKlv7btdroCQ5N1XDb3Px4en8aGFqrfl7O_Wqze90jS8VbiHcyPnHgbkoLcfiURwu4Tfs3u1pUg="
+          "title": "pbs.org",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE3ktrmifhIPu7WW6lwsdxNy5nHMv0PCiCfqO0J8RfwjgPZ4HTSaQHyFEc1fOBWkcwO9o7gC__1b3g1DhzuZHtuKRsOg3gGZ3tvASbWWaluPniIFnjiGA5GrXTCr5qDHRPFpacvsbuJRcCMsWpwPRdoxPLpdG0vi_I7n7Hjfh6NMkvdXhbwtAUh"
         }
       ]
     },
     {
-      "id": "2026-09-11-technology",
+      "id": "2026-09-12-technology",
       "category": "technology",
       "categoryLabel": "Technology",
-      "headline": "California Enacts New Laws Regulating AI Chatbots and Social Media Platforms",
-      "summary": "California Governor Gavin Newsom signed a suite of 13 new state bills establishing tighter oversight for artificial intelligence and social media platforms. The landmark package includes measures requiring AI chatbot developers to implement strict age verification and default safety settings to protect underage users.",
-      "question": "Do you think governments should set strict safety guardrails on how AI chatbots communicate with teenagers and children?",
+      "headline": "Scientists Achieve 1,000-Fold Speedup in Quantum Computing Operations",
+      "summary": "Researchers at Sweden's Chalmers University of Technology have developed a novel method that performs complex quantum operations over 1,000 times faster. Published on September 11, 2026, this breakthrough dramatically shortens processing time to prevent environmental errors, bringing practical, fault-tolerant quantum computers closer to reality.",
+      "question": "How do you think faster and more reliable quantum computers might impact technology and our daily lives in the future?",
       "coachLeads": {
-        "friendly": "Hey, have you caught the news about California's new AI regulations yet? It is a really interesting topic to dive into together!",
-        "energetic": "Check out this major new story about AI safety! California just signed landmark legislation that could change how tech companies design chatbots for young users!",
-        "calm": "California has just passed a significant group of laws aimed at regulating AI chatbots and social media platforms. Let's take a thoughtful look at what these new protections mean.",
-        "direct": "California just enacted 13 new laws to regulate AI chatbots and protect younger users online. Here is what you need to know about this major policy move."
+        "friendly": "Hey! Have you heard about the amazing new breakthrough in quantum computing?",
+        "energetic": "Scientists just made quantum computing a thousand times faster, and it's incredible news!",
+        "calm": "Researchers have made a significant leap in quantum computing speed, which could solve one of the field's biggest hurdles.",
+        "direct": "A team in Sweden just boosted quantum operation speeds by 1,000 times to prevent calculation errors."
       },
       "sources": [
         {
-          "title": "courthousenews.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGcG-gXsxAcEo0Z_0Y-ZBItDUcIycIZsqxUMDtzM73a1lPw1AUY_yq8lFRFzxXz78nY2dg8LJ7Kbla9a82P1v1tCMSydFd40FT15OyctZESiKXds18gp1LwaOoDm0FrUzvKKxdhpYxjIyvw9wUA37mKfR_h4N7CnLLgMuftLmydMloAWm3Vq4sx9f1eEip62xGKWEDWiM3_3chIG2Vi"
+          "title": "sciencedaily.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH8tx9LT7Wn5DahuDSNqrNE0qRrcW58gUbMk44KTRuQYn5aqQKGYOwyOmgoLCO409fLyHLiPODm0cIt4C3wOk_RCw_W9u5jm6HS1to6iVbXPOOWmS-otvaAAhd_bMDiNvqKtCFH3iEo9iPN1p1u42Wre-nMJw=="
+        },
+        {
+          "title": "quantumzeitgeist.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFMieJjcgEFWdLm79ZbiwADmK_5SZ06RNDs1Og1CsuNPKAYMLBd_8B8ZbpVgOP5CLNavtLx8S9nejITfLqc1PsMgeJdSw51S1-snbn0RwJkM5SfvPdYjL_HJA1KZX1RicZYScBd-NU3KvkqheNr7IRFYaNaH1CLTubL"
         }
       ]
     },
     {
-      "id": "2026-09-11-sports",
+      "id": "2026-09-12-sports",
       "category": "sports",
       "categoryLabel": "Sports",
-      "headline": "Ben Shelton Dethrones Carlos Alcaraz in Historic US Open Quarterfinal Thriller",
-      "summary": "American tennis player Ben Shelton defeated defending champion Carlos Alcaraz in a dramatic five-set quarterfinal to advance to the US Open semifinals. Finishing at 3:33 a.m. local time, the marathon four-hour match set a record for the latest finish in tournament history.",
-      "question": "What mental qualities do you think help athletes stay focused during high-pressure, late-night matches like this?",
+      "headline": "Alexander Zverev Reaches US Open Final with Semifinal Victory over Karen Khachanov",
+      "summary": "On Friday, top-seeded Alexander Zverev defeated Karen Khachanov in straight sets to reach the 2026 US Open men's singles final. The victory places the German star into his second career US Open final as the tournament enters its championship weekend in New York.",
+      "question": "Do you prefer watching individual sports like tennis where athletes compete alone, or do you enjoy team sports more?",
       "coachLeads": {
-        "friendly": "Hey, did you hear about the late-night tennis drama at the US Open?",
-        "energetic": "What an incredible match! Ben Shelton just pulled off a huge upset in the latest finish in US Open history!",
-        "calm": "Late-night sports matches always test an athlete's endurance, and this one was especially memorable.",
-        "direct": "Ben Shelton knocked out defending champion Carlos Alcaraz in a record-breaking US Open quarterfinal."
+        "friendly": "Hey, did you catch the latest results from the US Open today? Alexander Zverev just won his semifinal match to reach the championship final!",
+        "energetic": "Things are getting super intense at Flushing Meadows right now! Zverev fought through two tough tiebreakers to lock in his spot in the US Open final!",
+        "calm": "The US Open is entering its final weekend after a decisive semifinal on Friday. Alexander Zverev earned a straight-sets victory to advance to the men's final.",
+        "direct": "Alexander Zverev has officially advanced to the US Open men's final following his semifinal victory on Friday. Let's talk about how the rest of the tournament might play out."
       },
       "sources": [
         {
-          "title": "Google News: Sports",
-          "url": "https://news.google.com/search?q=Sports%20top%20news%202026-09-11&hl=en-US&gl=US&ceid=US:en"
+          "title": "theguardian.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHqLxhkbx--laeRXKs08jO3IEqtU00YUHool9lyteLmC_McP5KFHjW-83_8XFK3vSyDe0xOfJ00dtTxNfdiYwRT0Q5qBb-S_tMUcq-zbht7mKnO_nkob1oGTV47Jp8sjFV8qi0NQAsDOfyL1Baj5NNT-WJVdrJezar7JmUXN5Fi8lmVq-3_YzXBhphqafwK-IoenYjRh53BbIVM4d9nRmrKD1nL24Ft3sOPFGPddNfSdarUyg=="
+        },
+        {
+          "title": "washingtonpost.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEmepgJzkLHcNR2Uzmqf_Zzwz9ihHVY--jRMjYyAvIAVHy2EGo0f1OJyZr-lUtnjQ1RUJ9s0aBUbR8qNJH14W2OJtWX1En6uJqqA6B7p05AJNDT8szLfsI89oT4cmvBqaDJzU3iAz63qoS7GIZLf9XHWe7ItOq2tSRGhMCIZ2tb2_nHwkgBmmc6L18RJfVpcormAMAg9TYFvmdEMJvkKPnT-wY6ziYTUhXzFC9P-DkeTwARJWw="
         }
       ]
     },
     {
-      "id": "2026-09-11-entertainment",
+      "id": "2026-09-12-entertainment",
       "category": "entertainment",
       "categoryLabel": "Entertainment",
-      "headline": "51st Toronto International Film Festival Kicks Off with Major Premieres and First Dedicated Film Market",
-      "summary": "The 51st Toronto International Film Festival officially opened on September 10, 2026, showcasing over 200 global films and launching its first dedicated official film market. Director Siân Heder's biographical drama \"Being Heumann,\" centered on disability rights activist Judy Heumann, headlined the event as the opening night film.",
-      "question": "If you could attend a major international film festival, what kind of movie premiere would you be most excited to watch?",
+      "headline": "Toronto International Film Festival Launches 2026 Edition with Expanded Global Market",
+      "summary": "The 51st Toronto International Film Festival kicked off with nearly 300 movies scheduled to screen alongside a newly expanded official film market. As a key launchpad for autumn award contenders, this year's event gathers international filmmakers and industry executives to showcase new cinema and negotiate global distribution deals.",
+      "question": "Which upcoming movie or film genre are you most excited to watch this autumn?",
       "coachLeads": {
-        "friendly": "Hey! The Toronto International Film Festival just started today, and it's packed with exciting new movies. Have you been following any film news lately?",
-        "energetic": "Film festival season is officially in full swing as TIFF opens in Toronto with huge red carpets! This is definitely worth talking about.",
-        "calm": "The 51st Toronto International Film Festival began today, marking an important week for cinema fans around the world.",
-        "direct": "TIFF 2026 has officially kicked off in Toronto with major premieres and a new film market. Let's talk about it."
+        "friendly": "Hey, have you heard about the big movie festival happening in Toronto right now? It is a great time to chat about films and award season!",
+        "energetic": "The Toronto International Film Festival is officially underway with tons of new movies! Let us dive into what everyone is talking about.",
+        "calm": "The annual Toronto Film Festival has just started, bringing a new season of movie premieres. Shall we discuss what films you like?",
+        "direct": "The Toronto International Film Festival launched its latest edition this week. What kind of movies do you usually enjoy watching?"
       },
       "sources": [
         {
-          "title": "Google News: Entertainment",
-          "url": "https://news.google.com/search?q=Entertainment%20top%20news%202026-09-11&hl=en-US&gl=US&ceid=US:en"
+          "title": "rottentomatoes.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEDvZAm7CKk6o_sOEnUJTkutRskDfSidMgXWn-6CmM1kEch_uVdJzIQdaWwfcnPiqEesMSVgZcm29GgufmYH2_UvUy3xj1N_A_ogcoC34k2vzOLjuL4_20JVtI5mNnjgh9AyLOSmK_k01l-JIhONcLzcbSAj1QlWrW4wpUxTmnQm3gStgrsvw=="
+        },
+        {
+          "title": "wikipedia.org",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGnzb369nQj1efG_i8SAE1LJUJbQgeh-XGRZiH6wjCFTn-y9RHaOOQR82ELMVBXpkeuzhYF0u64f0S4I7PmavxedrRxsL63RqMLvYay-LCNkOe2p_VZt0gzxlWVJ1YLOqOxEFXcuUBGzY126ntswef_rWd2WO88DAqWkzrw"
+        },
+        {
+          "title": "cbc.ca",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFP6FEeWX73av_O_Zf8gng0eGzIySEI8HrEBEOlbMOe2B4a9it2JqgvFxdBpEinq46HOGhmtPxDjeqzXUIpxGtwlRAZEe8YaUL2QDoVNFXAMuSLZmLjUiHROsJ4aBuKiPVoJBo3sy41CgNwr27O8Dc_hQv8_E_CMhXsv3gjf4k="
         }
       ]
     }
