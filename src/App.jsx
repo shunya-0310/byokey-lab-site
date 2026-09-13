@@ -461,7 +461,7 @@ function MarkdownArticle({ markdown }) {
     const trimmed = block.trim();
     const imageMatch = trimmed.match(/^!\[([^\]]*)\]\(([^\s)]+)\)$/);
     if (imageMatch) {
-      return <figure className="article-figure" key={`image-${index}`}><img src={imageMatch[2]} alt={imageMatch[1]} /></figure>;
+      return <figure className="article-figure" key={`image-${index}`}><img src={imageMatch[2]} alt={imageMatch[1]} loading="lazy" decoding="async" /></figure>;
     }
     if (trimmed.startsWith("# ")) return null;
     if (trimmed.startsWith("## ")) return <h2 key={`heading-${index}`}>{renderArticleInline(trimmed.slice(3), `heading-${index}`)}</h2>;
