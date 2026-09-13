@@ -1,92 +1,96 @@
 {
   "schemaVersion": 1,
   "status": "live",
-  "date": "2026-09-13",
-  "generatedAt": "2026-09-12T23:02:57.755Z",
+  "date": "2026-09-14",
+  "generatedAt": "2026-09-13T23:10:34.107Z",
   "model": "gemini-3.6-flash",
   "fallbackCategories": [],
   "items": [
     {
-      "id": "2026-09-13-politics_economy",
+      "id": "2026-09-14-politics_economy",
       "category": "politics_economy",
       "categoryLabel": "Politics & Economy",
-      "headline": "BRICS Summit Adopts New Delhi Declaration Amid High-Level Diplomatic Talks",
-      "summary": "World leaders adopted the New Delhi Declaration by consensus on September 12 during the 18th BRICS Summit in India. The meeting served as a prominent forum for global policy discussions and featured key diplomatic exchanges, including bilateral talks between Indian Prime Minister Narendra Modi and Chinese President Xi Jinping.",
-      "question": "How do you think growing diplomatic partnerships like BRICS might influence future international trade and global politics?",
+      "headline": "Trump Urges Ukraine to Halt Strikes on Russian Refineries Amid Global Fuel Shortage",
+      "summary": "U.S. President Donald Trump publicly urged Ukrainian President Volodymyr Zelenskyy to stop attacking Russian oil refineries, arguing that the strikes are driving a severe global diesel shortage. The request follows record U.S. diesel prices surpassing six dollars a gallon after months of targeted Ukrainian long-range attacks on Russian energy infrastructure.",
+      "question": "How should international leaders balance domestic economic pressures, like high fuel prices, with supporting an ally in a conflict?",
       "coachLeads": {
-        "friendly": "Hey, have you heard about the major diplomatic summit that just wrapped up in India?",
-        "energetic": "World leaders just concluded high-stakes diplomatic talks in New Delhi, and it's making huge news around the globe today!",
-        "calm": "World leaders recently gathered in New Delhi for the BRICS summit, offering a fascinating look at evolving global diplomacy.",
-        "direct": "The 18th BRICS Summit in New Delhi just concluded with a major joint agreement, making this an important global political story to discuss."
+        "friendly": "Hey! Have you caught the latest news about international diplomacy and global energy prices today?",
+        "energetic": "Check this out! U.S. President Trump just called on Ukraine to pause its strikes on Russian oil refineries because fuel prices are soaring globally!",
+        "calm": "There is a notable story developing today about how rising global fuel costs are impacting international policy. It raises an interesting point about energy security during major conflicts.",
+        "direct": "President Trump has asked Ukraine to stop striking Russian fuel infrastructure due to rising global diesel costs. This is definitely worth talking about."
       },
       "sources": [
         {
-          "title": "thehindu.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEX1w0332gQfDyDL7fhb2Nco9r0U0ETTrVbo9iERmWcGsw7lCnzLBGsEvCzkUMD7dsM2EpdUEVbt3_KnQzawA5WXrIADNIHXEF1SF2-LGi4QgxB9xg3OjiXCQW2hUn4vftgfDs2BEGQapBckQRj9tXMaU_ZO4FEHHEcEgbgaUtjyvGennwbvfThmOuw5g=="
-        },
-        {
-          "title": "nhandan.vn",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFeKZraUpMl9j1Q4Nmi1ya5qcE8zkCbXbvM6l1JkHtj80z0I9whf1zZK8uN2jhFT_t6tOGgcMyN5hgm5lha2aoW3DDkykPWBf2u9nJMLipLWH20SsY2OCQaglt_-dVgvcOf1ftqK71RlQj2LUosJnpGTnBk82OGc5Rs0Qc="
+          "title": "Google News: Politics & Economy",
+          "url": "https://news.google.com/search?q=Politics%20%26%20Economy%20top%20news%202026-09-14&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     },
     {
-      "id": "2026-09-13-technology",
+      "id": "2026-09-14-technology",
       "category": "technology",
       "categoryLabel": "Technology",
-      "headline": "Anthropic CEO Calls for Slowing Down AI Development Over Safety Risks",
-      "summary": "Anthropic Chief Executive Dario Amodei published a proposal urging tech companies to slow the pace of frontier AI development to allow safety measures and oversight to catch up. The call gained widespread attention after rival leaders Sam Altman of OpenAI and Elon Musk of xAI publicly voiced agreement with the idea.",
-      "question": "Do you think tech companies should slow down AI development for safety, or should they keep racing ahead?",
+      "headline": "Top AI Leaders Call to Slow Development as Safety Debate Intensifies",
+      "summary": "Leading artificial intelligence executives from Anthropic, OpenAI, and xAI have publicly backed calls to slow down advanced model development so safety frameworks can catch up. The rare alignment among rival tech leaders sparked immediate global discussion, though political figures like U.S. President Donald Trump warned against slowing down and risking international competitiveness.",
+      "question": "Do you think tech companies should pause advanced AI development to ensure safety, or keep moving forward to stay competitive?",
       "coachLeads": {
-        "friendly": "Hey! Have you heard about top tech leaders suddenly agreeing to slow down AI development? It’s a fascinating story, and I’d love to hear your thoughts on it.",
-        "energetic": "Check this out—some of the biggest names in tech are actually calling for a pause in the AI race! What do you think about this surprising news?",
-        "calm": "There is an important global discussion happening right now about safety in artificial intelligence. Let's take a look at why tech executives are urging caution.",
-        "direct": "Major AI CEOs are calling to slow down advanced AI development over safety concerns. Let's chat about what this means for the future."
+        "friendly": "Hey, have you heard about top AI executives suddenly calling to slow down their own tech development? It's making huge headlines today, and I'd love to hear what you think!",
+        "energetic": "This AI debate is heating up big time right now! Major leaders from OpenAI, Anthropic, and xAI are actually asking to tap the brakes on AI—what's your take on that?",
+        "calm": "There is a very thoughtful discussion happening today about whether to slow down advanced AI for safety reasons. It's a great topic for us to practice sharing your opinions in English.",
+        "direct": "Top tech CEOs are asking to slow down AI development, but political leaders want to keep full speed ahead. Tell me where you stand on this issue."
       },
       "sources": [
         {
           "title": "Google News: Technology",
-          "url": "https://news.google.com/search?q=Technology%20top%20news%202026-09-13&hl=en-US&gl=US&ceid=US:en"
+          "url": "https://news.google.com/search?q=Technology%20top%20news%202026-09-14&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     },
     {
-      "id": "2026-09-13-sports",
+      "id": "2026-09-14-sports",
       "category": "sports",
       "categoryLabel": "Sports",
-      "headline": "Elena Rybakina Wins First US Open Title and Claims World No. 1 Ranking",
-      "summary": "Kazakhstan's Elena Rybakina defeated Aryna Sabalenka 6-4, 5-7, 6-2 to win her first US Open women's singles title on Saturday. The victory marks her second Grand Slam crown of 2026 and officially elevates her to the world number one ranking.",
-      "question": "Do you think reaching the world number one spot adds more pressure to an athlete, or does it give them extra confidence?",
+      "headline": "Alexander Zverev Defeats Ben Shelton to Win 2026 US Open Men's Title",
+      "summary": "Top-seeded Alexander Zverev defeated American Ben Shelton in four sets to claim the 2026 US Open men's singles championship at Arthur Ashe Stadium on Sunday. The victory earns the German star his second Grand Slam title of the season following his French Open victory in June.",
+      "question": "What mental or physical qualities do you think are most important for athletes competing in high-stakes championship matches?",
       "coachLeads": {
-        "friendly": "Hey, did you catch the big news from the US Open tennis final? Elena Rybakina just won her first US Open title and became the world's top-ranked player!",
-        "energetic": "What an incredible finish at Flushing Meadows! Elena Rybakina battled through three tough sets to take home the US Open crown and claim the top spot in women's tennis!",
-        "calm": "There was a major shift at the top of women's tennis today as Elena Rybakina earned her first US Open championship. It is a great moment to reflect on what it takes to reach the peak of a sport.",
-        "direct": "Elena Rybakina defeated Aryna Sabalenka to win the US Open and secure the world number one ranking. Let's talk about what this milestone means for her career."
+        "friendly": "Hey there! Did you get a chance to watch the US Open men's final over the weekend?",
+        "energetic": "What an intense championship match! Alexander Zverev just claimed the US Open title in New York!",
+        "calm": "Looking at the sports world today, Alexander Zverev secured his second Grand Slam trophy of the year at Flushing Meadows.",
+        "direct": "Alexander Zverev defeated Ben Shelton in four sets on Sunday to take home the US Open trophy."
       },
       "sources": [
         {
-          "title": "Google News: Sports",
-          "url": "https://news.google.com/search?q=Sports%20top%20news%202026-09-13&hl=en-US&gl=US&ceid=US:en"
+          "title": "theguardian.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHp7MLoW4kH_oAqUBFVKELilv0cDhQ8iVWKsYrdKkODpA6jRR0qOblrjs9B6UCGvz_VI57kUZ1cl7pVUlPuJHgQV5yQ8E4USuFRrS5mDcXycEXUi_3MEAIXAkGstqKRWYXLgjN0PHyBpFBfCKTTkrr4Rne4ZXednqmTnQWOccsJs1dYuYFfArQ6bXGpKok_O5RnOZU427G9BGZL2Ih9zg9y60SYzAZ6xIoMFOrGp8y746CuzQ=="
+        },
+        {
+          "title": "olympics.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGd9-nMhY74hiFuMLJtVTHxOu7TjJNa4Mf7dlGVHttC_UReNvBY8pmS1W2_8313L0JKcRVF5w77p9zUKjCP-Otfup4oFcQfmX3JiiU0OOBFnggivqtjDQC8MbUrKZ9DFib3wh2wIOd5Bj1TnHsmw-_C1QOT3xF-VEkjyDq76AWjoEB3rHNqufb5bkNi0IK13CNaS8UcSZSKi9BcEW4yFvTh7Q=="
         }
       ]
     },
     {
-      "id": "2026-09-13-entertainment",
+      "id": "2026-09-14-entertainment",
       "category": "entertainment",
       "categoryLabel": "Entertainment",
-      "headline": "Danish Drama 'Woman Unknown' Wins Golden Lion at Venice Film Festival",
-      "summary": "Director May el-Toukhy's historical drama 'Woman Unknown' won the prestigious Golden Lion for Best Film at the 83rd Venice Film Festival on Saturday. The film's star, Mathilde Arcel, also captured the Volpi Cup for Best Actress after jury president Maggie Gyllenhaal and her team unanimously made an exception to award two major prizes to a single film.",
-      "question": "What kind of movie themes or stories do you think usually deserve top prizes at international film festivals?",
+      "headline": "\"Woman Unknown\" Wins Golden Lion at 83rd Venice Film Festival",
+      "summary": "Danish-Egyptian filmmaker May el-Toukhy's post-World War II drama \"Woman Unknown\" won the coveted Golden Lion for Best Film as the 83rd Venice International Film Festival concluded. The historic win marks a major moment for female directors in cinema, with lead star Mathilde Arcel also taking home the festival's Best Actress award.",
+      "question": "What kind of movie or storytelling usually catches your attention at major film festivals?",
       "coachLeads": {
-        "friendly": "Hey, have you heard about the big film news today? A Danish drama won top honors and made festival history at Venice!",
-        "energetic": "Big news from the movie world today! 'Woman Unknown' just swept the top awards at the Venice Film Festival!",
-        "calm": "The Venice Film Festival concluded today with its top award going to May el-Toukhy's drama 'Woman Unknown'. It is a fascinating story worth discussing.",
-        "direct": "The Venice Film Festival announced its Golden Lion winner today. Here is what you should know about the top movie."
+        "friendly": "Hey, have you heard about the big news from the Venice Film Festival? A compelling new drama took home the top prize, and it's definitely worth talking about!",
+        "energetic": "Huge news from the movie world today! \"Woman Unknown\" just won the prestigious Golden Lion in Venice, and cinema fans are loving it!",
+        "calm": "The Venice Film Festival recently concluded by handing out its highest honor. Take a moment to check it out, and we can discuss what makes this film special.",
+        "direct": "The 83rd Venice Film Festival just named \"Woman Unknown\" as its top winner. Let's chat about what this major victory means for global cinema."
       },
       "sources": [
         {
-          "title": "Google News: Entertainment",
-          "url": "https://news.google.com/search?q=Entertainment%20top%20news%202026-09-13&hl=en-US&gl=US&ceid=US:en"
+          "title": "screendaily.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGLA1iMoTubdF81Eu81UGI2eBLGRMH1RMVlER-bTbj92-EU5AvAEqXVFh5vLW5EPqBAd-RGWqafCTHuhWF4KaTbqkgFMB0uLj54rkIDx9pB7FtWANF2jHqlPUZC2cjusQUFmsbEjQr1qTKYdFUFcVASaUHytzcld5Z4_JSfcLrGpbjr5WDqoc2LbPUdiNyDaFozQ5YXISCTeIKXG18N0rsW0EY="
+        },
+        {
+          "title": "theguardian.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFq9rOgRWpRsFP9V3h40ibbgx5Q0837MkoQ9U_ux9uafD5WST_yNygG3Hjqtptd5ut3Ve9lbLJbPJl--cbvmaFn2WxxDPBkg6hFMA76dYQULtV5AEbQVVdF5oPe-zSrM4GHS8an-jUgQnlgjEEKfoshOVcFFT9c-LgdWzRJ44sQJWiEWL9ga1CmO_Hwkyux22_XL5yJnDN4ALja74tjyYrfuVDZJ1AT-XVy6Qw="
         }
       ]
     }
