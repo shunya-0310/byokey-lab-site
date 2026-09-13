@@ -7,7 +7,12 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const rootDir = path.resolve(__dirname, "..");
 const distDir = path.join(rootDir, "dist");
 const indexPath = path.join(distDir, "index.html");
-const lastmod = new Date().toISOString().slice(0, 10);
+const lastmod = new Intl.DateTimeFormat("en-CA", {
+  timeZone: "Asia/Tokyo",
+  year: "numeric",
+  month: "2-digit",
+  day: "2-digit",
+}).format(new Date());
 
 const sourceHtml = await readFile(indexPath, "utf8");
 
@@ -41,7 +46,7 @@ function buildSitemap() {
     .map(
       (route) => `  <url>
     <loc>${absoluteUrl(route.path)}</loc>
-    <lastmod>${lastmod}</lastmod>
+    <lastmod>${route.dateModified || lastmod}</lastmod>
     <changefreq>${route.changefreq}</changefreq>
     <priority>${route.priority}</priority>
   </url>`,

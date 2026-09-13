@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import byokeyLabLogo from "./assets/byokey-lab-logo.png";
+import { articleCatalog, getArticle } from "./articles.js";
 import { SPEAK_APP_URL, absoluteUrl, buildJsonLd, getSeoForPath } from "./seo.js";
 import {
   ArrowRight,
@@ -200,20 +201,21 @@ function setMetaAttribute(attribute, key, content) {
 function updateSeo(path) {
   const route = getSeoForPath(path);
   const canonicalUrl = absoluteUrl(route.path);
+  const imageUrl = absoluteUrl(route.image || "/images/byok-app-diagram.png");
 
   document.title = route.title;
   setMetaAttribute("name", "description", route.description);
   setMetaAttribute("property", "og:site_name", "BYOKey Lab");
-  setMetaAttribute("property", "og:type", "website");
+  setMetaAttribute("property", "og:type", route.schemaType === "Article" ? "article" : "website");
   setMetaAttribute("property", "og:locale", "ja_JP");
   setMetaAttribute("property", "og:title", route.title);
   setMetaAttribute("property", "og:description", route.description);
   setMetaAttribute("property", "og:url", canonicalUrl);
-  setMetaAttribute("property", "og:image", `${absoluteUrl("/")}images/byok-app-diagram.png`);
+  setMetaAttribute("property", "og:image", imageUrl);
   setMetaAttribute("name", "twitter:card", "summary_large_image");
   setMetaAttribute("name", "twitter:title", route.title);
   setMetaAttribute("name", "twitter:description", route.description);
-  setMetaAttribute("name", "twitter:image", `${absoluteUrl("/")}images/byok-app-diagram.png`);
+  setMetaAttribute("name", "twitter:image", imageUrl);
 
   let canonical = document.head.querySelector('link[rel="canonical"]');
   if (!canonical) {
@@ -270,6 +272,7 @@ function Header({ onNavigate, active = "home" }) {
         <nav className={open ? "nav-links is-open" : "nav-links"} aria-label="メインナビゲーション">
           <InternalLink to="/#principles" onNavigate={go}>考え方</InternalLink>
           <InternalLink className={active === "speak" ? "is-active" : ""} to="/speak/english/" onNavigate={go}>プロダクト</InternalLink>
+          <InternalLink className={active === "articles" ? "is-active" : ""} to="/articles/" onNavigate={go}>記事</InternalLink>
           <InternalLink to="/important/" onNavigate={go}>重要事項</InternalLink>
           <InternalLink to="/privacy/" onNavigate={go}>プライバシー</InternalLink>
           <InternalLink to="/speak/english/#faq" onNavigate={go}>FAQ</InternalLink>
@@ -333,6 +336,35 @@ function TrustBand() {
   );
 }
 
+function ArticleCard({ article, onNavigate }) {
+  return (
+    <article className="article-card">
+      <img src={article.image} alt="" />
+      <div>
+        <p className="article-meta">{article.category} <span>·</span> {article.datePublished.replaceAll("-", ".")}</p>
+        <h3>{article.title}</h3>
+        <p>{article.description}</p>
+        <InternalLink className="text-link" to={`/articles/${article.slug}/`} onNavigate={onNavigate}>記事を読む<ArrowRight size={17} /></InternalLink>
+      </div>
+    </article>
+  );
+}
+
+function ArticleTeaser({ onNavigate }) {
+  const article = articleCatalog[0];
+  return (
+    <section className="article-teaser">
+      <div className="section-intro">
+        <p className="section-kicker">ARTICLES</p>
+        <h2>使う前の疑問から、<br />自分に合うAIアプリの選び方まで。</h2>
+        <p>BYOK、APIキー、アプリの使い方を、初めての人にも分かる言葉で整理します。</p>
+      </div>
+      <ArticleCard article={article} onNavigate={onNavigate} />
+      <InternalLink className="text-link article-index-link" to="/articles/" onNavigate={onNavigate}>記事一覧を見る<ArrowRight size={17} /></InternalLink>
+    </section>
+  );
+}
+
 function HomePage({ onNavigate }) {
   return (
     <>
@@ -392,7 +424,121 @@ function HomePage({ onNavigate }) {
           </div>
           <QuickAssistCard compact />
         </section>
+        <ArticleTeaser onNavigate={onNavigate} />
         <FinalCta onNavigate={onNavigate} />
+      </main>
+      <Footer onNavigate={onNavigate} />
+    </>
+  );
+}
+
+function renderArticleInline(text, keyPrefix) {
+  return text.split(/(\*\*[^*]+\*\*|\[[^\]]+\]\([^\s)]+\))/g).map((part, index) => {
+    const key = `${keyPrefix}-${index}`;
+    if (!part) return null;
+    if (part.startsWith("**") && part.endsWith("**")) return <strong key={key}>{part.slice(2, -2)}</strong>;
+    const linkMatch = part.match(/^\[([^\]]+)\]\(([^\s)]+)\)$/);
+    if (linkMatch) {
+      const [, label, href] = linkMatch;
+      const external = /^https?:\/\//.test(href);
+      return <a key={key} href={href} target={external ? "_blank" : undefined} rel={external ? "noreferrer" : undefined}>{label}{external && <ExternalLink size={14} />}</a>;
+    }
+    return part;
+  });
+}
+
+function MarkdownArticle({ markdown }) {
+  const rawBlocks = markdown.replace(/^---[\s\S]*?---\s*/, "").trim().split(/\n\s*\n/);
+  const blocks = rawBlocks.reduce((merged, block) => {
+    const isBulletBlock = /^-\s+/.test(block.trim());
+    const previousIsBulletBlock = merged.length > 0 && /^-\s+/.test(merged[merged.length - 1].trim());
+    if (isBulletBlock && previousIsBulletBlock) merged[merged.length - 1] = `${merged[merged.length - 1]}\n${block}`;
+    else merged.push(block);
+    return merged;
+  }, []);
+
+  return blocks.map((block, index) => {
+    const trimmed = block.trim();
+    const imageMatch = trimmed.match(/^!\[([^\]]*)\]\(([^\s)]+)\)$/);
+    if (imageMatch) {
+      return <figure className="article-figure" key={`image-${index}`}><img src={imageMatch[2]} alt={imageMatch[1]} /></figure>;
+    }
+    if (trimmed.startsWith("# ")) return null;
+    if (trimmed.startsWith("## ")) return <h2 key={`heading-${index}`}>{renderArticleInline(trimmed.slice(3), `heading-${index}`)}</h2>;
+    if (trimmed.startsWith("### ")) return <h3 key={`heading-${index}`}>{renderArticleInline(trimmed.slice(4), `heading-${index}`)}</h3>;
+    if (trimmed.startsWith("> ")) return <blockquote key={`quote-${index}`}>{renderArticleInline(trimmed.replace(/^>\s?/gm, ""), `quote-${index}`)}</blockquote>;
+
+    const lines = trimmed.split("\n");
+    if (/^-\s+/.test(lines[0].trim())) {
+      const items = [];
+      lines.forEach((line) => {
+        if (/^-\s+/.test(line.trim())) items.push(line.trim().replace(/^-\s+/, ""));
+        else items[items.length - 1] = `${items[items.length - 1]} ${line.trim()}`;
+      });
+      return <ul key={`list-${index}`}>{items.map((item, lineIndex) => <li key={lineIndex}>{renderArticleInline(item, `list-${index}-${lineIndex}`)}</li>)}</ul>;
+    }
+    if (lines.every((line) => /^\d+\.\s+/.test(line.trim()))) {
+      return <ol key={`list-${index}`}>{lines.map((line, lineIndex) => <li key={lineIndex}>{renderArticleInline(line.trim().replace(/^\d+\.\s+/, ""), `list-${index}-${lineIndex}`)}</li>)}</ol>;
+    }
+    return <p key={`paragraph-${index}`}>{renderArticleInline(lines.join(" "), `paragraph-${index}`)}</p>;
+  });
+}
+
+function ArticleIndexPage({ onNavigate }) {
+  return (
+    <>
+      <Header onNavigate={onNavigate} active="articles" />
+      <main className="article-index-page">
+        <header className="article-index-header">
+          <p className="section-kicker">ARTICLES</p>
+          <h1>BYOKey Labの記事</h1>
+          <p>BYOK、APIキー、AIアプリを使い始めるための情報を、実際のプロダクトと結びつけて整理します。</p>
+        </header>
+        <section className="article-index-list" aria-label="記事一覧">
+          {articleCatalog.map((article) => <ArticleCard key={article.slug} article={article} onNavigate={onNavigate} />)}
+        </section>
+      </main>
+      <Footer onNavigate={onNavigate} />
+    </>
+  );
+}
+
+function ArticlePage({ slug, onNavigate }) {
+  const article = getArticle(slug);
+  const [markdown, setMarkdown] = useState("");
+  const [loadError, setLoadError] = useState(false);
+
+  useEffect(() => {
+    if (!article) return;
+    let active = true;
+    fetch(article.source)
+      .then((response) => {
+        if (!response.ok) throw new Error("Article source could not be loaded");
+        return response.text();
+      })
+      .then((text) => { if (active) setMarkdown(text); })
+      .catch(() => { if (active) setLoadError(true); });
+    return () => { active = false; };
+  }, [article]);
+
+  if (!article) return <ArticleIndexPage onNavigate={onNavigate} />;
+
+  return (
+    <>
+      <Header onNavigate={onNavigate} active="articles" />
+      <main className="article-page">
+        <nav className="breadcrumb" aria-label="パンくずリスト"><InternalLink to="/" onNavigate={onNavigate}>BYOKey Lab</InternalLink><span>›</span><InternalLink to="/articles/" onNavigate={onNavigate}>記事</InternalLink><span>›</span><span aria-current="page">{article.category}</span></nav>
+        <header className="article-header">
+          <p className="section-kicker">{article.category}</p>
+          <h1>{article.title}</h1>
+          <p>{article.description}</p>
+          <time dateTime={article.datePublished}>公開日：{article.datePublished.replaceAll("-", ".")}</time>
+        </header>
+        <article className="article-body">
+          {loadError && <p className="article-load-error">記事を読み込めませんでした。時間をおいて再度お試しください。</p>}
+          {!loadError && !markdown && <p className="article-loading">記事を読み込んでいます。</p>}
+          {markdown && <MarkdownArticle markdown={markdown} />}
+        </article>
       </main>
       <Footer onNavigate={onNavigate} />
     </>
@@ -990,7 +1136,7 @@ function FinalCta({ onNavigate }) {
 
 function Footer({ onNavigate }) {
   return (
-    <footer><Brand onNavigate={onNavigate} /><div><InternalLink to="/important/" onNavigate={onNavigate}>重要事項</InternalLink><InternalLink to="/privacy/" onNavigate={onNavigate}>プライバシー</InternalLink><InternalLink to="/terms/" onNavigate={onNavigate}>利用規約</InternalLink><InternalLink to="/support/" onNavigate={onNavigate}>お問い合わせ</InternalLink><InternalLink to="/guide/api/" onNavigate={onNavigate}>API設定ガイド</InternalLink></div><small>© 2026 BYOKey Lab</small></footer>
+    <footer><Brand onNavigate={onNavigate} /><div><InternalLink to="/articles/" onNavigate={onNavigate}>記事</InternalLink><InternalLink to="/important/" onNavigate={onNavigate}>重要事項</InternalLink><InternalLink to="/privacy/" onNavigate={onNavigate}>プライバシー</InternalLink><InternalLink to="/terms/" onNavigate={onNavigate}>利用規約</InternalLink><InternalLink to="/support/" onNavigate={onNavigate}>お問い合わせ</InternalLink><InternalLink to="/guide/api/" onNavigate={onNavigate}>API設定ガイド</InternalLink></div><small>© 2026 BYOKey Lab</small></footer>
   );
 }
 
@@ -1002,6 +1148,8 @@ export function App() {
   }, [path]);
 
   if (path.startsWith("/speak/english")) return <SpeakPage onNavigate={navigate} />;
+  if (path.startsWith("/articles/byokey-speak-api-english")) return <ArticlePage slug="byokey-speak-api-english" onNavigate={navigate} />;
+  if (path.startsWith("/articles")) return <ArticleIndexPage onNavigate={navigate} />;
   if (path.startsWith("/guide/api")) return <GuidePage onNavigate={navigate} />;
   if (path.startsWith("/important")) return <ImportantPage onNavigate={navigate} />;
   if (path.startsWith("/privacy")) return <PrivacyPage onNavigate={navigate} />;

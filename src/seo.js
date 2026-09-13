@@ -1,7 +1,6 @@
 export const SITE_URL = "https://byokey-lab.com";
 export const SPEAK_APP_URL = "https://speak.byokey-lab.com/";
 
-const defaultImage = `${SITE_URL}/images/byok-app-diagram.png`;
 const logoImage = `${SITE_URL}/images/byokey-lab-logo.png`;
 
 export const seoRoutes = [
@@ -31,6 +30,27 @@ export const seoRoutes = [
     priority: "0.8",
     changefreq: "monthly",
     schemaType: "Article",
+  },
+  {
+    path: "/articles/",
+    title: "記事 | BYOKey Lab",
+    description:
+      "BYOKey LabのBYOK、APIキー、AIアプリの使い方に関する記事一覧です。初心者向けの解説と、アプリを使い始めるための情報を掲載します。",
+    priority: "0.7",
+    changefreq: "weekly",
+    schemaType: "CollectionPage",
+  },
+  {
+    path: "/articles/byokey-speak-api-english/",
+    title: "AI英会話に料金革命｜自分のAPIキーで使う英会話アプリ「BYOKey Speak」",
+    description:
+      "BYOKey Speakは、AIとの会話に使った分だけ費用が発生する英会話アプリです。Android製品版でできること、自分の言葉でコーチを設定する方法、体験版の位置づけを紹介します。",
+    priority: "0.8",
+    changefreq: "monthly",
+    schemaType: "Article",
+    image: "/images/byokey-speak-subscription-vs-byok-illustration.png",
+    datePublished: "2026-09-14",
+    dateModified: "2026-09-14",
   },
   {
     path: "/important/",
@@ -115,7 +135,7 @@ export function buildJsonLd(route) {
       logo: logoImage,
     },
     {
-      "@type": route.schemaType,
+      "@type": route.schemaType === "Article" ? "WebPage" : route.schemaType,
       "@id": `${pageUrl}#webpage`,
       name: route.title,
       description: route.description,
@@ -158,6 +178,22 @@ export function buildJsonLd(route) {
     });
   }
 
+  if (route.schemaType === "Article" && route.datePublished) {
+    graph.push({
+      "@type": "Article",
+      "@id": `${pageUrl}#article`,
+      headline: route.title,
+      description: route.description,
+      image: absoluteUrl(route.image || "/images/byok-app-diagram.png"),
+      datePublished: route.datePublished,
+      dateModified: route.dateModified || route.datePublished,
+      inLanguage: "ja",
+      mainEntityOfPage: pageUrl,
+      author: { "@id": `${SITE_URL}/#organization` },
+      publisher: { "@id": `${SITE_URL}/#organization` },
+    });
+  }
+
   return {
     "@context": "https://schema.org",
     "@graph": graph,
@@ -166,6 +202,8 @@ export function buildJsonLd(route) {
 
 export function buildHeadTags(route) {
   const url = absoluteUrl(route.path);
+  const image = absoluteUrl(route.image || "/images/byok-app-diagram.png");
+  const ogType = route.schemaType === "Article" ? "article" : "website";
   const jsonLd = JSON.stringify(buildJsonLd(route)).replace(/</g, "\\u003c");
 
   return [
@@ -173,16 +211,18 @@ export function buildHeadTags(route) {
     `<meta name="description" content="${escapeHtml(route.description)}" />`,
     `<link rel="canonical" href="${url}" />`,
     `<meta property="og:site_name" content="BYOKey Lab" />`,
-    `<meta property="og:type" content="website" />`,
+    `<meta property="og:type" content="${ogType}" />`,
     `<meta property="og:locale" content="ja_JP" />`,
     `<meta property="og:title" content="${escapeHtml(route.title)}" />`,
     `<meta property="og:description" content="${escapeHtml(route.description)}" />`,
     `<meta property="og:url" content="${url}" />`,
-    `<meta property="og:image" content="${defaultImage}" />`,
+    `<meta property="og:image" content="${image}" />`,
     `<meta name="twitter:card" content="summary_large_image" />`,
     `<meta name="twitter:title" content="${escapeHtml(route.title)}" />`,
     `<meta name="twitter:description" content="${escapeHtml(route.description)}" />`,
-    `<meta name="twitter:image" content="${defaultImage}" />`,
+    `<meta name="twitter:image" content="${image}" />`,
+    route.datePublished ? `<meta property="article:published_time" content="${route.datePublished}" />` : "",
+    route.dateModified ? `<meta property="article:modified_time" content="${route.dateModified}" />` : "",
     `<script type="application/ld+json">${jsonLd}</script>`,
   ].join("\n    ");
 }
