@@ -1,96 +1,100 @@
 {
   "schemaVersion": 1,
   "status": "live",
-  "date": "2026-09-14",
-  "generatedAt": "2026-09-13T23:10:34.107Z",
+  "date": "2026-09-15",
+  "generatedAt": "2026-09-14T23:52:31.665Z",
   "model": "gemini-3.6-flash",
   "fallbackCategories": [],
   "items": [
     {
-      "id": "2026-09-14-politics_economy",
+      "id": "2026-09-15-politics_economy",
       "category": "politics_economy",
       "categoryLabel": "Politics & Economy",
-      "headline": "Trump Urges Ukraine to Halt Strikes on Russian Refineries Amid Global Fuel Shortage",
-      "summary": "U.S. President Donald Trump publicly urged Ukrainian President Volodymyr Zelenskyy to stop attacking Russian oil refineries, arguing that the strikes are driving a severe global diesel shortage. The request follows record U.S. diesel prices surpassing six dollars a gallon after months of targeted Ukrainian long-range attacks on Russian energy infrastructure.",
-      "question": "How should international leaders balance domestic economic pressures, like high fuel prices, with supporting an ally in a conflict?",
+      "headline": "Ukraine Expresses Readiness to Pause Energy Target Strikes Following U.S. Announcement",
+      "summary": "Ukrainian President Volodymyr Zelensky stated on September 14 that Ukraine is prepared to stop attacking Russian energy infrastructure if Russia refrains from targeting Ukrainian power facilities. The development follows an announcement by U.S. President Donald Trump regarding mutual de-escalation steps aimed at stabilizing global fuel markets after recent refinery strikes.",
+      "question": "Do you think targeted agreements on key infrastructure can pave the way for broader diplomatic negotiations in major conflicts?",
       "coachLeads": {
-        "friendly": "Hey! Have you caught the latest news about international diplomacy and global energy prices today?",
-        "energetic": "Check this out! U.S. President Trump just called on Ukraine to pause its strikes on Russian oil refineries because fuel prices are soaring globally!",
-        "calm": "There is a notable story developing today about how rising global fuel costs are impacting international policy. It raises an interesting point about energy security during major conflicts.",
-        "direct": "President Trump has asked Ukraine to stop striking Russian fuel infrastructure due to rising global diesel costs. This is definitely worth talking about."
+        "friendly": "Hey, have you caught the latest news about the diplomatic talks over energy infrastructure?",
+        "energetic": "There is a major diplomatic development unfolding right now that could impact global energy supplies!",
+        "calm": "A notable diplomatic shift happened today regarding energy infrastructure strikes, and it is worth taking a moment to unpack it.",
+        "direct": "Ukraine has signaled willingness to pause strikes on energy facilities if Russia reciprocates. Let's discuss what this diplomatic move could mean."
       },
       "sources": [
         {
-          "title": "Google News: Politics & Economy",
-          "url": "https://news.google.com/search?q=Politics%20%26%20Economy%20top%20news%202026-09-14&hl=en-US&gl=US&ceid=US:en"
+          "title": "straitstimes.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFguNLf3KkMxLAZh_uXTemMPlc4zMEi99K9EbnPrNF6qTavWT4jv1846B0ca6RubfEHkUz4bEr_8UFho3aAMSG8KJFKj8Au2drF1xcq40z5uli_Ggdg9sa09JJfz1QbXLOs4aS_BeIzhTZloXqRXbGrSrEKSu9cYFHPw8K1C2V7cDkzKXh02yntBl_WajNBWiW36iPzqix0wpUxO7aM"
         }
       ]
     },
     {
-      "id": "2026-09-14-technology",
+      "id": "2026-09-15-technology",
       "category": "technology",
       "categoryLabel": "Technology",
-      "headline": "Top AI Leaders Call to Slow Development as Safety Debate Intensifies",
-      "summary": "Leading artificial intelligence executives from Anthropic, OpenAI, and xAI have publicly backed calls to slow down advanced model development so safety frameworks can catch up. The rare alignment among rival tech leaders sparked immediate global discussion, though political figures like U.S. President Donald Trump warned against slowing down and risking international competitiveness.",
-      "question": "Do you think tech companies should pause advanced AI development to ensure safety, or keep moving forward to stay competitive?",
+      "headline": "U.S. Space Force Confirms Operational Weapons Deployed in Orbit",
+      "summary": "The U.S. military confirmed on Monday that it has deployed active space control weapons into Earth's orbit for both offensive and defensive operations. Unveiled by Air Force Secretary Troy Meink at a defense conference, this marks the first official acknowledgment of operational U.S. weapons in space.",
+      "question": "How do you feel about military capabilities expanding into outer space?",
       "coachLeads": {
-        "friendly": "Hey, have you heard about top AI executives suddenly calling to slow down their own tech development? It's making huge headlines today, and I'd love to hear what you think!",
-        "energetic": "This AI debate is heating up big time right now! Major leaders from OpenAI, Anthropic, and xAI are actually asking to tap the brakes on AI—what's your take on that?",
-        "calm": "There is a very thoughtful discussion happening today about whether to slow down advanced AI for safety reasons. It's a great topic for us to practice sharing your opinions in English.",
-        "direct": "Top tech CEOs are asking to slow down AI development, but political leaders want to keep full speed ahead. Tell me where you stand on this issue."
+        "friendly": "Hey, have you caught the latest space news today? It is definitely worth chatting about!",
+        "energetic": "You won't believe today's massive news about space and global defense! Let's dive right into this topic!",
+        "calm": "There is a major new update regarding global space security today. Take a moment to read it, and we can discuss your thoughts.",
+        "direct": "The U.S. military just made a historic announcement about space weapons. Let me know what you think about this development."
       },
       "sources": [
         {
-          "title": "Google News: Technology",
-          "url": "https://news.google.com/search?q=Technology%20top%20news%202026-09-14&hl=en-US&gl=US&ceid=US:en"
+          "title": "alarabiya.net",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF0eva3z07bRwTy-6Ey1_EVKVqbkbY80BhVQnLChFvT93AvnMR_sJsa8qYi1bmYc4VU7cIlTKTO4W8-3zBfpYdhSfex-Mq3wKrZkDhmf6nRtIOiLo-pQr9hsaBy46l7rCkHP1UcYXR-4nThovj_2pQ--xSRMStvvj0OmTORJ4k0Zv92MNjkCitQUG6u2qoSVmQIHJrjFyGS2D9MB8sQhWl12Q2q"
+        },
+        {
+          "title": "spacepolicyonline.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGRsX5wbvdcYfLU2Ui_MxE6FF6Tpj5oiSGwvB2q3vImfvhrrJ1J10BaZNg-RCMtGjAweLf1y-Tu_ohC14hzxGu_LfLYPJqIzxTfpYwnxbEJZogjXs55XEPf3Xa4Zt4J1GBwakzwF8uWM0oqk6Lm_CnF7qDb57go5-o2Mm8ceUVmwUi6beEl-Q=="
         }
       ]
     },
     {
-      "id": "2026-09-14-sports",
+      "id": "2026-09-15-sports",
       "category": "sports",
       "categoryLabel": "Sports",
-      "headline": "Alexander Zverev Defeats Ben Shelton to Win 2026 US Open Men's Title",
-      "summary": "Top-seeded Alexander Zverev defeated American Ben Shelton in four sets to claim the 2026 US Open men's singles championship at Arthur Ashe Stadium on Sunday. The victory earns the German star his second Grand Slam title of the season following his French Open victory in June.",
-      "question": "What mental or physical qualities do you think are most important for athletes competing in high-stakes championship matches?",
+      "headline": "U.S. Women's Basketball Wins Fifth Straight FIBA World Cup Title",
+      "summary": "The United States women's basketball team defeated France 97-79 in Berlin to capture their fifth consecutive FIBA Women's Basketball World Cup gold medal. Tournament MVP Breanna Stewart led Team USA back from a 14-point first-half deficit to extend the program's World Cup winning streak to 36 games.",
+      "question": "What do you think allows certain national sports teams to maintain such dominant winning streaks over several generations?",
       "coachLeads": {
-        "friendly": "Hey there! Did you get a chance to watch the US Open men's final over the weekend?",
-        "energetic": "What an intense championship match! Alexander Zverev just claimed the US Open title in New York!",
-        "calm": "Looking at the sports world today, Alexander Zverev secured his second Grand Slam trophy of the year at Flushing Meadows.",
-        "direct": "Alexander Zverev defeated Ben Shelton in four sets on Sunday to take home the US Open trophy."
+        "friendly": "Hey there! Did you catch the big news about the U.S. women's basketball team taking home another world championship title?",
+        "energetic": "What an unbelievable championship performance in Berlin! Team USA mounted a massive comeback to secure their fifth consecutive World Cup gold medal!",
+        "calm": "If you have a moment, there is a remarkable story in international sports today. The American women's basketball team just won another world title after overcoming a tough first-half test.",
+        "direct": "Team USA just claimed another FIBA World Cup gold by beating France in Berlin. Let's discuss what keeps this squad so dominant on the international stage."
       },
       "sources": [
         {
-          "title": "theguardian.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHp7MLoW4kH_oAqUBFVKELilv0cDhQ8iVWKsYrdKkODpA6jRR0qOblrjs9B6UCGvz_VI57kUZ1cl7pVUlPuJHgQV5yQ8E4USuFRrS5mDcXycEXUi_3MEAIXAkGstqKRWYXLgjN0PHyBpFBfCKTTkrr4Rne4ZXednqmTnQWOccsJs1dYuYFfArQ6bXGpKok_O5RnOZU427G9BGZL2Ih9zg9y60SYzAZ6xIoMFOrGp8y746CuzQ=="
-        },
-        {
-          "title": "olympics.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGd9-nMhY74hiFuMLJtVTHxOu7TjJNa4Mf7dlGVHttC_UReNvBY8pmS1W2_8313L0JKcRVF5w77p9zUKjCP-Otfup4oFcQfmX3JiiU0OOBFnggivqtjDQC8MbUrKZ9DFib3wh2wIOd5Bj1TnHsmw-_C1QOT3xF-VEkjyDq76AWjoEB3rHNqufb5bkNi0IK13CNaS8UcSZSKi9BcEW4yFvTh7Q=="
+          "title": "Google News: Sports",
+          "url": "https://news.google.com/search?q=Sports%20top%20news%202026-09-15&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     },
     {
-      "id": "2026-09-14-entertainment",
+      "id": "2026-09-15-entertainment",
       "category": "entertainment",
       "categoryLabel": "Entertainment",
-      "headline": "\"Woman Unknown\" Wins Golden Lion at 83rd Venice Film Festival",
-      "summary": "Danish-Egyptian filmmaker May el-Toukhy's post-World War II drama \"Woman Unknown\" won the coveted Golden Lion for Best Film as the 83rd Venice International Film Festival concluded. The historic win marks a major moment for female directors in cinema, with lead star Mathilde Arcel also taking home the festival's Best Actress award.",
-      "question": "What kind of movie or storytelling usually catches your attention at major film festivals?",
+      "headline": "78th Primetime Emmy Awards Celebrate Television's Top Shows and Stars",
+      "summary": "The 78th Primetime Emmy Awards took place live in Los Angeles on September 14, 2026, with actress Mariska Hargitay serving as host. The ceremony honored the past year's standout television programming, spotlighting major wins for breakout hits like 'Widow's Bay' and returning favorites like 'The Pitt'.",
+      "question": "Which television show or actor were you hoping to see win an award at this year's Emmys?",
       "coachLeads": {
-        "friendly": "Hey, have you heard about the big news from the Venice Film Festival? A compelling new drama took home the top prize, and it's definitely worth talking about!",
-        "energetic": "Huge news from the movie world today! \"Woman Unknown\" just won the prestigious Golden Lion in Venice, and cinema fans are loving it!",
-        "calm": "The Venice Film Festival recently concluded by handing out its highest honor. Take a moment to check it out, and we can discuss what makes this film special.",
-        "direct": "The 83rd Venice Film Festival just named \"Woman Unknown\" as its top winner. Let's chat about what this major victory means for global cinema."
+        "friendly": "Hey, have you caught any of the buzz from television's biggest night yet? The Emmy Awards just happened, and it's a great time to talk about the latest must-watch shows!",
+        "energetic": "Television's top stars just gathered for the 78th Emmy Awards! Let me know if you're ready to dive into the big wins and talk about your favorite series!",
+        "calm": "The 78th Primetime Emmy Awards wrapped up in Los Angeles, honoring the past year's top television performances. Whenever you're ready, let me know if any of the winning shows caught your eye.",
+        "direct": "The 78th Primetime Emmy Awards took place on September 14. Let's review the main winners and share our thoughts on the top TV shows of the year."
       },
       "sources": [
         {
-          "title": "screendaily.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGLA1iMoTubdF81Eu81UGI2eBLGRMH1RMVlER-bTbj92-EU5AvAEqXVFh5vLW5EPqBAd-RGWqafCTHuhWF4KaTbqkgFMB0uLj54rkIDx9pB7FtWANF2jHqlPUZC2cjusQUFmsbEjQr1qTKYdFUFcVASaUHytzcld5Z4_JSfcLrGpbjr5WDqoc2LbPUdiNyDaFozQ5YXISCTeIKXG18N0rsW0EY="
+          "title": "facebook.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHeMxVL_ZxZdo6Mbucom4DFKMTwRBBmxgbL_ehi7P3aemL9VDqHdDBXw2CaxTo7rqsc8H1A0BX4YDCDaNa5O5YcksgnPXZYU-GzqQ3hy5XwiG9T8_vvU7LHAolpk8GbLObgcCukYFdM5ycDJhyEIkCugkdQItj-92hBGFS4f3_TdhHVW6T0Og0DItJiBdvMGAFfV7AQXQqFIInsb-3yKK0huspqhN6_TMdB0Ce6sUxr76q6ZeWQ94d5Azg6zOF61hVvtTpsblIX"
         },
         {
-          "title": "theguardian.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFq9rOgRWpRsFP9V3h40ibbgx5Q0837MkoQ9U_ux9uafD5WST_yNygG3Hjqtptd5ut3Ve9lbLJbPJl--cbvmaFn2WxxDPBkg6hFMA76dYQULtV5AEbQVVdF5oPe-zSrM4GHS8an-jUgQnlgjEEKfoshOVcFFT9c-LgdWzRJ44sQJWiEWL9ga1CmO_Hwkyux22_XL5yJnDN4ALja74tjyYrfuVDZJ1AT-XVy6Qw="
+          "title": "wikipedia.org",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGXOyrlpWJjCSpS0YiydcjHrLf5DMr_EcGBuISUT1JKjscuWlcCpskPtgY3gMNl8leG6WpcSBnlmyC7HdnCC9GihwYjME9Sg0EBCyhsXFRfjK_Ai4zkkSec4RhmHAvkAbhl8Hy0se3X2j18z3hoNQ=="
+        },
+        {
+          "title": "latimes.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGQ6aCaY7CKfY8NhQ2MKx8Zn000EtzKHrHWPstc1uqd-MUwK1MGoEFH1nNFBx7O3RI_m6sX-nVe8cB8fra6srb6Nz2odDL-2uiJfAAVH5u3q94HVSyPHL6w1p-0pXVvPO8WMn9j3cOySmkl9XiJ7LFZ5yOXNvOHAcaMTMy2LHnxKLO7LLMhRNC992Ukk4JGeoK0jwAnL-gc9A=="
         }
       ]
     }
