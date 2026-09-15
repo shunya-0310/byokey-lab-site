@@ -1,92 +1,100 @@
 {
   "schemaVersion": 1,
   "status": "live",
-  "date": "2026-09-13",
-  "generatedAt": "2026-09-12T23:02:57.755Z",
+  "date": "2026-09-15",
+  "generatedAt": "2026-09-14T23:52:31.665Z",
   "model": "gemini-3.6-flash",
   "fallbackCategories": [],
   "items": [
     {
-      "id": "2026-09-13-politics_economy",
+      "id": "2026-09-15-politics_economy",
       "category": "politics_economy",
       "categoryLabel": "Politics & Economy",
-      "headline": "BRICS Summit Adopts New Delhi Declaration Amid High-Level Diplomatic Talks",
-      "summary": "World leaders adopted the New Delhi Declaration by consensus on September 12 during the 18th BRICS Summit in India. The meeting served as a prominent forum for global policy discussions and featured key diplomatic exchanges, including bilateral talks between Indian Prime Minister Narendra Modi and Chinese President Xi Jinping.",
-      "question": "How do you think growing diplomatic partnerships like BRICS might influence future international trade and global politics?",
+      "headline": "Ukraine Expresses Readiness to Pause Energy Target Strikes Following U.S. Announcement",
+      "summary": "Ukrainian President Volodymyr Zelensky stated on September 14 that Ukraine is prepared to stop attacking Russian energy infrastructure if Russia refrains from targeting Ukrainian power facilities. The development follows an announcement by U.S. President Donald Trump regarding mutual de-escalation steps aimed at stabilizing global fuel markets after recent refinery strikes.",
+      "question": "Do you think targeted agreements on key infrastructure can pave the way for broader diplomatic negotiations in major conflicts?",
       "coachLeads": {
-        "friendly": "Hey, have you heard about the major diplomatic summit that just wrapped up in India?",
-        "energetic": "World leaders just concluded high-stakes diplomatic talks in New Delhi, and it's making huge news around the globe today!",
-        "calm": "World leaders recently gathered in New Delhi for the BRICS summit, offering a fascinating look at evolving global diplomacy.",
-        "direct": "The 18th BRICS Summit in New Delhi just concluded with a major joint agreement, making this an important global political story to discuss."
+        "friendly": "Hey, have you caught the latest news about the diplomatic talks over energy infrastructure?",
+        "energetic": "There is a major diplomatic development unfolding right now that could impact global energy supplies!",
+        "calm": "A notable diplomatic shift happened today regarding energy infrastructure strikes, and it is worth taking a moment to unpack it.",
+        "direct": "Ukraine has signaled willingness to pause strikes on energy facilities if Russia reciprocates. Let's discuss what this diplomatic move could mean."
       },
       "sources": [
         {
-          "title": "thehindu.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEX1w0332gQfDyDL7fhb2Nco9r0U0ETTrVbo9iERmWcGsw7lCnzLBGsEvCzkUMD7dsM2EpdUEVbt3_KnQzawA5WXrIADNIHXEF1SF2-LGi4QgxB9xg3OjiXCQW2hUn4vftgfDs2BEGQapBckQRj9tXMaU_ZO4FEHHEcEgbgaUtjyvGennwbvfThmOuw5g=="
-        },
-        {
-          "title": "nhandan.vn",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFeKZraUpMl9j1Q4Nmi1ya5qcE8zkCbXbvM6l1JkHtj80z0I9whf1zZK8uN2jhFT_t6tOGgcMyN5hgm5lha2aoW3DDkykPWBf2u9nJMLipLWH20SsY2OCQaglt_-dVgvcOf1ftqK71RlQj2LUosJnpGTnBk82OGc5Rs0Qc="
+          "title": "straitstimes.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFguNLf3KkMxLAZh_uXTemMPlc4zMEi99K9EbnPrNF6qTavWT4jv1846B0ca6RubfEHkUz4bEr_8UFho3aAMSG8KJFKj8Au2drF1xcq40z5uli_Ggdg9sa09JJfz1QbXLOs4aS_BeIzhTZloXqRXbGrSrEKSu9cYFHPw8K1C2V7cDkzKXh02yntBl_WajNBWiW36iPzqix0wpUxO7aM"
         }
       ]
     },
     {
-      "id": "2026-09-13-technology",
+      "id": "2026-09-15-technology",
       "category": "technology",
       "categoryLabel": "Technology",
-      "headline": "Anthropic CEO Calls for Slowing Down AI Development Over Safety Risks",
-      "summary": "Anthropic Chief Executive Dario Amodei published a proposal urging tech companies to slow the pace of frontier AI development to allow safety measures and oversight to catch up. The call gained widespread attention after rival leaders Sam Altman of OpenAI and Elon Musk of xAI publicly voiced agreement with the idea.",
-      "question": "Do you think tech companies should slow down AI development for safety, or should they keep racing ahead?",
+      "headline": "U.S. Space Force Confirms Operational Weapons Deployed in Orbit",
+      "summary": "The U.S. military confirmed on Monday that it has deployed active space control weapons into Earth's orbit for both offensive and defensive operations. Unveiled by Air Force Secretary Troy Meink at a defense conference, this marks the first official acknowledgment of operational U.S. weapons in space.",
+      "question": "How do you feel about military capabilities expanding into outer space?",
       "coachLeads": {
-        "friendly": "Hey! Have you heard about top tech leaders suddenly agreeing to slow down AI development? It’s a fascinating story, and I’d love to hear your thoughts on it.",
-        "energetic": "Check this out—some of the biggest names in tech are actually calling for a pause in the AI race! What do you think about this surprising news?",
-        "calm": "There is an important global discussion happening right now about safety in artificial intelligence. Let's take a look at why tech executives are urging caution.",
-        "direct": "Major AI CEOs are calling to slow down advanced AI development over safety concerns. Let's chat about what this means for the future."
+        "friendly": "Hey, have you caught the latest space news today? It is definitely worth chatting about!",
+        "energetic": "You won't believe today's massive news about space and global defense! Let's dive right into this topic!",
+        "calm": "There is a major new update regarding global space security today. Take a moment to read it, and we can discuss your thoughts.",
+        "direct": "The U.S. military just made a historic announcement about space weapons. Let me know what you think about this development."
       },
       "sources": [
         {
-          "title": "Google News: Technology",
-          "url": "https://news.google.com/search?q=Technology%20top%20news%202026-09-13&hl=en-US&gl=US&ceid=US:en"
+          "title": "alarabiya.net",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF0eva3z07bRwTy-6Ey1_EVKVqbkbY80BhVQnLChFvT93AvnMR_sJsa8qYi1bmYc4VU7cIlTKTO4W8-3zBfpYdhSfex-Mq3wKrZkDhmf6nRtIOiLo-pQr9hsaBy46l7rCkHP1UcYXR-4nThovj_2pQ--xSRMStvvj0OmTORJ4k0Zv92MNjkCitQUG6u2qoSVmQIHJrjFyGS2D9MB8sQhWl12Q2q"
+        },
+        {
+          "title": "spacepolicyonline.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGRsX5wbvdcYfLU2Ui_MxE6FF6Tpj5oiSGwvB2q3vImfvhrrJ1J10BaZNg-RCMtGjAweLf1y-Tu_ohC14hzxGu_LfLYPJqIzxTfpYwnxbEJZogjXs55XEPf3Xa4Zt4J1GBwakzwF8uWM0oqk6Lm_CnF7qDb57go5-o2Mm8ceUVmwUi6beEl-Q=="
         }
       ]
     },
     {
-      "id": "2026-09-13-sports",
+      "id": "2026-09-15-sports",
       "category": "sports",
       "categoryLabel": "Sports",
-      "headline": "Elena Rybakina Wins First US Open Title and Claims World No. 1 Ranking",
-      "summary": "Kazakhstan's Elena Rybakina defeated Aryna Sabalenka 6-4, 5-7, 6-2 to win her first US Open women's singles title on Saturday. The victory marks her second Grand Slam crown of 2026 and officially elevates her to the world number one ranking.",
-      "question": "Do you think reaching the world number one spot adds more pressure to an athlete, or does it give them extra confidence?",
+      "headline": "U.S. Women's Basketball Wins Fifth Straight FIBA World Cup Title",
+      "summary": "The United States women's basketball team defeated France 97-79 in Berlin to capture their fifth consecutive FIBA Women's Basketball World Cup gold medal. Tournament MVP Breanna Stewart led Team USA back from a 14-point first-half deficit to extend the program's World Cup winning streak to 36 games.",
+      "question": "What do you think allows certain national sports teams to maintain such dominant winning streaks over several generations?",
       "coachLeads": {
-        "friendly": "Hey, did you catch the big news from the US Open tennis final? Elena Rybakina just won her first US Open title and became the world's top-ranked player!",
-        "energetic": "What an incredible finish at Flushing Meadows! Elena Rybakina battled through three tough sets to take home the US Open crown and claim the top spot in women's tennis!",
-        "calm": "There was a major shift at the top of women's tennis today as Elena Rybakina earned her first US Open championship. It is a great moment to reflect on what it takes to reach the peak of a sport.",
-        "direct": "Elena Rybakina defeated Aryna Sabalenka to win the US Open and secure the world number one ranking. Let's talk about what this milestone means for her career."
+        "friendly": "Hey there! Did you catch the big news about the U.S. women's basketball team taking home another world championship title?",
+        "energetic": "What an unbelievable championship performance in Berlin! Team USA mounted a massive comeback to secure their fifth consecutive World Cup gold medal!",
+        "calm": "If you have a moment, there is a remarkable story in international sports today. The American women's basketball team just won another world title after overcoming a tough first-half test.",
+        "direct": "Team USA just claimed another FIBA World Cup gold by beating France in Berlin. Let's discuss what keeps this squad so dominant on the international stage."
       },
       "sources": [
         {
           "title": "Google News: Sports",
-          "url": "https://news.google.com/search?q=Sports%20top%20news%202026-09-13&hl=en-US&gl=US&ceid=US:en"
+          "url": "https://news.google.com/search?q=Sports%20top%20news%202026-09-15&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     },
     {
-      "id": "2026-09-13-entertainment",
+      "id": "2026-09-15-entertainment",
       "category": "entertainment",
       "categoryLabel": "Entertainment",
-      "headline": "Danish Drama 'Woman Unknown' Wins Golden Lion at Venice Film Festival",
-      "summary": "Director May el-Toukhy's historical drama 'Woman Unknown' won the prestigious Golden Lion for Best Film at the 83rd Venice Film Festival on Saturday. The film's star, Mathilde Arcel, also captured the Volpi Cup for Best Actress after jury president Maggie Gyllenhaal and her team unanimously made an exception to award two major prizes to a single film.",
-      "question": "What kind of movie themes or stories do you think usually deserve top prizes at international film festivals?",
+      "headline": "78th Primetime Emmy Awards Celebrate Television's Top Shows and Stars",
+      "summary": "The 78th Primetime Emmy Awards took place live in Los Angeles on September 14, 2026, with actress Mariska Hargitay serving as host. The ceremony honored the past year's standout television programming, spotlighting major wins for breakout hits like 'Widow's Bay' and returning favorites like 'The Pitt'.",
+      "question": "Which television show or actor were you hoping to see win an award at this year's Emmys?",
       "coachLeads": {
-        "friendly": "Hey, have you heard about the big film news today? A Danish drama won top honors and made festival history at Venice!",
-        "energetic": "Big news from the movie world today! 'Woman Unknown' just swept the top awards at the Venice Film Festival!",
-        "calm": "The Venice Film Festival concluded today with its top award going to May el-Toukhy's drama 'Woman Unknown'. It is a fascinating story worth discussing.",
-        "direct": "The Venice Film Festival announced its Golden Lion winner today. Here is what you should know about the top movie."
+        "friendly": "Hey, have you caught any of the buzz from television's biggest night yet? The Emmy Awards just happened, and it's a great time to talk about the latest must-watch shows!",
+        "energetic": "Television's top stars just gathered for the 78th Emmy Awards! Let me know if you're ready to dive into the big wins and talk about your favorite series!",
+        "calm": "The 78th Primetime Emmy Awards wrapped up in Los Angeles, honoring the past year's top television performances. Whenever you're ready, let me know if any of the winning shows caught your eye.",
+        "direct": "The 78th Primetime Emmy Awards took place on September 14. Let's review the main winners and share our thoughts on the top TV shows of the year."
       },
       "sources": [
         {
-          "title": "Google News: Entertainment",
-          "url": "https://news.google.com/search?q=Entertainment%20top%20news%202026-09-13&hl=en-US&gl=US&ceid=US:en"
+          "title": "facebook.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHeMxVL_ZxZdo6Mbucom4DFKMTwRBBmxgbL_ehi7P3aemL9VDqHdDBXw2CaxTo7rqsc8H1A0BX4YDCDaNa5O5YcksgnPXZYU-GzqQ3hy5XwiG9T8_vvU7LHAolpk8GbLObgcCukYFdM5ycDJhyEIkCugkdQItj-92hBGFS4f3_TdhHVW6T0Og0DItJiBdvMGAFfV7AQXQqFIInsb-3yKK0huspqhN6_TMdB0Ce6sUxr76q6ZeWQ94d5Azg6zOF61hVvtTpsblIX"
+        },
+        {
+          "title": "wikipedia.org",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGXOyrlpWJjCSpS0YiydcjHrLf5DMr_EcGBuISUT1JKjscuWlcCpskPtgY3gMNl8leG6WpcSBnlmyC7HdnCC9GihwYjME9Sg0EBCyhsXFRfjK_Ai4zkkSec4RhmHAvkAbhl8Hy0se3X2j18z3hoNQ=="
+        },
+        {
+          "title": "latimes.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGQ6aCaY7CKfY8NhQ2MKx8Zn000EtzKHrHWPstc1uqd-MUwK1MGoEFH1nNFBx7O3RI_m6sX-nVe8cB8fra6srb6Nz2odDL-2uiJfAAVH5u3q94HVSyPHL6w1p-0pXVvPO8WMn9j3cOySmkl9XiJ7LFZ5yOXNvOHAcaMTMy2LHnxKLO7LLMhRNC992Ukk4JGeoK0jwAnL-gc9A=="
         }
       ]
     }
