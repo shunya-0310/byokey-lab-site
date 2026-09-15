@@ -1,100 +1,104 @@
 {
   "schemaVersion": 1,
   "status": "live",
-  "date": "2026-09-15",
-  "generatedAt": "2026-09-14T23:52:31.665Z",
+  "date": "2026-09-16",
+  "generatedAt": "2026-09-15T23:31:44.074Z",
   "model": "gemini-3.6-flash",
   "fallbackCategories": [],
   "items": [
     {
-      "id": "2026-09-15-politics_economy",
+      "id": "2026-09-16-politics_economy",
       "category": "politics_economy",
       "categoryLabel": "Politics & Economy",
-      "headline": "Ukraine Expresses Readiness to Pause Energy Target Strikes Following U.S. Announcement",
-      "summary": "Ukrainian President Volodymyr Zelensky stated on September 14 that Ukraine is prepared to stop attacking Russian energy infrastructure if Russia refrains from targeting Ukrainian power facilities. The development follows an announcement by U.S. President Donald Trump regarding mutual de-escalation steps aimed at stabilizing global fuel markets after recent refinery strikes.",
-      "question": "Do you think targeted agreements on key infrastructure can pave the way for broader diplomatic negotiations in major conflicts?",
+      "headline": "US Treasury Chief to Meet Chinese Counterpart Ahead of High-Stakes Summit",
+      "summary": "U.S. Treasury Secretary Scott Bessent announced he will hold high-level talks with Chinese Vice Premier He Lifeng this weekend to prepare for an upcoming Washington summit between Donald Trump and Xi Jinping. The negotiations will focus on bilateral trade, artificial intelligence safety, and enforcement of Iran sanctions, making this a pivotal diplomatic moment for global markets.",
+      "question": "How do you think high-level trade discussions between world powers affect global economic stability?",
       "coachLeads": {
-        "friendly": "Hey, have you caught the latest news about the diplomatic talks over energy infrastructure?",
-        "energetic": "There is a major diplomatic development unfolding right now that could impact global energy supplies!",
-        "calm": "A notable diplomatic shift happened today regarding energy infrastructure strikes, and it is worth taking a moment to unpack it.",
-        "direct": "Ukraine has signaled willingness to pause strikes on energy facilities if Russia reciprocates. Let's discuss what this diplomatic move could mean."
+        "friendly": "Hey, have you heard about this latest move in world diplomacy? Top U.S. and Chinese economic leaders are meeting this weekend ahead of a major presidential summit.",
+        "energetic": "Here is a huge story in global politics! High-stakes economic talks between the U.S. and China are set for this weekend, and the outcome could impact markets worldwide!",
+        "calm": "U.S. and Chinese officials are meeting this weekend to set the stage for an upcoming presidential summit. It is a key diplomatic development that is worth paying attention to.",
+        "direct": "U.S. Treasury Secretary Scott Bessent will meet China's vice premier this weekend ahead of the Trump-Xi summit. Here is why these economic talks matter right now."
       },
       "sources": [
         {
-          "title": "straitstimes.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFguNLf3KkMxLAZh_uXTemMPlc4zMEi99K9EbnPrNF6qTavWT4jv1846B0ca6RubfEHkUz4bEr_8UFho3aAMSG8KJFKj8Au2drF1xcq40z5uli_Ggdg9sa09JJfz1QbXLOs4aS_BeIzhTZloXqRXbGrSrEKSu9cYFHPw8K1C2V7cDkzKXh02yntBl_WajNBWiW36iPzqix0wpUxO7aM"
-        }
-      ]
-    },
-    {
-      "id": "2026-09-15-technology",
-      "category": "technology",
-      "categoryLabel": "Technology",
-      "headline": "U.S. Space Force Confirms Operational Weapons Deployed in Orbit",
-      "summary": "The U.S. military confirmed on Monday that it has deployed active space control weapons into Earth's orbit for both offensive and defensive operations. Unveiled by Air Force Secretary Troy Meink at a defense conference, this marks the first official acknowledgment of operational U.S. weapons in space.",
-      "question": "How do you feel about military capabilities expanding into outer space?",
-      "coachLeads": {
-        "friendly": "Hey, have you caught the latest space news today? It is definitely worth chatting about!",
-        "energetic": "You won't believe today's massive news about space and global defense! Let's dive right into this topic!",
-        "calm": "There is a major new update regarding global space security today. Take a moment to read it, and we can discuss your thoughts.",
-        "direct": "The U.S. military just made a historic announcement about space weapons. Let me know what you think about this development."
-      },
-      "sources": [
-        {
-          "title": "alarabiya.net",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF0eva3z07bRwTy-6Ey1_EVKVqbkbY80BhVQnLChFvT93AvnMR_sJsa8qYi1bmYc4VU7cIlTKTO4W8-3zBfpYdhSfex-Mq3wKrZkDhmf6nRtIOiLo-pQr9hsaBy46l7rCkHP1UcYXR-4nThovj_2pQ--xSRMStvvj0OmTORJ4k0Zv92MNjkCitQUG6u2qoSVmQIHJrjFyGS2D9MB8sQhWl12Q2q"
+          "title": "fidelity.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFmELb_r9pCDLQ2MtdzLbWOXrKhHZ_5rXaatf8WAxOydY9HysBXKWYH3cX6C1FDPiWwtdE2pFR7u1g2GRwyh8yGOT1ThmClZQ5OOtFjayfgvIKsZUIRgvSSaLqWQETHVXNrAhw45rAbqsUJzDgCTeHtsQeXSqps8n3ILYNWVAmgrWPmXuK8jCePe0rggZkAHo2Jxk4="
         },
         {
-          "title": "spacepolicyonline.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGRsX5wbvdcYfLU2Ui_MxE6FF6Tpj5oiSGwvB2q3vImfvhrrJ1J10BaZNg-RCMtGjAweLf1y-Tu_ohC14hzxGu_LfLYPJqIzxTfpYwnxbEJZogjXs55XEPf3Xa4Zt4J1GBwakzwF8uWM0oqk6Lm_CnF7qDb57go5-o2Mm8ceUVmwUi6beEl-Q=="
+          "title": "ft.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHZE4JMNjiteMfd-EpDpxmMkiX0QZj29dcV_Zh4PxNpBV8c6nQAfYzj3m0JPcTyRIY0QjgZ57L34wQVK1ppkxUYUNT8KeqlyWsV1KCEm272VmXcdfSf3SBGULAL_iF4GYla0eS6q0N7BfPqB9tb8W4t6RS2u33bH_KDAnjdIsG6UKJa-WY="
+        },
+        {
+          "title": "indopremier.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHOhhYGUhiRgCt3tomfEynpFvTqDTASi_kFKU9KshXksCFyI0sCRklxEClbU1tRaeQ5892mZOyBluIQER34oT8cCH5W5IYrIK5bZkA06DOItxRMI82DigPoCI2CTwQ0FHdqa2C_AD62Nf5zMYKpzVCiYnqQ-rwjUs45m6u7XBkaVagYfIlIE9LAfHIBvypIsAt5bJm_SbchYUYkzKRNuFFD8oVLD22WL2sjhigF-d72utrSuyY8rRdTz_0KuRZYqRaY1us4dMjJ5u4yb3pkeVVbD13VcAV0kwRBw0Z3EdWaf0mgtQh7Cmj2hkA2EG58bOFCOnfsYEmA0TtJp6uVPrg3BzjnlQYbKFPPqs9ga6WgVyMrnj1vJPDoXmqUEGumd_JNzw=="
         }
       ]
     },
     {
-      "id": "2026-09-15-sports",
+      "id": "2026-09-16-technology",
+      "category": "technology",
+      "categoryLabel": "Technology",
+      "headline": "US Formally Confirms Deployment of Weapons in Earth Orbit",
+      "summary": "For the first time, U.S. military officials confirmed that the nation has active space-control weapons deployed in Earth's orbit. The unprecedented public admission sparked immediate warnings from international rivals regarding a potential orbital arms race.",
+      "question": "How do you feel about nations deploying military technology and weapons in outer space?",
+      "coachLeads": {
+        "friendly": "Hey, have you heard about the big news regarding space weapons today?",
+        "energetic": "This is huge! The U.S. military just officially confirmed they have weapons operating in orbit!",
+        "calm": "There is a major development in space policy and military tech today that is worth talking about.",
+        "direct": "The U.S. just acknowledged having active weapons in space, sparking international debate."
+      },
+      "sources": [
+        {
+          "title": "Google News: Technology",
+          "url": "https://news.google.com/search?q=Technology%20top%20news%202026-09-16&hl=en-US&gl=US&ceid=US:en"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-16-sports",
       "category": "sports",
       "categoryLabel": "Sports",
-      "headline": "U.S. Women's Basketball Wins Fifth Straight FIBA World Cup Title",
-      "summary": "The United States women's basketball team defeated France 97-79 in Berlin to capture their fifth consecutive FIBA Women's Basketball World Cup gold medal. Tournament MVP Breanna Stewart led Team USA back from a 14-point first-half deficit to extend the program's World Cup winning streak to 36 games.",
-      "question": "What do you think allows certain national sports teams to maintain such dominant winning streaks over several generations?",
+      "headline": "UEFA Selects Munich and Barcelona to Host 2028 and 2029 Champions League Finals",
+      "summary": "On September 15, 2026, UEFA's Executive Committee announced that Munich's Allianz Arena will host the 2028 Champions League final, while Barcelona's renovated Camp Nou was selected for the 2029 final. The announcement is major international news as European football's governing body locked in key venues for its flagship club competitions.",
+      "question": "Which iconic sports stadium in the world would you most want to visit for a major final, and why?",
       "coachLeads": {
-        "friendly": "Hey there! Did you catch the big news about the U.S. women's basketball team taking home another world championship title?",
-        "energetic": "What an unbelievable championship performance in Berlin! Team USA mounted a massive comeback to secure their fifth consecutive World Cup gold medal!",
-        "calm": "If you have a moment, there is a remarkable story in international sports today. The American women's basketball team just won another world title after overcoming a tough first-half test.",
-        "direct": "Team USA just claimed another FIBA World Cup gold by beating France in Berlin. Let's discuss what keeps this squad so dominant on the international stage."
+        "friendly": "Hey, have you seen where the biggest soccer matches in Europe are heading over the next few years?",
+        "energetic": "Check this out—we just got huge news about where the top football clubs will fight for European glory!",
+        "calm": "UEFA officially announced the host stadiums for the upcoming Champions League finals today.",
+        "direct": "Munich and Barcelona were officially chosen to host the 2028 and 2029 Champions League finals."
       },
       "sources": [
         {
           "title": "Google News: Sports",
-          "url": "https://news.google.com/search?q=Sports%20top%20news%202026-09-15&hl=en-US&gl=US&ceid=US:en"
+          "url": "https://news.google.com/search?q=Sports%20top%20news%202026-09-16&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     },
     {
-      "id": "2026-09-15-entertainment",
+      "id": "2026-09-16-entertainment",
       "category": "entertainment",
       "categoryLabel": "Entertainment",
-      "headline": "78th Primetime Emmy Awards Celebrate Television's Top Shows and Stars",
-      "summary": "The 78th Primetime Emmy Awards took place live in Los Angeles on September 14, 2026, with actress Mariska Hargitay serving as host. The ceremony honored the past year's standout television programming, spotlighting major wins for breakout hits like 'Widow's Bay' and returning favorites like 'The Pitt'.",
-      "question": "Which television show or actor were you hoping to see win an award at this year's Emmys?",
+      "headline": "\"Widow's Bay\" and \"The Pitt\" Win Big at 78th Primetime Emmy Awards",
+      "summary": "The 78th Primetime Emmy Awards took place in Los Angeles, with medical drama \"The Pitt\" and comedy-horror series \"Widow's Bay\" taking top show honors. The ceremony made history as actor Matthew Rhys became the first performer to win two lead acting trophies in a single night.",
+      "question": "Which television show or genre do you enjoy watching most, and why?",
       "coachLeads": {
-        "friendly": "Hey, have you caught any of the buzz from television's biggest night yet? The Emmy Awards just happened, and it's a great time to talk about the latest must-watch shows!",
-        "energetic": "Television's top stars just gathered for the 78th Emmy Awards! Let me know if you're ready to dive into the big wins and talk about your favorite series!",
-        "calm": "The 78th Primetime Emmy Awards wrapped up in Los Angeles, honoring the past year's top television performances. Whenever you're ready, let me know if any of the winning shows caught your eye.",
-        "direct": "The 78th Primetime Emmy Awards took place on September 14. Let's review the main winners and share our thoughts on the top TV shows of the year."
+        "friendly": "Hey! Have you seen the latest news about television's biggest awards night?",
+        "energetic": "The Emmy Awards just wrapped up with some huge record-breaking wins, so let's jump right in!",
+        "calm": "With television's top honors freshly handed out at the Emmys, it is a great time to talk about favorite shows.",
+        "direct": "The 78th Primetime Emmy Awards took place this week, and a few notable television records were broken."
       },
       "sources": [
         {
-          "title": "facebook.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHeMxVL_ZxZdo6Mbucom4DFKMTwRBBmxgbL_ehi7P3aemL9VDqHdDBXw2CaxTo7rqsc8H1A0BX4YDCDaNa5O5YcksgnPXZYU-GzqQ3hy5XwiG9T8_vvU7LHAolpk8GbLObgcCukYFdM5ycDJhyEIkCugkdQItj-92hBGFS4f3_TdhHVW6T0Og0DItJiBdvMGAFfV7AQXQqFIInsb-3yKK0huspqhN6_TMdB0Ce6sUxr76q6ZeWQ94d5Azg6zOF61hVvtTpsblIX"
-        },
-        {
-          "title": "wikipedia.org",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGXOyrlpWJjCSpS0YiydcjHrLf5DMr_EcGBuISUT1JKjscuWlcCpskPtgY3gMNl8leG6WpcSBnlmyC7HdnCC9GihwYjME9Sg0EBCyhsXFRfjK_Ai4zkkSec4RhmHAvkAbhl8Hy0se3X2j18z3hoNQ=="
+          "title": "aljazeera.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEqETnjrO5UFCLGSBXUmJpQt3_dfWMVqrBupX-X34dZMpEgXcJfEDBhkzbVZOrYPK-kqFHpHOxwgUWiAriO7xKDFfIeBZLgHisgla2fsZVFsz-IMwa31-X_F7m6ks34yVwIoISwbByyifbULem_gq2qulD6SEZPPdbnbs6xIa_DWftw5axCZzdTnyFlGshoJ3Ze"
         },
         {
           "title": "latimes.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGQ6aCaY7CKfY8NhQ2MKx8Zn000EtzKHrHWPstc1uqd-MUwK1MGoEFH1nNFBx7O3RI_m6sX-nVe8cB8fra6srb6Nz2odDL-2uiJfAAVH5u3q94HVSyPHL6w1p-0pXVvPO8WMn9j3cOySmkl9XiJ7LFZ5yOXNvOHAcaMTMy2LHnxKLO7LLMhRNC992Ukk4JGeoK0jwAnL-gc9A=="
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGa2VD_wVtUnGoxFoWlSTQ-nm9mryDhUeWMVUoDH4tVnLnciOnQquNDLx2PM81mZEcj6VnH-S1rOxj3Ye11CZYgzbqa8N7lXySLXr5zeqSzPZ_vmXAR81WF_YVnvlFLLG8NA5k905fIoY_p5n-BjFA-kcP0KobvHgk42Xn3UxaBNGqNQL5Uvo97JuSF5bxENjgCGLRC3d04Zx7vG-HOmpEqBHKsXIulwCYIfA=="
+        },
+        {
+          "title": "iheart.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGNs0xoYnTYyB8FGXw4g6WHL3R5UHX_DX05BNd8lMsL2q82piRrzrJos2sbgsUQVE6lgxRSxwYqiUErbtCnYHiz2phVxN8qTi23dgyowwbE0OMLquCKttvWnlNrx2TpszialPgMYE53qwh79LuS-gNocx4FBuyJ1vjEserszMGYvUZOCl3Wn9jv4yjAEBiDpWm7EzenbVVchdq3QtDh3FvG5E_E"
         }
       ]
     }
