@@ -126,7 +126,7 @@ function ByokAppDiagram() {
       <div className="section-intro">
         <p className="section-kicker">BYOK APP DIAGRAM</p>
         <h2 id="byok-diagram-title">BYOKアプリの流れ</h2>
-        <p>アプリ開発者、ユーザー、LLMプロバイダーの関係を図解しました。キーとデータをどこで扱うのかを、公開前に曖昧にしないための基本図です。</p>
+        <p>アプリ開発者、ユーザー、LLMプロバイダーの関係は図に示す通りです。BYOKey LabではユーザーのAPIキーを扱うサーバーは持たず、ユーザー情報を登録する必要もありません。そのためあくまで「自己管理・自己責任」で利用するアプリケーションを提供します。</p>
       </div>
       <figure className="diagram-frame">
         <img src="/images/byok-app-diagram.png" alt="BYOKアプリの仕組み。開発者がアプリを提供し、ユーザーがAPIキーとAPI利用料をLLMプロバイダーへ用意する関係を示した図解。" />
@@ -291,12 +291,12 @@ function ByokeyFlow() {
     <div className="setup-demo" aria-label="BYOKアプリを使い始めるまでの3ステップ">
       <article className="setup-step provider-step">
         <p className="step-label">01 / プロバイダー</p>
-        <h2>Geminiを選ぶ</h2>
+        <h2>LLMを選ぶ（現在Geminiのみ利用可）</h2>
         <div className="provider-list" aria-label="BYOKey Speak PWA版で対応予定のLLMプロバイダー">
           {productProviders.map((provider) => (
             <div className="provider-option" key={provider.id}>
               <span className={`provider-mark provider-${provider.id}`}>{provider.mark}</span>
-              <span><strong>{provider.name}</strong><small>{provider.owner} / PWA版で対応予定</small></span>
+              <span><strong>{provider.name}</strong></span>
             </div>
           ))}
         </div>
@@ -304,13 +304,13 @@ function ByokeyFlow() {
       </article>
       <article className="setup-step key-step">
         <p className="step-label">02 / APIキー</p>
-        <h2>ブラウザで入力する</h2>
+        <h2>アプリ・ブラウザで入力する</h2>
         <div className="flow-visual key-visual" aria-hidden="true">
           <span><Smartphone size={44} /></span>
           <ArrowRight size={22} />
           <span><LockKeyhole size={40} /></span>
         </div>
-        <p className="flow-description">取得したGemini APIキーをPWAへ入力。キーはBYOKey Labのサーバーへ預けず、利用者のブラウザ内で扱います。</p>
+        <p className="flow-description">取得したGemini APIキーをアプリへ入力。APIキーはBYOKey Labのサーバーへ預けず、利用者の端末・ブラウザ内で扱います。</p>
       </article>
       <article className="setup-step conversation-step">
         <p className="step-label">03 / アプリ</p>
@@ -320,7 +320,7 @@ function ByokeyFlow() {
           <ArrowRight size={22} />
           <span><BrainCircuit size={42} /></span>
         </div>
-        <p className="flow-description">ブラウザからGemini APIへ接続。月額会員登録を挟まず、必要な機能をすぐに試せます。</p>
+        <p className="flow-description">アプリからGemini APIへ接続。月額会員登録を挟まず、必要な機能をすぐに利用できます。</p>
       </article>
     </div>
   );
@@ -329,9 +329,9 @@ function ByokeyFlow() {
 function TrustBand() {
   return (
     <section className="trust-band" aria-label="BYOKey Labの基本方針">
-      <div className="trust-item"><LockKeyhole size={25} /><div><strong>キーはサーバーへ預けない</strong><span>PWAでは利用者のブラウザ内で扱います</span></div></div>
+      <div className="trust-item"><LockKeyhole size={25} /><div><strong>APIキーはサーバーへ預けない</strong><span>APIキーはユーザー管理であり、BYOKey Labはその情報を取得・問い合わせることはありません</span></div></div>
       <div className="trust-item"><Smartphone size={25} /><div><strong>透明性を優先</strong><span>Git公開できるWeb構成を採用します</span></div></div>
-      <div className="trust-item"><BrainCircuit size={25} /><div><strong>Gemini専用から開始</strong><span>BYOK検証を小さく始めます</span></div></div>
+      <div className="trust-item"><BrainCircuit size={25} /><div><strong>API利用料は従量課金</strong><span>Android製品版は買い切りです。AIの利用料は使用頻度に応じた従量課金として、LLMプロバイダーに支払います。</span></div></div>
     </section>
   );
 }
@@ -355,9 +355,7 @@ function ArticleTeaser({ onNavigate }) {
   return (
     <section className="article-teaser">
       <div className="section-intro">
-        <p className="section-kicker">ARTICLES</p>
-        <h2>使う前の疑問から、<br />自分に合うAIアプリの選び方まで。</h2>
-        <p>BYOK、APIキー、アプリの使い方を、初めての人にも分かる言葉で整理します。</p>
+        <h2>ARTICLES</h2>
       </div>
       <ArticleCard article={article} onNavigate={onNavigate} />
       <InternalLink className="text-link article-index-link" to="/articles/" onNavigate={onNavigate}>記事一覧を見る<ArrowRight size={17} /></InternalLink>
@@ -375,20 +373,19 @@ function HomePage({ onNavigate }) {
           <h1 className="sr-only">BYOKey Lab</h1>
           <div className="brand-lockup"><img src={byokeyLabLogo} alt="BYOKey Lab - The Key is in your hand" /></div>
           <p className="hero-lead">AIアプリは、もう、<br />定額に縛られない。</p>
-          <p className="hero-copy">BYOKey Labは、利用者自身のAPIキーで動く小さなAIツールをつくります。PWA体験版とAndroid製品版を中心に、BYOK型AIアプリの使い方と注意点を整理します。PWAとは、ブラウザから使え、ホーム画面にも追加できるWebアプリです。</p>
+          <p className="hero-copy">BYOKey Labは、利用者自身のAPIキーで動くアプリケーション「BYOKアプリ」を作成し、検証、公開するアプリブランドです。</p>
           <div className="hero-actions">
-            <InternalLink className="button button-primary" to="/speak/english/" onNavigate={onNavigate}>BYOKey Speakを見る<ArrowRight size={18} /></InternalLink>
             <InternalLink className="button button-secondary" to="/important/" onNavigate={onNavigate}>重要事項を見る<ShieldAlert size={18} /></InternalLink>
             <InternalLink className="button button-secondary" to="/guide/api/" onNavigate={onNavigate}>API設定ガイド<BookOpen size={18} /></InternalLink>
           </div>
         </section>
         <section className="demo-band">
-          <p className="byok-definition">BYOK（Bring Your Own Key）アプリとは、LLM（Geminiなど）の「自分のAPIキー」を設定してAIを使う形です。ただし、APIキーをクライアント環境に置く構成にはリスクがあるため、BYOKey Labでは公開形態ごとに扱いを分けます。</p>
+          <p className="byok-definition">BYOK（Bring Your Own Key）アプリとは、GeminiなどのLLM（大規模言語モデル）の「自分のAPIキー」を設定して利用する形式のアプリを指します。なお、APIキーをアプリなどのクライアント環境に置く構成にはセキュリティ上のリスクがある旨、LLMプロバイダー各社のガイドラインに記載されています。アプリのご利用の際には最新の注意を払い、ご自身での管理をお願いしております。</p>
           <ByokAppDiagram />
           <div className="section-intro compact-intro">
             <p className="section-kicker">HOW IT WORKS</p>
             <h2 className="steps-heading"><span>選ぶ。</span><span>設定する。</span><span>使い始める。</span></h2>
-            <p>複雑な会員登録や月額プランはありません。PWA版ではGeminiを対象に、利用者がAPIキーのリスクを理解し同意したうえで使い始めます。</p>
+            <p>複雑な会員登録や月額プランはありません。ユーザーがAPIキーのリスクを理解し同意したうえで使い始めることができます。</p>
           </div>
           <ByokeyFlow />
         </section>
@@ -402,27 +399,27 @@ function HomePage({ onNavigate }) {
             <article>
               <div className="principle-icon local"><Smartphone size={23} /></div>
               <h3>ユーザー</h3>
-              <p>アカウント登録なしで試せる構成を優先します。PWA版ではAPIキーをBYOKey Labのサーバーへ送らず、PCアプリでは環境変数など利用者本人のローカル実行環境で扱う方針です。</p>
-              <ul><li><Check size={17} />APIキーをBYOKey Labへ預けない</li><li><Check size={17} />専用キーと利用上限の設定を前提にする</li><li><Check size={17} />公開形態ごとの注意事項を明示する</li></ul>
+              <p>アカウント登録なしで利用できます。APIキーの取り扱いはユーザー管理であり、セキュリティリスクを十分に理解したうえで利用してください。</p>
+              <ul><li><Check size={17} />APIキーをBYOKey Labへ預けない</li><li><Check size={17} />専用キーと利用上限を設定する</li><li><Check size={17} />取り扱いにはリスクがある点を理解し、同意のもと利用する</li></ul>
             </article>
             <article>
               <div className="principle-icon direct"><ExternalLink size={23} /></div>
               <h3>アプリ開発者</h3>
               <p>ユーザー登録や会員データベースを持たず、API利用料もユーザー自身の契約へ分離できます。共通のBYOK設計を、学習、文章作成、業務支援など、さまざまなアプリへ展開できます。</p>
-              <ul><li><ChevronRight size={17} />ユーザー情報の複雑な管理を減らす</li><li><ChevronRight size={17} />API従量課金を直接負担しない</li><li><ChevronRight size={17} />同じ仕組みを複数アプリへ展開</li></ul>
+              <ul><li><ChevronRight size={17} />ユーザー情報の複雑な管理を減らす</li><li><ChevronRight size={17} />API従量課金を直接負担しない</li><li><ChevronRight size={17} />同じ仕組みを複数アプリへ展開できる</li></ul>
             </article>
           </div>
           <InternalLink className="text-link" to="/important/" onNavigate={onNavigate}>重要事項を詳しく見る<ArrowRight size={17} /></InternalLink>
         </section>
         <section className="product-section">
           <div className="product-copy">
-            <p className="section-kicker">FIRST PRODUCT</p>
+            <p className="section-kicker">PRODUCT</p>
             <h2 className="product-title"><span>BYOKey</span><span>Speak</span><small>for English</small></h2>
-            <p>英語が出てこない瞬間も、Quick Assistが日本語の質問から自然な表現を提案。会話の流れを止めません。</p>
-            <div className="inline-meta"><span>PWA体験版を公開中</span><span>Android製品版を販売中</span><span>Gemini APIのみ</span></div>
+            <div className="product-description"><p>会話相手となるコーチの話し方、添削の仕方、会話の進め方などを「あなたの言葉で」設定することができます。</p><p>会話で使用した単語・イディオムは自動でボキャブラリーリストに登録され、会話の傾向を分析できます。（発音の分析はできません。）</p><p>初級（CEFR A1）から上級（CEFR C2）まで対応し、レベルに応じた文章量で会話ができます。</p><p>選択肢にとらわれない「自由な英会話」で英語を学ぶことができます。</p><p>利用料は使った分だけ。「サブスク契約しても続けられるか不安…」を解消します。</p></div>
+            <div className="inline-meta"><span>体験版（ブラウザアプリ）を公開中</span><span>Android製品版を販売中</span><span>Gemini APIのみ</span></div>
             <InternalLink className="button button-dark" to="/speak/english/" onNavigate={onNavigate}>製品ページへ<ArrowRight size={18} /></InternalLink>
           </div>
-          <QuickAssistCard compact />
+          <CoachSettingsPreview />
         </section>
         <ArticleTeaser onNavigate={onNavigate} />
         <FinalCta onNavigate={onNavigate} />
@@ -757,6 +754,25 @@ function CoachSettingsDemo() {
   );
 }
 
+function CoachSettingsPreview() {
+  return (
+    <div className="coach-settings is-static" aria-label="BYOKey Speakのコーチ設定画面のイメージ">
+      <div className="level-row" aria-label="CEFRレベル">
+        <span>CEFR</span>
+        {Object.keys(cefrProfiles).map((item) => <span className={item === "A2" ? "is-selected" : ""} key={item}>{item}</span>)}
+      </div>
+      <div className="level-effect"><strong>A2の会話レベル</strong><p>{cefrProfiles.A2}</p></div>
+      <p className="coach-preview-label">Coach Personalities &amp; Skills</p>
+      <div className="coach-skill-preview">
+        <p><strong>目的</strong> 日常会話を強化したい。</p>
+        <p><strong>性格・口調</strong> フランクに話す。</p>
+        <p><strong>添削方針</strong> 自然な表現を細かく指摘する。</p>
+        <p><strong>解説の言語</strong> 日本語も併記する。</p>
+      </div>
+    </div>
+  );
+}
+
 const faqGroups = [
   {
     id: "security",
@@ -996,7 +1012,7 @@ function ImportantPage({ onNavigate }) {
           <p className="section-kicker">IMPORTANT MATTERS</p>
           <h1>重要事項</h1>
           <p>BYOKey LabにおけるAPIキーの扱い、公開形態、対応プロダクトの判断基準です。APIキーは利用者の費用と権限に直結するため、技術的に実装できることと、公式に推奨される構成を分けて説明します。</p>
-          <small>最終更新: 2026年8月11日</small>
+          <small>最終更新: 2026年9月15日</small>
         </div>
         <div className="important-summary" aria-label="BYOKey Labの公開方針">
           <article>
@@ -1041,7 +1057,11 @@ function ImportantPage({ onNavigate }) {
           <p>BYOK構成を使う場合は、BYOKey Labのアプリ専用のAPIキーを作成してください。メインプロジェクトや他サービスと同じキーを使い回さないでください。月間上限、利用通知、必要に応じた課金上限を設定し、利用状況を定期的に確認してください。漏えいが疑われる場合は、発行元で直ちにキーを無効化し、新しいキーへ交換してください。</p>
           <p>APIキー、プロバイダーの秘密情報、支払い情報を、問い合わせフォーム、メール、チャット、SNSへ送信しないでください。BYOKey Labがこれらの情報を求めることはありません。</p>
 
-          <h2>7. 参照する公式情報</h2>
+          <h2>7. APIキーの不正利用に関する免責</h2>
+          <p>第三者による不正アクセス、漏えい、不正利用その他の事由により、APIキーを通じて身に覚えのないAPI利用料や損害が発生した場合でも、BYOKey Labは、適用法令で認められる範囲において、補償、返金、またはプロバイダーへの請求の取り消しを行いません。</p>
+          <p>不審な利用や請求に気づいた場合は、直ちにプロバイダーの管理画面でAPIキーを無効化し、利用状況と請求内容を確認してください。APIキーの管理、利用上限、利用通知、プロバイダーへの問い合わせは、利用者自身で行う必要があります。</p>
+
+          <h2>8. 参照する公式情報</h2>
           <p>APIキーの扱いは、次の公式情報を確認対象とします。最新の内容が本ページと異なる場合は、公式情報を優先して方針を見直します。</p>
           <ul className="source-list">
             <li><a href="https://help.openai.com/en/articles/5112595-best-practices-for-api-key-safety" target="_blank" rel="noreferrer">OpenAI APIキー安全指針<ExternalLink size={14} /></a></li>
