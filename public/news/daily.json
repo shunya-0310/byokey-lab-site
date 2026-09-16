@@ -1,104 +1,104 @@
 {
   "schemaVersion": 1,
   "status": "live",
-  "date": "2026-09-16",
-  "generatedAt": "2026-09-15T23:31:44.074Z",
+  "date": "2026-09-17",
+  "generatedAt": "2026-09-16T23:38:53.592Z",
   "model": "gemini-3.6-flash",
   "fallbackCategories": [],
   "items": [
     {
-      "id": "2026-09-16-politics_economy",
+      "id": "2026-09-17-politics_economy",
       "category": "politics_economy",
       "categoryLabel": "Politics & Economy",
-      "headline": "US Treasury Chief to Meet Chinese Counterpart Ahead of High-Stakes Summit",
-      "summary": "U.S. Treasury Secretary Scott Bessent announced he will hold high-level talks with Chinese Vice Premier He Lifeng this weekend to prepare for an upcoming Washington summit between Donald Trump and Xi Jinping. The negotiations will focus on bilateral trade, artificial intelligence safety, and enforcement of Iran sanctions, making this a pivotal diplomatic moment for global markets.",
-      "question": "How do you think high-level trade discussions between world powers affect global economic stability?",
+      "headline": "Federal Reserve Raises Benchmark Interest Rate to Target Range of 3.75% to 4.00%",
+      "summary": "The United States Federal Reserve voted unanimously to increase its benchmark interest rate by a quarter of a percentage point, bringing the target range to 3.75 to 4.00 percent. Central bank officials stated that the policy move was necessary to curb elevated inflation, marking the Fed's first interest rate hike in three years.",
+      "question": "How do you think central banks should balance controlling inflation with encouraging economic growth?",
       "coachLeads": {
-        "friendly": "Hey, have you heard about this latest move in world diplomacy? Top U.S. and Chinese economic leaders are meeting this weekend ahead of a major presidential summit.",
-        "energetic": "Here is a huge story in global politics! High-stakes economic talks between the U.S. and China are set for this weekend, and the outcome could impact markets worldwide!",
-        "calm": "U.S. and Chinese officials are meeting this weekend to set the stage for an upcoming presidential summit. It is a key diplomatic development that is worth paying attention to.",
-        "direct": "U.S. Treasury Secretary Scott Bessent will meet China's vice premier this weekend ahead of the Trump-Xi summit. Here is why these economic talks matter right now."
+        "friendly": "Hey, did you catch the latest update about the Federal Reserve raising interest rates? It is a great story to practice talking about economic news together.",
+        "energetic": "Big news from the financial world today—the Federal Reserve just hiked interest rates! Let's jump right into what this means for borrowing costs and inflation.",
+        "calm": "The Federal Reserve decided to raise interest rates today to help manage persistent inflation. Take a look at the summary, and we can explore what this decision means whenever you are ready.",
+        "direct": "The Federal Reserve raised interest rates today for the first time in three years. Let's discuss why this policy move happened and practice sharing your perspective on economic decisions."
       },
       "sources": [
         {
-          "title": "fidelity.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFmELb_r9pCDLQ2MtdzLbWOXrKhHZ_5rXaatf8WAxOydY9HysBXKWYH3cX6C1FDPiWwtdE2pFR7u1g2GRwyh8yGOT1ThmClZQ5OOtFjayfgvIKsZUIRgvSSaLqWQETHVXNrAhw45rAbqsUJzDgCTeHtsQeXSqps8n3ILYNWVAmgrWPmXuK8jCePe0rggZkAHo2Jxk4="
+          "title": "federalreserve.gov",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGIJ23jVMz8YDSIWD7XxUKkYnDzLmoBlagpXjzHFH-aGgjN_rP83HNTXejbQ8BI1kRmoETeKJQL6ADmuyFkKWr8iBV8YTwVEmHI7cx3y0OyiWbvEBehttr0XsLPdepWaNRZVLgBeCJdvr3wMDBkP2Fx_OLakqFvqv6DHwEQNiUottBreA=="
         },
         {
-          "title": "ft.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHZE4JMNjiteMfd-EpDpxmMkiX0QZj29dcV_Zh4PxNpBV8c6nQAfYzj3m0JPcTyRIY0QjgZ57L34wQVK1ppkxUYUNT8KeqlyWsV1KCEm272VmXcdfSf3SBGULAL_iF4GYla0eS6q0N7BfPqB9tb8W4t6RS2u33bH_KDAnjdIsG6UKJa-WY="
+          "title": "aljazeera.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF6mZZsupnGyDIkh51QD419KdpowHRlvpy3HiOUOsNUMjLGlnlrh0jboYp31VEskWtgeME5K8o73CwI8YDNHTTa4pEzBhGM2A5ZUHqmOjH5b3wd3eCjLCMX9lH5xjQoCqRi0-CHxASrttaK2BitdBBw601KRtw8Ly95S_Z2YaiBVdB-btCuN_K9_M_-eFMgvozos4VA_y-UchJO1vSr"
         },
         {
-          "title": "indopremier.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHOhhYGUhiRgCt3tomfEynpFvTqDTASi_kFKU9KshXksCFyI0sCRklxEClbU1tRaeQ5892mZOyBluIQER34oT8cCH5W5IYrIK5bZkA06DOItxRMI82DigPoCI2CTwQ0FHdqa2C_AD62Nf5zMYKpzVCiYnqQ-rwjUs45m6u7XBkaVagYfIlIE9LAfHIBvypIsAt5bJm_SbchYUYkzKRNuFFD8oVLD22WL2sjhigF-d72utrSuyY8rRdTz_0KuRZYqRaY1us4dMjJ5u4yb3pkeVVbD13VcAV0kwRBw0Z3EdWaf0mgtQh7Cmj2hkA2EG58bOFCOnfsYEmA0TtJp6uVPrg3BzjnlQYbKFPPqs9ga6WgVyMrnj1vJPDoXmqUEGumd_JNzw=="
+          "title": "cbc.ca",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFv6io2rVzvISWFn3CZ_p2o8g6B3ipQr8GLGbGWqiqYh3utceCVUSGY77EY74L4pSsbNj37Grn8s2Z8IFUftKFs0BGsdEorhCp32liTUTy4tjSkNYzO9sNXqgRGLVdL5x63Y_Kqbt292yscMS8SKbSu82SgmJ2EIhNF78l3Vo60jQ=="
         }
       ]
     },
     {
-      "id": "2026-09-16-technology",
+      "id": "2026-09-17-technology",
       "category": "technology",
       "categoryLabel": "Technology",
-      "headline": "US Formally Confirms Deployment of Weapons in Earth Orbit",
-      "summary": "For the first time, U.S. military officials confirmed that the nation has active space-control weapons deployed in Earth's orbit. The unprecedented public admission sparked immediate warnings from international rivals regarding a potential orbital arms race.",
-      "question": "How do you feel about nations deploying military technology and weapons in outer space?",
+      "headline": "Canada and Germany Commit $300 Million to AI Safety Research",
+      "summary": "At the ALL IN 2026 conference in Montreal, Canada and Germany announced a joint funding package of up to $300 million for LawZero, a non-profit AI safety organization led by computer scientist Yoshua Bengio. The investment aims to develop trustworthy artificial intelligence systems with transparent safety measures built directly into their design.",
+      "question": "Do you think governments should spend public money on AI safety, or should tech companies fund it themselves?",
       "coachLeads": {
-        "friendly": "Hey, have you heard about the big news regarding space weapons today?",
-        "energetic": "This is huge! The U.S. military just officially confirmed they have weapons operating in orbit!",
-        "calm": "There is a major development in space policy and military tech today that is worth talking about.",
-        "direct": "The U.S. just acknowledged having active weapons in space, sparking international debate."
+        "friendly": "Hey, have you seen the latest news about international efforts to keep AI safe? Canada and Germany just teamed up for a major announcement.",
+        "energetic": "This is a massive development for the future of technology! Two countries are investing hundreds of millions to build safer artificial intelligence!",
+        "calm": "Canada and Germany have announced a major joint initiative to support AI safety research. It is a significant step toward managing advanced technology responsibly.",
+        "direct": "Canada and Germany just pledged up to three hundred million dollars to AI safety research. Here is why this story is making global headlines today."
       },
       "sources": [
         {
-          "title": "Google News: Technology",
-          "url": "https://news.google.com/search?q=Technology%20top%20news%202026-09-16&hl=en-US&gl=US&ceid=US:en"
+          "title": "citynews.ca",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHCxDMCqbCpXgvTGg39qOsIzlMrgnszSH8CsvxscS-_syNiGaDe5LeG1pqP0p7D4WIGBLUDi7Tl2bPwm6l6vOP_t9aJ0E1lBMgT_G77nNZv8_sDJyuypJyjAyqnp8Ff2vSy0MiPprF3VIfvqWemcjr-HOQYORazBkuSHTQeM9mcfhTHhXSKq7T-RhI="
         }
       ]
     },
     {
-      "id": "2026-09-16-sports",
+      "id": "2026-09-17-sports",
       "category": "sports",
       "categoryLabel": "Sports",
-      "headline": "UEFA Selects Munich and Barcelona to Host 2028 and 2029 Champions League Finals",
-      "summary": "On September 15, 2026, UEFA's Executive Committee announced that Munich's Allianz Arena will host the 2028 Champions League final, while Barcelona's renovated Camp Nou was selected for the 2029 final. The announcement is major international news as European football's governing body locked in key venues for its flagship club competitions.",
-      "question": "Which iconic sports stadium in the world would you most want to visit for a major final, and why?",
+      "headline": "Raphinha Hat Trick Powers Barcelona Win as Brighton Upsets Manchester United",
+      "summary": "On September 16, Brazilian forward Raphinha scored a hat trick to lead Barcelona to a 7-2 victory over Racing Santander in La Liga. On the same day, Manchester United was eliminated from the English League Cup after suffering a 3-2 upset against Brighton.",
+      "question": "What factors do you think help a team maintain high-scoring momentum early in the soccer season?",
       "coachLeads": {
-        "friendly": "Hey, have you seen where the biggest soccer matches in Europe are heading over the next few years?",
-        "energetic": "Check this out—we just got huge news about where the top football clubs will fight for European glory!",
-        "calm": "UEFA officially announced the host stadiums for the upcoming Champions League finals today.",
-        "direct": "Munich and Barcelona were officially chosen to host the 2028 and 2029 Champions League finals."
+        "friendly": "Hey, did you catch the big European soccer results from yesterday? Barcelona scored seven goals, and Manchester United suffered a surprising cup exit!",
+        "energetic": "What an incredible day of soccer action! Raphinha bagged a hat trick in a major blowout, while Brighton pulled off a shocker against Manchester United!",
+        "calm": "There were some remarkable results in European football yesterday. Barcelona continued their dominant streak, while Manchester United exited the League Cup after a tight loss.",
+        "direct": "Barcelona defeated Racing Santander 7-2 and Brighton knocked Manchester United out of the League Cup. Let's discuss what these major results mean."
       },
       "sources": [
         {
           "title": "Google News: Sports",
-          "url": "https://news.google.com/search?q=Sports%20top%20news%202026-09-16&hl=en-US&gl=US&ceid=US:en"
+          "url": "https://news.google.com/search?q=Sports%20top%20news%202026-09-17&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     },
     {
-      "id": "2026-09-16-entertainment",
+      "id": "2026-09-17-entertainment",
       "category": "entertainment",
       "categoryLabel": "Entertainment",
-      "headline": "\"Widow's Bay\" and \"The Pitt\" Win Big at 78th Primetime Emmy Awards",
-      "summary": "The 78th Primetime Emmy Awards took place in Los Angeles, with medical drama \"The Pitt\" and comedy-horror series \"Widow's Bay\" taking top show honors. The ceremony made history as actor Matthew Rhys became the first performer to win two lead acting trophies in a single night.",
-      "question": "Which television show or genre do you enjoy watching most, and why?",
+      "headline": "Emmys in Advanced Talks to Move Telecast to Amazon Prime Video",
+      "summary": "The Television Academy is in advanced talks to move the annual Emmy Awards telecast to Amazon Prime Video following the expiration of its multi-network broadcast agreement. If finalized, the landmark deal would shift television's biggest night off traditional broadcast networks for the first time since the show began in 1949.",
+      "question": "Do you think major award shows like the Emmys should stay on traditional television or move to streaming platforms?",
       "coachLeads": {
-        "friendly": "Hey! Have you seen the latest news about television's biggest awards night?",
-        "energetic": "The Emmy Awards just wrapped up with some huge record-breaking wins, so let's jump right in!",
-        "calm": "With television's top honors freshly handed out at the Emmys, it is a great time to talk about favorite shows.",
-        "direct": "The 78th Primetime Emmy Awards took place this week, and a few notable television records were broken."
+        "friendly": "Did you catch this news about television's biggest night? It looks like the Emmys might be finding a brand-new home on streaming!",
+        "energetic": "Big changes are coming to television history! The Emmys might officially move off broadcast TV and stream on Amazon Prime Video!",
+        "calm": "There is an interesting shift happening in the entertainment industry today. The Emmy Awards may soon move from traditional networks to a streaming platform.",
+        "direct": "The Emmys are negotiating a major deal to move their annual ceremony to Amazon Prime Video. Let's discuss what this streaming shift means for viewers."
       },
       "sources": [
         {
-          "title": "aljazeera.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEqETnjrO5UFCLGSBXUmJpQt3_dfWMVqrBupX-X34dZMpEgXcJfEDBhkzbVZOrYPK-kqFHpHOxwgUWiAriO7xKDFfIeBZLgHisgla2fsZVFsz-IMwa31-X_F7m6ks34yVwIoISwbByyifbULem_gq2qulD6SEZPPdbnbs6xIa_DWftw5axCZzdTnyFlGshoJ3Ze"
+          "title": "9news.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGw60VsZcGdJ3vATdl_CO5wivpXaq6HKjhg0MFeEl8kF_L_MborpMUhcL56ysZmlJ-IKnYJCZy9mFm5lkIe5NlYWg-a4ukzxnSbXEOedOm4TJFHmEuE0YfSnajGNcDaz2jvENhtkVQmvCcvPawkNYxfwjiqA728CJf1I7pVyncNI-jL5PcXekz5yA3boPDKizK0wQBQ_zFxiU1afBsAyAEEHdA1l26re9qL1HRN50z2lW4rxnryt8Raoeqrl4dHOYwwZcw8Ma9h_4BSaGF_Jx9Quw=="
         },
         {
-          "title": "latimes.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGa2VD_wVtUnGoxFoWlSTQ-nm9mryDhUeWMVUoDH4tVnLnciOnQquNDLx2PM81mZEcj6VnH-S1rOxj3Ye11CZYgzbqa8N7lXySLXr5zeqSzPZ_vmXAR81WF_YVnvlFLLG8NA5k905fIoY_p5n-BjFA-kcP0KobvHgk42Xn3UxaBNGqNQL5Uvo97JuSF5bxENjgCGLRC3d04Zx7vG-HOmpEqBHKsXIulwCYIfA=="
+          "title": "mynewsla.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFnklB6Gwd-nMYmXMRqg_VbevOHH25Pc9MrHkEKIFCsci9KV6e6awuNc7rjnnoS3T8WzwEzsB8wQCEg7xKVLEUhIz9rWVgqd77k4nYT5o7nNEYQFFTGvXS49RbjPwl14FEdlG8xt2h0fkDKhsrKLUeRqZ-KB8PfnusvYt1tyinXya0f0Tbt9YoN0Lmr8rBxZ4M3OO5SU5rGju04DZxGBDI="
         },
         {
-          "title": "iheart.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGNs0xoYnTYyB8FGXw4g6WHL3R5UHX_DX05BNd8lMsL2q82piRrzrJos2sbgsUQVE6lgxRSxwYqiUErbtCnYHiz2phVxN8qTi23dgyowwbE0OMLquCKttvWnlNrx2TpszialPgMYE53qwh79LuS-gNocx4FBuyJ1vjEserszMGYvUZOCl3Wn9jv4yjAEBiDpWm7EzenbVVchdq3QtDh3FvG5E_E"
+          "title": "wcnc.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHXdt8M3SnKRxeBbV1JBUEU2jsD-S0RRnf6Vy6IRoqjoqBJiaLKMYN4duaJ0qwFvaMAczokABVz7-EpKH87H06rLXXJXOGIki8WGNqw6fI82ITcsy09B-CWJD7oOZCvcuPvBWN1c5V7sckQwvlyqRlUqHyiBF7euAe5eAbfnruyW2pCPFaRT7DQp-lkDaOzQ6yJy4AUxsrWt_OSO-R9ExpJpyDb-eAFk6HDKcvaT736iHT5FXAkcUBs_9EhMuJViR7anzyTe8kyaheaRdnIidZUUQ=="
         }
       ]
     }
