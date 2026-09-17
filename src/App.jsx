@@ -691,7 +691,7 @@ function PricingSimulator() {
         <div className="usage-bars" role="img" aria-label="4月1,500円、5月2,200円、6月300円、7月3,100円、8月2,400円、9月1,800円の利用料金例を示す棒グラフ">
           {monthlyUsageExample.map((item) => (
             <div className="usage-bar-item" key={item.month}>
-              <strong>¥{item.yen.toLocaleString("ja-JP")}</strong>
+              <strong><span>¥</span>{item.yen.toLocaleString("ja-JP")}</strong>
               <div className="usage-bar-track"><span style={{ height: `${(item.yen / 3100) * 100}%` }} /></div>
               <span>{item.month}</span>
             </div>
@@ -882,11 +882,9 @@ function SpeakPage({ onNavigate }) {
             </div>
             <p className="fine-print">体験版の利用にもAPIキーの設定が必要です。Gemini API利用料はGoogleから直接請求されます。</p>
           </div>
-          <div className="hero-coach-visual">
-            <p className="hero-visual-kicker">COACH SKILLS</p>
-            <CoachSettingsPreview />
-            <p>コーチへの希望を、選択肢ではなく自分の言葉で書けます。</p>
-          </div>
+          <figure className="hero-coach-visual">
+            <img src="/images/byokey-speak-coach-settings-hero.png" alt="BYOKey Speakの設定画面。CEFRレベルをA1からC2まで選び、コーチの話し方や添削方法を自分の言葉で設定できることを示している。" />
+          </figure>
         </section>
         <TrustBand />
         <SpeakFeatureBand />
