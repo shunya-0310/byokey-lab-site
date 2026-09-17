@@ -293,6 +293,19 @@ footer small { grid-column: 1 / -1; color: var(--muted); }
 .exchange-control { min-width: 220px; margin-bottom: 46px; display: grid; gap: 8px; font-size: .76rem; font-weight: 800; }
 .exchange-input { min-height: 46px; display: grid; grid-template-columns: auto 72px auto; align-items: center; gap: 8px; padding: 0 12px; border: 1px solid #cfc7b3; background: rgba(255, 255, 255, .88); }
 .exchange-input input { width: 72px; height: 32px; border: 1px solid var(--line); border-radius: 4px; padding: 0 7px; background: white; }
+.usage-example-chart { margin: 8px 0 44px; padding: 26px 28px 20px; border: 1px solid var(--line); background: linear-gradient(135deg, rgba(232, 246, 239, .78), rgba(255, 253, 244, .92)); }
+.usage-example-heading { display: flex; align-items: end; justify-content: space-between; gap: 28px; }
+.usage-example-heading .section-kicker { margin-bottom: 7px; }
+.usage-example-heading h3 { margin: 0; color: var(--green-dark); font-size: clamp(1.35rem, 2.1vw, 1.8rem); }
+.usage-example-heading > p { max-width: 410px; margin: 0; color: var(--muted); font-size: .8rem; line-height: 1.7; }
+.usage-bars { height: 230px; margin: 26px 0 14px; padding: 0 12px; display: grid; grid-template-columns: repeat(6, minmax(60px, 1fr)); align-items: end; gap: 17px; border-bottom: 1px solid #9eaa9f; }
+.usage-bar-item { height: 100%; min-width: 0; display: grid; grid-template-rows: auto 1fr auto; align-items: end; gap: 8px; text-align: center; }
+.usage-bar-item strong { color: var(--green-dark); font-size: clamp(.68rem, 1.3vw, .84rem); white-space: nowrap; }
+.usage-bar-track { height: 165px; display: flex; align-items: end; border-inline: 1px solid rgba(31, 74, 56, .08); background: repeating-linear-gradient(to top, transparent 0 40px, rgba(31, 74, 56, .10) 40px 41px); }
+.usage-bar-track span { width: 100%; min-height: 4px; display: block; background: linear-gradient(180deg, #f0c748, #b58408); box-shadow: 0 -4px 14px rgba(181, 132, 8, .22); }
+.usage-bar-item:nth-child(3) .usage-bar-track span { background: linear-gradient(180deg, #75c7e9, #2388bd); box-shadow: 0 -4px 14px rgba(35, 136, 189, .18); }
+.usage-bar-item > span { color: var(--muted); font-size: .76rem; font-weight: 750; }
+.usage-example-chart figcaption { color: var(--muted); font-size: .75rem; line-height: 1.65; }
 .pricing-table-wrap { overflow-x: auto; border-block: 1px solid #bcb49f; background: rgba(255, 255, 255, .82); }
 .pricing-table { width: 100%; min-width: 880px; border-collapse: collapse; font-size: .82rem; }
 .pricing-table th, .pricing-table td { padding: 17px 15px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: middle; }
@@ -444,6 +457,7 @@ footer small { grid-column: 1 / -1; color: var(--muted); }
   .guide-provider-list { position: static; grid-template-columns: repeat(3, 1fr); }
   .pdf-guide-heading { flex-direction: column; gap: 8px; }
   .pricing-heading { grid-template-columns: 1fr; gap: 0; }
+  .usage-example-heading { align-items: flex-start; flex-direction: column; gap: 10px; }
   .important-summary { grid-template-columns: 1fr; }
   .market-price-card { width: 100%; max-width: 360px; margin: -18px 0 28px; }
   .exchange-control { width: 230px; margin: -20px 0 28px; }
@@ -485,6 +499,10 @@ footer small { grid-column: 1 / -1; color: var(--muted); }
   .level-row { grid-template-columns: repeat(3, 1fr); }
   .level-row span { grid-column: 1 / -1; }
   .exchange-control { width: 100%; }
+  .usage-example-chart { margin-inline: -2px; padding: 22px 14px 17px; }
+  .usage-bars { height: 205px; gap: 7px; padding: 0 2px; }
+  .usage-bar-track { height: 145px; }
+  .usage-bar-item strong { font-size: .63rem; }
   .pricing-table-wrap { margin-inline: -18px; padding-left: 18px; }
   .pricing-table { min-width: 820px; }
   .faq-groups { gap: 46px; }

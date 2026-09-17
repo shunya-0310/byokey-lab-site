@@ -153,6 +153,15 @@ const pricingAssumption = {
   ttsAudioOutputPrice: 20,
 };
 
+const monthlyUsageExample = [
+  { month: "4月", yen: 1500 },
+  { month: "5月", yen: 2200 },
+  { month: "6月", yen: 300 },
+  { month: "7月", yen: 3100 },
+  { month: "8月", yen: 2400 },
+  { month: "9月", yen: 1800 },
+];
+
 const cefrProfiles = {
   A1: "短い文と基本語彙を中心に、日本語の助けも多めにします。",
   A2: "身近な話題を自然な短文で続け、必要なときだけ日本語で補助します。",
@@ -662,7 +671,7 @@ function PricingSimulator() {
         <div className="section-intro">
           <p className="section-kicker"><BadgeDollarSign size={17} /> API COST</p>
           <h2>費用は使った分だけ。<br />予算上限を決めて使う。</h2>
-          <p>下記は、毎日10往復または50往復を30日間続けた場合の高めの月額目安です。会話は1往復あたり入力約1,500トークン・課金対象出力約2,800トークンとして計算しています。TTS込みの行では、毎回コーチの返答をGemini 3.1 Flash TTSで約30秒読み上げるケースも加算しています。</p>
+          <p>下記は、毎日10往復または50往復を30日間続けた場合の高めの月額目安です。会話は1往復あたり入力約1,500トークン・課金対象出力約2,800トークンとして計算しています。TTS（Text-to-Speech：Geminiの音声出力機能）込みの行では、毎回コーチの返答をGemini 3.1 Flash TTSで約30秒読み上げるケースも加算しています。</p>
         </div>
         <div className="market-price-card" aria-label="一般的なAI英会話アプリの月額相場">
           <span>一般的なAI英会話アプリの月額相場</span>
@@ -674,10 +683,26 @@ function PricingSimulator() {
           <span className="exchange-input"><strong>$1 =</strong><input id="yen-rate" type="number" min="80" max="300" step="1" value={yenRate} onChange={(event) => setYenRate(Math.min(300, Math.max(80, Number(event.target.value) || 160)))} /><strong>円</strong></span>
         </label>
       </div>
+      <figure className="usage-example-chart">
+        <div className="usage-example-heading">
+          <div><p className="section-kicker">USAGE EXAMPLE</p><h3>使った月だけ、料金も変わる。</h3></div>
+          <p>説明用の利用例です。毎月定額ではなく、会話量に応じて料金が上下します。</p>
+        </div>
+        <div className="usage-bars" role="img" aria-label="4月1,500円、5月2,200円、6月300円、7月3,100円、8月2,400円、9月1,800円の利用料金例を示す棒グラフ">
+          {monthlyUsageExample.map((item) => (
+            <div className="usage-bar-item" key={item.month}>
+              <strong>¥{item.yen.toLocaleString("ja-JP")}</strong>
+              <div className="usage-bar-track"><span style={{ height: `${(item.yen / 3100) * 100}%` }} /></div>
+              <span>{item.month}</span>
+            </div>
+          ))}
+        </div>
+        <figcaption>会話の回数や、Geminiの音声出力を使う頻度によって、月ごとのAPI利用料は変わります。</figcaption>
+      </figure>
       <div className="pricing-table-wrap" tabIndex="0" aria-label="モデル別API料金表。横方向にスクロールできます。">
         <table className="pricing-table">
           <thead>
-            <tr><th>会話・読み上げの構成</th><th>会話API単価 / 100万token</th><th>Gemini TTSの加算</th><th>高めの月額目安<br />毎日10往復 × 30日</th><th>高めの月額目安<br />毎日50往復 × 30日</th></tr>
+            <tr><th>会話・読み上げの構成</th><th>会話API単価 / 100万token</th><th>Gemini TTS（音声出力）の加算</th><th>高めの月額目安<br />毎日10往復 × 30日</th><th>高めの月額目安<br />毎日50往復 × 30日</th></tr>
           </thead>
           <tbody>
             {pricingModels.map((model) => {
@@ -900,9 +925,9 @@ function SpeakPage({ onNavigate }) {
           <div>
             <p className="section-kicker">RELEASE</p>
             <h2>BYOKey Speakを選んで始める。</h2>
-            <p>登録不要のPWA体験版と、フル機能のAndroid製品版を用意しています。利用前に重要事項とAPI設定ガイドを確認し、専用キーと利用上限を設定したうえでお使いください。</p>
+            <p>ブラウザ利用の体験版と、フル機能のAndroid製品版を用意しています。利用前に重要事項とAPI設定ガイドを確認し、専用キーと利用上限を設定したうえでお使いください。</p>
             <div className="install-steps">
-              <strong>ホーム画面に追加して使う</strong>
+              <strong>体験版をホーム画面に追加して使う</strong>
               <ol>
                 <li>SafariまたはChromeでBYOKey Speakを開く。</li>
                 <li>iPhoneは共有ボタン、Androidはメニューから「ホーム画面に追加」を選ぶ。</li>
@@ -911,7 +936,7 @@ function SpeakPage({ onNavigate }) {
             </div>
           </div>
           <div className="release-actions">
-            <a className="button button-dark" href={speakAppUrl} target="_blank" rel="noreferrer">PWA体験版を開く<ExternalLink size={18} /></a>
+            <a className="button button-dark" href={speakAppUrl} target="_blank" rel="noreferrer">体験版（ブラウザ）を開く<ExternalLink size={18} /></a>
             <a className="button button-primary" href={playStoreUrl} target="_blank" rel="noreferrer">Android製品版を見る<ExternalLink size={18} /></a>
             <InternalLink className="button button-secondary" to="/guide/api/" onNavigate={onNavigate}>API設定ガイド<ArrowRight size={18} /></InternalLink>
             <InternalLink className="text-link" to="/important/" onNavigate={onNavigate}>重要事項を見る<ArrowRight size={17} /></InternalLink>
