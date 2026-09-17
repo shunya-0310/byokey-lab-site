@@ -29,7 +29,6 @@ import {
   ShieldCheck,
   Smartphone,
   Sparkles,
-  Volume2,
   X,
   Zap,
 } from "lucide-react";
@@ -139,21 +138,19 @@ function ByokAppDiagram() {
 }
 
 const pricingModels = [
-  { provider: "Google", model: "Gemini 3.1 Flash-Lite", input: 0.25, output: 1.5, recommended: true },
-  { provider: "Google", model: "Gemini 2.5 Flash", input: 0.3, output: 2.5, lifecycle: "2026年10月16日以降停止予定" },
-  { provider: "Google", model: "Gemini 3.5 Flash", input: 1.5, output: 9, quality: true },
-  { provider: "OpenAI", model: "GPT-5.4 nano", input: 0.2, output: 1.25, review: true },
-  { provider: "OpenAI", model: "GPT-5.4 mini", input: 0.75, output: 4.5, review: true },
-  { provider: "OpenAI", model: "GPT-5.5", input: 5, output: 30, review: true },
-  { provider: "Anthropic", model: "Claude Haiku 4.5", input: 1, output: 5 },
-  { provider: "Anthropic", model: "Claude Sonnet 5", input: 2, output: 10, lifecycle: "2026年8月31日までの導入価格" },
-  { provider: "Anthropic", model: "Claude Sonnet 4.6", input: 3, output: 15 },
-  { provider: "Anthropic", model: "Claude Opus 4.8", input: 5, output: 25 },
+  { model: "Gemini 3.1 Flash-Lite", input: 0.25, output: 1.5, tts: false },
+  { model: "Gemini 3.1 Flash-Lite + Gemini 3.1 Flash TTS", input: 0.25, output: 1.5, tts: true, recommended: true },
+  { model: "Gemini 3.5 Flash-Lite + Gemini 3.1 Flash TTS", input: 0.3, output: 2.5, tts: true },
+  { model: "Gemini 3.6 Flash + Gemini 3.1 Flash TTS", input: 0.75, output: 4.5, tts: true, quality: true },
 ];
 
 const pricingAssumption = {
   inputTokensPerTurn: 1500,
   billedOutputTokensPerTurn: 2800,
+  ttsInputTokensPerTurn: 350,
+  ttsAudioTokensPerTurn: 750,
+  ttsInputPrice: 1,
+  ttsAudioOutputPrice: 20,
 };
 
 const cefrProfiles = {
@@ -547,7 +544,7 @@ function SpeakFeatureBand() {
     {
       icon: MessageCircle,
       title: "体験版でも会話を始められる",
-      body: "PWA体験版では、Geminiによる英会話、Quick Assist、端末の音声入力・読み上げを無料で試せます。",
+      body: "ブラウザの体験版では、APIを利用した英会話、ボキャブラリーリストへの自動登録など一部の機能を試せます。",
     },
     {
       icon: Sparkles,
@@ -557,7 +554,7 @@ function SpeakFeatureBand() {
     {
       icon: CheckCircle2,
       title: "製品版で学習を深める",
-      body: "Android製品版では、Daily News、会話分析、CEFR B1〜C2、Gemini TTSを利用できます。",
+      body: "Android製品版では、Daily News、会話分析（発音分析は含まない）、中上級の英会話（CEFR B1〜C2相当）を利用できます。",
     },
   ];
 
@@ -645,28 +642,15 @@ function QuickAssistCard({ compact = false }) {
   );
 }
 
-function ConversationPreview() {
-  return (
-    <div className="conversation-preview">
-      <div className="conversation-header">
-        <div><strong>Daily Conversation</strong></div>
-        <button className="icon-button" type="button" aria-label="読み上げ"><Volume2 size={19} /></button>
-      </div>
-      <div className="chat-message coach-message">
-        <div className="avatar coach-avatar">C</div>
-        <div><span>Coach</span><p>That sounds like a great trip! What did you enjoy the most in Kyoto?</p></div>
-      </div>
-      <QuickAssistCard />
-      <div className="chat-composer"><span>英語でも日本語でも入力できます</span><Mic size={19} /><Send size={19} /></div>
-    </div>
-  );
-}
-
 function PricingSimulator() {
   const [yenRate, setYenRate] = useState(160);
   const monthlyCost = (model, turnsPerDay) => {
     const turns = turnsPerDay * 30;
-    const usd = ((turns * pricingAssumption.inputTokensPerTurn * model.input) + (turns * pricingAssumption.billedOutputTokensPerTurn * model.output)) / 1_000_000;
+    const conversationUsd = ((turns * pricingAssumption.inputTokensPerTurn * model.input) + (turns * pricingAssumption.billedOutputTokensPerTurn * model.output)) / 1_000_000;
+    const ttsUsd = model.tts
+      ? ((turns * pricingAssumption.ttsInputTokensPerTurn * pricingAssumption.ttsInputPrice) + (turns * pricingAssumption.ttsAudioTokensPerTurn * pricingAssumption.ttsAudioOutputPrice)) / 1_000_000
+      : 0;
+    const usd = conversationUsd + ttsUsd;
     return { usd, yen: Math.round(usd * yenRate) };
   };
   const formatUsd = (amount) => amount < 0.01 ? "<$0.01" : `$${amount.toFixed(2)}`;
@@ -678,7 +662,7 @@ function PricingSimulator() {
         <div className="section-intro">
           <p className="section-kicker"><BadgeDollarSign size={17} /> API COST</p>
           <h2>費用は使った分だけ。<br />予算上限を決めて使う。</h2>
-          <p>下記は、毎日10往復または50往復を30日間続けた場合の高めの月額目安です。1往復を「入力約1,500トークン」と「思考トークンを含む課金対象出力約2,800トークン」として計算しています。</p>
+          <p>下記は、毎日10往復または50往復を30日間続けた場合の高めの月額目安です。会話は1往復あたり入力約1,500トークン・課金対象出力約2,800トークンとして計算しています。TTS込みの行では、毎回コーチの返答をGemini 3.1 Flash TTSで約30秒読み上げるケースも加算しています。</p>
         </div>
         <div className="market-price-card" aria-label="一般的なAI英会話アプリの月額相場">
           <span>一般的なAI英会話アプリの月額相場</span>
@@ -693,20 +677,18 @@ function PricingSimulator() {
       <div className="pricing-table-wrap" tabIndex="0" aria-label="モデル別API料金表。横方向にスクロールできます。">
         <table className="pricing-table">
           <thead>
-            <tr><th>プロバイダー</th><th>モデル</th><th>API単価 / 100万token</th><th>高めの月額目安<br />毎日10往復 × 30日</th><th>高めの月額目安<br />毎日50往復 × 30日</th></tr>
+            <tr><th>会話・読み上げの構成</th><th>会話API単価 / 100万token</th><th>Gemini TTSの加算</th><th>高めの月額目安<br />毎日10往復 × 30日</th><th>高めの月額目安<br />毎日50往復 × 30日</th></tr>
           </thead>
           <tbody>
-            {pricingModels.map((model, index) => {
+            {pricingModels.map((model) => {
               const light = monthlyCost(model, 10);
               const heavy = monthlyCost(model, 50);
-              const firstOfProvider = index === 0 || pricingModels[index - 1].provider !== model.provider;
-              const providerCount = pricingModels.filter((item) => item.provider === model.provider).length;
               const recommended = model.recommended;
               return (
-                <tr className={recommended ? "is-recommended" : ""} key={`${model.provider}-${model.model}`}>
-                  {firstOfProvider && <th className={`price-provider price-${model.provider.toLowerCase()}`} scope="rowgroup" rowSpan={providerCount}>{model.provider}</th>}
+                <tr className={recommended ? "is-recommended" : ""} key={model.model}>
                   <th scope="row"><span>{model.model}</span>{recommended && <small className="recommend-label"><Crown size={14} />推奨</small>}{model.quality && <small className="quality-label">品質重視</small>}{model.lifecycle && <small className="lifecycle-label">{model.lifecycle}</small>}{model.review && <small>PWA版は非対応</small>}</th>
                   <td><span>入力 ${model.input}</span><span>出力 ${model.output}</span></td>
+                  <td>{model.tts ? <><span>入力 $1.00</span><span>音声出力 $20.00</span><small>毎回約30秒の読み上げを想定</small></> : <span>端末の読み上げを利用</span>}</td>
                   <td><strong>{recommended && <Crown size={18} aria-hidden="true" />}{formatYen(light.yen)}</strong><small>{formatUsd(light.usd)}</small></td>
                   <td><strong>{recommended && <Crown size={18} aria-hidden="true" />}{formatYen(heavy.yen)}</strong><small>{formatUsd(heavy.usd)}</small></td>
                 </tr>
@@ -715,10 +697,10 @@ function PricingSimulator() {
           </tbody>
         </table>
       </div>
-      <p className="recommendation-note"><Crown size={18} />英会話の標準利用には、現行の安定版で低コストなGemini 3.1 Flash-Liteを推奨します。より細かな添削や複雑な指示を重視する場合はGemini 3.5 Flashも選べます。</p>
+      <p className="recommendation-note"><Crown size={18} />Gemini TTSを使う場合でも、英会話の標準利用にはGemini 3.1 Flash-Liteとの組み合わせを推奨します。</p>
       <div className="pricing-notes">
-        <p><CircleHelp size={18} /><span><strong>試算に含まれないもの</strong> 音声API、税、為替手数料、再送、さらに長い会話履歴、検索などの追加機能。実額は各社の請求画面で確認してください。</span></p>
-        <p><RotateCcw size={18} /><span><strong>2026年7月30日確認</strong> Gemini 2.5 Flashは利用できますが、Googleは2026年10月16日を最短停止日として案内しています。<a href="https://ai.google.dev/gemini-api/docs/deprecations" target="_blank" rel="noreferrer">提供終了予定</a>と<a href="https://ai.google.dev/gemini-api/docs/pricing" target="_blank" rel="noreferrer">Google料金</a>・<a href="https://developers.openai.com/api/docs/pricing" target="_blank" rel="noreferrer">OpenAI料金</a>・<a href="https://platform.claude.com/docs/en/about-claude/pricing" target="_blank" rel="noreferrer">Anthropic料金</a>の公式情報が正本です。</span></p>
+        <p><CircleHelp size={18} /><span><strong>試算に含まれないもの</strong> 税、為替手数料、再送、さらに長い会話履歴、検索などの追加機能。TTSを使う頻度や発話時間でも金額は変わります。実額はGoogle AI Studioの請求画面で確認してください。</span></p>
+        <p><RotateCcw size={18} /><span><strong>2026年9月16日確認</strong> 単価は有料枠の標準リクエストをもとにしています。Gemini 3.1 Flash TTSの単価は入力$1.00・音声出力$20.00（各100万トークン）です。モデルの提供状況と単価は変動するため、<a href="https://ai.google.dev/gemini-api/docs/pricing" target="_blank" rel="noreferrer">Google料金</a>の公式情報を正本とします。</span></p>
       </div>
     </section>
   );
@@ -794,7 +776,8 @@ const faqGroups = [
     icon: KeyRound,
     items: [
       ["ChatGPT PlusやClaude Proの契約は使えますか？", "使えません。ChatGPT、Claude、Geminiの一般向け月額プランと開発者向けAPIは別のサービス・別会計です。各社の開発者向け画面でAPIキーとAPIの支払い設定を用意します。"],
-      ["クレジットカード登録は必須ですか？", "有料APIを利用する場合は原則必要です。Geminiは一部モデルに無料枠がありますが、利用上限とデータ利用条件が有料枠と異なります。OpenAIとAnthropicは通常、支払い方法を登録してプリペイドクレジットを購入してから使います。"],
+      ["クレジットカード登録は必須ですか？", "Gemini APIの無料枠だけを使う場合は、必ずしも支払い設定は必要ありません。有料枠を使う場合は、Google AI Studioで請求先を設定します。現在はプリペイド方式が順次導入されており、対象アカウントでは事前にクレジットを購入して使います。画面の案内に従って設定してください。"],
+      ["プリペイド方式では、どのように費用を管理しますか？", "Google AI StudioのBilling画面で、残高・利用明細を確認できます。プリペイド残高が0になると、同じ請求先に紐づくGemini APIの利用は止まります。必要なら自動チャージと月間の自動チャージ上限を設定できます。購入済みクレジットには有効期限や返金条件があるため、購入前にGoogleの案内を確認してください。"],
       ["API利用料は毎月固定ですか？", "固定ではありません。モデル、入出力トークン数、会話履歴の長さ、再試行、追加機能で変わります。料金表は比較のための試算で、BYOKey Labが請求する金額ではありません。"],
       ["APIキーを入力すると、その場で課金されますか？", "入力しただけでは通常は課金されません。接続テストや会話でAPIリクエストが成功すると、各社の料金体系に従って利用量が発生します。"],
       ["キーが使えなくなったらどうしますか？", "残高不足、利用上限、無効化、モデル名の変更、地域制限などが考えられます。まずプロバイダーのUsage・Billing・API Keys画面を確認し、その後アプリの接続テストを行います。"],
@@ -807,7 +790,7 @@ const faqGroups = [
     items: [
       ["オフラインでも会話できますか？", "会話履歴や設定は端末内で確認できますが、AIから回答を生成するにはインターネット接続が必要です。"],
       ["日本語を混ぜても大丈夫ですか？", "はい。英語が出てこない部分を日本語で尋ね、Quick Assistで文脈に合う英語を提案できます。入力中の文章を消さずに必要な表現だけを追加します。"],
-      ["端末を変えたときに履歴やキーは引き継がれますか？", "PWA版の初期方針では、APIキーを自動同期しません。履歴の保存や移行機能を提供する場合も、APIキーは含めず、新しいブラウザで再入力してもらいます。"],
+      ["端末を変えたときに履歴やキーは引き継がれますか？", "体験版・Android製品版ともに、履歴や設定を自動では引き継ぎません。端末内に保存したバックアップを、移行先で復元する方法を利用してください。APIキーはバックアップに含まれないため、移行先であらためて入力が必要です。"],
       ["ブラウザのデータを削除するとどうなりますか？", "ブラウザに保存された設定、履歴、APIキーは削除されます。Google Gemini APIへ送信済みのデータは、Google側の保持方針に従います。"],
       ["問い合わせ先はどこですか？", `お問い合わせフォーム（${contactFormUrl}）からお願いします。APIキー、プロバイダーの秘密情報、支払い情報は送信しないでください。`],
     ],
@@ -866,15 +849,19 @@ function SpeakPage({ onNavigate }) {
             <p className="eyebrow"><Zap size={17} /> BYOK英会話アプリ</p>
             <h1 className="speak-title"><span className="title-byokey">BYOKey</span><span className="title-speak">Speak</span><span className="title-for">for</span><span className="title-english">English</span></h1>
             <p className="hero-lead">費用は使った分だけ。</p>
-            <p className="hero-copy">英語が出てこないときは、日本語のまま聞く。Quick Assistが自然な表現を提案し、<strong className="underlined-copy">会話の流れを止めません。</strong></p>
+            <p className="hero-copy">AI英会話アプリに料金革命。コーチの話し方、添削の仕方、性格も、すべて<strong className="underlined-copy">あなたの言葉で</strong>指定する。BYOKだから実現できる、新しいAI英会話です。</p>
             <div className="hero-actions">
-              <a className="button button-primary" href={speakAppUrl} target="_blank" rel="noreferrer"><Play size={18} fill="currentColor" />PWA体験版を使う</a>
+              <a className="button button-primary" href={speakAppUrl} target="_blank" rel="noreferrer"><Play size={18} fill="currentColor" />体験版を使う（ブラウザ）</a>
               <a className="button button-dark" href={playStoreUrl} target="_blank" rel="noreferrer"><Smartphone size={18} />Android製品版を見る</a>
               <InternalLink className="button button-secondary" to="/guide/api/" onNavigate={onNavigate}><BookOpen size={18} />API設定ガイド</InternalLink>
             </div>
-            <p className="fine-print"><strong>PWA版は無料の体験版です。</strong> Gemini API利用料はGoogleから直接請求されます。</p>
+            <p className="fine-print">体験版の利用にもAPIキーの設定が必要です。Gemini API利用料はGoogleから直接請求されます。</p>
           </div>
-          <ConversationPreview />
+          <div className="hero-coach-visual">
+            <p className="hero-visual-kicker">COACH SKILLS</p>
+            <CoachSettingsPreview />
+            <p>コーチへの希望を、選択肢ではなく自分の言葉で書けます。</p>
+          </div>
         </section>
         <TrustBand />
         <SpeakFeatureBand />
@@ -896,7 +883,7 @@ function SpeakPage({ onNavigate }) {
           <div className="coach-copy">
             <p className="section-kicker">YOUR COACH</p>
             <h2>レベルも、話し方も、自分で決める。</h2>
-            <p>PWA体験版ではCEFR A1〜A2、Android製品版ではA1〜C2から、語彙や文の長さを調整できます。さらに「Coach Personalities & Skills」へ希望を書くと、解説の仕方や会話のテンポも変えられます。</p>
+            <p>体験版では初級レベル（CEFR A1〜A2相当）、Android製品版では上級レベル（C2相当）まで、語彙や文の長さを調整できます。さらに「Coach Personalities & Skills」へ希望を書くと、解説の仕方や会話のテンポも変えられます。</p>
           </div>
           <CoachSettingsDemo />
         </section>
@@ -904,8 +891,8 @@ function SpeakPage({ onNavigate }) {
         <section className="edition-comparison" aria-labelledby="edition-comparison-title">
           <div className="section-intro"><p className="section-kicker">EDITIONS</p><h2 id="edition-comparison-title">まずは体験。続けるなら製品版へ。</h2><p>どちらもGemini APIキーを利用者自身で設定するBYOK方式です。アプリ利用料とGemini API利用料は別で、API利用料はGoogleから直接請求されます。</p></div>
           <div className="edition-grid">
-            <article><p className="edition-label">FREE</p><h3>PWA体験版</h3><p>ブラウザから登録不要で使えます。</p><ul><li><Check size={16} />Geminiテキスト会話・Quick Assist</li><li><Check size={16} />端末の音声入力・読み上げ</li><li><Check size={16} />CEFR A1〜A2、Vocabulary、学習記録</li><li><X size={16} />Daily News・会話分析・Gemini TTS</li></ul><a className="button button-secondary" href={speakAppUrl} target="_blank" rel="noreferrer">ブラウザで体験版を使う<ExternalLink size={18} /></a></article>
-            <article className="is-featured"><p className="edition-label">ANDROID / ¥500</p><h3>Android製品版</h3><p>学習を続けるためのフル機能版です。</p><ul><li><Check size={16} />PWA体験版の全機能</li><li><Check size={16} />Daily News・会話分析</li><li><Check size={16} />CEFR A1〜C2・Gemini TTS</li><li><Check size={16} />Google Playからインストール</li></ul><a className="button button-primary" href={playStoreUrl} target="_blank" rel="noreferrer">Google Playで製品版を見る<ExternalLink size={18} /></a></article>
+            <article><p className="edition-label">FREE</p><h3>体験版（ブラウザ）</h3><p>ブラウザからインストール不要で使えます。</p><ul><li><Check size={16} />Gemini APIを利用した会話・Quick Assist</li><li><Check size={16} />端末またはGemini音声による読み上げ、音声入力</li><li><Check size={16} />初級レベル（CEFR A1〜A2相当）、Vocabulary、学習記録</li><li><Check size={16} />Daily News・会話分析</li></ul><a className="button button-secondary" href={speakAppUrl} target="_blank" rel="noreferrer">ブラウザで体験版を使う<ExternalLink size={18} /></a></article>
+            <article className="is-featured"><p className="edition-label">ANDROID / ¥500</p><h3>Android製品版</h3><p>学習を続けるためのフル機能版です。</p><ul><li><Check size={16} />体験版の全機能</li><li><Check size={16} />Daily News・会話分析</li><li><Check size={16} />上級まで対応（CEFR A1〜C2相当）</li><li><Check size={16} />Google Playからインストール</li></ul><a className="button button-primary" href={playStoreUrl} target="_blank" rel="noreferrer">Google Playで製品版を見る<ExternalLink size={18} /></a></article>
           </div>
         </section>
         <FaqSection onNavigate={onNavigate} />
