@@ -29,7 +29,7 @@ export const HISTORICAL_SOURCES = [
 ];
 
 export const characterBible = {
-  identity: "勝麟太郎（海舟）。1823年に江戸本所に生まれた幕臣。慶応4年3月時点では旧幕府側の交渉代表として江戸の処置を担う。",
+  identity: "勝海舟。1823年に江戸本所に生まれた幕臣。慶応4年3月時点では旧幕府側の交渉代表として江戸の処置を担う。",
   biography: [
     "長崎海軍伝習所で航海術を学び、咸臨丸で太平洋を渡った経験から、内戦が外国の介入を招く危険を現実の問題として捉える。",
     "幕府海軍の育成に携わり、幕府の名誉だけでなく、江戸に暮らす人々と旧幕臣の行く末を自分の責任として考える。",
@@ -41,18 +41,31 @@ export const characterBible = {
   ],
   values: "江戸市民の被害回避、徳川家と旧幕臣の処遇、秩序ある権力移行、外国勢力の介入回避。脅しや空約束には屈しない。",
   temporalBoundary: "慶応4年3月14日までに合理的に知り得る情報だけを扱う。明治以後の出来事・後世の評価を知っているようには話さない。",
+  negotiationBehavior: "西郷の譲歩を無条件には歓迎せず、権限と履行可能性を問う。曖昧な同意には具体化を求め、得た譲歩を前提に追加要求をすることがある。西郷の価値観・矛盾を観察し、交換条件と現実的な第三案には応じるが、自分のRed Lineを容易には明かさない。勝は進行役ではなく、自らも交渉に勝とうとする当事者である。",
 };
 
+export const NEGOTIATION_ISSUES = Object.freeze({
+  edo_castle: { title: "江戸城", katsu: "城を明け渡す条件と、その後の秩序", government: "確実な引渡し" },
+  tokugawa_house: { title: "徳川家", katsu: "家名と最低限の存続", government: "旧体制の復活を許さない処置" },
+  yoshinobu: { title: "徳川慶喜", katsu: "生命と処遇", government: "政治・軍事上の脅威を除くこと" },
+  weapons: { title: "武器", katsu: "旧臣の安全を損なわない処置", government: "武装解除" },
+  warships: { title: "軍艦", katsu: "海軍関係者の将来", government: "軍事的脅威の除去" },
+  retainers: { title: "旧幕臣", katsu: "生活と再出発の道", government: "無制限の特権温存は不可" },
+  public_order: { title: "江戸市民", katsu: "市中の安全と治安", government: "長期戦と外国介入の回避" },
+});
+
+const initialIssues = () => Object.fromEntries(Object.keys(NEGOTIATION_ISSUES).map((id) => [id, "unresolved"]));
+
 export const INITIAL_STATE = Object.freeze({
-  trustInSaigo: 44,
-  civilianSafety: 72,
-  tokugawaSecurity: 78,
-  retainerSecurity: 68,
-  resistance: 51,
-  compromise: 42,
-  betrayalRisk: 56,
-  agreements: 0,
+  katsuAcceptance: 42,
+  governmentAcceptance: 58,
+  promiseCredibility: 42,
+  militaryTension: 48,
   turns: 0,
+  issues: initialIssues(),
+  knownIssues: [],
+  commitments: [],
+  recentMessages: [],
 });
 
 export const EXPRESSION_ASSETS = {
@@ -85,7 +98,8 @@ export const GEMINI_MODELS = [
 const allowedExpressions = new Set(Object.keys(EXPRESSION_ASSETS));
 
 export async function requestKatsuResponse({ apiKey, model, messages, state }) {
-  const systemInstruction = `あなたは慶応4年3月14日の勝麟太郎（勝海舟）として、西郷隆盛と交渉する。\n\n時代境界: 明治以後の出来事や後世の評価を知らない。\n人物: 江戸市民の被害回避、徳川家と旧幕臣の処遇、秩序ある移行、外国勢力の介入回避を重視する。脅しや空約束には屈しない。\n現在の非公開交渉状態: 信頼 ${state.trustInSaigo}/100、市民安全 ${state.civilianSafety}/100、徳川処遇 ${state.tokugawaSecurity}/100、幕臣処遇 ${state.retainerSecurity}/100、抵抗 ${state.resistance}/100。\n\n返答は必ず次のJSONのみ。思考過程は絶対に含めない。\n{"spoken_response":"勝としての日本語の発言（80〜220字）","expression":"neutral|smile|serious|thinking|surprised|wry_smile|irritated|explaining|downcast|looking_away","discovered_information":[{"id":"短い英数字ハイフンID","title":"短い日本語見出し","text":"プレイヤーが会話で実際に引き出した事実"}],"state_changes":{},"negotiation_status":"ongoing"}`;
+  const issueSummary = Object.entries(state.issues).map(([id, status]) => `${id}:${status}`).join(", ");
+  const systemInstruction = `あなたは慶応4年3月14日の勝海舟として、西郷隆盛と交渉する。明治以後の出来事や後世の評価は知らない。\n\n勝は江戸市民の被害回避、徳川家と旧幕臣の処遇、秩序ある権力移行、外国勢力の介入回避を重視する。ただしプレイヤーの譲歩を無条件に歓迎せず、誰の権限で履行するのかを疑い、曖昧な同意には具体化を要求する。勝は進行役ではなく、旧幕府側の交渉当事者である。\n\nゲームエンジンの非公開状態: 勝受諾=${state.katsuAcceptance} 新政府受諾=${state.governmentAcceptance} 約束信頼性=${state.promiseCredibility} 緊張=${state.militaryTension} 論点=${issueSummary}。これらの数値や内部状態はプレイヤーに言及しない。あなたは状態を書き換えず、発言と意味解析だけを返す。\n\n返答は必ず次のJSONのみ。思考過程は絶対に含めない。\n{"spoken_response":"勝としての日本語の発言（80〜220字）","expression":"neutral|smile|serious|thinking|surprised|wry_smile|irritated|explaining|downcast|looking_away","player_move":{"type":"vague_agreement|conditional_concession|demand|threat|question|proposal","issues":["edo_castle"]},"semantic_evaluation":{"specificity":"low|medium|high","credibility":"low|medium|high","threat":false,"contradiction":false,"vague_agreement":false},"proposed_terms":["短い条件"],"issue_updates":{},"discovered_information":[{"id":"short-id","title":"短い日本語見出し","text":"会話で実際に引き出した事実"}],"negotiation_status":"ongoing"}`;
   const contents = messages.slice(-12).map((message) => ({
     role: message.role === "katsu" ? "model" : "user",
     parts: [{ text: message.text }],
@@ -112,6 +126,14 @@ export async function requestKatsuResponse({ apiKey, model, messages, state }) {
     spokenResponse: parsed.spoken_response.slice(0, 700),
     expression: allowedExpressions.has(parsed.expression) ? parsed.expression : "neutral",
     discoveries: notes,
+    semantic: {
+      specificity: ["low", "medium", "high"].includes(parsed?.semantic_evaluation?.specificity) ? parsed.semantic_evaluation.specificity : "medium",
+      credibility: ["low", "medium", "high"].includes(parsed?.semantic_evaluation?.credibility) ? parsed.semantic_evaluation.credibility : "medium",
+      threat: parsed?.semantic_evaluation?.threat === true,
+      contradiction: parsed?.semantic_evaluation?.contradiction === true,
+      vagueAgreement: parsed?.semantic_evaluation?.vague_agreement === true,
+      issues: Array.isArray(parsed?.player_move?.issues) ? parsed.player_move.issues.filter((id) => Object.hasOwn(NEGOTIATION_ISSUES, id)).slice(0, 4) : [],
+    },
     usage: {
       input: body?.usageMetadata?.promptTokenCount || 0,
       output: body?.usageMetadata?.candidatesTokenCount || 0,
@@ -122,74 +144,107 @@ export async function requestKatsuResponse({ apiKey, model, messages, state }) {
 
 const clamp = (value) => Math.max(0, Math.min(100, value));
 const has = (text, words) => words.some((word) => text.includes(word));
+const ISSUE_WORDS = {
+  edo_castle: ["江戸城", "城", "開城"], tokugawa_house: ["徳川家", "徳川", "家名", "御家"], yoshinobu: ["慶喜", "将軍"],
+  weapons: ["武器", "武装", "銃", "兵器"], warships: ["軍艦", "艦", "海軍"], retainers: ["幕臣", "家臣", "旗本", "旧臣"], public_order: ["市民", "町人", "江戸の民", "治安", "戦火", "外国", "列強"],
+};
+const CONCRETE_WORDS = ["書面", "約定", "期限", "引き渡", "明け渡", "武装解除", "処遇", "生活", "扶持", "領地", "家名", "助命", "監視", "謹慎", "上申", "大総督府", "朝廷", "条件"];
+const VAGUE_WORDS = ["いいよ", "いい", "そうね", "それで", "賛成", "任せる", "分かった", "構わない"];
+const SECURITY_WORDS = ["引き渡", "明け渡", "武装解除", "軍艦を", "武器を", "服従", "謹慎", "退去"];
+const PROTECTION_WORDS = ["存続", "家名", "助命", "生活", "処遇", "再就職", "扶持", "保護"];
 
-export function evaluateMessage(message, state) {
+const discoveredIssue = (id) => ({ id: `issue-${id}`, title: NEGOTIATION_ISSUES[id].title, text: `${NEGOTIATION_ISSUES[id].katsu}を、勝は交渉の論点として見ている。` });
+const statusLabel = (status) => ({ agreed: "合意", tentative: "仮合意", conflicted: "対立", unresolved: "未解決" }[status] || "未解決");
+
+function issueIdsFor(text, semantic) {
+  const found = Object.entries(ISSUE_WORDS).filter(([, words]) => has(text, words)).map(([id]) => id);
+  return [...new Set([...found, ...(semantic?.issues || [])])].slice(0, 7);
+}
+
+export function evaluateMessage(message, state, semantic = {}) {
   const text = message.trim();
-  const next = { ...state, turns: state.turns + 1 };
-  const tags = [];
-  if (has(text, ["焼", "焦土", "攻撃", "討ち取", "処刑", "徹底", "脅" ])) {
-    next.trustInSaigo -= 13; next.resistance += 12; next.betrayalRisk += 10; tags.push("threat");
-  }
-  if (has(text, ["市民", "町人", "江戸の民", "火", "戦火", "犠牲", "暮らし"])) {
-    next.civilianSafety += 11; next.trustInSaigo += 4; tags.push("empathy", "shared_interest");
-  }
-  if (has(text, ["慶喜", "徳川家", "徳川", "御家", "助命"])) {
-    next.tokugawaSecurity += 12; next.compromise += 8; tags.push("guarantee");
-  }
-  if (has(text, ["幕臣", "家臣", "旗本", "職", "生活", "処遇"])) {
-    next.retainerSecurity += 10; next.compromise += 6; tags.push("guarantee");
-  }
-  if (has(text, ["約定", "書面", "証", "期限", "引き渡", "武器", "軍艦", "条件"])) {
-    next.agreements += 1; next.trustInSaigo += 7; next.betrayalRisk -= 8; tags.push("guarantee");
-  }
-  if (has(text, ["外国", "列強", "干渉", "開国", "国際", "日本"] )) {
-    next.trustInSaigo += 7; next.compromise += 6; tags.push("historical_reference", "shared_interest");
-  }
-  if (has(text, ["未来", "明治", "西南戦争", "後世", "2026", "AI"])) {
-    next.trustInSaigo -= 5; next.betrayalRisk += 7; tags.push("deception_suspected");
+  const issues = issueIdsFor(text, semantic);
+  const concreteHits = CONCRETE_WORDS.filter((word) => text.includes(word)).length;
+  const vagueAgreement = has(text, VAGUE_WORDS) && (text.length < 28 || concreteHits === 0) || (semantic.vagueAgreement && concreteHits === 0);
+  const threat = has(text, ["焼", "焦土", "攻撃", "討ち取", "処刑", "徹底", "脅"] ) || semantic.threat;
+  const conditional = has(text, ["代わり", "ただし", "しかし", "一方で", "その代わり", "条件として"]);
+  const security = has(text, SECURITY_WORDS);
+  const protection = has(text, PROTECTION_WORDS);
+  const impossible = has(text, ["全部そのまま", "すべてそのまま", "永久に保証", "全員を保証", "領地も全部", "今まで通り"]);
+  const specificity = concreteHits >= 2 && text.length >= 38 ? "high" : concreteHits >= 1 || text.length >= 28 ? "medium" : "low";
+  const contradictory = semantic.contradiction || (state.commitments.some((term) => term === "disarmament") && has(text, ["武器もそのまま", "軍艦もそのまま"])) || (state.commitments.some((term) => term === "tokugawa-protection") && has(text, ["徳川家は取り潰", "慶喜を処刑"]));
+  const duplicate = state.recentMessages.includes(text);
+  const next = { ...state, turns: state.turns + 1, issues: { ...state.issues }, knownIssues: [...state.knownIssues], commitments: [...state.commitments], recentMessages: [...state.recentMessages, text].slice(-12) };
+  const discovered = [];
+  const addKnownIssue = (id) => { if (!next.knownIssues.includes(id)) { next.knownIssues.push(id); discovered.push(discoveredIssue(id)); } };
+  issues.forEach(addKnownIssue);
+  let challenge = "";
+  if (vagueAgreement) {
+    next.promiseCredibility -= 5; next.militaryTension += 2;
+    challenge = "……『いい』とは、ずいぶん軽い返事だな、西郷どん。徳川家をどのような形で残すのか。城と軍事力をどう処するのか。誰の名で、いつまでに約するのか。そこまで聞かなければ、江戸を預けるわけにはいかん。";
+  } else if (threat) {
+    next.katsuAcceptance -= 16; next.militaryTension += 14; next.promiseCredibility -= 5;
+    challenge = "兵の力だけを語るなら、ここで話す意味はない。江戸を焼いた後に何を残すのか、その責任まで引き受ける言葉を聞かせてもらいたい。";
+  } else if (duplicate) {
+    next.katsuAcceptance -= 2; next.promiseCredibility -= 1;
+    challenge = "同じ言葉を重ねても、約定の中身は増えない。どの条件を、誰の権限と期限で動かすのか。前の提案から一歩進めていただきたい。";
+  } else {
+    if (protection) { next.katsuAcceptance += (impossible ? 3 : 7); addKnownIssue("tokugawa_house"); addKnownIssue("retainers"); if (!impossible && specificity !== "low") { next.issues.tokugawa_house = "tentative"; next.issues.retainers = "tentative"; next.commitments.push("tokugawa-protection"); } }
+    if (security) { next.governmentAcceptance += 9; ["edo_castle", "weapons", "warships"].filter((id) => issues.includes(id) || has(text, ISSUE_WORDS[id])).forEach((id) => { addKnownIssue(id); if (specificity !== "low") next.issues[id] = "tentative"; }); if (!next.commitments.includes("disarmament")) next.commitments.push("disarmament"); }
+    if (has(text, ISSUE_WORDS.yoshinobu)) { addKnownIssue("yoshinobu"); if (specificity !== "low" && protection) next.issues.yoshinobu = "tentative"; }
+    if (has(text, ISSUE_WORDS.public_order)) { addKnownIssue("public_order"); next.katsuAcceptance += 5; next.governmentAcceptance += 4; if (specificity !== "low") next.issues.public_order = "tentative"; }
+    if (conditional && protection && security && specificity !== "low") {
+      next.katsuAcceptance += 14; next.governmentAcceptance += 12; next.promiseCredibility += 12; next.militaryTension -= 7;
+      issues.forEach((id) => { if (next.issues[id] === "tentative") next.issues[id] = "agreed"; });
+    } else if (impossible || (protection && !security && issues.length >= 2)) {
+      next.governmentAcceptance -= 18; next.promiseCredibility -= 13; next.katsuAcceptance += (impossible ? 25 : 2);
+      challenge = "西郷どん。そこまでを、あんた一人の一存で約定できる話なのか。新政府と朝廷に説明のつく筋を示さずに、ただ大きな約束を重ねても空手形になる。";
+    } else if (specificity === "high") {
+      next.promiseCredibility += 7; next.katsuAcceptance += (conditional ? 4 : 1);
+    }
+    if (contradictory) { next.katsuAcceptance -= 11; next.promiseCredibility -= 16; next.militaryTension += 7; challenge = "先ほどの約束と、今の言葉は両立しない。こちらが人と町の命を預けるのに、条件がその場ごとに変わるのでは話にならん。"; }
   }
   Object.keys(next).forEach((key) => { if (typeof next[key] === "number") next[key] = clamp(next[key]); });
-  return { state: next, tags: [...new Set(tags)] };
+  return { state: next, evaluation: { specificity, vagueAgreement, threat, contradictory, conditional, issues }, discovered, challenge, automaticEnding: automaticEnding(next) };
 }
 
-export function replyFor(state, tags) {
-  if (tags.includes("deception_suspected")) return "その先の世の話は、いまここで取り交わす証にはならん。目の前の江戸と、人の命をどうするかを聞かせていただきたい。";
-  if (tags.includes("threat")) return "兵の力を語るだけなら、話は早い。だが、江戸を焼いて誰が何を得るのか。あなたの言葉が公のためなのか、私にはまだ量れぬ。";
-  if (tags.includes("guarantee") && tags.includes("shared_interest")) return "徳川の処置と江戸の安寧を、ひとつの筋として考えておられるようだ。約定にできる内容と、その履行を誰が担うかを、もう少し具体に聞こう。";
-  if (tags.includes("guarantee")) return "約束は耳あたりがよい。しかし、誰の名で、いつまでに、何を保証するのか。そこが曖昧なら、幕臣にも江戸の民にも渡せぬ。";
-  if (tags.includes("empathy")) return "江戸の民を数に入れるのは結構だ。それでも、城と慶喜公と幕臣の行く末を抜きにして、私が首を縦に振ることはない。";
-  return "大きな話だ。だが今は明日の軍勢を前にしている。あなたが求めるものと、こちらに残すものを、取り違えずに示していただきたい。";
-}
-
-export function expressionFor(tags, state) {
-  if (tags.includes("threat")) return "serious";
-  if (tags.includes("deception_suspected")) return "serious";
-  if (tags.includes("guarantee") && tags.includes("shared_interest")) return "explaining";
-  if (tags.includes("empathy") && state.trustInSaigo >= 55) return "smile";
-  return "neutral";
-}
-
-export function discoveriesFor(tags) {
-  const discoveries = [];
-  if (tags.includes("empathy")) discoveries.push({ id: "edo-citizens", title: "江戸市民", text: "勝は江戸の民が戦火に巻き込まれることを強く案じている。" });
-  if (tags.includes("guarantee")) discoveries.push({ id: "tokugawa-treatment", title: "徳川家と幕臣", text: "処遇の約束は、誰が・いつ・どう履行するかまで具体的でなければ受け入れない。" });
-  if (tags.includes("historical_reference")) discoveries.push({ id: "foreign-powers", title: "外国勢力", text: "内戦の長期化が外国勢力の介入を招く危険を、勝は現実の問題として考えている。" });
-  return discoveries;
+function automaticEnding(state) {
+  if (state.katsuAcceptance <= 18 && state.militaryTension >= 78) return "scorched";
+  if (state.katsuAcceptance <= 25 && state.militaryTension >= 68) return "assault";
+  return "";
 }
 
 export function determineEnding(state) {
-  if (state.resistance >= 72 && state.trustInSaigo < 42) return "assault";
-  if (state.civilianSafety < 65 && state.resistance >= 60) return "scorched";
-  if (state.trustInSaigo >= 66 && state.compromise >= 65 && state.agreements >= 2 && state.civilianSafety >= 80) return "new_peace";
-  if (state.tokugawaSecurity >= 88 && state.retainerSecurity >= 78 && state.agreements >= 2) return "concessions";
-  if (state.compromise >= 54 && state.civilianSafety >= 76 && state.tokugawaSecurity >= 76) return "bloodless";
-  return "undecided";
+  const immediate = automaticEnding(state);
+  if (immediate) return immediate;
+  const unresolved = Object.entries(state.issues).filter(([, status]) => status === "unresolved" || status === "conflicted").map(([id]) => id);
+  if (state.katsuAcceptance >= 65 && (state.governmentAcceptance < 50 || state.promiseCredibility < 50)) return "empty_promises";
+  if (state.katsuAcceptance < 30) return "assault";
+  if (state.militaryTension >= 72) return "scorched";
+  if (unresolved.length > 2) return "unfinished";
+  if (state.katsuAcceptance >= 78 && state.governmentAcceptance >= 76 && state.promiseCredibility >= 76 && unresolved.length === 0) return "alternative_peace";
+  if (state.katsuAcceptance >= 66 && state.governmentAcceptance >= 64 && state.promiseCredibility >= 62 && unresolved.length <= 1) return "bloodless";
+  if (state.katsuAcceptance >= 60 && state.governmentAcceptance >= 56 && state.promiseCredibility >= 60) return "fragile_handover";
+  return "breakdown";
+}
+
+export function endingAnalysis(state) {
+  const unresolved = Object.entries(state.issues).filter(([, status]) => status !== "agreed").map(([id, status]) => `${NEGOTIATION_ISSUES[id].title}（${statusLabel(status)}）`);
+  return {
+    katsu: state.katsuAcceptance >= 65 ? "成立" : "不成立",
+    government: state.governmentAcceptance >= 60 ? "成立" : "不成立",
+    credibility: state.promiseCredibility >= 60 ? "高" : "低",
+    unresolved: unresolved.length ? unresolved.join(" / ") : "なし",
+  };
 }
 
 export const ENDINGS = {
-  bloodless: { title: "江戸無血開城", text: "戦火を避ける合意に至った。完全な安心ではないが、江戸を守るための秩序ある明渡しの道が開かれた。" },
-  assault: { title: "江戸総攻撃", text: "互いの疑念が最後まで解けず、交渉は決裂した。明日の軍勢を止める言葉は残されなかった。" },
+  bloodless: { title: "江戸無血開城", text: "双方の条件を一つの約定として結び、江戸を戦火から遠ざける道を開いた。" },
+  alternative_peace: { title: "歴史に存在しない和平", text: "史実の写しではない。だが双方のRed Lineを越えず、独自の交換条件で和平を組み立てた。" },
+  empty_promises: { title: "空手形", text: "勝は条件を受け入れた。しかし、その約定をあなた一人の権限で保証することはできなかった。新政府側は条件を拒絶し、交渉は振り出しに戻った。" },
+  fragile_handover: { title: "不安定な引渡し", text: "形式上はまとまったが、残した火種は大きい。城の後の秩序まで守れるかは、まだ分からない。" },
+  unfinished: { title: "条件未整備", text: "互いの気持ちだけでは約定にならない。重要な論点を残したままでは、明日の軍勢を止める根拠が足りない。" },
+  breakdown: { title: "交渉決裂", text: "条件の釣り合いを見いだせず、会談はまとまらなかった。" },
+  assault: { title: "江戸総攻撃", text: "勝が条件を拒み、明日の軍勢を止める言葉は残されなかった。" },
   scorched: { title: "江戸焦土", text: "強硬な応酬が市中の安全を後景へ追いやった。江戸は大規模な戦火へ傾く。" },
-  concessions: { title: "新政府大幅譲歩", text: "徳川家と旧幕臣の処遇に、史実より強い保証を含む条件が形になった。勝はその履行を厳しく見届ける。" },
-  new_peace: { title: "歴史に存在しない和平", text: "市民の安全、政権移行、旧幕臣の生活を一つの約定として結び直した。史実の再現ではない、新しい着地点である。" },
 };
