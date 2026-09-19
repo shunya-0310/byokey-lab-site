@@ -23,6 +23,16 @@ export const seoRoutes = [
     schemaType: "WebPage",
   },
   {
+    path: "/games/edo-1868/",
+    title: "1868 -江戸焦土前夜- | 勝海舟と交渉する歴史AIゲーム | BYOKey Lab",
+    description: "明日、江戸は戦場になる。西郷隆盛として勝海舟と自由に交渉する歴史AIゲーム「1868 -江戸焦土前夜-」。選択肢ではなく、自分の言葉で歴史を動かします。",
+    priority: "0.8",
+    changefreq: "weekly",
+    schemaType: "WebPage",
+    image: "/images/edo-1868/edo-title-bay-v5.png",
+    dateModified: "2026-09-19",
+  },
+  {
     path: "/guide/api/",
     title: "API設定ガイド | BYOKey Lab",
     description:
@@ -175,6 +185,22 @@ export function buildJsonLd(route) {
         priceCurrency: "JPY",
         description: "PWA体験版のアプリ利用料は無料。Gemini API利用料は利用者がGoogleへ直接支払います。",
       },
+    });
+  }
+
+  if (route.path === "/games/edo-1868/") {
+    graph.push({
+      "@type": "VideoGame",
+      "@id": `${pageUrl}#game`,
+      name: "1868 -江戸焦土前夜-",
+      applicationCategory: "GameApplication",
+      operatingSystem: "Web browser",
+      genre: "歴史交渉ゲーム",
+      url: pageUrl,
+      image: absoluteUrl(route.image),
+      description: route.description,
+      inLanguage: "ja",
+      isPartOf: { "@id": `${SITE_URL}/#website` },
     });
   }
 
