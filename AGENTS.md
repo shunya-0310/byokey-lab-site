@@ -20,3 +20,5 @@ When implementing from a selected generated mock, treat that image as the source
 - The home page should include the BYOK app diagram as a browser-friendly image generated from the PDF source, with the original PDF available as a secondary link.
 - The API setup guide page should embed provider-specific PDF guides in the browser for Gemini, OpenAI/GPT, and Claude.
 - Keep Cloudflare deployment and configuration behind explicit user confirmation.
+- On mobile, opening the software keyboard must not shrink or fade the 1868 game's Katsu portrait; preserve the dialogue subject's scale while the player types.
+- In the 1868 game, a negotiation ends only when the player explicitly chooses "決着を求める". A player question must receive a direct, contextual answer from Katsu before the conversation advances.

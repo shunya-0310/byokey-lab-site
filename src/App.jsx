@@ -547,8 +547,7 @@ function Edo1868Page({ onNavigate }) {
     try {
       const result = await requestKatsuResponse({ apiKey: apiKey.trim(), model, messages: [...messages, playerMessage], state });
       const assessed = evaluateMessage(text, state, result.semantic);
-      const spokenResponse = assessed.challenge || result.spokenResponse;
-      setMessages((current) => [...current, playerMessage, { role: "katsu", expression: assessed.challenge ? "serious" : result.expression, text: spokenResponse }]);
+      setMessages((current) => [...current, playerMessage, { role: "katsu", expression: result.expression, text: result.spokenResponse }]);
       setDiscoveries((current) => [...current, ...[...assessed.discovered, ...result.discoveries].filter((item) => !current.some((known) => known.id === item.id))]);
       setApiUsage((current) => ({ input: current.input + result.usage.input, output: current.output + result.usage.output, cached: current.cached + result.usage.cached }));
       setState(assessed.state); setDraft("");
