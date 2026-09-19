@@ -99,7 +99,7 @@ export const GEMINI_MODELS = [
 
 export const INITIAL_DISCOVERIES = Object.freeze([
   { id: "new-government-mandate", title: "新政府側の使命", text: "江戸城を引き渡させ、旧幕府勢力が再び大規模な軍事行動を取れない条件を、新政府側へ持ち帰れる形で整える必要がある。" },
-  { id: "yamaoka-meeting", title: "山岡鉄舟との事前交渉", text: "山岡鉄舟は勝の支持を受けて西郷のもとを訪れ、本会談に先立ち恭順の意思と慶喜の処遇をめぐる交渉を行った。" },
+  { id: "yamaoka-meeting", title: "山岡鉄舟との事前交渉", text: "山岡鉄舟は勝の支持を受け、勝の手紙を携えて駿府の西郷のもとへ赴いた。三月九日の会談では、慶喜助命をめぐる条件が示されたと伝わる。このやり取りが、今夜の薩摩藩邸での会談の前提になっている。" },
 ]);
 
 const allowedExpressions = new Set(Object.keys(EXPRESSION_ASSETS));
