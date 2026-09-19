@@ -1,100 +1,88 @@
 {
   "schemaVersion": 1,
   "status": "live",
-  "date": "2026-09-19",
-  "generatedAt": "2026-09-18T23:18:47.763Z",
+  "date": "2026-09-20",
+  "generatedAt": "2026-09-19T23:06:06.052Z",
   "model": "gemini-3.6-flash",
   "fallbackCategories": [],
   "items": [
     {
-      "id": "2026-09-19-politics_economy",
+      "id": "2026-09-20-politics_economy",
       "category": "politics_economy",
       "categoryLabel": "Politics & Economy",
-      "headline": "Warren Buffett Steps Down as Berkshire Hathaway Chairman",
-      "summary": "Investment titan Warren Buffett has officially stepped down as chairman of Berkshire Hathaway, concluding his management role at the conglomerate he led for decades. His son, Howard Buffett, is taking over as non-executive chairman to help preserve the company's corporate culture alongside chief executive Greg Abel.",
-      "question": "How do you think a major leadership change affects a legendary company's long-term reputation and culture?",
+      "headline": "US, Denmark, and Greenland Reach Arctic Security Agreement",
+      "summary": "U.S. President Donald Trump announced a security pact with Denmark and Greenland that grants the United States permanent control over defense operations in the Arctic territory while maintaining Danish sovereignty. The announcement comes ahead of a formal signing planned for the upcoming United Nations General Assembly meeting in New York.",
+      "question": "How do you think international security agreements in strategic regions like the Arctic affect global relations?",
       "coachLeads": {
-        "friendly": "Hey, have you heard the big news from the business world today? Warren Buffett has officially stepped down as chairman of Berkshire Hathaway.",
-        "energetic": "Huge story in global markets today! The legendary investor Warren Buffett has formally stepped down as chairman of Berkshire Hathaway!",
-        "calm": "There is a notable transition happening in global business today. Warren Buffett has officially stepped down as chairman of Berkshire Hathaway.",
-        "direct": "Warren Buffett has officially stepped down as chairman of Berkshire Hathaway. Let's talk about what this big leadership shift means."
+        "friendly": "Hey, have you heard about the new Arctic security agreement between the U.S., Denmark, and Greenland?",
+        "energetic": "There's major diplomatic news making headlines today as the U.S. reaches a landmark defense deal for Greenland!",
+        "calm": "A significant international development took place today with a new security arrangement for Greenland.",
+        "direct": "The United States has announced a major Arctic security pact with Denmark and Greenland."
       },
       "sources": [
         {
-          "title": "fidelity.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGA5tR6b5Hq2wkvHEyhwpEfL6KiA0qM90Y5qubyfDdN16fFtvJ9pXJZjQAEqNLMkeouE1UEV1Bf0N3NO6WNfMuZmD0A71kxBJJLMgPmTDiRxLGthrFBjoZIZmjvugBQ5yeT2lp1T2Kfj6XvrAi6YkSuqEQR89yqCtmZ6E4mlD4PNlNxlCKge8EOA6hdYIuyE8dt3RI="
+          "title": "Google News: Politics & Economy",
+          "url": "https://news.google.com/search?q=Politics%20%26%20Economy%20top%20news%202026-09-20&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     },
     {
-      "id": "2026-09-19-technology",
+      "id": "2026-09-20-technology",
       "category": "technology",
       "categoryLabel": "Technology",
-      "headline": "NASA Discovers Largest Newly Formed Impact Crater on the Moon",
-      "summary": "NASA announced that its Lunar Reconnaissance Orbiter discovered a 728-foot-wide crater created by a recent space rock impact on the Moon. Released on September 18, 2026, this milestone finding represents the largest newly formed impact crater ever identified by scientists in the solar system.",
-      "question": "What are your thoughts on scientists discovering active new changes happening on the surface of the Moon?",
+      "headline": "Federal Lawsuit Accuses Major Tech Companies of Illegal Deal to Slow AI Progress",
+      "summary": "Four consumers filed a federal antitrust lawsuit in California against OpenAI, Anthropic, Google, and SpaceXAI over alleged agreements to slow artificial intelligence development. The filing is major news today because it claims rival tech leaders violated antitrust laws by coordinating safety-related delays, which allegedly reduces value for paying subscribers.",
+      "question": "Do you think artificial intelligence companies should be allowed to coordinate safety slowdowns, or should competition drive development?",
       "coachLeads": {
-        "friendly": "Hey, have you heard about this latest space news? NASA just spotted a massive new crater on the Moon!",
-        "energetic": "Check this out! Scientists just found a record-breaking new impact crater on the lunar surface!",
-        "calm": "NASA scientists recently made a fascinating space discovery using lunar orbiter images. This is worth taking a quick look at.",
-        "direct": "NASA just confirmed the discovery of the largest newly formed crater on the Moon. Let's discuss why this story is making headlines."
+        "friendly": "Hey, have you heard about this major new lawsuit involving top AI companies? It raises some really interesting questions about tech competition and safety.",
+        "energetic": "This is huge news in the technology world today! Four major AI leaders are being sued for allegedly making a deal to slow down their development.",
+        "calm": "There is a significant legal development in artificial intelligence today. A federal lawsuit accuses major tech firms of coordinating to slow down AI progress.",
+        "direct": "Four leading tech companies are facing a new antitrust lawsuit over AI safety agreements. Let's talk about what this legal challenge means for consumers."
       },
       "sources": [
         {
-          "title": "earthsky.org",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFwpEPKVY6HVH9R9tCYLLzHAHHv8g9QIcmuYIJ2RG_TMzpxxZnroV1Fwp2Ninkue2yn4sjmvzDyrMAABnD6c3tHMKx7nlcgKCJmymXeD9dHs8LRinhmCsm4ZAXZx_Ha3ItIfxjE-LJHmLp87ky1RdZkOdyxgw=="
-        },
-        {
-          "title": "sciencedaily.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGU9BPOmvGD8LmaCcNbgNhjMLKNW7MpPqDEFnXTIEMoiox_d6_aR1U6Fzh9FmcFYTbC1lgrpEOi5lhjpcbhOcrS3uF6BJXsYlIx-oLv270boe_T19Tl5fIEH7Q3HfaTq18DfXmOxmMzzDWVM-EMSIPeLcoyEw=="
+          "title": "Google News: Technology",
+          "url": "https://news.google.com/search?q=Technology%20top%20news%202026-09-20&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     },
     {
-      "id": "2026-09-19-sports",
+      "id": "2026-09-20-sports",
       "category": "sports",
       "categoryLabel": "Sports",
-      "headline": "2026 Asian Games Open in Japan Amid Debates Over Unconventional Lodging",
-      "summary": "The 20th Asian Games officially began on September 19 in Nagoya, Japan, bringing together over 11,000 athletes competing across 43 different sports. Tournament officials defended using a cruise ship and converted shipping containers as lodging to lower event costs following complaints about cramped conditions.",
-      "question": "What do you think about host cities using alternative options like cruise ships and temporary housing to save money during major international sporting events?",
+      "headline": "Brighton Hands Defending Champions Arsenal First Premier League Defeat",
+      "summary": "Brighton & Hove Albion defeated Arsenal 3–0 on Saturday in a major Premier League upset at Amex Stadium. The unexpected result delivered the defending champions their first loss of the season after starting their title defense with four straight wins.",
+      "question": "Why do you think top sports teams sometimes struggle against opponents they are expected to beat?",
       "coachLeads": {
-        "friendly": "Hey there! The Asian Games just kicked off in Japan, and people are already discussing the unique ways organizers are housing the athletes.",
-        "energetic": "Big sports news today! The 2026 Asian Games have officially begun, and the setup for the athletes is super unique!",
-        "calm": "The Asian Games are officially underway in Japan. Organizers took a novel approach to housing thousands of competitors, which has sparked an interesting conversation.",
-        "direct": "The 20th Asian Games started in Japan today. The main story off the field is the organizers' choice to host athletes on a cruise ship and in container housing."
+        "friendly": "Hey, did you catch the big news from English soccer today? Brighton just handed Arsenal their first loss of the season!",
+        "energetic": "You won't believe what happened in the Premier League today! Brighton completely stunned defending champions Arsenal with a 3–0 victory!",
+        "calm": "There was a surprising turn of events in European sports today. Brighton defeated Arsenal 3–0, giving the defending champions their first defeat of the campaign.",
+        "direct": "Brighton defeated defending champions Arsenal 3–0 today. It is Arsenal's first loss of the season, making it the biggest sports story right now."
       },
       "sources": [
         {
-          "title": "clickorlando.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEa_5svA8ysUaNc_mwqb2VCQagnL_2Tkyktubqyjf9z8zqEqJXbT3xNRGTfClSOme2BVQW6zdX1tgm0TcKuD91X-h0V4tO-jmFcro3yA1QOs-SVY18m5pWea0kvuBhdmb3MrNc54D6-4HnQsR8p7xybrHhz2_PkpHMZTX27bOc0VaPuNqq0904CJ2jAEgD6kx1FwoFXbh4o2SkpeISKZ5ZFg0ioGpzxYtETBKgF5cl_6eXzNOuwTU-m"
-        },
-        {
-          "title": "aljazeera.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGdlD8MPnyYdFbvkyeMvavSqHSVSuw_3VAUHDzOAYYnD82cPbczPdFoB-9G9m_60Cu2hio0CLDDhHs0Z3Y8k0sj5nE2e3TUHwpE2lV96vRrJOULXvVCrNlVhyYeiQ8wrY736iy2dafp9eInzFEKp0GwmJJyxORdkfbMzHFQC3EuknmQ_vIM7pxSb92T-8zGSh3PffaUK1__yww3xjTZgJOjYArKlL-MwPM="
-        },
-        {
-          "title": "abs-cbn.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGa5vmYZlbaLEq29X6rdsHEA4DG0xdhDeJJcTJ41o5P4N_2TYM7LUr_fHgZggkcTYM1B8IlseWBS_ueFhNNDvfteC6CeRKbZUSUWvbU_27v9I57wcmYw3JCbmg5hsOaAgDIwSFdrOpnNGkj1WSfJJrNbICrvV6igR_UcxiOCYHq_q6NC3fWw0-2VU4llRalaC8nh-wm9voj_mGhAhX_xYcdCragp4tgX1gcRqunSR5_"
+          "title": "Google News: Sports",
+          "url": "https://news.google.com/search?q=Sports%20top%20news%202026-09-20&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     },
     {
-      "id": "2026-09-19-entertainment",
+      "id": "2026-09-20-entertainment",
       "category": "entertainment",
       "categoryLabel": "Entertainment",
-      "headline": "New Resident Evil Movie Reboot Sets Franchise Box Office Record",
-      "summary": "Director Zach Cregger's new Resident Evil film reboot earned $8.8 million in Thursday previews, setting up a record-breaking opening weekend projected to cross $50 million. Strong critical reviews have sparked widespread audience enthusiasm and revitalized the long-running video game film series.",
-      "question": "What do you think makes video game film adaptations so popular with audiences lately?",
+      "headline": "Zach Cregger's Resident Evil Reboot Breaks Franchise Box Office Record",
+      "summary": "Sony's new live-action Resident Evil film earned $26.3 million on its opening day, setting a new box office record for the long-running horror franchise. Directed by Zach Cregger, the movie is now projected to gross over $53 million domestically in its debut weekend following strong critical and audience reception.",
+      "question": "Why do you think video game movie adaptations have become so popular and successful in theaters recently?",
       "coachLeads": {
-        "friendly": "Hey, did you see the big news about the new Resident Evil movie shattering records this weekend?",
-        "energetic": "The new Resident Evil reboot is absolutely exploding at the box office right now!",
-        "calm": "There is a notable shift in cinema news today as the Resident Evil reboot sets new franchise records.",
-        "direct": "The Resident Evil reboot just delivered a record-breaking opening, making it today's biggest film story."
+        "friendly": "Hey, have you heard about the new Resident Evil movie crushing it at the box office? It looks like horror and gaming fans are turning out in huge numbers!",
+        "energetic": "The new Resident Evil reboot just shattered franchise box office records on its opening day! Are you excited to check out this big theatrical release?",
+        "calm": "The latest Resident Evil film is setting new box office milestones this weekend. It makes for an interesting topic if you follow movie or gaming trends.",
+        "direct": "Sony's Resident Evil reboot earned $26.3 million on Friday, marking a record launch for the series. Let's talk about what is driving its success."
       },
       "sources": [
         {
           "title": "Google News: Entertainment",
-          "url": "https://news.google.com/search?q=Entertainment%20top%20news%202026-09-19&hl=en-US&gl=US&ceid=US:en"
+          "url": "https://news.google.com/search?q=Entertainment%20top%20news%202026-09-20&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     }
