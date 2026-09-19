@@ -452,6 +452,7 @@ function HomePage({ onNavigate }) {
 function Edo1868Page({ onNavigate }) {
   const apiKeyStorageKey = "byokey-lab:edo-1868:gemini-api-key";
   const gameStorageKey = "byokey-lab:edo-1868:game-save";
+  const gameSaveVersion = 2;
   const openingKatsuMessage = { role: "katsu", expression: "neutral", text: "おう、西郷さん。山岡から話は聞いている。駿府からの道中はどうだった。……さて、明日には軍が動く。城と軍勢をどう始末するつもりか、腹を割って聞かせてもらおう。" };
   const [phase, setPhase] = useState("title");
   const [introStep, setIntroStep] = useState(0);
@@ -489,7 +490,8 @@ function Edo1868Page({ onNavigate }) {
         setDiscoveries(Array.isArray(savedGame.discoveries) ? savedGame.discoveries : INITIAL_DISCOVERIES);
         setApiUsage(savedGame.apiUsage || { input: 0, output: 0, cached: 0 });
         if (typeof savedGame.model === "string" && savedGame.model) setModel(savedGame.model);
-        if (typeof savedGame.endingId === "string") setEndingId(savedGame.endingId);
+        // Version 1 could save a forced automatic ending. Version 2 only records an ending after the player chooses to conclude.
+        if (savedGame.version === gameSaveVersion && typeof savedGame.endingId === "string") setEndingId(savedGame.endingId);
         setHasSavedGame(true);
       }
     } catch {
@@ -507,7 +509,7 @@ function Edo1868Page({ onNavigate }) {
         setHasSavedGame(false);
         return;
       }
-      window.localStorage.setItem(gameStorageKey, JSON.stringify({ version: 1, state, messages, discoveries, apiUsage, model, endingId }));
+      window.localStorage.setItem(gameStorageKey, JSON.stringify({ version: gameSaveVersion, state, messages, discoveries, apiUsage, model, endingId }));
       setHasSavedGame(true);
     } catch {
       // The game remains playable when local storage is unavailable.
