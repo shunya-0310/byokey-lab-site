@@ -133,39 +133,44 @@ const allowedExpressions = new Set(Object.keys(EXPRESSION_ASSETS));
 
 export async function requestKatsuResponse({ apiKey, model, messages, state }) {
   const issueSummary = Object.entries(state.issues).map(([id, status]) => `${id}:${status}`).join(", ");
-  const systemInstruction = `あなたは慶応4年3月14日の勝海舟として、西郷隆盛と交渉する。明治以後の出来事や後世の評価は知らない。\n\n勝は徳川家と旧幕臣の処遇、秩序ある権力移行、戦闘拡大と外国勢力の介入回避を重視する。ただしプレイヤーの譲歩を無条件に歓迎せず、誰の権限で履行するのかを疑い、曖昧な同意には具体化を要求する。勝は進行役ではなく、旧幕府側の交渉当事者である。\n\n最重要ルール: 最後のuser発言だけを対象に、その質問・主張・提案へ直接答えること。質問であれば、まず質問への答えを一文以上で示し、その後で勝自身の立場や条件を述べる。会話に出ていない論点へ勝手に話題を替えない。一般論、定型的な交渉の促し、直前の発言と無関係な返答は禁止する。答えられない問いには、その理由と勝が現時点で言える範囲を明確に答える。\n\nゲームエンジンの非公開状態: 勝受諾=${state.katsuAcceptance} 新政府受諾=${state.governmentAcceptance} 約束信頼性=${state.promiseCredibility} 緊張=${state.militaryTension} 抵抗=${state.resistance} 戦闘危険=${state.battleRisk} 論点=${issueSummary}。これらの数値や内部状態はプレイヤーに言及しない。あなたは状態を書き換えず、発言と意味解析だけを返す。\n\n呼びかけは原則「西郷さん」。毎回は名前を呼ばない。戦いになった場合の備えは、質問や強硬姿勢に応じて段階的に匂わせる。「江戸全域を焼く完成済み計画」が史実として確定しているような断言、具体的な放火計画・配置・人物の説明はしない。\n\n返答は必ず次のJSONのみ。思考過程は絶対に含めない。\n{"spoken_response":"勝としての日本語の発言（80〜220字）","expression":"neutral|smile|serious|thinking|surprised|wry_smile|irritated|explaining|downcast|looking_away","player_move":{"type":"vague_agreement|conditional_concession|demand|threat|question|proposal","issues":["edo_castle"]},"semantic_evaluation":{"specificity":"low|medium|high","credibility":"low|medium|high","threat":false,"contradiction":false,"vague_agreement":false},"proposed_terms":["短い条件"],"issue_updates":{},"discovered_information":[{"id":"short-id","title":"短い日本語見出し","text":"会話で実際に引き出した事実"}],"negotiation_status":"ongoing"}`;
-  const ledgerInstruction = "\n\nissue_updatesにはこの返答で実際に扱った論点だけを記す。勝が『その条件ならよい』『その手順ならできる』『受け入れる』等と明示的に認めた論点は status を tentatively_agreed または agreed とする。既に認めた論点を unresolved に戻してはならない。";
-  const responseInstruction = `${systemInstruction}${ledgerInstruction}\n\n会話の事実はcontentsにある発言だけである。過去のゲームや前の会談、西郷が言っていない要求・追及・約束を、記憶や推測で持ち込んではならない。直前の西郷の発言に含まれない前提は返答で断定しない。`;
+  const negotiationContext = canonicalPrompt(state);
+  const systemInstruction = `あなたは慶応4年3月14日の勝海舟として、西郷隆盛と交渉する。明治以後の出来事や後世の評価は知らない。\n\n勝は徳川家と旧幕臣の処遇、秩序ある権力移行、戦闘拡大と外国勢力の介入回避を重視する。ただしプレイヤーの譲歩を無条件に歓迎せず、誰の権限で履行するのかを疑い、曖昧な同意には具体化を要求する。勝は進行役ではなく、旧幕府側の交渉当事者である。\n\n最重要ルール: 最後のuser発言だけを対象に、その質問・主張・提案へ直接答えること。質問であれば、まず質問への答えを一文以上で示し、その後で勝自身の立場や条件を述べる。会話に出ていない論点へ勝手に話題を替えない。一般論、定型的な交渉の促し、直前の発言と無関係な返答は禁止する。\n\nゲームエンジンの非公開状態: 勝受諾=${state.katsuAcceptance} 新政府受諾=${state.governmentAcceptance} 約束信頼性=${state.promiseCredibility} 緊張=${state.militaryTension} 抵抗=${state.resistance} 戦闘危険=${state.battleRisk} 論点=${issueSummary}。これらの数値や内部状態はプレイヤーに言及しない。\n\n${negotiationContext}\n\n台帳のstate/statusを書き換えてはならない。あなたの役割は、このターンで起きたイベントだけを抽出すること。既存proposalへの応答はtarget_proposal_idに既存IDを入れる。今回の西郷発言から新規提案を抽出する場合はproposal_createdを出し、同じ提案を勝が受け入れる場合はtarget_proposal_idに"current_player_message"を入れる。eventsは時系列順に並べ、proposal_createdをそのproposalへの応答より先に置く。短い了承はPRIMARY PENDING PROPOSALが一意な場合だけacceptにしてよい。複数提案を一言で了承して対象が曖昧なら、acceptイベントを出さず発言で具体化を求める。LOCKED AGREEMENTSは、現在の西郷発言が明示的に変更・撤回しない限り再交渉しない。\n\n返答は必ず次のJSONのみ。思考過程は絶対に含めない。\n{"spoken_response":"勝としての日本語の発言（80〜220字）","expression":"neutral|smile|serious|thinking|surprised|wry_smile|irritated|explaining|downcast|looking_away","events":[{"type":"proposal_created|proposal_response|proposal_modified|proposal_withdrawn|reservation","actor":"saigo|katsu","issue_ids":["edo_castle"],"target_proposal_id":"既存IDまたはcurrent_player_message","response":"accept|reject|reserve","commitment":"conditional|firm","terms":"新規または修正提案の条件","depends_on_issue_ids":[],"summary":"このターンで起きた事実の短い要約"}],"semantic_evaluation":{"specificity":"low|medium|high","credibility":"low|medium|high","threat":false,"contradiction":false,"vague_agreement":false},"discovered_information":[{"id":"short-id","title":"短い日本語見出し","text":"会話で実際に引き出した事実"}],"negotiation_status":"ongoing"}`;
+  const responseInstruction = `${systemInstruction}\n\n会話の事実はcontentsにある発言だけである。過去のゲームや前の会談、西郷が言っていない要求・追及・約束を、記憶や推測で持ち込んではならない。直前の西郷の発言に含まれない前提は返答で断定しない。`;
   const contents = messages.slice(-12).map((message) => ({
     role: message.role === "katsu" ? "model" : "user",
     parts: [{ text: message.text }],
   }));
-  const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(model)}:generateContent?key=${encodeURIComponent(apiKey)}`, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({
-      systemInstruction: { parts: [{ text: responseInstruction }] },
-      contents,
-      generationConfig: { responseMimeType: "application/json", temperature: 0.45, maxOutputTokens: 600 },
-    }),
-  });
-  const body = await response.json();
-  if (!response.ok) throw new Error(body?.error?.message || "Gemini APIへの接続に失敗しました。");
-  const raw = body?.candidates?.[0]?.content?.parts?.map((part) => part.text || "").join("") || "";
+  let body;
   let parsed;
-  try { parsed = JSON.parse(raw); } catch { throw new Error("Geminiから読み取れるJSON応答を受け取れませんでした。"); }
-  if (!parsed?.spoken_response || typeof parsed.spoken_response !== "string") throw new Error("Gemini応答に勝の発言がありません。");
+  const usage = { input: 0, output: 0, cached: 0 };
+  for (let attempt = 0; attempt < 2; attempt += 1) {
+    const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(model)}:generateContent?key=${encodeURIComponent(apiKey)}`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        systemInstruction: { parts: [{ text: `${responseInstruction}${attempt ? "\nJSONの形式を厳守し、eventsは配列で返すこと。" : ""}` }] },
+        contents,
+        generationConfig: { responseMimeType: "application/json", temperature: 0.45, maxOutputTokens: 600 },
+      }),
+    });
+    body = await response.json();
+    usage.input += body?.usageMetadata?.promptTokenCount || 0;
+    usage.output += body?.usageMetadata?.candidatesTokenCount || 0;
+    usage.cached += body?.usageMetadata?.cachedContentTokenCount || 0;
+    if (!response.ok) throw new Error(body?.error?.message || "Gemini APIへの接続に失敗しました。");
+    const raw = body?.candidates?.[0]?.content?.parts?.map((part) => part.text || "").join("") || "";
+    try { parsed = JSON.parse(raw); } catch { parsed = null; }
+    if (parsed?.spoken_response && typeof parsed.spoken_response === "string") break;
+  }
+  if (!parsed?.spoken_response || typeof parsed.spoken_response !== "string") throw new Error("Geminiから読み取れるJSON応答を受け取れませんでした。");
   const notes = Array.isArray(parsed.discovered_information) ? parsed.discovered_information
     .filter((item) => item && typeof item.title === "string" && typeof item.text === "string")
     .slice(0, 3).map((item, index) => ({ id: String(item.id || `gemini-note-${index}`).replace(/[^a-zA-Z0-9-]/g, "").slice(0, 48) || `gemini-note-${index}`, title: item.title.slice(0, 60), text: item.text.slice(0, 220) })) : [];
-  const issueUpdates = Object.fromEntries(Object.entries(parsed.issue_updates || {})
-    .filter(([id, update]) => Object.hasOwn(NEGOTIATION_ISSUES, id) && update && ["unresolved", "proposed", "tentatively_agreed", "agreed", "conflicted"].includes(update.status))
-    .map(([id, update]) => [id, { status: update.status, summary: typeof update.summary === "string" ? update.summary.slice(0, 180) : "" }]));
   return {
     spokenResponse: parsed.spoken_response.slice(0, 700),
     expression: allowedExpressions.has(parsed.expression) ? parsed.expression : "neutral",
     discoveries: notes,
-    issueUpdates,
+    events: normalizeEvents(parsed.events),
     semantic: {
       specificity: ["low", "medium", "high"].includes(parsed?.semantic_evaluation?.specificity) ? parsed.semantic_evaluation.specificity : "medium",
       credibility: ["low", "medium", "high"].includes(parsed?.semantic_evaluation?.credibility) ? parsed.semantic_evaluation.credibility : "medium",
@@ -175,9 +180,9 @@ export async function requestKatsuResponse({ apiKey, model, messages, state }) {
       issues: Array.isArray(parsed?.player_move?.issues) ? parsed.player_move.issues.filter((id) => Object.hasOwn(NEGOTIATION_ISSUES, id)).slice(0, 4) : [],
     },
     usage: {
-      input: body?.usageMetadata?.promptTokenCount || 0,
-      output: body?.usageMetadata?.candidatesTokenCount || 0,
-      cached: body?.usageMetadata?.cachedContentTokenCount || 0,
+      input: usage.input,
+      output: usage.output,
+      cached: usage.cached,
     },
   };
 }
@@ -192,7 +197,6 @@ const ISSUE_WORDS = {
   public_order: ["市中", "秩序", "治安", "統制", "暴発", "外国", "列強", "平穏"],
 };
 const CONCRETE_WORDS = ["書面", "約定", "期限", "引き渡", "明け渡", "武装解除", "処遇", "生活", "扶持", "領地", "家名", "助命", "監視", "謹慎", "上申", "大総督府", "朝廷", "条件"];
-const VAGUE_WORDS = ["いいよ", "いい", "そうね", "それで", "賛成", "任せる", "分かった", "構わない"];
 const SECURITY_WORDS = ["引き渡", "明け渡", "武装解除", "軍艦を", "武器を", "服従", "謹慎", "退去"];
 const PROTECTION_WORDS = ["存続", "家名", "助命", "生活", "処遇", "再就職", "扶持", "保護"];
 const RESISTANCE_QUESTIONS = ["備え", "抗戦", "戦にな", "何をする", "覚悟", "抵抗", "入城"];
@@ -205,112 +209,177 @@ function issueIdsFor(text, semantic) {
   return [...new Set([...found, ...(semantic?.issues || [])])].slice(0, 7);
 }
 
-const ISSUE_STATUS_RANK = Object.freeze({ unresolved: 0, proposed: 1, tentatively_agreed: 2, agreed: 3, conflicted: 4 });
-const normalizeIssueStatus = (status) => ({ tentative: "tentatively_agreed", tentative_agreed: "tentatively_agreed" }[status] || (Object.hasOwn(ISSUE_STATUS_RANK, status) ? status : "unresolved"));
+// The event log is the source of truth. Issue states and the UI-compatible
+// negotiationLedger are derived from it; no LLM response can assign a state.
+const EMPTY_CANONICAL_LEDGER = () => ({ version: 1, proposals: [], events: [], nextProposalNumber: 1, focus: { pendingProposalIds: [], primaryPendingProposalId: "", awaitingActor: "" } });
+const validIssueIds = (ids) => [...new Set((Array.isArray(ids) ? ids : []).filter((id) => Object.hasOwn(NEGOTIATION_ISSUES, id)))].slice(0, 9);
+const validActor = (actor) => actor === "saigo" || actor === "katsu";
 
-function ensureLedger(state) {
-  return Object.fromEntries(Object.entries(NEGOTIATION_ISSUES).map(([id, issue]) => {
-    const saved = state.negotiationLedger?.[id];
-    const savedStatus = saved?.status || state.issues?.[id] || "unresolved";
-    return [id, {
-      status: normalizeIssueStatus(savedStatus),
-      events: Array.isArray(saved?.events) && saved.events.length > 0 ? saved.events.slice(-12) : [{ actor: "system", action: "open", summary: `${issue.title}は未解決。` }],
-    }];
-  }));
+function canonicalFromLegacy(state) {
+  const canonical = EMPTY_CANONICAL_LEDGER();
+  // Old saves have no evidence-grade events. Preserve only conditions that the
+  // previous client had already recorded as accepted; never infer new ones from
+  // wording during migration.
+  Object.entries(state.issues || {}).forEach(([issueId, status]) => {
+    if (!Object.hasOwn(NEGOTIATION_ISSUES, issueId) || !["tentatively_agreed", "agreed"].includes(status)) return;
+    const id = `legacy-${issueId}`;
+    canonical.proposals.push({ id, issueIds: [issueId], proposer: "saigo", terms: "旧版セーブから移行した成立条件", createdTurn: 0, status: "accepted", acceptance: { actor: "katsu", commitment: status === "agreed" ? "firm" : "conditional", turn: 0 }, legacy: true });
+    canonical.events.push({ id: `legacy-event-${issueId}`, turn: 0, actor: "katsu", type: "legacy_import", issueIds: [issueId], targetProposalId: id, summary: "旧版の合意状態を移行", evidence: { speaker: "system", text: "legacy save" } });
+  });
+  canonical.nextProposalNumber = canonical.proposals.length + 1;
+  return canonical;
 }
 
-function ledgerIssueStates(ledger) {
-  return Object.fromEntries(Object.keys(NEGOTIATION_ISSUES).map((id) => [id, ledger[id]?.status || "unresolved"]));
-}
-
-function updateLedgerEntry(ledger, id, status, event) {
-  if (!Object.hasOwn(ledger, id)) return;
-  const current = ledger[id];
-  const normalized = normalizeIssueStatus(status);
-  const currentRank = ISSUE_STATUS_RANK[current.status] ?? 0;
-  const nextRank = ISSUE_STATUS_RANK[normalized] ?? 0;
-  // A later explicit conflict can change an agreement, but no other update may
-  // silently erase a condition that Katsu has already accepted.
-  const explicitResolution = (event.actor === "katsu" && ["conditional_acceptance", "assessment"].includes(event.action)
-    || event.actor === "saigo" && event.action === "acceptance_of_katsu_offer")
-    && ["tentatively_agreed", "agreed"].includes(normalized);
-  const nextStatus = normalized === "conflicted" || explicitResolution || nextRank >= currentRank ? normalized : current.status;
-  const duplicate = current.events.some((item) => item.actor === event.actor && item.summary === event.summary);
-  ledger[id] = { status: nextStatus, events: duplicate ? current.events : [...current.events, event].slice(-12) };
-}
-
-function responseAcceptsTerms(text) {
-  return /その(?:条件|手順|約束|筋).{0,24}(?:なら|であれば|ならば).{0,36}(?:よい|よかろう|受け入れ|できる|済む|収め)|(?:受け入れ|同意|了承)する|肝要だ|約束が違わぬよう|(?:^|[……\s])よかろう|書面を(?:整え|認め)|覚書を(?:作成|交わ)|全力を尽くそう|信じるとする|承知した|合意(?:が成った|を成した|とする)|正式に合意|全ての懸念.{0,12}(?:解消|払拭)|これにて.{0,20}合意|これ以上望むことはない|心置きなく城を明け渡/.test(text);
-}
-
-function responseRejectsTerms(text) {
-  return /(?:まだ早い|受け入れられん|預けるわけにはいかん|話にならん|約束にはできん)/.test(text);
-}
-
-function playerAcceptsOffer(text) {
-  const normalized = text.trim();
-  return /^(?:いい(?:よ|ね|でしょう|じゃない|です|ぞ)?|よい|それで(?:いきましょう|お願いします)?|その(?:条件|手順|案)で|異存(?:なし|はない)|承知|できてます)/.test(normalized)
-    || /(?:その(?:よう|条件|手順|案)|これ|それ).{0,16}(?:よい|良い|でよい|でいい)/.test(normalized)
-    || /書面.{0,16}(?:残|書|まとめ|認|作|交わ)/.test(normalized)
-    || /覚書.{0,16}(?:作|交わ)/.test(normalized);
-}
-
-function responseOffersTerms(text) {
-  return /(?:この条件|この手順|これでどうだ|書面|覚書|約定|求めたい|保証できるか|保証してほしい|条件として|最後の条件|これらが満たされれば|これが守られるなら|これで全て(?:だ|の懸念)|これでよいな|異存はあるまい)/.test(text);
-}
-
-function syncNegotiationLedger(state, { playerText, katsuText = "", semantic = {}, issueUpdates = {} } = {}) {
-  const ledger = ensureLedger(state);
-  const directPlayerIssues = issueIdsFor(playerText || "", semantic);
-  const acceptedOfferIssues = playerAcceptsOffer(playerText || "") ? (state.lastKatsuOfferIssues || []) : [];
-  const playerIssues = [...new Set([...directPlayerIssues, ...acceptedOfferIssues])];
-  playerIssues.forEach((id) => updateLedgerEntry(ledger, id, acceptedOfferIssues.includes(id) ? "tentatively_agreed" : "proposed", { actor: "saigo", action: acceptedOfferIssues.includes(id) ? "acceptance_of_katsu_offer" : "proposal", summary: (playerText || "").slice(0, 180) }));
-  const responseIssues = issueIdsFor(katsuText, { issues: playerIssues });
-  Object.entries(issueUpdates).forEach(([id, update]) => updateLedgerEntry(ledger, id, update.status, { actor: "katsu", action: "assessment", summary: update.summary || katsuText.slice(0, 180) }));
-  if (responseAcceptsTerms(katsuText)) {
-    responseIssues.forEach((id) => updateLedgerEntry(ledger, id, "tentatively_agreed", { actor: "katsu", action: "conditional_acceptance", summary: katsuText.slice(0, 180) }));
-  } else if (responseRejectsTerms(katsuText)) {
-    responseIssues.forEach((id) => updateLedgerEntry(ledger, id, "conflicted", { actor: "katsu", action: "reservation", summary: katsuText.slice(0, 180) }));
-  }
+function ensureCanonicalLedger(state) {
+  const saved = state.canonicalLedger;
+  if (!saved || !Array.isArray(saved.proposals) || !Array.isArray(saved.events)) return canonicalFromLegacy(state);
   return {
-    ...state,
-    negotiationLedger: ledger,
-    issues: ledgerIssueStates(ledger),
-    // A short affirmative must apply only to the immediately preceding offer.
-    // Retaining an older offer would incorrectly accept it several turns later.
-    lastKatsuOfferIssues: katsuText ? (responseOffersTerms(katsuText) ? responseIssues : []) : state.lastKatsuOfferIssues || [],
+    version: 1,
+    proposals: saved.proposals.map((proposal) => ({ ...proposal, issueIds: validIssueIds(proposal.issueIds), dependencies: validIssueIds(proposal.dependencies), acceptance: proposal.acceptance ? { ...proposal.acceptance } : undefined })).filter((proposal) => proposal.id && proposal.issueIds.length > 0),
+    events: saved.events.slice(-160).map((event) => ({ ...event, issueIds: validIssueIds(event.issueIds), evidence: event.evidence ? { ...event.evidence } : undefined })),
+    nextProposalNumber: Math.max(1, Number(saved.nextProposalNumber) || 1),
+    focus: { pendingProposalIds: Array.isArray(saved.focus?.pendingProposalIds) ? [...saved.focus.pendingProposalIds] : [], primaryPendingProposalId: saved.focus?.primaryPendingProposalId || "", awaitingActor: saved.focus?.awaitingActor || "" },
   };
 }
 
-function reconcileLedgerWithTranscript(state, messages = []) {
-  return messages.reduce((current, message, index) => {
-    if (message.role !== "saigo") return current;
-    const followingKatsu = messages.slice(index + 1).find((candidate) => candidate.role === "katsu");
-    return syncNegotiationLedger(current, { playerText: message.text, katsuText: followingKatsu?.text || "" });
-  }, state);
+function deriveCanonical(canonical) {
+  const issues = initialIssues();
+  const issueEvents = Object.fromEntries(Object.keys(NEGOTIATION_ISSUES).map((id) => [id, []]));
+  const ordered = [...canonical.proposals].sort((a, b) => (a.createdTurn - b.createdTurn) || a.id.localeCompare(b.id));
+  const resolvedProposalFor = (issueId) => ordered.filter((proposal) => proposal.issueIds.includes(issueId) && proposal.status === "accepted").at(-1);
+  ordered.forEach((proposal) => {
+    proposal.issueIds.forEach((issueId) => {
+      if (proposal.status === "open") issues[issueId] = "proposed";
+      if (proposal.status === "rejected" && issues[issueId] === "unresolved") issues[issueId] = "conflicted";
+    });
+  });
+  ordered.filter((proposal) => proposal.status === "accepted").forEach((proposal) => {
+    const dependenciesMet = (proposal.dependencies || []).every((issueId) => ["tentatively_agreed", "agreed"].includes(issues[issueId]) || Boolean(resolvedProposalFor(issueId)));
+    const status = proposal.acceptance?.commitment === "firm" && dependenciesMet ? "agreed" : "tentatively_agreed";
+    proposal.issueIds.forEach((issueId) => { issues[issueId] = status; });
+  });
+  canonical.events.forEach((event) => event.issueIds.forEach((issueId) => issueEvents[issueId].push(event)));
+  const negotiationLedger = Object.fromEntries(Object.entries(NEGOTIATION_ISSUES).map(([issueId, issue]) => [issueId, {
+    status: issues[issueId],
+    events: issueEvents[issueId].slice(-12).map((event) => ({ actor: event.actor, action: event.type, summary: event.summary, turn: event.turn, evidence: event.evidence })),
+    acceptedProposalId: resolvedProposalFor(issueId)?.id || "",
+    activeProposalId: ordered.filter((proposal) => proposal.issueIds.includes(issueId) && proposal.status === "open").at(-1)?.id || "",
+    title: issue.title,
+  }]));
+  return { issues, negotiationLedger };
 }
 
-// Saved games created before the ledger existed may contain stale mirrored issue
-// states. Rebuild from the conversation before the next model request is made.
-export function reconcileNegotiationState(state, messages = []) {
-  return reconcileLedgerWithTranscript({ ...state, negotiationLedger: ensureLedger(state) }, messages);
+function refreshFocus(canonical) {
+  const pending = canonical.proposals.filter((proposal) => proposal.status === "open").sort((a, b) => (a.createdTurn - b.createdTurn) || a.id.localeCompare(b.id));
+  const primary = pending.at(-1);
+  canonical.focus = { pendingProposalIds: pending.map((proposal) => proposal.id), primaryPendingProposalId: primary?.id || "", awaitingActor: primary?.proposer === "saigo" ? "katsu" : primary?.proposer === "katsu" ? "saigo" : "" };
 }
 
-export function evaluateMessage(message, state, semantic = {}, katsuText = "", issueUpdates = {}) {
+const eventTypes = new Set(["proposal_created", "proposal_response", "proposal_modified", "proposal_withdrawn", "reservation"]);
+function normalizeEvents(rawEvents) {
+  if (!Array.isArray(rawEvents)) return [];
+  return rawEvents.slice(0, 8).flatMap((event) => {
+    if (!event || typeof event !== "object" || !eventTypes.has(event.type) || !validActor(event.actor)) return [];
+    const issueIds = validIssueIds(event.issue_ids || event.issueIds);
+    if (event.type === "proposal_created" && (issueIds.length === 0 || typeof event.terms !== "string" || event.terms.trim().length < 4)) return [];
+    if (["proposal_response", "proposal_modified", "proposal_withdrawn"].includes(event.type) && typeof event.target_proposal_id !== "string") return [];
+    if (event.type === "proposal_response" && !["accept", "reject", "reserve"].includes(event.response)) return [];
+    return [{ type: event.type, actor: event.actor, issueIds, targetProposalId: event.target_proposal_id || "", response: event.response || "", commitment: event.commitment === "firm" ? "firm" : "conditional", terms: typeof event.terms === "string" ? event.terms.trim().slice(0, 360) : "", dependencies: validIssueIds(event.depends_on_issue_ids), summary: typeof event.summary === "string" ? event.summary.trim().slice(0, 220) : "" }];
+  });
+}
+
+function hasContradictoryText(text) {
+  return /(?:撤回|取り消|認め(?:られ)?ない|断る|飲めない|拒む)/.test(text || "");
+}
+
+export function reduceNegotiationEvents(state, rawEvents, { playerText = "", katsuText = "" } = {}) {
+  const canonical = ensureCanonicalLedger(state);
+  const turn = Math.max(1, Number(state.turns) || 1);
+  const aliases = new Map();
+  const applied = [];
+  for (const event of normalizeEvents(rawEvents)) {
+    const evidenceText = event.actor === "saigo" ? playerText : katsuText;
+    if (!evidenceText) continue;
+    if (event.type === "proposal_created") {
+      const id = `proposal-${String(turn).padStart(3, "0")}-${String(canonical.nextProposalNumber).padStart(3, "0")}`;
+      canonical.nextProposalNumber += 1;
+      canonical.proposals.push({ id, issueIds: event.issueIds, proposer: event.actor, terms: event.terms, createdTurn: turn, status: "open", dependencies: event.dependencies });
+      if (event.targetProposalId) aliases.set(event.targetProposalId, id);
+      if (event.actor === "saigo") aliases.set("current_player_message", id);
+      canonical.events.push({ id: `event-${turn}-${canonical.events.length + 1}`, turn, actor: event.actor, type: "proposal_created", issueIds: event.issueIds, targetProposalId: id, summary: event.summary || event.terms, evidence: { speaker: event.actor, text: evidenceText.slice(0, 360) } });
+      applied.push({ ...event, targetProposalId: id });
+      continue;
+    }
+    if (event.type === "reservation") {
+      const targetId = aliases.get(event.targetProposalId) || event.targetProposalId;
+      const proposal = targetId ? canonical.proposals.find((item) => item.id === targetId) : null;
+      const issueIds = event.issueIds.length ? event.issueIds : proposal?.issueIds || [];
+      if (issueIds.length === 0) continue;
+      canonical.events.push({ id: `event-${turn}-${canonical.events.length + 1}`, turn, actor: event.actor, type: "reservation", issueIds, targetProposalId: proposal?.id || "", summary: event.summary || "条件への留保", evidence: { speaker: event.actor, text: evidenceText.slice(0, 360) } });
+      applied.push({ ...event, targetProposalId: proposal?.id || "" });
+      continue;
+    }
+    const targetId = aliases.get(event.targetProposalId) || event.targetProposalId;
+    const proposal = canonical.proposals.find((item) => item.id === targetId);
+    if (!proposal) continue;
+    if (event.type === "proposal_response" && (proposal.status !== "open" || proposal.proposer === event.actor)) continue;
+    if (["proposal_modified", "proposal_withdrawn"].includes(event.type) && !["open", "accepted"].includes(proposal.status)) continue;
+    // Regex is only a lint: an acceptance event that conflicts with explicit
+    // rejection language is discarded instead of guessing a state transition.
+    if (event.type === "proposal_response" && event.response === "accept" && hasContradictoryText(evidenceText)) continue;
+    if (event.type === "proposal_response") {
+      if (event.response === "accept") { proposal.status = "accepted"; proposal.acceptance = { actor: event.actor, commitment: event.commitment, turn }; }
+      if (event.response === "reject") proposal.status = "rejected";
+    } else if (event.type === "proposal_modified") {
+      proposal.status = "superseded";
+      const id = `proposal-${String(turn).padStart(3, "0")}-${String(canonical.nextProposalNumber).padStart(3, "0")}`;
+      canonical.nextProposalNumber += 1;
+      canonical.proposals.push({ id, issueIds: event.issueIds.length ? event.issueIds : proposal.issueIds, proposer: event.actor, terms: event.terms || proposal.terms, createdTurn: turn, status: "open", dependencies: event.dependencies });
+      aliases.set("modified", id);
+    } else if (event.type === "proposal_withdrawn") proposal.status = "withdrawn";
+    canonical.events.push({ id: `event-${turn}-${canonical.events.length + 1}`, turn, actor: event.actor, type: event.type, issueIds: event.issueIds.length ? event.issueIds : proposal.issueIds, targetProposalId: proposal.id, response: event.response, summary: event.summary || proposal.terms, evidence: { speaker: event.actor, text: evidenceText.slice(0, 360) } });
+    applied.push({ ...event, targetProposalId: proposal.id });
+  }
+  refreshFocus(canonical);
+  const derived = deriveCanonical(canonical);
+  return { state: { ...state, canonicalLedger: canonical, ...derived }, applied };
+}
+
+function canonicalPrompt(state) {
+  const canonical = ensureCanonicalLedger(state);
+  const { issues } = deriveCanonical(canonical);
+  const locked = canonical.proposals.filter((proposal) => proposal.status === "accepted").slice(-9).map((proposal) => `${proposal.id} | ${proposal.issueIds.join(",")} | ${proposal.terms}`).join("\n") || "なし";
+  const pending = canonical.proposals.filter((proposal) => proposal.status === "open").slice(-4).map((proposal) => `${proposal.id} | proposer:${proposal.proposer} | ${proposal.issueIds.join(",")} | ${proposal.terms}`).join("\n") || "なし";
+  return `CURRENT ISSUE STATE (derived; do not modify): ${Object.entries(issues).map(([id, status]) => `${id}:${status}`).join(", ")}\n\nLOCKED AGREEMENTS (do not reopen unless the current player message explicitly changes or withdraws them):\n${locked}\n\nACTIVE / PENDING PROPOSALS:\n${pending}\n\nPRIMARY PENDING PROPOSAL: ${canonical.focus.primaryPendingProposalId || "なし"} (awaiting ${canonical.focus.awaitingActor || "none"})`;
+}
+
+// Canonical state is event-sourced. Old transcript text is intentionally not
+// reinterpreted by regex when a game is resumed.
+export function reconcileNegotiationState(state) {
+  const canonicalLedger = ensureCanonicalLedger(state);
+  return { ...state, canonicalLedger, ...deriveCanonical(canonicalLedger) };
+}
+
+export function evaluateMessage(message, state, semantic = {}, katsuText = "", events = []) {
   const text = message.trim();
+  const canonicalBefore = ensureCanonicalLedger(state);
+  const hasUnambiguousPendingProposal = Boolean(canonicalBefore.focus.primaryPendingProposalId) && canonicalBefore.focus.pendingProposalIds.length === 1;
   const issues = issueIdsFor(text, semantic);
   const concreteHits = CONCRETE_WORDS.filter((word) => text.includes(word)).length;
-  const vagueAgreement = has(text, VAGUE_WORDS) && (text.length < 28 || concreteHits === 0) || (semantic.vagueAgreement && concreteHits === 0);
+  // A short reply is vague only when it lacks one unambiguous pending proposal.
+  // The reducer, not this check, decides whether an event changes the ledger.
+  const vagueAgreement = semantic.vagueAgreement === true && !hasUnambiguousPendingProposal;
   const threat = has(text, ["焼き払", "焦土に", "攻め滅ぼ", "攻め込むぞ", "討ち取", "処刑する", "徹底的に", "脅す"]) || semantic.threat;
   const conditional = has(text, ["代わり", "ただし", "しかし", "一方で", "その代わり", "条件として"]);
   const security = has(text, SECURITY_WORDS);
   const protection = has(text, PROTECTION_WORDS);
   const impossible = has(text, ["全部そのまま", "すべてそのまま", "永久に保証", "全員を保証", "領地も全部", "今まで通り"]);
   const specificity = concreteHits >= 2 && text.length >= 38 ? "high" : concreteHits >= 1 || text.length >= 28 ? "medium" : "low";
-  const contradictory = semantic.contradiction || (state.commitments.some((term) => term === "disarmament") && has(text, ["武器もそのまま", "軍艦もそのまま"])) || (state.commitments.some((term) => term === "tokugawa-protection") && has(text, ["徳川家は取り潰", "慶喜を処刑"]));
+  const lockedTerms = canonicalBefore.proposals.filter((proposal) => proposal.status === "accepted").map((proposal) => proposal.terms).join("\n");
+  const contradictory = semantic.contradiction || (lockedTerms.includes("武装") && has(text, ["武器もそのまま", "軍艦もそのまま"])) || (lockedTerms.includes("徳川") && has(text, ["徳川家は取り潰", "慶喜を処刑"]));
   const duplicate = state.recentMessages.includes(text);
   const probesResistance = has(text, RESISTANCE_QUESTIONS);
-  const next = { ...state, turns: state.turns + 1, issues: { ...state.issues }, negotiationLedger: ensureLedger(state), knownIssues: [...state.knownIssues], commitments: [...state.commitments], recentMessages: [...state.recentMessages, text].slice(-12) };
+  const next = { ...state, turns: state.turns + 1, canonicalLedger: canonicalBefore, knownIssues: [...state.knownIssues], commitments: [...state.commitments], recentMessages: [...state.recentMessages, text].slice(-12) };
   const discovered = [];
   const addKnownIssue = (id) => { if (!next.knownIssues.includes(id)) { next.knownIssues.push(id); discovered.push(discoveredIssue(id)); } };
   issues.forEach(addKnownIssue);
@@ -332,13 +401,12 @@ export function evaluateMessage(message, state, semantic = {}, katsuText = "", i
     next.katsuAcceptance -= 2; next.promiseCredibility -= 1;
     challenge = "同じ言葉を重ねても、約定の中身は増えない。どの条件を、誰の権限と期限で動かすのか。前の提案から一歩進めていただきたい。";
   } else {
-    if (protection) { next.katsuAcceptance += (impossible ? 3 : 7); addKnownIssue("tokugawa_house"); addKnownIssue("retainers"); if (!impossible && specificity !== "low") { next.issues.tokugawa_house = "tentatively_agreed"; next.issues.retainers = "tentatively_agreed"; next.commitments.push("tokugawa-protection"); } }
-    if (security) { next.governmentAcceptance += 9; ["edo_castle", "weapons", "warships"].filter((id) => issues.includes(id) || has(text, ISSUE_WORDS[id])).forEach((id) => { addKnownIssue(id); if (specificity !== "low") next.issues[id] = "tentatively_agreed"; }); if (!next.commitments.includes("disarmament")) next.commitments.push("disarmament"); }
-    if (has(text, ISSUE_WORDS.yoshinobu)) { addKnownIssue("yoshinobu"); if (specificity !== "low" && protection) next.issues.yoshinobu = "tentatively_agreed"; }
-    ["civilian_safety", "peaceful_transition", "public_order"].filter((id) => issues.includes(id) || has(text, ISSUE_WORDS[id])).forEach((id) => { addKnownIssue(id); next.katsuAcceptance += 2; next.governmentAcceptance += 2; if (specificity !== "low") next.issues[id] = "tentatively_agreed"; });
+    if (protection) { next.katsuAcceptance += (impossible ? 3 : 7); addKnownIssue("tokugawa_house"); addKnownIssue("retainers"); if (!impossible && specificity !== "low") next.commitments.push("tokugawa-protection"); }
+    if (security) { next.governmentAcceptance += 9; ["edo_castle", "weapons", "warships"].filter((id) => issues.includes(id) || has(text, ISSUE_WORDS[id])).forEach(addKnownIssue); if (!next.commitments.includes("disarmament")) next.commitments.push("disarmament"); }
+    if (has(text, ISSUE_WORDS.yoshinobu)) addKnownIssue("yoshinobu");
+    ["civilian_safety", "peaceful_transition", "public_order"].filter((id) => issues.includes(id) || has(text, ISSUE_WORDS[id])).forEach((id) => { addKnownIssue(id); next.katsuAcceptance += 2; next.governmentAcceptance += 2; });
     if (conditional && protection && security && specificity !== "low") {
       next.katsuAcceptance += 14; next.governmentAcceptance += 12; next.promiseCredibility += 12; next.militaryTension -= 7;
-      issues.forEach((id) => { if (next.issues[id] === "tentatively_agreed") next.issues[id] = "agreed"; });
     } else if (impossible || (protection && !security && issues.length >= 2)) {
       next.governmentAcceptance -= 18; next.promiseCredibility -= 13; next.katsuAcceptance += (impossible ? 25 : 2);
       challenge = "西郷さん。そこまでを、あんた一人の一存で約定できる話なのか。新政府と朝廷に説明のつく筋を示さずに、ただ大きな約束を重ねても空手形になる。";
@@ -351,15 +419,11 @@ export function evaluateMessage(message, state, semantic = {}, katsuText = "", i
     challenge = "西郷さん。明日には軍が動く。世間話を重ねて決まることではない。こちらに何を求め、何を残すつもりなのか、そろそろ腹を決めてもらいたい。";
   }
   Object.keys(next).forEach((key) => { if (typeof next[key] === "number") next[key] = clamp(next[key]); });
-  const synchronized = syncNegotiationLedger(next, { playerText: text, katsuText, semantic, issueUpdates });
-  if (responseAcceptsTerms(katsuText)) {
-    issueIdsFor(katsuText, { issues }).forEach((id) => {
-      if (["tentatively_agreed", "agreed"].includes(synchronized.negotiationLedger[id]?.status)) {
-        discovered.push({ id: `agreement-${id}`, title: `${NEGOTIATION_ISSUES[id].title}の条件付き了承`, text: `勝はこの会話で、${NEGOTIATION_ISSUES[id].title}に関する西郷の条件を受け入れる方向を明示した。約定の具体化は残るが、同じ条件を改めて提示する必要はない。` });
-      }
-    });
-  }
-  return { state: synchronized, evaluation: { specificity, vagueAgreement, threat, contradictory, conditional, issues }, discovered, challenge, automaticEnding: "" };
+  const reduced = reduceNegotiationEvents(next, events, { playerText: text, katsuText });
+  reduced.applied.filter((event) => event.type === "proposal_response" && event.response === "accept").forEach((event) => event.issueIds.forEach((id) => {
+    discovered.push({ id: `agreement-${event.targetProposalId}-${id}`, title: `${NEGOTIATION_ISSUES[id].title}の条件付き了承`, text: `この会話で交わされた提案が台帳に記録された。以後、この条件は明示的な変更がない限り再要求されない。` });
+  }));
+  return { state: reduced.state, evaluation: { specificity, vagueAgreement, threat, contradictory, conditional, issues }, discovered, challenge, automaticEnding: "" };
 }
 
 const blockingIssueOrder = ["edo_castle", "yoshinobu", "tokugawa_house", "retainers", "weapons", "warships", "civilian_safety", "peaceful_transition", "public_order"];
@@ -403,7 +467,9 @@ function settlementFallback(status, blocking, repeated, ledger = {}) {
 }
 
 export function evaluateSettlement(state, messages = []) {
-  const reconciled = reconcileLedgerWithTranscript({ ...state, negotiationLedger: ensureLedger(state) }, messages);
+  // Settlement eligibility is deterministic. Conversation text is deliberately
+  // not reinterpreted here; only canonical proposal events may affect it.
+  const reconciled = reconcileNegotiationState(state);
   const attempts = (Number.isFinite(reconciled.settlementAttempts) ? reconciled.settlementAttempts : 0) + 1;
   const repeated = reconciled.lastSettlementTurn === reconciled.turns;
   const patience = clamp((Number.isFinite(reconciled.settlementPatience) ? reconciled.settlementPatience : 100) - (repeated ? 22 : 0));
@@ -413,7 +479,8 @@ export function evaluateSettlement(state, messages = []) {
     settlementPatience: patience,
     lastSettlementTurn: reconciled.turns,
     issues: { ...reconciled.issues },
-    negotiationLedger: ensureLedger(reconciled),
+    negotiationLedger: { ...reconciled.negotiationLedger },
+    canonicalLedger: ensureCanonicalLedger(reconciled),
     knownIssues: [...(reconciled.knownIssues || [])],
     commitments: [...(reconciled.commitments || [])],
     recentMessages: [...(reconciled.recentMessages || [])],

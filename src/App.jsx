@@ -452,7 +452,7 @@ function HomePage({ onNavigate }) {
 function Edo1868Page({ onNavigate }) {
   const apiKeyStorageKey = "byokey-lab:edo-1868:gemini-api-key";
   const gameStorageKey = "byokey-lab:edo-1868:game-save";
-  const gameSaveVersion = 3;
+  const gameSaveVersion = 4;
   const openingKatsuMessage = { role: "katsu", expression: "neutral", text: "おう、西郷さん。山岡から話は聞いている。駿府からの道中はどうだった。……さて、明日には軍が動く。城と軍勢をどう始末するつもりか、腹を割って聞かせてもらおう。" };
   const [phase, setPhase] = useState("title");
   const [introStep, setIntroStep] = useState(0);
@@ -553,7 +553,7 @@ function Edo1868Page({ onNavigate }) {
     setIsSending(true); setApiError("");
     try {
       const result = await requestKatsuResponse({ apiKey: apiKey.trim(), model, messages: [...messages, playerMessage], state });
-      const assessed = evaluateMessage(text, state, result.semantic, result.spokenResponse, result.issueUpdates);
+      const assessed = evaluateMessage(text, state, result.semantic, result.spokenResponse, result.events);
       setMessages((current) => [...current, playerMessage, { role: "katsu", expression: result.expression, text: result.spokenResponse }]);
       setDiscoveries((current) => [...current, ...[...assessed.discovered, ...result.discoveries].filter((item) => !current.some((known) => known.id === item.id))]);
       setApiUsage((current) => ({ input: current.input + result.usage.input, output: current.output + result.usage.output, cached: current.cached + result.usage.cached }));
