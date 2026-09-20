@@ -75,6 +75,7 @@ export const INITIAL_STATE = Object.freeze({
   settlementAttempts: 0,
   settlementPatience: 100,
   lastSettlementTurn: -1,
+  lastKatsuOfferIssues: [],
 });
 
 export const EXPRESSION_ASSETS = {
@@ -186,9 +187,9 @@ const has = (text, words) => words.some((word) => text.includes(word));
 const ISSUE_WORDS = {
   edo_castle: ["江戸城", "城", "開城"], tokugawa_house: ["徳川家", "徳川", "家名", "御家"], yoshinobu: ["慶喜", "将軍"],
   weapons: ["武器", "武装", "銃", "兵器", "将兵"], warships: ["軍艦", "艦", "海軍"], retainers: ["幕臣", "家臣", "旗本", "旧臣"],
-  civilian_safety: ["市民", "町人", "江戸の民", "戦火", "総攻撃", "民も"],
-  peaceful_transition: ["無血", "総攻撃停止", "進軍を止", "城門", "明朝", "移行", "手順"],
-  public_order: ["市中", "秩序", "治安", "統制", "暴発", "外国", "列強"],
+  civilian_safety: ["市民", "町人", "江戸の民", "戦火", "総攻撃", "民も", "民の動揺", "江戸の平穏"],
+  peaceful_transition: ["無血", "総攻撃停止", "進軍を止", "城門", "明朝", "移行", "手順", "覚書", "書面"],
+  public_order: ["市中", "秩序", "治安", "統制", "暴発", "外国", "列強", "平穏"],
 };
 const CONCRETE_WORDS = ["書面", "約定", "期限", "引き渡", "明け渡", "武装解除", "処遇", "生活", "扶持", "領地", "家名", "助命", "監視", "謹慎", "上申", "大総督府", "朝廷", "条件"];
 const VAGUE_WORDS = ["いいよ", "いい", "そうね", "それで", "賛成", "任せる", "分かった", "構わない"];
@@ -230,24 +231,36 @@ function updateLedgerEntry(ledger, id, status, event) {
   const nextRank = ISSUE_STATUS_RANK[normalized] ?? 0;
   // A later explicit conflict can change an agreement, but no other update may
   // silently erase a condition that Katsu has already accepted.
-  const explicitKatsuResolution = event.actor === "katsu" && ["conditional_acceptance", "assessment"].includes(event.action) && ["tentatively_agreed", "agreed"].includes(normalized);
-  const nextStatus = normalized === "conflicted" || explicitKatsuResolution || nextRank >= currentRank ? normalized : current.status;
+  const explicitResolution = (event.actor === "katsu" && ["conditional_acceptance", "assessment"].includes(event.action)
+    || event.actor === "saigo" && event.action === "acceptance_of_katsu_offer")
+    && ["tentatively_agreed", "agreed"].includes(normalized);
+  const nextStatus = normalized === "conflicted" || explicitResolution || nextRank >= currentRank ? normalized : current.status;
   const duplicate = current.events.some((item) => item.actor === event.actor && item.summary === event.summary);
   ledger[id] = { status: nextStatus, events: duplicate ? current.events : [...current.events, event].slice(-12) };
 }
 
 function responseAcceptsTerms(text) {
-  return /その(?:条件|手順|約束|筋).{0,24}(?:なら|であれば|ならば).{0,36}(?:よい|よかろう|受け入れ|できる|済む|収め)|(?:受け入れ|同意|了承)する|肝要だ|約束が違わぬよう/.test(text);
+  return /その(?:条件|手順|約束|筋).{0,24}(?:なら|であれば|ならば).{0,36}(?:よい|よかろう|受け入れ|できる|済む|収め)|(?:受け入れ|同意|了承)する|肝要だ|約束が違わぬよう|(?:^|[……\s])よかろう|書面を(?:整え|認め)|覚書を(?:作成|交わ)|全力を尽くそう|信じるとする/.test(text);
 }
 
 function responseRejectsTerms(text) {
   return /(?:まだ早い|受け入れられん|預けるわけにはいかん|話にならん|約束にはできん)/.test(text);
 }
 
+function playerAcceptsOffer(text) {
+  return /^(?:いい(?:ね|でしょう|じゃない)|それで(?:いきましょう|お願いします)?|その(?:条件|手順|案)で|書面に(?:まとめ|書く|認め)|覚書を(?:作|交わ)|できてます|承知|異存はない)/.test(text.trim());
+}
+
+function responseOffersTerms(text) {
+  return /(?:この条件|この手順|これでどうだ|書面|覚書|約定|求めたい|保証できるか|条件として|最後の条件)/.test(text);
+}
+
 function syncNegotiationLedger(state, { playerText, katsuText = "", semantic = {}, issueUpdates = {} } = {}) {
   const ledger = ensureLedger(state);
-  const playerIssues = issueIdsFor(playerText || "", semantic);
-  playerIssues.forEach((id) => updateLedgerEntry(ledger, id, "proposed", { actor: "saigo", action: "proposal", summary: (playerText || "").slice(0, 180) }));
+  const directPlayerIssues = issueIdsFor(playerText || "", semantic);
+  const acceptedOfferIssues = playerAcceptsOffer(playerText || "") ? (state.lastKatsuOfferIssues || []) : [];
+  const playerIssues = [...new Set([...directPlayerIssues, ...acceptedOfferIssues])];
+  playerIssues.forEach((id) => updateLedgerEntry(ledger, id, acceptedOfferIssues.includes(id) ? "tentatively_agreed" : "proposed", { actor: "saigo", action: acceptedOfferIssues.includes(id) ? "acceptance_of_katsu_offer" : "proposal", summary: (playerText || "").slice(0, 180) }));
   const responseIssues = issueIdsFor(katsuText, { issues: playerIssues });
   Object.entries(issueUpdates).forEach(([id, update]) => updateLedgerEntry(ledger, id, update.status, { actor: "katsu", action: "assessment", summary: update.summary || katsuText.slice(0, 180) }));
   if (responseAcceptsTerms(katsuText)) {
@@ -255,7 +268,14 @@ function syncNegotiationLedger(state, { playerText, katsuText = "", semantic = {
   } else if (responseRejectsTerms(katsuText)) {
     responseIssues.forEach((id) => updateLedgerEntry(ledger, id, "conflicted", { actor: "katsu", action: "reservation", summary: katsuText.slice(0, 180) }));
   }
-  return { ...state, negotiationLedger: ledger, issues: ledgerIssueStates(ledger) };
+  return {
+    ...state,
+    negotiationLedger: ledger,
+    issues: ledgerIssueStates(ledger),
+    // A short affirmative must apply only to the immediately preceding offer.
+    // Retaining an older offer would incorrectly accept it several turns later.
+    lastKatsuOfferIssues: katsuText ? (responseOffersTerms(katsuText) ? responseIssues : []) : state.lastKatsuOfferIssues || [],
+  };
 }
 
 function reconcileLedgerWithTranscript(state, messages = []) {
