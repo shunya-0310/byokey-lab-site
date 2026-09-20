@@ -51,10 +51,13 @@ export const NEGOTIATION_ISSUES = Object.freeze({
   weapons: { title: "武器", katsu: "旧臣の安全を損なわない処置", government: "武装解除" },
   warships: { title: "軍艦", katsu: "海軍関係者の将来", government: "軍事的脅威の除去" },
   retainers: { title: "旧幕臣", katsu: "生活と再出発の道", government: "無制限の特権温存は不可" },
-  public_order: { title: "江戸市民", katsu: "市中の安全と治安", government: "長期戦と外国介入の回避" },
+  civilian_safety: { title: "江戸市民の安全", katsu: "市民を戦火に巻き込まないこと", government: "総攻撃による被害の回避" },
+  peaceful_transition: { title: "無血移行", katsu: "戦わずに城と兵を収める手順", government: "確実で秩序ある移行" },
+  public_order: { title: "市中秩序", katsu: "市中の安全と治安", government: "長期戦と外国介入の回避" },
 });
 
 const initialIssues = () => Object.fromEntries(Object.keys(NEGOTIATION_ISSUES).map((id) => [id, "unresolved"]));
+const initialLedger = () => Object.fromEntries(Object.entries(NEGOTIATION_ISSUES).map(([id, issue]) => [id, { status: "unresolved", events: [{ actor: "system", action: "open", summary: `${issue.title}は未解決。` }] }]));
 
 export const INITIAL_STATE = Object.freeze({
   katsuAcceptance: 42,
@@ -65,6 +68,7 @@ export const INITIAL_STATE = Object.freeze({
   battleRisk: 30,
   turns: 0,
   issues: initialIssues(),
+  negotiationLedger: initialLedger(),
   knownIssues: [],
   commitments: [],
   recentMessages: [],
@@ -129,7 +133,8 @@ const allowedExpressions = new Set(Object.keys(EXPRESSION_ASSETS));
 export async function requestKatsuResponse({ apiKey, model, messages, state }) {
   const issueSummary = Object.entries(state.issues).map(([id, status]) => `${id}:${status}`).join(", ");
   const systemInstruction = `あなたは慶応4年3月14日の勝海舟として、西郷隆盛と交渉する。明治以後の出来事や後世の評価は知らない。\n\n勝は徳川家と旧幕臣の処遇、秩序ある権力移行、戦闘拡大と外国勢力の介入回避を重視する。ただしプレイヤーの譲歩を無条件に歓迎せず、誰の権限で履行するのかを疑い、曖昧な同意には具体化を要求する。勝は進行役ではなく、旧幕府側の交渉当事者である。\n\n最重要ルール: 最後のuser発言だけを対象に、その質問・主張・提案へ直接答えること。質問であれば、まず質問への答えを一文以上で示し、その後で勝自身の立場や条件を述べる。会話に出ていない論点へ勝手に話題を替えない。一般論、定型的な交渉の促し、直前の発言と無関係な返答は禁止する。答えられない問いには、その理由と勝が現時点で言える範囲を明確に答える。\n\nゲームエンジンの非公開状態: 勝受諾=${state.katsuAcceptance} 新政府受諾=${state.governmentAcceptance} 約束信頼性=${state.promiseCredibility} 緊張=${state.militaryTension} 抵抗=${state.resistance} 戦闘危険=${state.battleRisk} 論点=${issueSummary}。これらの数値や内部状態はプレイヤーに言及しない。あなたは状態を書き換えず、発言と意味解析だけを返す。\n\n呼びかけは原則「西郷さん」。毎回は名前を呼ばない。戦いになった場合の備えは、質問や強硬姿勢に応じて段階的に匂わせる。「江戸全域を焼く完成済み計画」が史実として確定しているような断言、具体的な放火計画・配置・人物の説明はしない。\n\n返答は必ず次のJSONのみ。思考過程は絶対に含めない。\n{"spoken_response":"勝としての日本語の発言（80〜220字）","expression":"neutral|smile|serious|thinking|surprised|wry_smile|irritated|explaining|downcast|looking_away","player_move":{"type":"vague_agreement|conditional_concession|demand|threat|question|proposal","issues":["edo_castle"]},"semantic_evaluation":{"specificity":"low|medium|high","credibility":"low|medium|high","threat":false,"contradiction":false,"vague_agreement":false},"proposed_terms":["短い条件"],"issue_updates":{},"discovered_information":[{"id":"short-id","title":"短い日本語見出し","text":"会話で実際に引き出した事実"}],"negotiation_status":"ongoing"}`;
-  const responseInstruction = `${systemInstruction}\n\n会話の事実はcontentsにある発言だけである。過去のゲームや前の会談、西郷が言っていない要求・追及・約束を、記憶や推測で持ち込んではならない。直前の西郷の発言に含まれない前提は返答で断定しない。`;
+  const ledgerInstruction = "\n\nissue_updatesにはこの返答で実際に扱った論点だけを記す。勝が『その条件ならよい』『その手順ならできる』『受け入れる』等と明示的に認めた論点は status を tentatively_agreed または agreed とする。既に認めた論点を unresolved に戻してはならない。";
+  const responseInstruction = `${systemInstruction}${ledgerInstruction}\n\n会話の事実はcontentsにある発言だけである。過去のゲームや前の会談、西郷が言っていない要求・追及・約束を、記憶や推測で持ち込んではならない。直前の西郷の発言に含まれない前提は返答で断定しない。`;
   const contents = messages.slice(-12).map((message) => ({
     role: message.role === "katsu" ? "model" : "user",
     parts: [{ text: message.text }],
@@ -152,10 +157,14 @@ export async function requestKatsuResponse({ apiKey, model, messages, state }) {
   const notes = Array.isArray(parsed.discovered_information) ? parsed.discovered_information
     .filter((item) => item && typeof item.title === "string" && typeof item.text === "string")
     .slice(0, 3).map((item, index) => ({ id: String(item.id || `gemini-note-${index}`).replace(/[^a-zA-Z0-9-]/g, "").slice(0, 48) || `gemini-note-${index}`, title: item.title.slice(0, 60), text: item.text.slice(0, 220) })) : [];
+  const issueUpdates = Object.fromEntries(Object.entries(parsed.issue_updates || {})
+    .filter(([id, update]) => Object.hasOwn(NEGOTIATION_ISSUES, id) && update && ["unresolved", "proposed", "tentatively_agreed", "agreed", "conflicted"].includes(update.status))
+    .map(([id, update]) => [id, { status: update.status, summary: typeof update.summary === "string" ? update.summary.slice(0, 180) : "" }]));
   return {
     spokenResponse: parsed.spoken_response.slice(0, 700),
     expression: allowedExpressions.has(parsed.expression) ? parsed.expression : "neutral",
     discoveries: notes,
+    issueUpdates,
     semantic: {
       specificity: ["low", "medium", "high"].includes(parsed?.semantic_evaluation?.specificity) ? parsed.semantic_evaluation.specificity : "medium",
       credibility: ["low", "medium", "high"].includes(parsed?.semantic_evaluation?.credibility) ? parsed.semantic_evaluation.credibility : "medium",
@@ -176,7 +185,10 @@ const clamp = (value) => Math.max(0, Math.min(100, value));
 const has = (text, words) => words.some((word) => text.includes(word));
 const ISSUE_WORDS = {
   edo_castle: ["江戸城", "城", "開城"], tokugawa_house: ["徳川家", "徳川", "家名", "御家"], yoshinobu: ["慶喜", "将軍"],
-  weapons: ["武器", "武装", "銃", "兵器"], warships: ["軍艦", "艦", "海軍"], retainers: ["幕臣", "家臣", "旗本", "旧臣"], public_order: ["市民", "町人", "江戸の民", "治安", "戦火", "外国", "列強"],
+  weapons: ["武器", "武装", "銃", "兵器", "将兵"], warships: ["軍艦", "艦", "海軍"], retainers: ["幕臣", "家臣", "旗本", "旧臣"],
+  civilian_safety: ["市民", "町人", "江戸の民", "戦火", "総攻撃", "民も"],
+  peaceful_transition: ["無血", "総攻撃停止", "進軍を止", "城門", "明朝", "移行", "手順"],
+  public_order: ["市中", "秩序", "治安", "統制", "暴発", "外国", "列強"],
 };
 const CONCRETE_WORDS = ["書面", "約定", "期限", "引き渡", "明け渡", "武装解除", "処遇", "生活", "扶持", "領地", "家名", "助命", "監視", "謹慎", "上申", "大総督府", "朝廷", "条件"];
 const VAGUE_WORDS = ["いいよ", "いい", "そうね", "それで", "賛成", "任せる", "分かった", "構わない"];
@@ -185,14 +197,76 @@ const PROTECTION_WORDS = ["存続", "家名", "助命", "生活", "処遇", "再
 const RESISTANCE_QUESTIONS = ["備え", "抗戦", "戦にな", "何をする", "覚悟", "抵抗", "入城"];
 
 const discoveredIssue = (id) => ({ id: `issue-${id}`, title: NEGOTIATION_ISSUES[id].title, text: `${NEGOTIATION_ISSUES[id].katsu}を、勝は交渉の論点として見ている。` });
-const statusLabel = (status) => ({ agreed: "合意", tentative: "仮合意", conflicted: "対立", unresolved: "未解決" }[status] || "未解決");
+const statusLabel = (status) => ({ agreed: "合意", tentatively_agreed: "条件付き合意", proposed: "提案済み", conflicted: "対立", unresolved: "未解決" }[status] || "未解決");
 
 function issueIdsFor(text, semantic) {
   const found = Object.entries(ISSUE_WORDS).filter(([, words]) => has(text, words)).map(([id]) => id);
   return [...new Set([...found, ...(semantic?.issues || [])])].slice(0, 7);
 }
 
-export function evaluateMessage(message, state, semantic = {}) {
+const ISSUE_STATUS_RANK = Object.freeze({ unresolved: 0, proposed: 1, tentatively_agreed: 2, agreed: 3, conflicted: 4 });
+const normalizeIssueStatus = (status) => ({ tentative: "tentatively_agreed", tentative_agreed: "tentatively_agreed" }[status] || (Object.hasOwn(ISSUE_STATUS_RANK, status) ? status : "unresolved"));
+
+function ensureLedger(state) {
+  return Object.fromEntries(Object.entries(NEGOTIATION_ISSUES).map(([id, issue]) => {
+    const saved = state.negotiationLedger?.[id];
+    const savedStatus = saved?.status || state.issues?.[id] || "unresolved";
+    return [id, {
+      status: normalizeIssueStatus(savedStatus),
+      events: Array.isArray(saved?.events) && saved.events.length > 0 ? saved.events.slice(-12) : [{ actor: "system", action: "open", summary: `${issue.title}は未解決。` }],
+    }];
+  }));
+}
+
+function ledgerIssueStates(ledger) {
+  return Object.fromEntries(Object.keys(NEGOTIATION_ISSUES).map((id) => [id, ledger[id]?.status || "unresolved"]));
+}
+
+function updateLedgerEntry(ledger, id, status, event) {
+  if (!Object.hasOwn(ledger, id)) return;
+  const current = ledger[id];
+  const normalized = normalizeIssueStatus(status);
+  const currentRank = ISSUE_STATUS_RANK[current.status] ?? 0;
+  const nextRank = ISSUE_STATUS_RANK[normalized] ?? 0;
+  // A later explicit conflict can change an agreement, but no other update may
+  // silently erase a condition that Katsu has already accepted.
+  const explicitKatsuResolution = event.actor === "katsu" && ["conditional_acceptance", "assessment"].includes(event.action) && ["tentatively_agreed", "agreed"].includes(normalized);
+  const nextStatus = normalized === "conflicted" || explicitKatsuResolution || nextRank >= currentRank ? normalized : current.status;
+  const duplicate = current.events.some((item) => item.actor === event.actor && item.summary === event.summary);
+  ledger[id] = { status: nextStatus, events: duplicate ? current.events : [...current.events, event].slice(-12) };
+}
+
+function responseAcceptsTerms(text) {
+  return /その(?:条件|手順|約束|筋).{0,24}(?:なら|であれば|ならば).{0,36}(?:よい|よかろう|受け入れ|できる|済む|収め)|(?:受け入れ|同意|了承)する|肝要だ|約束が違わぬよう/.test(text);
+}
+
+function responseRejectsTerms(text) {
+  return /(?:まだ早い|受け入れられん|預けるわけにはいかん|話にならん|約束にはできん)/.test(text);
+}
+
+function syncNegotiationLedger(state, { playerText, katsuText = "", semantic = {}, issueUpdates = {} } = {}) {
+  const ledger = ensureLedger(state);
+  const playerIssues = issueIdsFor(playerText || "", semantic);
+  playerIssues.forEach((id) => updateLedgerEntry(ledger, id, "proposed", { actor: "saigo", action: "proposal", summary: (playerText || "").slice(0, 180) }));
+  const responseIssues = issueIdsFor(katsuText, { issues: playerIssues });
+  Object.entries(issueUpdates).forEach(([id, update]) => updateLedgerEntry(ledger, id, update.status, { actor: "katsu", action: "assessment", summary: update.summary || katsuText.slice(0, 180) }));
+  if (responseAcceptsTerms(katsuText)) {
+    responseIssues.forEach((id) => updateLedgerEntry(ledger, id, "tentatively_agreed", { actor: "katsu", action: "conditional_acceptance", summary: katsuText.slice(0, 180) }));
+  } else if (responseRejectsTerms(katsuText)) {
+    responseIssues.forEach((id) => updateLedgerEntry(ledger, id, "conflicted", { actor: "katsu", action: "reservation", summary: katsuText.slice(0, 180) }));
+  }
+  return { ...state, negotiationLedger: ledger, issues: ledgerIssueStates(ledger) };
+}
+
+function reconcileLedgerWithTranscript(state, messages = []) {
+  return messages.reduce((current, message, index) => {
+    if (message.role !== "saigo") return current;
+    const followingKatsu = messages.slice(index + 1).find((candidate) => candidate.role === "katsu");
+    return syncNegotiationLedger(current, { playerText: message.text, katsuText: followingKatsu?.text || "" });
+  }, state);
+}
+
+export function evaluateMessage(message, state, semantic = {}, katsuText = "", issueUpdates = {}) {
   const text = message.trim();
   const issues = issueIdsFor(text, semantic);
   const concreteHits = CONCRETE_WORDS.filter((word) => text.includes(word)).length;
@@ -206,7 +280,7 @@ export function evaluateMessage(message, state, semantic = {}) {
   const contradictory = semantic.contradiction || (state.commitments.some((term) => term === "disarmament") && has(text, ["武器もそのまま", "軍艦もそのまま"])) || (state.commitments.some((term) => term === "tokugawa-protection") && has(text, ["徳川家は取り潰", "慶喜を処刑"]));
   const duplicate = state.recentMessages.includes(text);
   const probesResistance = has(text, RESISTANCE_QUESTIONS);
-  const next = { ...state, turns: state.turns + 1, issues: { ...state.issues }, knownIssues: [...state.knownIssues], commitments: [...state.commitments], recentMessages: [...state.recentMessages, text].slice(-12) };
+  const next = { ...state, turns: state.turns + 1, issues: { ...state.issues }, negotiationLedger: ensureLedger(state), knownIssues: [...state.knownIssues], commitments: [...state.commitments], recentMessages: [...state.recentMessages, text].slice(-12) };
   const discovered = [];
   const addKnownIssue = (id) => { if (!next.knownIssues.includes(id)) { next.knownIssues.push(id); discovered.push(discoveredIssue(id)); } };
   issues.forEach(addKnownIssue);
@@ -228,13 +302,13 @@ export function evaluateMessage(message, state, semantic = {}) {
     next.katsuAcceptance -= 2; next.promiseCredibility -= 1;
     challenge = "同じ言葉を重ねても、約定の中身は増えない。どの条件を、誰の権限と期限で動かすのか。前の提案から一歩進めていただきたい。";
   } else {
-    if (protection) { next.katsuAcceptance += (impossible ? 3 : 7); addKnownIssue("tokugawa_house"); addKnownIssue("retainers"); if (!impossible && specificity !== "low") { next.issues.tokugawa_house = "tentative"; next.issues.retainers = "tentative"; next.commitments.push("tokugawa-protection"); } }
-    if (security) { next.governmentAcceptance += 9; ["edo_castle", "weapons", "warships"].filter((id) => issues.includes(id) || has(text, ISSUE_WORDS[id])).forEach((id) => { addKnownIssue(id); if (specificity !== "low") next.issues[id] = "tentative"; }); if (!next.commitments.includes("disarmament")) next.commitments.push("disarmament"); }
-    if (has(text, ISSUE_WORDS.yoshinobu)) { addKnownIssue("yoshinobu"); if (specificity !== "low" && protection) next.issues.yoshinobu = "tentative"; }
-    if (has(text, ISSUE_WORDS.public_order)) { addKnownIssue("public_order"); next.katsuAcceptance += 5; next.governmentAcceptance += 4; if (specificity !== "low") next.issues.public_order = "tentative"; }
+    if (protection) { next.katsuAcceptance += (impossible ? 3 : 7); addKnownIssue("tokugawa_house"); addKnownIssue("retainers"); if (!impossible && specificity !== "low") { next.issues.tokugawa_house = "tentatively_agreed"; next.issues.retainers = "tentatively_agreed"; next.commitments.push("tokugawa-protection"); } }
+    if (security) { next.governmentAcceptance += 9; ["edo_castle", "weapons", "warships"].filter((id) => issues.includes(id) || has(text, ISSUE_WORDS[id])).forEach((id) => { addKnownIssue(id); if (specificity !== "low") next.issues[id] = "tentatively_agreed"; }); if (!next.commitments.includes("disarmament")) next.commitments.push("disarmament"); }
+    if (has(text, ISSUE_WORDS.yoshinobu)) { addKnownIssue("yoshinobu"); if (specificity !== "low" && protection) next.issues.yoshinobu = "tentatively_agreed"; }
+    ["civilian_safety", "peaceful_transition", "public_order"].filter((id) => issues.includes(id) || has(text, ISSUE_WORDS[id])).forEach((id) => { addKnownIssue(id); next.katsuAcceptance += 2; next.governmentAcceptance += 2; if (specificity !== "low") next.issues[id] = "tentatively_agreed"; });
     if (conditional && protection && security && specificity !== "low") {
       next.katsuAcceptance += 14; next.governmentAcceptance += 12; next.promiseCredibility += 12; next.militaryTension -= 7;
-      issues.forEach((id) => { if (next.issues[id] === "tentative") next.issues[id] = "agreed"; });
+      issues.forEach((id) => { if (next.issues[id] === "tentatively_agreed") next.issues[id] = "agreed"; });
     } else if (impossible || (protection && !security && issues.length >= 2)) {
       next.governmentAcceptance -= 18; next.promiseCredibility -= 13; next.katsuAcceptance += (impossible ? 25 : 2);
       challenge = "西郷さん。そこまでを、あんた一人の一存で約定できる話なのか。新政府と朝廷に説明のつく筋を示さずに、ただ大きな約束を重ねても空手形になる。";
@@ -247,19 +321,25 @@ export function evaluateMessage(message, state, semantic = {}) {
     challenge = "西郷さん。明日には軍が動く。世間話を重ねて決まることではない。こちらに何を求め、何を残すつもりなのか、そろそろ腹を決めてもらいたい。";
   }
   Object.keys(next).forEach((key) => { if (typeof next[key] === "number") next[key] = clamp(next[key]); });
-  return { state: next, evaluation: { specificity, vagueAgreement, threat, contradictory, conditional, issues }, discovered, challenge, automaticEnding: "" };
+  const synchronized = syncNegotiationLedger(next, { playerText: text, katsuText, semantic, issueUpdates });
+  return { state: synchronized, evaluation: { specificity, vagueAgreement, threat, contradictory, conditional, issues }, discovered, challenge, automaticEnding: "" };
 }
 
-const blockingIssueOrder = ["edo_castle", "yoshinobu", "tokugawa_house", "retainers", "weapons", "warships", "public_order"];
+const blockingIssueOrder = ["edo_castle", "yoshinobu", "tokugawa_house", "retainers", "weapons", "warships", "civilian_safety", "peaceful_transition", "public_order"];
 
 function unresolvedIssues(state) {
-  return blockingIssueOrder.filter((id) => ["unresolved", "conflicted"].includes(state.issues?.[id] || "unresolved"));
+  return blockingIssueOrder.filter((id) => ["unresolved", "proposed", "conflicted"].includes(state.issues?.[id] || "unresolved"));
 }
 
-function settlementFallback(status, blocking, repeated, discussed = []) {
-  const discussedLine = discussed.length > 0
-    ? `あなたは、${discussed.slice(0, 2).map((id) => NEGOTIATION_ISSUES[id]?.title).filter(Boolean).join("と")}に関する条件を差し出した。`
+function settlementFallback(status, blocking, repeated, ledger = {}) {
+  const settled = Object.entries(ledger).filter(([, entry]) => ["tentatively_agreed", "agreed"].includes(entry.status)).map(([id]) => NEGOTIATION_ISSUES[id].title);
+  const pending = blocking.map((id) => NEGOTIATION_ISSUES[id]?.title).filter(Boolean);
+  const settledLine = settled.length > 0
+    ? `${settled.slice(0, 3).join("、")}について、勝はすでに条件付きで受け入れている。`
     : "あなたは、ここまでに交わした条件を、決着として差し出した。";
+  const pendingLine = pending.length > 0
+    ? `残るのは、${pending.slice(0, 2).join("と")}についての約定だった。`
+    : "交わした条件が、今夜の約定として並べられている。";
   if (status === "BREAKDOWN") return {
     expression: "irritated",
     reflection: ["同じ問いが、畳の上に戻された。", "約束の中身は、まだ増えていない。", "夜は深く、明日の軍勢は待ってくれない。", "勝は、静かに視線を落とした。"],
@@ -278,26 +358,28 @@ function settlementFallback(status, blocking, repeated, discussed = []) {
           : "江戸の町を戦に巻き込まない具体の筋を、どう立てるのか";
   return {
     expression: repeated ? "wry_smile" : "thinking",
-    reflection: [discussedLine, "だが、約束はまだ人の行く末まで届いていない。", "明日の軍勢を止めるには、言葉だけでは足りない。", "勝は、残された一点を量っている。"],
+    reflection: [settledLine, pendingLine, "明日の軍勢を止めるには、残る約定にも言葉の裏づけがいる。", "勝は、まだ決していない一点を量っている。"],
     response: repeated
       ? `西郷さん、先ほどと同じ条件では答えは変わらん。${concern}。そこを曖昧にしたまま、江戸を預けるわけにはいかない。`
       : `……まだ早い。${concern}。その筋が見えぬうちは、こちらから決着とは言えん。もう少し、腹の内を聞かせてもらおう。`,
   };
 }
 
-export function evaluateSettlement(state) {
-  const attempts = (Number.isFinite(state.settlementAttempts) ? state.settlementAttempts : 0) + 1;
-  const repeated = state.lastSettlementTurn === state.turns;
-  const patience = clamp((Number.isFinite(state.settlementPatience) ? state.settlementPatience : 100) - (repeated ? 22 : 0));
+export function evaluateSettlement(state, messages = []) {
+  const reconciled = reconcileLedgerWithTranscript({ ...state, negotiationLedger: ensureLedger(state) }, messages);
+  const attempts = (Number.isFinite(reconciled.settlementAttempts) ? reconciled.settlementAttempts : 0) + 1;
+  const repeated = reconciled.lastSettlementTurn === reconciled.turns;
+  const patience = clamp((Number.isFinite(reconciled.settlementPatience) ? reconciled.settlementPatience : 100) - (repeated ? 22 : 0));
   const next = {
-    ...state,
+    ...reconciled,
     settlementAttempts: attempts,
     settlementPatience: patience,
-    lastSettlementTurn: state.turns,
-    issues: { ...state.issues },
-    knownIssues: [...(state.knownIssues || [])],
-    commitments: [...(state.commitments || [])],
-    recentMessages: [...(state.recentMessages || [])],
+    lastSettlementTurn: reconciled.turns,
+    issues: { ...reconciled.issues },
+    negotiationLedger: ensureLedger(reconciled),
+    knownIssues: [...(reconciled.knownIssues || [])],
+    commitments: [...(reconciled.commitments || [])],
+    recentMessages: [...(reconciled.recentMessages || [])],
   };
   if (repeated) {
     next.katsuAcceptance = clamp(next.katsuAcceptance - 4);
@@ -315,7 +397,7 @@ export function evaluateSettlement(state) {
     && next.governmentAcceptance >= 60
     && next.promiseCredibility >= 58;
   const settlementResult = isBreakdown ? "BREAKDOWN" : isAccepted ? "ACCEPTED" : "NOT_READY";
-  const fallback = settlementFallback(settlementResult, blocking, repeated, next.knownIssues);
+  const fallback = settlementFallback(settlementResult, blocking, repeated, next.negotiationLedger);
   const discovered = settlementResult === "NOT_READY" && blocking.includes("retainers") && !next.knownIssues.includes("retainers")
     ? [discoveredIssue("retainers")] : [];
   return {
@@ -348,7 +430,7 @@ function automaticEnding(state) {
 export function determineEnding(state) {
   const immediate = automaticEnding(state);
   if (immediate) return immediate;
-  const unresolved = Object.entries(state.issues).filter(([, status]) => status === "unresolved" || status === "conflicted").map(([id]) => id);
+  const unresolved = Object.entries(state.issues).filter(([, status]) => ["unresolved", "proposed", "conflicted"].includes(status)).map(([id]) => id);
   if (state.katsuAcceptance >= 65 && (state.governmentAcceptance < 50 || state.promiseCredibility < 50)) return "empty_promises";
   if (state.katsuAcceptance < 30) return "assault";
   if (state.militaryTension >= 72) return "scorched";
