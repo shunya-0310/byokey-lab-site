@@ -533,7 +533,11 @@ function Edo1868Page({ onNavigate }) {
     return () => window.clearInterval(timer);
   }, [phase, playIntroStage, currentKatsu?.text]);
 
-  const restart = () => { setState(INITIAL_STATE); setEndingId(""); setDraft(""); setPanel(""); setDiscoveries(INITIAL_DISCOVERIES); setMessages([openingKatsuMessage]); };
+  const restart = () => {
+    setState(INITIAL_STATE); setEndingId(""); setDraft(""); setPanel(""); setDiscoveries(INITIAL_DISCOVERIES); setMessages([openingKatsuMessage]); setApiUsage({ input: 0, output: 0, cached: 0 }); setHasSavedGame(false);
+    try { window.localStorage.removeItem(gameStorageKey); } catch { /* The new game still starts when storage is unavailable. */ }
+  };
+  const startNewGame = () => { restart(); setIntroStep(0); setPhase("intro"); };
   const beginDialogue = () => {
     setPhase("transition");
     window.setTimeout(() => setPhase("play"), 1050);
@@ -577,7 +581,7 @@ function Edo1868Page({ onNavigate }) {
     { image: "prologue-05-fusuma.png", content: <><p>明日には総攻撃が予定されている。</p><p>戦わずして目的を果たせるなら、<br />それに越したことはない。</p><p>その条件を探るため、<br />あなたは一人の男と向き合う。</p><p><strong>勝海舟。</strong></p><p>徳川の臣。<br />そして、江戸を預かる男。</p></> },
     { image: "prologue-06-fusuma.png", content: <><p>彼が何を考えているのか。</p><p>何を守ろうとしているのか。</p><p>そして――<br />何を用意して、明日を待っているのか。</p><p>あなたは、まだ知らない。</p></> },
   ];
-  if (phase === "title") return <main className="edo-title" style={{ backgroundImage: "url('/images/edo-1868/edo-title-bay-v5.png')" }}><div className="edo-title-shade" /><section><h1><img src="/images/edo-1868/edo-1868-brush-title.png" alt="1868" /></h1><p>― 江戸焦土前夜 ―</p></section><nav>{hasSavedGame && <button onClick={() => setPhase("play")}>続きから始める <ArrowRight size={19} /></button>}<button onClick={() => setPhase("intro")}>ゲームを始める <ArrowRight size={19} /></button><button onClick={() => setPanel("settings")}>設定 <ChevronRight size={19} /></button><a href="/guide/api/">API設定ガイド <ChevronRight size={19} /></a><a href="/important/">注意事項 <ChevronRight size={19} /></a></nav>{panel === "settings" && <div className="edo-modal-backdrop"><section className="edo-modal"><button className="edo-modal-close" onClick={() => setPanel("")} aria-label="閉じる"><X size={22} /></button>{settingsFields}</section></div>}</main>;
+  if (phase === "title") return <main className="edo-title" style={{ backgroundImage: "url('/images/edo-1868/edo-title-bay-v5.png')" }}><div className="edo-title-shade" /><section><h1><img src="/images/edo-1868/edo-1868-brush-title.png" alt="1868" /></h1><p>― 江戸焦土前夜 ―</p></section><nav>{hasSavedGame && <button onClick={() => setPhase("play")}>続きから始める <ArrowRight size={19} /></button>}<button onClick={startNewGame}>ゲームを始める <ArrowRight size={19} /></button><button onClick={() => setPanel("settings")}>設定 <ChevronRight size={19} /></button><a href="/guide/api/">API設定ガイド <ChevronRight size={19} /></a><a href="/important/">注意事項 <ChevronRight size={19} /></a></nav>{panel === "settings" && <div className="edo-modal-backdrop"><section className="edo-modal"><button className="edo-modal-close" onClick={() => setPanel("")} aria-label="閉じる"><X size={22} /></button>{settingsFields}</section></div>}</main>;
   if (phase === "intro") { const page = intro[introStep]; const lastPage = introStep === intro.length - 1; return <main className={`edo-intro-page edo-intro-page-${introStep + 1}`} key={introStep} style={{ backgroundImage: `url('/images/edo-1868/${page.image}')` }}><div className="edo-intro-page-shade" /><article className="edo-intro-copy">{page.content}<div className="edo-intro-controls">{introStep > 0 && <button type="button" className="edo-intro-back" onClick={() => setIntroStep((value) => value - 1)}>戻る</button>}<button type="button" onClick={() => lastPage ? beginDialogue() : setIntroStep((value) => value + 1)}>{lastPage ? "いざ、対談" : "次へ"} <ArrowRight size={19} /></button></div><p className="edo-intro-step">{introStep + 1} / {intro.length}</p></article></main>; }
   if (phase === "transition") return <main className="edo-transition" aria-label="対談の場面へ移動中" />;
 
