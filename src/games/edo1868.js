@@ -266,6 +266,12 @@ function reconcileLedgerWithTranscript(state, messages = []) {
   }, state);
 }
 
+// Saved games created before the ledger existed may contain stale mirrored issue
+// states. Rebuild from the conversation before the next model request is made.
+export function reconcileNegotiationState(state, messages = []) {
+  return reconcileLedgerWithTranscript({ ...state, negotiationLedger: ensureLedger(state) }, messages);
+}
+
 export function evaluateMessage(message, state, semantic = {}, katsuText = "", issueUpdates = {}) {
   const text = message.trim();
   const issues = issueIdsFor(text, semantic);

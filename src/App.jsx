@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import byokeyLabLogo from "./assets/byokey-lab-logo.png";
 import { articleCatalog, getArticle } from "./articles.js";
 import { SPEAK_APP_URL, absoluteUrl, buildJsonLd, getSeoForPath } from "./seo.js";
-import { ENDINGS, EXPRESSION_ASSETS, GAME_DATE, GEMINI_MODELS, HISTORICAL_SOURCES, INITIAL_DISCOVERIES, INITIAL_STATE, MODEL_PRICING, characterBible, determineGovernmentOutcome, estimateApiCost, evaluateMessage, evaluateSettlement, requestKatsuResponse } from "./games/edo1868.js";
+import { ENDINGS, EXPRESSION_ASSETS, GAME_DATE, GEMINI_MODELS, HISTORICAL_SOURCES, INITIAL_DISCOVERIES, INITIAL_STATE, MODEL_PRICING, characterBible, determineGovernmentOutcome, estimateApiCost, evaluateMessage, evaluateSettlement, reconcileNegotiationState, requestKatsuResponse } from "./games/edo1868.js";
 import {
   ArrowRight,
   BadgeDollarSign,
@@ -486,7 +486,7 @@ function Edo1868Page({ onNavigate }) {
     try {
       const savedGame = JSON.parse(window.localStorage.getItem(gameStorageKey) || "null");
       if (savedGame && savedGame.state && Array.isArray(savedGame.messages) && savedGame.state.turns > 0) {
-        setState(savedGame.state);
+        setState(reconcileNegotiationState(savedGame.state, savedGame.messages));
         setMessages(savedGame.messages);
         setDiscoveries(Array.isArray(savedGame.discoveries) ? savedGame.discoveries : INITIAL_DISCOVERIES);
         setApiUsage(savedGame.apiUsage || { input: 0, output: 0, cached: 0 });
