@@ -323,7 +323,10 @@ export function evaluateSettlement(state) {
     state: next,
     blocking,
     continues: settlementResult === "NOT_READY",
-    endingCandidate: settlementResult === "BREAKDOWN" ? determineEnding(next) : "",
+    // A BREAKDOWN result means Katsu has explicitly ended this negotiation.
+    // Do not reuse the old "unfinished" branch here: NOT_READY is the only
+    // state in which the player may return to the dialogue.
+    endingCandidate: settlementResult === "BREAKDOWN" ? "breakdown" : "",
     expression: fallback.expression,
     reflection: fallback.reflection,
     katsuResponse: fallback.response,
