@@ -186,7 +186,7 @@ const clamp = (value) => Math.max(0, Math.min(100, value));
 const has = (text, words) => words.some((word) => text.includes(word));
 const ISSUE_WORDS = {
   edo_castle: ["江戸城", "城", "開城"], tokugawa_house: ["徳川家", "徳川", "家名", "御家"], yoshinobu: ["慶喜", "将軍"],
-  weapons: ["武器", "武装", "銃", "兵器", "将兵"], warships: ["軍艦", "艦", "海軍"], retainers: ["幕臣", "家臣", "旗本", "旧臣"],
+  weapons: ["武器", "武装", "銃", "兵器", "将兵", "軍備"], warships: ["軍艦", "艦", "海軍"], retainers: ["幕臣", "家臣", "旗本", "旧臣", "生活", "路頭", "召し抱え"],
   civilian_safety: ["市民", "町人", "江戸の民", "戦火", "総攻撃", "民も", "民の動揺", "江戸の平穏"],
   peaceful_transition: ["無血", "総攻撃停止", "進軍を止", "城門", "明朝", "移行", "手順", "覚書", "書面"],
   public_order: ["市中", "秩序", "治安", "統制", "暴発", "外国", "列強", "平穏"],
@@ -240,7 +240,7 @@ function updateLedgerEntry(ledger, id, status, event) {
 }
 
 function responseAcceptsTerms(text) {
-  return /その(?:条件|手順|約束|筋).{0,24}(?:なら|であれば|ならば).{0,36}(?:よい|よかろう|受け入れ|できる|済む|収め)|(?:受け入れ|同意|了承)する|肝要だ|約束が違わぬよう|(?:^|[……\s])よかろう|書面を(?:整え|認め)|覚書を(?:作成|交わ)|全力を尽くそう|信じるとする/.test(text);
+  return /その(?:条件|手順|約束|筋).{0,24}(?:なら|であれば|ならば).{0,36}(?:よい|よかろう|受け入れ|できる|済む|収め)|(?:受け入れ|同意|了承)する|肝要だ|約束が違わぬよう|(?:^|[……\s])よかろう|書面を(?:整え|認め)|覚書を(?:作成|交わ)|全力を尽くそう|信じるとする|承知した|合意(?:が成った|を成した|とする)|正式に合意|全ての懸念.{0,12}(?:解消|払拭)|これにて.{0,20}合意|これ以上望むことはない|心置きなく城を明け渡/.test(text);
 }
 
 function responseRejectsTerms(text) {
@@ -248,11 +248,15 @@ function responseRejectsTerms(text) {
 }
 
 function playerAcceptsOffer(text) {
-  return /^(?:いい(?:ね|でしょう|じゃない)|それで(?:いきましょう|お願いします)?|その(?:条件|手順|案)で|書面に(?:まとめ|書く|認め)|覚書を(?:作|交わ)|できてます|承知|異存はない)/.test(text.trim());
+  const normalized = text.trim();
+  return /^(?:いい(?:よ|ね|でしょう|じゃない|です|ぞ)?|よい|それで(?:いきましょう|お願いします)?|その(?:条件|手順|案)で|異存(?:なし|はない)|承知|できてます)/.test(normalized)
+    || /(?:その(?:よう|条件|手順|案)|これ|それ).{0,16}(?:よい|良い|でよい|でいい)/.test(normalized)
+    || /書面.{0,16}(?:残|書|まとめ|認|作|交わ)/.test(normalized)
+    || /覚書.{0,16}(?:作|交わ)/.test(normalized);
 }
 
 function responseOffersTerms(text) {
-  return /(?:この条件|この手順|これでどうだ|書面|覚書|約定|求めたい|保証できるか|条件として|最後の条件)/.test(text);
+  return /(?:この条件|この手順|これでどうだ|書面|覚書|約定|求めたい|保証できるか|保証してほしい|条件として|最後の条件|これらが満たされれば|これが守られるなら|これで全て(?:だ|の懸念)|これでよいな|異存はあるまい)/.test(text);
 }
 
 function syncNegotiationLedger(state, { playerText, katsuText = "", semantic = {}, issueUpdates = {} } = {}) {

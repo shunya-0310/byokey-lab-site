@@ -81,4 +81,77 @@ for (const issue of ["weapons", "warships", "retainers", "public_order", "civili
   assert.ok(!repairedSettlement.blocking.includes(issue), `${issue} must be repaired from the actual transcript, not an old settlement state`);
 }
 
+// Regression: the exact wording from the second reported play test. The first
+// settlement happens after the weapon/warship agreement, and the second after
+// the retainer guarantee. Neither may loop back to weapon/warship treatment.
+const reportedTurns = [
+  [
+    "勝さんにだって考えがあるでしょう。それをお聞かせ願いたい。",
+    "ふむ、余に先を切れと言うか。ならば言おう。徳川宗家の存続は駿府七十万石、慶喜公の身の安全と謹慎、そして旧幕臣の召し抱えと生活の保障。これが最低限の条件だ。これらを朝廷から引き出す確約が取れるか？",
+  ],
+  [
+    "いいよ、それで",
+    "ほう、その条件で合意するというのだな。だが、口約束だけでは江戸の者どもは納得せぬ。朝廷からの正式な沙汰として、この条件をいかにして履行するのか、その手順と期限を早急に書面で示してもらいたい。それが成れば、城の明け渡しに向けて余も全力を尽くそう。",
+  ],
+  [
+    "せっかくなのでここで書面書いてしまいましょう。",
+    "よかろう、その決断は重いぞ。では、徳川宗家の駿府七十万石への移封、慶喜公の安全と謹慎、旧幕臣の召し抱えと生活保障、これらを明記した書面を今ここで作成しよう。この約束が履行される限り、江戸城の明け渡しは秩序をもって進めよう。",
+  ],
+  [
+    "いいよ。あとは、江戸城をどうするか、ですかね。ここまで譲歩しているんだ。城は無血開城を望む。",
+    "城の無血開城、それが余の本心だ。貴殿が今示した書面への署名と、その条件の履行が確約されるならば、城は無血で明け渡そう。城を去る者たちの安全と、江戸の民の平穏が守られることが大前提だ。これより城内の者たちへ、余の責任において開城の準備を命じる。これでよいな。",
+  ],
+  [
+    "よい。他に決めねばならぬものはないか？",
+    "残るは軍艦と武器の処遇だ。これらが新政府に接収されるのか、あるいは徳川家に残されるのか、曖昧なままでは火種が残る。これらをどう扱うか、貴殿の考えを聞きたい。",
+  ],
+  [
+    "軍艦は幕府側のほうがうまく使えるであろう。ただ、武器については今後の反乱の種は残したくない。それでまとめられないか？",
+    "軍艦の運用を徳川に任せるという提案、承知した。武器については、反乱の火種を消すという貴殿の懸念も理解した。ならば、軍艦は徳川の管理下に置き、武器は必要最小限を残して新政府へ引き渡すという折衷案でどうだ。これで双方の懸念は払拭されよう。この条件で正式に合意し、書面に加筆して署名を進めるべきではないか。",
+  ],
+  [
+    "異存なし。書面に残しましょう。他にはあるか？",
+    "異存なしと申したな。ならば、これで主要な懸念は概ね解消された。あとは、城の明け渡しに伴う混乱を避けるため、新政府軍の江戸入城の時期と、その際の秩序維持についてだ。民を脅かさぬよう、厳格な規律を敷いてもらわねばならん。それが守られるなら、余は速やかに城を明け渡す準備に取り掛かろう。これで全てだ。",
+  ],
+  [
+    "そのようで良いぞ。他にはない。",
+    "承知した。これにて江戸の行く末と徳川の処遇、軍備の扱いについて合意が成った。貴殿の言葉を信じ、余は直ちに城内の者たちへ開城の準備を命じる。この書面が両者の誠意の証だ。江戸の民が平穏に暮らせるよう、貴殿も新政府軍の統制に全力を尽くしてくれ。",
+  ],
+  [
+    "それね。勝さんから要望はあるか？",
+    "徳川家臣たちの行く末だ。彼らが新政府において路頭に迷わぬよう、相応の職や生活の道を保証してほしい。徳川家自体も存続を許し、武士としての誇りを保てる処遇を望む。これらが満たされれば、余は安心して城を明け渡せる。",
+  ],
+  [
+    "いいよ。それも書面に残しておきましょう。",
+    "感謝する。家臣たちの生活と徳川家の存続、この二つが明記されれば、余も心置きなく城を明け渡すことができる。早速、書面にこの条項を書き加え、互いに署名を交わそうではないか。これで全ての懸念が払拭された。これ以上望むことはない。",
+  ],
+];
+
+let reportedState = INITIAL_STATE;
+const reportedMessages = [];
+let reportedIntermediateSettlement;
+for (const [index, [saigo, katsu]] of reportedTurns.entries()) {
+  reportedState = evaluateMessage(saigo, reportedState, {}, katsu).state;
+  reportedMessages.push({ role: "saigo", text: saigo }, { role: "katsu", text: katsu });
+  if (index === 7) reportedIntermediateSettlement = evaluateSettlement(reportedState, reportedMessages);
+}
+assert.ok(!reportedIntermediateSettlement.blocking.includes("weapons"), "the first reported settlement must retain the weapon agreement");
+assert.ok(!reportedIntermediateSettlement.blocking.includes("warships"), "the first reported settlement must retain the warship agreement");
+for (const issue of ["weapons", "warships", "retainers", "tokugawa_house", "edo_castle", "public_order"]) {
+  assert.ok(["tentatively_agreed", "agreed"].includes(reportedState.negotiationLedger[issue].status), `${issue} must be agreed in the reported play-test transcript`);
+}
+const reportedSettlement = evaluateSettlement(reportedState, reportedMessages);
+assert.ok(!reportedSettlement.blocking.includes("weapons"), "weapon treatment must not be requested again after the reported agreement");
+assert.ok(!reportedSettlement.blocking.includes("warships"), "warship treatment must not be requested again after the reported agreement");
+assert.ok(!reportedSettlement.katsuResponse.includes("兵と軍艦を収めた後の者たち"), "the reported settlement loop must never recur");
+
+const reportedStaleState = {
+  ...reportedState,
+  issues: Object.fromEntries(Object.keys(reportedState.issues).map((id) => [id, "conflicted"])),
+  negotiationLedger: Object.fromEntries(Object.keys(reportedState.negotiationLedger).map((id) => [id, { status: "conflicted", events: [] }])),
+};
+const repairedReportedSettlement = evaluateSettlement(reportedStaleState, reportedMessages);
+assert.ok(!repairedReportedSettlement.blocking.includes("weapons"), "a stale save must not restore the weapon loop");
+assert.ok(!repairedReportedSettlement.blocking.includes("warships"), "a stale save must not restore the warship loop");
+
 console.log("Edo 1868 ledger regression test passed");
