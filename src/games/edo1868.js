@@ -68,6 +68,9 @@ export const INITIAL_STATE = Object.freeze({
   knownIssues: [],
   commitments: [],
   recentMessages: [],
+  settlementAttempts: 0,
+  settlementPatience: 100,
+  lastSettlementTurn: -1,
 });
 
 export const EXPRESSION_ASSETS = {
@@ -83,15 +86,34 @@ export const EXPRESSION_ASSETS = {
   looking_away: "/images/edo-1868/katsu-looking-away-sheet.png",
 };
 
-export const MODEL_PRICING = {
-  // The real BYOK client supplies provider usage and a current model price here.
-  // No provisional price is presented while this offline prototype makes no calls.
-  provider: "未接続",
-  model: "ローカル交渉プロトタイプ",
-  inputPricePerMillionTokens: null,
-  cachedInputPricePerMillionTokens: null,
-  outputPricePerMillionTokens: null,
-};
+// Gemini Developer API standard text pricing. Keep prices data-only so updates do
+// not affect the usage calculation or UI. Verified against Google's pricing page
+// on 2026-09-20; model pricing can change.
+export const MODEL_PRICING = Object.freeze({
+  "gemini-3.1-flash-lite": Object.freeze({
+    provider: "Gemini",
+    inputPricePerMillionTokens: 0.25,
+    cachedInputPricePerMillionTokens: 0.025,
+    outputPricePerMillionTokens: 1.5,
+    currency: "USD",
+    pricingUrl: "https://ai.google.dev/gemini-api/docs/pricing",
+    updatedAt: "2026-09-20",
+  }),
+});
+
+export const JPY_PER_USD_REFERENCE = 150;
+
+export function estimateApiCost(usage, model) {
+  const pricing = MODEL_PRICING[model];
+  if (!pricing) return null;
+  const input = Math.max(0, Number(usage?.input) || 0);
+  const cached = Math.min(input, Math.max(0, Number(usage?.cached) || 0));
+  const output = Math.max(0, Number(usage?.output) || 0);
+  const usd = ((input - cached) * pricing.inputPricePerMillionTokens
+    + cached * pricing.cachedInputPricePerMillionTokens
+    + output * pricing.outputPricePerMillionTokens) / 1_000_000;
+  return { usd, jpy: usd * JPY_PER_USD_REFERENCE, pricing };
+}
 
 export const GEMINI_MODELS = [
   { id: "gemini-3.1-flash-lite", label: "Gemini 3.1 Flash-Lite" },
@@ -226,6 +248,92 @@ export function evaluateMessage(message, state, semantic = {}) {
   }
   Object.keys(next).forEach((key) => { if (typeof next[key] === "number") next[key] = clamp(next[key]); });
   return { state: next, evaluation: { specificity, vagueAgreement, threat, contradictory, conditional, issues }, discovered, challenge, automaticEnding: "" };
+}
+
+const blockingIssueOrder = ["edo_castle", "yoshinobu", "tokugawa_house", "retainers", "weapons", "warships", "public_order"];
+
+function unresolvedIssues(state) {
+  return blockingIssueOrder.filter((id) => ["unresolved", "conflicted"].includes(state.issues?.[id] || "unresolved"));
+}
+
+function settlementFallback(status, blocking, repeated, discussed = []) {
+  const discussedLine = discussed.length > 0
+    ? `あなたは、${discussed.slice(0, 2).map((id) => NEGOTIATION_ISSUES[id]?.title).filter(Boolean).join("と")}に関する条件を差し出した。`
+    : "あなたは、ここまでに交わした条件を、決着として差し出した。";
+  if (status === "BREAKDOWN") return {
+    expression: "irritated",
+    reflection: ["同じ問いが、畳の上に戻された。", "約束の中身は、まだ増えていない。", "夜は深く、明日の軍勢は待ってくれない。", "勝は、静かに視線を落とした。"],
+    response: "……もうよい、西郷さん。こちらが預かる者たちの行く末を、話の外に置くなら、この席で交わせる言葉は尽きた。これ以上の会談は受けぬ。",
+  };
+  if (status === "ACCEPTED") return {
+    expression: "serious",
+    reflection: ["江戸を戦場にしないための言葉が、ようやく形を持った。", "城だけではない。人と秩序の処し方も、約定に置かれた。", "勝は、その約束が西郷一人の情でないことを見ている。", "残るのは、新政府がその言葉を引き受けるかどうかだった。"],
+    response: "……分かった。その条件なら、こちらも城と兵を収める道を探そう。ただし、今ここでの言葉を、明日になって翻すことは許さん。新政府が同じ約束を引き受けるのか、確かめてもらおう。",
+  };
+  const first = blocking[0];
+  const concern = first === "retainers" ? "徳川の家を解いた後、旧幕臣を誰が、どう収めるのか"
+    : first === "edo_castle" ? "城を渡した後の江戸を、誰がどう静めるのか"
+      : first === "yoshinobu" ? "慶喜公の処遇を、誰の名でどう約するのか"
+        : first === "weapons" || first === "warships" ? "兵と軍艦を収めた後の者たちを、どう扱うのか"
+          : "江戸の町を戦に巻き込まない具体の筋を、どう立てるのか";
+  return {
+    expression: repeated ? "wry_smile" : "thinking",
+    reflection: [discussedLine, "だが、約束はまだ人の行く末まで届いていない。", "明日の軍勢を止めるには、言葉だけでは足りない。", "勝は、残された一点を量っている。"],
+    response: repeated
+      ? `西郷さん、先ほどと同じ条件では答えは変わらん。${concern}。そこを曖昧にしたまま、江戸を預けるわけにはいかない。`
+      : `……まだ早い。${concern}。その筋が見えぬうちは、こちらから決着とは言えん。もう少し、腹の内を聞かせてもらおう。`,
+  };
+}
+
+export function evaluateSettlement(state) {
+  const attempts = (Number.isFinite(state.settlementAttempts) ? state.settlementAttempts : 0) + 1;
+  const repeated = state.lastSettlementTurn === state.turns;
+  const patience = clamp((Number.isFinite(state.settlementPatience) ? state.settlementPatience : 100) - (repeated ? 22 : 0));
+  const next = {
+    ...state,
+    settlementAttempts: attempts,
+    settlementPatience: patience,
+    lastSettlementTurn: state.turns,
+    issues: { ...state.issues },
+    knownIssues: [...(state.knownIssues || [])],
+    commitments: [...(state.commitments || [])],
+    recentMessages: [...(state.recentMessages || [])],
+  };
+  if (repeated) {
+    next.katsuAcceptance = clamp(next.katsuAcceptance - 4);
+    next.promiseCredibility = clamp(next.promiseCredibility - 5);
+    next.resistance = clamp(next.resistance + 8);
+    next.militaryTension = clamp(next.militaryTension + 3);
+  }
+  const blocking = unresolvedIssues(next);
+  const isBreakdown = next.settlementPatience <= 34
+    || (next.katsuAcceptance <= 18 && next.resistance >= 72)
+    || (next.militaryTension >= 82 && next.katsuAcceptance <= 28);
+  const isAccepted = !isBreakdown
+    && blocking.length === 0
+    && next.katsuAcceptance >= 62
+    && next.governmentAcceptance >= 60
+    && next.promiseCredibility >= 58;
+  const settlementResult = isBreakdown ? "BREAKDOWN" : isAccepted ? "ACCEPTED" : "NOT_READY";
+  const fallback = settlementFallback(settlementResult, blocking, repeated, next.knownIssues);
+  const discovered = settlementResult === "NOT_READY" && blocking.includes("retainers") && !next.knownIssues.includes("retainers")
+    ? [discoveredIssue("retainers")] : [];
+  return {
+    settlementResult,
+    state: next,
+    blocking,
+    continues: settlementResult === "NOT_READY",
+    endingCandidate: settlementResult === "BREAKDOWN" ? determineEnding(next) : "",
+    expression: fallback.expression,
+    reflection: fallback.reflection,
+    katsuResponse: fallback.response,
+    discovered,
+  };
+}
+
+export function determineGovernmentOutcome(state) {
+  if (state.governmentAcceptance >= 62 && state.promiseCredibility >= 60) return determineEnding(state);
+  return "empty_promises";
 }
 
 function automaticEnding(state) {

@@ -22,3 +22,4 @@ When implementing from a selected generated mock, treat that image as the source
 - Keep Cloudflare deployment and configuration behind explicit user confirmation.
 - On mobile, opening the software keyboard must not shrink or fade the 1868 game's Katsu portrait; preserve the dialogue subject's scale while the player types.
 - In the 1868 game, a negotiation ends only when the player explicitly chooses "決着を求める". A player question must receive a direct, contextual answer from Katsu before the conversation advances.
+- In the 1868 game, "決着を求める" asks Katsu for a decision; a NOT_READY answer returns to dialogue and must never show an ending. Only an accepted agreement after the new-government decision, or Katsu explicitly breaking off talks, may reach an ending.

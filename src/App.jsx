@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import byokeyLabLogo from "./assets/byokey-lab-logo.png";
 import { articleCatalog, getArticle } from "./articles.js";
 import { SPEAK_APP_URL, absoluteUrl, buildJsonLd, getSeoForPath } from "./seo.js";
-import { ENDINGS, EXPRESSION_ASSETS, GAME_DATE, GEMINI_MODELS, HISTORICAL_SOURCES, INITIAL_DISCOVERIES, INITIAL_STATE, MODEL_PRICING, characterBible, determineEnding, evaluateMessage, requestKatsuResponse } from "./games/edo1868.js";
+import { ENDINGS, EXPRESSION_ASSETS, GAME_DATE, GEMINI_MODELS, HISTORICAL_SOURCES, INITIAL_DISCOVERIES, INITIAL_STATE, MODEL_PRICING, characterBible, determineGovernmentOutcome, estimateApiCost, evaluateMessage, evaluateSettlement, requestKatsuResponse } from "./games/edo1868.js";
 import {
   ArrowRight,
   BadgeDollarSign,
@@ -452,7 +452,7 @@ function HomePage({ onNavigate }) {
 function Edo1868Page({ onNavigate }) {
   const apiKeyStorageKey = "byokey-lab:edo-1868:gemini-api-key";
   const gameStorageKey = "byokey-lab:edo-1868:game-save";
-  const gameSaveVersion = 2;
+  const gameSaveVersion = 3;
   const openingKatsuMessage = { role: "katsu", expression: "neutral", text: "おう、西郷さん。山岡から話は聞いている。駿府からの道中はどうだった。……さて、明日には軍が動く。城と軍勢をどう始末するつもりか、腹を割って聞かせてもらおう。" };
   const [phase, setPhase] = useState("title");
   const [introStep, setIntroStep] = useState(0);
@@ -472,6 +472,7 @@ function Edo1868Page({ onNavigate }) {
   const [gameHydrated, setGameHydrated] = useState(false);
   const [playIntroStage, setPlayIntroStage] = useState("ready");
   const [visibleKatsuText, setVisibleKatsuText] = useState("");
+  const [settlementFlow, setSettlementFlow] = useState(null);
   const currentKatsu = [...messages].reverse().find((message) => message.role === "katsu");
 
   useEffect(() => {
@@ -534,7 +535,7 @@ function Edo1868Page({ onNavigate }) {
   }, [phase, playIntroStage, currentKatsu?.text]);
 
   const restart = () => {
-    setState(INITIAL_STATE); setEndingId(""); setDraft(""); setPanel(""); setDiscoveries(INITIAL_DISCOVERIES); setMessages([openingKatsuMessage]); setApiUsage({ input: 0, output: 0, cached: 0 }); setHasSavedGame(false);
+    setState(INITIAL_STATE); setEndingId(""); setDraft(""); setPanel(""); setSettlementFlow(null); setDiscoveries(INITIAL_DISCOVERIES); setMessages([openingKatsuMessage]); setApiUsage({ input: 0, output: 0, cached: 0 }); setHasSavedGame(false);
     try { window.localStorage.removeItem(gameStorageKey); } catch { /* The new game still starts when storage is unavailable. */ }
   };
   const startNewGame = () => { restart(); setIntroStep(0); setPhase("intro"); };
@@ -570,7 +571,31 @@ function Edo1868Page({ onNavigate }) {
       setApiError("");
     } catch { setApiError("このブラウザではAPIキーを保存できませんでした。ブラウザの保存設定を確認してください。"); }
   };
-  const concludeNegotiation = () => { setPanel(""); setEndingId(determineEnding(state)); };
+  const concludeNegotiation = () => {
+    setPanel("");
+    const assessment = evaluateSettlement(state);
+    setState(assessment.state);
+    setDiscoveries((current) => [...current, ...assessment.discovered.filter((item) => !current.some((known) => known.id === item.id))]);
+    setSettlementFlow({ ...assessment, stage: "reflection" });
+  };
+  const returnFromSettlement = () => {
+    if (!settlementFlow) return;
+    setMessages((current) => [...current, { role: "katsu", expression: settlementFlow.expression, text: settlementFlow.katsuResponse }]);
+    setSettlementFlow(null);
+  };
+  const proceedGovernmentDecision = () => {
+    if (!settlementFlow) return;
+    setSettlementFlow((current) => ({ ...current, stage: "government" }));
+    window.setTimeout(() => {
+      const ending = determineGovernmentOutcome(settlementFlow.state);
+      setSettlementFlow(null);
+      setEndingId(ending);
+    }, 3600);
+  };
+  const pricing = MODEL_PRICING[model] || null;
+  const cost = estimateApiCost(apiUsage, model);
+  const formatUsd = (value) => value < 0.01 ? `$${value.toFixed(4)}` : `$${value.toFixed(2)}`;
+  const formatJpy = (value) => value < 1 ? `約¥${Math.max(0, value).toFixed(1)}` : `約¥${Math.round(value).toLocaleString()}`;
   const ending = endingId ? ENDINGS[endingId] : null;
   const settingsFields = <><h2>Gemini API設定</h2><label className="edo-key-field"><span>Gemini APIキー</span><input type="password" value={apiKey} onChange={(event) => { setApiKey(event.target.value); setApiKeySaved(false); }} autoComplete="off" placeholder="APIキーを入力" /></label><div className="edo-settings-actions"><button type="button" onClick={saveApiKey}>保存</button>{apiKeySaved && <span>この端末に保存済み</span>}</div><a className="edo-external-link" href="https://aistudio.google.com/app/apikey" target="_blank" rel="noreferrer">APIキーの取得はこちらから <ExternalLink size={15} /></a><label className="edo-key-field"><span>モデルID</span><input type="text" value={model} onChange={(event) => setModel(event.target.value.trim())} autoComplete="off" spellCheck="false" placeholder="gemini-3.1-flash-lite" /></label><p className="edo-modal-lead">既定は Gemini 3.1 Flash-Lite です。別のGeminiモデルを使う場合は、利用可能なモデルIDを直接入力できます。APIキーの権限・提供状況により利用できないIDでは対談を開始できません。</p>{apiError && <p className="edo-api-error">{apiError}</p>}<p className="edo-modal-lead">保存したキーはこの端末のブラウザストレージにのみ保持され、BYOKey Labのサーバーへ送信しません。ただし、この保存領域の暗号化は保証されません。Gemini APIへの対談リクエストにのみ使い、共有端末では保存しないでください。</p></>;
   const intro = [
@@ -594,12 +619,19 @@ function Edo1868Page({ onNavigate }) {
       <section className="edo-character-stage" aria-label="勝海舟"><img src={EXPRESSION_ASSETS[currentKatsu?.expression] || EXPRESSION_ASSETS.neutral} alt="交渉相手の勝海舟" /></section>
       <section className="edo-dialogue-box" aria-live="polite"><div className="edo-nameplate">勝 海舟</div><p>{visibleKatsuText}</p></section>
       {ending ? <section className="edo-ending edo-stage-ending"><p>あなたがたどり着いた歴史</p><h2>{ending.title}</h2><p>{ending.text}</p><p className="edo-history-note">{ending.history}</p><button type="button" onClick={restart}><RotateCcw size={17} />もう一度、交渉する</button></section> : <form className="edo-stage-form" onSubmit={submit}><textarea aria-label="あなたの言葉" value={draft} onChange={(event) => setDraft(event.target.value)} maxLength="500" placeholder="" disabled={isSending} autoFocus /><button type="button" className="edo-conclude-button" onClick={() => setPanel("conclude")} disabled={isSending}>決着を求める</button><button type="submit" disabled={!draft.trim() || isSending} aria-label="言葉を交わす">{isSending ? <LoaderCircle className="edo-loading" size={25} /> : <Send size={28} />}</button></form>}
+      {settlementFlow && <section className={`edo-settlement-overlay edo-settlement-${settlementFlow.stage}`} aria-live="polite">
+        {settlementFlow.stage === "government" ? <div className="edo-settlement-copy edo-government-reflection"><p>勝の言葉は、ここで終わりではない。</p><p>西郷の約束を、新政府が引き受けるのか。</p><p>明日の軍勢を止める判断が、今、問われている。</p></div> : <div className="edo-settlement-copy">
+          <p className="edo-settlement-kicker">勝は、しばらく黙っている。</p>
+          {settlementFlow.reflection.map((line, index) => <p className="edo-settlement-line" style={{ "--line-delay": `${index * 760}ms` }} key={line}>{line}</p>)}
+          <div className="edo-settlement-response"><p>{settlementFlow.katsuResponse}</p>{settlementFlow.settlementResult === "NOT_READY" && <button type="button" onClick={returnFromSettlement}>対談へ戻る</button>}{settlementFlow.settlementResult === "ACCEPTED" && <button type="button" onClick={proceedGovernmentDecision}>新政府側の判断へ</button>}{settlementFlow.settlementResult === "BREAKDOWN" && <button type="button" onClick={() => { setSettlementFlow(null); setEndingId(settlementFlow.endingCandidate || "breakdown"); }}>歴史の結末を見る</button>}</div>
+        </div>}
+      </section>}
       {panel && <div className="edo-modal-backdrop" role="presentation" onMouseDown={() => setPanel("")}><section className="edo-modal" role="dialog" aria-modal="true" aria-label={panel} onMouseDown={(event) => event.stopPropagation()}><button className="edo-modal-close" onClick={() => setPanel("")} aria-label="閉じる"><X size={22} /></button>
         {panel === "history" && <><h2>会話履歴</h2><ol className="edo-history-list">{[...messages].reverse().map((message, reverseIndex) => { const index = messages.length - 1 - reverseIndex; return <li className={`edo-history-message ${message.role}`} key={`${message.role}-${index}`}><span>会話 {Math.floor(index / 2) + 1} · {message.role === "katsu" ? "勝海舟" : "西郷隆盛"}</span><p>{message.text}</p></li>; })}</ol></>}
         {panel === "mission" && <><h2>使命</h2><div className="edo-note-list"><article><h3>江戸城の引渡し</h3><p>江戸城を新政府へ明け渡させる。</p></article><article><h3>軍事的脅威の除去</h3><p>旧幕府勢力が再び大規模な軍事行動を取れる状態を残さない。</p></article><article><h3>新政府が承認可能な合意</h3><p>西郷個人の情ではなく、新政府側へ持ち帰って成立させられる条件にする。</p></article></div><p className="edo-modal-lead">明日には総攻撃が予定されている。戦わずして目的を果たせるなら、それに越したことはない。</p></>}
         {panel === "notes" && <><h2>交渉ノート</h2><p className="edo-modal-lead">会談前に得た情報と、会話から引き出した情報だけが記録されます。</p><div className="edo-note-list">{discoveries.map((item) => <article key={item.id}><h3>{item.title}</h3><p>{item.text}</p></article>)}</div></>}
-        {panel === "conclude" && <><h2>決着を求めますか</h2><p className="edo-modal-lead">ここまでの会話と、あなたが提示した条件をもとに、勝が判断します。</p><div className="edo-decision-actions"><button type="button" onClick={concludeNegotiation}>決着を求める</button><button type="button" onClick={() => setPanel("")}>交渉を続ける</button></div></>}
-        {panel === "usage" && <><h2>API使用量</h2><div className="edo-usage-grid"><span>使用Provider</span><b>Gemini</b><span>使用モデル</span><b>{model}</b><span>入力 / 出力 / Cached</span><b>{apiUsage.input.toLocaleString()} / {apiUsage.output.toLocaleString()} / {apiUsage.cached.toLocaleString()} tokens</b><span>概算API利用料</span><b>モデル料金を設定後に表示</b><span>会話ターン</span><b>{state.turns}</b><span>平均概算料金</span><b>—</b></div><p className="edo-modal-lead">usageはGemini APIの実レスポンスから集計し、この端末の同じゲーム記録に保存します。料金はモデル単価の設定確認後に概算表示します。</p><a className="edo-external-link" href="https://aistudio.google.com/" target="_blank" rel="noreferrer">詳細な料金の確認はこちらから <ExternalLink size={15} /></a></>}
+        {panel === "conclude" && <><h2>勝に決着を求めますか</h2><p className="edo-modal-lead">これはゲームを終える操作ではありません。ここまでの会話と条件をもとに、勝が今夜の段階で答えられるかを判断します。条件が足りなければ、対談へ戻れます。</p><div className="edo-decision-actions"><button type="button" onClick={concludeNegotiation}>勝に答えを求める</button><button type="button" onClick={() => setPanel("")}>交渉を続ける</button></div></>}
+        {panel === "usage" && <><h2>API使用量</h2><div className="edo-usage-grid"><span>使用Provider</span><b>{pricing?.provider || "Gemini"}</b><span>使用モデル</span><b>{model}</b><span>入力 / 出力 / Cached</span><b>{apiUsage.input.toLocaleString()} / {apiUsage.output.toLocaleString()} / {apiUsage.cached.toLocaleString()} tokens</b><span>概算API利用料</span><b>{cost ? <>{formatUsd(cost.usd)} <small>（{formatJpy(cost.jpy)}）</small></> : "このモデルの料金単価は未登録"}</b><span>会話ターン</span><b>{state.turns}</b><span>平均概算料金</span><b>{cost && state.turns > 0 ? <>{formatUsd(cost.usd / state.turns)} <small>（{formatJpy(cost.jpy / state.turns)}）</small></> : "—"}</b></div><p className="edo-modal-lead">Gemini APIの実レスポンスに含まれる usage を、この端末の同じゲーム記録に集計します。入力料金は Cached token を入力 token の内数として差し引いて概算します。{pricing ? ` ${pricing.updatedAt}確認の標準テキスト料金（入力 $${pricing.inputPricePerMillionTokens}／出力 $${pricing.outputPricePerMillionTokens}／Cached $${pricing.cachedInputPricePerMillionTokens}、各100万tokens、参考為替 1ドル=150円）です。` : "直接入力したモデルは料金単価を登録後に概算表示します。"}</p><a className="edo-external-link" href="https://ai.google.dev/gemini-api/docs/pricing" target="_blank" rel="noreferrer">詳細な料金の確認はこちらから <ExternalLink size={15} /></a></>}
         {panel === "settings" && settingsFields}
       </section></div>}
     </main>
