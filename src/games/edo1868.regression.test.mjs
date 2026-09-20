@@ -11,6 +11,7 @@ const afterTurn8 = evaluateMessage(saigoTurn8, INITIAL_STATE, {}, katsuTurn8);
 for (const issue of ["civilian_safety", "peaceful_transition", "public_order"]) {
   assert.ok(["tentatively_agreed", "agreed"].includes(afterTurn8.state.negotiationLedger[issue].status), `${issue} must retain Katsu's acceptance`);
 }
+assert.ok(afterTurn8.discovered.some((item) => item.id === "agreement-public_order"), "the negotiation note must record Katsu's conditional acceptance");
 
 // Simulate an older save whose mirrored issue fields were stale. The transcript
 // remains authoritative for the latest explicit agreement at settlement time.

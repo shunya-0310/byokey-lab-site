@@ -322,6 +322,13 @@ export function evaluateMessage(message, state, semantic = {}, katsuText = "", i
   }
   Object.keys(next).forEach((key) => { if (typeof next[key] === "number") next[key] = clamp(next[key]); });
   const synchronized = syncNegotiationLedger(next, { playerText: text, katsuText, semantic, issueUpdates });
+  if (responseAcceptsTerms(katsuText)) {
+    issueIdsFor(katsuText, { issues }).forEach((id) => {
+      if (["tentatively_agreed", "agreed"].includes(synchronized.negotiationLedger[id]?.status)) {
+        discovered.push({ id: `agreement-${id}`, title: `${NEGOTIATION_ISSUES[id].title}の条件付き了承`, text: `勝はこの会話で、${NEGOTIATION_ISSUES[id].title}に関する西郷の条件を受け入れる方向を明示した。約定の具体化は残るが、同じ条件を改めて提示する必要はない。` });
+      }
+    });
+  }
   return { state: synchronized, evaluation: { specificity, vagueAgreement, threat, contradictory, conditional, issues }, discovered, challenge, automaticEnding: "" };
 }
 
