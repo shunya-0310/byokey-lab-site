@@ -5,3 +5,4 @@ dist/
 qa-*.png
 .dev.vars
 .wrangler/
+test-results/

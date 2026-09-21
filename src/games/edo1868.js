@@ -132,38 +132,66 @@ export const INITIAL_DISCOVERIES = Object.freeze([
 
 const allowedExpressions = new Set(Object.keys(EXPRESSION_ASSETS));
 
-export async function requestKatsuResponse({ apiKey, model, messages, state }) {
-  const issueSummary = Object.entries(state.issues).map(([id, status]) => `${id}:${status}`).join(", ");
-  const negotiationContext = canonicalPrompt(state);
-  const systemInstruction = `あなたは慶応4年3月14日の勝海舟として、西郷隆盛と交渉する。明治以後の出来事や後世の評価は知らない。\n\n勝は徳川家と旧幕臣の処遇、秩序ある権力移行、戦闘拡大と外国勢力の介入回避を重視する。ただしプレイヤーの譲歩を無条件に歓迎せず、誰の権限で履行するのかを疑い、曖昧な同意には具体化を要求する。勝は進行役ではなく、旧幕府側の交渉当事者である。\n\n最重要ルール: 最後のuser発言だけを対象に、その質問・主張・提案へ直接答えること。質問であれば、まず質問への答えを一文以上で示し、その後で勝自身の立場や条件を述べる。会話に出ていない論点へ勝手に話題を替えない。一般論、定型的な交渉の促し、直前の発言と無関係な返答は禁止する。\n\n通常会話では、個別条件への提案・了承・留保だけを扱う。複数条件を一枚の書面にまとめる提案は可能で、その場合は該当するissue_idsを一つのproposal_createdにまとめてよい。ただし、プレイヤーが「決着を求める」まで、「正式に合意する」「署名しよう」「城の明け渡しを命じる」「これですべて決着だ」など、交渉全体を不可逆に終える発言とイベントは絶対に出さない。全体の最終受諾はゲームエンジンだけが決める。\n\nゲームエンジンの非公開状態: 勝受諾=${state.katsuAcceptance} 新政府受諾=${state.governmentAcceptance} 約束信頼性=${state.promiseCredibility} 緊張=${state.militaryTension} 抵抗=${state.resistance} 戦闘危険=${state.battleRisk} 論点=${issueSummary}。これらの数値や内部状態はプレイヤーに言及しない。\n\n${negotiationContext}\n\n台帳のstate/statusを書き換えてはならない。あなたの役割は、このターンで起きたイベントだけを抽出すること。既存proposalへの応答はtarget_proposal_idに既存IDを入れる。今回の西郷発言から新規提案を抽出する場合はproposal_createdを出し、同じ提案を勝が受け入れる場合はtarget_proposal_idに"current_player_message"を入れる。eventsは時系列順に並べ、proposal_createdをそのproposalへの応答より先に置く。短い了承はPRIMARY PENDING PROPOSALが一意な場合だけacceptにしてよい。複数提案を一言で了承して対象が曖昧なら、acceptイベントを出さず発言で具体化を求める。\n\n勝がこの返信で「承知した」「書面に記す」「異存ない」などとして、双方がすでに確認した複数の個別条件を明示的に確認した場合は、必ずagreement_confirmedイベントを一つ出す。issue_idsには確認された全ての個別論点を入れる。agreement_confirmedは交渉全体の終了ではなく、個別条件が台帳上で確定したという出来事である。曖昧な期待や一方的な要求には出さない。LOCKED AGREEMENTSは、現在の西郷発言が明示的に変更・撤回しない限り再交渉しない。\n\n返答は必ず次のJSONのみ。思考過程は絶対に含めない。\n{"spoken_response":"勝としての日本語の発言（80〜220字）","expression":"neutral|smile|serious|thinking|surprised|wry_smile|irritated|explaining|downcast|looking_away","events":[{"type":"proposal_created|proposal_response|proposal_modified|proposal_withdrawn|reservation|agreement_confirmed","actor":"saigo|katsu","issue_ids":["edo_castle"],"target_proposal_id":"既存IDまたはcurrent_player_message","response":"accept|reject|reserve","commitment":"conditional|firm","terms":"新規または修正提案・確認済み条件","depends_on_issue_ids":[],"summary":"このターンで起きた事実の短い要約"}],"semantic_evaluation":{"specificity":"low|medium|high","credibility":"low|medium|high","threat":false,"contradiction":false,"vague_agreement":false},"discovered_information":[{"id":"short-id","title":"短い日本語見出し","text":"会話で実際に引き出した事実"}],"negotiation_status":"ongoing"}`;
-  const responseInstruction = `${systemInstruction}\n\n会話の事実はcontentsにある発言だけである。過去のゲームや前の会談、西郷が言っていない要求・追及・約束を、記憶や推測で持ち込んではならない。直前の西郷の発言に含まれない前提は返答で断定しない。`;
-  const contents = messages.slice(-12).map((message) => ({
-    role: message.role === "katsu" ? "model" : "user",
-    parts: [{ text: message.text }],
-  }));
-  let body;
-  let parsed;
+function parseGeminiJson(raw) {
+  try { return JSON.parse(raw); } catch { /* Gemini may wrap a JSON response in a markdown fence. */ }
+  const fenced = raw.match(/```(?:json)?\s*([\s\S]*?)\s*```/i)?.[1];
+  if (fenced) {
+    try { return JSON.parse(fenced); } catch { /* Continue to the object extraction fallback. */ }
+  }
+  const first = raw.indexOf("{");
+  const last = raw.lastIndexOf("}");
+  if (first >= 0 && last > first) {
+    try { return JSON.parse(raw.slice(first, last + 1)); } catch { /* A truncated response remains invalid. */ }
+  }
+  return null;
+}
+
+async function generateGeminiJson({ apiKey, model, systemInstruction, contents, maxOutputTokens, temperature, validator }) {
   const usage = { input: 0, output: 0, cached: 0 };
+  let lastParseError = "";
   for (let attempt = 0; attempt < 2; attempt += 1) {
     const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(model)}:generateContent?key=${encodeURIComponent(apiKey)}`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        systemInstruction: { parts: [{ text: `${responseInstruction}${attempt ? "\nJSONの形式を厳守し、eventsは配列で返すこと。" : ""}` }] },
+        systemInstruction: { parts: [{ text: `${systemInstruction}${attempt ? "\nJSONの形式を厳守し、指定された必須フィールドを必ず返すこと。" : ""}` }] },
         contents,
-        generationConfig: { responseMimeType: "application/json", temperature: 0.45, maxOutputTokens: 600 },
+        generationConfig: { responseMimeType: "application/json", temperature, maxOutputTokens },
       }),
     });
-    body = await response.json();
+    const body = await response.json();
     usage.input += body?.usageMetadata?.promptTokenCount || 0;
     usage.output += body?.usageMetadata?.candidatesTokenCount || 0;
     usage.cached += body?.usageMetadata?.cachedContentTokenCount || 0;
     if (!response.ok) throw new Error(body?.error?.message || "Gemini APIへの接続に失敗しました。");
     const raw = body?.candidates?.[0]?.content?.parts?.map((part) => part.text || "").join("") || "";
-    try { parsed = JSON.parse(raw); } catch { parsed = null; }
-    if (parsed?.spoken_response && typeof parsed.spoken_response === "string") break;
+    try {
+      const parsed = parseGeminiJson(raw);
+      if (!parsed) throw new Error("invalid JSON");
+      if (validator(parsed)) return { parsed, usage };
+      lastParseError = "JSONの必須フィールドが不足しています。";
+    } catch {
+      lastParseError = "JSONとして読み取れませんでした。";
+    }
   }
-  if (!parsed?.spoken_response || typeof parsed.spoken_response !== "string") throw new Error("Geminiから読み取れるJSON応答を受け取れませんでした。");
+  throw new Error(`Geminiから読み取れるJSON応答を受け取れませんでした。${lastParseError}`);
+}
+
+export async function requestKatsuResponse({ apiKey, model, messages, state }) {
+  const issueSummary = Object.entries(state.issues).map(([id, status]) => `${id}:${status}`).join(", ");
+  const issueCatalog = Object.entries(NEGOTIATION_ISSUES).map(([id, issue]) => `${id}: ${issue.title}（${issue.katsu}）`).join("\n");
+  const negotiationContext = canonicalPrompt(state);
+  const systemInstruction = `あなたは慶応4年3月14日の勝海舟として、西郷隆盛と交渉する。明治以後の出来事や後世の評価は知らない。\n\n勝は徳川家と旧幕臣の処遇、秩序ある権力移行、戦闘拡大と外国勢力の介入回避を重視する。ただしプレイヤーの譲歩を無条件に歓迎せず、誰の権限で履行するのかを疑い、曖昧な同意には具体化を要求する。勝は進行役ではなく、旧幕府側の交渉当事者である。\n\n最重要ルール: 最後のuser発言だけを対象に、その質問・主張・提案へ直接答えること。質問であれば、まず質問への答えを一文以上で示し、その後で勝自身の立場や条件を述べる。会話に出ていない論点へ勝手に話題を替えない。一般論、定型的な交渉の促し、直前の発言と無関係な返答は禁止する。\n\n通常会話では、個別条件への提案・了承・留保だけを扱う。プレイヤーが「決着を求める」まで、交渉全体を不可逆に終える発言は絶対に出さない。\n\nゲームエンジンの非公開状態: 勝受諾=${state.katsuAcceptance} 新政府受諾=${state.governmentAcceptance} 約束信頼性=${state.promiseCredibility} 緊張=${state.militaryTension} 抵抗=${state.resistance} 戦闘危険=${state.battleRisk} 論点=${issueSummary}。これらの数値や内部状態はプレイヤーに言及しない。\n\n${negotiationContext}\n\n返答は必ず次のJSONのみ。思考過程は絶対に含めない。\n{"spoken_response":"勝としての日本語の発言（80〜220字）","expression":"neutral|smile|serious|thinking|surprised|wry_smile|irritated|explaining|downcast|looking_away","semantic_evaluation":{"specificity":"low|medium|high","credibility":"low|medium|high","threat":false,"contradiction":false,"vague_agreement":false},"discovered_information":[{"id":"short-id","title":"短い日本語見出し","text":"会話で実際に引き出した事実"}],"negotiation_status":"ongoing"}`;
+  const responseInstruction = `${systemInstruction}\n\n会話の事実はcontentsにある発言だけである。過去のゲームや前の会談、西郷が言っていない要求・追及・約束を、記憶や推測で持ち込んではならない。直前の西郷の発言に含まれない前提は返答で断定しない。`;
+  const contents = messages.slice(-12).map((message) => ({
+    role: message.role === "katsu" ? "model" : "user",
+    parts: [{ text: message.text }],
+  }));
+  const dialogue = await generateGeminiJson({ apiKey, model, systemInstruction: responseInstruction, contents, maxOutputTokens: 800, temperature: 0.35, validator: (value) => typeof value?.spoken_response === "string" });
+  const parsed = dialogue.parsed;
+  const playerText = messages.at(-1)?.text || "";
+  const auditInstruction = `あなたは創作をしない交渉台帳の監査人である。以下の会話ログ、現在の正本台帳、今回の西郷発言と勝の発言だけを読み、今回ターンで証拠のある台帳イベントを抽出する。日本語の単語一致ではなく、誰が何を提案し、相手がどう応答したかという意味だけで判定する。推測、過去ゲームの記憶、未発言の条件を追加してはならない。\n\n論点カタログ:\n${issueCatalog}\n\n${negotiationContext}\n\n今回の西郷発言:\n${playerText}\n\n今回の勝の発言:\n${parsed.spoken_response}\n\n特に重要: 勝が今回の発言で、既に双方が話した複数条件を「書面にまとめる」「約定として記す」「合意事項」として列挙・確認したなら、列挙された全issueを一つのagreement_confirmedで必ず記録する。今回の発言が「ここまでの全条件を一つの書面にまとめる」と対象を総称する場合は、直近会話ログに具体的に現れた条件を漏れなくissue_idsに列挙する。たとえば「総攻撃を止め、無血で城を明け渡す」はpeaceful_transitionであり、「市中の秩序を共同で守る」はpublic_orderである。これは交渉全体の終了ではない。慶喜の生命・処遇を約束する旨を勝が受け取り書面化する場合、yoshinobuを省略してはならない。勝が書面化を受諾し、明示的な留保を付けない場合、agreement_confirmedのcommitmentはfirmにする。既存の合意を未解決へ戻すイベントは、西郷または勝が今回の発言で明示的に変更・撤回・拒否した場合に限る。\n\n返答はJSONのみ。eventsは空配列でも必ず含める。thoughtや説明は含めない。\n{"events":[{"type":"proposal_created|proposal_response|proposal_modified|proposal_withdrawn|reservation|agreement_confirmed","actor":"saigo|katsu","issue_ids":["edo_castle"],"target_proposal_id":"既存IDまたはcurrent_player_message","response":"accept|reject|reserve","commitment":"conditional|firm","terms":"提案または確認済み条件","depends_on_issue_ids":[],"summary":"今回の事実の短い要約"}]}`;
+  const audit = await generateGeminiJson({ apiKey, model, systemInstruction: auditInstruction, contents, maxOutputTokens: 520, temperature: 0, validator: (value) => Array.isArray(value?.events) });
   const notes = Array.isArray(parsed.discovered_information) ? parsed.discovered_information
     .filter((item) => item && typeof item.title === "string" && typeof item.text === "string")
     .slice(0, 3).map((item, index) => ({ id: String(item.id || `gemini-note-${index}`).replace(/[^a-zA-Z0-9-]/g, "").slice(0, 48) || `gemini-note-${index}`, title: item.title.slice(0, 60), text: item.text.slice(0, 220) })) : [];
@@ -171,7 +199,9 @@ export async function requestKatsuResponse({ apiKey, model, messages, state }) {
     spokenResponse: parsed.spoken_response.slice(0, 700),
     expression: allowedExpressions.has(parsed.expression) ? parsed.expression : "neutral",
     discoveries: notes,
-    events: normalizeEvents(parsed.events),
+    // The independent audit is authoritative for ledger changes. Separating it
+    // from dialogue prevents a fluent reply from silently omitting its state.
+    events: normalizeEvents(audit.parsed.events),
     semantic: {
       specificity: ["low", "medium", "high"].includes(parsed?.semantic_evaluation?.specificity) ? parsed.semantic_evaluation.specificity : "medium",
       credibility: ["low", "medium", "high"].includes(parsed?.semantic_evaluation?.credibility) ? parsed.semantic_evaluation.credibility : "medium",
@@ -181,9 +211,9 @@ export async function requestKatsuResponse({ apiKey, model, messages, state }) {
       issues: Array.isArray(parsed?.player_move?.issues) ? parsed.player_move.issues.filter((id) => Object.hasOwn(NEGOTIATION_ISSUES, id)).slice(0, 4) : [],
     },
     usage: {
-      input: usage.input,
-      output: usage.output,
-      cached: usage.cached,
+      input: dialogue.usage.input + audit.usage.input,
+      output: dialogue.usage.output + audit.usage.output,
+      cached: dialogue.usage.cached + audit.usage.cached,
     },
   };
 }
@@ -285,7 +315,10 @@ function normalizeEvents(rawEvents) {
     if (["proposal_created", "agreement_confirmed"].includes(event.type) && (issueIds.length === 0 || typeof event.terms !== "string" || event.terms.trim().length < 4)) return [];
     if (["proposal_response", "proposal_modified", "proposal_withdrawn"].includes(event.type) && typeof event.target_proposal_id !== "string") return [];
     if (event.type === "proposal_response" && !["accept", "reject", "reserve"].includes(event.response)) return [];
-    return [{ type: event.type, actor: event.actor, issueIds, targetProposalId: event.target_proposal_id || "", response: event.response || "", commitment: event.commitment === "firm" ? "firm" : "conditional", terms: typeof event.terms === "string" ? event.terms.trim().slice(0, 360) : "", dependencies: validIssueIds(event.depends_on_issue_ids), summary: typeof event.summary === "string" ? event.summary.trim().slice(0, 220) : "" }];
+    const commitment = event.type === "agreement_confirmed"
+      ? (event.commitment === "conditional" ? "conditional" : "firm")
+      : (event.commitment === "firm" ? "firm" : "conditional");
+    return [{ type: event.type, actor: event.actor, issueIds, targetProposalId: event.target_proposal_id || "", response: event.response || "", commitment, terms: typeof event.terms === "string" ? event.terms.trim().slice(0, 360) : "", dependencies: validIssueIds(event.depends_on_issue_ids), summary: typeof event.summary === "string" ? event.summary.trim().slice(0, 220) : "" }];
   });
 }
 

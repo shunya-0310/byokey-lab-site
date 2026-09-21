@@ -7,6 +7,9 @@
     "dev": "vite",
     "build": "vite build && node scripts/prerender-seo.mjs",
     "test:edo": "node src/games/edo1868.regression.test.mjs",
+    "test:edo:live": "node scripts/test-edo-1868-live.mjs",
+    "test:edo:review": "node scripts/review-edo-1868-live.mjs",
+    "test:edo:full": "npm.cmd run test:edo:live && npm.cmd run test:edo:review",
     "preview": "vite preview",
     "news:generate": "node scripts/generate-daily-news.mjs",
     "news:validate": "node scripts/validate-daily-news.mjs"
