@@ -74,6 +74,38 @@ assert.ok(!settlement.blocking.includes("weapons"));
 assert.ok(!settlement.blocking.includes("retainers"));
 assert.ok(!settlement.katsuResponse.includes("兵と軍艦を収めた後の者たち"));
 
+// Regression: the 2026-09-21 play log. Katsu has explicitly accepted the
+// written package, including Yoshinobu, the castle, the former retainers,
+// weapons/warships, and public order. A later settlement request must not
+// reinterpret any of those clauses as unresolved just because government-side
+// feasibility is low. That is the second-stage outcome, not Katsu's answer.
+const playLogIssueIds = ["edo_castle", "tokugawa_house", "yoshinobu", "weapons", "warships", "retainers", "civilian_safety", "peaceful_transition", "public_order"];
+let playLogState = { ...INITIAL_STATE, turns: 9, katsuAcceptance: 55, governmentAcceptance: 18, promiseCredibility: 20, resistance: 40, militaryTension: 45 };
+playLogState = reduceNegotiationEvents(playLogState, [
+  proposal("saigo", playLogIssueIds, "徳川家の存続、慶喜公への手出し無用、旧幕臣の処遇、武器・軍艦の移管、市中秩序、無血開城を一枚の書面に記す", "written-package"),
+  response("katsu", "written-package", playLogIssueIds, "accept", "firm"),
+], {
+  playerText: "無論だ。では良いな？",
+  katsuText: "無論だ。これら全ての条件を記した書面に署名し、速やかに江戸城明け渡しの準備に取り掛かる。",
+}).state;
+assert.equal(playLogState.issues.yoshinobu, "agreed");
+assert.equal(playLogState.issues.edo_castle, "agreed");
+// No later event may reopen an accepted issue.
+playLogState = reduceNegotiationEvents({ ...playLogState, turns: 10 }, [], {
+  playerText: "決着を求める。",
+  katsuText: "",
+}).state;
+assert.equal(playLogState.issues.yoshinobu, "agreed");
+assert.equal(playLogState.issues.edo_castle, "agreed");
+const playLogSettlement = evaluateSettlement(playLogState, []);
+assert.equal(playLogSettlement.settlementResult, "ACCEPTED");
+assert.equal(playLogSettlement.state.katsuSettlement, "accepted");
+assert.ok(!playLogSettlement.blocking.includes("yoshinobu"));
+assert.ok(!playLogSettlement.blocking.includes("edo_castle"));
+assert.ok(!playLogSettlement.katsuResponse.includes("城を渡した後の江戸を、誰がどう静めるのか"));
+assert.ok(playLogSettlement.reflection.some((line) => line.includes("徳川慶喜")));
+assert.equal(playLogSettlement.state.governmentAcceptance, 18, "government feasibility is not allowed to reopen Katsu's agreement");
+
 // Evaluation uses event output. The spoken response by itself can never create
 // a hidden agreement; this is the JSON-invalid / event-missing failure-safe.
 const evaluated = evaluateMessage("いいよ", INITIAL_STATE, {}, "承知した。その条件で進めよう。", []);

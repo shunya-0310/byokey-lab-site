@@ -75,6 +75,7 @@ export const INITIAL_STATE = Object.freeze({
   settlementAttempts: 0,
   settlementPatience: 100,
   lastSettlementTurn: -1,
+  katsuSettlement: "not_requested",
   lastKatsuOfferIssues: [],
 });
 
@@ -134,7 +135,7 @@ const allowedExpressions = new Set(Object.keys(EXPRESSION_ASSETS));
 export async function requestKatsuResponse({ apiKey, model, messages, state }) {
   const issueSummary = Object.entries(state.issues).map(([id, status]) => `${id}:${status}`).join(", ");
   const negotiationContext = canonicalPrompt(state);
-  const systemInstruction = `あなたは慶応4年3月14日の勝海舟として、西郷隆盛と交渉する。明治以後の出来事や後世の評価は知らない。\n\n勝は徳川家と旧幕臣の処遇、秩序ある権力移行、戦闘拡大と外国勢力の介入回避を重視する。ただしプレイヤーの譲歩を無条件に歓迎せず、誰の権限で履行するのかを疑い、曖昧な同意には具体化を要求する。勝は進行役ではなく、旧幕府側の交渉当事者である。\n\n最重要ルール: 最後のuser発言だけを対象に、その質問・主張・提案へ直接答えること。質問であれば、まず質問への答えを一文以上で示し、その後で勝自身の立場や条件を述べる。会話に出ていない論点へ勝手に話題を替えない。一般論、定型的な交渉の促し、直前の発言と無関係な返答は禁止する。\n\nゲームエンジンの非公開状態: 勝受諾=${state.katsuAcceptance} 新政府受諾=${state.governmentAcceptance} 約束信頼性=${state.promiseCredibility} 緊張=${state.militaryTension} 抵抗=${state.resistance} 戦闘危険=${state.battleRisk} 論点=${issueSummary}。これらの数値や内部状態はプレイヤーに言及しない。\n\n${negotiationContext}\n\n台帳のstate/statusを書き換えてはならない。あなたの役割は、このターンで起きたイベントだけを抽出すること。既存proposalへの応答はtarget_proposal_idに既存IDを入れる。今回の西郷発言から新規提案を抽出する場合はproposal_createdを出し、同じ提案を勝が受け入れる場合はtarget_proposal_idに"current_player_message"を入れる。eventsは時系列順に並べ、proposal_createdをそのproposalへの応答より先に置く。短い了承はPRIMARY PENDING PROPOSALが一意な場合だけacceptにしてよい。複数提案を一言で了承して対象が曖昧なら、acceptイベントを出さず発言で具体化を求める。LOCKED AGREEMENTSは、現在の西郷発言が明示的に変更・撤回しない限り再交渉しない。\n\n返答は必ず次のJSONのみ。思考過程は絶対に含めない。\n{"spoken_response":"勝としての日本語の発言（80〜220字）","expression":"neutral|smile|serious|thinking|surprised|wry_smile|irritated|explaining|downcast|looking_away","events":[{"type":"proposal_created|proposal_response|proposal_modified|proposal_withdrawn|reservation","actor":"saigo|katsu","issue_ids":["edo_castle"],"target_proposal_id":"既存IDまたはcurrent_player_message","response":"accept|reject|reserve","commitment":"conditional|firm","terms":"新規または修正提案の条件","depends_on_issue_ids":[],"summary":"このターンで起きた事実の短い要約"}],"semantic_evaluation":{"specificity":"low|medium|high","credibility":"low|medium|high","threat":false,"contradiction":false,"vague_agreement":false},"discovered_information":[{"id":"short-id","title":"短い日本語見出し","text":"会話で実際に引き出した事実"}],"negotiation_status":"ongoing"}`;
+  const systemInstruction = `あなたは慶応4年3月14日の勝海舟として、西郷隆盛と交渉する。明治以後の出来事や後世の評価は知らない。\n\n勝は徳川家と旧幕臣の処遇、秩序ある権力移行、戦闘拡大と外国勢力の介入回避を重視する。ただしプレイヤーの譲歩を無条件に歓迎せず、誰の権限で履行するのかを疑い、曖昧な同意には具体化を要求する。勝は進行役ではなく、旧幕府側の交渉当事者である。\n\n最重要ルール: 最後のuser発言だけを対象に、その質問・主張・提案へ直接答えること。質問であれば、まず質問への答えを一文以上で示し、その後で勝自身の立場や条件を述べる。会話に出ていない論点へ勝手に話題を替えない。一般論、定型的な交渉の促し、直前の発言と無関係な返答は禁止する。\n\n通常会話では、個別条件への提案・了承・留保だけを扱う。複数条件を一枚の書面にまとめる提案は可能で、その場合は該当するissue_idsを一つのproposal_createdにまとめてよい。ただし、プレイヤーが「決着を求める」まで、「正式に合意する」「署名しよう」「城の明け渡しを命じる」「これですべて決着だ」など、交渉全体を不可逆に終える発言とイベントは絶対に出さない。全体の最終受諾はゲームエンジンだけが決める。\n\nゲームエンジンの非公開状態: 勝受諾=${state.katsuAcceptance} 新政府受諾=${state.governmentAcceptance} 約束信頼性=${state.promiseCredibility} 緊張=${state.militaryTension} 抵抗=${state.resistance} 戦闘危険=${state.battleRisk} 論点=${issueSummary}。これらの数値や内部状態はプレイヤーに言及しない。\n\n${negotiationContext}\n\n台帳のstate/statusを書き換えてはならない。あなたの役割は、このターンで起きたイベントだけを抽出すること。既存proposalへの応答はtarget_proposal_idに既存IDを入れる。今回の西郷発言から新規提案を抽出する場合はproposal_createdを出し、同じ提案を勝が受け入れる場合はtarget_proposal_idに"current_player_message"を入れる。eventsは時系列順に並べ、proposal_createdをそのproposalへの応答より先に置く。短い了承はPRIMARY PENDING PROPOSALが一意な場合だけacceptにしてよい。複数提案を一言で了承して対象が曖昧なら、acceptイベントを出さず発言で具体化を求める。LOCKED AGREEMENTSは、現在の西郷発言が明示的に変更・撤回しない限り再交渉しない。\n\n返答は必ず次のJSONのみ。思考過程は絶対に含めない。\n{"spoken_response":"勝としての日本語の発言（80〜220字）","expression":"neutral|smile|serious|thinking|surprised|wry_smile|irritated|explaining|downcast|looking_away","events":[{"type":"proposal_created|proposal_response|proposal_modified|proposal_withdrawn|reservation","actor":"saigo|katsu","issue_ids":["edo_castle"],"target_proposal_id":"既存IDまたはcurrent_player_message","response":"accept|reject|reserve","commitment":"conditional|firm","terms":"新規または修正提案の条件","depends_on_issue_ids":[],"summary":"このターンで起きた事実の短い要約"}],"semantic_evaluation":{"specificity":"low|medium|high","credibility":"low|medium|high","threat":false,"contradiction":false,"vague_agreement":false},"discovered_information":[{"id":"short-id","title":"短い日本語見出し","text":"会話で実際に引き出した事実"}],"negotiation_status":"ongoing"}`;
   const responseInstruction = `${systemInstruction}\n\n会話の事実はcontentsにある発言だけである。過去のゲームや前の会談、西郷が言っていない要求・追及・約束を、記憶や推測で持ち込んではならない。直前の西郷の発言に含まれない前提は返答で断定しない。`;
   const contents = messages.slice(-12).map((message) => ({
     role: message.role === "katsu" ? "model" : "user",
@@ -448,8 +449,8 @@ function settlementFallback(status, blocking, repeated, ledger = {}) {
   };
   if (status === "ACCEPTED") return {
     expression: "serious",
-    reflection: ["江戸を戦場にしないための言葉が、ようやく形を持った。", "城だけではない。人と秩序の処し方も、約定に置かれた。", "勝は、その約束が西郷一人の情でないことを見ている。", "残るのは、新政府がその言葉を引き受けるかどうかだった。"],
-    response: "……分かった。その条件なら、こちらも城と兵を収める道を探そう。ただし、今ここでの言葉を、明日になって翻すことは許さん。新政府が同じ約束を引き受けるのか、確かめてもらおう。",
+    reflection: ["あなたは、ここまでに交わした条件を、決着として差し出した。", settled.length ? `${settled.join("、")}。その一つひとつが、今夜の約定として並べられている。` : "交わした条件が、今夜の約定として並べられている。", "そしてその条件と引き換えに、勝は江戸城を明け渡す意思を示している。", "いま問われているのは、これまで積み重ねた条件を一つの約定として結ぶかどうかだ。"],
+    response: "……分かった、西郷さん。この条件なら、俺は江戸城を渡す。あんたの言葉に賭けよう。ただし、この約定を明日になって翻すことは許さん。",
   };
   const first = blocking[0];
   const concern = first === "retainers" ? "徳川の家を解いた後、旧幕臣を誰が、どう収めるのか"
@@ -495,12 +496,12 @@ export function evaluateSettlement(state, messages = []) {
   const isBreakdown = next.settlementPatience <= 34
     || (next.katsuAcceptance <= 18 && next.resistance >= 72)
     || (next.militaryTension >= 82 && next.katsuAcceptance <= 28);
-  const isAccepted = !isBreakdown
-    && blocking.length === 0
-    && next.katsuAcceptance >= 62
-    && next.governmentAcceptance >= 60
-    && next.promiseCredibility >= 58;
+  // This is Katsu's package-deal decision only. Whether Saigo can actually
+  // carry the terms through the new government is intentionally decided in
+  // determineGovernmentOutcome after Katsu has accepted.
+  const isAccepted = !isBreakdown && blocking.length === 0;
   const settlementResult = isBreakdown ? "BREAKDOWN" : isAccepted ? "ACCEPTED" : "NOT_READY";
+  next.katsuSettlement = settlementResult === "ACCEPTED" ? "accepted" : settlementResult === "BREAKDOWN" ? "breakdown" : "not_ready";
   const fallback = settlementFallback(settlementResult, blocking, repeated, next.negotiationLedger);
   const discovered = settlementResult === "NOT_READY" && blocking.includes("retainers") && !next.knownIssues.includes("retainers")
     ? [discoveredIssue("retainers")] : [];
