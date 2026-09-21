@@ -106,6 +106,28 @@ assert.ok(!playLogSettlement.katsuResponse.includes("城を渡した後の江戸
 assert.ok(playLogSettlement.reflection.some((line) => line.includes("徳川慶喜")));
 assert.equal(playLogSettlement.state.governmentAcceptance, 18, "government feasibility is not allowed to reopen Katsu's agreement");
 
+// Regression: a written confirmation in Katsu's own reply can cover several
+// clauses at once. The model supplies this semantic event; the reducer does
+// not search Japanese words to manufacture agreement. Missing clauses may
+// still block settlement, but the confirmed castle/Yoshinobu clauses must not.
+let writtenPackageState = { ...INITIAL_STATE, turns: 6, katsuAcceptance: 58, resistance: 40, militaryTension: 45 };
+writtenPackageState = reduceNegotiationEvents(writtenPackageState, [{
+  type: "agreement_confirmed", actor: "katsu",
+  issue_ids: ["edo_castle", "tokugawa_house", "yoshinobu", "weapons", "warships", "retainers", "public_order"],
+  commitment: "firm",
+  terms: "江戸城の明け渡し、慶喜公への不問、旧幕臣の身分保障、武器と軍艦の扱い、市中秩序を一つの書面に記す",
+  summary: "書面化する個別条件を双方で確認した",
+}], {
+  playerText: "異存はない。書いてくれ。",
+  katsuText: "承知した。これまでの議論を全て書面に落とし込もう。江戸城の明け渡し、慶喜公の身分保障、旧幕臣の身分と武器の保持、これらを約定として記す。",
+}).state;
+assert.equal(writtenPackageState.issues.edo_castle, "agreed");
+assert.equal(writtenPackageState.issues.yoshinobu, "agreed");
+const writtenPackageSettlement = evaluateSettlement(writtenPackageState, []);
+assert.ok(!writtenPackageSettlement.blocking.includes("edo_castle"));
+assert.ok(!writtenPackageSettlement.blocking.includes("yoshinobu"));
+assert.ok(!writtenPackageSettlement.katsuResponse.includes("城を渡した後の江戸を、誰がどう静めるのか"));
+
 // Evaluation uses event output. The spoken response by itself can never create
 // a hidden agreement; this is the JSON-invalid / event-missing failure-safe.
 const evaluated = evaluateMessage("いいよ", INITIAL_STATE, {}, "承知した。その条件で進めよう。", []);
