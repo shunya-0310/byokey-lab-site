@@ -583,12 +583,14 @@ footer small { grid-column: 1 / -1; color: var(--muted); }
   .edo-intro-page-5{background-image:url('/images/edo-1868/prologue-05-fusuma-mobile-v1.png')!important}
   .edo-intro-page-6{background-image:url('/images/edo-1868/prologue-06-fusuma-mobile-v1.png')!important}
   .edo-intro-page{background-position:center!important}
-  .edo-stage{height:calc(100dvh - 72px);min-height:0;overflow:hidden}
+  .edo-stage{height:calc(100svh - 72px);min-height:0;overflow:hidden}
   .edo-hud{gap:.35rem;padding:.45rem .55rem}.edo-hud>button{font-size:.7rem}.edo-hud span{font-size:.7rem}.edo-hud div{gap:.25rem}.edo-hud div button{padding:.38rem .45rem;font-size:.68rem}.edo-hud div button svg{width:14px;height:14px}
-  .edo-character-stage{inset:4.45rem 0 7.6rem}.edo-character-stage img{height:clamp(280px,44svh,390px);max-width:80vw}
+  .edo-character-stage{inset:4.45rem 0 7.6rem}.edo-character-stage img{height:clamp(350px,112vw,500px);max-width:88vw}
   .edo-dialogue-box{bottom:6.6rem;min-height:76px;padding:.75rem .9rem;font-size:.91rem;line-height:1.55}.edo-nameplate{top:-1.85rem;min-width:118px;padding:.35rem .6rem;font-size:.86rem}
   .edo-stage-form{bottom:max(.45rem,env(safe-area-inset-bottom));gap:.35rem;padding:.4rem .5rem}.edo-stage-form textarea{min-height:40px;font-size:.92rem;line-height:1.35}.edo-stage-form button{width:46px;font-size:.72rem}.edo-conclude-button{padding:0 .55rem!important}
-  .edo-stage:has(textarea:focus) .edo-character-stage{inset:4.45rem 0 7.6rem}.edo-stage:has(textarea:focus) .edo-character-stage img{height:clamp(280px,44svh,390px);max-width:80vw;opacity:1}.edo-stage:has(textarea:focus) .edo-dialogue-box{bottom:6.6rem;min-height:76px;font-size:.91rem}
+  .edo-stage:has(textarea:focus) .edo-character-stage{inset:4.45rem 0 7.6rem}.edo-stage:has(textarea:focus) .edo-character-stage img{height:clamp(350px,112vw,500px);max-width:88vw;opacity:1}.edo-stage:has(textarea:focus) .edo-dialogue-box{bottom:6.6rem;min-height:76px;font-size:.91rem}
+  .edo-stage.edo-keyboard-open .edo-stage-form{bottom:calc(var(--edo-keyboard-inset) + .45rem)}
+  .edo-stage.edo-keyboard-open .edo-dialogue-box{bottom:calc(var(--edo-keyboard-inset) + 6.6rem)}
   .edo-settings-actions{margin-bottom:1rem}.edo-settings-actions button{padding:.5rem .9rem}
 }
 .edo-external-link{display:inline-flex;align-items:center;gap:.4rem;color:#e4c586;text-underline-offset:.18em;line-height:1.6}.edo-external-link:hover,.edo-external-link:focus-visible{color:#fff0c8}

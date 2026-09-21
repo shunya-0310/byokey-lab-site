@@ -453,7 +453,7 @@ function Edo1868Page({ onNavigate }) {
   const apiKeyStorageKey = "byokey-lab:edo-1868:gemini-api-key";
   const gameStorageKey = "byokey-lab:edo-1868:game-save";
   const gameSaveVersion = 4;
-  const openingKatsuMessage = { role: "katsu", expression: "neutral", text: "おう、西郷さん。山岡から話は聞いている。駿府からの道中はどうだった。……さて、明日には軍が動く。城と軍勢をどう始末するつもりか、腹を割って聞かせてもらおう。" };
+  const openingKatsuMessage = { role: "katsu", expression: "neutral", text: "おう、西郷さん。山岡から手紙は受け取った。駿府から夜通しだったろう、まずは座りな。……道中、春の雨には難儀しなかったか。こうして顔を合わせるのは久しぶりだな。さて、明日は軍が動く。互いに抱えたものを、腹を割って話そうじゃないか。" };
   const [phase, setPhase] = useState("title");
   const [introStep, setIntroStep] = useState(0);
   const [state, setState] = useState(INITIAL_STATE);
@@ -473,6 +473,7 @@ function Edo1868Page({ onNavigate }) {
   const [playIntroStage, setPlayIntroStage] = useState("ready");
   const [visibleKatsuText, setVisibleKatsuText] = useState("");
   const [settlementFlow, setSettlementFlow] = useState(null);
+  const [keyboardInset, setKeyboardInset] = useState(0);
   const currentKatsu = [...messages].reverse().find((message) => message.role === "katsu");
 
   useEffect(() => {
@@ -533,6 +534,35 @@ function Edo1868Page({ onNavigate }) {
     const timer = window.setInterval(() => { index += 1; setVisibleKatsuText(currentKatsu.text.slice(0, index)); if (index >= currentKatsu.text.length) window.clearInterval(timer); }, 28);
     return () => window.clearInterval(timer);
   }, [phase, playIntroStage, currentKatsu?.text]);
+
+  useEffect(() => {
+    if (phase !== "play" || !window.visualViewport) return undefined;
+    const viewport = window.visualViewport;
+    let stableHeight = Math.max(window.innerHeight, document.documentElement.clientHeight);
+    const updateKeyboardInset = () => {
+      stableHeight = Math.max(stableHeight, window.innerHeight, document.documentElement.clientHeight);
+      const coveredHeight = Math.max(0, stableHeight - viewport.height - viewport.offsetTop);
+      const nextInset = coveredHeight > 120 ? Math.round(coveredHeight) : 0;
+      setKeyboardInset(nextInset);
+      if (nextInset > 0) window.scrollTo({ top: 0, behavior: "auto" });
+    };
+    updateKeyboardInset();
+    viewport.addEventListener("resize", updateKeyboardInset);
+    viewport.addEventListener("scroll", updateKeyboardInset);
+    window.addEventListener("resize", updateKeyboardInset);
+    return () => {
+      viewport.removeEventListener("resize", updateKeyboardInset);
+      viewport.removeEventListener("scroll", updateKeyboardInset);
+      window.removeEventListener("resize", updateKeyboardInset);
+      setKeyboardInset(0);
+    };
+  }, [phase]);
+
+  const anchorMobileGame = () => {
+    if (!window.matchMedia("(max-width: 600px)").matches) return;
+    window.requestAnimationFrame(() => window.scrollTo({ top: 0, behavior: "auto" }));
+    window.setTimeout(() => window.scrollTo({ top: 0, behavior: "auto" }), 80);
+  };
 
   const restart = () => {
     setState(INITIAL_STATE); setEndingId(""); setDraft(""); setPanel(""); setSettlementFlow(null); setDiscoveries(INITIAL_DISCOVERIES); setMessages([openingKatsuMessage]); setApiUsage({ input: 0, output: 0, cached: 0 }); setHasSavedGame(false);
@@ -612,13 +642,13 @@ function Edo1868Page({ onNavigate }) {
 
   return <>
     <Header onNavigate={onNavigate} active="game" />
-    <main className={`edo-stage edo-play-${playIntroStage}`} style={{ backgroundImage: "url('/images/edo-1868/edo-secret-study-v3.png')" }}>
+    <main className={`edo-stage edo-play-${playIntroStage}${keyboardInset ? " edo-keyboard-open" : ""}`} style={{ backgroundImage: "url('/images/edo-1868/edo-secret-study-v3.png')", "--edo-keyboard-inset": `${keyboardInset}px` }}>
       <div className="edo-stage-shade" />
       <div className="edo-hud"><button onClick={() => { setIntroStep(0); setPhase("title"); }}><ChevronLeft size={18} />タイトルへ戻る</button><span>会話ターン {state.turns + 1}</span><div><button onClick={() => setPanel("mission")}><BookOpen size={18} />使命</button><button onClick={() => setPanel("notes")}><BookOpen size={18} />交渉ノート</button><button onClick={() => setPanel("history")}><MessageCircle size={18} />会話履歴</button><button onClick={() => setPanel("usage")}><Database size={18} />API使用量</button><button onClick={() => setPanel("settings")}><Settings size={18} />設定</button></div></div>
       <div className="edo-scene-meta"><p>{GAME_DATE}</p><p>江戸・薩摩藩邸</p></div>
       <section className="edo-character-stage" aria-label="勝海舟"><img src={EXPRESSION_ASSETS[currentKatsu?.expression] || EXPRESSION_ASSETS.neutral} alt="交渉相手の勝海舟" /></section>
       <section className="edo-dialogue-box" aria-live="polite"><div className="edo-nameplate">勝 海舟</div><p>{visibleKatsuText}</p></section>
-      {ending ? <section className="edo-ending edo-stage-ending"><p>あなたがたどり着いた歴史</p><h2>{ending.title}</h2><p>{ending.text}</p><p className="edo-history-note">{ending.history}</p><button type="button" onClick={restart}><RotateCcw size={17} />もう一度、交渉する</button></section> : <form className="edo-stage-form" onSubmit={submit}><textarea aria-label="あなたの言葉" value={draft} onChange={(event) => setDraft(event.target.value)} maxLength="500" placeholder="" disabled={isSending} autoFocus /><button type="button" className="edo-conclude-button" onClick={() => setPanel("conclude")} disabled={isSending}>決着を求める</button><button type="submit" disabled={!draft.trim() || isSending} aria-label="言葉を交わす">{isSending ? <LoaderCircle className="edo-loading" size={25} /> : <Send size={28} />}</button></form>}
+      {ending ? <section className="edo-ending edo-stage-ending"><p>あなたがたどり着いた歴史</p><h2>{ending.title}</h2><p>{ending.text}</p><p className="edo-history-note">{ending.history}</p><button type="button" onClick={restart}><RotateCcw size={17} />もう一度、交渉する</button></section> : <form className="edo-stage-form" onSubmit={submit}><textarea aria-label="あなたの言葉" value={draft} onChange={(event) => setDraft(event.target.value)} onFocus={anchorMobileGame} maxLength="500" placeholder="" disabled={isSending} /><button type="button" className="edo-conclude-button" onClick={() => setPanel("conclude")} disabled={isSending}>決着を求める</button><button type="submit" disabled={!draft.trim() || isSending} aria-label="言葉を交わす">{isSending ? <LoaderCircle className="edo-loading" size={25} /> : <Send size={28} />}</button></form>}
       {settlementFlow && <section className={`edo-settlement-overlay edo-settlement-${settlementFlow.stage}`} aria-live="polite">
         {settlementFlow.stage === "government" ? <div className="edo-settlement-copy edo-government-reflection"><p>勝の言葉は、ここで終わりではない。</p><p>西郷の約束を、新政府が引き受けるのか。</p><p>明日の軍勢を止める判断が、今、問われている。</p></div> : <div className="edo-settlement-copy">
           <p className="edo-settlement-kicker">勝は、しばらく黙っている。</p>
