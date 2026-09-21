@@ -133,4 +133,19 @@ assert.ok(!writtenPackageSettlement.katsuResponse.includes("城を渡した後�
 const evaluated = evaluateMessage("いいよ", INITIAL_STATE, {}, "承知した。その条件で進めよう。", []);
 assert.equal(evaluated.state.issues.warships, "unresolved");
 
+// Regression: an immediate settlement request after merely asking what should
+// be discussed is correctly declined, but must not fabricate a specific
+// unresolved agreement such as post-surrender public order.
+const orientationState = reduceNegotiationEvents(INITIAL_STATE, [
+  proposal("katsu", ["edo_castle", "tokugawa_house", "yoshinobu", "retainers", "warships", "civilian_safety", "public_order"], "江戸城明け渡し、慶喜の処遇、徳川家存続、旧幕臣の処遇、軍艦の扱い、市民の安全と治安維持の履行手順と権限の明確化"),
+], {
+  playerText: "決めるべきことがなにか、まずは確認しよう。",
+  katsuText: "まずは徳川慶喜公の処遇、江戸城の明け渡し、そして旧幕臣たちの身の振り方だ。",
+}).state;
+const orientationSettlement = evaluateSettlement(orientationState, []);
+assert.equal(orientationSettlement.settlementResult, "NOT_READY");
+assert.ok(orientationSettlement.katsuResponse.includes("まだ互いの条件を一つも約していない"));
+assert.ok(!orientationSettlement.katsuResponse.includes("城を渡した後の江戸を、誰がどう静めるのか"));
+assert.ok(!orientationSettlement.reflection.some((line) => line.includes("ここまでに交わした条件")));
+
 console.log("Edo 1868 event-sourced ledger regression test passed");

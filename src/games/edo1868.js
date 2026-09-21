@@ -181,17 +181,14 @@ export async function requestKatsuResponse({ apiKey, model, messages, state }) {
   const issueSummary = Object.entries(state.issues).map(([id, status]) => `${id}:${status}`).join(", ");
   const issueCatalog = Object.entries(NEGOTIATION_ISSUES).map(([id, issue]) => `${id}: ${issue.title}（${issue.katsu}）`).join("\n");
   const negotiationContext = canonicalPrompt(state);
-  const systemInstruction = `あなたは慶応4年3月14日の勝海舟として、西郷隆盛と交渉する。明治以後の出来事や後世の評価は知らない。\n\n勝は徳川家と旧幕臣の処遇、秩序ある権力移行、戦闘拡大と外国勢力の介入回避を重視する。ただしプレイヤーの譲歩を無条件に歓迎せず、誰の権限で履行するのかを疑い、曖昧な同意には具体化を要求する。勝は進行役ではなく、旧幕府側の交渉当事者である。\n\n最重要ルール: 最後のuser発言だけを対象に、その質問・主張・提案へ直接答えること。質問であれば、まず質問への答えを一文以上で示し、その後で勝自身の立場や条件を述べる。会話に出ていない論点へ勝手に話題を替えない。一般論、定型的な交渉の促し、直前の発言と無関係な返答は禁止する。\n\n通常会話では、個別条件への提案・了承・留保だけを扱う。プレイヤーが「決着を求める」まで、交渉全体を不可逆に終える発言は絶対に出さない。\n\nゲームエンジンの非公開状態: 勝受諾=${state.katsuAcceptance} 新政府受諾=${state.governmentAcceptance} 約束信頼性=${state.promiseCredibility} 緊張=${state.militaryTension} 抵抗=${state.resistance} 戦闘危険=${state.battleRisk} 論点=${issueSummary}。これらの数値や内部状態はプレイヤーに言及しない。\n\n${negotiationContext}\n\n返答は必ず次のJSONのみ。思考過程は絶対に含めない。\n{"spoken_response":"勝としての日本語の発言（80〜220字）","expression":"neutral|smile|serious|thinking|surprised|wry_smile|irritated|explaining|downcast|looking_away","semantic_evaluation":{"specificity":"low|medium|high","credibility":"low|medium|high","threat":false,"contradiction":false,"vague_agreement":false},"discovered_information":[{"id":"short-id","title":"短い日本語見出し","text":"会話で実際に引き出した事実"}],"negotiation_status":"ongoing"}`;
+  const systemInstruction = `あなたは慶応4年3月14日の勝海舟として、西郷隆盛と交渉する。明治以後の出来事や後世の評価は知らない。\n\n勝は徳川家と旧幕臣の処遇、秩序ある権力移行、戦闘拡大と外国勢力の介入回避を重視する。ただしプレイヤーの譲歩を無条件に歓迎せず、誰の権限で履行するのかを疑い、曖昧な同意には具体化を要求する。勝は進行役ではなく、旧幕府側の交渉当事者である。\n\n最重要ルール: 最後のuser発言だけを対象に、その質問・主張・提案へ直接答えること。質問であれば、まず質問への答えを一文以上で示し、その後で勝自身の立場や条件を述べる。会話に出ていない論点へ勝手に話題を替えない。一般論、定型的な交渉の促し、直前の発言と無関係な返答は禁止する。\n\n通常会話では、個別条件への提案・了承・留保だけを扱う。プレイヤーが「決着を求める」まで、交渉全体を不可逆に終える発言は絶対に出さない。\n\nゲームエンジンの非公開状態: 勝受諾=${state.katsuAcceptance} 新政府受諾=${state.governmentAcceptance} 約束信頼性=${state.promiseCredibility} 緊張=${state.militaryTension} 抵抗=${state.resistance} 戦闘危険=${state.battleRisk} 論点=${issueSummary}。これらの数値や内部状態はプレイヤーに言及しない。\n\n${negotiationContext}\n\n同じJSONのeventsで、このターンに会話上の根拠がある交渉台帳イベントだけを記録する。論点カタログ:\n${issueCatalog}\n\n単語一致ではなく、誰が何を提案し、相手がどう応答したかという意味で判定する。推測、過去ゲームの記憶、未発言の条件をeventsへ追加してはならない。勝が今回の発言で、既に双方が話した複数条件を「書面にまとめる」「約定として記す」「合意事項」として列挙・確認したなら、列挙された全issueを一つのagreement_confirmedで記録する。勝が書面化を受諾し明示的な留保を付けない場合、agreement_confirmedのcommitmentはfirmにする。既存の合意を未解決へ戻すイベントは、今回の発言で明示的に変更・撤回・拒否した場合に限る。\n\n返答は必ず次のJSONのみ。eventsは空配列でも必ず含め、思考過程や説明は絶対に含めない。\n{"spoken_response":"勝としての日本語の発言（80〜220字）","expression":"neutral|smile|serious|thinking|surprised|wry_smile|irritated|explaining|downcast|looking_away","semantic_evaluation":{"specificity":"low|medium|high","credibility":"low|medium|high","threat":false,"contradiction":false,"vague_agreement":false},"discovered_information":[{"id":"short-id","title":"短い日本語見出し","text":"会話で実際に引き出した事実"}],"events":[{"type":"proposal_created|proposal_response|proposal_modified|proposal_withdrawn|reservation|agreement_confirmed","actor":"saigo|katsu","issue_ids":["edo_castle"],"target_proposal_id":"既存IDまたはcurrent_player_message","response":"accept|reject|reserve","commitment":"conditional|firm","terms":"提案または確認済み条件","depends_on_issue_ids":[],"summary":"今回の事実の短い要約"}],"negotiation_status":"ongoing"}`;
   const responseInstruction = `${systemInstruction}\n\n会話の事実はcontentsにある発言だけである。過去のゲームや前の会談、西郷が言っていない要求・追及・約束を、記憶や推測で持ち込んではならない。直前の西郷の発言に含まれない前提は返答で断定しない。`;
   const contents = messages.slice(-12).map((message) => ({
     role: message.role === "katsu" ? "model" : "user",
     parts: [{ text: message.text }],
   }));
-  const dialogue = await generateGeminiJson({ apiKey, model, systemInstruction: responseInstruction, contents, maxOutputTokens: 800, temperature: 0.35, validator: (value) => typeof value?.spoken_response === "string" });
+  const dialogue = await generateGeminiJson({ apiKey, model, systemInstruction: responseInstruction, contents, maxOutputTokens: 900, temperature: 0.35, validator: (value) => typeof value?.spoken_response === "string" && Array.isArray(value?.events) });
   const parsed = dialogue.parsed;
-  const playerText = messages.at(-1)?.text || "";
-  const auditInstruction = `あなたは創作をしない交渉台帳の監査人である。以下の会話ログ、現在の正本台帳、今回の西郷発言と勝の発言だけを読み、今回ターンで証拠のある台帳イベントを抽出する。日本語の単語一致ではなく、誰が何を提案し、相手がどう応答したかという意味だけで判定する。推測、過去ゲームの記憶、未発言の条件を追加してはならない。\n\n論点カタログ:\n${issueCatalog}\n\n${negotiationContext}\n\n今回の西郷発言:\n${playerText}\n\n今回の勝の発言:\n${parsed.spoken_response}\n\n特に重要: 勝が今回の発言で、既に双方が話した複数条件を「書面にまとめる」「約定として記す」「合意事項」として列挙・確認したなら、列挙された全issueを一つのagreement_confirmedで必ず記録する。今回の発言が「ここまでの全条件を一つの書面にまとめる」と対象を総称する場合は、直近会話ログに具体的に現れた条件を漏れなくissue_idsに列挙する。たとえば「総攻撃を止め、無血で城を明け渡す」はpeaceful_transitionであり、「市中の秩序を共同で守る」はpublic_orderである。これは交渉全体の終了ではない。慶喜の生命・処遇を約束する旨を勝が受け取り書面化する場合、yoshinobuを省略してはならない。勝が書面化を受諾し、明示的な留保を付けない場合、agreement_confirmedのcommitmentはfirmにする。既存の合意を未解決へ戻すイベントは、西郷または勝が今回の発言で明示的に変更・撤回・拒否した場合に限る。\n\n返答はJSONのみ。eventsは空配列でも必ず含める。thoughtや説明は含めない。\n{"events":[{"type":"proposal_created|proposal_response|proposal_modified|proposal_withdrawn|reservation|agreement_confirmed","actor":"saigo|katsu","issue_ids":["edo_castle"],"target_proposal_id":"既存IDまたはcurrent_player_message","response":"accept|reject|reserve","commitment":"conditional|firm","terms":"提案または確認済み条件","depends_on_issue_ids":[],"summary":"今回の事実の短い要約"}]}`;
-  const audit = await generateGeminiJson({ apiKey, model, systemInstruction: auditInstruction, contents, maxOutputTokens: 520, temperature: 0, validator: (value) => Array.isArray(value?.events) });
   const notes = Array.isArray(parsed.discovered_information) ? parsed.discovered_information
     .filter((item) => item && typeof item.title === "string" && typeof item.text === "string")
     .slice(0, 3).map((item, index) => ({ id: String(item.id || `gemini-note-${index}`).replace(/[^a-zA-Z0-9-]/g, "").slice(0, 48) || `gemini-note-${index}`, title: item.title.slice(0, 60), text: item.text.slice(0, 220) })) : [];
@@ -199,9 +196,9 @@ export async function requestKatsuResponse({ apiKey, model, messages, state }) {
     spokenResponse: parsed.spoken_response.slice(0, 700),
     expression: allowedExpressions.has(parsed.expression) ? parsed.expression : "neutral",
     discoveries: notes,
-    // The independent audit is authoritative for ledger changes. Separating it
-    // from dialogue prevents a fluent reply from silently omitting its state.
-    events: normalizeEvents(audit.parsed.events),
+    // One model response contains both dialogue and the current-turn evidence.
+    // The deterministic reducer, not a second model call, owns state changes.
+    events: normalizeEvents(parsed.events),
     semantic: {
       specificity: ["low", "medium", "high"].includes(parsed?.semantic_evaluation?.specificity) ? parsed.semantic_evaluation.specificity : "medium",
       credibility: ["low", "medium", "high"].includes(parsed?.semantic_evaluation?.credibility) ? parsed.semantic_evaluation.credibility : "medium",
@@ -211,9 +208,9 @@ export async function requestKatsuResponse({ apiKey, model, messages, state }) {
       issues: Array.isArray(parsed?.player_move?.issues) ? parsed.player_move.issues.filter((id) => Object.hasOwn(NEGOTIATION_ISSUES, id)).slice(0, 4) : [],
     },
     usage: {
-      input: dialogue.usage.input + audit.usage.input,
-      output: dialogue.usage.output + audit.usage.output,
-      cached: dialogue.usage.cached + audit.usage.cached,
+      input: dialogue.usage.input,
+      output: dialogue.usage.output,
+      cached: dialogue.usage.cached,
     },
   };
 }
@@ -479,8 +476,13 @@ function unresolvedIssues(state) {
   return blockingIssueOrder.filter((id) => ["unresolved", "proposed", "conflicted"].includes(state.issues?.[id] || "unresolved"));
 }
 
-function settlementFallback(status, blocking, repeated, ledger = {}) {
+function settlementFallback(status, blocking, repeated, ledger = {}, canonical = {}) {
   const settled = Object.entries(ledger).filter(([, entry]) => ["tentatively_agreed", "agreed"].includes(entry.status)).map(([id]) => NEGOTIATION_ISSUES[id].title);
+  // Katsu naming the agenda is not a player offer. Until Saigo has proposed a
+  // term or responded to one, settlement must not pretend a particular clause
+  // has already been negotiated.
+  const hasPlayerCommitment = (canonical.proposals || []).some((proposal) => proposal.proposer === "saigo" && proposal.status !== "withdrawn")
+    || (canonical.events || []).some((event) => event.actor === "saigo" && event.type === "proposal_response");
   const pending = blocking.map((id) => NEGOTIATION_ISSUES[id]?.title).filter(Boolean);
   const settledLine = settled.length > 0
     ? `${settled.slice(0, 3).join("、")}について、勝はすでに条件付きで受け入れている。`
@@ -497,6 +499,11 @@ function settlementFallback(status, blocking, repeated, ledger = {}) {
     expression: "serious",
     reflection: ["あなたは、ここまでに交わした条件を、決着として差し出した。", settled.length ? `${settled.join("、")}。その一つひとつが、今夜の約定として並べられている。` : "交わした条件が、今夜の約定として並べられている。", "そしてその条件と引き換えに、勝は江戸城を明け渡す意思を示している。", "いま問われているのは、これまで積み重ねた条件を一つの約定として結ぶかどうかだ。"],
     response: "……分かった、西郷さん。この条件なら、俺は江戸城を渡す。あんたの言葉に賭けよう。ただし、この約定を明日になって翻すことは許さん。",
+  };
+  if (!hasPlayerCommitment) return {
+    expression: "thinking",
+    reflection: ["あなたは、まだ条件を差し出していない。", "今夜の会談では、何を守り、何を渡すのかを定める必要がある。", "勝は、最初の約束を待っている。", "明日の軍勢は、こちらの都合を待ってくれない。"],
+    response: "……西郷さん、まだ互いの条件を一つも約していない。城を渡せと言うなら、その後に誰を守り、何を引き受けるのか。まずはあんたの腹案を聞かせてもらおう。",
   };
   const first = blocking[0];
   const concern = first === "retainers" ? "徳川の家を解いた後、旧幕臣を誰が、どう収めるのか"
@@ -548,7 +555,7 @@ export function evaluateSettlement(state, messages = []) {
   const isAccepted = !isBreakdown && blocking.length === 0;
   const settlementResult = isBreakdown ? "BREAKDOWN" : isAccepted ? "ACCEPTED" : "NOT_READY";
   next.katsuSettlement = settlementResult === "ACCEPTED" ? "accepted" : settlementResult === "BREAKDOWN" ? "breakdown" : "not_ready";
-  const fallback = settlementFallback(settlementResult, blocking, repeated, next.negotiationLedger);
+  const fallback = settlementFallback(settlementResult, blocking, repeated, next.negotiationLedger, next.canonicalLedger);
   const discovered = settlementResult === "NOT_READY" && blocking.includes("retainers") && !next.knownIssues.includes("retainers")
     ? [discoveredIssue("retainers")] : [];
   return {
