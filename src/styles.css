@@ -595,3 +595,24 @@ footer small { grid-column: 1 / -1; color: var(--muted); }
 }
 .edo-external-link{display:inline-flex;align-items:center;gap:.4rem;color:#e4c586;text-underline-offset:.18em;line-height:1.6}.edo-external-link:hover,.edo-external-link:focus-visible{color:#fff0c8}
 .edo-settlement-overlay{position:fixed;z-index:30;inset:0;display:grid;place-items:center;padding:1.5rem;background:radial-gradient(ellipse at center,rgba(19,25,28,.82),rgba(2,5,8,.98) 74%);color:#f0e1c5;animation:edo-settlement-in 1.1s ease both}.edo-settlement-copy{width:min(660px,92vw);text-align:center}.edo-settlement-kicker{margin:0 0 1.9rem;color:#cbaa70;letter-spacing:.16em}.edo-settlement-line{margin:0 0 1rem;opacity:0;font-size:clamp(1.05rem,2.1vw,1.45rem);line-height:2;letter-spacing:.08em;animation:edo-settlement-line .55s ease forwards;animation-delay:var(--line-delay)}.edo-settlement-response{margin:2.5rem auto 0;padding:1.5rem 1.7rem;border-top:1px solid rgba(211,176,111,.58);border-bottom:1px solid rgba(211,176,111,.26);background:rgba(12,18,21,.52);opacity:0;animation:edo-settlement-response .7s ease forwards;animation-delay:3.35s}.edo-settlement-response p{margin:0;line-height:2;font-size:clamp(1rem,1.7vw,1.2rem);text-align:left}.edo-settlement-response button{margin-top:1.5rem;padding:.7rem 1.2rem;border:1px solid #c89e5d;background:rgba(15,23,29,.85);color:#f4e4c4;font:inherit;letter-spacing:.08em}.edo-settlement-response button:hover{background:#c89e5d;color:#101820}.edo-government-reflection p{margin:0 0 1.1rem;font-size:clamp(1.05rem,2.1vw,1.45rem);line-height:2;letter-spacing:.08em;opacity:0;animation:edo-settlement-line .55s ease forwards}.edo-government-reflection p:nth-child(1){animation-delay:.4s}.edo-government-reflection p:nth-child(2){animation-delay:1.2s}.edo-government-reflection p:nth-child(3){animation-delay:2s}@keyframes edo-settlement-in{from{opacity:0}to{opacity:1}}@keyframes edo-settlement-line{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}@keyframes edo-settlement-response{to{opacity:1}}@media(max-width:600px){.edo-settlement-overlay{padding:1rem}.edo-settlement-response{padding:1.1rem}.edo-settlement-line{font-size:1rem;line-height:1.8}}
+/* Ending and review share the game's dark paper / gold controls at every width. */
+.edo-stage-ending{position:fixed;top:50%;bottom:auto;transform:translateY(-50%);max-height:calc(100svh - 2rem);overflow-y:auto;box-sizing:border-box;padding-bottom:calc(1.5rem + env(safe-area-inset-bottom,0px))}
+.edo-ending-narrative{white-space:pre-line}
+.edo-outcome-line{color:#f2d99d;font-weight:600}
+.edo-stage-ending button,.edo-review button{display:inline-flex;justify-content:center;align-items:center;gap:.5rem;max-width:100%;min-height:48px;padding:.8rem 1.1rem;border:1px solid #ceb17a;border-radius:3px;background:#17212a;color:#f5e7c9;font:inherit;cursor:pointer;white-space:normal}
+.edo-stage-ending button:hover,.edo-review button:hover{background:#293740;color:#fff1cf}
+.edo-stage-ending button:focus-visible,.edo-review button:focus-visible{outline:3px solid #f2d99d;outline-offset:4px}
+.edo-stage-ending button:active,.edo-review button:active{background:#35404a;color:#fff6df}
+.edo-review{min-height:100svh;box-sizing:border-box;padding:clamp(24px,5vw,64px) max(16px,env(safe-area-inset-right,0px)) calc(40px + env(safe-area-inset-bottom,0px));background:#101921;color:#eee2ca;font-family:"EdoGameText",serif;line-height:1.9;overflow-wrap:anywhere}
+.edo-review>article{max-width:780px;margin:auto}
+.edo-review h1{font-size:clamp(1.65rem,5vw,2.5rem);color:#efd8a8}
+.edo-review h2{font-size:1.35rem;color:#e3c68f}
+.edo-review h3{color:#ebd9b6}
+.edo-review section{margin:2rem 0;padding-top:1.3rem;border-top:1px solid #6f6048}
+.edo-review nav{display:flex;flex-wrap:wrap;gap:1rem;margin-top:2rem}
+.edo-review-history details{margin:1rem 0;padding:1rem;background:#19242c;border-left:2px solid #a78b58}
+.edo-review-history summary{cursor:pointer;min-height:32px;color:#ead2a1}
+.edo-review-history p{white-space:pre-wrap}
+@media(max-width:600px){.edo-stage-ending{top:12px;right:12px;left:12px;bottom:auto;transform:none;width:auto;padding:1.2rem;max-height:calc(100svh - 24px)}.edo-stage-ending h2{font-size:1.65rem}.edo-stage-ending p{font-size:.92rem;line-height:1.85}.edo-review nav button{width:100%}}
+
+.edo-has-ending .edo-hud,.edo-has-ending .edo-dialogue-box,.edo-has-ending .edo-scene-meta{display:none}

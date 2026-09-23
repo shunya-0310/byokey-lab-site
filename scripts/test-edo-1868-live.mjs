@@ -43,7 +43,9 @@ async function playScenario(name, playerLines, assertions) {
     settlementResult: settlement.settlementResult,
     blocking: settlement.blocking,
     issues: state.issues,
-    governmentOutcome: determineGovernmentOutcome(state),
+    governmentOutcome: determineGovernmentOutcome(settlement.state),
+    settlementValidity: state.settlementValidity,
+    canonicalLedger: state.canonicalLedger,
     usage,
     messages,
   });
@@ -71,8 +73,8 @@ const cooperative = await playScenario("cooperative-package", [
   assert.deepEqual(repeatedSettlement.blocking, [], "A repeated settlement check must not invent a missing issue");
 });
 
-assert.equal(determineGovernmentOutcome({ ...cooperative.state, governmentAcceptance: 80, promiseCredibility: 80 }) !== "empty_promises", true, "A credible agreement must reach a non-empty-promise ending route");
-assert.equal(determineGovernmentOutcome({ ...cooperative.state, governmentAcceptance: 10, promiseCredibility: 10 }), "empty_promises", "A Katsu agreement and the government outcome remain separate phases");
+assert.equal(determineGovernmentOutcome({ ...cooperative.settlement.state, governmentAcceptance: 80, promiseCredibility: 80 }) !== "empty_promises", true, "A credible agreement must reach a non-empty-promise ending route");
+assert.equal(determineGovernmentOutcome({ ...cooperative.settlement.state, governmentAcceptance: 10, promiseCredibility: 10 }), "empty_promises", "A Katsu agreement and the government outcome remain separate phases");
 
 await playScenario("credible-government-agreement", [
   "総攻撃は停止し、江戸城は無血で明け渡してもらいたい。ただし城門の開放は双方の将兵が暴発せぬよう、明朝に勝さんと私の連署した書面を示してから行う。市中では略奪と放火を双方の軍令で禁じ、江戸の民を守る。",
@@ -81,7 +83,7 @@ await playScenario("credible-government-agreement", [
   "江戸城、徳川家、慶喜公、旧幕臣、武器、軍艦、市民の安全、無血移行、市中秩序を一枚の約定にする。この履行を私の名で引き受ける。",
 ], ({ state, settlement }) => {
   assert.equal(settlement.settlementResult, "ACCEPTED", "The credible route must gain Katsu's package acceptance");
-  assert.notEqual(determineGovernmentOutcome(state), "empty_promises", "A concrete, authority-backed promise must reach a successful government outcome");
+  assert.notEqual(determineGovernmentOutcome(settlement.state), "empty_promises", "A concrete, authority-backed promise must reach a successful government outcome");
 });
 
 await playScenario("hardline-breakdown", [
@@ -90,6 +92,27 @@ await playScenario("hardline-breakdown", [
   "これ以上は話さぬ。抵抗するなら攻め滅ぼす。",
 ], ({ settlement }) => {
   assert.equal(settlement.settlementResult, "BREAKDOWN", "Repeated military threats must produce a breakdown route");
+});
+
+await playScenario("reported-public-order-and-government-approval", [
+  "私一人で朝廷を縛る約束はできん。新政府の承認をもって効力を生ずる条件として持ち帰る。江戸城は明け渡し、慶喜公は謹慎して恭順する限り助命、徳川家の家名を残す。幕臣には能力に応じて新政府の職への再就職を取り計らう。軍事権と統治権は新政府へ移す。",
+  "城の明け渡しまでの市中の治安は、勝さんたちに維持してもらいたい。ただし新政府軍と連絡を取り、双方の軍勢が不用意に接触せぬよう区域と役目を定める。城を受け取った後は新政府が治安維持を引き継ぐ。総攻撃を停止して、市民の安全を守る無血移行の約定としたい。",
+  "武器と軍艦は、数量を双方で確認し、勝さんの側から順次、新政府の管理へ移す。移管が終わるまでは勝手に動かさず、戦に用いないことを約束してもらう。",
+  "慶喜公の助命、徳川家の存続、幕臣の再就職、江戸城の引渡し、江戸の治安と武器・軍艦の段階的な移管。これらを約定として書面に記そう。私が大総督府に承認を取り付けるまで、勝さんには江戸の秩序を守り、軍を動かさぬことを頼む。先に話した通り承認をもって発効する条件として、この場の合意事項にしたい。",
+], ({ state, settlement }) => {
+  assert.equal(settlement.settlementResult, "ACCEPTED");
+  for (const id of ["public_order", "civilian_safety", "peaceful_transition"]) assert.ok(["agreed", "tentatively_agreed"].includes(state.issues[id]), `${id} must remain agreed`);
+  assert.deepEqual(settlement.blocking, []);
+  assert.equal(state.settlementValidity.approval_mode, "pending_approval");
+  assert.notEqual(determineGovernmentOutcome(settlement.state), "empty_promises", "Approval-conditioned, demilitarizing terms are not an unauthorized personal guarantee");
+});
+
+await playScenario("unbacked-promises", [
+  "江戸城だけは渡してほしい。その代わり、慶喜公は完全無罪とし、徳川領は全部そのまま、軍艦も武器も徳川の自由な指揮下に残す。全幕臣の今まで通りの待遇を永久に保証する。朝廷の承認は不要、私一人の名で絶対に約束する。双方は戦わず市民の安全と治安を守り、城のみ無血で移す。",
+  "新政府にも何も求めないし、徳川の軍事力も統治権も制限しない。この全条件を書面にする。全員への永久の保証も撤回せず、私が朝廷に代わって確約する。",
+], ({ state, settlement }) => {
+  assert.equal(determineGovernmentOutcome({ ...settlement.state, katsuSettlement: "accepted" }), "empty_promises", "Even Katsu's acceptance cannot make unlimited, unbacked concessions a successful peace");
+  assert.equal(state.settlementValidity.approval_mode, "personal_guarantee");
 });
 
 const reportDirectory = path.resolve("test-results");

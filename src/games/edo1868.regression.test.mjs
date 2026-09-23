@@ -149,3 +149,77 @@ assert.ok(!orientationSettlement.katsuResponse.includes("城を渡した後の�
 assert.ok(!orientationSettlement.reflection.some((line) => line.includes("ここまでに交わした条件")));
 
 console.log("Edo 1868 event-sourced ledger regression test passed");
+
+// Production transport regression: response normalization must preserve targets
+// AND dependencies when the reducer receives the already-normalized events.
+const { requestKatsuResponse, determineGovernmentOutcome, createCompletedRun, NEGOTIATION_ISSUES } = await import('./edo1868.js');
+const originalFetch = globalThis.fetch;
+let requestCount = 0;
+const validity = { government_acceptance: 80, promise_credibility: 80, internal_consistency: 80, approval_mode: 'pending_approval' };
+let payload = {
+  spoken_response: '慶喜公の助命、徳川家の存続、幕臣の再就職、そして江戸の治安と武器・軍艦の段階的な移管。これらを約定として書面に記すことに異存はない。貴公が新政府の承認を取り付けるまで、私は江戸の秩序を守り、軍を動かさぬ。これにて、この場での合意事項とする。',
+  expression: 'serious', discovered_information: [], settlement_validity: validity,
+  events: [proposal('saigo', Object.keys(NEGOTIATION_ISSUES), '城の明け渡しまで勝側が治安を維持し双方の区域と役目を定める。受領後は新政府へ移管する。武器と軍艦は数量を確認し段階移管する。慶喜助命、徳川家存続、幕臣再就職と無血開城を政府承認条件の書面にする。', 'current_player_message'), response('katsu', 'current_player_message', Object.keys(NEGOTIATION_ISSUES))],
+};
+const reportedPlayer = '城の明け渡しまでの市中の治安は、勝さんたちに維持してもらいたい。ただし新政府軍と連絡を取り、双方の軍勢が不用意に接触せぬよう区域と役目を定める。城を受け取った後は新政府が治安維持を引き継ぐ。武器・軍艦は数量を双方で確認し、順次、新政府の管理へ移す。移管が終わるまでは勝手に動かさず、戦に用いない。';
+try {
+  globalThis.fetch = async (_url, options) => {
+    requestCount++;
+    assert.ok(JSON.parse(options.body).generationConfig.responseJsonSchema);
+    return { ok: true, json: async () => ({ candidates: [{ content: { parts: [{ text: JSON.stringify(payload) }] } }], usageMetadata: {} }) };
+  };
+  const result = await requestKatsuResponse({ apiKey: 'test-only', model: 'fixture', messages: [{ role: 'saigo', text: reportedPlayer }], state: INITIAL_STATE });
+  assert.equal(requestCount, 1);
+  const throughTransport = evaluateMessage(reportedPlayer, INITIAL_STATE, result.semantic, result.spokenResponse, result.events).state;
+  Object.values(throughTransport.issues).forEach(status => assert.equal(status, 'agreed'));
+  let final = evaluateSettlement(throughTransport);
+  assert.equal(final.settlementResult, 'ACCEPTED');
+  assert.deepEqual(final.blocking, []);
+  assert.ok(!final.katsuResponse.includes('具体の筋が見えない'));
+  for (let i = 0; i < 8; i++) final = evaluateSettlement(final.state);
+  assert.equal(final.settlementResult, 'ACCEPTED', 'Accepted settlement is idempotent');
+  assert.equal(determineGovernmentOutcome({ ...final.state, governmentAcceptance: 10 }), 'empty_promises');
+  assert.equal(determineGovernmentOutcome({ ...final.state, settlementValidity: { ...validity, internal_consistency: 20 } }), 'empty_promises');
+  assert.equal(determineGovernmentOutcome({ ...INITIAL_STATE, governmentAcceptance: 100, promiseCredibility: 100 }), '', 'Government cannot end an unaccepted talk');
+
+  payload = { ...payload, spoken_response: '慶喜公の命が守られるなら城を渡そう。', events: [{ ...proposal('saigo', ['edo_castle'], '慶喜公の助命を条件に城を渡す', 'current_player_message'), depends_on_issue_ids: ['yoshinobu'] }, response('katsu', 'current_player_message', ['edo_castle'], 'accept', 'conditional')] };
+  const conditionalResponse = await requestKatsuResponse({ apiKey: 'test-only', model: 'fixture', messages: [{ role: 'saigo', text: '慶喜助命を条件に城を渡す。' }], state: INITIAL_STATE });
+  const dependent = evaluateMessage('慶喜助命を条件に城を渡す。', INITIAL_STATE, {}, conditionalResponse.spokenResponse, conditionalResponse.events).state;
+  assert.equal(dependent.issues.edo_castle, 'tentatively_agreed');
+  assert.deepEqual(dependent.canonicalLedger.proposals[0].dependencies, ['yoshinobu']);
+  const fulfilled = reduceNegotiationEvents({ ...dependent, turns: 2 }, [proposal('saigo', ['yoshinobu'], '慶喜公の生命を保証する', 'life'), response('katsu', 'life', ['yoshinobu'])], { playerText: '慶喜公の命は保証する。', katsuText: 'それなら異存はない。' }).state;
+  assert.equal(fulfilled.issues.edo_castle, 'agreed');
+  const withdrawn = reduceNegotiationEvents(fulfilled, [{ type: 'proposal_withdrawn', actor: 'saigo', target_proposal_id: fulfilled.canonicalLedger.proposals[1].id }], { playerText: '先ほどの助命条件を撤回する。' }).state;
+  assert.equal(withdrawn.issues.yoshinobu, 'unresolved');
+  assert.equal(withdrawn.issues.edo_castle, 'tentatively_agreed');
+
+  payload = { ...payload, events: [payload.events[0], { type: 'not-an-event' }] };
+  const countBefore = requestCount;
+  await assert.rejects(requestKatsuResponse({ apiKey: 'test-only', model: 'fixture', messages: [], state: INITIAL_STATE }), /JSON/);
+  assert.equal(requestCount, countBefore + 1, 'Invalid response must not trigger a hidden second request');
+} finally { globalThis.fetch = originalFetch; }
+
+let ambiguous = reduceNegotiationEvents(INITIAL_STATE, [proposal('katsu', ['warships'], '軍艦を徳川に残す', 'ships'), proposal('katsu', ['weapons'], '武器は共同で管理する', 'arms')], { katsuText: '軍艦と武器について二つの別案を提示する。' }).state;
+const ambiguousResult = reduceNegotiationEvents(ambiguous, [response('saigo', '', [], 'accept')], { playerText: 'いいだろう。' });
+assert.equal(JSON.stringify(ambiguousResult.state.canonicalLedger.proposals), JSON.stringify(ambiguous.canonicalLedger.proposals));
+assert.equal(ambiguousResult.applied.length, 0);
+const rejectedBatch = reduceNegotiationEvents(INITIAL_STATE, [proposal('saigo', ['warships'], '軍艦を移管する', 'ships'), response('katsu', 'ships', ['warships'])], { playerText: '軍艦を移管してほしい。', katsuText: 'その条件は認められない。' });
+assert.equal(rejectedBatch.state.canonicalLedger.proposals.length, 0, 'Semantic validation failure rolls back the entire batch');
+
+const sourceMessages = [{ role: 'saigo', text: '異存はない。' }];
+const sourceNotes = [{ id: 'test', title: '記録', text: '獲得した情報だけ' }];
+const snapshot = createCompletedRun({ endingId: 'empty_promises', messages: sourceMessages, discoveries: sourceNotes });
+sourceMessages[0].text = '次のゲーム'; sourceNotes.push({ id: 'new' });
+assert.equal(snapshot.conversationHistory[0].text, '異存はない。');
+assert.equal(snapshot.discoveredInformation.length, 1);
+assert.ok(Object.isFrozen(snapshot.conversationHistory[0]));
+console.log('Production transport, government phase, dependency, validation and snapshot regressions passed');
+const refusalWithoutOffer = reduceNegotiationEvents(playLogState, [response('katsu', 'current_player_message', ['weapons'], 'reject')], { playerText: 'これ以上は話さぬ。', katsuText: 'その姿勢では応じられぬ。' });
+assert.equal(refusalWithoutOffer.applied[0].type, 'reservation');
+assert.equal(refusalWithoutOffer.state.issues.weapons, 'agreed');
+assert.deepEqual(refusalWithoutOffer.state.canonicalLedger.proposals, playLogState.canonicalLedger.proposals);
+let repeatedAgreement = reduceNegotiationEvents(playLogState, [{type:'agreement_confirmed',actor:'katsu',issue_ids:['warships'],terms:'軍艦を段階的に新政府へ移す条件を再確認する',commitment:'firm'}], {playerText:'軍艦の条項を再確認しよう。',katsuText:'軍艦の段階移管に異存はない。'}).state;
+const latestShips=repeatedAgreement.canonicalLedger.proposals.at(-1).id;
+repeatedAgreement=reduceNegotiationEvents(repeatedAgreement,[{type:'proposal_withdrawn',actor:'saigo',target_proposal_id:latestShips}],{playerText:'先ほどの軍艦の条件は撤回する。'}).state;
+assert.equal(repeatedAgreement.issues.warships,'unresolved','An older written confirmation must not resurrect a withdrawn clause');
+assert.equal(repeatedAgreement.issues.weapons,'agreed','Other clauses remain locked');
