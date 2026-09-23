@@ -1,100 +1,100 @@
 {
   "schemaVersion": 1,
   "status": "live",
-  "date": "2026-09-23",
-  "generatedAt": "2026-09-22T23:35:57.888Z",
+  "date": "2026-09-24",
+  "generatedAt": "2026-09-23T23:42:37.767Z",
   "model": "gemini-3.6-flash",
   "fallbackCategories": [],
   "items": [
     {
-      "id": "2026-09-23-politics_economy",
+      "id": "2026-09-24-politics_economy",
       "category": "politics_economy",
       "categoryLabel": "Politics & Economy",
-      "headline": "World Leaders Gather in New York for the 81st UN General Assembly Opening",
-      "summary": "The 81st session of the United Nations General Assembly high-level debate opened in New York on September 22, 2026, bringing world leaders together to address international security and global cooperation. U.S. President Donald Trump delivered a prominent address focusing on foreign policy and international conflicts, making the opening session a main driver of global news today.",
-      "question": "What role do you think international organizations like the United Nations should play in resolving modern global conflicts?",
+      "headline": "Iranian President Addresses UN Assembly as U.S.-Iran Sideline Talks Resume",
+      "summary": "Iranian President Masoud Pezeshkian addressed the United Nations General Assembly, issuing a sharp critique of U.S. and Israeli military actions in the Middle East. The address coincides with high-stakes diplomatic talks held between U.S. and Iranian officials on the sidelines of the summit aimed at negotiating conditions to de-escalate hostilities and reopen the Strait of Hormuz.",
+      "question": "How effective do you think high-level diplomatic gatherings like the United Nations General Assembly are at resolving complex international conflicts?",
       "coachLeads": {
-        "friendly": "Hey, have you caught up on the latest news from the UN General Assembly yet? It's a great topic for us to practice discussing world events together!",
-        "energetic": "World leaders are meeting right now at the UN in New York, and there is so much to talk about! Are you ready to dive into this top story today?",
-        "calm": "The UN General Assembly opened its annual high-level debate today in New York. Let's take a thoughtful look at what world leaders are discussing on the global stage.",
-        "direct": "The 81st UN General Assembly session is officially underway with major speeches from world leaders. Let's talk about what this means for global diplomacy."
+        "friendly": "Hey there! Have you heard about the latest diplomatic developments at the United Nations General Assembly?",
+        "energetic": "Check this out—world leaders are meeting in New York right now for high-stakes diplomatic talks!",
+        "calm": "There are significant diplomatic discussions taking place at the United Nations General Assembly this week. It is a key story worth reflecting on.",
+        "direct": "Iranian and American officials are holding diplomatic talks on the sidelines of the UN General Assembly. Let's talk about what this means for global security."
       },
       "sources": [
         {
-          "title": "europa.eu",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFuMP-r8KoZL-6sn7CkGWIXjO7ZuAPim61x22kr1uNwxxoEFJQgeFCgBdMdRUYeTJcEveRgUferQ4w8IXKpeHnarchl6-Rq-rNzHB8h2ep9Yfh4kknpl5h5un7EDMCM0Yfth3Unp6kpBBWFAozaIU9KA7Er-CWtXswfUH3Drhv9RkLb3yIP"
-        },
-        {
-          "title": "un.org",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHudwbDHW9SDPQwQZk1U6c0FnQ3f3xB-E1IL8W7tSMSTHgDcrxSGYLgahQsH9dOl2AyJC6LINgeVAtAGtoTIIafHCjuxq9Zh8NEMEvRBgvOyK87bh-TZGe4j2o="
-        },
-        {
-          "title": "youtube.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGN-SzEsiz0t7clCqq3fggg8NR2u-vih-tR1BMlveJWezz_xX38CPg3p70cIaoEn9F4wqfYCW_X8Gx-pU3q97Y46s4EE2GBNeLrLiDYtitgVb6fEu7Ev5IhbhJAgJy3dF5M"
+          "title": "Google News: Politics & Economy",
+          "url": "https://news.google.com/search?q=Politics%20%26%20Economy%20top%20news%202026-09-24&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     },
     {
-      "id": "2026-09-23-technology",
+      "id": "2026-09-24-technology",
       "category": "technology",
       "categoryLabel": "Technology",
-      "headline": "At the UN, Trump Rejects International AI Oversight and Orders Rebrand to 'Super Intelligence'",
-      "summary": "Addressing the United Nations General Assembly, U.S. President Donald Trump firmly rejected proposals for international governance of artificial intelligence, calling global regulatory efforts an unnecessary restriction on innovation. During the speech, he also announced an executive directive ordering all U.S. federal agencies to replace the term 'artificial intelligence' with 'super intelligence' in official communications.",
-      "question": "Do you think international organizations should set global guidelines for AI development, or should individual countries control the technology on their own?",
+      "headline": "AI Leaders Urge UN Security Council to Establish Global Controls on Artificial Intelligence",
+      "summary": "Top executive leaders from major artificial intelligence firms testified before the United Nations Security Council on Wednesday to address rising safety risks associated with rapidly advancing technology. They called on world leaders to establish international safeguards and regulatory frameworks to ensure advanced AI systems remain under human control.",
+      "question": "Do you think international organizations like the United Nations should set global rules for AI, or should each country manage regulation on its own?",
       "coachLeads": {
-        "friendly": "Hey! Have you heard about the big AI news from the UN General Assembly today? It is a great story for us to practice discussing current events.",
-        "energetic": "There is a huge story unfolding right now about the future of global AI policy! Let's dive in and talk about it.",
-        "calm": "A significant policy shift regarding artificial intelligence was just presented at the United Nations. Take a look at the summary, and we can go over your thoughts.",
-        "direct": "This news out of the UN is making major global headlines. Read through the summary and let me know what you think."
+        "friendly": "Hey there! Have you heard about tech leaders speaking at the United Nations today about AI safety?",
+        "energetic": "This is huge news coming out of the UN today! Top AI executives are actually asking world leaders to help set limits on their technology.",
+        "calm": "Top artificial intelligence creators met with the UN Security Council today to discuss safety safeguards. It is a major development that is worth taking a moment to unpack.",
+        "direct": "AI executives just testified at the United Nations asking for global regulation. Let's talk about what this means for the future."
       },
       "sources": [
         {
-          "title": "breakingdefense.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEQ4Gy0oBxogd9Y0SUcIJ1wuL3kGE2I5nCwgvp91cSHX5J2RdjQ5qSK4iXFDVJHykyFFOlQz5_EWbPrkYhOy2aCCd9YBIuhlkQju9sLS-IQyWWOJRaUMbMSygS02kkvANbpGDbvNCHshe31LG-SpBkKPXk-_d09tkAUYC0w5pva2OtrHL4JkLGPLAuUQYQSafm6rtB6J8uX9sDZhMY="
-        },
-        {
-          "title": "abs-cbn.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH4zH5hmX1bNEyPglwSjzW0g6TJ2Q7d5FrTYwNgJHn8noUQGe3itrxx0mknOWBDJ5PMPj2NfOyAlSc9nlmxU56uO1M5kViTOF97dzRio3oSJMR4OX8dRGBWsyz6lzNLOEcZTBx8kwm_8jAuK97itcLWxuDJgCi9LdPBaFDLT36dj1bi85cYtB_85B3IOyfCxj9zMLlZXAG7Kq5-B1RMKD-Kr7RIcB5qvMNRYiSF6-h8xg=="
+          "title": "Google News: Technology",
+          "url": "https://news.google.com/search?q=Technology%20top%20news%202026-09-24&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     },
     {
-      "id": "2026-09-23-sports",
+      "id": "2026-09-24-sports",
       "category": "sports",
       "categoryLabel": "Sports",
-      "headline": "Manchester City Mounts Two-Goal Comeback Against Bayern Munich in Women's Champions League Opener",
-      "summary": "Manchester City rallied from two goals down on Tuesday to secure a dramatic 2-2 draw against Bayern Munich on the opening night of the UEFA Women's Champions League phase. The thrilling match highlighted the start of Matchday 1 as Europe's premier women's club competition kicked off its new season under an 18-team league format.",
-      "question": "What mindset or adjustments do you think a team needs to overcome a two-goal deficit in a big away match?",
+      "headline": "Captains Reveal Opening Match Pairings for 2026 Presidents Cup",
+      "summary": "Team captains Brandt Snedeker and Geoff Ogilvy announced the official opening round pairings for the 2026 Presidents Cup at Medinah Country Club on September 23. World No. 1 Scottie Scheffler will partner with Sam Burns for Team USA as competition begins Thursday against the International squad.",
+      "question": "Do you enjoy team-based sports events like the Presidents Cup, or do you prefer watching individual competitions?",
       "coachLeads": {
-        "friendly": "Hey there! Have you heard about the exciting start to the Women's Champions League season?",
-        "energetic": "What an incredible comeback in Munich! Manchester City fought all the way back from two goals down to grab a point!",
-        "calm": "The Women's Champions League has officially kicked off, and night one already delivered great drama.",
-        "direct": "Manchester City staged a two-goal comeback to draw 2-2 with Bayern Munich in their Champions League opener."
+        "friendly": "Hey, have you been following the build-up to the Presidents Cup this week? The opening match lineups were just announced!",
+        "energetic": "Big golf news today as the opening match pairings for the Presidents Cup are finally set!",
+        "calm": "If you follow golf, the team captains just announced the starting line-ups for the Presidents Cup at Medinah.",
+        "direct": "The 2026 Presidents Cup starts Thursday, and today the team captains revealed the opening round pairings."
       },
       "sources": [
         {
-          "title": "Google News: Sports",
-          "url": "https://news.google.com/search?q=Sports%20top%20news%202026-09-23&hl=en-US&gl=US&ceid=US:en"
+          "title": "golfdigest.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHAUB13fy1eDf5P4h0_dlrfiIT_c6E_xUml8hY4fCJwUbIoU5ZIxYpdjdPrjqZObHEBGNP3WEUUVrSyrc8TlHrGkZ18AFY9sz0Y1vmIJ7vNmZR_Ed3cWRTT339_paNe31qTPtGiyafjCPwarmN_Pzi-4W924zh1Ft3qEN_hNkXi-dcuBVntN9aUtCBhlRpLLNtvcjm1VKm4hg=="
+        },
+        {
+          "title": "wikipedia.org",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF3fTnx--RkDH_YeNOKJ9DSNt2kYOtX_mckzpe3YX-5WmSF1J_NjCEcLREe5FOBIW9vaZld8Tejzv8HrCrSbDJBw8j09-MwLOu_S2EuyH2UxIQjOK2E7bE1dv8nu8sMPKZcsE6lnuA="
+        },
+        {
+          "title": "newsday.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHGb1_wiKAUJ0asjAFib8XccDIPdJGhhd6muPcecuqa1eglya2D6Vc66otCQXn2sfYG3sXcJZ0W7UjocrTCMBvYYcOxpyHSuabAtY92TPPjMCBHhVikzlDwa74LqGRlJ7zQdVEQYwW2T8OqY4gSTDPepdUfUxjhhqJc8zFDuysU_d-vpmtWQUh2EHhnMWHbfME_3g=="
         }
       ]
     },
     {
-      "id": "2026-09-23-entertainment",
+      "id": "2026-09-24-entertainment",
       "category": "entertainment",
       "categoryLabel": "Entertainment",
-      "headline": "Taylor Swift Announces New Single 'Patient Zero' Releasing Friday",
-      "summary": "Pop superstar Taylor Swift revealed on social media that her new single, 'Patient Zero,' will be officially released on September 25. The surprise announcement followed intense fan speculation after a mysterious countdown timer appeared on her official website.",
-      "question": "How do you usually react when your favorite musical artist unexpectedly announces new music?",
+      "headline": "Harvey Weinstein Sentenced to 15 Years in Prison at New York Retrial",
+      "summary": "On September 23, 2026, former Hollywood producer Harvey Weinstein was sentenced by a New York judge to 15 years in prison for sexually assaulting a former television production assistant in 2006. The decision follows a 2025 retrial that was ordered after New York's highest court overturned his original 2020 conviction.",
+      "question": "How do you think high-profile legal cases impact accountability and power dynamics in the entertainment industry?",
       "coachLeads": {
-        "friendly": "Hey, have you heard the big news? Taylor Swift just announced a brand-new single coming out this week!",
-        "energetic": "Get ready, music fans! Taylor Swift just announced a surprising new single titled 'Patient Zero'!",
-        "calm": "Taylor Swift has officially announced her upcoming single, 'Patient Zero,' which is set to drop this Friday.",
-        "direct": "Taylor Swift announced today that her new single, 'Patient Zero,' will be released on September 25."
+        "friendly": "Hey, did you see the major culture news that just broke? Former movie producer Harvey Weinstein was sentenced to 15 years in prison following his New York retrial.",
+        "energetic": "There is a huge headline shaking up the film industry today! Disgraced Hollywood mogul Harvey Weinstein has just been sentenced to 15 years in prison in New York.",
+        "calm": "There is a significant legal update in entertainment news today. Former movie executive Harvey Weinstein has been sentenced to 15 years in prison following his New York retrial.",
+        "direct": "Former film producer Harvey Weinstein was sentenced to 15 years in prison in New York today. This is a historic legal development in the entertainment world."
       },
       "sources": [
         {
-          "title": "wthr.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEBJ0UzAZTdRRvfmLAeWe78o53A_BQajs_uKzRawaiHaPOBVEOoOq9QmlAZ-xQBZ4fgVxLY9GeLZ8x_yInywxM7mzqobYKV5YjJXwpAbywi0g5nfInym40pEpKkz5hm-JgeHkj2KgsnbC6azFMpFZmU0uY-Rj8_j7E07qQ-XY59jiugEestJVx-sdVTHPVF2QPDfQZdmyLNP_6zUapRx4m1A8L_Bo4iRATX1_VTRaTxNgYwYZAYY0_qjvW_"
+          "title": "thedailyrecord.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFZL_LNaH2HTOg2uDlpPBw6N_iwbANEYj1UrPwY9n8UdJQhQiCaB0JZDGfwn48UVxjc0ABnjKvAkdEQvWligAkQ8OVTQI68874J5XNOxy_DG1pN2RzikH19QbFIJAmcDcLV9rFyPsVYQl18TRbes05Xe49z_9a9XVk-n7w2UZx9B3Ny7ePv3gz-41JuXrTBm917FGmEMN3Lkw=="
+        },
+        {
+          "title": "fox43.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE25JqhpjD-e_aDHoCYrVzasFrAv89JoMsaOikov9deXX4qEZLMQyekY0e0CbzIXD1XS76ftQPiF6kvyhV5lZFmlGOB8oN799yZcj5wqSyYZ7iWlsIAYwzpImkdGo6UdzZ_Uezb5RkCe-OPUOMYfTLFi1UalQZPhmAZ4cxkntk5F8QKmn78sYXEHuUyy3w8LLh21NS811q_yS1amj45ngQiE4eOpRfmd186vD66eLTAnT99MWnjL-doSgk6Kj_ctEG_afxms88MMAc="
         }
       ]
     }
