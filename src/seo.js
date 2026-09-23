@@ -108,6 +108,10 @@ export function normalizePath(pathname) {
 
 export function getSeoForPath(pathname) {
   const normalized = normalizePath(pathname);
+  if (['/games/edo-1868/ending/', '/games/edo-1868/review/'].includes(normalized)) {
+    const game = seoRoutes.find((route) => route.path === '/games/edo-1868/');
+    return { ...game, title: `${normalized.includes('/review/') ? '今夜の交渉記録' : 'あなたがたどり着いた歴史'} | 1868 -江戸焦土前夜-`, noindex: true };
+  }
   return seoRoutes.find((route) => route.path === normalized) || seoRoutes[0];
 }
 
@@ -234,6 +238,7 @@ export function buildHeadTags(route) {
 
   return [
     `<title>${escapeHtml(route.title)}</title>`,
+    route.noindex ? '<meta name="robots" content="noindex,follow" />' : '',
     `<meta name="description" content="${escapeHtml(route.description)}" />`,
     `<link rel="canonical" href="${url}" />`,
     `<meta property="og:site_name" content="BYOKey Lab" />`,

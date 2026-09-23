@@ -1,7 +1,7 @@
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { absoluteUrl, buildHeadTags, seoRoutes } from "../src/seo.js";
+import { absoluteUrl, buildHeadTags, getSeoForPath, seoRoutes } from "../src/seo.js";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const rootDir = path.resolve(__dirname, "..");
@@ -25,6 +25,15 @@ for (const route of seoRoutes) {
 
 await writeFile(path.join(distDir, "sitemap.xml"), buildSitemap(), "utf8");
 await writeFile(path.join(distDir, "robots.txt"), buildRobotsTxt(), "utf8");
+
+// Local completed-run pages must support direct navigation without indexing
+// browser-specific records or adding these routes to the public sitemap.
+for (const result of ['ending', 'review']) {
+  const routePath = `/games/edo-1868/${result}/`;
+  const outputPath = path.join(distDir, routePath, 'index.html');
+  await mkdir(path.dirname(outputPath), { recursive: true });
+  await writeFile(outputPath, applySeoHead(sourceHtml, getSeoForPath(routePath)), 'utf8');
+}
 
 console.log(`SEO prerendered ${seoRoutes.length} routes, sitemap.xml, and robots.txt.`);
 

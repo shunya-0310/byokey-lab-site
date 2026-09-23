@@ -1,8 +1,9 @@
 import { useEffect, useMemo, useState } from "react";
+import { GAME_ROOT, REVIEW_PATH, ENDING_PATH, createEndingRun, restoreCompletedRun } from "./games/edo1868-ending.js";
 import byokeyLabLogo from "./assets/byokey-lab-logo.png";
 import { articleCatalog, getArticle } from "./articles.js";
 import { SPEAK_APP_URL, absoluteUrl, buildJsonLd, getSeoForPath } from "./seo.js";
-import { ENDINGS, EXPRESSION_ASSETS, GAME_DATE, GEMINI_MODELS, HISTORICAL_SOURCES, INITIAL_DISCOVERIES, INITIAL_STATE, MODEL_PRICING, characterBible, createCompletedRun, determineGovernmentOutcome, estimateApiCost, evaluateMessage, evaluateSettlement, reconcileNegotiationState, requestKatsuResponse } from "./games/edo1868.js";
+import { ENDINGS, EXPRESSION_ASSETS, GAME_DATE, GEMINI_MODELS, HISTORICAL_SOURCES, INITIAL_DISCOVERIES, INITIAL_STATE, MODEL_PRICING, characterBible, determineGovernmentOutcome, estimateApiCost, evaluateMessage, evaluateSettlement, reconcileNegotiationState, requestKatsuResponse } from "./games/edo1868.js";
 import {
   ArrowRight,
   BadgeDollarSign,
@@ -215,6 +216,7 @@ function updateSeo(path) {
   const imageUrl = absoluteUrl(route.image || "/images/byok-app-diagram.png");
 
   document.title = route.title;
+  setMetaAttribute("name", "robots", route.noindex ? "noindex,follow" : "index,follow");
   setMetaAttribute("name", "description", route.description);
   setMetaAttribute("property", "og:site_name", "BYOKey Lab");
   setMetaAttribute("property", "og:type", route.schemaType === "Article" ? "article" : "website");
@@ -449,7 +451,9 @@ function HomePage({ onNavigate }) {
   );
 }
 
-function Edo1868Page({ onNavigate }) {
+function Edo1868Page({ onNavigate, path }) {
+  const resultPath = path.replace(/\/$/, "");
+  const isResultRoute = resultPath === REVIEW_PATH || resultPath === ENDING_PATH;
   const apiKeyStorageKey = "byokey-lab:edo-1868:gemini-api-key";
   const gameStorageKey = "byokey-lab:edo-1868:game-save";
   const completedRunStorageKey = "byokey-lab:edo-1868:completed-run";
@@ -492,8 +496,12 @@ function Edo1868Page({ onNavigate }) {
       let savedRun = null;
       try { savedRun = JSON.parse(window.localStorage.getItem(completedRunStorageKey) || "null"); }
       catch { setSaveWarning("前回の交渉記録を読み込めませんでした。進行中の交渉は別に復元します。"); }
-      if (savedRun && ENDINGS[savedRun.endingId] && Array.isArray(savedRun.conversationHistory) && Array.isArray(savedRun.discoveredInformation)) setCompletedRun(savedRun);
-      const savedGame = JSON.parse(window.localStorage.getItem(gameStorageKey) || "null");
+      let savedGame = null;
+      try { savedGame = JSON.parse(window.localStorage.getItem(gameStorageKey) || "null"); } catch { /* Completed records remain readable if the active save is damaged. */ }
+      const sameRun = savedGame?.version === gameSaveVersion && savedGame?.endingId === savedRun?.endingId
+        && JSON.stringify(savedGame?.messages) === JSON.stringify(savedRun?.conversationHistory);
+      const restoredRun = restoreCompletedRun(savedRun, sameRun ? savedGame.state : undefined);
+      if (restoredRun) setCompletedRun(restoredRun);
       if (savedGame && savedGame.state && Array.isArray(savedGame.messages) && savedGame.state.turns > 0) {
         setState(reconcileNegotiationState(savedGame.state, savedGame.messages));
         setMessages(savedGame.messages);
@@ -501,7 +509,10 @@ function Edo1868Page({ onNavigate }) {
         setApiUsage(savedGame.apiUsage || { input: 0, output: 0, cached: 0 });
         if (typeof savedGame.model === "string" && savedGame.model) setModel(savedGame.model);
         // Version 1 could save a forced automatic ending. Version 2 only records an ending after the player chooses to conclude.
-        if (savedGame.version === gameSaveVersion && typeof savedGame.endingId === "string") setEndingId(savedGame.endingId);
+        if (savedGame.version === gameSaveVersion && Object.hasOwn(ENDINGS, savedGame.endingId)) {
+          setEndingId(savedGame.endingId);
+          if (!restoredRun) setCompletedRun(createEndingRun({ endingId: savedGame.endingId, state: savedGame.state, messages: savedGame.messages, discoveries: savedGame.discoveries || INITIAL_DISCOVERIES, legacy: true }));
+        }
         setHasSavedGame(true);
       }
     } catch {
@@ -527,24 +538,24 @@ function Edo1868Page({ onNavigate }) {
   }, [apiUsage, discoveries, endingId, gameHydrated, messages, model, state]);
 
   useEffect(() => {
-    if (phase !== "play") return undefined;
+    if (phase !== "play" || isResultRoute) return undefined;
     window.scrollTo({ top: 0, behavior: "auto" });
     setPlayIntroStage("background");
     const characterTimer = window.setTimeout(() => setPlayIntroStage("character"), 1000);
     const dialogueTimer = window.setTimeout(() => setPlayIntroStage("dialogue"), 2200);
     return () => { window.clearTimeout(characterTimer); window.clearTimeout(dialogueTimer); };
-  }, [phase]);
+  }, [phase, isResultRoute]);
 
   useEffect(() => {
-    if (phase !== "play" || playIntroStage !== "dialogue" || !currentKatsu?.text) { setVisibleKatsuText(""); return undefined; }
+    if (phase !== "play" || isResultRoute || playIntroStage !== "dialogue" || !currentKatsu?.text) { setVisibleKatsuText(""); return undefined; }
     let index = 0;
     setVisibleKatsuText("");
     const timer = window.setInterval(() => { index += 1; setVisibleKatsuText(currentKatsu.text.slice(0, index)); if (index >= currentKatsu.text.length) window.clearInterval(timer); }, 28);
     return () => window.clearInterval(timer);
-  }, [phase, playIntroStage, currentKatsu?.text]);
+  }, [phase, isResultRoute, playIntroStage, currentKatsu?.text]);
 
   useEffect(() => {
-    if (phase !== "play" || !window.visualViewport) return undefined;
+    if (phase !== "play" || isResultRoute || !window.visualViewport) return undefined;
     const viewport = window.visualViewport;
     let stableHeight = Math.max(window.innerHeight, document.documentElement.clientHeight);
     const updateKeyboardInset = () => {
@@ -564,7 +575,7 @@ function Edo1868Page({ onNavigate }) {
       window.removeEventListener("resize", updateKeyboardInset);
       setKeyboardInset(0);
     };
-  }, [phase]);
+  }, [phase, isResultRoute]);
 
   const anchorMobileGame = () => {
     if (!window.matchMedia("(max-width: 600px)").matches) return;
@@ -576,7 +587,8 @@ function Edo1868Page({ onNavigate }) {
     setState(INITIAL_STATE); setEndingId(""); setDraft(""); setPanel(""); setSettlementFlow(null); setDiscoveries(INITIAL_DISCOVERIES); setMessages([openingKatsuMessage]); setApiUsage({ input: 0, output: 0, cached: 0 }); setHasSavedGame(false);
     try { window.localStorage.removeItem(gameStorageKey); } catch { /* The new game still starts when storage is unavailable. */ }
   };
-  const startNewGame = () => { restart(); setIntroStep(0); setPhase("intro"); };
+  const startNewGame = () => { restart(); setIntroStep(0); setPhase("intro"); onNavigate(GAME_ROOT); };
+  const showTitle = () => { setPhase("title"); onNavigate(GAME_ROOT); };
   const beginDialogue = () => {
     setPhase("transition");
     window.setTimeout(() => setPhase("play"), 1050);
@@ -617,17 +629,18 @@ function Edo1868Page({ onNavigate }) {
     setSettlementFlow({ ...assessment, stage: "reflection" });
   };
   const finishRun = (id, finalMessages) => {
-    const snapshot = createCompletedRun({ endingId: id, messages: finalMessages, discoveries });
+    const snapshot = createEndingRun({ endingId: id, state: settlementFlow?.state || state, messages: finalMessages, discoveries });
     setMessages(finalMessages);
     setCompletedRun(snapshot);
     setEndingId(id);
     setSettlementFlow(null);
+    onNavigate(ENDING_PATH);
     try { window.localStorage.setItem(completedRunStorageKey, JSON.stringify(snapshot)); setSaveWarning(""); }
     catch { setSaveWarning("この端末には記録を保存できませんでした。この画面を開いている間は振り返れます。"); }
   };
   const openReview = () => {
     if (!completedRun && endingId) finishRun(endingId, messages);
-    setAllHistoryOpen(false); setPanel(""); setPhase("review"); window.scrollTo(0, 0);
+    setAllHistoryOpen(false); setPanel(""); onNavigate(REVIEW_PATH);
   };
   const returnFromSettlement = () => {
     if (!settlementFlow) return;
@@ -646,11 +659,31 @@ function Edo1868Page({ onNavigate }) {
     }, 3600);
     return () => window.clearTimeout(timer);
   }, [settlementFlow, messages, discoveries]);
+  useEffect(() => {
+    if (!gameHydrated || !completedRun) return;
+    try { window.localStorage.setItem(completedRunStorageKey, JSON.stringify(completedRun)); }
+    catch { setSaveWarning("この端末には記録を保存できませんでした。この画面を開いている間は振り返れます。"); }
+  }, [completedRun, gameHydrated]);
+  useEffect(() => {
+    const before = window.history.scrollRestoration;
+    window.history.scrollRestoration = "manual";
+    return () => { window.history.scrollRestoration = before; };
+  }, []);
+  useEffect(() => {
+    if (!isResultRoute || !gameHydrated) return;
+    window.scrollTo({ top: 0, behavior: "instant" });
+    document.querySelector(".edo-result h1, .edo-review h1")?.focus({ preventScroll: true });
+  }, [resultPath, gameHydrated, completedRun]);
+  useEffect(() => {
+    if (!settlementFlow) return;
+    const before = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => { document.body.style.overflow = before; };
+  }, [settlementFlow]);
   const pricing = MODEL_PRICING[model] || null;
   const cost = estimateApiCost(apiUsage, model);
   const formatUsd = (value) => value < 0.01 ? `$${value.toFixed(4)}` : `$${value.toFixed(2)}`;
   const formatJpy = (value) => value < 1 ? `約¥${Math.max(0, value).toFixed(1)}` : `約¥${Math.round(value).toLocaleString()}`;
-  const ending = endingId ? ENDINGS[endingId] : null;
   const settingsFields = <><h2>Gemini API設定</h2><label className="edo-key-field"><span>Gemini APIキー</span><input type="password" value={apiKey} onChange={(event) => { setApiKey(event.target.value); setApiKeySaved(false); }} autoComplete="off" placeholder="APIキーを入力" /></label><div className="edo-settings-actions"><button type="button" onClick={saveApiKey}>保存</button>{apiKeySaved && <span>この端末に保存済み</span>}</div><a className="edo-external-link" href="https://aistudio.google.com/app/apikey" target="_blank" rel="noreferrer">APIキーの取得はこちらから <ExternalLink size={15} /></a><label className="edo-key-field"><span>モデルID</span><input type="text" value={model} onChange={(event) => setModel(event.target.value.trim())} autoComplete="off" spellCheck="false" placeholder="gemini-3.1-flash-lite" /></label><p className="edo-modal-lead">既定は Gemini 3.1 Flash-Lite です。別のGeminiモデルを使う場合は、利用可能なモデルIDを直接入力できます。APIキーの権限・提供状況により利用できないIDでは対談を開始できません。</p>{apiError && <p className="edo-api-error">{apiError}</p>}<p className="edo-modal-lead">保存したキーはこの端末のブラウザストレージにのみ保持され、BYOKey Labのサーバーへ送信しません。ただし、この保存領域の暗号化は保証されません。Gemini APIへの対談リクエストにのみ使い、共有端末では保存しないでください。</p></>;
   const intro = [
     { image: "prologue-01-edo.png", content: <><p><strong>慶応四年　三月十四日。</strong></p><p>夜の江戸は、静かだった。</p><p>町にはまだ灯があり、<br />人々は明日も今日と同じ朝が来ると信じている。</p><p>だが、その外では、<br />すでに兵が動いている。</p></> },
@@ -660,29 +693,37 @@ function Edo1868Page({ onNavigate }) {
     { image: "prologue-05-fusuma.png", content: <><p>明日には総攻撃が予定されている。</p><p>戦わずして目的を果たせるなら、<br />それに越したことはない。</p><p>その条件を探るため、<br />あなたは一人の男と向き合う。</p><p><strong>勝海舟。</strong></p><p>徳川の臣。<br />そして、江戸を預かる男。</p></> },
     { image: "prologue-06-fusuma.png", content: <><p>彼が何を考えているのか。</p><p>何を守ろうとしているのか。</p><p>そして――<br />何を用意して、明日を待っているのか。</p><p>あなたは、まだ知らない。</p></> },
   ];
-  if (phase === "title") return <main className="edo-title" style={{ backgroundImage: "url('/images/edo-1868/edo-title-bay-v5.png')" }}><div className="edo-title-shade" /><section><h1><img src="/images/edo-1868/edo-1868-brush-title.png" alt="1868" /></h1><p>― 江戸焦土前夜 ―</p></section><nav>{hasSavedGame && <button onClick={() => setPhase("play")}>続きから始める <ArrowRight size={19} /></button>}<button onClick={startNewGame}>ゲームを始める <ArrowRight size={19} /></button>{completedRun && <button onClick={openReview}>前回の交渉を振り返る <ChevronRight size={19} /></button>}<button onClick={() => setPanel("settings")}>設定 <ChevronRight size={19} /></button><a href="/guide/api/">API設定ガイド <ChevronRight size={19} /></a><a href="/important/">注意事項 <ChevronRight size={19} /></a></nav>{panel === "settings" && <div className="edo-modal-backdrop"><section className="edo-modal"><button className="edo-modal-close" onClick={() => setPanel("")} aria-label="閉じる"><X size={22} /></button>{settingsFields}</section></div>}</main>;
-  if (phase === "intro") { const page = intro[introStep]; const lastPage = introStep === intro.length - 1; return <main className={`edo-intro-page edo-intro-page-${introStep + 1}`} key={introStep} style={{ backgroundImage: `url('/images/edo-1868/${page.image}')` }}><div className="edo-intro-page-shade" /><article className="edo-intro-copy">{page.content}<div className="edo-intro-controls">{introStep > 0 && <button type="button" className="edo-intro-back" onClick={() => setIntroStep((value) => value - 1)}>戻る</button>}<button type="button" onClick={() => lastPage ? beginDialogue() : setIntroStep((value) => value + 1)}>{lastPage ? "いざ、対談" : "次へ"} <ArrowRight size={19} /></button></div><p className="edo-intro-step">{introStep + 1} / {intro.length}</p></article></main>; }
-  if (phase === "review" && completedRun) return <main className="edo-review">
+  if (isResultRoute && !gameHydrated) return <main className="edo-result"><p role="status">交渉記録を読み込んでいます。</p></main>;
+  if (isResultRoute && !completedRun) return <main className="edo-result"><article><h1 tabIndex={-1}>交渉記録はまだありません</h1><p>このブラウザに保存された結末が見つかりませんでした。</p><button onClick={showTitle}>タイトルへ戻る</button></article></main>;
+  if (resultPath === ENDING_PATH && completedRun) return <main className="edo-result"><article>
+    <header><p>あなたがたどり着いた歴史</p><h1 tabIndex={-1}>{completedRun.endingTitle}</h1><p className="edo-outcome-line">{completedRun.outcomeLine}</p></header>
+    <div className="edo-ending-narrative">{completedRun.endingNarrative.split("\n\n").map((paragraph, index) => <p key={index}>{paragraph}</p>)}</div>
+    {saveWarning && <p role="status">{saveWarning}</p>}
+    <button type="button" onClick={openReview}><BookOpen size={17} />交渉を振り返る <ArrowRight size={17} /></button>
+  </article></main>;
+  if (resultPath === REVIEW_PATH && completedRun) return <main className="edo-review">
     <article>
-      <header><p>三月十四日、その夜の言葉</p><h1>今夜の交渉記録</h1><p>あなたと勝海舟が交わした言葉を振り返る。</p></header>
-      <section><h2>今回の結末</h2><h3>{completedRun.endingTitle}</h3><p>{completedRun.outcomeLine}</p></section>
+      <header><p>三月十四日、その夜の言葉</p><h1 tabIndex={-1}>今夜の交渉記録</h1><p>あなたと勝海舟が交わした言葉を振り返る。</p></header>
+      <section><h2>今回の結末</h2><h3>{completedRun.endingTitle}</h3><p>{completedRun.summary || completedRun.outcomeLine}</p></section>
       <section><h2>交渉ノート</h2><div className="edo-note-list">{completedRun.discoveredInformation.map((item, index) => <article key={`${item.id}-${index}`}><h3>{item.title}</h3><p>{item.text}</p></article>)}</div></section>
       <section><h2>会話履歴</h2><button type="button" onClick={() => setAllHistoryOpen((value) => !value)}>{allHistoryOpen ? "すべて閉じる" : "すべて展開"}</button><div className="edo-review-history">{completedRun.conversationHistory.map((message, index) => <details key={`${index}-${allHistoryOpen}`} open={allHistoryOpen}><summary>{index + 1}. {message.role === "katsu" ? "勝海舟" : "西郷隆盛（あなた）"}</summary><p>{message.text}</p></details>)}</div></section>
       {saveWarning && <p role="status">{saveWarning}</p>}
-      <nav><button type="button" onClick={startNewGame}><RotateCcw size={17} />もう一度、三月十四日へ</button><button type="button" onClick={() => setPhase("title")}>タイトルへ戻る</button></nav>
+      <nav><button type="button" onClick={startNewGame}><RotateCcw size={17} />もう一度、三月十四日へ</button><button type="button" onClick={showTitle}>タイトルへ戻る</button></nav>
     </article>
   </main>;
+  if (phase === "title" || (endingId && completedRun)) return <main className="edo-title" style={{ backgroundImage: "url('/images/edo-1868/edo-title-bay-v5.png')" }}><div className="edo-title-shade" /><section><h1><img src="/images/edo-1868/edo-1868-brush-title.png" alt="1868" /></h1><p>― 江戸焦土前夜 ―</p></section><nav>{hasSavedGame && <button onClick={() => endingId && completedRun ? onNavigate(ENDING_PATH) : setPhase("play")}>続きから始める <ArrowRight size={19} /></button>}<button onClick={startNewGame}>ゲームを始める <ArrowRight size={19} /></button>{completedRun && <button onClick={openReview}>前回の交渉を振り返る <ChevronRight size={19} /></button>}<button onClick={() => setPanel("settings")}>設定 <ChevronRight size={19} /></button><a href="/guide/api/">API設定ガイド <ChevronRight size={19} /></a><a href="/important/#edo-1868">注意事項 <ChevronRight size={19} /></a></nav>{panel === "settings" && <div className="edo-modal-backdrop"><section className="edo-modal"><button className="edo-modal-close" onClick={() => setPanel("")} aria-label="閉じる"><X size={22} /></button>{settingsFields}</section></div>}</main>;
+  if (phase === "intro") { const page = intro[introStep]; const lastPage = introStep === intro.length - 1; return <main className={`edo-intro-page edo-intro-page-${introStep + 1}`} key={introStep} style={{ backgroundImage: `url('/images/edo-1868/${page.image}')` }}><div className="edo-intro-page-shade" /><article className="edo-intro-copy">{page.content}<div className="edo-intro-controls">{introStep > 0 && <button type="button" className="edo-intro-back" onClick={() => setIntroStep((value) => value - 1)}>戻る</button>}<button type="button" onClick={() => lastPage ? beginDialogue() : setIntroStep((value) => value + 1)}>{lastPage ? "いざ、対談" : "次へ"} <ArrowRight size={19} /></button></div><p className="edo-intro-step">{introStep + 1} / {intro.length}</p></article></main>; }
   if (phase === "transition") return <main className="edo-transition" aria-label="対談の場面へ移動中" />;
 
   return <>
-    {!ending && <Header onNavigate={onNavigate} active="game" />}
-    <main className={`edo-stage edo-play-${playIntroStage}${ending ? " edo-has-ending" : ""}${keyboardInset ? " edo-keyboard-open" : ""}`} style={{ backgroundImage: "url('/images/edo-1868/edo-secret-study-v3.png')", "--edo-keyboard-inset": `${keyboardInset}px` }}>
+    <Header onNavigate={onNavigate} active="game" />
+    <main className={`edo-stage edo-play-${playIntroStage}${keyboardInset ? " edo-keyboard-open" : ""}`} style={{ backgroundImage: "url('/images/edo-1868/edo-secret-study-v3.png')", "--edo-keyboard-inset": `${keyboardInset}px` }}>
       <div className="edo-stage-shade" />
       <div className="edo-hud"><button onClick={() => { setIntroStep(0); setPhase("title"); }}><ChevronLeft size={18} />タイトルへ戻る</button><span>会話ターン {state.turns + 1}</span><div><button onClick={() => setPanel("mission")}><BookOpen size={18} />使命</button><button onClick={() => setPanel("notes")}><BookOpen size={18} />交渉ノート</button><button onClick={() => setPanel("history")}><MessageCircle size={18} />会話履歴</button><button onClick={() => setPanel("usage")}><Database size={18} />API使用量</button><button onClick={() => setPanel("settings")}><Settings size={18} />設定</button></div></div>
       <div className="edo-scene-meta"><p>{GAME_DATE}</p><p>江戸・薩摩藩邸</p></div>
       <section className="edo-character-stage" aria-label="勝海舟"><img src={EXPRESSION_ASSETS[currentKatsu?.expression] || EXPRESSION_ASSETS.neutral} alt="交渉相手の勝海舟" /></section>
       <section className="edo-dialogue-box" aria-live="polite"><div className="edo-nameplate">勝海舟</div><p>{visibleKatsuText}</p></section>
-      {ending ? <section className="edo-ending edo-stage-ending"><p>あなたがたどり着いた歴史</p><h2>{ending.title}</h2><p className="edo-outcome-line">{ending.outcomeLine}</p><p className="edo-ending-narrative">{ending.narrative}</p>{saveWarning && <p role="status">{saveWarning}</p>}<button type="button" onClick={openReview}><BookOpen size={17} />交渉を振り返る</button></section> : <form className="edo-stage-form" onSubmit={submit}><textarea aria-label="あなたの言葉" value={draft} onChange={(event) => setDraft(event.target.value)} onFocus={anchorMobileGame} maxLength="500" placeholder="" disabled={isSending} /><button type="button" className="edo-conclude-button" onClick={() => setPanel("conclude")} disabled={isSending}>決着を求める</button><button type="submit" disabled={!draft.trim() || isSending} aria-label="言葉を交わす">{isSending ? <LoaderCircle className="edo-loading" size={25} /> : <Send size={28} />}</button></form>}
+      <form className="edo-stage-form" onSubmit={submit}><textarea aria-label="あなたの言葉" value={draft} onChange={(event) => setDraft(event.target.value)} onFocus={anchorMobileGame} maxLength="500" placeholder="" disabled={isSending} /><button type="button" className="edo-conclude-button" onClick={() => setPanel("conclude")} disabled={isSending}>決着を求める</button><button type="submit" disabled={!draft.trim() || isSending} aria-label="言葉を交わす">{isSending ? <LoaderCircle className="edo-loading" size={25} /> : <Send size={28} />}</button></form>
       {settlementFlow && <section className={`edo-settlement-overlay edo-settlement-${settlementFlow.stage}`} aria-live="polite">
         {settlementFlow.stage === "government" ? <div className="edo-settlement-copy edo-government-reflection"><p>勝の言葉は、ここで終わりではない。</p><p>西郷の約束を、新政府が引き受けるのか。</p><p>明日の軍勢を止める判断が、今、問われている。</p></div> : <div className="edo-settlement-copy">
           <p className="edo-settlement-kicker">勝は、しばらく黙っている。</p>
@@ -1310,6 +1351,7 @@ function ImportantPage({ onNavigate }) {
           </article>
         </div>
         <article className="policy-body">
+          <h2 id="edo-1868">「1868 -江戸焦土前夜-」について</h2><p>本作は、1868年の江戸城明渡しに関わる交渉を題材とするゲームです。会話、約定、結末には創作を含み、プレイヤーの選択によって史実とは異なる展開になります。ゲーム内の出来事は、実際に起きた歴史として扱わないでください。</p>
           <h2>1. 基本方針</h2>
           <p>BYOKey Labは、利用者自身が取得したLLM APIキーを使うBYOK型のAIツールを扱います。APIキーは利用者のプロバイダーアカウント、利用上限、請求に紐づく重要な認証情報です。そのため、BYOKey LabがAPIキーを預かる構成、問い合わせやサポートでAPIキーの送信を求める構成、ログや公開リポジトリにAPIキーが残る構成は採用しません。</p>
           <p>本ページは、法的助言ではありません。各LLMプロバイダーの仕様、規約、セキュリティガイドラインは変更される可能性があるため、公開時点および主要アップデート時点で公式情報を確認します。</p>
@@ -1446,7 +1488,7 @@ export function App() {
   }, [path]);
 
   if (path.startsWith("/speak/english")) return <SpeakPage onNavigate={navigate} />;
-  if (path.startsWith("/games/edo-1868")) return <Edo1868Page onNavigate={navigate} />;
+  if (path.startsWith("/games/edo-1868")) return <Edo1868Page onNavigate={navigate} path={path} />;
   if (path.startsWith("/articles/byokey-speak-api-english")) return <ArticlePage slug="byokey-speak-api-english" onNavigate={navigate} />;
   if (path.startsWith("/articles")) return <ArticleIndexPage onNavigate={navigate} />;
   if (path.startsWith("/guide/api")) return <GuidePage onNavigate={navigate} />;

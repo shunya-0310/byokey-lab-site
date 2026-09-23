@@ -674,14 +674,14 @@ export function determineEnding(state) {
 }
 
 export const ENDINGS = {
-  bloodless: { title: "江戸無血開城", text: "翌朝、新政府軍は進軍を止めた。約定はまだ始まりにすぎない。それでも、双方が引き受ける条件は言葉になった。", history: "史実では、1868年3月の西郷・勝会談を含む複数の交渉を経て、江戸城は戦闘なく明け渡された。" },
-  alternative_peace: { title: "歴史に存在しない和平", text: "あなたは、勝の求めたものと新政府の目的を、史実とは異なる交換条件で結び直した。明日の戦を止める理由は、双方の側に残った。", history: "これは本ゲームの反実仮想であり、史実の経過を再現するものではない。" },
-  empty_promises: { title: "空手形", text: "勝は席を立たなかった。だが、会談の外で約定は支えを失った。あなたの言葉は、明日の軍を止める力にはならなかった。", history: "本ゲームの反実仮想。会談での発言だけで新政府全体の決定が成立するわけではない。" },
-  fragile_handover: { title: "不安定な引渡し", text: "城門は開いた。しかし、明日からの秩序まで引き受ける言葉は足りなかった。勝敗は決しても、火種は消えていない。", history: "本ゲームの反実仮想。史実の江戸城明渡しの過程にも複数の当事者と課題があった。" },
-  unfinished: { title: "決着を急いだ夜", text: "勝は、まだ答えを出さなかった。明日の軍勢を前に、あなたは会談を切り上げた。残された沈黙が、翌朝の判断を重くする。", history: "本ゲームの反実仮想。勝の日記には、初日の会談で即断せず翌日に決する趣旨が記されている。" },
-  breakdown: { title: "交渉決裂", text: "言葉は交わされたが、同じ明日を見てはいなかった。翌朝、新政府軍は予定どおり江戸へ進んだ。", history: "本ゲームの反実仮想。史実では会談と周辺の交渉を通じ、江戸城明渡しへの道が探られた。" },
-  assault: { title: "江戸総攻撃", text: "会談は終わり、軍勢は動いた。だが、そこで待っていたのは、ただ敗北を待つ者たちではなかった。", history: "本ゲームの反実仮想。戦闘時の具体的な展開を史実の確定事項として示すものではない。" },
-  scorched: { title: "江戸焦土", text: "強硬な応酬の果て、町は戦のただ中へ落ちていった。翌朝、誰もが想定していた勝敗とは別の代価が姿を現す。", history: "本ゲームの反実仮想。勝が江戸全域を焼却する完成済み作戦を持っていたことを、史実として断定するものではない。" },
+  bloodless: { title: "江戸無血開城", text: "翌朝、新政府軍は進軍を止めた。約定はまだ始まりにすぎない。それでも、双方が引き受ける条件は言葉になった。" },
+  alternative_peace: { title: "歴史にない和平", text: "勝海舟との約定を新政府も承認した。総攻撃の命令は取り下げられ、軍勢は江戸への進撃を止めた。双方は約した手順で城を受け取る準備を始める。あなたは、双方が引き受ける和平を結んだ。" },
+  empty_promises: { title: "空手形", text: "勝は席を立たなかった。だが、会談の外で約定は支えを失った。あなたの言葉は、明日の軍を止める力にはならなかった。" },
+  fragile_handover: { title: "不安定な引渡し", text: "城門は開いた。しかし、明日からの秩序まで引き受ける言葉は足りなかった。勝敗は決しても、火種は消えていない。" },
+  unfinished: { title: "決着を急いだ夜", text: "勝は、まだ答えを出さなかった。明日の軍勢を前に、あなたは会談を切り上げた。残された沈黙が、翌朝の判断を重くする。" },
+  breakdown: { title: "交渉決裂", text: "言葉は交わされたが、同じ明日を見てはいなかった。翌朝、新政府軍は予定どおり江戸へ進んだ。" },
+  assault: { title: "江戸総攻撃", text: "会談は終わり、軍勢は動いた。だが、そこで待っていたのは、ただ敗北を待つ者たちではなかった。" },
+  scorched: { title: "江戸焦土", text: "強硬な応酬の果て、町は戦のただ中へ落ちていった。翌朝、誰もが想定していた勝敗とは別の代価が姿を現す。" },
 };
 
 const endingOutcomes = {
@@ -702,10 +702,10 @@ for (const [id, ending] of Object.entries(ENDINGS)) {
   Object.freeze(ending);
 }
 
-export function createCompletedRun({ endingId, messages, discoveries, completedAt = new Date().toISOString() }) {
+export function createCompletedRun({ endingId, messages, discoveries, completedAt = new Date().toISOString(), settlementSnapshot = null, presentation = null }) {
   const ending = ENDINGS[endingId];
   if (!ending) throw new Error("結末が確定していません。");
-  const snapshot = JSON.parse(JSON.stringify({ endingId, endingTitle: ending.title, outcomeLine: ending.outcomeLine, endingNarrative: ending.narrative, conversationHistory: messages, discoveredInformation: discoveries, completedAt }));
+  const snapshot = JSON.parse(JSON.stringify({ version: 2, id: globalThis.crypto.randomUUID(), endingId, endingTitle: presentation?.title || ending.title, outcomeLine: presentation?.outcomeLine || ending.outcomeLine, summary: presentation?.summary || ending.outcomeLine, endingNarrative: presentation?.narrative || ending.narrative, settlementSnapshot, conversationHistory: messages, discoveredInformation: discoveries, completedAt }));
   const freeze = (value) => { if (value && typeof value === "object") { Object.values(value).forEach(freeze); Object.freeze(value); } return value; };
   return freeze(snapshot);
 }
