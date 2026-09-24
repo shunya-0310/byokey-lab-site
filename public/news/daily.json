@@ -1,100 +1,108 @@
 {
   "schemaVersion": 1,
   "status": "live",
-  "date": "2026-09-24",
-  "generatedAt": "2026-09-23T23:42:37.767Z",
+  "date": "2026-09-25",
+  "generatedAt": "2026-09-24T23:52:43.238Z",
   "model": "gemini-3.6-flash",
   "fallbackCategories": [],
   "items": [
     {
-      "id": "2026-09-24-politics_economy",
+      "id": "2026-09-25-politics_economy",
       "category": "politics_economy",
       "categoryLabel": "Politics & Economy",
-      "headline": "Iranian President Addresses UN Assembly as U.S.-Iran Sideline Talks Resume",
-      "summary": "Iranian President Masoud Pezeshkian addressed the United Nations General Assembly, issuing a sharp critique of U.S. and Israeli military actions in the Middle East. The address coincides with high-stakes diplomatic talks held between U.S. and Iranian officials on the sidelines of the summit aimed at negotiating conditions to de-escalate hostilities and reopen the Strait of Hormuz.",
-      "question": "How effective do you think high-level diplomatic gatherings like the United Nations General Assembly are at resolving complex international conflicts?",
+      "headline": "U.S. and Chinese Leaders Hold High-Stakes Summit at the White House",
+      "summary": "U.S. President Donald Trump hosted Chinese President Xi Jinping at the White House on September 24, 2026, for a high-stakes diplomatic summit. The two leaders discussed extending their trade truce, managing artificial intelligence risks, and navigating ongoing global conflicts.",
+      "question": "How do you think high-level diplomatic meetings like this affect global economic stability and international relations?",
       "coachLeads": {
-        "friendly": "Hey there! Have you heard about the latest diplomatic developments at the United Nations General Assembly?",
-        "energetic": "Check this out—world leaders are meeting in New York right now for high-stakes diplomatic talks!",
-        "calm": "There are significant diplomatic discussions taking place at the United Nations General Assembly this week. It is a key story worth reflecting on.",
-        "direct": "Iranian and American officials are holding diplomatic talks on the sidelines of the UN General Assembly. Let's talk about what this means for global security."
+        "friendly": "Hey! Have you heard about the major White House summit between the U.S. and Chinese leaders?",
+        "energetic": "Check this out! The heads of the world's two largest economies just met in Washington for high-stakes talks!",
+        "calm": "President Trump and President Xi Jinping held a summit at the White House yesterday to address trade and global security. It is a great opportunity to practice discussing international diplomacy.",
+        "direct": "The U.S. and Chinese presidents met at the White House yesterday to negotiate key economic and security issues. Let's talk about what this summit means for global politics."
       },
       "sources": [
         {
-          "title": "Google News: Politics & Economy",
-          "url": "https://news.google.com/search?q=Politics%20%26%20Economy%20top%20news%202026-09-24&hl=en-US&gl=US&ceid=US:en"
+          "title": "straitstimes.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGiW4dlSlu4skjXr53jROMuY9zU_5G9Hf-xCA6DUCvz7L28C7fdR0BkWpNRrtygi5qIX4y0Kz3P7sN4Ivfhud-LjRkrD9IT3nkhFlyP8_45kv48AtvfPzpLVlsSHyU389Tji3ugqOFlJbZZsjQivG9Hd9LdOdQwOuwLf67sBCkKWsXUq-4AcaGNTZ78L2RYkXE8sPxHYTrB-crSKcAO"
+        },
+        {
+          "title": "fmprc.gov.cn",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGkYJFMRVQX5owGsYh-Lqz05d6cYzV4pBigNAo6Bs4J7j7QT03ffyZHuwtw-_V8kqU93aO_ANxsUhY1CpUrjSr3lUrL9Iy2XLV-VQb5rvtZjZ2hacPAHiPsC-TOKTGlNxA9SRSIXr4LtwaZUoxgj3KCIFVX_iUJSTBcLlGApw=="
+        },
+        {
+          "title": "theguardian.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFXQyXGFX2mQR5NybNB9_vzUoyyyLHwbhgOZom6xtPHu8xpUCE4FSQZAyk1xFUGidIPRuyhvJmbs1u_-sJ8bAbmdgUC4qtx_Qvbk2M1wYZpHFZvJ9BlaXU7X0yJgEmc17MAOlwuitZofJdWRBRbEd0W6plCfalLOJlDekxNzfHfLDDPosmCyBTlbqugAsskC3AHc1P51BpMk3bR3A6VRn2PMDCExV0kFX6TIrk="
         }
       ]
     },
     {
-      "id": "2026-09-24-technology",
+      "id": "2026-09-25-technology",
       "category": "technology",
       "categoryLabel": "Technology",
-      "headline": "AI Leaders Urge UN Security Council to Establish Global Controls on Artificial Intelligence",
-      "summary": "Top executive leaders from major artificial intelligence firms testified before the United Nations Security Council on Wednesday to address rising safety risks associated with rapidly advancing technology. They called on world leaders to establish international safeguards and regulatory frameworks to ensure advanced AI systems remain under human control.",
-      "question": "Do you think international organizations like the United Nations should set global rules for AI, or should each country manage regulation on its own?",
+      "headline": "AI Tech Leaders Urge UN Security Council to Establish Global Safety Standards",
+      "summary": "Top artificial intelligence executives, including OpenAI CEO Sam Altman and Anthropic CEO Dario Amodei, briefed the United Nations Security Council on the rapid advancement of autonomous technology. They urged world leaders to establish international safety guardrails and governance standards to prevent potential security threats.",
+      "question": "Do you think international organizations like the UN should set global rules for AI, or should each nation regulate it independently?",
       "coachLeads": {
-        "friendly": "Hey there! Have you heard about tech leaders speaking at the United Nations today about AI safety?",
-        "energetic": "This is huge news coming out of the UN today! Top AI executives are actually asking world leaders to help set limits on their technology.",
-        "calm": "Top artificial intelligence creators met with the UN Security Council today to discuss safety safeguards. It is a major development that is worth taking a moment to unpack.",
-        "direct": "AI executives just testified at the United Nations asking for global regulation. Let's talk about what this means for the future."
+        "friendly": "Hey, have you heard about the big AI briefing at the United Nations? It is a fascinating topic, and I would love to hear your thoughts on it!",
+        "energetic": "Check this out! Major AI leaders just addressed the UN Security Council about global technology risks, and it is a massive story worth discussing!",
+        "calm": "There was a significant meeting at the United Nations regarding global AI safeguards. Take a moment to read the summary, and we can chat about your perspective whenever you are ready.",
+        "direct": "Top tech CEOs just called on the UN Security Council to implement global AI governance. Let's talk about whether international standards are necessary."
       },
       "sources": [
         {
           "title": "Google News: Technology",
-          "url": "https://news.google.com/search?q=Technology%20top%20news%202026-09-24&hl=en-US&gl=US&ceid=US:en"
+          "url": "https://news.google.com/search?q=Technology%20top%20news%202026-09-25&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     },
     {
-      "id": "2026-09-24-sports",
+      "id": "2026-09-25-sports",
       "category": "sports",
       "categoryLabel": "Sports",
-      "headline": "Captains Reveal Opening Match Pairings for 2026 Presidents Cup",
-      "summary": "Team captains Brandt Snedeker and Geoff Ogilvy announced the official opening round pairings for the 2026 Presidents Cup at Medinah Country Club on September 23. World No. 1 Scottie Scheffler will partner with Sam Burns for Team USA as competition begins Thursday against the International squad.",
-      "question": "Do you enjoy team-based sports events like the Presidents Cup, or do you prefer watching individual competitions?",
+      "headline": "Klopp and Xavi Debut as Netherlands and Germany Draw in Nations League",
+      "summary": "Jürgen Klopp and Xavi Hernández made their official international managerial debuts as Germany and the Netherlands faced off in a major UEFA Nations League clash on Thursday. Germany held a lead through Felix Nmecha's first-half goal before Dutch winger Cody Gakpo struck a dramatic stoppage-time volley to seal a 1-1 draw.",
+      "question": "How do you feel about high-profile club managers taking over national teams, and do you think Klopp or Xavi will have more success?",
       "coachLeads": {
-        "friendly": "Hey, have you been following the build-up to the Presidents Cup this week? The opening match lineups were just announced!",
-        "energetic": "Big golf news today as the opening match pairings for the Presidents Cup are finally set!",
-        "calm": "If you follow golf, the team captains just announced the starting line-ups for the Presidents Cup at Medinah.",
-        "direct": "The 2026 Presidents Cup starts Thursday, and today the team captains revealed the opening round pairings."
+        "friendly": "Hey, did you catch the big soccer match where Jürgen Klopp and Xavi made their international coaching debuts? It turned into a really dramatic finish!",
+        "energetic": "What an intense finish to a massive night of international soccer! Cody Gakpo scored late against his former manager, and you have to hear about this one!",
+        "calm": "Two of soccer's biggest tactical minds stepped into international management for the first time, ending in a hard-fought draw. Let's talk through what went down.",
+        "direct": "Jürgen Klopp and Xavi started their national team coaching careers with a 1-1 draw in Amsterdam on Thursday. Here is why this debut match is making major headlines."
       },
       "sources": [
         {
-          "title": "golfdigest.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHAUB13fy1eDf5P4h0_dlrfiIT_c6E_xUml8hY4fCJwUbIoU5ZIxYpdjdPrjqZObHEBGNP3WEUUVrSyrc8TlHrGkZ18AFY9sz0Y1vmIJ7vNmZR_Ed3cWRTT339_paNe31qTPtGiyafjCPwarmN_Pzi-4W924zh1Ft3qEN_hNkXi-dcuBVntN9aUtCBhlRpLLNtvcjm1VKm4hg=="
+          "title": "beinsports.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEZKciAS7rPG3_-F7CSNWyEhx5J5RKufECsZzPFvCb6ndk3r2ChX7l6vlDr5Qjpk2Gdq8ZH5U8z5iozzTpJgXI7ap1HCI0O_gFxFT6n1DS1eXCkUtdMYgRsGjsDmgc05FM_w2Wc1_VowoCYcgtFD-3aN9bR3uDqqwf5NPVFcZxmx_sRqfqmURSuaVY1WvQjyWkqQeROb2UtXsmxByyf_7o3ZMOociGGgjrcKvkz3_zXl5DxwuLD8vmh3_IfSK689WYMSg=="
         },
         {
-          "title": "wikipedia.org",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF3fTnx--RkDH_YeNOKJ9DSNt2kYOtX_mckzpe3YX-5WmSF1J_NjCEcLREe5FOBIW9vaZld8Tejzv8HrCrSbDJBw8j09-MwLOu_S2EuyH2UxIQjOK2E7bE1dv8nu8sMPKZcsE6lnuA="
+          "title": "skysports.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEmOOaDbbk0Rn2_Bo3w-NWIoZCKXD4FgkCXClwjvL5lCPImmg3kL9G7f8RiPzOtKOZvioRHDJ7mkwUnU7F8JjUDjVga_3o2uzzaJPURGHEkczg5pL992PqZwREhFQKxqIR9JBxOK4FGNPXtTcvc2x47T5VXOTT2U3wON8NKlCm6ewtoblAj"
         },
         {
-          "title": "newsday.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHGb1_wiKAUJ0asjAFib8XccDIPdJGhhd6muPcecuqa1eglya2D6Vc66otCQXn2sfYG3sXcJZ0W7UjocrTCMBvYYcOxpyHSuabAtY92TPPjMCBHhVikzlDwa74LqGRlJ7zQdVEQYwW2T8OqY4gSTDPepdUfUxjhhqJc8zFDuysU_d-vpmtWQUh2EHhnMWHbfME_3g=="
+          "title": "theguardian.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH-LulFRf5mIHr9lyV9qN5z18YvRWf1ukmdZ2dvuDyGDnuTt3hXv_Dud3akzhP0PoA3llrtTJzw4K-jPeG2aKsxT2EcHtU3Q5QDM6Y8JN-IWvSzwkKUrUPtaUyP6H42ihacxdEFyY6aM0D-pE5MMz_-4B7mQdml_273l-f7yPQhGW4zhZCIva20lbLYP-01OyTAp0QLbuPzHp30e4da9p_nZNB6H6_Sog-1cJqV54SyxOJtE-Q="
         }
       ]
     },
     {
-      "id": "2026-09-24-entertainment",
+      "id": "2026-09-25-entertainment",
       "category": "entertainment",
       "categoryLabel": "Entertainment",
-      "headline": "Harvey Weinstein Sentenced to 15 Years in Prison at New York Retrial",
-      "summary": "On September 23, 2026, former Hollywood producer Harvey Weinstein was sentenced by a New York judge to 15 years in prison for sexually assaulting a former television production assistant in 2006. The decision follows a 2025 retrial that was ordered after New York's highest court overturned his original 2020 conviction.",
-      "question": "How do you think high-profile legal cases impact accountability and power dynamics in the entertainment industry?",
+      "headline": "Ryan Murphy Completes Script for 'Glee' Reboot with Original Cast Interest",
+      "summary": "Television creator Ryan Murphy announced that he and co-creators Brad Falchuk and Ian Brennan have finished a script for a reboot of the hit musical comedy series Glee. Murphy revealed he has already reached out to about ten original cast members, who responded to the revival idea with enthusiasm.",
+      "question": "How do you feel about popular television shows from the past being rebooted with their original cast members?",
       "coachLeads": {
-        "friendly": "Hey, did you see the major culture news that just broke? Former movie producer Harvey Weinstein was sentenced to 15 years in prison following his New York retrial.",
-        "energetic": "There is a huge headline shaking up the film industry today! Disgraced Hollywood mogul Harvey Weinstein has just been sentenced to 15 years in prison in New York.",
-        "calm": "There is a significant legal update in entertainment news today. Former movie executive Harvey Weinstein has been sentenced to 15 years in prison following his New York retrial.",
-        "direct": "Former film producer Harvey Weinstein was sentenced to 15 years in prison in New York today. This is a historic legal development in the entertainment world."
+        "friendly": "Hey, have you heard the news about a potential revival of a hit TV show? Ryan Murphy just finished writing a script for a Glee reboot!",
+        "energetic": "Guess what? A Glee reboot might actually be happening after Ryan Murphy revealed he completed a new script!",
+        "calm": "It seems Glee could be returning to screen soon. Ryan Murphy confirmed that a new script is finished and original cast members are enthusiastic.",
+        "direct": "Ryan Murphy completed a script for a Glee reboot and spoke with original cast members. Let's discuss your thoughts on TV show revivals."
       },
       "sources": [
         {
-          "title": "thedailyrecord.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFZL_LNaH2HTOg2uDlpPBw6N_iwbANEYj1UrPwY9n8UdJQhQiCaB0JZDGfwn48UVxjc0ABnjKvAkdEQvWligAkQ8OVTQI68874J5XNOxy_DG1pN2RzikH19QbFIJAmcDcLV9rFyPsVYQl18TRbes05Xe49z_9a9XVk-n7w2UZx9B3Ny7ePv3gz-41JuXrTBm917FGmEMN3Lkw=="
+          "title": "variety.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQETvNPYbLrfMHxaIJ6v-7r9IQOdTuQ38Qgb9IdGHuWVHY-B1zdl9xO84EigWZ22Kf10IV_XbVhENF0Hk32uuXOSHk8MsfDYLMa0drXpry0lylFLuz2kbSyU-VE5cucPEIIm9YujU4p7dOZJD1x-tjyP6OmW7anlbcoWmooF66o="
         },
         {
-          "title": "fox43.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE25JqhpjD-e_aDHoCYrVzasFrAv89JoMsaOikov9deXX4qEZLMQyekY0e0CbzIXD1XS76ftQPiF6kvyhV5lZFmlGOB8oN799yZcj5wqSyYZ7iWlsIAYwzpImkdGo6UdzZ_Uezb5RkCe-OPUOMYfTLFi1UalQZPhmAZ4cxkntk5F8QKmn78sYXEHuUyy3w8LLh21NS811q_yS1amj45ngQiE4eOpRfmd186vD66eLTAnT99MWnjL-doSgk6Kj_ctEG_afxms88MMAc="
+          "title": "party105.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGeVWXl4t4c_z1wFYoI3HlG_Jog5D64q8IBXKEiqY0yRUEhvFdc6Instq61llGVQlipTR3ZLMTHQObr_HUAXxX5p5ybDnAMsW6gUmoksyugGS-XnEY2sHOSJHpLeGVoDDMqOsYYO5VUFy_MeEygDARJ2SVgzVSiXKMxLEbQd1CTVl_6xghbCJs29NHE5ws2YeQ="
         }
       ]
     }
