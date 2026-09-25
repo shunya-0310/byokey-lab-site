@@ -1,108 +1,96 @@
 {
   "schemaVersion": 1,
   "status": "live",
-  "date": "2026-09-25",
-  "generatedAt": "2026-09-24T23:52:43.238Z",
+  "date": "2026-09-26",
+  "generatedAt": "2026-09-25T23:57:02.929Z",
   "model": "gemini-3.6-flash",
   "fallbackCategories": [],
   "items": [
     {
-      "id": "2026-09-25-politics_economy",
+      "id": "2026-09-26-politics_economy",
       "category": "politics_economy",
       "categoryLabel": "Politics & Economy",
-      "headline": "U.S. and Chinese Leaders Hold High-Stakes Summit at the White House",
-      "summary": "U.S. President Donald Trump hosted Chinese President Xi Jinping at the White House on September 24, 2026, for a high-stakes diplomatic summit. The two leaders discussed extending their trade truce, managing artificial intelligence risks, and navigating ongoing global conflicts.",
-      "question": "How do you think high-level diplomatic meetings like this affect global economic stability and international relations?",
+      "headline": "U.S. and Chinese Leaders Conclude High-Stakes Washington Summit",
+      "summary": "Chinese President Xi Jinping wrapped up a three-day state visit to Washington after holding high-level talks with U.S. President Donald Trump on trade, strategic stability, and global security. The conclusion of the summit on September 25 highlights ongoing diplomatic efforts between the world's two largest economies to maintain communication despite persistent economic rivalries.",
+      "question": "How do you think high-level diplomatic meetings between major world powers influence global business and international relations?",
       "coachLeads": {
-        "friendly": "Hey! Have you heard about the major White House summit between the U.S. and Chinese leaders?",
-        "energetic": "Check this out! The heads of the world's two largest economies just met in Washington for high-stakes talks!",
-        "calm": "President Trump and President Xi Jinping held a summit at the White House yesterday to address trade and global security. It is a great opportunity to practice discussing international diplomacy.",
-        "direct": "The U.S. and Chinese presidents met at the White House yesterday to negotiate key economic and security issues. Let's talk about what this summit means for global politics."
+        "friendly": "Hey, have you heard about the big U.S.-China diplomatic summit that just wrapped up? It's a great story to chat about today!",
+        "energetic": "This is major news from Washington today! Let me break down what went on between the two world leaders so we can discuss it.",
+        "calm": "Take a moment to look at this key political update. High-stakes diplomacy like this always provides interesting topics for discussion.",
+        "direct": "The U.S.-China state visit in Washington just concluded. Here are the key facts you should know to talk about this story."
       },
       "sources": [
         {
-          "title": "straitstimes.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGiW4dlSlu4skjXr53jROMuY9zU_5G9Hf-xCA6DUCvz7L28C7fdR0BkWpNRrtygi5qIX4y0Kz3P7sN4Ivfhud-LjRkrD9IT3nkhFlyP8_45kv48AtvfPzpLVlsSHyU389Tji3ugqOFlJbZZsjQivG9Hd9LdOdQwOuwLf67sBCkKWsXUq-4AcaGNTZ78L2RYkXE8sPxHYTrB-crSKcAO"
-        },
-        {
-          "title": "fmprc.gov.cn",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGkYJFMRVQX5owGsYh-Lqz05d6cYzV4pBigNAo6Bs4J7j7QT03ffyZHuwtw-_V8kqU93aO_ANxsUhY1CpUrjSr3lUrL9Iy2XLV-VQb5rvtZjZ2hacPAHiPsC-TOKTGlNxA9SRSIXr4LtwaZUoxgj3KCIFVX_iUJSTBcLlGApw=="
-        },
-        {
-          "title": "theguardian.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFXQyXGFX2mQR5NybNB9_vzUoyyyLHwbhgOZom6xtPHu8xpUCE4FSQZAyk1xFUGidIPRuyhvJmbs1u_-sJ8bAbmdgUC4qtx_Qvbk2M1wYZpHFZvJ9BlaXU7X0yJgEmc17MAOlwuitZofJdWRBRbEd0W6plCfalLOJlDekxNzfHfLDDPosmCyBTlbqugAsskC3AHc1P51BpMk3bR3A6VRn2PMDCExV0kFX6TIrk="
+          "title": "Google News: Politics & Economy",
+          "url": "https://news.google.com/search?q=Politics%20%26%20Economy%20top%20news%202026-09-26&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     },
     {
-      "id": "2026-09-25-technology",
+      "id": "2026-09-26-technology",
       "category": "technology",
       "categoryLabel": "Technology",
-      "headline": "AI Tech Leaders Urge UN Security Council to Establish Global Safety Standards",
-      "summary": "Top artificial intelligence executives, including OpenAI CEO Sam Altman and Anthropic CEO Dario Amodei, briefed the United Nations Security Council on the rapid advancement of autonomous technology. They urged world leaders to establish international safety guardrails and governance standards to prevent potential security threats.",
-      "question": "Do you think international organizations like the UN should set global rules for AI, or should each nation regulate it independently?",
+      "headline": "Private Spacecraft Reenters Earth's Atmosphere After Unsuccessful NASA Rescue Mission",
+      "summary": "On September 25, 2026, space startup Katalyst Space Technologies concluded its $30 million NASA-sponsored mission as its robotic LINK spacecraft reentered Earth's atmosphere. The satellite was designed to dock with and boost the orbit of NASA's 22-year-old Swift Observatory, but technical issues prevented the rescue and left the aging telescope set to reenter later this year.",
+      "question": "Do you think space agencies should invest money in extending the life of older satellites, or should they prioritize launching brand-new technology instead?",
       "coachLeads": {
-        "friendly": "Hey, have you heard about the big AI briefing at the United Nations? It is a fascinating topic, and I would love to hear your thoughts on it!",
-        "energetic": "Check this out! Major AI leaders just addressed the UN Security Council about global technology risks, and it is a massive story worth discussing!",
-        "calm": "There was a significant meeting at the United Nations regarding global AI safeguards. Take a moment to read the summary, and we can chat about your perspective whenever you are ready.",
-        "direct": "Top tech CEOs just called on the UN Security Council to implement global AI governance. Let's talk about whether international standards are necessary."
+        "friendly": "Hey, have you heard about the private spacecraft that reentered the atmosphere today after trying to rescue a NASA space telescope?",
+        "energetic": "Check this out! A high-stakes $30 million mission to save an aging space telescope just came to a dramatic end in Earth's atmosphere!",
+        "calm": "Here is a noteworthy space development from today about a commercial attempt to service a NASA space telescope.",
+        "direct": "A private space mission designed to save NASA's Swift Observatory officially ended today when the spacecraft reentered the atmosphere."
       },
       "sources": [
         {
           "title": "Google News: Technology",
-          "url": "https://news.google.com/search?q=Technology%20top%20news%202026-09-25&hl=en-US&gl=US&ceid=US:en"
+          "url": "https://news.google.com/search?q=Technology%20top%20news%202026-09-26&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     },
     {
-      "id": "2026-09-25-sports",
+      "id": "2026-09-26-sports",
       "category": "sports",
       "categoryLabel": "Sports",
-      "headline": "Klopp and Xavi Debut as Netherlands and Germany Draw in Nations League",
-      "summary": "Jürgen Klopp and Xavi Hernández made their official international managerial debuts as Germany and the Netherlands faced off in a major UEFA Nations League clash on Thursday. Germany held a lead through Felix Nmecha's first-half goal before Dutch winger Cody Gakpo struck a dramatic stoppage-time volley to seal a 1-1 draw.",
-      "question": "How do you feel about high-profile club managers taking over national teams, and do you think Klopp or Xavi will have more success?",
+      "headline": "Top European Football Leagues Demand FIFA Governance Reforms",
+      "summary": "Four major European soccer leagues, including the Premier League, released a joint statement demanding structural reforms in FIFA's leadership. The coordinated challenge increases pressure on FIFA President Gianni Infantino following widespread backlash over a controversial proposal to privatize World Cup commercial operations.",
+      "question": "Do you think domestic soccer leagues should have more influence over how FIFA runs international tournaments?",
       "coachLeads": {
-        "friendly": "Hey, did you catch the big soccer match where Jürgen Klopp and Xavi made their international coaching debuts? It turned into a really dramatic finish!",
-        "energetic": "What an intense finish to a massive night of international soccer! Cody Gakpo scored late against his former manager, and you have to hear about this one!",
-        "calm": "Two of soccer's biggest tactical minds stepped into international management for the first time, ending in a hard-fought draw. Let's talk through what went down.",
-        "direct": "Jürgen Klopp and Xavi started their national team coaching careers with a 1-1 draw in Amsterdam on Thursday. Here is why this debut match is making major headlines."
+        "friendly": "Hey, have you heard about this? Four of Europe's biggest football leagues are joining forces to demand major changes at FIFA, and it's turning into a huge story.",
+        "energetic": "Big news in the sports world! Europe's top football leagues are taking a massive stand against FIFA leadership, and everyone is talking about it!",
+        "calm": "There is an important developing story in global soccer today. Top European leagues have united to call for major governance reforms at FIFA.",
+        "direct": "Four major European soccer leagues just called for immediate reforms at FIFA. Here is what you need to know about the conflict."
       },
       "sources": [
         {
-          "title": "beinsports.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEZKciAS7rPG3_-F7CSNWyEhx5J5RKufECsZzPFvCb6ndk3r2ChX7l6vlDr5Qjpk2Gdq8ZH5U8z5iozzTpJgXI7ap1HCI0O_gFxFT6n1DS1eXCkUtdMYgRsGjsDmgc05FM_w2Wc1_VowoCYcgtFD-3aN9bR3uDqqwf5NPVFcZxmx_sRqfqmURSuaVY1WvQjyWkqQeROb2UtXsmxByyf_7o3ZMOociGGgjrcKvkz3_zXl5DxwuLD8vmh3_IfSK689WYMSg=="
-        },
-        {
-          "title": "skysports.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEmOOaDbbk0Rn2_Bo3w-NWIoZCKXD4FgkCXClwjvL5lCPImmg3kL9G7f8RiPzOtKOZvioRHDJ7mkwUnU7F8JjUDjVga_3o2uzzaJPURGHEkczg5pL992PqZwREhFQKxqIR9JBxOK4FGNPXtTcvc2x47T5VXOTT2U3wON8NKlCm6ewtoblAj"
-        },
-        {
-          "title": "theguardian.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH-LulFRf5mIHr9lyV9qN5z18YvRWf1ukmdZ2dvuDyGDnuTt3hXv_Dud3akzhP0PoA3llrtTJzw4K-jPeG2aKsxT2EcHtU3Q5QDM6Y8JN-IWvSzwkKUrUPtaUyP6H42ihacxdEFyY6aM0D-pE5MMz_-4B7mQdml_273l-f7yPQhGW4zhZCIva20lbLYP-01OyTAp0QLbuPzHp30e4da9p_nZNB6H6_Sog-1cJqV54SyxOJtE-Q="
+          "title": "news4jax.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEe8s2SeE0y-2dWvzFqhZznPrCrafZSRSHE_2aHBrEyxloWzUxZdU9e5O6ByhnZgJPHwjjBqkhrpW3M_W-6oDVNNM1TGzGaWItHKaURFS1_eSS3xOgCauXx2UsRmpTZFIwHMBPvcCKvGt-QLUmG5j1og7yzUdnVVVcsIQtiD0l4N0JOI2g_w1wGnbNf9nGvX9jLbqfxcccQ9J3XmkqtXmA_KLK5iMIPeVmgk0s3eg=="
         }
       ]
     },
     {
-      "id": "2026-09-25-entertainment",
+      "id": "2026-09-26-entertainment",
       "category": "entertainment",
       "categoryLabel": "Entertainment",
-      "headline": "Ryan Murphy Completes Script for 'Glee' Reboot with Original Cast Interest",
-      "summary": "Television creator Ryan Murphy announced that he and co-creators Brad Falchuk and Ian Brennan have finished a script for a reboot of the hit musical comedy series Glee. Murphy revealed he has already reached out to about ten original cast members, who responded to the revival idea with enthusiasm.",
-      "question": "How do you feel about popular television shows from the past being rebooted with their original cast members?",
+      "headline": "64th New York Film Festival Opens With Premiere of James Gray's 'Paper Tiger'",
+      "summary": "The 64th New York Film Festival officially opened at Film at Lincoln Center on September 25 with the premiere of James Gray's crime drama 'Paper Tiger,' starring Adam Driver and Scarlett Johansson. Running through October 12, the event marks the start of a major fall cinema season showcasing highly anticipated international films.",
+      "question": "Which movie or genre are you most excited to watch this upcoming film season, and why?",
       "coachLeads": {
-        "friendly": "Hey, have you heard the news about a potential revival of a hit TV show? Ryan Murphy just finished writing a script for a Glee reboot!",
-        "energetic": "Guess what? A Glee reboot might actually be happening after Ryan Murphy revealed he completed a new script!",
-        "calm": "It seems Glee could be returning to screen soon. Ryan Murphy confirmed that a new script is finished and original cast members are enthusiastic.",
-        "direct": "Ryan Murphy completed a script for a Glee reboot and spoke with original cast members. Let's discuss your thoughts on TV show revivals."
+        "friendly": "Hey! The New York Film Festival just kicked off, and it is packed with exciting movie news. Have you been following any big film releases lately?",
+        "energetic": "The 64th New York Film Festival is officially underway! Are you ready to dive into the biggest movies heading to theaters soon?",
+        "calm": "The New York Film Festival opened today, signaling the start of a major season for international cinema. Let's talk a bit about your favorite films.",
+        "direct": "The 64th New York Film Festival launched today with several high-profile premieres. Let's discuss what kind of movies you enjoy watching."
       },
       "sources": [
         {
-          "title": "variety.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQETvNPYbLrfMHxaIJ6v-7r9IQOdTuQ38Qgb9IdGHuWVHY-B1zdl9xO84EigWZ22Kf10IV_XbVhENF0Hk32uuXOSHk8MsfDYLMa0drXpry0lylFLuz2kbSyU-VE5cucPEIIm9YujU4p7dOZJD1x-tjyP6OmW7anlbcoWmooF66o="
+          "title": "cbsnews.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHNUvn2E4iBpet779na8qesTewb294bzvCTOpu9KkNHwuK7gBxpE_Kig1vMYY710i5rr4P3bNpfFQDMTC03V61qwuJ-mlrEBezOpvDatWCBJO-cvYmVPXZDE6ccddiAas8l9VrWsnFmBn2Gwj7Qv7Ub7rT9coR4pw=="
         },
         {
-          "title": "party105.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGeVWXl4t4c_z1wFYoI3HlG_Jog5D64q8IBXKEiqY0yRUEhvFdc6Instq61llGVQlipTR3ZLMTHQObr_HUAXxX5p5ybDnAMsW6gUmoksyugGS-XnEY2sHOSJHpLeGVoDDMqOsYYO5VUFy_MeEygDARJ2SVgzVSiXKMxLEbQd1CTVl_6xghbCJs29NHE5ws2YeQ="
+          "title": "wikipedia.org",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEbq_Pj9LIsxHJY87rDVkPbTQo5MBjalylcImaNn2iEkQEdxV_YJ08XIZwz5bkZ6HN_DU-E3oDJ-xwRLKygWNoiAKlpk641BG0Q66zJ7iNtVaKv9Ne9-7T4_bIZ-oAzpqB_TtCr_B_NL2yFk1fwnlY="
+        },
+        {
+          "title": "mashable.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGw-p4tkz5pVt_8fodFl15dSbHHLxzcZ6v960O0AiUviEmwm3CwrNGiRDOv5mSLle502xiEtaE5oMQUziSHG1V-JZEv9lZqYdKsMPlQ51GZGw5JTUXYiST7-6WP-M3Wy_m5kul25AQgfcD8rxnHI03y"
         }
       ]
     }
