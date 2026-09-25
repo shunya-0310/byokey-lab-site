@@ -199,6 +199,7 @@ async function generateGeminiJson({ apiKey, model, systemInstruction, contents, 
 }
 
 export async function requestKatsuResponse({ apiKey, model, messages, state }) {
+  if (!canContinueNegotiation(state)) throw new Error("この交渉はすでに確定しています。");
   const issueSummary = Object.entries(state.issues).map(([id, status]) => `${id}:${status}`).join(", ");
   const issueCatalog = Object.entries(NEGOTIATION_ISSUES).map(([id, issue]) => `${id}: ${issue.title}（${issue.katsu}）`).join("\n");
   const negotiationContext = canonicalPrompt(state);
@@ -389,7 +390,12 @@ function hasContradictoryText(text) {
   return /(?:撤回|取り消|認め(?:られ)?ない|断る|飲めない|拒む)/.test(text || "");
 }
 
+export function canContinueNegotiation(state) {
+  return !["accepted", "breakdown"].includes(state.katsuSettlement) && !state.governmentReview?.snapshot?.katsuAccepted;
+}
+
 export function reduceNegotiationEvents(state, rawEvents, { playerText = "", katsuText = "" } = {}) {
+  if (!canContinueNegotiation(state)) return { state, applied: [], validationCode: "negotiation_closed", validationError: "この交渉はすでに確定しています。" };
   const canonical = ensureCanonicalLedger(state);
   const invalid = (validationCode = "event_shape") => ({ state: reconcileNegotiationState(state), applied: [], validationCode, validationError: "交渉イベントと発言の対応を確認できませんでした。" });
   const events = normalizeEvents(rawEvents);
@@ -569,6 +575,7 @@ export function reconcileNegotiationState(state) {
 }
 
 export function evaluateMessage(message, state, semantic = {}, katsuText = "", events = []) {
+  if (!canContinueNegotiation(state)) throw new Error("この交渉はすでに確定しています。");
   const text = message.trim();
   const canonicalBefore = ensureCanonicalLedger(state);
   const hasUnambiguousPendingProposal = Boolean(canonicalBefore.focus.primaryPendingProposalId) && canonicalBefore.focus.pendingProposalIds.length === 1;
@@ -696,6 +703,11 @@ function settlementFallback(status, blocking, repeated, ledger = {}, canonical =
 }
 
 export function evaluateSettlement(state, messages = []) {
+  if (!canContinueNegotiation(state)) {
+    const settlementResult = state.katsuSettlement === "breakdown" ? "BREAKDOWN" : "ACCEPTED";
+    const fallback = settlementFallback(settlementResult, [], false, state.negotiationLedger, state.canonicalLedger);
+    return { state, settlementResult, continues: false, blocking: [], discovered: [], endingCandidate: settlementResult === "BREAKDOWN" ? "breakdown" : "", expression: fallback.expression, reflection: fallback.reflection, katsuResponse: fallback.response };
+  }
   // Settlement eligibility is deterministic. Conversation text is deliberately
   // not reinterpreted here; only canonical proposal events may affect it.
   const reconciled = reconcileNegotiationState(state);
@@ -750,12 +762,13 @@ export function evaluateSettlement(state, messages = []) {
 }
 
 export function determineGovernmentOutcome(state) {
-  const review = reviewGovernment(state);
+  const review = state.governmentReview || reviewGovernment(state);
   if (review.status === 'not_submitted') return '';
   return review.status === 'approved' ? 'bloodless' : 'empty_promises';
 }
 
 export function submitGovernmentReview(state) {
+  if (state.governmentReview?.status !== undefined && state.governmentReview.status !== "not_submitted") return state;
   const review = reviewGovernment(state);
   return { ...state, governmentReview: review, governmentReviewHistory: [...(state.governmentReviewHistory || []), review] };
 }

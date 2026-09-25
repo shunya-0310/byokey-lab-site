@@ -137,11 +137,7 @@ export function reviewGovernment(state){
 }
 export function governmentMessage(review){
  if(review.status==='approved')return '新政府は、この約定を承認した。';
- const requests=review.findings.map(f=>{
-  const terms=[...new Set(review.snapshot.clauses.filter(c=>f.clauseIds.includes(c.id)).map(c=>c.text))];
-  return f.message+(terms.length?'\n対象の約束：\n'+terms.map(t=>`「${t}」`).join('\n'):'');
- });
- return `新政府は、このままの約定を承認しなかった。次の点を勝海舟と再び協議してほしい。\n\n${[...new Set(requests)].join('\n\n')}`;
+ return '新政府は、この約定を承認しなかった。';
 }
 
 // Transport is deliberately smaller than the canonical event protocol. The

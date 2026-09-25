@@ -58,3 +58,36 @@ console.log('Ending snapshot, all 8 narratives, migration, immutability and repl
 
 const oldRun = { ...run, version: 1 };
 assert.equal(restoreCompletedRun(oldRun, settled.state).settlementSnapshot.acceptedTerms[0].terms, terms);
+
+// One-shot flow: only NOT_READY permits further dialogue; no external requests.
+import { canContinueNegotiation, evaluateMessage, submitGovernmentReview, requestKatsuResponse } from './edo1868.js';
+import { agreedState, peaceClauses, overpromiseClauses } from './edo1868.fixtures.mjs';
+const waiting=evaluateSettlement(INITIAL_STATE);
+assert.equal(waiting.settlementResult,'NOT_READY');
+assert.equal(canContinueNegotiation(waiting.state),true);
+assert.doesNotThrow(()=>evaluateMessage('話を続けよう。',waiting.state));
+for(const [clauses,ending] of [[peaceClauses,'bloodless'],[overpromiseClauses,'empty_promises']]) {
+ const accepted=agreedState(clauses);
+ assert.equal(canContinueNegotiation(accepted),false);
+ assert.equal(evaluateSettlement(accepted).state,accepted);
+ assert.throws(()=>evaluateMessage('条件を変える。',accepted),/確定/);
+ const blocked=reduceNegotiationEvents(accepted,[]);
+ assert.equal(blocked.validationCode,'negotiation_closed');
+ assert.equal(blocked.state,accepted);
+ await assert.rejects(requestKatsuResponse({state:accepted}),/確定/);
+ const reviewed=submitGovernmentReview(accepted);
+ assert.equal(submitGovernmentReview(reviewed),reviewed,'no second government review');
+ assert.equal(determineGovernmentOutcome(reviewed),ending);
+ assert.equal(canContinueNegotiation(reviewed),false);
+ const secret='内部の修正条件をここに記録';
+ const internal={...reviewed,governmentReview:{...reviewed.governmentReview,findings:[...reviewed.governmentReview.findings,{message:secret}]}};
+ const result=createEndingRun({endingId:ending,state:internal,messages:[...messages,{role:'government',text:secret}],discoveries});
+ assert.ok(result.settlementSnapshot.governmentReview.findings.some(f=>f.message===secret));
+ const oldSaved={...result,endingNarrative:secret,summary:secret,conversationHistory:[...messages,{role:'government',text:secret}]};
+ for(const visible of [result,restoreCompletedRun(oldSaved)]) {
+  assert.ok(!JSON.stringify([visible.endingNarrative,visible.summary,visible.conversationHistory]).includes(secret));
+  assert.deepEqual(visible.conversationHistory.slice(0,2),messages);
+  assert.deepEqual(visible.discoveredInformation,discoveries);
+ }
+}
+console.log('One-shot NOT_READY, approval, rejection and saved-review privacy tests passed');

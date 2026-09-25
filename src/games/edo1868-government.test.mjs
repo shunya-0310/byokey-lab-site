@@ -1,8 +1,15 @@
 import assert from 'node:assert/strict';
 import { clause, peaceClauses, agreedState, approvedState } from './edo1868.fixtures.mjs';
 import { activeClauses, agreementVersion, reviewGovernment } from './edo1868-clauses.js';
-import { reduceNegotiationEvents, submitGovernmentReview, determineGovernmentOutcome } from './edo1868.js';
+import { reduceNegotiationEvents as reduceOpenNegotiation, evaluateSettlement, submitGovernmentReview, determineGovernmentOutcome } from './edo1868.js';
 import { createEndingRun } from './edo1868-ending.js';
+// Clause-editing fixtures exercise ordinary dialogue before final acceptance.
+// Government checks below then ask Katsu to settle the resulting clauses.
+function reduceNegotiationEvents(state, events, context) {
+ const result=reduceOpenNegotiation({...state,katsuSettlement:'not_requested',governmentReview:null},events,context);
+ if(!result.validationError && state.katsuSettlement==='accepted') result.state=evaluateSettlement(result.state).state;
+ return result;
+}
 const peace=approvedState();
 assert.equal(peace.governmentReview.status,'approved');
 assert.equal(determineGovernmentOutcome(peace),'bloodless');
@@ -99,7 +106,7 @@ const mixedAuthority=structuredClone(peaceClauses);
 mixedAuthority[0].approval_authority='personal_guarantee';
 mixedAuthority[1].funding='domain_revenue';
 assert.equal(reviewGovernment(agreedState(mixedAuthority)).status,'approved','distinct obligations can use distinct approval routes and compatible funding sources');
-assert.ok(createEndingRun({endingId:'empty_promises',state:rejected,messages:[],discoveries:[]}).endingNarrative.includes('新政府が求めた修正'));
+assert.ok(!createEndingRun({endingId:'empty_promises',state:rejected,messages:[],discoveries:[]}).endingNarrative.includes('新政府が求めた修正'));
 console.log('Per-obligation finance/authority and concrete refusal narrative passed');
 const linkedSupport=structuredClone(peaceClauses);
 linkedSupport[1]=clause('旧臣の禄は別条項の財源と期間、上限を条件に全額維持する。',{stipend:'full_retention'},['retainers']);
