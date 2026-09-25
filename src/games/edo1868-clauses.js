@@ -20,16 +20,16 @@ export const FACT_VALUES = Object.freeze({
  yoshinobu: ['unknown','protected','confined','punished'],
 });
 const FACT_MEANINGS={
- land:'existing_domainは従来の所領を一切減らさない明示保証のみ。相応の所領や家名の存続だけではない。範囲未定はunknown。',
- employment:'all_applicantsは希望者全員に必ず職を与える保証。全員を採用して能力で職種を割り当てる場合もall_applicants。selectionは能力や職枠によって採用されない希望者がいる選抜。職種の割当基準と採否の基準を区別する。再就職支援や登用の検討だけは全員保証ではない。',
- stipend:'full_retentionは従来の禄を全額維持。bounded_supportは対象・額・予算・期間の具体的な限定。単なる生活支援はunknown。',
+ land:'existing_domainは従来の所領を一切減らさない明示保証のみ。相応の所領や家名の存続だけではない。家名存続を目指し所領規模は裁可に委ねる場合はname_onlyで、所領の保証は追加しない。家名も所領も不明ならunknown。',
+ employment:'all_applicantsは希望者全員に必ず職を与える保証。全員を採用して能力で職種を割り当てる場合もall_applicants。selectionは能力や職枠によって採用されない希望者がいる選抜。職種の割当基準と採否の基準を区別する。能力・希望に応じた登用の検討や尽力はselectionで、採用の確約ではない。全員への任用保証と混同しない。',
+ stipend:'full_retentionは従来の禄を全額維持。bounded_supportは対象・額・予算・期間の具体的な限定。当面の生活支援はtemporary_supportで、全額扶持や恒久支援ではない。額・終了時点・財源は明言がなければunknownのまま。',
  funding:'bounded_governmentは新政府の予算枠内の明示。unbounded_governmentは新政府が不足なく全費用を引き受ける保証。資金主体不明はunknown。',
  weapons:'joint_sealは双方で封印。disarmは武装解除または武器引渡し。段階的引渡しはdisarm。',
  support_duration:'boundedは支援の終了時点が合意済み。単なる当面・善処はunknown。',
  appointment_capacity:'bounded_positionsは対象人数に対応する既存の職枠・選抜・配置を具体的に保証した場合のみ。全員採用を約束するだけならunlimited。',
  cost_scope:'cappedは支出上限・予算内という制限への合意。財政で賄うだけならunknown。',
  fleet_transfer:'eventualは将来の艦船編入や譲渡を約束したが実施期限・順序を未合意。scheduledは具体的な期限・手順・移管条件を合意済み。勝の就任と艦船・乗員の編入は別の約束であり、片方を他方へ要約しない。',
- authority:'submit_for_approvalは承認後発効。personal_guaranteeは承認なしで西郷が保証。単なる意見・進言はunknown。',
+ authority:'submit_for_approvalは裁可を得てから実質的な処遇を発効する約束、または裁可事項を責任を持って上申・取り計らう約束。上申する責任と望む裁可の保証を区別し、条件や留保をtextとscopeに残す。personal_guaranteeは承認なしで西郷が結果を保証。引受けのない単なる意見はunknown。',
 };
 const string={type:'string'};
 const sourceRef={type:'string',enum:['current_player_message','current_katsu_response'],description:'この内容を実際に述べた側の今回の発言。原文はエンジンが引用として保存する。'};
@@ -91,7 +91,7 @@ export function frozenAgreement(state){
 }
 
 // Scenario policy is explicit, versioned and independent of dialogue scores.
-export const GOVERNMENT_POLICY={version:'edo-government-1',principles:['権限外の約束は新政府の審査による追認を要する','旧支配領域の無条件維持を承認しない','恒久的な全額扶持・全員任用は財源と能力の裏付けを要する','軍艦は監督下に置き、移管手順を合意する','城の受領と治安引継ぎで軍事的脅威を除く']};
+export const GOVERNMENT_POLICY={version:'edo-government-2',principles:['権限外の約束は新政府の審査による追認を要する','旧支配領域の無条件維持を承認しない','恒久的な全額扶持・全員任用は財源と能力の裏付けを要する','軍艦は監督下に置き、移管手順を合意する','城の受領と治安引継ぎで軍事的脅威を除く']};
 export function reviewGovernment(state){
  const snapshot=frozenAgreement(state);const findings=[];
  const add=(code,clauses,message)=>findings.push({code,clauseIds:clauses.map(c=>c.id),message});
@@ -125,7 +125,10 @@ export function reviewGovernment(state){
  if(missingFleet.length)add('fleet_control',snapshot.clauses.filter(c=>c.facts.some(f=>f.dimension.startsWith('fleet_'))),`軍艦について、次の点を定めてほしい：${missingFleet.map(([, ,label])=>label).join('、')}。既に定めた他の条件は維持してよい。`);
  if(!has('order','transition')||!has('civilians','protected'))add('order_transition',[...by('order'),...by('civilians')],'明け渡し前後の治安担当と市民保護の引継ぎを明記してほしい。');
  if(!has('authority','submit_for_approval','personal_guarantee','government_ratified'))add('authority_unknown',by('authority'),'誰が約束を持ち帰り、新政府がどう承認するかを明記してほしい。');
- if((has('stipend','temporary_support','bounded_support')||has('employment','selection'))&&!has('funding','bounded_government','domain_revenue'))add('support_funding',[...by('stipend'),...by('employment')],'生活支援と登用の費用について、期間と予算の範囲を示してほしい。');
+ // Considering selective appointments is not a guaranteed expenditure. Actual
+ // support commitments still need their own funding or an explicit dependency.
+ const unfundedSupport=[...by('stipend','temporary_support'),...by('stipend','bounded_support')].filter(c=>!funded(c));
+ if(unfundedSupport.length)add('support_funding',unfundedSupport,'生活支援の財源と予算の範囲を明記してほしい。');
  const compatible={yoshinobu:[['protected','confined']],weapons:[['disarm','joint_seal']],land:[['name_only','reduced_domain'],['name_only','existing_domain']],stipend:[['temporary_support','bounded_support']]};
  // Funding and approval may legitimately differ between obligations.
  const conflicts=Object.keys(FACT_VALUES).filter(dim=>!['funding','authority','support_duration','appointment_capacity','cost_scope'].includes(dim)).filter(dim=>{const values=[...new Set(by(dim).flatMap(c=>c.facts.filter(f=>f.dimension===dim&&f.value!=='unknown'&&(!dim.startsWith('fleet_')||dim==='fleet_transfer'||f.phase!=='final')).map(f=>f.value)))];return values.length>1&&!compatible[dim]?.some(group=>values.every(v=>group.includes(v)));});

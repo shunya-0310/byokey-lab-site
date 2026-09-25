@@ -210,3 +210,25 @@ assert.equal(splitChange.validationError,undefined);
 assert.deepEqual(activeClauses(splitChange.state.canonicalLedger).flatMap(c=>c.facts.map(f=>f.dimension+':'+f.value)),['stipend:bounded_support','employment:selection']);
 assert.throws(()=>compileUpdates([{target:splitOldProposal.id,agreement_status:'mutual',changed_clause_ids:['one','two'],clauses:groupedClauses}]),/one original clause/);
 console.log('Splitting one revised clause cannot resurrect sibling superseded facts');
+
+// User-reported prudent route: reconstructed obligations, never a live-model replay.
+import { prudentClauses } from './edo1868.fixtures.mjs';
+const prudent=reviewGovernment(agreedState(prudentClauses));
+assert.deepEqual(prudent.findings.map(f=>f.code),['fleet_control','support_funding']);
+const supportFinding=prudent.findings.find(f=>f.code==='support_funding');
+assert.deepEqual(supportFinding.clauseIds,[prudent.snapshot.clauses[2].id],'appointment consideration is not a spending guarantee');
+assert.ok(prudent.snapshot.clauses.some(c=>c.facts.some(f=>f.dimension==='fleet_custody'&&f.phase==='final')));
+const onlyConsideration=peaceClauses.map((c,i)=>i===1?clause('能力と希望に応じ登用を検討する。',{employment:'selection'},['retainers']):c);
+assert.equal(reviewGovernment(agreedState(onlyConsideration)).status,'approved','consideration does not guarantee an office or payment');
+// Same explicit funding/monitoring requirements work with reserved court approval.
+const backedPrudent=structuredClone(prudentClauses);
+backedPrudent[2].funding='bounded_government';
+backedPrudent[2].text+='生活支援は新政府の予算内とする。';
+backedPrudent[2].source_quote=backedPrudent[2].text;
+backedPrudent.push(clause('引渡しまで軍艦を双方の監督下に置く。',{fleet_oversight:'joint'},['warships']));
+assert.equal(reviewGovernment(agreedState(backedPrudent)).status,'approved');
+const courtExcess=structuredClone(overpromiseClauses);
+for(const c of courtExcess){c.approval_authority='submit_for_approval';c.facts=c.facts.map(f=>f.dimension==='authority'?{...f,value:'submit_for_approval'}:f);}
+const courtExcessReview=reviewGovernment(agreedState(courtExcess));
+for(const code of ['land_scope','stipend_capacity','appointment_capacity','fiscal_limit','combined_obligations'])assert.ok(courtExcessReview.findings.some(f=>f.code===code));
+console.log('Prudent reconstruction, consideration vs guarantee, and court-reserved excessive obligations passed');

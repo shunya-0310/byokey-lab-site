@@ -29,3 +29,19 @@ export const overpromiseClauses=[
  clause('江戸城を明け渡すまで勝海舟が市民を守り治安を維持し、明け渡し後は新政府が引き継ぐ。',{castle:'handover',order:'transition',civilians:'protected'},['edo_castle','public_order','civilian_safety','peaceful_transition']),
  clause('正式裁可を待たず西郷個人が全条件を保証し、新政府には成立済みの約束として履行を求める。',{authority:'personal_guarantee'},['peaceful_transition']),
 ];
+
+// Reconstructed from the user's account, not a captured Gemini response.
+export const prudentClauses=[
+ clause('慶喜が恭順を貫き再挙兵しないことを条件に、生命と身柄の安全を守るよう朝廷に取り計らう。',{yoshinobu:'protected',authority:'submit_for_approval'},['yoshinobu']),
+ clause('徳川家の家名存続を目指す。所領規模と慶喜の最終処遇は朝廷の裁可に委ねる。',{land:'name_only',authority:'submit_for_approval'},['tokugawa_house']),
+ clause('恭順する旧幕臣をむやみに処罰せず、当面の生活を支援する。禄の全額維持は保証しない。',{stipend:'temporary_support'},['retainers']),
+ clause('希望者全員の任用は保証しない。能力と希望に応じ、新政府での登用や新たな生業への道を開くよう尽力する。',{employment:'selection'},['retainers']),
+ clause('軍艦は城の明け渡しに合わせて新政府へ引き渡す。',{fleet_transfer:'scheduled'},['warships']),
+ clause('軍艦は引渡しまでは勝が管理し、出航・戦闘は禁止する。',{fleet_command:'katsu',fleet_custody:'katsu',fleet_use:'prohibited'},['warships']),
+ clause('双方立会いのもとで武装を封印する。',{weapons:'joint_seal'},['weapons']),
+ {...clause('引渡し後は新政府が軍艦を管理する。',{fleet_command:'government',fleet_custody:'government'},['warships']),facts:['fleet_command','fleet_custody'].map(dimension=>({dimension,value:'government',phase:'final',quote:'引渡し後は新政府が軍艦を管理する。'}))},
+ clause('乗組員は能力と希望に応じて新政府海軍への登用を検討する。',{employment:'selection'},['retainers']),
+ clause('双方の責任者が武器・弾薬の目録を作り、武装解除を確認して江戸城を順次引き渡す。',{weapons:'disarm',castle:'handover'},['weapons','edo_castle']),
+ clause('城の引渡しまでは勝が市中の治安を維持し、その後は新政府が責任を引き継ぐ。新政府軍による無断の市中立入りを禁じ、警備・消防を引き継ぐ。',{order:'transition',civilians:'protected'},['public_order','civilian_safety','peaceful_transition']),
+ clause('これらの準備を進めるため翌日の総攻撃を猶予する。朝廷の裁可が必要な事項は独断で確約せず責任を持って上申する。',{authority:'submit_for_approval'},['peaceful_transition']),
+].map(c=>({...c,funding:'unknown',approval_authority:c.facts.some(f=>f.dimension==='authority')?'submit_for_approval':'unknown',duration:'unknown'}));
