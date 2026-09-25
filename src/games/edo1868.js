@@ -1,3 +1,4 @@
+import { clauseIssueIds, updateSchema, compileUpdates, materializeClauseEvidence, clauseSchema, CLAUSE_INSTRUCTION, validClauses, attachClauses, activeClauses, reviewGovernment } from './edo1868-clauses.js';
 /**
  * Browser-side BYOK dialogue and canonical negotiation engine.
  * Gemini extracts current-turn events; deterministic reducers own agreements.
@@ -139,10 +140,11 @@ const dialogueSchema = {
   properties: {
     spoken_response: stringField,
     expression: { type: "string", enum: [...allowedExpressions] },
-    events: { type: "array", items: { type: "object", required: ["type", "actor", "issue_ids", "target_proposal_id", "response", "commitment", "terms", "summary", "depends_on_issue_ids"], properties: {
+    events: { type: "array", items: { type: "object", required: ["type", "actor", "issue_ids", "target_proposal_id", "response", "commitment", "terms", "summary", "depends_on_issue_ids", "clauses", "reference_proposal_ids", "changed_clause_ids"], properties: {
       type: { type: "string", enum: ["proposal_created", "proposal_response", "proposal_modified", "proposal_withdrawn", "reservation", "agreement_confirmed"] },
       actor: { type: "string", enum: ["saigo", "katsu"] }, issue_ids: issueArray, target_proposal_id: stringField,
       response: { type: "string", enum: ["accept", "reject", "reserve", ""] }, commitment: { type: "string", enum: ["firm", "conditional"] }, terms: stringField, summary: stringField, depends_on_issue_ids: issueArray,
+      clauses: { type: "array", items: clauseSchema }, reference_proposal_ids: { type: "array", items: stringField }, changed_clause_ids: { type: "array", items: stringField },
     } } },
     discovered_information: { type: "array", items: { type: "object", required: ["id", "title", "text"], properties: { id: stringField, title: stringField, text: stringField } } },
     semantic_evaluation: { type: "object", properties: { specificity: stringField, credibility: stringField, threat: { type: "boolean" }, contradiction: { type: "boolean" }, vague_agreement: { type: "boolean" } } },
@@ -164,7 +166,7 @@ function parseGeminiJson(raw) {
   return null;
 }
 
-async function generateGeminiJson({ apiKey, model, systemInstruction, contents, maxOutputTokens, temperature, validator }) {
+async function generateGeminiJson({ apiKey, model, systemInstruction, contents, maxOutputTokens, temperature, validator, schema = dialogueSchema }) {
   const usage = { input: 0, output: 0, cached: 0 };
   let lastParseError = "";
   for (let attempt = 0; attempt < 1; attempt += 1) {
@@ -175,12 +177,12 @@ async function generateGeminiJson({ apiKey, model, systemInstruction, contents, 
       body: JSON.stringify({
         systemInstruction: { parts: [{ text: `${systemInstruction}${attempt ? "\nJSONの形式を厳守し、指定された必須フィールドを必ず返すこと。" : ""}` }] },
         contents,
-        generationConfig: { responseMimeType: "application/json", responseJsonSchema: dialogueSchema, temperature, maxOutputTokens },
+        generationConfig: { responseMimeType: "application/json", responseJsonSchema: schema, temperature, maxOutputTokens, ...(model === "gemini-3.1-flash-lite" ? {thinkingConfig:{thinkingLevel:"high"}} : {}) },
       }),
     });
     const body = await response.json();
     usage.input += body?.usageMetadata?.promptTokenCount || 0;
-    usage.output += body?.usageMetadata?.candidatesTokenCount || 0;
+    usage.output += (body?.usageMetadata?.candidatesTokenCount || 0) + (body?.usageMetadata?.thoughtsTokenCount || 0);
     usage.cached += body?.usageMetadata?.cachedContentTokenCount || 0;
     if (!response.ok) throw new Error(body?.error?.message || "Gemini APIへの接続に失敗しました。");
     const raw = body?.candidates?.[0]?.content?.parts?.map((part) => part.text || "").join("") || "";
@@ -200,16 +202,35 @@ export async function requestKatsuResponse({ apiKey, model, messages, state }) {
   const issueSummary = Object.entries(state.issues).map(([id, status]) => `${id}:${status}`).join(", ");
   const issueCatalog = Object.entries(NEGOTIATION_ISSUES).map(([id, issue]) => `${id}: ${issue.title}（${issue.katsu}）`).join("\n");
   const negotiationContext = canonicalPrompt(state);
-  const systemInstruction = `あなたは慶応4年3月14日の勝海舟として、西郷隆盛と交渉する。明治以後の出来事や後世の評価は知らない。\n\n勝は徳川家と旧幕臣の処遇、秩序ある権力移行、戦闘拡大と外国勢力の介入回避を重視する。ただしプレイヤーの譲歩を無条件に歓迎せず、誰の権限で履行するのかを疑い、曖昧な同意には具体化を要求する。勝は進行役ではなく、旧幕府側の交渉当事者である。\n\n最重要ルール: 最後のuser発言だけを対象に、その質問・主張・提案へ直接答えること。質問であれば、まず質問への答えを一文以上で示し、その後で勝自身の立場や条件を述べる。会話に出ていない論点へ勝手に話題を替えない。一般論、定型的な交渉の促し、直前の発言と無関係な返答は禁止する。\n\n通常会話では、個別条件への提案・了承・留保だけを扱う。プレイヤーが「決着を求める」まで、交渉全体を不可逆に終える発言は絶対に出さない。\n\nゲームエンジンの非公開状態: 勝受諾=${state.katsuAcceptance} 新政府受諾=${state.governmentAcceptance} 約束信頼性=${state.promiseCredibility} 緊張=${state.militaryTension} 抵抗=${state.resistance} 戦闘危険=${state.battleRisk} 論点=${issueSummary}。これらの数値や内部状態はプレイヤーに言及しない。\n\n${negotiationContext}\n\n同じJSONのeventsで、このターンに会話上の根拠がある交渉台帳イベントだけを記録する。論点カタログ:\n${issueCatalog}\n\n単語一致ではなく、誰が何を提案し、相手がどう応答したかという意味で判定する。推測、過去ゲームの記憶、未発言の条件をeventsへ追加してはならない。勝が今回の発言で、既に双方が話した複数条件を「書面にまとめる」「約定として記す」「合意事項」として列挙・確認したなら、列挙された全issueを一つのagreement_confirmedで記録する。勝が書面化を受諾し明示的な留保を付けない場合、agreement_confirmedのcommitmentはfirmにする。既存の合意を未解決へ戻すイベントは、今回の発言で明示的に変更・撤回・拒否した場合に限る。\n\n返答は必ず次のJSONのみ。eventsは空配列でも必ず含め、思考過程や説明は絶対に含めない。\n{"spoken_response":"勝としての日本語の発言（80〜220字）","expression":"neutral|smile|serious|thinking|surprised|wry_smile|irritated|explaining|downcast|looking_away","semantic_evaluation":{"specificity":"low|medium|high","credibility":"low|medium|high","threat":false,"contradiction":false,"vague_agreement":false},"discovered_information":[{"id":"short-id","title":"短い日本語見出し","text":"会話で実際に引き出した事実"}],"events":[{"type":"proposal_created|proposal_response|proposal_modified|proposal_withdrawn|reservation|agreement_confirmed","actor":"saigo|katsu","issue_ids":["edo_castle"],"target_proposal_id":"既存IDまたはcurrent_player_message","response":"accept|reject|reserve","commitment":"conditional|firm","terms":"提案または確認済み条件","depends_on_issue_ids":[],"summary":"今回の事実の短い要約"}],"negotiation_status":"ongoing"}`;
-  const responseInstruction = `${systemInstruction}\n\n会話の事実はCANONICAL STATEとcontentsにある発言である。LOCKED AGREEMENTSは短縮履歴より優先する。過去ゲームの記憶や未発言の約束を持ち込まない。\n市中の治安維持・双方の接触回避・引渡し後の新政府への治安移管という同じ約定はpublic_order、civilian_safety、peaceful_transitionの全てを扱う。意味上これらを満たす合意のeventsには全該当issueを記録し、同じ約定を三度要求しない。\n今の西郷の提案への応答（accept/reject/reserveの全て）を記録するなら、必ず先にproposal_created(actor:saigo,target_proposal_id:current_player_message)とproposal_response(actor:katsu,target_proposal_id:current_player_message)を両方記録する。current_player_messageは同じevents配列内に先行するproposal_createdがある場合のみ使用できる。提案ではない発言にはproposal_responseを作らずreservationまたは空配列を使う。包括的な受諾は提案全体への回答である。条件の一部だけを受ける場合はreservationと別提案を使う。通常会話では正式署名・明け渡し命令・全交渉終結を宣言せず「書面に残す条件には同意する」と述べる。短い受諾も対象が一意ならfirm。対象が複数で曖昧な場合は確認し、acceptしない。\n依存条件がある場合はdepends_on_issue_idsに記録する。新政府の承認待ちはこの会談での未解決論点ではない。\nJSONにsettlement_validityを追加する: {"government_acceptance":0〜100,"promise_credibility":0〜100,"internal_consistency":0〜100,"approval_mode":"pending_approval|personal_guarantee|unspecified"}。これは現在の合意全体の実行可能性のみを評価し、eventsや勝の合意を取り消さない。政府評価は城の確実な引渡し、旧幕府の再軍事行動の防止、武器と軍艦の実質的管理、新政府の権威で評価する。徳川の軍事力や旧領・全員の待遇の無条件温存は低評価。政府承認を条件とする上申は越権保証とは区別し、承認待ちだけで信頼性を下げないが、実質的な軍事的脅威が残る案を成功扱いしない。未交渉の条件は低めに保ち、同じ単語や同じ約束の反復で加点しない。`;
+  const responseInstruction = `あなたは慶応4年3月14日の勝海舟。西郷と江戸の明渡しを交渉する。徳川家・慶喜・旧臣の安全と市民保護を重視する。最後の西郷の発言に直接答え、留保と受諾を明確に区別する。史実の結末を強制しない。西郷の個人保証も勝に有利なら会談上の約束として受け入れてよい。新政府が引き受けるかは後の独立審査。条件が具体的になったら際限なく追加要求しない。通常会話での合意は可能だが、最終的な交渉終了はプレイヤーの決着ボタンでのみ行う。応答は日本語、概ね100〜350字。全体の合意確認を求められたとき、まだ話していない自分の要求（徳川家・慶喜・旧臣、城、武器、軍艦、市民の安全と治安引継ぎ）があれば、その一点を普通の言葉で提示する。一部合意の段階で「全て整った」「追加要求はない」と誤案内しない。既に合意した論点を再要求せず、政府審査の厳しさを勝の受諾条件に混同しない。
+内部台帳（プレイヤーにID、値、隠し判定を開示しない）:
+${negotiationContext}
+論点: ${issueCatalog}
+まず台帳イベントを確定し、それと矛盾しない勝の発言を作る。eventsの受諾は双方が実際に述べる約束だけ。台帳の更新の規則:
+- eventsに今回の約束の変化を記す。agreement_statusで双方が会談上の条件に同意したmutual、片側だけの提案saigo_offer/katsu_offer、留保reservation、撤回withdrawnを明確に分ける。
+- 前に留保した条件の懸念が今回の説明で満たされ、その条件を受け入れるなら、今回の新しい説明だけでなく保留中の元のtargetにもmutual確認を必ず記録する。城や武装解除への留保が旧臣支援で解消する場合も同じ。
+- 西郷の今回の案に勝が「受け入れる」「異存ない」と述べる場合はmutualにする。katsu_offerやsaigo_offerではない。勝の対案に西郷が明確に同意した場合もmutual。
+- target:newでは具体条項を全てclausesに入れる。城・人の処遇・軍艦・財政・権限等を別条項に分ける。新しい条件を古いtargetへの空clausesの確認で済ませない。
+- 既存条件の単なる再確認・書面化はtarget:実在提案ID、clauses:[]、changed_clause_ids:[]、agreement_status:mutual。複数案の包括確認ならそれぞれのtargetに一件ずつ出す。既存の詳細を要約で置換しない。
+- 既存条件の本当の変更はtarget:実在ID、changed_clause_ids:変更する条項ID、clauses:変更後の詳細。追加だけならtarget:new。変更していない内容を消さない。
+- 全体に曖昧な留保を加えて既存合意を取り消さない。会談の受諾と新政府の承認は独立。政府への上申はそれ自体で未合意に戻さない。
+- 治安引継ぎと市民保護はpublic_order/civilian_safety/peaceful_transitionを実際に扱う範囲でissue_idsへ。受諾した条項は全て記録する。
+JSONスキーマに従う。semantic_evaluationは今回の発言、discovered_informationは勝の応答で得た知識。settlement_validityは旧UI互換の概況値に過ぎず、政府の承認は行わない。`;
   const contents = messages.slice(-12).map((message) => ({
     role: message.role === "katsu" ? "model" : "user",
-    parts: [{ text: message.text }],
+    parts: [{ text: message.role === "government" ? `新政府からの正式な修正要求: ${message.text}` : message.text }],
   }));
-  const dialogue = await generateGeminiJson({ apiKey, model, systemInstruction: responseInstruction, contents, maxOutputTokens: 4000, temperature: 0.35, validator: (value) => typeof value?.spoken_response === "string" && value.spoken_response.trim().length > 0 && Array.isArray(value?.events) && normalizeEvents(value.events).length === value.events.length && validSettlementValidity(value.settlement_validity) });
+  const schema = structuredClone(dialogueSchema);
+  const {spoken_response,expression,events,...rest}=schema.properties;
+  schema.properties={events,spoken_response,expression,...rest};
+  schema.properties.spoken_response.description='先に記録したeventsと一致する勝の発言。受諾・留保・提案を区別する。未交渉の要求が残るなら全体の合意を宣言せず、次に協議したい一つを伝える。';
+  const proposals = ensureCanonicalLedger(state).proposals.filter(p=>['open','accepted'].includes(p.status)&&effectiveProposal(p).issueIds.length);
+  schema.properties.events.items = updateSchema(proposals);
+  const dialogue = await generateGeminiJson({ apiKey, model, schema, systemInstruction: responseInstruction + CLAUSE_INSTRUCTION + `\n最後に厳守: spoken_responseでは「全て整った」「全懸案が解消した」「他の要求はない」のような全体の完了宣言をしない。今話した具体的な条件への同意だけを述べる。現在の未合意の議題: ${Object.entries(state.issues).filter(([,v])=>["unresolved","proposed","conflicted"].includes(v)).map(([id])=>NEGOTIATION_ISSUES[id].title).join("、")}。今の問いに答え終えたら、この中でまだ約束を交わしていない一つを次の問いとして自然に取り上げてよい。合意済みの話は蒸し返さない。`, contents, maxOutputTokens: 16000, temperature: model.startsWith("gemini-3") ? 1 : 0.35, validator: (value) => typeof value?.spoken_response === "string" && value.spoken_response.trim().length > 0 && Array.isArray(value?.events) && normalizeEvents(compileUpdates(value.events)).length === value.events.length && validSettlementValidity(value.settlement_validity) });
   const parsed = dialogue.parsed;
+  parsed.events = materializeClauseEvidence(compileUpdates(parsed.events), messages.filter(m=>m.role === "saigo").at(-1)?.text || "", parsed.spoken_response);
   const validation = reduceNegotiationEvents({ ...state, turns: state.turns + 1 }, parsed.events, { playerText: messages.filter((message) => message.role === "saigo").at(-1)?.text || "", katsuText: parsed.spoken_response });
-  if (validation.validationError) throw new Error(`${validation.validationError}記録は変更していません。もう一度送信してください。`);
+  if (validation.validationError) { const error = new Error(`${validation.validationError}記録は変更していません。もう一度送信してください。`); error.validationCode=validation.validationCode; throw error; }
   const notes = Array.isArray(parsed.discovered_information) ? parsed.discovered_information
     .filter((item) => item && typeof item.title === "string" && typeof item.text === "string")
     .slice(0, 3).map((item, index) => ({ id: String(item.id || `gemini-note-${index}`).replace(/[^a-zA-Z0-9-]/g, "").slice(0, 48) || `gemini-note-${index}`, title: item.title.slice(0, 60), text: item.text.slice(0, 220) })) : [];
@@ -264,7 +285,7 @@ function issueIdsFor(text, semantic) {
 const EMPTY_CANONICAL_LEDGER = () => ({ version: 1, proposals: [], events: [], nextProposalNumber: 1, focus: { pendingProposalIds: [], primaryPendingProposalId: "", awaitingActor: "" } });
 const validIssueIds = (ids) => [...new Set((Array.isArray(ids) ? ids : []).filter((id) => Object.hasOwn(NEGOTIATION_ISSUES, id)))].slice(0, 9);
 const validActor = (actor) => actor === "saigo" || actor === "katsu";
-const effectiveProposal = (proposal) => ({ ...proposal, issueIds: proposal.issueIds.filter((id) => !(proposal.revokedIssueIds || []).includes(id)) });
+const effectiveProposal = (proposal) => ({ ...proposal, issueIds: [...new Set([...proposal.issueIds,...(proposal.clauses||[]).filter(c=>!(proposal.revokedClauseIds||[]).includes(c.id)).flatMap(clauseIssueIds)])].filter((id) => !(proposal.revokedIssueIds || []).includes(id) && (!proposal.revokedClauseIds?.length || proposal.clauses.some(c => !(proposal.revokedClauseIds || []).includes(c.id) && clauseIssueIds(c).includes(id)) || (!proposal.clauses.some(c=>clauseIssueIds(c).includes(id)) && proposal.clauses.some(c=>!proposal.revokedClauseIds.includes(c.id))))) });
 
 function canonicalFromLegacy(state) {
   const canonical = EMPTY_CANONICAL_LEDGER();
@@ -316,6 +337,10 @@ function deriveCanonical(canonical) {
       }
     });
   }
+  // A pending amendment reopens only its own issues, even when another
+  // unchanged clause on the same issue remains accepted.
+  ordered.filter(p => p.status === "open" && p.clauses?.some(c => c.supersedes?.length))
+    .forEach(p => p.issueIds.forEach(id => { issues[id] = "proposed"; }));
   canonical.events.forEach((event) => event.issueIds.forEach((issueId) => issueEvents[issueId].push(event)));
   const negotiationLedger = Object.fromEntries(Object.entries(NEGOTIATION_ISSUES).map(([issueId, issue]) => [issueId, {
     status: issues[issueId],
@@ -349,7 +374,7 @@ function normalizeEvents(rawEvents) {
     const ids = event.issue_ids ?? event.issueIds ?? [];
     const dependencies = event.depends_on_issue_ids ?? event.dependencies ?? [];
     if (!Array.isArray(ids) || ids.some((id) => !Object.hasOwn(NEGOTIATION_ISSUES, id)) || !Array.isArray(dependencies) || dependencies.some((id) => !Object.hasOwn(NEGOTIATION_ISSUES, id))) return [];
-    return [{ type: event.type, actor: event.actor, issueIds, targetProposalId: target || "", response: event.response || "", commitment, terms: typeof event.terms === "string" ? event.terms.trim() : "", dependencies: validIssueIds(dependencies), summary: typeof event.summary === "string" ? event.summary.trim() : "" }];
+    return [{ clauses: event.clauses, referenceProposalIds: event.reference_proposal_ids ?? event.referenceProposalIds ?? [], changedClauseIds: event.changed_clause_ids ?? event.changedClauseIds ?? [], type: event.type, actor: event.actor, issueIds, targetProposalId: target || "", response: event.response || "", commitment, terms: typeof event.terms === "string" ? event.terms.trim() : "", dependencies: validIssueIds(dependencies), summary: typeof event.summary === "string" ? event.summary.trim() : "" }];
   });
   // Validation is atomic: never keep half of a malformed package.
   return normalized.length === rawEvents.length ? normalized : [];
@@ -366,7 +391,7 @@ function hasContradictoryText(text) {
 
 export function reduceNegotiationEvents(state, rawEvents, { playerText = "", katsuText = "" } = {}) {
   const canonical = ensureCanonicalLedger(state);
-  const invalid = () => ({ state: reconcileNegotiationState(state), applied: [], validationError: "交渉イベントと発言の対応を確認できませんでした。" });
+  const invalid = (validationCode = "event_shape") => ({ state: reconcileNegotiationState(state), applied: [], validationCode, validationError: "交渉イベントと発言の対応を確認できませんでした。" });
   const events = normalizeEvents(rawEvents);
   if (!Array.isArray(rawEvents) || events.length !== rawEvents.length) return invalid();
   const turn = Math.max(1, Number(state.turns) || 1);
@@ -375,13 +400,16 @@ export function reduceNegotiationEvents(state, rawEvents, { playerText = "", kat
   for (const event of events) {
     const evidenceText = event.actor === "saigo" ? playerText : katsuText;
     if (!evidenceText) return invalid();
+    if (event.clauses !== undefined && !validClauses(event.clauses, [playerText, katsuText], Object.keys(NEGOTIATION_ISSUES))) return invalid("clause_evidence");
+    if (!Array.isArray(event.referenceProposalIds) || !Array.isArray(event.changedClauseIds)) return invalid();
     if (event.type === "proposal_created") {
       const id = `proposal-${String(turn).padStart(3, "0")}-${String(canonical.nextProposalNumber).padStart(3, "0")}`;
       canonical.nextProposalNumber += 1;
       canonical.proposals.push({ id, issueIds: event.issueIds, proposer: event.actor, terms: event.terms, createdTurn: turn, status: "open", dependencies: event.dependencies });
+      attachClauses(canonical.proposals.at(-1), event.clauses, turn, { player: playerText, katsu: katsuText });
       if (event.targetProposalId) aliases.set(event.targetProposalId, id);
       if (event.actor === "saigo") aliases.set("current_player_message", id);
-      canonical.events.push({ id: `event-${turn}-${canonical.events.length + 1}`, turn, actor: event.actor, type: "proposal_created", issueIds: event.issueIds, targetProposalId: id, summary: event.summary || event.terms, evidence: { speaker: event.actor, text: evidenceText.slice(0, 360) } });
+      canonical.events.push({ id: `event-${turn}-${canonical.events.length + 1}`, turn, actor: event.actor, type: "proposal_created", issueIds: event.issueIds, targetProposalId: id, summary: event.summary || event.terms, evidence: { speaker: event.actor, text: evidenceText } });
       applied.push({ ...event, targetProposalId: id });
       continue;
     }
@@ -389,12 +417,22 @@ export function reduceNegotiationEvents(state, rawEvents, { playerText = "", kat
       // This is still an event extracted from the current Katsu reply, rather
       // than a keyword-derived state change. It records a written/package
       // confirmation when no single prior proposal ID can represent it.
-      if (event.actor !== "katsu" || hasContradictoryText(katsuText)) return invalid();
+      if (event.actor !== "katsu" || (event.clauses === undefined && hasContradictoryText(katsuText))) return invalid();
+      if (event.referenceProposalIds.length) {
+        const referenced = event.referenceProposalIds.map(id => canonical.proposals.find(p => p.id === (aliases.get(id) || id)));
+        if (referenced.some(p => !p || !['open','accepted'].includes(p.status) || !effectiveProposal(p).issueIds.length)) return invalid();
+        referenced.forEach(p => { p.status = 'accepted'; p.acceptance = { actor: 'katsu', commitment: event.commitment, turn }; });
+        canonical.events.push({ id: `event-${turn}-${canonical.events.length + 1}`, turn, actor:'katsu', type:'agreement_confirmed', issueIds: [...new Set(referenced.flatMap(p => effectiveProposal(p).issueIds))], referenceProposalIds: referenced.map(p=>p.id), summary:event.summary, evidence:{speaker:'katsu',text:katsuText} });
+        applied.push(event);
+        if (!event.clauses?.length) continue;
+        event.issueIds = [...new Set(event.clauses.flatMap(c=>c.issue_ids))];
+      }
       canonical.proposals.filter((proposal) => proposal.status === "open" && proposal.issueIds.every((issueId) => event.issueIds.includes(issueId))).forEach((proposal) => { proposal.status = "superseded"; });
       const id = `proposal-${String(turn).padStart(3, "0")}-${String(canonical.nextProposalNumber).padStart(3, "0")}`;
       canonical.nextProposalNumber += 1;
       canonical.proposals.push({ id, issueIds: event.issueIds, proposer: "saigo", terms: event.terms, createdTurn: turn, status: "accepted", dependencies: event.dependencies, acceptance: { actor: "katsu", commitment: event.commitment, turn } });
-      canonical.events.push({ id: `event-${turn}-${canonical.events.length + 1}`, turn, actor: event.actor, type: "agreement_confirmed", issueIds: event.issueIds, targetProposalId: id, summary: event.summary || event.terms, evidence: { speaker: "katsu", text: katsuText.slice(0, 360) } });
+      attachClauses(canonical.proposals.at(-1), event.clauses, turn, { player: playerText, katsu: katsuText });
+      canonical.events.push({ id: `event-${turn}-${canonical.events.length + 1}`, turn, actor: event.actor, type: "agreement_confirmed", issueIds: event.issueIds, targetProposalId: id, summary: event.summary || event.terms, evidence: { speaker: "katsu", text: katsuText } });
       applied.push({ ...event, targetProposalId: id });
       continue;
     }
@@ -411,25 +449,87 @@ export function reduceNegotiationEvents(state, rawEvents, { playerText = "", kat
       const proposal = targetId ? canonical.proposals.find((item) => item.id === targetId) : null;
       const issueIds = event.issueIds.length ? event.issueIds : proposal?.issueIds || [];
       if (issueIds.length === 0) continue;
-      canonical.events.push({ id: `event-${turn}-${canonical.events.length + 1}`, turn, actor: event.actor, type: "reservation", issueIds, targetProposalId: proposal?.id || "", summary: event.summary || "条件への留保", evidence: { speaker: event.actor, text: evidenceText.slice(0, 360) } });
+      canonical.events.push({ id: `event-${turn}-${canonical.events.length + 1}`, turn, actor: event.actor, type: "reservation", issueIds, targetProposalId: proposal?.id || "", summary: event.summary || "条件への留保", evidence: { speaker: event.actor, text: evidenceText } });
       applied.push({ ...event, targetProposalId: proposal?.id || "" });
       continue;
     }
     const candidates = canonical.proposals.filter((item) => item.status === "open" && item.proposer !== event.actor);
     const targetId = aliases.get(event.targetProposalId) || event.targetProposalId || (candidates.length === 1 ? candidates[0].id : "");
     const proposal = canonical.proposals.find((item) => item.id === targetId);
-    if (!proposal) return invalid();
-    if (event.type === "proposal_response" && (proposal.status !== "open" || proposal.proposer === event.actor)) return invalid();
+    if (!proposal) return invalid("missing_target");
+    if (event.type === "proposal_response" && (proposal.status !== "open" || proposal.proposer === event.actor)) return invalid("response_target_or_actor");
     if (["proposal_modified", "proposal_withdrawn"].includes(event.type) && !["open", "accepted"].includes(proposal.status)) return invalid();
     // Regex is only a lint: an acceptance event that conflicts with explicit
     // rejection language is discarded instead of guessing a state transition.
     if (event.type === "proposal_response" && event.response === "accept" && hasContradictoryText(evidenceText)) return invalid();
+    if (event.type === 'proposal_withdrawn' && event.changedClauseIds.length) {
+      if(event.changedClauseIds.some(id=>!proposal.clauses?.some(c=>c.id===id && !(proposal.revokedClauseIds||[]).includes(id))))return invalid('missing_target');
+      proposal.revokedClauseIds=[...new Set([...(proposal.revokedClauseIds||[]),...event.changedClauseIds])];
+      canonical.events.push({id:`event-${turn}-${canonical.events.length+1}`,turn,actor:event.actor,type:event.type,issueIds:event.issueIds,targetProposalId:proposal.id,changedClauseIds:[...event.changedClauseIds],evidence:{speaker:event.actor,text:evidenceText}});
+      applied.push(event);continue;
+    }
+    if (event.type === 'proposal_modified' && proposal.clauses?.length && !event.changedClauseIds.length) return invalid('missing_changed_clauses');
+    if (event.type === 'proposal_modified' && event.changedClauseIds.length) {
+      if (!event.clauses?.length || event.changedClauseIds.some(id => !(proposal.clauses || []).some(c => c.id === id && !(proposal.revokedClauseIds || []).includes(id)))) return invalid();
+      const oldClauses = proposal.clauses.filter(c => event.changedClauseIds.includes(c.id));
+      proposal.revokedClauseIds = [...new Set([...(proposal.revokedClauseIds || []), ...event.changedClauseIds])];
+      const id = `proposal-${String(turn).padStart(3, '0')}-${String(canonical.nextProposalNumber++).padStart(3, '0')}`;
+      const amended = { id, issueIds: event.issueIds, proposer: event.actor, terms: event.terms, createdTurn:turn, status:'open', dependencies:event.dependencies };
+      attachClauses(amended, event.clauses, turn, {player:playerText,katsu:katsuText});
+      const amendmentFacts = amended.clauses.flatMap(c=>c.facts.map(f=>({...f})));
+      amended.clauses.forEach(c => {
+        c.version = Math.max(...oldClauses.map(x=>x.version)) + 1;
+        c.supersedes = [...event.changedClauseIds];
+        // An amendment patches the dimensions it explicitly names. Omission
+        // is not withdrawal: retain independently agreed rights and evidence.
+        const sameIssue = oldClauses.filter(old=>old.issueIds.some(id=>c.issueIds.includes(id)));
+        // Separate promises about the same issue (e.g. pay and hiring) must
+        // not inherit each other's superseded facts during a grouped edit.
+        const contextDimensions = new Set(['authority','funding','support_duration','appointment_capacity','cost_scope']);
+        const obligationDimensions = new Set(c.facts.filter(f=>!contextDimensions.has(f.dimension)).map(f=>f.dimension));
+        const sameObligation = sameIssue.filter(old=>old.facts.some(f=>obligationDimensions.has(f.dimension)));
+        const related = sameObligation.length ? sameObligation : sameIssue;
+        // If one original clause is split, another replacement clause may
+        // carry the amended dimension; do not resurrect its old value here.
+        const patchedFacts = oldClauses.length===1
+          ? amendmentFacts
+          : [...c.facts];
+        const replaced = old=>patchedFacts.some(f=>f.dimension===old.dimension && (!old.dimension.startsWith("fleet_") || (f.phase||"unspecified")==="unspecified" || (f.phase||"unspecified")===(old.phase||"unspecified") || ((!old.phase || old.phase==="unspecified") && f.phase==="interim")));
+        const inherited = related.flatMap(old=>old.facts.filter(f=>!replaced(f)).map(f=>({...f})));
+        c.facts.push(...inherited);
+        if(inherited.length)c.issueIds=[...new Set([...c.issueIds,...related.flatMap(old=>old.issueIds)])];
+        c.inheritedTerms = related.flatMap(old=>{
+          const preserved=old.facts.filter(f=>!replaced(f));
+          return [...new Set(preserved.map(f=>f.quote))].map(quote=>({clauseId:old.id,version:old.version,text:quote,dimensions:[...new Set(preserved.filter(f=>f.quote===quote).map(f=>f.dimension))]}));
+        });
+        for(const field of ['subject','obligor','scope','duration','funding','approvalAuthority']) {
+          if(c[field]==='unknown' && related.length===1)c[field]=related[0][field];
+        }
+      });
+      amended.issueIds=[...new Set([...amended.issueIds,...amended.clauses.flatMap(c=>c.issueIds)])];
+      if(event.response==='accept'){amended.status='accepted';amended.acceptance={actor:'katsu',commitment:event.commitment,turn};}
+      if(event.response==='reject')amended.status='rejected';
+      canonical.proposals.push(amended);
+      aliases.set('modified', id); aliases.set('current_player_message', id);
+      canonical.events.push({id:`event-${turn}-${canonical.events.length+1}`,turn,actor:event.actor,type:event.type,issueIds:event.issueIds,targetProposalId:id,changedClauseIds:[...event.changedClauseIds],evidence:{speaker:event.actor,text:evidenceText}});
+      applied.push({...event,targetProposalId:id}); continue;
+    }
     if (["proposal_modified", "proposal_withdrawn"].includes(event.type)) {
       // Repeated written confirmations must not resurrect an older copy of a
       // clause after its latest agreement has explicitly been withdrawn.
       canonical.proposals.filter((item) => item.status === "accepted" && item.id !== proposal.id).forEach((item) => {
         item.revokedIssueIds = [...new Set([...(item.revokedIssueIds || []), ...item.issueIds.filter((id) => proposal.issueIds.includes(id))])];
       });
+    }
+    if (event.type === 'proposal_response' && event.response === 'accept' && proposal.clauses?.length && event.issueIds.length && effectiveProposal(proposal).issueIds.some(id=>!event.issueIds.includes(id))) {
+      const available = proposal.clauses.filter(c=>!(proposal.revokedClauseIds||[]).includes(c.id));
+      const accepted = available.filter(c=>c.issueIds.every(id=>event.issueIds.includes(id)));
+      if (!accepted.length || available.some(c=>c.issueIds.some(id=>event.issueIds.includes(id)) && !c.issueIds.every(id=>event.issueIds.includes(id)))) return invalid('partial_clause_ambiguous');
+      proposal.revokedClauseIds=[...(proposal.revokedClauseIds||[]),...accepted.map(c=>c.id)];
+      const id=`proposal-${String(turn).padStart(3,'0')}-${String(canonical.nextProposalNumber++).padStart(3,'0')}`;
+      canonical.proposals.push({...proposal,id,issueIds:[...new Set(accepted.flatMap(c=>c.issueIds))],clauses:accepted,revokedClauseIds:[],status:'accepted',terms:accepted.map(c=>c.text).join(' / '),acceptance:{actor:event.actor,commitment:event.commitment,turn},dependencies:event.dependencies});
+      canonical.events.push({id:`event-${turn}-${canonical.events.length+1}`,turn,type:event.type,actor:event.actor,issueIds:event.issueIds,targetProposalId:id,response:'accept',evidence:{speaker:event.actor,text:evidenceText}});
+      applied.push({...event,targetProposalId:id});continue;
     }
     if (event.type === "proposal_response") {
       if (event.response === "accept") { proposal.status = "accepted"; proposal.dependencies = [...new Set([...(proposal.dependencies || []), ...event.dependencies])]; proposal.acceptance = { actor: event.actor, commitment: event.commitment, turn }; }
@@ -439,9 +539,10 @@ export function reduceNegotiationEvents(state, rawEvents, { playerText = "", kat
       const id = `proposal-${String(turn).padStart(3, "0")}-${String(canonical.nextProposalNumber).padStart(3, "0")}`;
       canonical.nextProposalNumber += 1;
       canonical.proposals.push({ id, issueIds: event.issueIds.length ? event.issueIds : proposal.issueIds, proposer: event.actor, terms: event.terms || proposal.terms, createdTurn: turn, status: "open", dependencies: event.dependencies });
+      attachClauses(canonical.proposals.at(-1), event.clauses, turn, { player: playerText, katsu: katsuText });
       aliases.set("modified", id);
     } else if (event.type === "proposal_withdrawn") proposal.status = "withdrawn";
-    canonical.events.push({ id: `event-${turn}-${canonical.events.length + 1}`, turn, actor: event.actor, type: event.type, issueIds: event.issueIds.length ? event.issueIds : proposal.issueIds, targetProposalId: proposal.id, response: event.response, summary: event.summary || proposal.terms, evidence: { speaker: event.actor, text: evidenceText.slice(0, 360) } });
+    canonical.events.push({ id: `event-${turn}-${canonical.events.length + 1}`, turn, actor: event.actor, type: event.type, issueIds: event.issueIds.length ? event.issueIds : proposal.issueIds, targetProposalId: proposal.id, response: event.response, summary: event.summary || proposal.terms, evidence: { speaker: event.actor, text: evidenceText } });
     applied.push({ ...event, issueIds: proposal.issueIds, targetProposalId: proposal.id });
   }
   refreshFocus(canonical);
@@ -452,9 +553,12 @@ export function reduceNegotiationEvents(state, rawEvents, { playerText = "", kat
 function canonicalPrompt(state) {
   const canonical = ensureCanonicalLedger(state);
   const { issues } = deriveCanonical(canonical);
-  const locked = canonical.proposals.map(effectiveProposal).filter((proposal) => proposal.status === "accepted" && proposal.issueIds.length > 0).map((proposal) => `${proposal.id} | active issues ONLY:${proposal.issueIds.join(",")} | ${proposal.terms} | revoked issues:${(proposal.revokedIssueIds || []).join(",")} | dependencies:${(proposal.dependencies || []).join(",")}`).join("\n") || "なし";
-  const pending = canonical.proposals.filter((proposal) => proposal.status === "open").map((proposal) => `${proposal.id} | proposer:${proposal.proposer} | ${proposal.issueIds.join(",")} | ${proposal.terms}`).join("\n") || "なし";
-  return `CURRENT ISSUE STATE (derived; do not modify): ${Object.entries(issues).map(([id, status]) => `${id}:${status}`).join(", ")}\n\nLOCKED AGREEMENTS (do not reopen unless the current player message explicitly changes or withdraws them):\n${locked}\n\nACTIVE / PENDING PROPOSALS:\n${pending}\n\nPRIMARY PENDING PROPOSAL: ${canonical.focus.primaryPendingProposalId || "なし"} (awaiting ${canonical.focus.awaitingActor || "none"})`;
+  const active = activeClauses(canonical, {acceptedOnly:false});
+  const details = active.map(c=>({...c,source:{turn:c.source.turn,speaker:c.source.speaker},facts:c.facts.map(({dimension,value,phase})=>({dimension,value,phase}))}));
+  const evidence = [...new Set(active.map(c=>JSON.stringify(c.source)))].map(s=>JSON.parse(s));
+  const locked = canonical.proposals.map(effectiveProposal).filter((proposal) => proposal.status === "accepted" && proposal.issueIds.length > 0).map((proposal) => `${proposal.id} | active issues ONLY:${proposal.issueIds.join(",")} | ${proposal.clauses?.length ? activeClauses({proposals:[proposal]}).map(c=>c.text).join(" / ") : proposal.terms} | revoked issues:${(proposal.revokedIssueIds || []).join(",")} | dependencies:${(proposal.dependencies || []).join(",")}`).join("\n") || "なし";
+  const pending = canonical.proposals.map(effectiveProposal).filter((proposal) => proposal.status === "open" && proposal.issueIds.length).map((proposal) => `${proposal.id} | proposer:${proposal.proposer} | ${proposal.issueIds.join(",")} | ${proposal.terms}`).join("\n") || "なし";
+  return `CLAUSES (source details, preserve IDs for confirmation/revision): ${JSON.stringify(details)}\nSOURCE EVIDENCE: ${JSON.stringify(evidence)}\n\nGOVERNMENT REQUEST (if any): ${JSON.stringify(state.governmentReview?.findings || [])}\n\nCURRENT ISSUE STATE (derived; do not modify): ${Object.entries(issues).map(([id, status]) => `${id}:${status}`).join(", ")}\n\nLOCKED AGREEMENTS (do not reopen unless the current player message explicitly changes or withdraws them):\n${locked}\n\nACTIVE / PENDING PROPOSALS:\n${pending}\n\nPRIMARY PENDING PROPOSAL: ${canonical.focus.primaryPendingProposalId || "なし"} (awaiting ${canonical.focus.awaitingActor || "none"})`;
 }
 
 // Canonical state is event-sourced. Old transcript text is intentionally not
@@ -546,7 +650,7 @@ function settlementFallback(status, blocking, repeated, ledger = {}, canonical =
   // Katsu naming the agenda is not a player offer. Until Saigo has proposed a
   // term or responded to one, settlement must not pretend a particular clause
   // has already been negotiated.
-  const hasPlayerCommitment = (canonical.proposals || []).some((proposal) => proposal.proposer === "saigo" && proposal.status !== "withdrawn")
+  const hasPlayerCommitment = (canonical.proposals || []).some((proposal) => (proposal.proposer === "saigo" && proposal.status !== "withdrawn") || proposal.status === "accepted")
     || (canonical.events || []).some((event) => event.actor === "saigo" && event.type === "proposal_response");
   const pending = blocking.map((id) => NEGOTIATION_ISSUES[id]?.title).filter(Boolean);
   const settledLine = settled.length > 0
@@ -646,11 +750,14 @@ export function evaluateSettlement(state, messages = []) {
 }
 
 export function determineGovernmentOutcome(state) {
-  if (state.katsuSettlement !== "accepted") return "";
-  if (state.governmentAcceptance < 62 || state.promiseCredibility < 60 || (state.settlementValidity?.internal_consistency ?? 100) < 60) return "empty_promises";
-  // Katsu has already accepted. Government review cannot retroactively break
-  // off the talk or demand another issue because an unrelated mood score is low.
-  return state.governmentAcceptance >= 76 && state.promiseCredibility >= 76 ? "bloodless" : "fragile_handover";
+  const review = reviewGovernment(state);
+  if (review.status === 'not_submitted') return '';
+  return review.status === 'approved' ? 'bloodless' : 'empty_promises';
+}
+
+export function submitGovernmentReview(state) {
+  const review = reviewGovernment(state);
+  return { ...state, governmentReview: review, governmentReviewHistory: [...(state.governmentReviewHistory || []), review] };
 }
 
 function automaticEnding(state) {

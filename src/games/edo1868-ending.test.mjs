@@ -8,8 +8,9 @@ const discoveries = [{ id: 'note', title: '旧幕臣', text: '勝は幕臣の生
 const agreed = reduceNegotiationEvents({ ...INITIAL_STATE, turns: 4, governmentAcceptance: 90, promiseCredibility: 90 }, [{ type: 'agreement_confirmed', actor: 'katsu', issue_ids: Object.keys(NEGOTIATION_ISSUES), terms, commitment: 'firm' }], { playerText: messages[0].text, katsuText: messages[1].text }).state;
 const settled = evaluateSettlement(agreed, messages);
 assert.equal(settled.settlementResult, 'ACCEPTED');
-const endingId = determineGovernmentOutcome(settled.state);
-const run = createEndingRun({ endingId, state: settled.state, messages, discoveries });
+assert.equal(determineGovernmentOutcome(settled.state), 'empty_promises', 'unstructured old agreements require clarification');
+const endingId = 'bloodless';
+const run = createEndingRun({ endingId, state: settled.state, messages, discoveries, legacy: true });
 assert.equal(run.settlementSnapshot.governmentAccepted, true);
 assert.equal(run.settlementSnapshot.acceptedTerms[0].terms, terms);
 assert.match(run.endingNarrative, /新政府も、その約定を承認した/);
