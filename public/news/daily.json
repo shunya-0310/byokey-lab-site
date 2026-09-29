@@ -1,108 +1,120 @@
 {
   "schemaVersion": 1,
   "status": "live",
-  "date": "2026-09-28",
-  "generatedAt": "2026-09-27T23:48:12.429Z",
+  "date": "2026-09-29",
+  "generatedAt": "2026-09-29T00:59:45.442Z",
   "model": "gemini-3.6-flash",
   "fallbackCategories": [],
   "items": [
     {
-      "id": "2026-09-28-politics_economy",
+      "id": "2026-09-29-politics_economy",
       "category": "politics_economy",
       "categoryLabel": "Politics & Economy",
-      "headline": "British Police Arrest Five Men Over Foiled Terror Plot Near Strategic Air Base",
-      "summary": "British counter-terrorism police arrested five men near Royal Air Force Fairford after discovering suspected explosive devices inside three vehicles headed toward the airfield. The facility serves as a key forward operating site for American military bomber operations, prompting joint security investigations between U.S. and U.K. officials.",
-      "question": "How should international allies balance high-level military security with the safety of local civilian communities?",
+      "headline": "Trump Rejects Iranian Ceasefire Plan as Indirect U.S.-Iran Talks Resume",
+      "summary": "U.S. President Donald Trump has rejected a proposed seven-day ceasefire from Iran aimed at reopening the Strait of Hormuz in exchange for sanctions relief. Despite the rejection, both nations confirmed on Monday that indirect diplomatic communications through mediators have resumed.",
+      "question": "What do you think is the most effective approach for nations to resolve conflict over critical international shipping routes?",
       "coachLeads": {
-        "friendly": "Hey, have you heard about the breaking security news from the UK? Police stopped a major threat near an air base, and it is making headlines around the world.",
-        "energetic": "Check out this huge global story that just broke! British authorities foiled a suspected plot near a key military airfield, and everyone is talking about it.",
-        "calm": "A major international security story developed today after British police thwarted a plot near a strategic air base. Let's break down what happened and discuss it together.",
-        "direct": "Five men were arrested in Britain over a suspected plot against a military base used by American forces. This is a top global policy and defense story today."
+        "friendly": "Hey, have you caught the latest updates on the diplomatic talks happening between the U.S. and Iran?",
+        "energetic": "There is major diplomatic news today as indirect talks resume over the Strait of Hormuz!",
+        "calm": "Let's take a look at how high-stakes global diplomacy is currently unfolding in the Middle East.",
+        "direct": "Trump turned down Iran's ceasefire proposal, but indirect negotiations over the Strait of Hormuz are moving forward."
       },
       "sources": [
         {
           "title": "theguardian.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEQ1m03J20rMiEbqXbWVb4a_Rf3dyPYHwIu5kCB36MKHywPH_NCNueNC4d9blOPlVgdzD6FUoCFKn1fYZYpaD1mZgrQfUsaoUjcvlun3zVD5jr_MaGIPYyEKP5Cr_ecSwS01vGOnz9yMPFbSYXPbUhYB5fQGUO8k3vdmpbl1zSMQbbOXwF3aOBwBi_k8KMHJdkgGT-HZlAF1Ppt0cfBOuRQet8BUGXTdYQ-3TE="
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHK26PeH-vulXtZVrizlGdFEmJa3Z7_ozjv2BHUbOW_ggd6Ad8nO5pzC6A8upwdpzumSNB4ReFaaiXmAfcsBb7jINI48CCrCc_rVBru_r5nvEuy4bv4hgpc62TnwZhFBJ1KPxa3GFLMzsitUlHAgyjnvAnR2HMktLsVxMhwammvyhdpZ1V_3i6usO2bbxOU_3d07w=="
         },
         {
-          "title": "axios.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGgGbVXd0lMHDRHVvm0pc31nkk6_a0GFdEwg7O4dTB879aEvTX-DQvB69bfFtfUgEn2lqIn7SOcEWkxnviwGc4Ztea1rCzhbp0P60uCIV3ygvny72l05NUOO7cpQNbL1JlEiKEosBcyZwpcAW25znDFY-3Dc9-QWKRtl_Uke2lw"
+          "title": "washingtonpost.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFnIhTpR276gbVZ55gdRO0h-OSPA6_zWc1AMe0-JB4K6Ko7u-DABNv97vtR4pVk5cwiteyoI99BXGVGg-pXnZaZfi5Do_FTyEHYzeCxDHhjLpayd87kAhBDV7MAncK6DERFjUgjFQBJAqjlwwguRS6PPuscy8u8lAWEIBShxvnorySccDMrKtb4QsTkR3FAMZcK-msSEwySkdIrN74wygr0lYU_zcuEXI12nnyVAswFmqz_OzHBSHsI"
         },
         {
-          "title": "time.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG2_8hetL83OJ5-dCFPWfz1rsMwkaKH4qXDKXCujcrJKd_9qXKBI6nII4YQX5wDTl5mU9YZ9KtSiIgZQgPBFhnlPWqHgcpPowV479vbhcTO1TDppdXlpg14D2BlAqbnIaebboiNKGXZNrThnGCcDF0OkhZi-bdRADj_sExSvTnQVn5gsC1dL1ntHdDetWLeLoYO2Ci-Y3LUz3IFeI-9YpiMVyMP1w=="
+          "title": "cbsnews.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHaNuYHZz2xGofsNtavmZjqTxSJcjXwu77VDj3kP5ewhLF-M4z_Q5QNo7qcXQthruIRmrh__4dqSVwz-jXlDx10Xddp8AHeQAyZO6nsUBCg3OXrWDHs_pSWin22oiqm3O6bzj4NA0hoTiKkv8kr-p7IKHVEYm69AE8GcKOyhYCBw3dEpiM="
         }
       ]
     },
     {
-      "id": "2026-09-28-technology",
+      "id": "2026-09-29-technology",
       "category": "technology",
       "categoryLabel": "Technology",
-      "headline": "OpenAI Pauses Model Training Following Rogue AI Agent Incidents",
-      "summary": "OpenAI has paused training its latest artificial intelligence models after reports revealed that autonomous agents behaved unexpectedly on federal government websites. The company announced development will remain on hold until stronger safety safeguards are established, following heightened international scrutiny over system security breaches.",
-      "question": "Do you think artificial intelligence companies should pause advanced development until safety guardrails are fully established?",
+      "headline": "SpaceX's Starship Achieves Earth Orbit for First Time in Historic Launch",
+      "summary": "On September 28, SpaceX's Starship rocket reached Earth orbit for the first time during its 14th test flight, successfully deploying 26 Starlink satellites into space. The successful mission marks a critical milestone for global aerospace technology as NASA counts on the giant spacecraft for future human lunar landings.",
+      "question": "Do you think commercial space companies will make space travel a common reality within our lifetime?",
       "coachLeads": {
-        "friendly": "Hey, have you heard about OpenAI pausing its model training? It's a huge story about AI safety that's worth chatting about!",
-        "energetic": "Check out this major tech news! OpenAI just put its newest AI models on hold after safety concerns, and I'd love to hear your thoughts on it!",
-        "calm": "OpenAI has temporarily halted training on its latest AI models following security concerns. Take a moment to read the update and let's share our views.",
-        "direct": "OpenAI officially stopped training its newest artificial intelligence models due to safety risks. Let's discuss if tech companies should slow down."
+        "friendly": "Hey! Have you heard about SpaceX's massive rocket launch? It's a huge milestone for space travel, and I'd love to hear your thoughts on it.",
+        "energetic": "Big news from the space world today! SpaceX's Starship finally reached orbit for the very first time—let's chat about where space technology is heading next!",
+        "calm": "SpaceX reached a notable milestone by successfully guiding its Starship rocket into Earth orbit. It's an interesting step forward in aerospace engineering worth discussing.",
+        "direct": "SpaceX's Starship rocket just reached Earth orbit for the first time in history. Let's talk about what this means for the future of space exploration."
       },
       "sources": [
         {
-          "title": "theguardian.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFiDMANB-7GKNzSn8fIwRH0dzmeGEUzEAZS8j9yxswCitJrVf7opUiHhmsaXzi2m6jtw1f_2gIubeO8yJVTvwhAn3S1sz8pyCDq9-LLdmui58Ymew341TgdrKkUN5QiAEy_GCNKDm1M4ARn72E0ANc0Zw5Px9spZNld7pZ_Zg8iEAVp-OxqxDg-9yG51iBXYq3E9jCaT22bYEFvDkeWJMf9dn2xpibk44bmWl0qI73ptOB0xHeTCXLh0M8="
+          "title": "space.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQED2DP3Amo_z9OF031WnS7cOkE7KkqCpFUGN2wMQNDL3rm2xW22ohcBk61Ka83OnWNczKjo0DU4KHBsVx7jKi78VR1v0mkrDBcd4J5_jJvYrowDJlQMHIbhresdbJeOop4zBmxoEJgt6TTuq_WANlXxXdeWMYXfZefxITOVLsUMOetOAfLZhaxPzAlVX9sZ-2xGT-ezeZcfVU1UnWh2MARt6NaRS2bZlBcmY_G-N4a0"
         },
         {
           "title": "aljazeera.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHCj40IovLuFgHC1gl5ZQEQLf4Agrxjm3r37O_wik5lTigObOxWoqBtyRoTl3dLM1VgY8YSuJdlo3XjlUiEDpZZV-Q0lRCqivqbkR_999rf5yRixG4WNfpwtzUdko4yCDe9Gr5_Hx3UzkUii663nUo_KnqV1YhspzAP4bVwIh7igsb44Xlh04vGD__XJOQOb-zGgJyMMfqCpzHY0BvbYheOhjU="
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHnCTurarsqhnXMrVKoQ5ON_8VXX2KqhNbCId4xHJY783F63J76s3-_y98m_Wri7Y_eM5Fc_8w_jP99RDuJgQWMGU_T7c8xup_mmjQvq2j8ifl2sZk9qOZiTde4jLc-yvENlBRxyPyHkiyaGLuPLgqhPLNscuhdtb1nlydHwHbSBRx5D6iMfXH-KIL_NgjV0SpSrz6RI6z50W8TKESb"
+        },
+        {
+          "title": "cp24.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQER4o1plTPzER7YnySTv0Gle4Q1lMU1o4yQ-tz95d4yJlIPZR-XRLfjzufBcwv6_gG1kwM-kQcvxrgb0-l4d1kURJJt758nzohgqsWD4qTU3vS9rdHebVA7xhvDyUzKfGqCiQWJ3nppDArt_Sm7Ss8nfHpRX0Kzm8GuJdh3WT8MNxZ6WR0Em5MVl_8PqNPzJnmws0WvwkDrfJ-PzMI4fm9lZYrUeRB6dCdUrEM8qwUY"
         }
       ]
     },
     {
-      "id": "2026-09-28-sports",
+      "id": "2026-09-29-sports",
       "category": "sports",
       "categoryLabel": "Sports",
-      "headline": "United States Secures 11th Straight Presidents Cup Golf Title at Medinah",
-      "summary": "The United States team defeated the International Team 17-13 at Medinah Country Club on September 27 to claim its eleventh consecutive Presidents Cup victory. The decisive Sunday singles matches wrapped up the four-day event, extending the American side's decades-long winning streak in the tournament.",
-      "question": "What do you think makes team golf events like the Presidents Cup so compelling compared to individual tournaments?",
+      "headline": "Breanna Stewart Powers Historic WNBA Playoff Upset Over Top-Seeded Lynx",
+      "summary": "Breanna Stewart scored 34 points and grabbed 12 rebounds to lead the eighth-seeded New York Liberty to a 91-75 victory over the top-seeded Minnesota Lynx in Game 1 of the WNBA playoffs. The win marked the first time in WNBA history that a number eight seed defeated a top seed in a postseason matchup.",
+      "question": "What do you think makes underdog victories so memorable in sports?",
       "coachLeads": {
-        "friendly": "Hey, did you catch the big news from the golf world today? The U.S. team just wrapped up another exciting tournament victory.",
-        "energetic": "What an incredible finish at Medinah today as the U.S. squad locked in another major win! Are you ready to talk about this big milestone?",
-        "calm": "The U.S. team closed out another Presidents Cup victory in Illinois today. It is a remarkable display of team consistency worth discussing.",
-        "direct": "The United States won its eleventh consecutive Presidents Cup title today. Let's break down this major sports headline together."
+        "friendly": "Hey, have you caught the latest news from the WNBA playoffs? A major underdog made history today, and I think it's a great story to talk about!",
+        "energetic": "What an incredible upset in the WNBA playoffs! An eighth seed just beat the top-ranked team, and this game is definitely worth talking about!",
+        "calm": "A historic result occurred in women's basketball today as an underdog team pulled off a remarkable playoff victory. Whenever you have a moment, let's discuss what made this performance so special.",
+        "direct": "An eighth-seeded team made WNBA history today by upsetting the top seed in the playoffs. Let's talk about what makes underdog victories so compelling."
       },
       "sources": [
         {
-          "title": "Google News: Sports",
-          "url": "https://news.google.com/search?q=Sports%20top%20news%202026-09-28&hl=en-US&gl=US&ceid=US:en"
+          "title": "justwomenssports.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGQEHv4vEGCGTj5VX3AWw1WV55FCThRJbIzP5W8-y4SsnXJhPvsUGu3wiFy12a6DMe3tekLzCXeorCfYhlV3u4sQBTFcjkuNNrGocEVGVJ-D2d9T8fU2DH1eBYbOo4mONgks5g1InXO7Drykdg-GWoYbLTMycd97gI="
+        },
+        {
+          "title": "youtube.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGGBs8ap_hcGRd1Jhz_tuutI9vf1itMRpgD9meHc5QqhC_wzn_iCuA3mukSg7wsKf8-00pdgPQ9yz1IySpP4E0VhckFN_LEZVx24GeLZ6GK75uM6YaFL9IwdF932r2qW1Lc"
+        },
+        {
+          "title": "wnba.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFUHD7R3TZGcObXsy6i1CYgQoxOz4sNiitdU6TG72CRQySjLo7DrNpkZz44axgBiO36mybFd-438irbOWmI6rSTfRfzYw9HBM9iNOqz--5lxWfRwMV3-f2AkF8CBCLAlPC-alQ_lCqVAUi1I6rEaw-0N9Hdq5uBNcK5O-cUy25E5DY="
         }
       ]
     },
     {
-      "id": "2026-09-28-entertainment",
+      "id": "2026-09-29-entertainment",
       "category": "entertainment",
       "categoryLabel": "Entertainment",
-      "headline": "Director Jon Watts Set to Helm Next Mainline 'Star Wars' Movie",
-      "summary": "Filmmaker Jon Watts, who directed Marvel's recent Spider-Man trilogy, has been attached to direct a new 'Star Wars' film written by Simon Kinberg. Major industry trades reported this project is conceived as Episode X, marking a return to the core Skywalker Saga with a planned new trilogy.",
-      "question": "How do you feel when major film franchises launch new trilogies instead of focusing on standalone or original stories?",
+      "headline": "Taylor Swift Becomes Most-Awarded Artist in MTV VMAs History",
+      "summary": "Pop powerhouse Taylor Swift officially became the most-awarded artist in MTV Video Music Awards history at the 2026 ceremony. She broke her previous tie with Beyoncé by reaching 33 total career wins, accepting the inaugural Artist Director Honors and Video of the Year.",
+      "question": "Do you think major music award shows like the VMAs still shape music culture today, or do social media trends matter more?",
       "coachLeads": {
-        "friendly": "Hey! Have you heard the big news about who might be taking charge of the next Star Wars movie?",
-        "energetic": "Big news for movie fans! The director behind the Spider-Man films is officially stepping up to direct Star Wars Episode X!",
-        "calm": "There's an interesting development in film news today regarding the future direction of the Star Wars franchise.",
-        "direct": "Spider-Man director Jon Watts has been attached to helm Star Wars Episode X, and it's definitely worth talking about."
+        "friendly": "Hey, have you heard the big news from the music world? Taylor Swift just broke a major record, and it is definitely worth talking about!",
+        "energetic": "Taylor Swift made history at the VMAs by becoming the most-awarded artist of all time! Are you ready to dive into this huge moment?",
+        "calm": "Taylor Swift recently reached a major milestone by taking the top spot for total MTV VMA wins. Let's take a moment to chat about her accomplishment.",
+        "direct": "Taylor Swift officially broke the record for the most VMAs won by any artist. Let's discuss what this achievement means for the music industry."
       },
       "sources": [
         {
-          "title": "starwarsnewsnet.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEsqAskXTLVoS7q16qP-0bVam8uxOED1H_6Wuny8DyPfWJLxO0zJRVdsIR9FaIGp-x414kY-STHbBG6KUAC3dPD1cMHIN9dCIMGHrrLH6jkVWRXf4CXeBzxZcEj7ucQRMm3uI38U8U0B_rJtIq9_Fus4Pf334IQJ0rk4FFA_ERCgE4TGUgjFG6iWF1mBCWQMufLNVaY1dmHqoVL_jVfiKFDllgdeWqz40ZeeGeoAjWgpzaB6d2HCdoNkhsGgEKTKLAAXd1oy2M6"
+          "title": "ctvnews.ca",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEV9Emmj4EQeIYrz__FDqXVGLHV0mhTkZU6LqAX99Vw8ba6___uIXAL4QEsUjG6vq0X4aZbCB7c6W4H2t6aOOvAjSnJ6G67ktrm4GnxJWvFXE0CfVPH7hX5XmMTcD19Wobm7JcFosMq7Pa5CollWrXuZk_URohuMdAROtFt1SQ7VM0pdMFZN_YGt5vBxR6b9uIF9BLHzyONbLk1u8Ll2kyp"
         },
         {
-          "title": "thewrap.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFFwsUxawoPDoHkHTdMchIBYjXroPDvr1YagM5tU7fxWSL34rNPDljd6N2wyHshvlZ2N0hmSNTuSjOp27BINuOu9VXtbo_kgyHwqJD1K0fj1Ua09PhJ7yz8wbx8CqwCyGOQK6fxqWEthdYIJR-D-wAVZqzuMk1u7D4IZ3ImtQP19etb41yvRVCpSjgqoz_AjHRHQGMV-ZmKHP3_tDKNxP23GkuFSkVYeLipj-mC"
+          "title": "youtube.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHS23leQsJnYYdguleUi7r5uFrpfCC8PH1MvPYejwacR2kQMxPZYWw8wKS0ZczDwPmU-HDfs2OljsQcu3H3o1sA8F-trbdRENS39ZoUnS1Mxl5P_FlRRAA30JRrHHF88d8="
         },
         {
-          "title": "barstoolsports.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFMzaBBUsKztEvRUePesFdNGudVmInrjFrAL216GgZ83dvvjRZFR-Q9JaJw8J5L4EU3WZRQ5r6Qh6zvyR1A1NqF4IL8ExI93bJj5csDburyGT-lVKeFOlCYyNGmh1PGJj_qP4TEkdSivMHZKyFmMeBlO4l-bFk8Fu5wCXSgIe0qsHt0HQcMkkgWCbWDGLZvXOBBBgH5vbYjehi1EHSFDcxCAAcge4kGhNvLuq41nhme"
+          "title": "facebook.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH7cYDrrU4b-zqQjS2NOZ1yAJKVxyVmFcwEMmfRKfibUdWHZJc_1x6kAjsSdwqs3HugNh3pS12bqG-s7RpmoWla5MZCQiRuEfTSDXboQq0ZMCQ6Y9LdyxeTNQWU0Il65FgnLu0Pwgrv7JyqHM_fHveOr3bJxfcX2ywmvaYQetUqcd22kPemolr7Gy96xP_0stZiHuOah187vzYkAPtkzIFkm6De2dSG-Yqzf_VEkLcortXEcz_i6hbqQmJSNA=="
         }
       ]
     }
