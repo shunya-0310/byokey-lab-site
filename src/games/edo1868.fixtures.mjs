@@ -45,3 +45,10 @@ export const prudentClauses=[
  clause('城の引渡しまでは勝が市中の治安を維持し、その後は新政府が責任を引き継ぐ。新政府軍による無断の市中立入りを禁じ、警備・消防を引き継ぐ。',{order:'transition',civilians:'protected'},['public_order','civilian_safety','peaceful_transition']),
  clause('これらの準備を進めるため翌日の総攻撃を猶予する。朝廷の裁可が必要な事項は独断で確約せず責任を持って上申する。',{authority:'submit_for_approval'},['peaceful_transition']),
 ].map(c=>({...c,funding:'unknown',approval_authority:c.facts.some(f=>f.dimension==='authority')?'submit_for_approval':'unknown',duration:'unknown'}));
+
+// September 30 account: capped duration/support, joint fleet oversight, explicit cancellation.
+export const feasiblePeaceClauses=structuredClone(prudentClauses);
+feasiblePeaceClauses[2]=clause('生活に窮する恭順した旧幕臣に、半年の期限付き生活支援を行う。禄全額は保証しない。',{stipend:'bounded_support',support_duration:'bounded'},['retainers']);
+feasiblePeaceClauses.push(clause('引渡しまで新政府の立会人を加えて軍艦を共同監督する。',{fleet_oversight:'joint'},['warships']));
+feasiblePeaceClauses.push(clause('この約定が守られることを前提に、明日の江戸総攻撃は中止する。',{assault:'cancelled'},['peaceful_transition']));
+export const fragilePeaceClauses=structuredClone(feasiblePeaceClauses).filter(c=>!c.facts.some(f=>f.dimension==='fleet_oversight'));

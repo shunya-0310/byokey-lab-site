@@ -764,7 +764,7 @@ export function evaluateSettlement(state, messages = []) {
 export function determineGovernmentOutcome(state) {
   const review = state.governmentReview || reviewGovernment(state);
   if (review.status === 'not_submitted') return '';
-  return review.status === 'approved' ? 'bloodless' : 'empty_promises';
+  return review.status === 'approved' ? (review.outcome || 'bloodless') : 'empty_promises';
 }
 
 export function submitGovernmentReview(state) {
@@ -797,7 +797,7 @@ export const ENDINGS = {
   bloodless: { title: "江戸無血開城", text: "翌朝、新政府軍は進軍を止めた。約定はまだ始まりにすぎない。それでも、双方が引き受ける条件は言葉になった。" },
   alternative_peace: { title: "歴史にない和平", text: "勝海舟との約定を新政府も承認した。総攻撃の命令は取り下げられ、軍勢は江戸への進撃を止めた。双方は約した手順で城を受け取る準備を始める。あなたは、双方が引き受ける和平を結んだ。" },
   empty_promises: { title: "空手形", text: "勝は席を立たなかった。だが、会談の外で約定は支えを失った。あなたの言葉は、明日の軍を止める力にはならなかった。" },
-  fragile_handover: { title: "不安定な引渡し", text: "城門は開いた。しかし、明日からの秩序まで引き受ける言葉は足りなかった。勝敗は決しても、火種は消えていない。" },
+  fragile_handover: { title: "薄氷の和平", text: "城門は開いた。しかし、明日からの秩序まで引き受ける言葉は足りなかった。勝敗は決しても、火種は消えていない。" },
   unfinished: { title: "決着を急いだ夜", text: "勝は、まだ答えを出さなかった。明日の軍勢を前に、あなたは会談を切り上げた。残された沈黙が、翌朝の判断を重くする。" },
   breakdown: { title: "交渉決裂", text: "言葉は交わされたが、同じ明日を見てはいなかった。翌朝、新政府軍は予定どおり江戸へ進んだ。" },
   assault: { title: "江戸総攻撃", text: "会談は終わり、軍勢は動いた。だが、そこで待っていたのは、ただ敗北を待つ者たちではなかった。" },

@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import { GAME_ROOT, REVIEW_PATH, ENDING_PATH, createEndingRun, restoreCompletedRun } from "./games/edo1868-ending.js";
+import { GAME_ROOT, REVIEW_PATH, ENDING_PATH, createEndingRun, restoreCompletedRun, describeAgreedTerms } from "./games/edo1868-ending.js";
 import { governmentMessage } from "./games/edo1868-clauses.js";
 import byokeyLabLogo from "./assets/byokey-lab-logo.png";
 import { articleCatalog, getArticle } from "./articles.js";
@@ -714,6 +714,7 @@ function Edo1868Page({ onNavigate, path }) {
     <article>
       <header><p>三月十四日、その夜の言葉</p><h1 tabIndex={-1}>今夜の交渉記録</h1><p>あなたと勝海舟が交わした言葉を振り返る。</p></header>
       <section><h2>今回の結末</h2><h3>{completedRun.endingTitle}</h3><p>{completedRun.summary || completedRun.outcomeLine}</p></section>
+      <section><h2>会談で交わした約定</h2><p>ここに記すのは約束の内容です。履行済みを意味するものではありません。</p><div className="edo-note-list">{describeAgreedTerms(completedRun.settlementSnapshot).map((terms,index)=><article key={index}><p style={{whiteSpace:"pre-wrap"}}>{terms}</p></article>)}</div></section>
       <section><h2>交渉ノート</h2><div className="edo-note-list">{completedRun.discoveredInformation.map((item, index) => <article key={`${item.id}-${index}`}><h3>{item.title}</h3><p>{item.text}</p></article>)}</div></section>
       <section><h2>会話履歴</h2><button type="button" onClick={() => setAllHistoryOpen((value) => !value)}>{allHistoryOpen ? "すべて閉じる" : "すべて展開"}</button><div className="edo-review-history">{completedRun.conversationHistory.map((message, index) => <details key={`${index}-${allHistoryOpen}`} open={allHistoryOpen}><summary>{index + 1}. {message.role === "katsu" ? "勝海舟" : message.role === "government" ? "新政府" : "西郷隆盛（あなた）"}</summary><p>{message.text}</p></details>)}</div></section>
       {saveWarning && <p role="status">{saveWarning}</p>}

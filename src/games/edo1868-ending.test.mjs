@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import { ENDINGS, INITIAL_STATE, NEGOTIATION_ISSUES, reduceNegotiationEvents, evaluateSettlement, determineGovernmentOutcome } from './edo1868.js';
-import { createEndingRun, createSettlementSnapshot, restoreCompletedRun } from './edo1868-ending.js';
+import { createEndingRun, createSettlementSnapshot, restoreCompletedRun, describeAgreedTerms } from './edo1868-ending.js';
 
 const terms = '新政府の承認後に城を段階的に明け渡す。武器・軍艦の管理と移管、徳川家の存続と慶喜の助命、恭順した旧幕臣の再出発、海軍関係者の技術活用、市中の治安維持、双方の連絡役による衝突防止を約する。';
 const messages = [{ role: 'saigo', text: terms }, { role: 'katsu', text: 'その条件で書面に記そう。' }];
@@ -15,8 +15,9 @@ assert.equal(run.settlementSnapshot.governmentAccepted, true);
 assert.equal(run.settlementSnapshot.acceptedTerms[0].terms, terms);
 assert.match(run.endingNarrative, /新政府も、その約定を承認した/);
 assert.match(run.endingNarrative, /総攻撃の命令は取り下げられた/);
-assert.match(run.endingNarrative, /残る約束は、それぞれの時期や条件に従って/);
-assert.ok(run.endingNarrative.includes(`「${terms}」`));
+assert.match(run.endingNarrative, /残る約束は、約した時期と条件に従って/);
+assert.ok(!run.endingNarrative.includes(terms));
+assert.ok(describeAgreedTerms(run.settlementSnapshot).includes(terms));
 assert.doesNotMatch(run.endingNarrative, /履行された|武装解除された|雇用された|反実仮想|史実/);
 assert.ok(Object.isFrozen(run.settlementSnapshot.acceptedTerms[0]));
 const before = JSON.stringify(run);
@@ -91,3 +92,29 @@ for(const [clauses,ending] of [[peaceClauses,'bloodless'],[overpromiseClauses,'e
  }
 }
 console.log('One-shot NOT_READY, approval, rejection and saved-review privacy tests passed');
+
+import {feasiblePeaceClauses,fragilePeaceClauses,clause} from './edo1868.fixtures.mjs';
+for(const [clauses,expected] of [[feasiblePeaceClauses,'bloodless'],[fragilePeaceClauses,'fragile_handover'],[[...overpromiseClauses,clause('総攻撃を中止する。',{assault:'cancelled'},['peaceful_transition'])],'empty_promises']]){
+ const accepted=agreedState(clauses);
+ const reviewed=submitGovernmentReview(accepted);
+ assert.equal(determineGovernmentOutcome(reviewed),expected);
+ assert.equal(canContinueNegotiation(reviewed),false);
+ const record=createEndingRun({endingId:expected,state:reviewed,messages:[],discoveries:[]});
+ assert.ok(record.settlementSnapshot.acceptedTerms.some(t=>t.facts.some(f=>f.dimension==='assault'&&f.value==='cancelled')));
+ assert.equal(describeAgreedTerms(record.settlementSnapshot).length,clauses.length);
+ for(const c of clauses)assert.ok(!record.endingNarrative.includes(c.text),'ending does not list clauses');
+ assert.doesNotMatch(record.endingNarrative,/約定がない|不足|修正|fleet_|財源を|登用された|存続が決まった/);
+ if(expected==='empty_promises')assert.match(record.endingNarrative,/中止の約束も.*発効しなかった/);
+ else assert.match(record.endingNarrative,/総攻撃の命令は取り下げられた/);
+ if(expected==='fragile_handover'){
+  const restored=restoreCompletedRun({...record,endingTitle:'不安定な引渡し'});
+  assert.equal(restored.endingTitle,'薄氷の和平');
+  assert.equal(restored.id,record.id);
+ }
+}
+// Explicit military threats cannot be rescued as fragile peace.
+for(const extra of [clause('移管後も勝が軍艦を指揮する。',{fleet_command:'katsu'},['warships']),clause('約定履行後も総攻撃を行う。',{assault:'continued'},['peaceful_transition'])]){
+ if(extra.facts[0].dimension==='fleet_command')extra.facts[0].phase='final';
+ assert.equal(determineGovernmentOutcome(submitGovernmentReview(agreedState([...feasiblePeaceClauses,extra]))),'empty_promises');
+}
+console.log('Three outcomes, assault promise, narrative/review separation and old title migration passed');

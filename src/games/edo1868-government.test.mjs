@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import { clause, peaceClauses, agreedState, approvedState } from './edo1868.fixtures.mjs';
 import { activeClauses, agreementVersion, reviewGovernment } from './edo1868-clauses.js';
 import { reduceNegotiationEvents as reduceOpenNegotiation, evaluateSettlement, submitGovernmentReview, determineGovernmentOutcome } from './edo1868.js';
-import { createEndingRun } from './edo1868-ending.js';
+import { createEndingRun, describeAgreedTerms } from './edo1868-ending.js';
 // Clause-editing fixtures exercise ordinary dialogue before final acceptance.
 // Government checks below then ask Katsu to settle the resulting clauses.
 function reduceNegotiationEvents(state, events, context) {
@@ -75,7 +75,7 @@ phases[3].facts.forEach(f=>f.phase='interim');
 phases[3].facts.push({dimension:'fleet_command',value:'government',phase:'final',quote:phases[3].text});
 assert.equal(reviewGovernment(agreedState(phases)).status,'approved','future government command does not contradict interim Katsu command');
 phases[3].facts=phases[3].facts.filter(f=>f.dimension!=='fleet_command'||f.phase==='final');
-assert.ok(reviewGovernment(agreedState(phases)).findings.some(f=>f.code==='fleet_control'),'future command alone cannot establish interim command');
+assert.equal(reviewGovernment(agreedState(phases)).status,'approved','joint oversight, custody and use restriction establish interim control without naming a commander');
 const stale=createEndingRun({endingId:'bloodless',state:{...modification.state,governmentReview:peace.governmentReview},messages:[],discoveries:[]});
 assert.equal(stale.settlementSnapshot.governmentAccepted,false,'old approval cannot authorize a changed agreement');
 assert.ok(Object.isFrozen(peace.governmentReview.snapshot.clauses));
@@ -153,8 +153,8 @@ assert.equal(withdrawnClause.state.issues.yoshinobu,'agreed');
 assert.equal(withdrawnClause.state.issues.warships,'unresolved');
 console.log('Clause withdrawal preserves the rest of a signed package');
 const inheritedRun=createEndingRun({endingId:'bloodless',state:submitGovernmentReview(fleetPatched.state),messages:[],discoveries:[]});
-assert.ok(inheritedRun.endingNarrative.includes('変更しない軍艦の指揮'));
-assert.ok(inheritedRun.endingNarrative.includes('一覧確認後に新政府へ順次移管'));
+assert.ok(describeAgreedTerms(inheritedRun.settlementSnapshot).join('\n').includes('変更しない軍艦の指揮'));
+assert.ok(describeAgreedTerms(inheritedRun.settlementSnapshot).join('\n').includes('一覧確認後に新政府へ順次移管'));
 assert.ok(!inheritedRun.endingNarrative.includes('fleet_command'));
 console.log('Inherited promise details remain readable without internal dimension names');
 const combined=structuredClone(peaceClauses);
