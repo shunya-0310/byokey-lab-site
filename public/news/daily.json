@@ -1,120 +1,112 @@
 {
   "schemaVersion": 1,
   "status": "live",
-  "date": "2026-09-29",
-  "generatedAt": "2026-09-29T00:59:45.442Z",
+  "date": "2026-09-30",
+  "generatedAt": "2026-09-30T00:27:48.417Z",
   "model": "gemini-3.6-flash",
   "fallbackCategories": [],
   "items": [
     {
-      "id": "2026-09-29-politics_economy",
+      "id": "2026-09-30-politics_economy",
       "category": "politics_economy",
       "categoryLabel": "Politics & Economy",
-      "headline": "Trump Rejects Iranian Ceasefire Plan as Indirect U.S.-Iran Talks Resume",
-      "summary": "U.S. President Donald Trump has rejected a proposed seven-day ceasefire from Iran aimed at reopening the Strait of Hormuz in exchange for sanctions relief. Despite the rejection, both nations confirmed on Monday that indirect diplomatic communications through mediators have resumed.",
-      "question": "What do you think is the most effective approach for nations to resolve conflict over critical international shipping routes?",
+      "headline": "Iranian Rial Plunges to Record Low as U.S. Tightens Sanctions and Diplomatic Push Continues",
+      "summary": "On Tuesday, Iran's currency dropped to a historic low of over 2.5 million rials per U.S. dollar amid mounting regional tensions and severe economic pressure. The sharp devaluation coincided with new U.S. Treasury sanctions targeting Iranian military supply networks, even as international mediators attempt to broker diplomatic negotiations between Washington and Tehran.",
+      "question": "How do you think severe economic pressure influences a country's willingness to negotiate during international conflicts?",
       "coachLeads": {
-        "friendly": "Hey, have you caught the latest updates on the diplomatic talks happening between the U.S. and Iran?",
-        "energetic": "There is major diplomatic news today as indirect talks resume over the Strait of Hormuz!",
-        "calm": "Let's take a look at how high-stakes global diplomacy is currently unfolding in the Middle East.",
-        "direct": "Trump turned down Iran's ceasefire proposal, but indirect negotiations over the Strait of Hormuz are moving forward."
+        "friendly": "Hey, have you checked out the latest world news today? It's a fascinating story about how global markets and diplomatic negotiations interact.",
+        "energetic": "Check this out! Big economic shifts and new diplomatic moves are making front-page headlines today, and it's definitely worth talking about.",
+        "calm": "Whenever you have a moment, take a look at this recent story. It gives a really clear picture of how market forces are impacting international politics.",
+        "direct": "Here is today's main diplomatic and economic story. It focuses on how new sanctions and currency declines are shaping global talks."
+      },
+      "sources": [
+        {
+          "title": "pbs.org",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE10MMgdxKIYKKfQjINxudPZKUix_juk-BGDzOjznnWJBRXpOfkrdPX4uOQn7N6Mz9SA__N3KqybAw5FSg3ro1TwRRUPvZ8sNfxc0txW07DlBe_Skrrx1hMDz115i3LWLGIu7hlPgbzuilQrh7vIM2tmuj7VMSscvzGkdzqHH96mgztOSeMl42c-vI9ilvZzUagvVIQXTlen1uUpuUWvGnRCtlKPF7rOldfbBs="
+        },
+        {
+          "title": "the-independent.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHUzSLdM8nGHaxT-0upd8ybQ3EIpZHj7FXOYSf38KKkMLeZ2nByRTykUWaBHrK8DBcvshTUMYbU9CGdW_1Pa8Q31i0T4RDeEaq8lVGEPRk8tYutsjih0U4U3jMM4mK1LWSoD1zPnhgxuFlq83r44wyiwQJa-u4Cv49bf7k6RWREOFVJ28FhsJrqHfemCy8ty3VFx_X9bt-etKpG5Wk="
+        }
+      ]
+    },
+    {
+      "id": "2026-09-30-technology",
+      "category": "technology",
+      "categoryLabel": "Technology",
+      "headline": "White House and Top Tech Executives Sign Voluntary AI Safety Accord",
+      "summary": "On September 29, 2026, U.S. President Donald Trump hosted executives from major technology companies—including Google, Meta, Nvidia, and OpenAI—at the White House to sign a voluntary AI safety agreement. The accord establishes shared principles and internal safeguards for developing advanced artificial intelligence amid growing global debates over tech regulation.",
+      "question": "Do you think voluntary pledges from tech companies are enough to keep AI safe, or should governments enforce mandatory laws?",
+      "coachLeads": {
+        "friendly": "Hey! Did you hear that top tech CEOs just met at the White House to sign a new AI safety pledge?",
+        "energetic": "Big news in tech today! Major AI leaders and the White House just agreed on new safety guidelines for artificial intelligence!",
+        "calm": "The White House and key tech executives have agreed on a set of voluntary AI safety principles. It's an important moment in tech policy worth reflecting on.",
+        "direct": "Top AI companies just signed a voluntary safety agreement with the White House. Let's discuss what self-regulation means for the future of tech."
+      },
+      "sources": [
+        {
+          "title": "cbsnews.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGYMdKwYLk1ZHejgGhYgIt0c_Ajj5RiANo5qeLQjTFlQ96-wa2PVc09oulLMEP6p5zdQCRNaXxDIghXNnfZ6NbvfBM9WW00u0WIOJpf_dsnTJQoYXXUU6Nh2bwNGFI5itwtmeLjwlZbuEJSG-p24_TUQUwJGAFu2bJAWjal3dxMosjj-HXukz70iYI0TWrOPZRm1sHd9OC9Dw=="
+        },
+        {
+          "title": "pbs.org",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEE7FLjuMvaZKll1DMHpBgftxz0hBtyFLqqvHx4ZdGSaQz-6bo7A1VZHJlNBSnAcpebkFI3CqrlSslH2XjshAUx6uaYPPn2H91mKbtuuvewT0qr_zUZS5nFdtmyml-myar-2lBz9T-ycg4tmADOqYp6Pi_UzzyiV2Ok3CM_TdAsHq7KeMDwV1FZlkpWpTkg-iyv7geCyXUXpkp1"
+        }
+      ]
+    },
+    {
+      "id": "2026-09-30-sports",
+      "category": "sports",
+      "categoryLabel": "Sports",
+      "headline": "U.S. Senate Passes Landmark Protect College Sports Act",
+      "summary": "The United States Senate passed the landmark Protect College Sports Act by a bipartisan 77-22 vote, establishing a historic federal framework for college athlete compensation and transfer policies. This sweeping legislation now moves to the House of Representatives as Congress attempts to standardize rules across collegiate athletics.",
+      "question": "Do you think university athletes should receive financial compensation and brand sponsorship deals while competing in college sports?",
+      "coachLeads": {
+        "friendly": "Hey, check this out—the U.S. Senate just passed a major bill changing how college sports work!",
+        "energetic": "Huge news in the sports world today as lawmakers just passed historic legislation to reshape college athletics!",
+        "calm": "A major college sports bill just passed the U.S. Senate, bringing unified national rules to athlete compensation.",
+        "direct": "The U.S. Senate voted 77-22 to pass the landmark Protect College Sports Act."
       },
       "sources": [
         {
           "title": "theguardian.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHK26PeH-vulXtZVrizlGdFEmJa3Z7_ozjv2BHUbOW_ggd6Ad8nO5pzC6A8upwdpzumSNB4ReFaaiXmAfcsBb7jINI48CCrCc_rVBru_r5nvEuy4bv4hgpc62TnwZhFBJ1KPxa3GFLMzsitUlHAgyjnvAnR2HMktLsVxMhwammvyhdpZ1V_3i6usO2bbxOU_3d07w=="
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHUGEbVzJv6pCcro3OYOnwINlASqB1bMzbCofUnnZYFpwlxADe1ZxivFAyzvmW6XkGM6Q8gVXPLcXXDDY5OeLioy4Hur37DP-_w3IZJ5CFnq9UiQ2AKv0CEb7qvPyto8-p6j694fLXU9iGfVbWo3P76IrvCe8dxImB_aXZ9KcIzxpD9nCxIua65LVJ-GRz6VtW1IrOOkKcSLzS0N0B2RfwlV3-jot1w9QwdB6SCZl8="
         },
         {
           "title": "washingtonpost.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFnIhTpR276gbVZ55gdRO0h-OSPA6_zWc1AMe0-JB4K6Ko7u-DABNv97vtR4pVk5cwiteyoI99BXGVGg-pXnZaZfi5Do_FTyEHYzeCxDHhjLpayd87kAhBDV7MAncK6DERFjUgjFQBJAqjlwwguRS6PPuscy8u8lAWEIBShxvnorySccDMrKtb4QsTkR3FAMZcK-msSEwySkdIrN74wygr0lYU_zcuEXI12nnyVAswFmqz_OzHBSHsI"
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHCFo5qK0DImnSxmd7jGInQsMj1W2YZ9n-oHVIYAOhuLIB-Bkc5sPWN6NCNExjVKlTH9snzRCzokyQ307CpGL1bRhF8XhbkE1_dDtaXi_TpClbDYP7bImtSfy8uQklUw1EuzaHXD1X1fRSnREE7myU5DdNoIEKNQYGNROOVUNN2E4MjboP1QxsHs_Vn13lD-HlxdDVw_ocQPYb4S09seMVBoc7wVMOMhPoFobNT8Q=="
         },
         {
-          "title": "cbsnews.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHaNuYHZz2xGofsNtavmZjqTxSJcjXwu77VDj3kP5ewhLF-M4z_Q5QNo7qcXQthruIRmrh__4dqSVwz-jXlDx10Xddp8AHeQAyZO6nsUBCg3OXrWDHs_pSWin22oiqm3O6bzj4NA0hoTiKkv8kr-p7IKHVEYm69AE8GcKOyhYCBw3dEpiM="
+          "title": "senate.gov",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFeAWeh_kBE_QEq_LWhL2ACI2FUL5zIqxptty1BWUzXzzY3AYxoXvKG26t0W_2p82EiyPymTAm9-qyO95DaEsf-d5DTShiMA_A-CsKmYH9HW8e-HgBgt3pgp5FSI3CqRQ4tV4Hcc7jjBrx9CpS8GTUhRrPy_WN50NA-oaEW5afZhRmN-9JPyHFPjQVApIOHcH78HkGfrDAu"
         }
       ]
     },
     {
-      "id": "2026-09-29-technology",
-      "category": "technology",
-      "categoryLabel": "Technology",
-      "headline": "SpaceX's Starship Achieves Earth Orbit for First Time in Historic Launch",
-      "summary": "On September 28, SpaceX's Starship rocket reached Earth orbit for the first time during its 14th test flight, successfully deploying 26 Starlink satellites into space. The successful mission marks a critical milestone for global aerospace technology as NASA counts on the giant spacecraft for future human lunar landings.",
-      "question": "Do you think commercial space companies will make space travel a common reality within our lifetime?",
-      "coachLeads": {
-        "friendly": "Hey! Have you heard about SpaceX's massive rocket launch? It's a huge milestone for space travel, and I'd love to hear your thoughts on it.",
-        "energetic": "Big news from the space world today! SpaceX's Starship finally reached orbit for the very first time—let's chat about where space technology is heading next!",
-        "calm": "SpaceX reached a notable milestone by successfully guiding its Starship rocket into Earth orbit. It's an interesting step forward in aerospace engineering worth discussing.",
-        "direct": "SpaceX's Starship rocket just reached Earth orbit for the first time in history. Let's talk about what this means for the future of space exploration."
-      },
-      "sources": [
-        {
-          "title": "space.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQED2DP3Amo_z9OF031WnS7cOkE7KkqCpFUGN2wMQNDL3rm2xW22ohcBk61Ka83OnWNczKjo0DU4KHBsVx7jKi78VR1v0mkrDBcd4J5_jJvYrowDJlQMHIbhresdbJeOop4zBmxoEJgt6TTuq_WANlXxXdeWMYXfZefxITOVLsUMOetOAfLZhaxPzAlVX9sZ-2xGT-ezeZcfVU1UnWh2MARt6NaRS2bZlBcmY_G-N4a0"
-        },
-        {
-          "title": "aljazeera.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHnCTurarsqhnXMrVKoQ5ON_8VXX2KqhNbCId4xHJY783F63J76s3-_y98m_Wri7Y_eM5Fc_8w_jP99RDuJgQWMGU_T7c8xup_mmjQvq2j8ifl2sZk9qOZiTde4jLc-yvENlBRxyPyHkiyaGLuPLgqhPLNscuhdtb1nlydHwHbSBRx5D6iMfXH-KIL_NgjV0SpSrz6RI6z50W8TKESb"
-        },
-        {
-          "title": "cp24.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQER4o1plTPzER7YnySTv0Gle4Q1lMU1o4yQ-tz95d4yJlIPZR-XRLfjzufBcwv6_gG1kwM-kQcvxrgb0-l4d1kURJJt758nzohgqsWD4qTU3vS9rdHebVA7xhvDyUzKfGqCiQWJ3nppDArt_Sm7Ss8nfHpRX0Kzm8GuJdh3WT8MNxZ6WR0Em5MVl_8PqNPzJnmws0WvwkDrfJ-PzMI4fm9lZYrUeRB6dCdUrEM8qwUY"
-        }
-      ]
-    },
-    {
-      "id": "2026-09-29-sports",
-      "category": "sports",
-      "categoryLabel": "Sports",
-      "headline": "Breanna Stewart Powers Historic WNBA Playoff Upset Over Top-Seeded Lynx",
-      "summary": "Breanna Stewart scored 34 points and grabbed 12 rebounds to lead the eighth-seeded New York Liberty to a 91-75 victory over the top-seeded Minnesota Lynx in Game 1 of the WNBA playoffs. The win marked the first time in WNBA history that a number eight seed defeated a top seed in a postseason matchup.",
-      "question": "What do you think makes underdog victories so memorable in sports?",
-      "coachLeads": {
-        "friendly": "Hey, have you caught the latest news from the WNBA playoffs? A major underdog made history today, and I think it's a great story to talk about!",
-        "energetic": "What an incredible upset in the WNBA playoffs! An eighth seed just beat the top-ranked team, and this game is definitely worth talking about!",
-        "calm": "A historic result occurred in women's basketball today as an underdog team pulled off a remarkable playoff victory. Whenever you have a moment, let's discuss what made this performance so special.",
-        "direct": "An eighth-seeded team made WNBA history today by upsetting the top seed in the playoffs. Let's talk about what makes underdog victories so compelling."
-      },
-      "sources": [
-        {
-          "title": "justwomenssports.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGQEHv4vEGCGTj5VX3AWw1WV55FCThRJbIzP5W8-y4SsnXJhPvsUGu3wiFy12a6DMe3tekLzCXeorCfYhlV3u4sQBTFcjkuNNrGocEVGVJ-D2d9T8fU2DH1eBYbOo4mONgks5g1InXO7Drykdg-GWoYbLTMycd97gI="
-        },
-        {
-          "title": "youtube.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGGBs8ap_hcGRd1Jhz_tuutI9vf1itMRpgD9meHc5QqhC_wzn_iCuA3mukSg7wsKf8-00pdgPQ9yz1IySpP4E0VhckFN_LEZVx24GeLZ6GK75uM6YaFL9IwdF932r2qW1Lc"
-        },
-        {
-          "title": "wnba.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFUHD7R3TZGcObXsy6i1CYgQoxOz4sNiitdU6TG72CRQySjLo7DrNpkZz44axgBiO36mybFd-438irbOWmI6rSTfRfzYw9HBM9iNOqz--5lxWfRwMV3-f2AkF8CBCLAlPC-alQ_lCqVAUi1I6rEaw-0N9Hdq5uBNcK5O-cUy25E5DY="
-        }
-      ]
-    },
-    {
-      "id": "2026-09-29-entertainment",
+      "id": "2026-09-30-entertainment",
       "category": "entertainment",
       "categoryLabel": "Entertainment",
-      "headline": "Taylor Swift Becomes Most-Awarded Artist in MTV VMAs History",
-      "summary": "Pop powerhouse Taylor Swift officially became the most-awarded artist in MTV Video Music Awards history at the 2026 ceremony. She broke her previous tie with Beyoncé by reaching 33 total career wins, accepting the inaugural Artist Director Honors and Video of the Year.",
-      "question": "Do you think major music award shows like the VMAs still shape music culture today, or do social media trends matter more?",
+      "headline": "Warner Bros. Schedules 'Game of Thrones: Aegon's Conquest' Movie for June 2029",
+      "summary": "Warner Bros. has officially scheduled 'Game of Thrones: Aegon's Conquest' for a theatrical release on June 1, 2029. Directed by Owen Harris from a screenplay by Beau Willimon, the project marks the iconic fantasy franchise's first feature film.",
+      "question": "How do you feel about watching a 'Game of Thrones' story in a movie theater rather than as a television series?",
       "coachLeads": {
-        "friendly": "Hey, have you heard the big news from the music world? Taylor Swift just broke a major record, and it is definitely worth talking about!",
-        "energetic": "Taylor Swift made history at the VMAs by becoming the most-awarded artist of all time! Are you ready to dive into this huge moment?",
-        "calm": "Taylor Swift recently reached a major milestone by taking the top spot for total MTV VMA wins. Let's take a moment to chat about her accomplishment.",
-        "direct": "Taylor Swift officially broke the record for the most VMAs won by any artist. Let's discuss what this achievement means for the music industry."
+        "friendly": "Hey, have you heard the huge news for 'Game of Thrones' fans?",
+        "energetic": "Westeros is officially coming to the big screen with a massive movie announcement!",
+        "calm": "Warner Bros. has announced its first 'Game of Thrones' feature film, set to hit theaters in June 2029.",
+        "direct": "The first 'Game of Thrones' movie now has an official director and release date."
       },
       "sources": [
         {
-          "title": "ctvnews.ca",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEV9Emmj4EQeIYrz__FDqXVGLHV0mhTkZU6LqAX99Vw8ba6___uIXAL4QEsUjG6vq0X4aZbCB7c6W4H2t6aOOvAjSnJ6G67ktrm4GnxJWvFXE0CfVPH7hX5XmMTcD19Wobm7JcFosMq7Pa5CollWrXuZk_URohuMdAROtFt1SQ7VM0pdMFZN_YGt5vBxR6b9uIF9BLHzyONbLk1u8Ll2kyp"
+          "title": "latimes.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEt1PwQbSxP61o0saPPxy5obW8FYXCL2fSYP_68Lmnfb5xsUEGRxaN_KLpvflEx-NEpBBnLm8HHQ8HGOa55xjBVPkbpNP4AH_cbaksH0J-v6ZUSD3wamvERHmVGOn2J9G5ToICKVBnlMm4WwP0vA0pxmTuIi0WcEtJNgVGQsUWcyRgvn-KZshyxvlS_nE73e07M33j563I86R1RCPTl2BZkHxQMgAbPQcRA"
         },
         {
-          "title": "youtube.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHS23leQsJnYYdguleUi7r5uFrpfCC8PH1MvPYejwacR2kQMxPZYWw8wKS0ZczDwPmU-HDfs2OljsQcu3H3o1sA8F-trbdRENS39ZoUnS1Mxl5P_FlRRAA30JRrHHF88d8="
+          "title": "ign.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH4jH4WjtRecVVauVty2g7zKnzTGD0Ea668eiDUl5pS8mVdeUZH6IvLpQpiR5zpGgYREFMN9wR05LFgP2YXY0kZunmNa49yTRHTsabOXSvxr1YZgr4Q3sQp60ouqHq-UaFCfQaKwhQmSfHR7NXIqjDu-gVRTeqvRfPBFIHSbiJMryopMzkyCe_89AfBiLw="
         },
         {
-          "title": "facebook.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH7cYDrrU4b-zqQjS2NOZ1yAJKVxyVmFcwEMmfRKfibUdWHZJc_1x6kAjsSdwqs3HugNh3pS12bqG-s7RpmoWla5MZCQiRuEfTSDXboQq0ZMCQ6Y9LdyxeTNQWU0Il65FgnLu0Pwgrv7JyqHM_fHveOr3bJxfcX2ywmvaYQetUqcd22kPemolr7Gy96xP_0stZiHuOah187vzYkAPtkzIFkm6De2dSG-Yqzf_VEkLcortXEcz_i6hbqQmJSNA=="
+          "title": "worldofreel.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHJSZYEhQKIVbOAkNyIDIhJuxu_nhTiB8A_VjGij2jG9y7QqjK83TW6wP2E1X_XZsNqseYMH_3iQbLQ6JweSJt2G3icfj_qbXMNmj9qXsY6wOt6CMhqosbyps3FfCv3z3PJQNVV3ggdSB-ekb5z9x1Rl0Y_dNwmpZ4nW4o5tFqXddYwbBuk5vd-i2Jp6diftXzlpxNEmwi8POUSl9cHnY1GuXC-EXK3sW5UrBFC6GluSTVncnQJcqfM"
         }
       ]
     }
