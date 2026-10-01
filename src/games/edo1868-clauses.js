@@ -62,33 +62,83 @@ clauseSchema.anyOf = clauseDomains.map(([issues, dimensions]) => ({properties:{
  issue_ids:{items:{enum:issues}},
  facts:{items:{properties:{kind:{enum:[...dimensions,'authority'].flatMap(d=>FACT_VALUES[d].map(v=>`${d}:${v}`))}}}},
 }}));
-function materializeFleetReview(c,sources,required){
+// Comparison-only normalization. Return a span of the untouched original for storage.
+// Do not remove word boundaries, punctuation, negation, or normalize vocabulary.
+function comparisonView(value){
+ const omitted=new Set();
+ for(const m of value.matchAll(/\*\*(?=\S)([\s\S]*?\S)\*\*/g))for(const i of [m.index,m.index+1,m.index+m[0].length-2,m.index+m[0].length-1])omitted.add(i);
+ const chars=[];
+ for(let i=0;i<value.length;i++)if(!omitted.has(i))chars.push({char:value[i],start:i,end:i+1});
+ const out=[];
+ const japanese=c=>/[\p{Script=Han}\p{Script=Hiragana}\p{Script=Katakana}。、！？「」『』（）]/u.test(c||'');
+ for(let i=0;i<chars.length;i++){
+  if(!/\s/u.test(chars[i].char)){out.push(chars[i]);continue;}
+  const start=chars[i].start;let end=chars[i].end;
+  while(i+1<chars.length&&/\s/u.test(chars[i+1].char))end=chars[++i].end;
+  if(out.length&&i+1<chars.length&&!(japanese(out.at(-1).char)&&japanese(chars[i+1].char)))out.push({char:' ',start,end});
+ }
+ return {text:out.map(c=>c.char).join(''),map:out};
+}
+export function matchCitation(original,excerpt){
+ if(typeof original!=='string'||typeof excerpt!=='string'||!excerpt.trim())return null;
+ if(original.includes(excerpt))return {quote:excerpt,formattingDifference:false};
+ const source=comparisonView(original),citation=comparisonView(excerpt);
+ if(!citation.text)return null;
+ const at=source.text.indexOf(citation.text);
+ if(at<0)return null;
+ return {quote:original.slice(source.map[at].start,source.map[at+citation.text.length-1].end),formattingDifference:true};
+}
+function materializeFleetReview(c,sources,diagnostics){
+ const note=(category,code,dimension)=>diagnostics.push({category,code,...(dimension?{dimension}:{})});
+ const fail=(category,code,dimension)=>{const error=new Error('応答の処理に失敗しました。入力は残っています。再試行してください。');error.validationCode=code;error.validationCategory=category;error.validationDetails={...(dimension?{dimension}:{})};throw error;};
+ const phase=f=>['interim','final'].includes(f.phase)?f.phase:'unspecified';
+ for(const f of c.facts||[])if(f.phase&&!['interim','final','unspecified'].includes(f.phase))fail('invalid_evidence','phase_invalid');
+ const facts=(c.facts||[]).map(f=>({...f,dimension:f.kind?.split(':')[0],value:f.kind?.split(':')[1],phase:phase(f),quote:sources[f.source_ref]||''}));
  const review=c.fleet_review;
- const facts=(c.facts||[]).map(f=>({...f,dimension:f.kind?.split(':')[0],value:f.kind?.split(':')[1],quote:sources[f.source_ref]||''}));
- const fail=()=>{throw new Error('約定の本文と構造化記録の整合性を確認できませんでした。記録は変更していません。もう一度送信してください。');};
- if(!review){if(required)fail();return facts;}
- if(FLEET_DIMENSIONS.some(d=>!Array.isArray(review[d])))fail();
+ if(!review)note('missing_information','fleet_review_missing');
  const evidence=[];
  for(const dimension of FLEET_DIMENSIONS){
-  const phases=new Set();
+  if(!Array.isArray(review?.[dimension])){note('missing_information','role_review_missing',dimension);continue;}
   for(const e of review[dimension]){
-   if(!e||!FACT_VALUES[dimension].includes(e.value)||!['interim','final','unspecified'].includes(e.phase)||phases.has(e.phase)||
-      typeof e.source_excerpt!=='string'||!e.source_excerpt.trim()||!sources[e.source_ref]?.includes(e.source_excerpt)||
-      typeof e.text_excerpt!=='string'||!e.text_excerpt.trim()||!c.text.includes(e.text_excerpt))fail();
-   phases.add(e.phase);
-   evidence.push({dimension,value:e.value,phase:e.phase,quote:e.source_excerpt,textEvidence:e.text_excerpt});
+   if(!e||!FACT_VALUES[dimension].includes(e.value))fail('invalid_evidence','role_value_invalid',dimension);
+   if(e.phase&&!['interim','final','unspecified'].includes(e.phase))fail('invalid_evidence','phase_invalid',dimension);
+   const source=matchCitation(sources[e.source_ref],e.source_excerpt),text=matchCitation(c.text,e.text_excerpt);
+   if(!source||!text)fail('invalid_evidence',!source?'source_quote_not_found':'clause_quote_not_found',dimension);
+   if(source.formattingDifference||text.formattingDifference)note('formatting_difference','citation_normalized',dimension);
+   if(phase(e)==='unspecified'||e.value==='unknown')note('missing_information','role_information_unspecified',dimension);
+   evidence.push({dimension,value:e.value,phase:phase(e),quote:source.quote,textEvidence:text.quote});
   }
  }
- // Never resolve disagreement by choosing the more favourable classification.
+ // Merge two readings of the same obligation. Unknown values are missing data,
+ // never permission to merge incompatible explicit phases or different roles.
+ const merged=[];
+ const add=f=>{
+  const same=merged.filter(e=>e.dimension===f.dimension);
+  const compatible=same.filter(e=>(e.value===f.value||e.value==='unknown'||f.value==='unknown')&&(e.phase===f.phase||e.phase==='unspecified'||f.phase==='unspecified'));
+  const exact=compatible.find(e=>e.phase===f.phase&&e.value===f.value);
+  if(exact)return;
+  if(compatible.length===1){const e=compatible[0];if(e.phase==='unspecified')e.phase=f.phase;if(e.value==='unknown')e.value=f.value;note('missing_information','role_information_completed',f.dimension);return;}
+  if(compatible.length>1&&f.phase==='unspecified'){note('missing_information','phase_ambiguous',f.dimension);return;}
+  if(same.some(e=>e.phase===f.phase&&e.value!=='unknown'&&f.value!=='unknown'&&e.value!==f.value))fail('semantic_contradiction','role_value_conflict',f.dimension);
+  merged.push({...f});
+ };
+ evidence.forEach(add);
  for(const f of facts.filter(f=>FLEET_DIMENSIONS.includes(f.dimension))){
-  if(!evidence.some(e=>e.dimension===f.dimension&&e.phase===f.phase&&e.value===f.value))fail();
+  const same=evidence.filter(e=>e.dimension===f.dimension);
+  if(!same.length)note('missing_information','role_review_missing',f.dimension);
+  else if(!same.some(e=>(e.phase===f.phase||e.phase==='unspecified'||f.phase==='unspecified')&&(e.value===f.value||e.value==='unknown'||f.value==='unknown'))){
+   fail('semantic_contradiction',same.some(e=>e.value===f.value)?'role_phase_conflict':'role_value_conflict',f.dimension);
+  }
+  add(f);
  }
- // Compile the checked roles into the existing canonical facts, not a new ledger.
- return [...facts.filter(f=>!FLEET_DIMENSIONS.includes(f.dimension)),...evidence];
+ return [...facts.filter(f=>!FLEET_DIMENSIONS.includes(f.dimension)),...merged];
 }
-export function materializeClauseEvidence(events,playerText,katsuText,{requireFleetReview=false}={}){
+export function materializeClauseEvidence(events,playerText,katsuText,{diagnostics=[]}={}){
  const sources={current_player_message:playerText,current_katsu_response:katsuText};
- return events.map(event=>({...event,clauses:event.clauses?.map(c=>({...c,source_quote:sources[c.source_ref]||'',facts:materializeFleetReview(c,sources,requireFleetReview)}))}));
+ return events.map((event,eventIndex)=>({...event,clauses:event.clauses?.map((c,clauseIndex)=>{
+  try{return {...c,source_quote:sources[c.source_ref]||'',facts:materializeFleetReview(c,sources,diagnostics)};}
+  catch(error){error.validationDetails={...error.validationDetails,eventIndex,clauseIndex};throw error;}
+ })}));
 }
 export const CLAUSE_INSTRUCTION=`
 【本文と属性の照合】各条項のfleet_reviewを必ず記録する。条項本文を読み直し、指揮・保管・監督・使用制限・移管のそれぞれについて、本文が述べた値、時期、原発言と本文の該当引用を示す。扱っていない役割は空配列、不確かな役割はunknown。明示の否定も消さずnone等で記録する。factsに値を記録しただけで照合を省略しない。本文が述べる役割をfactsで省略してもfleet_reviewには必ず残す。本文とfactsの意味が異なるときは原発言に立ち返り両方を訂正する。共同監督を共同保管や共同指揮へ代用しない。今の発言が既存条件の変更なら、その次元の時期を維持して置換し、触れていない役割をunknownで撤回しない。

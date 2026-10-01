@@ -82,7 +82,6 @@ try {
  assert.equal(run.endingId,'bloodless');
  // Contradictory and missing role evidence must fail atomically, with no retry.
  for(const mutate of [
-  c=>{delete c.fleet_review;},
   c=>{c.fleet_review.fleet_oversight[0].source_excerpt='発言していない根拠';},
   c=>{c.fleet_review.fleet_oversight[0].text_excerpt='条項にない根拠';},
   c=>{c.facts=[{kind:'fleet_oversight:none',phase:'interim',source_ref:'current_player_message'}];},
@@ -90,7 +89,7 @@ try {
  ]){
   payload=structuredClone(payload);payload.events=structuredClone(rawEvents);mutate(payload.events[0].clauses[1]);
   const count=calls;
-  await assert.rejects(requestKatsuResponse({apiKey:'test-only',model:'fixture',messages:[{role:'saigo',text:player}],state:before}),/整合性/);
+  await assert.rejects(requestKatsuResponse({apiKey:'test-only',model:'fixture',messages:[{role:'saigo',text:player}],state:before}),/応答の処理/);
   assert.equal(calls,count+1);
   assert.equal(JSON.stringify(before),beforeJSON);
  }

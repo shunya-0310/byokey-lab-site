@@ -615,7 +615,14 @@ function Edo1868Page({ onNavigate, path }) {
       setApiUsage((current) => ({ input: current.input + result.usage.input, output: current.output + result.usage.output, cached: current.cached + result.usage.cached }));
       setState(assessed.state); setDraft("");
       if (assessed.automaticEnding) setEndingId(assessed.automaticEnding);
-    } catch (error) { setApiError(error instanceof Error ? error.message : "対談を続けられませんでした。"); }
+    } catch (error) {
+      setApiError("応答の処理に失敗しました。入力は残っています。送信ボタンから再試行してください。");
+      // No provider URLs, keys, raw responses, ledger contents or policy data.
+      const diagnostic = { at: new Date().toISOString(), stage: "dialogue_response", code: error?.validationCode || (error?.name === "TimeoutError" ? "request_timeout" : "response_failure"), category: error?.validationCategory || (error?.validationCode === "fleet_phase_missing" ? "missing_information" : "processing_error"), ...error?.validationDetails };
+      console.warn("[edo1868] response failure", diagnostic);
+      try { sessionStorage.setItem("byokey-lab:edo-1868:last-error", JSON.stringify(diagnostic)); }
+      catch { console.warn("[edo1868] diagnostic storage unavailable"); }
+    }
     finally { setIsSending(false); }
   };
   const saveApiKey = () => {
@@ -734,7 +741,7 @@ function Edo1868Page({ onNavigate, path }) {
       <div className="edo-scene-meta"><p>{GAME_DATE}</p><p>江戸・薩摩藩邸</p></div>
       <section className="edo-character-stage" aria-label="勝海舟"><img src={EXPRESSION_ASSETS[currentKatsu?.expression] || EXPRESSION_ASSETS.neutral} alt="交渉相手の勝海舟" /></section>
       <section className="edo-dialogue-box" aria-live="polite"><div className="edo-nameplate">勝海舟</div><p>{visibleKatsuText}</p></section>
-      <form className="edo-stage-form" onSubmit={submit}><div className="edo-input-field"><textarea aria-label="あなたの言葉" aria-describedby="edo-input-count" value={draft} onChange={(event) => setDraft(event.target.value)} onFocus={anchorMobileGame} maxLength={1000} placeholder="" disabled={isSending} /><span id="edo-input-count" className="edo-input-count">{draft.length} / 1000</span></div><button type="button" className="edo-conclude-button" onClick={() => setPanel("conclude")} disabled={isSending}>決着を求める</button><button type="submit" disabled={!draft.trim() || isSending} aria-label="言葉を交わす">{isSending ? <LoaderCircle className="edo-loading" size={25} /> : <Send size={28} />}</button></form>
+      <form className="edo-stage-form" onSubmit={submit}>{apiError && <p className="edo-send-error" role="alert">{apiError}</p>}<div className="edo-input-field"><textarea aria-label="あなたの言葉" aria-describedby="edo-input-count" value={draft} onChange={(event) => setDraft(event.target.value)} onFocus={anchorMobileGame} maxLength={1000} placeholder="" disabled={isSending} /><span id="edo-input-count" className="edo-input-count">{draft.length} / 1000</span></div><button type="button" className="edo-conclude-button" onClick={() => setPanel("conclude")} disabled={isSending}>決着を求める</button><button type="submit" disabled={!draft.trim() || isSending} aria-label="言葉を交わす">{isSending ? <LoaderCircle className="edo-loading" size={25} /> : <Send size={28} />}</button></form>
       {settlementFlow && createPortal(<section className={`edo-settlement-overlay edo-settlement-${settlementFlow.stage}`} aria-live="polite">
         {settlementFlow.stage === "government" ? <div className="edo-settlement-copy edo-government-reflection"><p>勝の言葉は、ここで終わりではない。</p><p>西郷の約束を、新政府が引き受けるのか。</p><p>明日の軍勢を止める判断が、今、問われている。</p></div> : <div className="edo-settlement-copy">
           <p className="edo-settlement-kicker">勝は、しばらく黙っている。</p>

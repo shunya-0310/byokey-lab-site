@@ -229,13 +229,15 @@ JSONスキーマに従う。semantic_evaluationは今回の発言、discovered_i
   schema.properties.events.items = updateSchema(proposals);
   const dialogue = await generateGeminiJson({ apiKey, model, schema, systemInstruction: responseInstruction + CLAUSE_INSTRUCTION + `\n最後に厳守: spoken_responseでは「全て整った」「全懸案が解消した」「他の要求はない」のような全体の完了宣言をしない。今話した具体的な条件への同意だけを述べる。現在の未合意の議題: ${Object.entries(state.issues).filter(([,v])=>["unresolved","proposed","conflicted"].includes(v)).map(([id])=>NEGOTIATION_ISSUES[id].title).join("、")}。今の問いに答え終えたら、この中でまだ約束を交わしていない一つを次の問いとして自然に取り上げてよい。合意済みの話は蒸し返さない。`, contents, maxOutputTokens: 16000, temperature: model.startsWith("gemini-3") ? 1 : 0.35, validator: (value) => typeof value?.spoken_response === "string" && value.spoken_response.trim().length > 0 && Array.isArray(value?.events) && normalizeEvents(compileUpdates(value.events)).length === value.events.length && validSettlementValidity(value.settlement_validity) });
   const parsed = dialogue.parsed;
-  parsed.events = materializeClauseEvidence(compileUpdates(parsed.events), messages.filter(m=>m.role === "saigo").at(-1)?.text || "", parsed.spoken_response, { requireFleetReview: true });
+  const validationDiagnostics = [];
+  parsed.events = materializeClauseEvidence(compileUpdates(parsed.events), messages.filter(m=>m.role === "saigo").at(-1)?.text || "", parsed.spoken_response, { diagnostics: validationDiagnostics });
   const validation = reduceNegotiationEvents({ ...state, turns: state.turns + 1 }, parsed.events, { playerText: messages.filter((message) => message.role === "saigo").at(-1)?.text || "", katsuText: parsed.spoken_response });
   if (validation.validationError) { const error = new Error(`${validation.validationError}記録は変更していません。もう一度送信してください。`); error.validationCode=validation.validationCode; throw error; }
   const notes = Array.isArray(parsed.discovered_information) ? parsed.discovered_information
     .filter((item) => item && typeof item.title === "string" && typeof item.text === "string")
     .slice(0, 3).map((item, index) => ({ id: String(item.id || `gemini-note-${index}`).replace(/[^a-zA-Z0-9-]/g, "").slice(0, 48) || `gemini-note-${index}`, title: item.title.slice(0, 60), text: item.text.slice(0, 220) })) : [];
   return {
+    validationDiagnostics,
     spokenResponse: parsed.spoken_response,
     expression: allowedExpressions.has(parsed.expression) ? parsed.expression : "neutral",
     discoveries: notes,
@@ -482,6 +484,19 @@ export function reduceNegotiationEvents(state, rawEvents, { playerText = "", kat
       const id = `proposal-${String(turn).padStart(3, '0')}-${String(canonical.nextProposalNumber++).padStart(3, '0')}`;
       const amended = { id, issueIds: event.issueIds, proposer: event.actor, terms: event.terms, createdTurn:turn, status:'open', dependencies:event.dependencies };
       attachClauses(amended, event.clauses, turn, {player:playerText,katsu:katsuText});
+      // A phase omitted by the new extraction must not erase an explicit phase.
+      for(const c of amended.clauses){
+        const resolved=[];
+        for(const fact of c.facts){
+          const prior=oldClauses.filter(old=>old.issueIds.some(id=>c.issueIds.includes(id))).flatMap(old=>old.facts).filter(f=>f.dimension===fact.dimension&&['interim','final'].includes(f.phase));
+          if(fact.dimension.startsWith('fleet_')&&(!fact.phase||fact.phase==='unspecified')&&prior.length){
+            const matches=prior.filter(f=>f.value===fact.value);
+            if(!matches.length)return invalid('fleet_phase_missing');
+            for(const phase of new Set(matches.map(f=>f.phase)))resolved.push({...fact,phase});
+          }else resolved.push(fact);
+        }
+        c.facts=resolved;
+      }
       const amendmentFacts = amended.clauses.flatMap(c=>c.facts.map(f=>({...f})));
       amended.clauses.forEach(c => {
         c.version = Math.max(...oldClauses.map(x=>x.version)) + 1;

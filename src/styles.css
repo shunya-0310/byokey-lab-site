@@ -633,3 +633,6 @@ footer small { grid-column: 1 / -1; color: var(--muted); }
 .edo-input-field{flex:1;min-width:0;display:flex;flex-direction:column;gap:3px}
 .edo-stage-form .edo-input-field textarea{width:100%;box-sizing:border-box}
 .edo-input-count{align-self:flex-end;font-size:12px;line-height:1.2;color:#f2dfb4;font-variant-numeric:tabular-nums}
+
+.edo-stage-form:has(.edo-send-error){flex-wrap:wrap}
+.edo-send-error{flex:0 0 100%;box-sizing:border-box;margin:0;padding:6px 8px;background:#402426;color:#fff1df;font-size:13px;line-height:1.5}
