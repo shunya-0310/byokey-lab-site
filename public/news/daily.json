@@ -1,112 +1,104 @@
 {
   "schemaVersion": 1,
   "status": "live",
-  "date": "2026-09-30",
-  "generatedAt": "2026-09-30T00:27:48.417Z",
+  "date": "2026-10-01",
+  "generatedAt": "2026-10-01T00:33:13.399Z",
   "model": "gemini-3.6-flash",
   "fallbackCategories": [],
   "items": [
     {
-      "id": "2026-09-30-politics_economy",
+      "id": "2026-10-01-politics_economy",
       "category": "politics_economy",
       "categoryLabel": "Politics & Economy",
-      "headline": "Iranian Rial Plunges to Record Low as U.S. Tightens Sanctions and Diplomatic Push Continues",
-      "summary": "On Tuesday, Iran's currency dropped to a historic low of over 2.5 million rials per U.S. dollar amid mounting regional tensions and severe economic pressure. The sharp devaluation coincided with new U.S. Treasury sanctions targeting Iranian military supply networks, even as international mediators attempt to broker diplomatic negotiations between Washington and Tehran.",
-      "question": "How do you think severe economic pressure influences a country's willingness to negotiate during international conflicts?",
+      "headline": "United States Completes Military Withdrawal From Iraq After Two Decades",
+      "summary": "The United States has formally completed the withdrawal of its military forces from Iraq, ending over twenty years of U.S. military presence in the country. Iraqi Prime Minister Ali al-Zaidi officially declared the conclusion of the U.S.-led coalition's mission, signaling a major transition in Middle Eastern security.",
+      "question": "What potential benefits or risks do you see for regional stability following the withdrawal of foreign military forces from Iraq?",
       "coachLeads": {
-        "friendly": "Hey, have you checked out the latest world news today? It's a fascinating story about how global markets and diplomatic negotiations interact.",
-        "energetic": "Check this out! Big economic shifts and new diplomatic moves are making front-page headlines today, and it's definitely worth talking about.",
-        "calm": "Whenever you have a moment, take a look at this recent story. It gives a really clear picture of how market forces are impacting international politics.",
-        "direct": "Here is today's main diplomatic and economic story. It focuses on how new sanctions and currency declines are shaping global talks."
+        "friendly": "Hey, did you see the big news today about the U.S. completing its military withdrawal from Iraq?",
+        "energetic": "This is a massive historical turning point! The United States has officially ended its two-decade military presence in Iraq.",
+        "calm": "After more than twenty years, the U.S. has finalized the complete exit of its forces from Iraq.",
+        "direct": "The U.S. military has officially ended its mission and withdrawn all remaining troops from Iraq."
       },
       "sources": [
         {
-          "title": "pbs.org",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE10MMgdxKIYKKfQjINxudPZKUix_juk-BGDzOjznnWJBRXpOfkrdPX4uOQn7N6Mz9SA__N3KqybAw5FSg3ro1TwRRUPvZ8sNfxc0txW07DlBe_Skrrx1hMDz115i3LWLGIu7hlPgbzuilQrh7vIM2tmuj7VMSscvzGkdzqHH96mgztOSeMl42c-vI9ilvZzUagvVIQXTlen1uUpuUWvGnRCtlKPF7rOldfbBs="
-        },
-        {
-          "title": "the-independent.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHUzSLdM8nGHaxT-0upd8ybQ3EIpZHj7FXOYSf38KKkMLeZ2nByRTykUWaBHrK8DBcvshTUMYbU9CGdW_1Pa8Q31i0T4RDeEaq8lVGEPRk8tYutsjih0U4U3jMM4mK1LWSoD1zPnhgxuFlq83r44wyiwQJa-u4Cv49bf7k6RWREOFVJ28FhsJrqHfemCy8ty3VFx_X9bt-etKpG5Wk="
+          "title": "Google News: Politics & Economy",
+          "url": "https://news.google.com/search?q=Politics%20%26%20Economy%20top%20news%202026-10-01&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     },
     {
-      "id": "2026-09-30-technology",
+      "id": "2026-10-01-technology",
       "category": "technology",
       "categoryLabel": "Technology",
-      "headline": "White House and Top Tech Executives Sign Voluntary AI Safety Accord",
-      "summary": "On September 29, 2026, U.S. President Donald Trump hosted executives from major technology companies—including Google, Meta, Nvidia, and OpenAI—at the White House to sign a voluntary AI safety agreement. The accord establishes shared principles and internal safeguards for developing advanced artificial intelligence amid growing global debates over tech regulation.",
-      "question": "Do you think voluntary pledges from tech companies are enough to keep AI safe, or should governments enforce mandatory laws?",
+      "headline": "Google Launches First AI Prototype Satellite into Orbit with SpaceX",
+      "summary": "On October 1, Google launched a prototype satellite carrying four custom artificial intelligence processors aboard a SpaceX rocket as part of its Project Suncatcher initiative. The mission tests how AI hardware and specialized cooling systems withstand space radiation and orbital extremes to evaluate the future of space-based data centers.",
+      "question": "What potential benefits or drawbacks do you see in moving AI data centers from Earth into space?",
       "coachLeads": {
-        "friendly": "Hey! Did you hear that top tech CEOs just met at the White House to sign a new AI safety pledge?",
-        "energetic": "Big news in tech today! Major AI leaders and the White House just agreed on new safety guidelines for artificial intelligence!",
-        "calm": "The White House and key tech executives have agreed on a set of voluntary AI safety principles. It's an important moment in tech policy worth reflecting on.",
-        "direct": "Top AI companies just signed a voluntary safety agreement with the White House. Let's discuss what self-regulation means for the future of tech."
+        "friendly": "Hey, have you heard about Google launching AI hardware into space today?",
+        "energetic": "This is incredible news! Google and SpaceX are officially testing AI data centers in orbit right now!",
+        "calm": "Take a look at this remarkable step toward running AI systems in space. It is definitely worth talking about.",
+        "direct": "Google launched its first orbital AI test today. Let's discuss what this could mean for the future of technology."
       },
       "sources": [
         {
-          "title": "cbsnews.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGYMdKwYLk1ZHejgGhYgIt0c_Ajj5RiANo5qeLQjTFlQ96-wa2PVc09oulLMEP6p5zdQCRNaXxDIghXNnfZ6NbvfBM9WW00u0WIOJpf_dsnTJQoYXXUU6Nh2bwNGFI5itwtmeLjwlZbuEJSG-p24_TUQUwJGAFu2bJAWjal3dxMosjj-HXukz70iYI0TWrOPZRm1sHd9OC9Dw=="
+          "title": "mashable.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFZ5eB7eyj0ZQLtSCk1btXZLT2XFZUJFmoyvIC3VxJFE9_ltKW8G58N0zbwvLoSuNKNA4d7h_Sz2bpUZZQglVK8TV2mT18d_yBzHzi_I6ZptL316kxDw3PK0AjrA-MxDZnoUa6nejna5LMHLTKerMAiTa9cYn46_P-BwVUAdB0u_w=="
         },
         {
-          "title": "pbs.org",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEE7FLjuMvaZKll1DMHpBgftxz0hBtyFLqqvHx4ZdGSaQz-6bo7A1VZHJlNBSnAcpebkFI3CqrlSslH2XjshAUx6uaYPPn2H91mKbtuuvewT0qr_zUZS5nFdtmyml-myar-2lBz9T-ycg4tmADOqYp6Pi_UzzyiV2Ok3CM_TdAsHq7KeMDwV1FZlkpWpTkg-iyv7geCyXUXpkp1"
+          "title": "digg.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHBZP_QwDDxKA99FPDBYgrhksGt_tJQcc0MXvmRIjQKtAw_Zlrpg_zRIY2ZvS7fMGBIaf0jQoxs5TEl2WcmevbfB83SIEua2mkoIZHkPyHAeVtIcMY="
+        },
+        {
+          "title": "azernews.az",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFmEY0im_7ohT1TtJdR_WJpFOk5jIyDNvT7eGdIvtq5IH4cRvTJ0IrYQcYK6iCXqMgEDJEiVqoeBNbskAvp-H73hF5DO_dt7uLg_-Ih06jF-KQh5QpuQFDgaU6KX8ovncc="
         }
       ]
     },
     {
-      "id": "2026-09-30-sports",
+      "id": "2026-10-01-sports",
       "category": "sports",
       "categoryLabel": "Sports",
-      "headline": "U.S. Senate Passes Landmark Protect College Sports Act",
-      "summary": "The United States Senate passed the landmark Protect College Sports Act by a bipartisan 77-22 vote, establishing a historic federal framework for college athlete compensation and transfer policies. This sweeping legislation now moves to the House of Representatives as Congress attempts to standardize rules across collegiate athletics.",
-      "question": "Do you think university athletes should receive financial compensation and brand sponsorship deals while competing in college sports?",
+      "headline": "Arsenal Surrenders Two-Goal Lead in 2-2 Draw With Paris FC in Women's Champions League",
+      "summary": "Arsenal surrendered a two-goal lead on Wednesday to draw 2-2 against Paris FC in their UEFA Women's Champions League match. Goals from Alessia Russo and Georgia Stanway put the English side ahead before Maeline Mendy scored an 86th-minute penalty equalizer for Paris FC.",
+      "question": "What strategies do you think teams should use to maintain focus and hold onto a lead late in a high-stakes match?",
       "coachLeads": {
-        "friendly": "Hey, check this out—the U.S. Senate just passed a major bill changing how college sports work!",
-        "energetic": "Huge news in the sports world today as lawmakers just passed historic legislation to reshape college athletics!",
-        "calm": "A major college sports bill just passed the U.S. Senate, bringing unified national rules to athlete compensation.",
-        "direct": "The U.S. Senate voted 77-22 to pass the landmark Protect College Sports Act."
+        "friendly": "Hey there! Did you catch that dramatic Women's Champions League match yesterday between Arsenal and Paris FC?",
+        "energetic": "What an unbelievable finish in Paris as Arsenal let a two-goal lead slip away late! Let's break down how that wild comeback unfolded!",
+        "calm": "Yesterday's Champions League match served as a reminder of how fast momentum can shift in top-level football. Arsenal will certainly feel disappointed leaving Paris with only a draw.",
+        "direct": "Arsenal drew 2-2 with Paris FC on Wednesday after giving away a late penalty in the Women's Champions League. What were your main takeaways from the match?"
       },
       "sources": [
         {
           "title": "theguardian.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHUGEbVzJv6pCcro3OYOnwINlASqB1bMzbCofUnnZYFpwlxADe1ZxivFAyzvmW6XkGM6Q8gVXPLcXXDDY5OeLioy4Hur37DP-_w3IZJ5CFnq9UiQ2AKv0CEb7qvPyto8-p6j694fLXU9iGfVbWo3P76IrvCe8dxImB_aXZ9KcIzxpD9nCxIua65LVJ-GRz6VtW1IrOOkKcSLzS0N0B2RfwlV3-jot1w9QwdB6SCZl8="
-        },
-        {
-          "title": "washingtonpost.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHCFo5qK0DImnSxmd7jGInQsMj1W2YZ9n-oHVIYAOhuLIB-Bkc5sPWN6NCNExjVKlTH9snzRCzokyQ307CpGL1bRhF8XhbkE1_dDtaXi_TpClbDYP7bImtSfy8uQklUw1EuzaHXD1X1fRSnREE7myU5DdNoIEKNQYGNROOVUNN2E4MjboP1QxsHs_Vn13lD-HlxdDVw_ocQPYb4S09seMVBoc7wVMOMhPoFobNT8Q=="
-        },
-        {
-          "title": "senate.gov",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFeAWeh_kBE_QEq_LWhL2ACI2FUL5zIqxptty1BWUzXzzY3AYxoXvKG26t0W_2p82EiyPymTAm9-qyO95DaEsf-d5DTShiMA_A-CsKmYH9HW8e-HgBgt3pgp5FSI3CqRQ4tV4Hcc7jjBrx9CpS8GTUhRrPy_WN50NA-oaEW5afZhRmN-9JPyHFPjQVApIOHcH78HkGfrDAu"
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFYTRKvOfml7F1Nr5puI_PWf6dEUQmVKlUG7KHd8UQaPvw-UP4UH5o1aAGdaG5m4bYgU7NjwI1eAaTm-Bmf5vQ1ITJ72IGQui3o1OIEQ9uGjm-kYEXOS-Uq3doqo4kc3umMDXsClfoiPq4sZczLduyJCMZmw-1ucbTaPFJ3czBtlyoOMgug8zikQhemMOhzkD6QuZsGY3ps20n9"
         }
       ]
     },
     {
-      "id": "2026-09-30-entertainment",
+      "id": "2026-10-01-entertainment",
       "category": "entertainment",
       "categoryLabel": "Entertainment",
-      "headline": "Warner Bros. Schedules 'Game of Thrones: Aegon's Conquest' Movie for June 2029",
-      "summary": "Warner Bros. has officially scheduled 'Game of Thrones: Aegon's Conquest' for a theatrical release on June 1, 2029. Directed by Owen Harris from a screenplay by Beau Willimon, the project marks the iconic fantasy franchise's first feature film.",
-      "question": "How do you feel about watching a 'Game of Thrones' story in a movie theater rather than as a television series?",
+      "headline": "Sotheby's Unveils $450 Million Collection of Unseen Masterpieces by Van Gogh and Cézanne",
+      "summary": "On September 30, 2026, Sotheby's revealed a collection of twelve long-unseen Impressionist and post-Impressionist paintings valued at roughly $450 million. The rare private collection, which includes major works by Vincent van Gogh and Paul Cézanne, will go up for auction in New York on November 18.",
+      "question": "If you could own any famous painting or work of art in the world, which one would you choose and why?",
       "coachLeads": {
-        "friendly": "Hey, have you heard the huge news for 'Game of Thrones' fans?",
-        "energetic": "Westeros is officially coming to the big screen with a massive movie announcement!",
-        "calm": "Warner Bros. has announced its first 'Game of Thrones' feature film, set to hit theaters in June 2029.",
-        "direct": "The first 'Game of Thrones' movie now has an official director and release date."
+        "friendly": "Hey there! Did you see the big art news today about a multi-million-dollar collection going up for auction?",
+        "energetic": "Get ready for a massive art world milestone, because a $450 million treasure trove of hidden masterpieces was just revealed!",
+        "calm": "Sotheby's has just announced a landmark sale of classic Impressionist paintings that haven't been seen publicly in decades.",
+        "direct": "A $450 million collection featuring rare works by Van Gogh and Cézanne was just unveiled for auction."
       },
       "sources": [
         {
-          "title": "latimes.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEt1PwQbSxP61o0saPPxy5obW8FYXCL2fSYP_68Lmnfb5xsUEGRxaN_KLpvflEx-NEpBBnLm8HHQ8HGOa55xjBVPkbpNP4AH_cbaksH0J-v6ZUSD3wamvERHmVGOn2J9G5ToICKVBnlMm4WwP0vA0pxmTuIi0WcEtJNgVGQsUWcyRgvn-KZshyxvlS_nE73e07M33j563I86R1RCPTl2BZkHxQMgAbPQcRA"
+          "title": "news4jax.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHbVtFn53kAmGMi3C04H2hlht9iVZyW--wLp86tZU4GxE7jYOiE1OYVLtgr5ocXmiFc_DLg3d4VfcRGl3CCMg-Z1pMB8xpzSDP_e52F481ldDVOgwyCMwZ9XKvieIpVtHQEa5RCWgMn80OHv-bF61bxq54nEHCdHsew8gZBRDAWx58IXfovZpUf48xyk-GSZcLOkqyOe_VN0szsDNjXkTUBIdwDRP3hbAGBIDgbgLxUb8c7"
         },
         {
-          "title": "ign.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH4jH4WjtRecVVauVty2g7zKnzTGD0Ea668eiDUl5pS8mVdeUZH6IvLpQpiR5zpGgYREFMN9wR05LFgP2YXY0kZunmNa49yTRHTsabOXSvxr1YZgr4Q3sQp60ouqHq-UaFCfQaKwhQmSfHR7NXIqjDu-gVRTeqvRfPBFIHSbiJMryopMzkyCe_89AfBiLw="
+          "title": "wtvbam.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHOjRCiAEnIah39V1MynIws5mEg3mHeAoRYbmSBjrtECUclTtUMXVqpE3uKH15jXHOUwv5ja8OrKUMnWd1CMQ27Lhfmr4t5FvzuwAuNaP8C_gF7zXCq72Uyur6q4crOdxRl5rzjczcc0jf_gLkRXrXkHJwZqobiOMSPdER-YJgUwVZojBP-7O9lPxMeE5IJ9djpo_wfgJorlfQbm5Jns0IGXA39Je6YgLU="
         },
         {
-          "title": "worldofreel.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHJSZYEhQKIVbOAkNyIDIhJuxu_nhTiB8A_VjGij2jG9y7QqjK83TW6wP2E1X_XZsNqseYMH_3iQbLQ6JweSJt2G3icfj_qbXMNmj9qXsY6wOt6CMhqosbyps3FfCv3z3PJQNVV3ggdSB-ekb5z9x1Rl0Y_dNwmpZ4nW4o5tFqXddYwbBuk5vd-i2Jp6diftXzlpxNEmwi8POUSl9cHnY1GuXC-EXK3sW5UrBFC6GluSTVncnQJcqfM"
+          "title": "luxemagazineswitzerland.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFZX7vDMezqd50qLiSFut8b_StQYuG-W9DROgz2cWdWu57g58zX2qckj02t6zAdkeW5wZXXDMn3jgYBPmptqR2tkB77-rUhEtnNV02IiP4H8m5SSPW89vez1iMMBU6_QCCrPSDv0G7ow50bWxhCJcbeXw9rppu9BEUeUma3CzURGqGpuUCN_syEAboMDBafQhsasM3YMOXCywJHw06Cn4lLumdtkX990ThU37Ll2sszVuGDC3nlEivYNv1H7W648jv6kpzvc0414A=="
         }
       ]
     }
