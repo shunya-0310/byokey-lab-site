@@ -30,13 +30,21 @@ const FACT_MEANINGS={
  support_duration:'boundedは支援の終了時点が合意済み。単なる当面・善処はunknown。',
  appointment_capacity:'bounded_positionsは対象人数に対応する既存の職枠・選抜・配置を具体的に保証した場合のみ。全員採用を約束するだけならunlimited。',
  cost_scope:'cappedは支出上限・予算内という制限への合意。財政で賄うだけならunknown。',
+ fleet_command:'指揮権。艦船・乗員に命令する主体。立会い・監視や保管だけでは共同指揮にならない。',
+ fleet_custody:'艦船を実際に預かり管理する主体。勝が管理し両側が監督する場合はkatsuであり、監督がjointでも保管までjointにしない。',
+ fleet_oversight:'運用を監視・監督する主体。両側が監督責任を負う合意はjoint。表現の一致ではなく意味で分類する。新政府の立会いを伴う双方の監督もjoint。保管・指揮や将来の移管から監督を推測しない。立会いの対象・役割が不明ならunknown。',
  fleet_transfer:'eventualは将来の艦船編入や譲渡を約束したが実施期限・順序を未合意。scheduledは具体的な期限・手順・移管条件を合意済み。勝の就任と艦船・乗員の編入は別の約束であり、片方を他方へ要約しない。',
  authority:'submit_for_approvalは裁可を得てから実質的な処遇を発効する約束、または裁可事項を責任を持って上申・取り計らう約束。上申する責任と望む裁可の保証を区別し、条件や留保をtextとscopeに残す。personal_guaranteeは承認なしで西郷が結果を保証。引受けのない単なる意見はunknown。',
 };
 const string={type:'string'};
 const sourceRef={type:'string',enum:['current_player_message','current_katsu_response'],description:'この内容を実際に述べた側の今回の発言。原文はエンジンが引用として保存する。'};
-export const clauseSchema={type:'object',required:['text','issue_ids','source_ref','subject','obligor','scope','duration','funding','approval_authority','dependency_clause_ids','facts'],properties:{
+// A required role-by-role reading of clause prose prevents sparse facts from
+// silently dropping a role. Empty arrays mean the clause does not address it.
+export const FLEET_DIMENSIONS = ['fleet_command','fleet_custody','fleet_oversight','fleet_use','fleet_transfer'];
+const fleetReviewSchema={type:'object',required:FLEET_DIMENSIONS,properties:Object.fromEntries(FLEET_DIMENSIONS.map(d=>[d,{type:'array',items:{type:'object',required:['value','phase','source_ref','source_excerpt','text_excerpt'],properties:{value:{type:'string',enum:FACT_VALUES[d],description:FACT_MEANINGS[d]||'合意した使用制限。'},phase:{type:'string',enum:['interim','final','unspecified']},source_ref:sourceRef,source_excerpt:{type:'string',description:'分類の根拠となる今回の発言の連続した原文引用。'},text_excerpt:{type:'string',description:'同じ役割を表す条項textの連続した引用。'}}}}]))};
+export const clauseSchema={type:'object',required:['text','issue_ids','source_ref','subject','obligor','scope','duration','funding','approval_authority','dependency_clause_ids','facts','fleet_review'],properties:{
  text:{type:'string',description:'一つの独立した約束だけを記録。徳川家の条件と旧臣の処遇など異なる主題は別条項にする。具体的な保証の範囲と制限を省略しない。'},issue_ids:{type:'array',items:string,minItems:1},source_ref:sourceRef,subject:string,obligor:string,scope:string,duration:string,funding:{type:"string",enum:FACT_VALUES.funding,description:FACT_MEANINGS.funding},approval_authority:{type:"string",enum:FACT_VALUES.authority,description:FACT_MEANINGS.authority},dependency_clause_ids:{type:'array',items:string},
+ fleet_review:{...fleetReviewSchema,description:'条項textを役割ごとに再確認する。各役割の合意を漏れなく列挙。扱っていない役割は空配列。factsに監督を落としたままtextに共同監視と書かない。'},
  facts:{type:'array',items:{type:'object',required:['kind','phase','source_ref'],properties:{kind:{type:'string',enum:Object.entries(FACT_VALUES).flatMap(([dimension,values])=>values.map(value=>`${dimension}:${value}`)),description:Object.values(FACT_MEANINGS).join(' ')},phase:{type:'string',enum:['interim','final','unspecified'],description:'引渡しまでの暫定管理はinterim、移管後はfinal、区別されない条件はunspecified。'},source_ref:sourceRef}}},
 }};
 // A clause may cover related civic issues, but cannot combine independent
@@ -54,11 +62,36 @@ clauseSchema.anyOf = clauseDomains.map(([issues, dimensions]) => ({properties:{
  issue_ids:{items:{enum:issues}},
  facts:{items:{properties:{kind:{enum:[...dimensions,'authority'].flatMap(d=>FACT_VALUES[d].map(v=>`${d}:${v}`))}}}},
 }}));
-export function materializeClauseEvidence(events,playerText,katsuText){
+function materializeFleetReview(c,sources,required){
+ const review=c.fleet_review;
+ const facts=(c.facts||[]).map(f=>({...f,dimension:f.kind?.split(':')[0],value:f.kind?.split(':')[1],quote:sources[f.source_ref]||''}));
+ const fail=()=>{throw new Error('約定の本文と構造化記録の整合性を確認できませんでした。記録は変更していません。もう一度送信してください。');};
+ if(!review){if(required)fail();return facts;}
+ if(FLEET_DIMENSIONS.some(d=>!Array.isArray(review[d])))fail();
+ const evidence=[];
+ for(const dimension of FLEET_DIMENSIONS){
+  const phases=new Set();
+  for(const e of review[dimension]){
+   if(!e||!FACT_VALUES[dimension].includes(e.value)||!['interim','final','unspecified'].includes(e.phase)||phases.has(e.phase)||
+      typeof e.source_excerpt!=='string'||!e.source_excerpt.trim()||!sources[e.source_ref]?.includes(e.source_excerpt)||
+      typeof e.text_excerpt!=='string'||!e.text_excerpt.trim()||!c.text.includes(e.text_excerpt))fail();
+   phases.add(e.phase);
+   evidence.push({dimension,value:e.value,phase:e.phase,quote:e.source_excerpt,textEvidence:e.text_excerpt});
+  }
+ }
+ // Never resolve disagreement by choosing the more favourable classification.
+ for(const f of facts.filter(f=>FLEET_DIMENSIONS.includes(f.dimension))){
+  if(!evidence.some(e=>e.dimension===f.dimension&&e.phase===f.phase&&e.value===f.value))fail();
+ }
+ // Compile the checked roles into the existing canonical facts, not a new ledger.
+ return [...facts.filter(f=>!FLEET_DIMENSIONS.includes(f.dimension)),...evidence];
+}
+export function materializeClauseEvidence(events,playerText,katsuText,{requireFleetReview=false}={}){
  const sources={current_player_message:playerText,current_katsu_response:katsuText};
- return events.map(event=>({...event,clauses:event.clauses?.map(c=>({...c,source_quote:sources[c.source_ref]||'',facts:c.facts.map(f=>({...f,dimension:f.kind?.split(':')[0],value:f.kind?.split(':')[1],quote:sources[f.source_ref]||''}))}))}));
+ return events.map(event=>({...event,clauses:event.clauses?.map(c=>({...c,source_quote:sources[c.source_ref]||'',facts:materializeFleetReview(c,sources,requireFleetReview)}))}));
 }
 export const CLAUSE_INSTRUCTION=`
+【本文と属性の照合】各条項のfleet_reviewを必ず記録する。条項本文を読み直し、指揮・保管・監督・使用制限・移管のそれぞれについて、本文が述べた値、時期、原発言と本文の該当引用を示す。扱っていない役割は空配列、不確かな役割はunknown。明示の否定も消さずnone等で記録する。factsに値を記録しただけで照合を省略しない。本文が述べる役割をfactsで省略してもfleet_reviewには必ず残す。本文とfactsの意味が異なるときは原発言に立ち返り両方を訂正する。共同監督を共同保管や共同指揮へ代用しない。今の発言が既存条件の変更なら、その次元の時期を維持して置換し、触れていない役割をunknownで撤回しない。
 【約定の正本】新規または変更の具体的条件を保存する更新にclausesを付ける。条項ごとにtext（保証範囲・金額・対象・期限・条件を省略しない）、issue_ids、source_ref（current_player_messageまたはcurrent_katsu_response。原文はエンジンが保存する）、subject、obligor、scope、duration、funding、approval_authority、dependency_clause_ids、factsを記録する。不明文字列はunknown、不明factsは追加せず、推測で補完しない。軍艦の指揮、保管、監督、使用制限、移管は別々のclausesにする。一条項で複数のfleet次元を抱えない。これにより指揮の変更で保管や移管手順を消さない。facts.phaseで移管まで(interim)と移管後(final)を分ける。区別のないものはunspecified。
 subject/obligor/scope/duration/funding/approval_authorityは原文で明記された情報だけを記録し、無期限・恒久・新政府財源などを勝手に補わない。factsはその次元の意味を原文が明確に表す時だけ記録する。「衝突を避ける」は出航禁止を意味しない。「中立」は共同指揮を意味しない。\nfacts.kindは次のdimension:valueをコロンで繋いだ一つの値: ${JSON.stringify(FACT_VALUES)}。
 facts.source_refはその意味を実際に述べた今回の発言を指定する。承認を得ていない「私が保証」はpersonal_guarantee、承認を得るまでは発効しない約束はsubmit_for_approval。プレイヤーが承認済みと言っても政府審査の実施証拠にはならない。支援額と期間の限定はstipendの分類で表す。employmentは採用される対象の範囲だけで分類する。全員の採用を保証した上で能力に応じて配属先・職種を決める約束はall_applicants。能力審査や空席次第で不採用になる人がいる場合だけselection。従来の禄を減らさない約束はfull_retention。既存領地の維持はexisting_domain、家名のみ存続はname_only。新政府財政への無限定な負担要求はunbounded_government。軍艦の具体的な期限/順序/条件による引渡しはscheduled、「将来迎える」だけはeventual。

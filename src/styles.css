@@ -627,3 +627,9 @@ footer small { grid-column: 1 / -1; color: var(--muted); }
 .edo-settlement-copy{width:min(660px,100%);margin:auto}
 @media(max-width:600px){.edo-result>article>button,.edo-review nav button{width:100%}}
 .edo-result h1:focus,.edo-review h1:focus{outline:none}
+
+/* Portals escape the isolated game stage and cover the sticky site header. */
+.edo-modal-backdrop,.edo-settlement-overlay{z-index:100}
+.edo-input-field{flex:1;min-width:0;display:flex;flex-direction:column;gap:3px}
+.edo-stage-form .edo-input-field textarea{width:100%;box-sizing:border-box}
+.edo-input-count{align-self:flex-end;font-size:12px;line-height:1.2;color:#f2dfb4;font-variant-numeric:tabular-nums}

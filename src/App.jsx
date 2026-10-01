@@ -1,3 +1,4 @@
+import { createPortal } from "react-dom";
 import { useEffect, useMemo, useState } from "react";
 import { GAME_ROOT, REVIEW_PATH, ENDING_PATH, createEndingRun, restoreCompletedRun, describeAgreedTerms } from "./games/edo1868-ending.js";
 import { governmentMessage } from "./games/edo1868-clauses.js";
@@ -601,7 +602,7 @@ function Edo1868Page({ onNavigate, path }) {
   const submit = async (event) => {
     event.preventDefault();
     const text = draft.trim();
-    if (!text || endingId || isSending || settlementFlow || !canContinueNegotiation(state)) return;
+    if (!text || draft.length > 1000 || endingId || isSending || settlementFlow || !canContinueNegotiation(state)) return;
     if (!apiKey.trim()) { setPanel("settings"); setApiError("Gemini APIキーを入力してから対談を始めてください。"); return; }
     if (!model.trim()) { setPanel("settings"); setApiError("使用するGeminiのモデルIDを入力してください。"); return; }
     const playerMessage = { role: "saigo", text };
@@ -733,22 +734,22 @@ function Edo1868Page({ onNavigate, path }) {
       <div className="edo-scene-meta"><p>{GAME_DATE}</p><p>江戸・薩摩藩邸</p></div>
       <section className="edo-character-stage" aria-label="勝海舟"><img src={EXPRESSION_ASSETS[currentKatsu?.expression] || EXPRESSION_ASSETS.neutral} alt="交渉相手の勝海舟" /></section>
       <section className="edo-dialogue-box" aria-live="polite"><div className="edo-nameplate">勝海舟</div><p>{visibleKatsuText}</p></section>
-      <form className="edo-stage-form" onSubmit={submit}><textarea aria-label="あなたの言葉" value={draft} onChange={(event) => setDraft(event.target.value)} onFocus={anchorMobileGame} maxLength="500" placeholder="" disabled={isSending} /><button type="button" className="edo-conclude-button" onClick={() => setPanel("conclude")} disabled={isSending}>決着を求める</button><button type="submit" disabled={!draft.trim() || isSending} aria-label="言葉を交わす">{isSending ? <LoaderCircle className="edo-loading" size={25} /> : <Send size={28} />}</button></form>
-      {settlementFlow && <section className={`edo-settlement-overlay edo-settlement-${settlementFlow.stage}`} aria-live="polite">
+      <form className="edo-stage-form" onSubmit={submit}><div className="edo-input-field"><textarea aria-label="あなたの言葉" aria-describedby="edo-input-count" value={draft} onChange={(event) => setDraft(event.target.value)} onFocus={anchorMobileGame} maxLength={1000} placeholder="" disabled={isSending} /><span id="edo-input-count" className="edo-input-count">{draft.length} / 1000</span></div><button type="button" className="edo-conclude-button" onClick={() => setPanel("conclude")} disabled={isSending}>決着を求める</button><button type="submit" disabled={!draft.trim() || isSending} aria-label="言葉を交わす">{isSending ? <LoaderCircle className="edo-loading" size={25} /> : <Send size={28} />}</button></form>
+      {settlementFlow && createPortal(<section className={`edo-settlement-overlay edo-settlement-${settlementFlow.stage}`} aria-live="polite">
         {settlementFlow.stage === "government" ? <div className="edo-settlement-copy edo-government-reflection"><p>勝の言葉は、ここで終わりではない。</p><p>西郷の約束を、新政府が引き受けるのか。</p><p>明日の軍勢を止める判断が、今、問われている。</p></div> : <div className="edo-settlement-copy">
           <p className="edo-settlement-kicker">勝は、しばらく黙っている。</p>
           {settlementFlow.reflection.map((line, index) => <p className="edo-settlement-line" style={{ "--line-delay": `${index * 760}ms` }} key={line}>{line}</p>)}
           <div className="edo-settlement-response"><p>{settlementFlow.katsuResponse}</p>{settlementFlow.settlementResult === "ACCEPTED" && <p className="edo-outcome-line">勝海舟は、あなたの条件を受け入れた。</p>}{settlementFlow.settlementResult === "NOT_READY" && <button type="button" onClick={returnFromSettlement}>対談へ戻る</button>}{settlementFlow.settlementResult === "ACCEPTED" && <button type="button" onClick={proceedGovernmentDecision}>新政府側の判断へ</button>}{settlementFlow.settlementResult === "BREAKDOWN" && <button type="button" onClick={() => { finishRun(settlementFlow.endingCandidate || "breakdown", [...messages, { role: "saigo", text: "ここまでの条件を提示し、決着を求める。" }, { role: "katsu", text: settlementFlow.katsuResponse }]); }}>歴史の結末を見る</button>}</div>
         </div>}
-      </section>}
-      {panel && <div className="edo-modal-backdrop" role="presentation" onMouseDown={() => setPanel("")}><section className="edo-modal" role="dialog" aria-modal="true" aria-label={panel} onMouseDown={(event) => event.stopPropagation()}><button className="edo-modal-close" onClick={() => setPanel("")} aria-label="閉じる"><X size={22} /></button>
+      </section>, document.body)}
+      {panel && createPortal(<div className="edo-modal-backdrop" role="presentation" onMouseDown={() => setPanel("")}><section className="edo-modal" role="dialog" aria-modal="true" aria-label={panel} onMouseDown={(event) => event.stopPropagation()}><button className="edo-modal-close" onClick={() => setPanel("")} aria-label="閉じる"><X size={22} /></button>
         {panel === "history" && <><h2>会話履歴</h2><ol className="edo-history-list">{[...messages].reverse().map((message, reverseIndex) => { const index = messages.length - 1 - reverseIndex; return <li className={`edo-history-message ${message.role}`} key={`${message.role}-${index}`}><span>会話 {Math.floor(index / 2) + 1} · {message.role === "katsu" ? "勝海舟" : message.role === "government" ? "新政府" : "西郷隆盛"}</span><p>{message.text}</p></li>; })}</ol></>}
         {panel === "mission" && <><h2>使命</h2><div className="edo-note-list"><article><h3>江戸城の引渡し</h3><p>江戸城を新政府へ明け渡させる。</p></article><article><h3>軍事的脅威の除去</h3><p>旧幕府勢力が再び大規模な軍事行動を取れる状態を残さない。</p></article><article><h3>新政府が承認可能な合意</h3><p>西郷個人の情ではなく、新政府側へ持ち帰って成立させられる条件にする。</p></article></div><p className="edo-modal-lead">明日には総攻撃が予定されている。戦わずして目的を果たせるなら、それに越したことはない。</p></>}
         {panel === "notes" && <><h2>交渉ノート</h2><p className="edo-modal-lead">会談前に得た情報と、会話から引き出した情報だけが記録されます。</p><div className="edo-note-list">{discoveries.map((item) => <article key={item.id}><h3>{item.title}</h3><p>{item.text}</p></article>)}</div></>}
         {panel === "conclude" && <><h2>勝に決着を求めますか</h2><p className="edo-modal-lead">ここまでの条件について、勝に最終判断を求めます。勝がまだ受諾しなければ対談を続けられます。受諾した時点で約定は確定し、新政府の判断後も変更できません。</p><div className="edo-decision-actions"><button type="button" onClick={concludeNegotiation}>勝に答えを求める</button><button type="button" onClick={() => setPanel("")}>交渉を続ける</button></div></>}
         {panel === "usage" && <><h2>API使用量</h2><div className="edo-usage-grid"><span>使用Provider</span><b>{pricing?.provider || "Gemini"}</b><span>使用モデル</span><b>{model}</b><span>入力 / 出力 / Cached</span><b>{apiUsage.input.toLocaleString()} / {apiUsage.output.toLocaleString()} / {apiUsage.cached.toLocaleString()} tokens</b><span>概算API利用料</span><b>{cost ? <>{formatUsd(cost.usd)} <small>（{formatJpy(cost.jpy)}）</small></> : "このモデルの料金単価は未登録"}</b><span>会話ターン</span><b>{state.turns}</b><span>平均概算料金</span><b>{cost && state.turns > 0 ? <>{formatUsd(cost.usd / state.turns)} <small>（{formatJpy(cost.jpy / state.turns)}）</small></> : "—"}</b></div><p className="edo-modal-lead">Gemini APIの実レスポンスに含まれる usage を、この端末の同じゲーム記録に集計します。入力料金は Cached token を入力 token の内数として差し引いて概算します。{pricing ? ` ${pricing.updatedAt}確認の標準テキスト料金（入力 $${pricing.inputPricePerMillionTokens}／出力 $${pricing.outputPricePerMillionTokens}／Cached $${pricing.cachedInputPricePerMillionTokens}、各100万tokens、参考為替 1ドル=150円）です。` : "直接入力したモデルは料金単価を登録後に概算表示します。"}</p><a className="edo-external-link" href="https://ai.google.dev/gemini-api/docs/pricing" target="_blank" rel="noreferrer">詳細な料金の確認はこちらから <ExternalLink size={15} /></a></>}
         {panel === "settings" && settingsFields}
-      </section></div>}
+      </section></div>, document.body)}
     </main>
     <Footer onNavigate={onNavigate} />
   </>;
