@@ -1,104 +1,104 @@
 {
   "schemaVersion": 1,
   "status": "live",
-  "date": "2026-10-01",
-  "generatedAt": "2026-10-01T00:33:13.399Z",
+  "date": "2026-10-02",
+  "generatedAt": "2026-10-02T00:47:40.973Z",
   "model": "gemini-3.6-flash",
   "fallbackCategories": [],
   "items": [
     {
-      "id": "2026-10-01-politics_economy",
+      "id": "2026-10-02-politics_economy",
       "category": "politics_economy",
       "categoryLabel": "Politics & Economy",
-      "headline": "United States Completes Military Withdrawal From Iraq After Two Decades",
-      "summary": "The United States has formally completed the withdrawal of its military forces from Iraq, ending over twenty years of U.S. military presence in the country. Iraqi Prime Minister Ali al-Zaidi officially declared the conclusion of the U.S.-led coalition's mission, signaling a major transition in Middle Eastern security.",
-      "question": "What potential benefits or risks do you see for regional stability following the withdrawal of foreign military forces from Iraq?",
+      "headline": "Top Federal Reserve Officials Dampen Expectations for an October Interest Rate Hike",
+      "summary": "Senior Federal Reserve officials signaled that the U.S. central bank sees no urgent need to raise interest rates at its upcoming October policy meeting. The comments prompted financial markets to rapidly lower expectations for an immediate rate increase, driving a recovery in stock indexes as bond yields eased.",
+      "question": "How do interest rate decisions in major economies usually impact everyday consumers and businesses in your country?",
       "coachLeads": {
-        "friendly": "Hey, did you see the big news today about the U.S. completing its military withdrawal from Iraq?",
-        "energetic": "This is a massive historical turning point! The United States has officially ended its two-decade military presence in Iraq.",
-        "calm": "After more than twenty years, the U.S. has finalized the complete exit of its forces from Iraq.",
-        "direct": "The U.S. military has officially ended its mission and withdrawn all remaining troops from Iraq."
+        "friendly": "Hey, have you been following economic news lately? There's an interesting update on central bank interest rates that is worth talking about!",
+        "energetic": "Check this out! Major signals from top economic policymakers just shifted expectations across global markets!",
+        "calm": "Let's take a look at a key economic update that brought some stability to global markets today.",
+        "direct": "Federal Reserve officials signaled they are unlikely to raise interest rates this month, shifting market expectations immediately."
       },
       "sources": [
         {
           "title": "Google News: Politics & Economy",
-          "url": "https://news.google.com/search?q=Politics%20%26%20Economy%20top%20news%202026-10-01&hl=en-US&gl=US&ceid=US:en"
+          "url": "https://news.google.com/search?q=Politics%20%26%20Economy%20top%20news%202026-10-02&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     },
     {
-      "id": "2026-10-01-technology",
+      "id": "2026-10-02-technology",
       "category": "technology",
       "categoryLabel": "Technology",
-      "headline": "Google Launches First AI Prototype Satellite into Orbit with SpaceX",
-      "summary": "On October 1, Google launched a prototype satellite carrying four custom artificial intelligence processors aboard a SpaceX rocket as part of its Project Suncatcher initiative. The mission tests how AI hardware and specialized cooling systems withstand space radiation and orbital extremes to evaluate the future of space-based data centers.",
-      "question": "What potential benefits or drawbacks do you see in moving AI data centers from Earth into space?",
+      "headline": "SpaceX Crew-13 Sets Record for Fastest-Ever American Flight to Space Station",
+      "summary": "On October 1, 2026, SpaceX launched the Crew-13 mission carrying four astronauts to the International Space Station. The Crew Dragon spacecraft docked in just 7 hours and 55 minutes, setting a record for the fastest trip from launch to docking in U.S. spaceflight history.",
+      "question": "If you were offered the chance to spend six months living and working on the International Space Station, would you take it?",
       "coachLeads": {
-        "friendly": "Hey, have you heard about Google launching AI hardware into space today?",
-        "energetic": "This is incredible news! Google and SpaceX are officially testing AI data centers in orbit right now!",
-        "calm": "Take a look at this remarkable step toward running AI systems in space. It is definitely worth talking about.",
-        "direct": "Google launched its first orbital AI test today. Let's discuss what this could mean for the future of technology."
+        "friendly": "Hey, have you seen the latest space news today? A SpaceX crew made it to the space station faster than anyone expected!",
+        "energetic": "You're going to love this update from orbit! SpaceX just shattered the speed record for getting astronauts to the space station!",
+        "calm": "Space travel took another impressive step forward today. A new astronaut mission reached the International Space Station in under eight hours.",
+        "direct": "SpaceX just set a record for the fastest trip to the International Space Station. Here is what happened."
       },
       "sources": [
         {
-          "title": "mashable.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFZ5eB7eyj0ZQLtSCk1btXZLT2XFZUJFmoyvIC3VxJFE9_ltKW8G58N0zbwvLoSuNKNA4d7h_Sz2bpUZZQglVK8TV2mT18d_yBzHzi_I6ZptL316kxDw3PK0AjrA-MxDZnoUa6nejna5LMHLTKerMAiTa9cYn46_P-BwVUAdB0u_w=="
-        },
-        {
-          "title": "digg.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHBZP_QwDDxKA99FPDBYgrhksGt_tJQcc0MXvmRIjQKtAw_Zlrpg_zRIY2ZvS7fMGBIaf0jQoxs5TEl2WcmevbfB83SIEua2mkoIZHkPyHAeVtIcMY="
-        },
-        {
-          "title": "azernews.az",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFmEY0im_7ohT1TtJdR_WJpFOk5jIyDNvT7eGdIvtq5IH4cRvTJ0IrYQcYK6iCXqMgEDJEiVqoeBNbskAvp-H73hF5DO_dt7uLg_-Ih06jF-KQh5QpuQFDgaU6KX8ovncc="
+          "title": "Google News: Technology",
+          "url": "https://news.google.com/search?q=Technology%20top%20news%202026-10-02&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     },
     {
-      "id": "2026-10-01-sports",
+      "id": "2026-10-02-sports",
       "category": "sports",
       "categoryLabel": "Sports",
-      "headline": "Arsenal Surrenders Two-Goal Lead in 2-2 Draw With Paris FC in Women's Champions League",
-      "summary": "Arsenal surrendered a two-goal lead on Wednesday to draw 2-2 against Paris FC in their UEFA Women's Champions League match. Goals from Alessia Russo and Georgia Stanway put the English side ahead before Maeline Mendy scored an 86th-minute penalty equalizer for Paris FC.",
-      "question": "What strategies do you think teams should use to maintain focus and hold onto a lead late in a high-stakes match?",
+      "headline": "Manchester City and Real Madrid Draw 1-1 in Women's Champions League",
+      "summary": "Manchester City and Real Madrid played to a 1-1 draw in their UEFA Women's Champions League match on Thursday after Bunny Shaw's second-half goal canceled out Linda Caicedo's opener. The result keeps both European powerhouses undefeated in early group-stage action as the prestigious international tournament gets underway.",
+      "question": "What makes high-stakes international soccer matches like this so exciting for fans around the world?",
       "coachLeads": {
-        "friendly": "Hey there! Did you catch that dramatic Women's Champions League match yesterday between Arsenal and Paris FC?",
-        "energetic": "What an unbelievable finish in Paris as Arsenal let a two-goal lead slip away late! Let's break down how that wild comeback unfolded!",
-        "calm": "Yesterday's Champions League match served as a reminder of how fast momentum can shift in top-level football. Arsenal will certainly feel disappointed leaving Paris with only a draw.",
-        "direct": "Arsenal drew 2-2 with Paris FC on Wednesday after giving away a late penalty in the Women's Champions League. What were your main takeaways from the match?"
+        "friendly": "Hey, have you caught the news about the big Women's Champions League match yet? Manchester City and Real Madrid just played an incredible game, and it's worth talking about.",
+        "energetic": "What a thrilling match between Manchester City and Real Madrid! Big European nights like this always bring out high energy on the pitch.",
+        "calm": "Manchester City and Real Madrid shared the points in a closely fought Champions League fixture. It's a great example of how competitive top-tier European football is right now.",
+        "direct": "Manchester City held Real Madrid to a 1-1 draw in their Champions League clash on Thursday. Let's dive into what this result means for both clubs."
       },
       "sources": [
         {
+          "title": "washingtonpost.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFexCK4c_WNH3056mjy22XAD4hz4-O501n_HAWypLwLj98ey_EWlns2R9BwyczhI5HTbB3o0FOB1JIvRAfKhGPrHNeET-WBiIHO9DSQthoGN5N2kj-C7UcY6s3899MZsjzPaicDD4S5blJGef0BTp10P4tcfmo-3BqkkZq1R9d-jjMcMXURIR-_03pOBwB4CfG4EPH7Bl8k7xNcidSDjCW1inpFwZFpjPMx8LFqm1Y4BKmVgnL_8Tqx1P1tE7DWFIHeciQi2g=="
+        },
+        {
           "title": "theguardian.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFYTRKvOfml7F1Nr5puI_PWf6dEUQmVKlUG7KHd8UQaPvw-UP4UH5o1aAGdaG5m4bYgU7NjwI1eAaTm-Bmf5vQ1ITJ72IGQui3o1OIEQ9uGjm-kYEXOS-Uq3doqo4kc3umMDXsClfoiPq4sZczLduyJCMZmw-1ucbTaPFJ3czBtlyoOMgug8zikQhemMOhzkD6QuZsGY3ps20n9"
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH8mW6OHfnbn5A3DWbp45ckvFQENZvl9bKmxHLBNWoAa0RJ3tSX-xVn130_i6orFyKEI3uldY2x-_Gsr7sPhj2bWxZShCIgicBHsgNp2OI9UK4S9RwRYhdxCdbeBYA8-Ge2sRA81pGzG7C_GEsPXJpIO3DdtQjzkzJizS3HqCGqj3YFwv7gBtRD4qKMALCP8BigdFlwskAPJtkNZ-7FCBe8lU2dBdjy"
+        },
+        {
+          "title": "mancity.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHU4R375dzzGIM2q5zvwlr1SNehDYEJlGR2-bSVPA4r9AJEcRKpZTR0_bW3udb8LhxQZ-yww9JRwiFWRCyhr9XCK3ohBQckkfy-S7H4Oi4Z5qaGLW0YkwSHY9g2P5IobvJWah8N9Qrx5HXCxbtwU_1okdkgIpCW_Hknr2usS1ifymZBANejTGeToeUzR0_MDubKUKA2La3IDA=="
         }
       ]
     },
     {
-      "id": "2026-10-01-entertainment",
+      "id": "2026-10-02-entertainment",
       "category": "entertainment",
       "categoryLabel": "Entertainment",
-      "headline": "Sotheby's Unveils $450 Million Collection of Unseen Masterpieces by Van Gogh and Cézanne",
-      "summary": "On September 30, 2026, Sotheby's revealed a collection of twelve long-unseen Impressionist and post-Impressionist paintings valued at roughly $450 million. The rare private collection, which includes major works by Vincent van Gogh and Paul Cézanne, will go up for auction in New York on November 18.",
-      "question": "If you could own any famous painting or work of art in the world, which one would you choose and why?",
+      "headline": "Peacock Greenlights Live-Action Fast & Furious TV Series Produced by Vin Diesel",
+      "summary": "Streaming platform Peacock has officially greenlit a live-action Fast & Furious television series executive produced by franchise star Vin Diesel. Targeted for a 2028 premiere alongside the final movie release, the project marks the action franchise's major expansion into scripted television.",
+      "question": "What do you think about popular movie franchises expanding into TV shows, and is there a movie universe you would like to watch as a series?",
       "coachLeads": {
-        "friendly": "Hey there! Did you see the big art news today about a multi-million-dollar collection going up for auction?",
-        "energetic": "Get ready for a massive art world milestone, because a $450 million treasure trove of hidden masterpieces was just revealed!",
-        "calm": "Sotheby's has just announced a landmark sale of classic Impressionist paintings that haven't been seen publicly in decades.",
-        "direct": "A $450 million collection featuring rare works by Van Gogh and Cézanne was just unveiled for auction."
+        "friendly": "Hey, have you heard the big news for movie fans? A Fast & Furious TV series was just officially approved!",
+        "energetic": "Get ready for a wild ride! A Fast & Furious television series is officially happening, and it is coming to streaming in 2028!",
+        "calm": "Here is a major story from Hollywood today. The Fast & Furious film franchise is officially expanding into a live-action television show.",
+        "direct": "Peacock has greenlit a Fast & Furious television series with Vin Diesel as executive producer. Let's discuss what this means for the franchise."
       },
       "sources": [
         {
-          "title": "news4jax.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHbVtFn53kAmGMi3C04H2hlht9iVZyW--wLp86tZU4GxE7jYOiE1OYVLtgr5ocXmiFc_DLg3d4VfcRGl3CCMg-Z1pMB8xpzSDP_e52F481ldDVOgwyCMwZ9XKvieIpVtHQEa5RCWgMn80OHv-bF61bxq54nEHCdHsew8gZBRDAWx58IXfovZpUf48xyk-GSZcLOkqyOe_VN0szsDNjXkTUBIdwDRP3hbAGBIDgbgLxUb8c7"
+          "title": "ign.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHDwk9LCJMu9auqFWyZ9O5e8z54FVulYfjinFmXQS6CH74B-tGn4UK6-ltqZU2bphoL8aCTaZsXy9XhT7fwMcDAbSCPFs1Yz0O9F1MlmNbvTLdqxVewGI38MpGhOgMhCaCD-L4NKHn3uWI85qOLRjH3if-79sgDz8KhIeHjGuH12ghotA9tNsMix-qVuj2sSzmy2IxorT8JOUjbcLMOUNbNgw=="
         },
         {
-          "title": "wtvbam.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHOjRCiAEnIah39V1MynIws5mEg3mHeAoRYbmSBjrtECUclTtUMXVqpE3uKH15jXHOUwv5ja8OrKUMnWd1CMQ27Lhfmr4t5FvzuwAuNaP8C_gF7zXCq72Uyur6q4crOdxRl5rzjczcc0jf_gLkRXrXkHJwZqobiOMSPdER-YJgUwVZojBP-7O9lPxMeE5IJ9djpo_wfgJorlfQbm5Jns0IGXA39Je6YgLU="
+          "title": "thewrap.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFNQxF7CXs9zdlZb7PY1_At-S5q_SE_VtoMpo2Vw11Ba4EKgH5IXMGw9sfpsPqqyY1ozoIkssz6m55FxvJJiWE8bOmKbe6sK2kmJqZ2xIwkHDU0pk33v7tGui23Ft8IPE54E1vE8bRAr9v0UdhuL9sAOeiLCFIkGgrEg8KFZn7rZIiTY_fnAvJTnMNCtbIKDw7mgg=="
         },
         {
-          "title": "luxemagazineswitzerland.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFZX7vDMezqd50qLiSFut8b_StQYuG-W9DROgz2cWdWu57g58zX2qckj02t6zAdkeW5wZXXDMn3jgYBPmptqR2tkB77-rUhEtnNV02IiP4H8m5SSPW89vez1iMMBU6_QCCrPSDv0G7ow50bWxhCJcbeXw9rppu9BEUeUma3CzURGqGpuUCN_syEAboMDBafQhsasM3YMOXCywJHw06Cn4lLumdtkX990ThU37Ll2sszVuGDC3nlEivYNv1H7W648jv6kpzvc0414A=="
+          "title": "comicbook.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGyYQDxjl9dfnQxWdJU2aUFq5xgOpRpYBi3lHcHUrTiSyMLhiU68MA8JVvvdqBe51wY_aa9zEbAXr6pUnFiUN5nLEaah9ZBzRVSP-mtdvnSPS8YP-c5xUyNrsjLfyTFpWHrt2gdAgRgM7ZfcjhhNzUD-1DbRN6IKBWbRw4nvE04ED6NSHi0r9u-o6Kd3Vblm_J_3vrBHKeSdacrruWOYcTflfVjla-26VeGCJr4CEU="
         }
       ]
     }
