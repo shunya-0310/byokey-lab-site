@@ -1,104 +1,104 @@
 {
   "schemaVersion": 1,
   "status": "live",
-  "date": "2026-10-02",
-  "generatedAt": "2026-10-02T00:47:40.973Z",
+  "date": "2026-10-03",
+  "generatedAt": "2026-10-03T00:30:33.482Z",
   "model": "gemini-3.6-flash",
   "fallbackCategories": [],
   "items": [
     {
-      "id": "2026-10-02-politics_economy",
+      "id": "2026-10-03-politics_economy",
       "category": "politics_economy",
       "categoryLabel": "Politics & Economy",
-      "headline": "Top Federal Reserve Officials Dampen Expectations for an October Interest Rate Hike",
-      "summary": "Senior Federal Reserve officials signaled that the U.S. central bank sees no urgent need to raise interest rates at its upcoming October policy meeting. The comments prompted financial markets to rapidly lower expectations for an immediate rate increase, driving a recovery in stock indexes as bond yields eased.",
-      "question": "How do interest rate decisions in major economies usually impact everyday consumers and businesses in your country?",
+      "headline": "G7 Agrees to Release 100 Million Barrels of Emergency Oil Reserves",
+      "summary": "On October 2, Group of Seven leaders agreed to release 100 million barrels of crude oil and fuel from emergency reserves over four months, prioritizing an immediate release of diesel. The coordinated measure was launched to stabilize volatile energy markets and curb surging fuel prices caused by ongoing geopolitical conflicts.",
+      "question": "How do you think rising fuel prices impact daily life and the economy in your country?",
       "coachLeads": {
-        "friendly": "Hey, have you been following economic news lately? There's an interesting update on central bank interest rates that is worth talking about!",
-        "energetic": "Check this out! Major signals from top economic policymakers just shifted expectations across global markets!",
-        "calm": "Let's take a look at a key economic update that brought some stability to global markets today.",
-        "direct": "Federal Reserve officials signaled they are unlikely to raise interest rates this month, shifting market expectations immediately."
+        "friendly": "Hey, have you heard about the G7's new move on global energy prices? It is a key story worth looking at today.",
+        "energetic": "This is big news for the global economy! World leaders are stepping in to tackle surging fuel costs right now.",
+        "calm": "Energy markets are taking center stage in today's news. Let's discuss why major economies are tapping into their strategic oil reserves.",
+        "direct": "G7 leaders just agreed to release 100 million barrels of emergency oil. Here is why that matters today."
       },
       "sources": [
         {
-          "title": "Google News: Politics & Economy",
-          "url": "https://news.google.com/search?q=Politics%20%26%20Economy%20top%20news%202026-10-02&hl=en-US&gl=US&ceid=US:en"
+          "title": "pbs.org",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHzWnA0BLgo_NoOYoPIrHpVa9E788jlcdzascSrJhGi2UkZBIQeZpxxdLTuQt7vtulH8L-6H9uvv3JcBNR_ps56YsFDv3-fvS8VgOaF3k4tSujDlXVNE3QlEkZylR8SnM73pcThGuj1tzHcqLFsfvtSkHePCymqIlAjBO8fniEue3YvYMA6DnTCkOYuGScyeITSWIOvNlielbfoQ6U57V7c7OHhPA=="
+        },
+        {
+          "title": "globalbankingandfinance.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE4jTqp3XmrJLuPcUMIKJgabrUFoj0EhoM7hZY5oa7yx7aDIQadAJuuZIAjlw65P1q_7PVADbxHg2zDx1Lbo8x_E5LeMwRFDoPJ7JLMZ3E-iieP3tXw-3OxhnWPbxaJxFQE0yZm7DwsInJzu69JGVvppRbHSLATSXrqM1CM-wK8u778JRnl9PODVD-DnKb6ccrSS8lOYo0l"
         }
       ]
     },
     {
-      "id": "2026-10-02-technology",
+      "id": "2026-10-03-technology",
       "category": "technology",
       "categoryLabel": "Technology",
-      "headline": "SpaceX Crew-13 Sets Record for Fastest-Ever American Flight to Space Station",
-      "summary": "On October 1, 2026, SpaceX launched the Crew-13 mission carrying four astronauts to the International Space Station. The Crew Dragon spacecraft docked in just 7 hours and 55 minutes, setting a record for the fastest trip from launch to docking in U.S. spaceflight history.",
-      "question": "If you were offered the chance to spend six months living and working on the International Space Station, would you take it?",
+      "headline": "Google Launches AI Chips into Orbit to Test Space Data Centers",
+      "summary": "Google launched four custom artificial intelligence processing chips into low Earth orbit aboard a SpaceX Falcon 9 rocket as part of its experimental Project Suncatcher mission. The trial is testing whether AI hardware can withstand cosmic radiation and harsh thermal conditions to see if orbital data centers are feasible.",
+      "question": "Do you think building data centers in space is a practical solution for handling high power and cooling demands on Earth?",
       "coachLeads": {
-        "friendly": "Hey, have you seen the latest space news today? A SpaceX crew made it to the space station faster than anyone expected!",
-        "energetic": "You're going to love this update from orbit! SpaceX just shattered the speed record for getting astronauts to the space station!",
-        "calm": "Space travel took another impressive step forward today. A new astronaut mission reached the International Space Station in under eight hours.",
-        "direct": "SpaceX just set a record for the fastest trip to the International Space Station. Here is what happened."
+        "friendly": "Hey, have you heard about Google putting AI chips into space? It sounds like pure science fiction, but it is happening right now.",
+        "energetic": "This is big news! Google just sent AI hardware into orbit with SpaceX to test data centers in outer space!",
+        "calm": "Google has launched an experimental satellite to see how AI chips perform in orbit. It's an interesting approach to addressing massive energy and cooling requirements on Earth.",
+        "direct": "Google just launched AI chips into space on a SpaceX rocket. Here is why tech companies are looking to test orbital data centers."
       },
       "sources": [
         {
-          "title": "Google News: Technology",
-          "url": "https://news.google.com/search?q=Technology%20top%20news%202026-10-02&hl=en-US&gl=US&ceid=US:en"
+          "title": "techrepublic.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHvJyPKd5vut5zQ-UP4UbQnDtY7bGkn9Jp6pYfmZRdwx_KyK8VJNoJQqtBf2QLjf3F_B2OpcQiHd6qpZbWw37s64wZhrRXugLHaoUJOJ4qx72zCZKhHH7SyI66E9YrccAvMYUxLJtwS_8O0LEtJrk8hSWoRXoHXaitEQjS7ktOECaVaOieCEmaKaw=="
+        },
+        {
+          "title": "cybernews.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFUME825e2qNFOQEaRDUM75hJ8Vhi0kbmqKsOHl1Givx19Pf9em5M320AQ7u-R1jsjfMi6F0Mc9HGAZPrl82U7hKObfOC5wnfY4qGWHLCs4KpaNW2qZlZfvrb15Wa7FTG5PIPgnchfJqMOg"
         }
       ]
     },
     {
-      "id": "2026-10-02-sports",
+      "id": "2026-10-03-sports",
       "category": "sports",
       "categoryLabel": "Sports",
-      "headline": "Manchester City and Real Madrid Draw 1-1 in Women's Champions League",
-      "summary": "Manchester City and Real Madrid played to a 1-1 draw in their UEFA Women's Champions League match on Thursday after Bunny Shaw's second-half goal canceled out Linda Caicedo's opener. The result keeps both European powerhouses undefeated in early group-stage action as the prestigious international tournament gets underway.",
-      "question": "What makes high-stakes international soccer matches like this so exciting for fans around the world?",
+      "headline": "A'ja Wilson Powers Las Vegas Aces Past Indiana Fever into WNBA Semifinals",
+      "summary": "A'ja Wilson delivered 36 points and 10 rebounds to lead the Las Vegas Aces to a 94–83 Game 3 victory over Caitlin Clark and the Indiana Fever. The decisive win eliminated Indiana from the postseason and propelled the defending champion Aces into the WNBA semifinals.",
+      "question": "What do you think makes a star athlete most effective under intense playoff pressure?",
       "coachLeads": {
-        "friendly": "Hey, have you caught the news about the big Women's Champions League match yet? Manchester City and Real Madrid just played an incredible game, and it's worth talking about.",
-        "energetic": "What a thrilling match between Manchester City and Real Madrid! Big European nights like this always bring out high energy on the pitch.",
-        "calm": "Manchester City and Real Madrid shared the points in a closely fought Champions League fixture. It's a great example of how competitive top-tier European football is right now.",
-        "direct": "Manchester City held Real Madrid to a 1-1 draw in their Champions League clash on Thursday. Let's dive into what this result means for both clubs."
+        "friendly": "Hey, did you catch the big WNBA playoff game last night? It was such a thrill to watch!",
+        "energetic": "What an absolute powerhouse performance in the WNBA playoffs! You have to see what went down in Game 3!",
+        "calm": "There was a major matchup in the WNBA playoffs that is worth reviewing today. Let's go over how Game 3 unfolded.",
+        "direct": "The Las Vegas Aces just eliminated the Indiana Fever to reach the WNBA semifinals. Let's talk about what made the difference in this game."
       },
       "sources": [
         {
-          "title": "washingtonpost.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFexCK4c_WNH3056mjy22XAD4hz4-O501n_HAWypLwLj98ey_EWlns2R9BwyczhI5HTbB3o0FOB1JIvRAfKhGPrHNeET-WBiIHO9DSQthoGN5N2kj-C7UcY6s3899MZsjzPaicDD4S5blJGef0BTp10P4tcfmo-3BqkkZq1R9d-jjMcMXURIR-_03pOBwB4CfG4EPH7Bl8k7xNcidSDjCW1inpFwZFpjPMx8LFqm1Y4BKmVgnL_8Tqx1P1tE7DWFIHeciQi2g=="
-        },
-        {
-          "title": "theguardian.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH8mW6OHfnbn5A3DWbp45ckvFQENZvl9bKmxHLBNWoAa0RJ3tSX-xVn130_i6orFyKEI3uldY2x-_Gsr7sPhj2bWxZShCIgicBHsgNp2OI9UK4S9RwRYhdxCdbeBYA8-Ge2sRA81pGzG7C_GEsPXJpIO3DdtQjzkzJizS3HqCGqj3YFwv7gBtRD4qKMALCP8BigdFlwskAPJtkNZ-7FCBe8lU2dBdjy"
-        },
-        {
-          "title": "mancity.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHU4R375dzzGIM2q5zvwlr1SNehDYEJlGR2-bSVPA4r9AJEcRKpZTR0_bW3udb8LhxQZ-yww9JRwiFWRCyhr9XCK3ohBQckkfy-S7H4Oi4Z5qaGLW0YkwSHY9g2P5IobvJWah8N9Qrx5HXCxbtwU_1okdkgIpCW_Hknr2usS1ifymZBANejTGeToeUzR0_MDubKUKA2La3IDA=="
+          "title": "Google News: Sports",
+          "url": "https://news.google.com/search?q=Sports%20top%20news%202026-10-03&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     },
     {
-      "id": "2026-10-02-entertainment",
+      "id": "2026-10-03-entertainment",
       "category": "entertainment",
       "categoryLabel": "Entertainment",
-      "headline": "Peacock Greenlights Live-Action Fast & Furious TV Series Produced by Vin Diesel",
-      "summary": "Streaming platform Peacock has officially greenlit a live-action Fast & Furious television series executive produced by franchise star Vin Diesel. Targeted for a 2028 premiere alongside the final movie release, the project marks the action franchise's major expansion into scripted television.",
-      "question": "What do you think about popular movie franchises expanding into TV shows, and is there a movie universe you would like to watch as a series?",
+      "headline": "Oasis Blocks Auction of Unheard 1990s Recording Archive",
+      "summary": "British rock band Oasis filed legal action to halt the planned auction of 'The Desk Tapes,' a rare archive containing over 100 hours of 1990s live performances, rehearsals, and private band conversations. Littleton Auctions confirmed the collection was withdrawn after the band sued their former sound engineer and his son over intellectual property rights.",
+      "question": "How do you feel about unreleased private recordings of famous musicians being sold at public auctions?",
       "coachLeads": {
-        "friendly": "Hey, have you heard the big news for movie fans? A Fast & Furious TV series was just officially approved!",
-        "energetic": "Get ready for a wild ride! A Fast & Furious television series is officially happening, and it is coming to streaming in 2028!",
-        "calm": "Here is a major story from Hollywood today. The Fast & Furious film franchise is officially expanding into a live-action television show.",
-        "direct": "Peacock has greenlit a Fast & Furious television series with Vin Diesel as executive producer. Let's discuss what this means for the franchise."
+        "friendly": "Hey, did you hear about the legal drama with Oasis and their secret 1990s tapes? It is quite a story!",
+        "energetic": "Check this out! Oasis just stepped in to block a massive auction of over 100 hours of their unreleased recordings!",
+        "calm": "There is a notable story in music news today about Oasis taking legal action to protect their unreleased archives.",
+        "direct": "Oasis just filed a lawsuit to stop an auction house from selling 100 hours of rare 1990s band recordings."
       },
       "sources": [
         {
-          "title": "ign.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHDwk9LCJMu9auqFWyZ9O5e8z54FVulYfjinFmXQS6CH74B-tGn4UK6-ltqZU2bphoL8aCTaZsXy9XhT7fwMcDAbSCPFs1Yz0O9F1MlmNbvTLdqxVewGI38MpGhOgMhCaCD-L4NKHn3uWI85qOLRjH3if-79sgDz8KhIeHjGuH12ghotA9tNsMix-qVuj2sSzmy2IxorT8JOUjbcLMOUNbNgw=="
+          "title": "theguardian.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGd5JWZa1mMozvV52EXKHjsiMzWkTFLSXIxZv5vkHx-u_yAQp-dSjWCZ9DJTIxWjoHqIFlG9DzhfqFuZm8CEqfmR7nth5m0YJTgHiH7l-5iZeSOIL9TknbvhLYJw9ij9iUjU8vMyOY3cWf9YfKQQBXgFVN8SViXUcmZni9Qj1Itjwmb20BlLWsMd2wx2IDgCzSd"
         },
         {
-          "title": "thewrap.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFNQxF7CXs9zdlZb7PY1_At-S5q_SE_VtoMpo2Vw11Ba4EKgH5IXMGw9sfpsPqqyY1ozoIkssz6m55FxvJJiWE8bOmKbe6sK2kmJqZ2xIwkHDU0pk33v7tGui23Ft8IPE54E1vE8bRAr9v0UdhuL9sAOeiLCFIkGgrEg8KFZn7rZIiTY_fnAvJTnMNCtbIKDw7mgg=="
+          "title": "loudersound.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHGlShHWQ95uc9EqLeo63EAJO-l4QuOCaXpOjL2BmdTr0JwQ7VW5GbC3fYpgzCXZsicFJSjG6Z3lTPyF7y5nGyPyHQZQZ-7rg5D1Yo5rDi1Exv1F4-MOLzmQJN2EFerfSQ6NOBbTmNZwD5LzkuDLVDEGFpAjbAp33L4XQiGYGbAWDol3IVLSdxJXY0GNDZp1IPt62ApFPgJpRZTcPCYtClvaHUy-kQ4"
         },
         {
-          "title": "comicbook.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGyYQDxjl9dfnQxWdJU2aUFq5xgOpRpYBi3lHcHUrTiSyMLhiU68MA8JVvvdqBe51wY_aa9zEbAXr6pUnFiUN5nLEaah9ZBzRVSP-mtdvnSPS8YP-c5xUyNrsjLfyTFpWHrt2gdAgRgM7ZfcjhhNzUD-1DbRN6IKBWbRw4nvE04ED6NSHi0r9u-o6Kd3Vblm_J_3vrBHKeSdacrruWOYcTflfVjla-26VeGCJr4CEU="
+          "title": "wdhafm.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGT8BkAosqNpaWOr2XBb_Nzf9jSHJ8kQVe_Vat9IyfxwkpH-Sc2QXUto_Cm08lYBi7LKW6GEkNS5CCSxHX9FKE0PyPzQ5ut4ZR2N_4KtgoUmx9uFRWnCHjBLNoua1ESCdWs3RWmrhhqGSFubNY2CDBzLe0ko4YLjaWZebBPGUpGqSB7xBdXQtbk7kl_yXPAZt328XwANnjrqQvrnRnoXgYs_fC4"
         }
       ]
     }
