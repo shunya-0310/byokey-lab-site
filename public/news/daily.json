@@ -1,88 +1,104 @@
 {
   "schemaVersion": 1,
   "status": "live",
-  "date": "2026-10-04",
-  "generatedAt": "2026-10-03T23:46:38.441Z",
+  "date": "2026-10-05",
+  "generatedAt": "2026-10-04T23:57:34.975Z",
   "model": "gemini-3.6-flash",
   "fallbackCategories": [],
   "items": [
     {
-      "id": "2026-10-04-politics_economy",
+      "id": "2026-10-05-politics_economy",
       "category": "politics_economy",
       "categoryLabel": "Politics & Economy",
-      "headline": "G7 Nations Agree to Release 100 Million Barrels from Emergency Oil Reserves",
-      "summary": "Group of Seven nations agreed to release 100 million barrels of oil and diesel from emergency reserves over four months to calm international energy markets. The coordinated measure responds to recent spikes in fuel prices and growing economic volatility worldwide.",
-      "question": "How do you think fluctuating global energy prices impact daily life and businesses in your country?",
+      "headline": "Brazil Holds High-Stakes Presidential Election as Lula and Flávio Bolsonaro Face Off",
+      "summary": "Voters across Brazil cast their ballots on October 4, 2026, in a tightly contested first-round presidential election between incumbent President Luiz Inácio Lula da Silva and Senator Flávio Bolsonaro. With neither frontrunner expected to secure over 50% of the vote, the election is set to head to a decisive October 25 runoff that will shape the political and economic direction of Latin America's largest nation.",
+      "question": "What key factors do you think voters consider most when deciding between experienced leaders and newer political figures in major elections?",
       "coachLeads": {
-        "friendly": "Hey, have you heard about the big move in global energy today? The G7 countries are opening up their emergency oil reserves, and it is a really interesting topic to break down.",
-        "energetic": "Major economic news just dropped today! The G7 is releasing 100 million barrels of emergency oil to stabilize global markets—let's jump right into this story!",
-        "calm": "There is a significant economic story making headlines today. Top world leaders have agreed to release emergency oil stockpiles to stabilize rising energy costs.",
-        "direct": "The G7 nations just announced a joint release of 100 million barrels from emergency energy reserves. Let's talk about why this policy decision matters right now."
+        "friendly": "Hey, have you been following the big election news out of Latin America? Brazil just held its presidential vote, and it's shaping up to be a really fascinating race.",
+        "energetic": "Brazil's major presidential election is officially underway, and the vote is setting up an intense runoff! Let me know if you want to break down what's happening.",
+        "calm": "Brazil held the first round of its presidential election over the weekend, leading to a closely watched runoff. It's an important moment in global politics that is worth discussing together.",
+        "direct": "Brazil's voters just cast their ballots in a high-stakes presidential election that will determine the country's future direction. Let's talk about what this means for world politics."
       },
       "sources": [
         {
-          "title": "Google News: Politics & Economy",
-          "url": "https://news.google.com/search?q=Politics%20%26%20Economy%20top%20news%202026-10-04&hl=en-US&gl=US&ceid=US:en"
+          "title": "pbs.org",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEt0mZM_w6GzWYuWOiaIOvDcdXs_fCx7yagCaWUQtfJ13O0jMdDb-NG5Cl4aNUtlHqKXhhDngan4PTgysVWpsdbP_qpS0E2NY4HvZHO3-_mL3-t3YlQB8BCjaBE29hpyHsv7S1Fc_aOpdTvt5okEwb67Bjmds1it3JIkQYCDGIrRJGzSkH5PM-bXXJ579M8Mp80iyVckh9Rsg=="
+        },
+        {
+          "title": "hudson.org",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHYnwtojmCsWYCYPO6qpjeuGtKnHnrPOu_f_oG1XUtMJKJqt8i9vkkJEg2apy_F4P54REJyn7rTAMegXCM7nj8iUisriyNR_toB5H3dMjqyyaADdMtoJczb3S_YHCtoptcF4Ig0VwBwBrrxZ8TqfSPPeOvfjfLALVvI49P7tHzwzyOhGlAytEdqitY="
         }
       ]
     },
     {
-      "id": "2026-10-04-technology",
+      "id": "2026-10-05-technology",
       "category": "technology",
       "categoryLabel": "Technology",
-      "headline": "OpenAI Safety Leader Resigns, Warning That AI Development Culture Is Broken",
-      "summary": "On October 3, former OpenAI safety lead David Robinson announced his resignation and published an essay warning that the tech giant's fast-paced culture prioritizes rapid deployment over caution. He argued that AI developers must abandon trial-and-error methods and instead adopt rigorous safety standards similar to aviation and nuclear power.",
-      "question": "Do you think tech companies should slow down AI development until stricter safety rules are established, or is rapid innovation more important?",
+      "headline": "US Appoints Intelligence Chief Jay Clayton to Lead New White House AI Task Force",
+      "summary": "US President Donald Trump has appointed Director of National Intelligence Jay Clayton to lead a new federal task force called the Super Intelligence Force to coordinate artificial intelligence policy. The decision follows voluntary safety agreements between the administration and leading technology firms, bringing government oversight and national security concerns to center stage.",
+      "question": "Do you think government intelligence officials should oversee AI development, or should tech companies handle regulation themselves?",
       "coachLeads": {
-        "friendly": "Hey, did you catch the latest story about OpenAI's safety team? It really makes you think about how fast technology is moving.",
-        "energetic": "Check out this major story breaking in the AI world! A key insider just resigned and spoke out, and everyone is talking about it.",
-        "calm": "There is an important new story unfolding about artificial intelligence safety. It raises some thoughtful questions worth discussing.",
-        "direct": "An OpenAI safety leader just resigned, warning that the industry's culture is broken. Let's talk about what this means for tech."
+        "friendly": "Hey, have you heard about the latest government move on artificial intelligence? This is definitely worth talking about!",
+        "energetic": "Check out this huge AI policy update! A brand-new government task force was just announced to guide artificial intelligence!",
+        "calm": "There is a notable shift in artificial intelligence governance today. Let's take a moment to discuss what this new task force means.",
+        "direct": "The US government just named an intelligence chief to lead a new AI task force. Let's talk about how this could impact tech policy."
       },
       "sources": [
         {
           "title": "Google News: Technology",
-          "url": "https://news.google.com/search?q=Technology%20top%20news%202026-10-04&hl=en-US&gl=US&ceid=US:en"
+          "url": "https://news.google.com/search?q=Technology%20top%20news%202026-10-05&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     },
     {
-      "id": "2026-10-04-sports",
+      "id": "2026-10-05-sports",
       "category": "sports",
       "categoryLabel": "Sports",
-      "headline": "Surprises at China Open as Top Seed Rybakina Falls in Beijing",
-      "summary": "Top seed Elena Rybakina suffered a dramatic second-round exit at the China Open in Beijing after being upset by Alina Charaeva. Meanwhile, home favorite Zheng Qinwen advanced to the third round following the retirement of her opponent Anna Kalinskaya.",
-      "question": "How do you think elite athletes mentally bounce back after suffering an unexpected loss in a major tournament?",
+      "headline": "Marc Marquez Wins Japanese Grand Prix to Narrow MotoGP Title Gap",
+      "summary": "Ducati rider Marc Marquez won the Japanese Grand Prix at Motegi on Sunday, completing a weekend sweep after winning Saturday's sprint race. By finishing ahead of title rival Jorge Martin, Marquez slashed Martin's championship lead to just two points heading into the next round.",
+      "question": "What do you think makes close championship battles so exciting for sports fans?",
       "coachLeads": {
-        "friendly": "Hey, did you catch the latest tennis action from Beijing? There was a huge upset at the China Open that has fans talking.",
-        "energetic": "What an incredible day of action at the China Open! A top seed went down in a huge shocker while local fans got to celebrate a big win!",
-        "calm": "There were some intriguing developments at the China Open in Beijing today. It offers a great chance to discuss how competitors deal with sudden pressure.",
-        "direct": "Top seed Elena Rybakina was knocked out early at the China Open while home favorite Zheng Qinwen moved on. Let's dive into this story."
+        "friendly": "Hey, have you heard about the big race in Japan this weekend? It turned into an incredible battle for the championship.",
+        "energetic": "Marc Marquez just swept the Japanese Grand Prix weekend, and the title race is down to two points!",
+        "calm": "Marc Marquez took victory at the Japanese Grand Prix on Sunday. It has set up an intense title battle for the remainder of the season.",
+        "direct": "Marc Marquez won the Japanese Grand Prix on Sunday, cutting Jorge Martin's championship lead to just two points."
       },
       "sources": [
         {
-          "title": "Google News: Sports",
-          "url": "https://news.google.com/search?q=Sports%20top%20news%202026-10-04&hl=en-US&gl=US&ceid=US:en"
+          "title": "motogp.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHY-M2Rw4J4YcZCekagE4SBBpA3fTaeMRMEJJOz7-FUNEV0Wx2Obw54lEn26ILB9lVey6wbhQk-qV9JUcgTkyi7AFJ4CtcOmRO8A1gVsn3YQrE00ltBXKRCpB1LZGZ6pu0cHCMMEvPAFB5DcOLfpFLv2iWSR7239cvETtk1lq-Y_Qxqk4UPDct2G5O_3Wv_rS0iLWt_nG95nefDGcepkQ3gwluJaxyM4Ta7Z0Y="
+        },
+        {
+          "title": "straitstimes.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGbRN7efaogMJg-zlmeC0jhg-SsMlUlsNR7ohTyznniJ0CsdCKPcz1l8aEv8ogS4UVt232igKdIa4hiA3rRAZ91wmrgsQa-9XosY89DBAgB54VuJ4cRuH9jiv88RZMNjCauQCPo7EQPMdlMcnV1KoldnCg5DEDEX0PuGSWt1zDs3ePYX1dxG4wwcz3gEw0WcBk="
         }
       ]
     },
     {
-      "id": "2026-10-04-entertainment",
+      "id": "2026-10-05-entertainment",
       "category": "entertainment",
       "categoryLabel": "Entertainment",
-      "headline": "Greece and Bulgaria Exchange Historic Relics in Landmark Cultural Agreement",
-      "summary": "On October 3, 2026, Greece and Bulgaria signed a landmark cultural agreement in Thessaloniki to resolve a century-old heritage dispute. Greece handed over the remains of medieval ruler Tsar Samuel, while Bulgaria returned 48 sacred religious artifacts taken during World War I.",
-      "question": "How do you think returning historical artifacts to their places of origin affects modern relationships between countries?",
+      "headline": "Anne Hathaway's 'Verity' Tops Weekend Box Office as Tom Cruise's 'Digger' Stumbles",
+      "summary": "The psychological thriller 'Verity' claimed the top spot at the weekend box office with an estimated $32.6 million domestic debut. Meanwhile, Tom Cruise's high-budget dark comedy 'Digger' struggled during its opening weekend, generating just $8 million in North America.",
+      "question": "What kind of movies do you prefer watching at the theater compared to streaming at home?",
       "coachLeads": {
-        "friendly": "Hey, have you heard about this amazing story from Europe? Two nations just traded back some incredible pieces of history, and it is worth talking about!",
-        "energetic": "Check this out! Greece and Bulgaria just made history by exchanging lost treasures and resolving a century-old dispute!",
-        "calm": "Here is a thoughtful news story about heritage and diplomacy. Take a moment to read it, and let's chat whenever you're ready.",
-        "direct": "Greece and Bulgaria just finalized a major cultural artifact exchange. Let's discuss what this event means for international heritage."
+        "friendly": "Hey! Have you seen any good movies lately? There is some big news about this weekend's box office results.",
+        "energetic": "What a surprising weekend at the movie theaters! You won't believe how these two major films performed at the box office!",
+        "calm": "There were some interesting developments at the box office over the weekend. Let me catch you up on the top movie news.",
+        "direct": "Here is the top entertainment story from this weekend's box office. Let's talk about how these star-studded films performed."
       },
       "sources": [
         {
-          "title": "Google News: Entertainment",
-          "url": "https://news.google.com/search?q=Entertainment%20top%20news%202026-10-04&hl=en-US&gl=US&ceid=US:en"
+          "title": "boxofficepro.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFhzI5UsWoRLfK3xbHGn9ckTsRbTp8Bt9CuRUNQdGOCJjjqdHrfB_ijgnIxNxyYB0ICzdabdf_Y1UE_AXNweZxsdB4zvPapYOmgJOoD4rM3DQj16NcGgD2uWfWlGsuzjT1acMDOoOm3o3vZcNCGKMU89NYLILotS7Uqyt45UjvVsVu0PMF0qxbyUIa3MCKoiubXAebSjG8="
+        },
+        {
+          "title": "tradingview.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFA_KDjHT6nNMFW2eEyQf7bMVNAyJ0ey-GPbjxLZ_-4dSB-XFytFum_A65eyjKzFSQaL_fR5kpOe6BeIm9c0i2tyqN6k00EaMqRrrQK6kjh3lVzZ6OTP615-Yap5dyIe9KhW_3_b7TNeUM3MVdbTNsHf-YkXVyr_3Wb6U20s8cljUZPYzNeZqFLmi-Ql6xW88woT0K5y90ueRdRXejgjHmyHoNoYNO0X2Us"
+        },
+        {
+          "title": "mediaplaynews.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF2mQf_CEqWIbDRVENoXuXkzfT1wd9mwIZarWtIG8fbIDxc-NRoaGfxqbk7f_h0MDBk0SgAV-HEWHNHqQuJ-MvXhnedOZ10pNc64KqN2sqPhJF8xAkP0IMh8uKQjkrl6NG5bnEHF7-UGVyAf2B4rrRIoKz4jk0mR0FoG6krIlNdXFFc88HIKZVuqb4n1AphOPKNjX_FAGadHtYIV2vZMWvhsgg7om7AMxLtt82e"
         }
       ]
     }
