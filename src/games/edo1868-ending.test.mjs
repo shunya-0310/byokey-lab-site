@@ -108,7 +108,7 @@ for(const [clauses,expected] of [[feasiblePeaceClauses,'bloodless'],[fragilePeac
  else assert.match(record.endingNarrative,/総攻撃の命令は取り下げられた/);
  if(expected==='fragile_handover'){
   const restored=restoreCompletedRun({...record,endingTitle:'不安定な引渡し'});
-  assert.equal(restored.endingTitle,'薄氷の和平');
+  assert.equal(restored.endingTitle,'和平成立');
   assert.equal(restored.id,record.id);
  }
 }

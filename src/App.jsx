@@ -5,7 +5,7 @@ import { governmentMessage } from "./games/edo1868-clauses.js";
 import byokeyLabLogo from "./assets/byokey-lab-logo.png";
 import { articleCatalog, getArticle } from "./articles.js";
 import { SPEAK_APP_URL, absoluteUrl, buildJsonLd, getSeoForPath } from "./seo.js";
-import { ENDINGS, EXPRESSION_ASSETS, GAME_DATE, GEMINI_MODELS, HISTORICAL_SOURCES, INITIAL_DISCOVERIES, INITIAL_STATE, MODEL_PRICING, characterBible, canContinueNegotiation, determineGovernmentOutcome, submitGovernmentReview, estimateApiCost, evaluateMessage, evaluateSettlement, reconcileNegotiationState, requestKatsuResponse } from "./games/edo1868.js";
+import { endingStars, ENDINGS, EXPRESSION_ASSETS, GAME_DATE, GEMINI_MODELS, HISTORICAL_SOURCES, INITIAL_DISCOVERIES, INITIAL_STATE, MODEL_PRICING, characterBible, canContinueNegotiation, determineGovernmentOutcome, submitGovernmentReview, estimateApiCost, evaluateMessage, evaluateSettlement, reconcileNegotiationState, requestKatsuResponse } from "./games/edo1868.js";
 import {
   ArrowRight,
   BadgeDollarSign,
@@ -713,7 +713,7 @@ function Edo1868Page({ onNavigate, path }) {
   if (isResultRoute && !gameHydrated) return <main className="edo-result"><p role="status">交渉記録を読み込んでいます。</p></main>;
   if (isResultRoute && !completedRun) return <main className="edo-result"><article><h1 tabIndex={-1}>交渉記録はまだありません</h1><p>このブラウザに保存された結末が見つかりませんでした。</p><button onClick={showTitle}>タイトルへ戻る</button></article></main>;
   if (resultPath === ENDING_PATH && completedRun) return <main className="edo-result"><article>
-    <header><p>あなたがたどり着いた歴史</p><h1 tabIndex={-1}>{completedRun.endingTitle}</h1><p className="edo-outcome-line">{completedRun.outcomeLine}</p></header>
+    <header><p>あなたがたどり着いた歴史</p><p className="edo-ending-stars" aria-label={`5段階中${completedRun.stars}つ星`}>{endingStars(completedRun.endingId)}</p><h1 tabIndex={-1}>{completedRun.endingTitle}</h1><p className="edo-outcome-line">{completedRun.outcomeLine}</p></header>
     <div className="edo-ending-narrative">{completedRun.endingNarrative.split("\n\n").map((paragraph, index) => <p key={index}>{paragraph}</p>)}</div>
     {saveWarning && <p role="status">{saveWarning}</p>}
     <button type="button" onClick={openReview}><BookOpen size={17} />交渉を振り返る <ArrowRight size={17} /></button>
@@ -721,7 +721,7 @@ function Edo1868Page({ onNavigate, path }) {
   if (resultPath === REVIEW_PATH && completedRun) return <main className="edo-review">
     <article>
       <header><p>三月十四日、その夜の言葉</p><h1 tabIndex={-1}>今夜の交渉記録</h1><p>あなたと勝海舟が交わした言葉を振り返る。</p></header>
-      <section><h2>今回の結末</h2><h3>{completedRun.endingTitle}</h3><p>{completedRun.summary || completedRun.outcomeLine}</p></section>
+      <section><h2>今回の結末</h2><p className="edo-ending-stars" aria-label={`5段階中${completedRun.stars}つ星`}>{endingStars(completedRun.endingId)}</p><h3>{completedRun.endingTitle}</h3><p>{completedRun.summary || completedRun.outcomeLine}</p></section>
       <section><h2>会談で交わした約定</h2><p>ここに記すのは約束の内容です。履行済みを意味するものではありません。</p><div className="edo-note-list">{describeAgreedTerms(completedRun.settlementSnapshot).map((terms,index)=><article key={index}><p style={{whiteSpace:"pre-wrap"}}>{terms}</p></article>)}</div></section>
       <section><h2>交渉ノート</h2><div className="edo-note-list">{completedRun.discoveredInformation.map((item, index) => <article key={`${item.id}-${index}`}><h3>{item.title}</h3><p>{item.text}</p></article>)}</div></section>
       <section><h2>会話履歴</h2><button type="button" onClick={() => setAllHistoryOpen((value) => !value)}>{allHistoryOpen ? "すべて閉じる" : "すべて展開"}</button><div className="edo-review-history">{completedRun.conversationHistory.map((message, index) => <details key={`${index}-${allHistoryOpen}`} open={allHistoryOpen}><summary>{index + 1}. {message.role === "katsu" ? "勝海舟" : message.role === "government" ? "新政府" : "西郷隆盛（あなた）"}</summary><p>{message.text}</p></details>)}</div></section>

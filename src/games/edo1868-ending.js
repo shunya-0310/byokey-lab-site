@@ -1,10 +1,10 @@
 import { activeClauses, agreementVersion, governmentMessage } from './edo1868-clauses.js';
-import { ENDINGS, NEGOTIATION_ISSUES, createCompletedRun } from './edo1868.js';
+import { ENDING_RATINGS, ENDINGS, NEGOTIATION_ISSUES, createCompletedRun } from './edo1868.js';
 
 export const GAME_ROOT = '/games/edo-1868/';
 export const REVIEW_PATH = `${GAME_ROOT}review`;
 export const ENDING_PATH = `${GAME_ROOT}ending`;
-const peaceful = new Set(['bloodless', 'alternative_peace', 'fragile_handover']);
+const peaceful = new Set(['bloodless', 'alternative_peace', 'fragile_handover', 'ceasefire']);
 const freezeCopy = (source) => {
   const copy = JSON.parse(JSON.stringify(source));
   const freeze = (value) => { if (value && typeof value === 'object') { Object.values(value).forEach(freeze); Object.freeze(value); } return value; };
@@ -54,6 +54,12 @@ export function describeAgreedTerms(snapshot) {
 export function describeSettlement(snapshot) {
  const {endingId,katsuAccepted,governmentAccepted,acceptedTerms}=snapshot;
  const fragile=endingId==='fragile_handover';
+ if(endingId==='ceasefire'&&governmentAccepted)return {
+  title:ENDINGS.ceasefire.title,outcomeLine:ENDINGS.ceasefire.outcomeLine,
+  summary:'勝海舟と新政府は停戦の約定を受け入れた。戦闘は避けられたが、恒久的な和平は成立していない。',
+  narrative:'勝海舟は、あなたと交わした停戦の条件を受け入れた。新政府も、その約定を承認した。夜を越えて、戦闘を見合わせる命令が両軍へ届いた。\n\n翌朝、江戸に砲声は響かなかった。人々は息をひそめて、静かな空を見上げた。\n\n両軍の備えは解かれず、向かい合う陣の間には距離が残った。江戸を新しい時代へ渡す道筋は、まだ一本にはつながっていない。\n\nあなたは一日を救った。しかし、戦争を終わらせたわけではなかった。',
+ };
+
  const facts=acceptedTerms.flatMap(t=>t.facts||[]);
  const has=(dimension,value)=>facts.some(f=>f.dimension===dimension&&f.value===value);
  const negotiated=katsuAccepted
@@ -65,6 +71,7 @@ export function describeSettlement(snapshot) {
   : '新政府へ届ける和平案はまとまらず、軍を止める決定も得られなかった。';
  const morning=governmentAccepted
   ? (fragile ? '翌朝、江戸に砲声は響かなかった。それでも、城下を行く人々の足取りは重い。両軍の間には、まだ警戒が残っていた。' : '翌朝、江戸に砲声は響かなかった。町には戸を開く音が戻り、人々は戦火に追われることなく朝を迎えた。')
+  : endingId==='breakdown' ? '夜明けとともに両軍が動き始めた。江戸の町には、遠くの軍勢を案じる声が広がった。'
   : endingId==='scorched' ? '夜が明けると戦闘は市中へ広がり、人々は火の手を避けて住み慣れた町を離れた。'
   : endingId==='assault' ? '夜明けとともに新政府軍が進み、城下には戦の音が迫った。人々は家を離れ、避難の道を探した。'
   : '夜が明けても、両軍は警戒を解けなかった。町には再び緊張が広がり、人々は遠くの物音に耳を澄ませていた。';
@@ -90,7 +97,7 @@ export function createEndingRun({ endingId, state, messages, discoveries, comple
 }
 
 function publicConversation(messages, snapshot) {
-  return messages.map(message => message.role === 'government' ? { ...message, text: governmentMessage({status: snapshot?.governmentAccepted ? 'approved' : 'changes_requested'}) } : message);
+  return messages.map(message => message.role === 'government' ? { ...message, text: governmentMessage({status: snapshot?.governmentAccepted ? 'approved' : 'changes_requested',outcome:snapshot?.endingId}) } : message);
 }
 
 export function restoreCompletedRun(value, matchingSavedState) {
@@ -100,7 +107,7 @@ export function restoreCompletedRun(value, matchingSavedState) {
   if (value.version === 2 && typeof value.id === 'string' && typeof value.endingNarrative === 'string' && typeof value.outcomeLine === 'string' && typeof value.endingTitle === 'string') {
     const snapshot = value.settlementSnapshot || createSettlementSnapshot(value.endingId, matchingSavedState, {legacy:true});
     const presentation = describeSettlement(snapshot);
-    return freezeCopy({...value, settlementSnapshot: snapshot, endingTitle: presentation.title, summary: presentation.summary, endingNarrative: presentation.narrative, outcomeLine: presentation.outcomeLine, conversationHistory: publicConversation(value.conversationHistory, snapshot)});
+    return freezeCopy({...value, stars: ENDING_RATINGS[value.endingId], settlementSnapshot: snapshot, endingTitle: presentation.title, summary: presentation.summary, endingNarrative: presentation.narrative, outcomeLine: presentation.outcomeLine, conversationHistory: publicConversation(value.conversationHistory, snapshot)});
   }
   // Historical saves retain their recorded ending. Missing terms are not
   // reconstructed from the old transcript and obsolete prose is not reused.

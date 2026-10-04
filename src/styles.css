@@ -636,3 +636,5 @@ footer small { grid-column: 1 / -1; color: var(--muted); }
 
 .edo-stage-form:has(.edo-send-error){flex-wrap:wrap}
 .edo-send-error{flex:0 0 100%;box-sizing:border-box;margin:0;padding:6px 8px;background:#402426;color:#fff1df;font-size:13px;line-height:1.5}
+
+.edo-result .edo-ending-stars,.edo-review .edo-ending-stars{color:#dfc18b;font-size:clamp(24px,5vw,36px);letter-spacing:.14em;line-height:1.4;white-space:nowrap;margin:.7rem 0}

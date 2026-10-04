@@ -26,6 +26,7 @@ const FACT_MEANINGS={
  employment:'all_applicantsは希望者全員に必ず職を与える保証。全員を採用して能力で職種を割り当てる場合もall_applicants。selectionは能力や職枠によって採用されない希望者がいる選抜。職種の割当基準と採否の基準を区別する。能力・希望に応じた登用の検討や尽力はselectionで、採用の確約ではない。全員への任用保証と混同しない。',
  stipend:'full_retentionは従来の禄を全額維持。bounded_supportは対象・額・予算・期間の具体的な限定。当面の生活支援はtemporary_supportで、全額扶持や恒久支援ではない。額・終了時点・財源は明言がなければunknownのまま。',
  funding:'bounded_governmentは新政府の予算枠内の明示。unbounded_governmentは新政府が不足なく全費用を引き受ける保証。資金主体不明はunknown。',
+ order:'transitionは市中秩序の移行への合意。段階的引継ぎ、期限を定めた共同警備、地域・役割を分けた移行など、実行可能な異なる方法を同じ移行の意味で記録する。単なる善処と混同しない。',
  weapons:'joint_sealは双方で封印。disarmは武装解除または武器引渡し。段階的引渡しはdisarm。',
  support_duration:'boundedは支援の終了時点が合意済み。単なる当面・善処はunknown。',
  appointment_capacity:'bounded_positionsは対象人数に対応する既存の職枠・選抜・配置を具体的に保証した場合のみ。全員採用を約束するだけならunlimited。',
@@ -171,12 +172,33 @@ export function agreementVersion(ledger){
 export function frozenAgreement(state){
  const clauses=activeClauses(state.canonicalLedger);
  const version=agreementVersion(state.canonicalLedger);
- const copy=JSON.parse(JSON.stringify({version,clauses,katsuAccepted:state.katsuSettlement==='accepted'}));
+ const copy=JSON.parse(JSON.stringify({version,clauses,katsuAccepted:state.katsuSettlement==='accepted',...(state.settlementScope?{settlementScope:state.settlementScope}:{})}));
  const freeze=value=>{if(value&&typeof value==='object'){Object.values(value).forEach(freeze);Object.freeze(value);}return value;};return freeze(copy);
 }
 
+// Historical reach, not a tally of missing facts. Alternative control arrangements
+// remain distinct facts but can establish the same effective military transition.
+export function transitionState(clauses){
+ const facts=clauses.flatMap(c=>c.facts);
+ const has=(d,...values)=>facts.some(f=>f.dimension===d&&values.includes(f.value)&&(!d.startsWith('fleet_')||d==='fleet_transfer'||f.phase!=='final'));
+ const governmentHolds=has('fleet_command','government')&&has('fleet_custody','government');
+ const restricted=has('fleet_use','prohibited','supervised')||governmentHolds;
+ const controlled=has('fleet_oversight','joint','government')||governmentHolds||(has('fleet_command','joint')&&restricted);
+ const transfer=has('fleet_transfer','scheduled','eventual')||governmentHolds||['fleet_command','fleet_custody'].every(d=>facts.some(f=>f.dimension===d&&f.phase==='final'&&f.value==='government'));
+ const fleetDanger=facts.some(f=>f.dimension==='fleet_command'&&f.phase==='final'&&f.value==='katsu')||has('fleet_transfer','none')||has('fleet_use','unrestricted');
+ const battle=has('assault','continued')?'continued':has('assault','postponed')?'postponed':has('assault','cancelled')?'cancelled':'unspecified';
+ const transferAgreed=has('castle','handover')&&has('weapons','disarm','joint_seal')&&has('order','transition')&&transfer;
+ return {battle,transferAgreed,governmentHolds,restricted,controlled,transfer,fleetDanger};
+}
+// Only a mutually accepted, independent stopping promise can close a limited
+// settlement. A one-sided offer or an unmet handover dependency cannot do so.
+export function hasAcceptedTruce(state){
+ const clauses=activeClauses(state.canonicalLedger);
+ const ids=new Set(clauses.map(c=>c.id));
+ return clauses.some(c=>c.acceptance?.commitment==='firm'&&c.facts.some(f=>f.dimension==='assault'&&['cancelled','postponed'].includes(f.value))&&c.dependencies.every(id=>ids.has(id))&&(state.canonicalLedger.proposals.find(p=>p.id===c.proposalId)?.dependencies||[]).every(id=>state.issues?.[id]==='agreed'));
+}
 // Scenario policy is explicit, versioned and independent of dialogue scores.
-export const GOVERNMENT_POLICY={version:'edo-government-3',principles:['権限外の約束は新政府の審査による追認を要する','旧支配領域の無条件維持を承認しない','恒久的な全額扶持・全員任用は財源と能力の裏付けを要する','軍艦は監督下に置き、移管手順を合意する','城の受領と治安引継ぎで軍事的脅威を除く']};
+export const GOVERNMENT_POLICY={version:'edo-government-4',principles:['権限外の約束は新政府の審査による追認を要する','旧支配領域の無条件維持を承認しない','恒久的な全額扶持・全員任用は財源と能力の裏付けを要する','軍艦は監督下に置き、移管手順を合意する','城の受領と治安引継ぎで軍事的脅威を除く']};
 export function reviewGovernment(state){
  const snapshot=frozenAgreement(state);const findings=[];
  const add=(code,clauses,message,severity='blocking')=>findings.push({code,clauseIds:clauses.map(c=>c.id),message,severity});
@@ -203,21 +225,19 @@ export function reviewGovernment(state){
  if(!has('land','name_only','reduced_domain','existing_domain'))add('land_unknown',snapshot.clauses.filter(c=>c.issueIds.includes('tokugawa_house')),'徳川家を残す場合、家名と所領をどこまで保証するか明記してほしい。','uncertainty');
  if(!has('yoshinobu','protected','confined','punished'))add('yoshinobu_unknown',snapshot.clauses.filter(c=>c.issueIds.includes('yoshinobu')),'慶喜の身柄と処遇を明記してほしい。','uncertainty');
  if(!has('stipend','temporary_support','bounded_support','full_retention','none')&&!has('employment','selection','all_applicants','none'))add('retainers_unknown',snapshot.clauses.filter(c=>c.issueIds.includes('retainers')),'旧臣に何をどこまで約束したか明記してほしい。','uncertainty');
- if(!has('castle','handover'))add('castle_transfer',by('castle'),'城の明け渡しを確実に行う約定を明記してほしい。');
+ if(!has('castle','handover'))add('castle_transfer',by('castle'),'城の移行についての合意が未成立。',has('castle','refused')?'blocking':'incomplete');
  if(!has('weapons','disarm','joint_seal')||has('weapons','unrestricted'))add('weapons_control',by('weapons'),'武器の統制に不確実性がある。',has('weapons','unrestricted')?'blocking':'uncertainty');
  // Different descriptions can establish control without enumerating every role.
  const fleetClauses=snapshot.clauses.filter(c=>c.facts.some(f=>f.dimension.startsWith('fleet_')));
- const governmentHolds=has('fleet_command','government')&&has('fleet_custody','government');
- const oversight=has('fleet_oversight','joint','government')||governmentHolds;
- const restricted=has('fleet_use','prohibited','supervised');
- const transfer=has('fleet_transfer','scheduled','eventual');
- const finalKatsu=snapshot.clauses.some(c=>c.facts.some(f=>f.dimension==='fleet_command'&&f.phase==='final'&&f.value==='katsu'));
- if(finalKatsu||has('fleet_transfer','none')||has('fleet_use','unrestricted')||(!transfer&&!governmentHolds)||(!restricted&&!oversight))
-  add('fleet_control',fleetClauses,'軍事統制の回復を支える約定がない、または明示条件が妨げている。');
- else if(!oversight||!restricted||(!has('fleet_transfer','scheduled')&&!governmentHolds))
+ const reach=transitionState(snapshot.clauses);
+ if(reach.fleetDanger)add('fleet_control',fleetClauses,'明示された約定が新政府の軍事統制と両立しない。');
+ else if(!reach.transfer)add('fleet_control',fleetClauses,'軍艦の恒久的な統制移行は未合意。','incomplete');
+ else if(!reach.controlled||!reach.restricted||(!has('fleet_transfer','scheduled')&&!reach.governmentHolds&&!snapshot.clauses.some(c=>c.facts.some(f=>f.dimension==='fleet_command'&&f.value==='government'&&f.phase==='final'))))
   add('fleet_control',fleetClauses,'移管までの統制または移管時期に実施上の不確実性が残る。','uncertainty');
- if(!has('weapons','disarm','joint_seal')&&!has('order','transition'))add('military_transition',[], '武装解除と市中の統制を引き受ける約定が共に不足している。');
- if(!has('order','transition')||!has('civilians','protected'))add('order_transition',[...by('order'),...by('civilians')],'治安引継ぎに実施上の不確実性がある。','uncertainty');
+ if(!has('weapons','disarm','joint_seal')&&!has('order','transition'))add('military_transition',[], '武装解除と治安移行の合意が未成立。','incomplete');
+ if(!has('order','transition'))add('order_transition',by('order'),'治安の移行そのものが未合意。','incomplete');
+ // Agreed orderly handover can protect the city without a separate stock phrase
+ // for civilians. Explicit harm is still independently rejected below.
  if(has('civilians','threatened'))add('civilian_threat',by('civilians'),'市民への危害を前提とする和平は承認できない。');
  if(has('assault','continued'))add('assault_continued',by('assault'),'条件履行後も総攻撃を行う約定は和平と両立しない。');
  if(!has('authority','submit_for_approval','personal_guarantee','government_ratified'))add('authority_unknown',by('authority'),'誰が約束を持ち帰り、新政府がどう承認するかを明記してほしい。','uncertainty');
@@ -231,11 +251,20 @@ export function reviewGovernment(state){
  // A change needs a revision event; simultaneous incompatible obligations cannot be averaged away.
  for(const dim of conflicts)add('conflicting_'+dim,by(dim),'両立するか不明な条件が同時に残っている。変更する約定を指定し、一本化してほしい。');
  for(const c of snapshot.clauses)if(c.dependencies.some(id=>!snapshot.clauses.some(d=>d.id===id)))add('unmet_dependency',[c],'前提となる条件が未合意のため、履行の順序を確認してほしい。');
- const status=findings.some(f=>f.severity==='blocking')?'changes_requested':'approved';
- const outcome=status==='approved'?(findings.length?'fragile_handover':'bloodless'):'empty_promises';
- return {status,outcome,snapshot,policyVersion:GOVERNMENT_POLICY.version,findings,clauseReviews:snapshot.clauses.map(c=>({clauseId:c.id,version:c.version,status:findings.some(f=>f.clauseIds.includes(c.id)&&f.severity==='blocking')?'changes_requested':findings.some(f=>f.clauseIds.includes(c.id))?'uncertain':'accepted',reason:findings.filter(f=>f.clauseIds.includes(c.id)).map(f=>f.code)})),ratification:status==='approved'?'government_review':null};
+ // Declared dangerous obligations always take precedence over a ceasefire.
+ const stopped=['cancelled','postponed'].includes(reach.battle);
+ const incomplete=!reach.transferAgreed||snapshot.settlementScope==='ceasefire';
+ const blocked=findings.some(f=>f.severity==='blocking')||(incomplete&&!stopped);
+ const status=blocked?'changes_requested':'approved';
+ // Only substantive implementation uncertainty separates peace from executable
+ // transfer. Deferred court decisions and unspecified administrative detail do not.
+ const implementationCodes=new Set(['fleet_control','weapons_control','order_transition','support_funding']);
+ const executionRisk=findings.some(f=>f.severity==='uncertainty'&&implementationCodes.has(f.code));
+ const outcome=blocked?'empty_promises':(reach.battle==='postponed'||incomplete)?'ceasefire':executionRisk?'fragile_handover':'bloodless';
+ return {status,outcome,reach,snapshot,policyVersion:GOVERNMENT_POLICY.version,findings,clauseReviews:snapshot.clauses.map(c=>({clauseId:c.id,version:c.version,status:findings.some(f=>f.clauseIds.includes(c.id)&&f.severity==='blocking')?'changes_requested':findings.some(f=>f.clauseIds.includes(c.id))?'uncertain':'accepted',reason:findings.filter(f=>f.clauseIds.includes(c.id)).map(f=>f.code)})),ratification:status==='approved'?'government_review':null};
 }
 export function governmentMessage(review){
+ if(review.status==='approved'&&review.outcome==='ceasefire')return '新政府は、この停戦の約定を承認した。';
  if(review.status==='approved')return '新政府は、この約定を承認した。';
  return '新政府は、この約定を承認しなかった。';
 }

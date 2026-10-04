@@ -1,4 +1,4 @@
-import { clauseIssueIds, updateSchema, compileUpdates, materializeClauseEvidence, clauseSchema, CLAUSE_INSTRUCTION, validClauses, attachClauses, activeClauses, reviewGovernment } from './edo1868-clauses.js';
+import { hasAcceptedTruce, transitionState, clauseIssueIds, updateSchema, compileUpdates, materializeClauseEvidence, clauseSchema, CLAUSE_INSTRUCTION, validClauses, attachClauses, activeClauses, reviewGovernment } from './edo1868-clauses.js';
 /**
  * Browser-side BYOK dialogue and canonical negotiation engine.
  * Gemini extracts current-turn events; deterministic reducers own agreements.
@@ -667,7 +667,7 @@ function unresolvedIssues(state) {
   return blockingIssueOrder.filter((id) => ["unresolved", "proposed", "conflicted"].includes(state.issues?.[id] || "unresolved"));
 }
 
-function settlementFallback(status, blocking, repeated, ledger = {}, canonical = {}) {
+function settlementFallback(status, blocking, repeated, ledger = {}, canonical = {}, scope = "peace") {
   const settled = Object.entries(ledger).filter(([, entry]) => ["tentatively_agreed", "agreed"].includes(entry.status)).map(([id]) => NEGOTIATION_ISSUES[id].title);
   // Katsu naming the agenda is not a player offer. Until Saigo has proposed a
   // term or responded to one, settlement must not pretend a particular clause
@@ -685,6 +685,11 @@ function settlementFallback(status, blocking, repeated, ledger = {}, canonical =
     expression: "irritated",
     reflection: ["同じ問いが、畳の上に戻された。", "約束の中身は、まだ増えていない。", "夜は深く、明日の軍勢は待ってくれない。", "勝は、静かに視線を落とした。"],
     response: "……もうよい、西郷さん。こちらが預かる者たちの行く末を、話の外に置くなら、この席で交わせる言葉は尽きた。これ以上の会談は受けぬ。",
+  };
+  if (status === "ACCEPTED" && scope === "ceasefire") return {
+    expression: "serious",
+    reflection: ["あなたは、ここまでに交わした条件を、決着として差し出した。", "会談で結ばれた戦闘停止の約束が、二人の前に置かれた。", "勝は、その書面に視線を落とした。"],
+    response: "分かった。ここに交わした条件で、ひとまず戦を止めよう。この約定を持ち帰ってくれ。城と江戸の行く末まで、決まったわけではないがな。",
   };
   if (status === "ACCEPTED") return {
     expression: "serious",
@@ -720,7 +725,7 @@ function settlementFallback(status, blocking, repeated, ledger = {}, canonical =
 export function evaluateSettlement(state, messages = []) {
   if (!canContinueNegotiation(state)) {
     const settlementResult = state.katsuSettlement === "breakdown" ? "BREAKDOWN" : "ACCEPTED";
-    const fallback = settlementFallback(settlementResult, [], false, state.negotiationLedger, state.canonicalLedger);
+    const fallback = settlementFallback(settlementResult, [], false, state.negotiationLedger, state.canonicalLedger, state.settlementScope);
     return { state, settlementResult, continues: false, blocking: [], discovered: [], endingCandidate: settlementResult === "BREAKDOWN" ? "breakdown" : "", expression: fallback.expression, reflection: fallback.reflection, katsuResponse: fallback.response };
   }
   // Settlement eligibility is deterministic. Conversation text is deliberately
@@ -754,10 +759,11 @@ export function evaluateSettlement(state, messages = []) {
   // This is Katsu's package-deal decision only. Whether Saigo can actually
   // carry the terms through the new government is intentionally decided in
   // determineGovernmentOutcome after Katsu has accepted.
-  const isAccepted = !isBreakdown && blocking.length === 0;
+  const isAccepted = !isBreakdown && (blocking.length === 0 || hasAcceptedTruce(next));
   const settlementResult = isBreakdown ? "BREAKDOWN" : isAccepted ? "ACCEPTED" : "NOT_READY";
   next.katsuSettlement = settlementResult === "ACCEPTED" ? "accepted" : settlementResult === "BREAKDOWN" ? "breakdown" : "not_ready";
-  const fallback = settlementFallback(settlementResult, blocking, repeated, next.negotiationLedger, next.canonicalLedger);
+  if(isAccepted)next.settlementScope=blocking.length||transitionState(activeClauses(next.canonicalLedger)).battle==='postponed'?'ceasefire':'peace';
+  const fallback = settlementFallback(settlementResult, blocking, repeated, next.negotiationLedger, next.canonicalLedger, next.settlementScope);
   const discovered = settlementResult === "NOT_READY" && blocking.includes("retainers") && !next.knownIssues.includes("retainers")
     ? [discoveredIssue("retainers")] : [];
   return {
@@ -812,7 +818,8 @@ export const ENDINGS = {
   bloodless: { title: "江戸無血開城", text: "翌朝、新政府軍は進軍を止めた。約定はまだ始まりにすぎない。それでも、双方が引き受ける条件は言葉になった。" },
   alternative_peace: { title: "歴史にない和平", text: "勝海舟との約定を新政府も承認した。総攻撃の命令は取り下げられ、軍勢は江戸への進撃を止めた。双方は約した手順で城を受け取る準備を始める。あなたは、双方が引き受ける和平を結んだ。" },
   empty_promises: { title: "空手形", text: "勝は席を立たなかった。だが、会談の外で約定は支えを失った。あなたの言葉は、明日の軍を止める力にはならなかった。" },
-  fragile_handover: { title: "薄氷の和平", text: "城門は開いた。しかし、明日からの秩序まで引き受ける言葉は足りなかった。勝敗は決しても、火種は消えていない。" },
+  ceasefire: { title: "停戦成立", text: "翌朝、砲撃は始まらなかった。しかし両軍の備えは解かれず、江戸の行く末はなお定まらない。あなたは一日を救った。戦争を終わらせたわけではなかった。" },
+  fragile_handover: { title: "和平成立", text: "城門は開いた。しかし、明日からの秩序まで引き受ける言葉は足りなかった。勝敗は決しても、火種は消えていない。" },
   unfinished: { title: "決着を急いだ夜", text: "勝は、まだ答えを出さなかった。明日の軍勢を前に、あなたは会談を切り上げた。残された沈黙が、翌朝の判断を重くする。" },
   breakdown: { title: "交渉決裂", text: "言葉は交わされたが、同じ明日を見てはいなかった。翌朝、新政府軍は予定どおり江戸へ進んだ。" },
   assault: { title: "江戸総攻撃", text: "会談は終わり、軍勢は動いた。だが、そこで待っていたのは、ただ敗北を待つ者たちではなかった。" },
@@ -823,6 +830,7 @@ const endingOutcomes = {
   bloodless: ["success", "双方の承認を得て、江戸城は戦わずに引き渡された。"],
   alternative_peace: ["alternative", "双方が約定を引き受け、江戸の戦は避けられた。"],
   empty_promises: ["failure", "交渉成立。しかし、和平は成立せず。"],
+  ceasefire: ["alternative", "砲声は止まった。江戸の行く末は、まだ定まらない。"],
   fragile_handover: ["alternative", "城は引き渡された。和平の履行には、不安が残った。"],
   unfinished: ["failure", "約定を結べぬまま、夜が明けた。"],
   breakdown: ["failure", "会談は決裂し、江戸の戦を止める約定は結ばれなかった。"],
@@ -837,10 +845,14 @@ for (const [id, ending] of Object.entries(ENDINGS)) {
   Object.freeze(ending);
 }
 
+// Ratings describe named historical outcomes; they are never thresholds/scores.
+export const ENDING_RATINGS=Object.freeze({bloodless:5,fragile_handover:4,ceasefire:3,empty_promises:2,breakdown:1,alternative_peace:5,unfinished:1,assault:1,scorched:1});
+export const endingStars=id=>'★'.repeat(ENDING_RATINGS[id]||0)+'☆'.repeat(5-(ENDING_RATINGS[id]||0));
+
 export function createCompletedRun({ endingId, messages, discoveries, completedAt = new Date().toISOString(), settlementSnapshot = null, presentation = null }) {
   const ending = ENDINGS[endingId];
   if (!ending) throw new Error("結末が確定していません。");
-  const snapshot = JSON.parse(JSON.stringify({ version: 2, id: globalThis.crypto.randomUUID(), endingId, endingTitle: presentation?.title || ending.title, outcomeLine: presentation?.outcomeLine || ending.outcomeLine, summary: presentation?.summary || ending.outcomeLine, endingNarrative: presentation?.narrative || ending.narrative, settlementSnapshot, conversationHistory: messages, discoveredInformation: discoveries, completedAt }));
+  const snapshot = JSON.parse(JSON.stringify({ version: 2, id: globalThis.crypto.randomUUID(), endingId, stars: ENDING_RATINGS[endingId], endingTitle: presentation?.title || ending.title, outcomeLine: presentation?.outcomeLine || ending.outcomeLine, summary: presentation?.summary || ending.outcomeLine, endingNarrative: presentation?.narrative || ending.narrative, settlementSnapshot, conversationHistory: messages, discoveredInformation: discoveries, completedAt }));
   const freeze = (value) => { if (value && typeof value === "object") { Object.values(value).forEach(freeze); Object.freeze(value); } return value; };
   return freeze(snapshot);
 }
