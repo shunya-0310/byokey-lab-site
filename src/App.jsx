@@ -229,10 +229,12 @@ function updateSeo(path) {
   setMetaAttribute("property", "og:description", route.description);
   setMetaAttribute("property", "og:url", canonicalUrl);
   setMetaAttribute("property", "og:image", imageUrl);
+  setMetaAttribute("property", "og:image:alt", route.imageAlt || route.title);
   setMetaAttribute("name", "twitter:card", "summary_large_image");
   setMetaAttribute("name", "twitter:title", route.title);
   setMetaAttribute("name", "twitter:description", route.description);
   setMetaAttribute("name", "twitter:image", imageUrl);
+  setMetaAttribute("name", "twitter:image:alt", route.imageAlt || route.title);
 
   let canonical = document.head.querySelector('link[rel="canonical"]');
   if (!canonical) {
@@ -770,7 +772,7 @@ function Edo1868Page({ onNavigate, path }) {
       <nav><button type="button" onClick={startNewGame}><RotateCcw size={17} />もう一度、三月十四日へ</button><button type="button" onClick={showTitle}>タイトルへ戻る</button></nav>
     </article>
   {reportOverlay}</main>;
-  if (phase === "title" || (endingId && completedRun && !tutorial)) return <main className="edo-title" style={{ backgroundImage: "url('/images/edo-1868/edo-title-bay-v5.png')" }}><div className="edo-title-shade" /><section><h1><img src="/images/edo-1868/edo-1868-brush-title.png" alt="1868" /></h1><p>― 江戸焦土前夜 ―</p></section><nav>{hasSavedGame && <button onClick={() => endingId && completedRun ? onNavigate(ENDING_PATH) : setPhase("play")}>続きから始める <ArrowRight size={19} /></button>}<button onClick={startNewGame}>ゲームを始める <ArrowRight size={19} /></button>{completedRun && <button onClick={openReview}>前回の交渉を振り返る <ChevronRight size={19} /></button>}<button data-edo-tour="settings" onClick={() => setPanel("settings")}>設定 <ChevronRight size={19} /></button><a href="/guide/api/">API設定ガイド <ChevronRight size={19} /></a><a href="/important/#edo-1868">注意事項 <ChevronRight size={19} /></a></nav>{panel === "settings" && <div className="edo-modal-backdrop"><section className="edo-modal" role="dialog" aria-modal="true" aria-label="設定"><button className="edo-modal-close" onClick={() => setPanel("")} aria-label="閉じる"><X size={22} /></button>{settingsFields}</section></div>}</main>;
+  if (phase === "title" || (endingId && completedRun && !tutorial)) return <main className="edo-title" style={{ backgroundImage: "url('/images/edo-1868/edo-title-bay-v5.png')" }}><div className="edo-title-shade" /><section><h1><img src="/images/edo-1868/edo-1868-brush-title.png" alt="1868 -江戸焦土前夜-" /></h1><p>― 江戸焦土前夜 ―</p></section><nav>{hasSavedGame && <button onClick={() => endingId && completedRun ? onNavigate(ENDING_PATH) : setPhase("play")}>続きから始める <ArrowRight size={19} /></button>}<button onClick={startNewGame}>ゲームを始める <ArrowRight size={19} /></button>{completedRun && <button onClick={openReview}>前回の交渉を振り返る <ChevronRight size={19} /></button>}<button data-edo-tour="settings" onClick={() => setPanel("settings")}>設定 <ChevronRight size={19} /></button><a href="/guide/api/">API設定ガイド <ChevronRight size={19} /></a><a href="/important/#edo-1868">注意事項 <ChevronRight size={19} /></a></nav>{panel === "settings" && <div className="edo-modal-backdrop"><section className="edo-modal" role="dialog" aria-modal="true" aria-label="設定"><button className="edo-modal-close" onClick={() => setPanel("")} aria-label="閉じる"><X size={22} /></button>{settingsFields}</section></div>}</main>;
   if (phase === "intro") { const page = intro[introStep]; const lastPage = introStep === intro.length - 1; return <main className={`edo-intro-page edo-intro-page-${introStep + 1}`} key={introStep} style={{ backgroundImage: `url('/images/edo-1868/${page.image}')` }}><div className="edo-intro-page-shade" /><article className="edo-intro-copy">{page.content}<div className="edo-intro-controls">{introStep > 0 && <button type="button" className="edo-intro-back" onClick={() => setIntroStep((value) => value - 1)}>戻る</button>}<button type="button" onClick={() => lastPage ? beginDialogue() : setIntroStep((value) => value + 1)}>{lastPage ? "いざ、対談" : "次へ"} <ArrowRight size={19} /></button></div><p className="edo-intro-step">{introStep + 1} / {intro.length}</p></article></main>; }
   if (phase === "transition") return <main className="edo-transition" aria-label="対談の場面へ移動中" />;
 
@@ -1392,7 +1394,7 @@ function ImportantPage({ onNavigate }) {
           <p className="section-kicker">IMPORTANT MATTERS</p>
           <h1>重要事項</h1>
           <p>BYOKey LabにおけるAPIキーの扱い、公開形態、対応プロダクトの判断基準です。APIキーは利用者の費用と権限に直結するため、技術的に実装できることと、公式に推奨される構成を分けて説明します。</p>
-          <small>最終更新: 2026年9月15日</small>
+          <small>最終更新: 2026年10月6日</small>
         </div>
         <div className="important-summary" aria-label="BYOKey Labの公開方針">
           <article>
@@ -1412,7 +1414,6 @@ function ImportantPage({ onNavigate }) {
           </article>
         </div>
         <article className="policy-body">
-          <h2 id="edo-1868">「1868 -江戸焦土前夜-」について</h2><p>本作は、1868年の江戸城明渡しに関わる交渉を題材とするゲームです。会話、約定、結末には創作を含み、プレイヤーの選択によって史実とは異なる展開になります。ゲーム内の出来事は、実際に起きた歴史として扱わないでください。</p>
           <h2>1. 基本方針</h2>
           <p>BYOKey Labは、利用者自身が取得したLLM APIキーを使うBYOK型のAIツールを扱います。APIキーは利用者のプロバイダーアカウント、利用上限、請求に紐づく重要な認証情報です。そのため、BYOKey LabがAPIキーを預かる構成、問い合わせやサポートでAPIキーの送信を求める構成、ログや公開リポジトリにAPIキーが残る構成は採用しません。</p>
           <p>本ページは、法的助言ではありません。各LLMプロバイダーの仕様、規約、セキュリティガイドラインは変更される可能性があるため、公開時点および主要アップデート時点で公式情報を確認します。</p>
@@ -1451,6 +1452,7 @@ function ImportantPage({ onNavigate }) {
             <li><a href="https://ai.google.dev/gemini-api/docs/api-key?hl=ja" target="_blank" rel="noreferrer">Gemini APIキーの公式説明<ExternalLink size={14} /></a></li>
             <li><a href="https://docs.cloud.google.com/docs/authentication/api-keys-best-practices" target="_blank" rel="noreferrer">Google APIキー安全指針<ExternalLink size={14} /></a></li>
           </ul>
+          <h2 id="edo-1868">「1868 -江戸焦土前夜-」について</h2><p>本作は、1868年の江戸城明渡しに関わる交渉を題材とするゲームです。会話、約定、結末には創作を含み、プレイヤーの選択によって史実とは異なる展開になります。ゲーム内の出来事は、実際に起きた歴史として扱わないでください。</p>
         </article>
       </main>
       <Footer onNavigate={onNavigate} />
