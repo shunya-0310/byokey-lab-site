@@ -71,3 +71,16 @@ npm.cmd run build
 - 過去のending ID、governmentReview、CompletedRunの条項と結果は再審査しない。保存済みIDに基づく表示名・星だけを対応させる。旧alternative_peace / unfinished / assault / scorchedは読み取り互換として残す。新規の通常フローは5種類のみ。
 - 10月4日の実保存JSONから過大保証fixtureを抽出した。直近の成功プレイの生JSONは未提供であり、成功fixtureは指示書の人力報告からの再構成。以前の実保存JSONに基づく軍艦監督修正の回帰も維持する。モデル応答を新しく生成した結果とは区別する。
 - 検証は外部LLM APIなし。通常の関連テスト、5段階fixture、保存互換、複数の成功経路、320/390/412px・PCでの画面確認。前回の原文保持・引用表記差・phase欠損・エラー表示の回帰を維持する。
+
+
+## 初回案内・API同意・出力報告（2026-10-05）
+
+- `EdoOnboarding.jsx` が実際のUIを対象とする7ステップ案内、フォーカス制御、報告文編集を担当する。対面画面の表示後に初回案内を開始し、完了・スキップ・Escapeを同じ完了扱いにする。設定から再表示できる。
+- `byokey-lab:edo-1868:tutorial-version` と `byokey-lab:edo-1868:api-consent-version` を独立管理する。現在は各1。同意versionが一致しない場合、キーの保存と会話送信を止め、設定へ案内する。再同意が必要な更新時は `CONSENT_VERSION` を変更する。
+- キーは従来の `byokey-lab:edo-1868:gemini-api-key`（localStorage、暗号化なし）に保存。UIはpassword入力のlive valueだけを設定し、HTML value属性には記録しない。通信はGoogle公式の `x-goog-api-key` ヘッダーを使い、URLへキーを含めない。ブラウザ内の実行時アクセスまで防ぐ暗号化ではない。
+- 報告は既存のBYOKey Lab Google Formsへ手動で引き渡す。対象のAI出力、理由、任意コメント、生成時モデルと日時、機能versionのみを編集・コピーする。この画面からPOSTや自動送信は行わず、フォームへの貼り付けと最終送信は利用者が行う。コピー完了を報告受付成功と表示しない。既存Workerは公開URLとブラウザ向け受付設定を確認できないため変更・接続しない。
+- 会話の生成時に `generatedBy: gemini`、モデル、日時を保存する。定型挨拶・決着の固定文・プレイヤー発言には報告ボタンを付けない。旧保存には生成元の証拠がないため推測で付与しない。
+- 報告文には設定や会話全文を含めず、現在キーの完全一致とGeminiキー形式を除去する。個人情報は利用者が編集・確認する。Google Forms自体のデータ取扱いも適用される。
+- promptFeedback.blockReason / candidate.finishReason / safetyRatings.blockedをJSON解析前に確認する。安全・禁止内容ブロックは再表現を案内し、HTTP失敗と区別する。プロバイダー生エラー本文は表示・ログ出力しない。safetySettingsは未指定の既存状態を維持し、緩和しない。
+- 公式仕様確認（2026-10-05）: https://ai.google.dev/api/generate-content 、https://ai.google.dev/gemini-api/docs/api-key 、https://ai.google.dev/gemini-api/terms 。注意事項の一次導線は https://byokey-lab.com/important/ 。
+- `npm.cmd run test:edo` は同意・報告・安全ブロックのモックを含む。UIはViteを127.0.0.1:5186で起動後 `node scripts/verify-edo-onboarding-ui.mjs` で検証する（Windows Chrome、専用一時プロファイル、Geminiネットワーク遮断）。実API・実キーは使わない。

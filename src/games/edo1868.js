@@ -1,3 +1,4 @@
+import { geminiBlockCode } from "./edo1868-onboarding.js";
 import { hasAcceptedTruce, transitionState, clauseIssueIds, updateSchema, compileUpdates, materializeClauseEvidence, clauseSchema, CLAUSE_INSTRUCTION, validClauses, attachClauses, activeClauses, reviewGovernment } from './edo1868-clauses.js';
 /**
  * Browser-side BYOK dialogue and canonical negotiation engine.
@@ -170,10 +171,10 @@ async function generateGeminiJson({ apiKey, model, systemInstruction, contents, 
   const usage = { input: 0, output: 0, cached: 0 };
   let lastParseError = "";
   for (let attempt = 0; attempt < 1; attempt += 1) {
-    const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(model)}:generateContent?key=${encodeURIComponent(apiKey)}`, {
+    const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(model)}:generateContent`, {
       method: "POST",
       signal: AbortSignal.timeout(60000),
-      headers: { "Content-Type": "application/json" },
+      headers: { "Content-Type": "application/json", "x-goog-api-key": apiKey },
       body: JSON.stringify({
         systemInstruction: { parts: [{ text: `${systemInstruction}${attempt ? "\nJSONの形式を厳守し、指定された必須フィールドを必ず返すこと。" : ""}` }] },
         contents,
@@ -184,7 +185,9 @@ async function generateGeminiJson({ apiKey, model, systemInstruction, contents, 
     usage.input += body?.usageMetadata?.promptTokenCount || 0;
     usage.output += (body?.usageMetadata?.candidatesTokenCount || 0) + (body?.usageMetadata?.thoughtsTokenCount || 0);
     usage.cached += body?.usageMetadata?.cachedContentTokenCount || 0;
-    if (!response.ok) throw new Error(body?.error?.message || "Gemini APIへの接続に失敗しました。");
+    if (!response.ok) { const error = new Error("Gemini APIへの接続に失敗しました。"); error.validationCode = "provider_http_error"; throw error; }
+    const blockCode = geminiBlockCode(body);
+    if (blockCode) { const error = new Error("AIの応答を生成できませんでした。"); error.validationCode = blockCode; throw error; }
     const raw = body?.candidates?.[0]?.content?.parts?.map((part) => part.text || "").join("") || "";
     try {
       const parsed = parseGeminiJson(raw);

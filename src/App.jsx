@@ -1,3 +1,5 @@
+import { EdoTutorial, EdoReport, useEdoDialog } from "./games/EdoOnboarding.jsx";
+import { CONSENT_KEY, CONSENT_VERSION, TUTORIAL_KEY, TUTORIAL_VERSION, IMPORTANT_URL, hasCurrentConsent, saveConsentedKey } from "./games/edo1868-onboarding.js";
 import { createPortal } from "react-dom";
 import { useEffect, useMemo, useState } from "react";
 import { GAME_ROOT, REVIEW_PATH, ENDING_PATH, createEndingRun, restoreCompletedRun, describeAgreedTerms } from "./games/edo1868-ending.js";
@@ -473,6 +475,11 @@ function Edo1868Page({ onNavigate, path }) {
   const [panel, setPanel] = useState("");
   const [discoveries, setDiscoveries] = useState(INITIAL_DISCOVERIES);
   const [apiKey, setApiKey] = useState("");
+  const [consent, setConsent] = useState(false);
+  const [consentSaved, setConsentSaved] = useState(false);
+  const [tutorialDone, setTutorialDone] = useState(false);
+  const [tutorial, setTutorial] = useState(false);
+  const [reportMessage, setReportMessage] = useState(null);
   const [model, setModel] = useState(GEMINI_MODELS[0].id);
   const [apiUsage, setApiUsage] = useState({ input: 0, output: 0, cached: 0 });
   const [isSending, setIsSending] = useState(false);
@@ -488,6 +495,9 @@ function Edo1868Page({ onNavigate, path }) {
 
   useEffect(() => {
     try {
+      setTutorialDone(Number(window.localStorage.getItem(TUTORIAL_KEY)) === TUTORIAL_VERSION);
+      const agreed = hasCurrentConsent(window.localStorage.getItem(CONSENT_KEY));
+      setConsent(agreed); setConsentSaved(agreed);
       const savedKey = window.localStorage.getItem(apiKeyStorageKey);
       if (savedKey) { setApiKey(savedKey); setApiKeySaved(true); }
     } catch { /* Storage may be unavailable in a private browser context. */ }
@@ -583,6 +593,19 @@ function Edo1868Page({ onNavigate, path }) {
     };
   }, [phase, isResultRoute]);
 
+  const finishTutorial = () => {
+    setTutorial(false); setTutorialDone(true);
+    try { localStorage.setItem(TUTORIAL_KEY, String(TUTORIAL_VERSION)); }
+    catch { setSaveWarning("案内の完了を保存できませんでした。次回も表示される場合があります。"); }
+  };
+  const replayTutorial = () => { setPanel(""); setPhase("play"); onNavigate(GAME_ROOT); setTutorial(true); };
+  useEffect(() => {
+    if (gameHydrated && phase === "play" && !isResultRoute && playIntroStage === "dialogue" && !tutorialDone && !settlementFlow && !panel) setTutorial(true);
+  }, [gameHydrated, phase, isResultRoute, playIntroStage, tutorialDone, settlementFlow, panel]);
+  useEdoDialog(panel && !reportMessage, '.edo-modal', () => setPanel(""));
+  const reportButton = message => message?.role === "katsu" && message?.generatedBy === "gemini" ? <button type="button" className="edo-report-button" onClick={() => {setPanel("");setReportMessage(message);}}>このAI出力を報告</button> : null;
+  const reportOverlay = reportMessage && <EdoReport message={reportMessage} apiKey={apiKey} onClose={() => setReportMessage(null)} />;
+
   const anchorMobileGame = () => {
     if (!window.matchMedia("(max-width: 600px)").matches) return;
     window.requestAnimationFrame(() => window.scrollTo({ top: 0, behavior: "auto" }));
@@ -602,21 +625,22 @@ function Edo1868Page({ onNavigate, path }) {
   const submit = async (event) => {
     event.preventDefault();
     const text = draft.trim();
-    if (!text || draft.length > 1000 || endingId || isSending || settlementFlow || !canContinueNegotiation(state)) return;
+    if (!text || draft.length > 1000 || endingId || isSending || tutorial || settlementFlow || !canContinueNegotiation(state)) return;
     if (!apiKey.trim()) { setPanel("settings"); setApiError("Gemini APIキーを入力してから対談を始めてください。"); return; }
+    if (!consentSaved || !consent) { setPanel("settings"); setApiError("API利用上の注意事項を確認し、同意して保存してください。"); return; }
     if (!model.trim()) { setPanel("settings"); setApiError("使用するGeminiのモデルIDを入力してください。"); return; }
     const playerMessage = { role: "saigo", text };
     setIsSending(true); setApiError("");
     try {
       const result = await requestKatsuResponse({ apiKey: apiKey.trim(), model, messages: [...messages, playerMessage], state });
       const assessed = evaluateMessage(text, state, result.semantic, result.spokenResponse, result.events);
-      setMessages((current) => [...current, playerMessage, { role: "katsu", expression: result.expression, text: result.spokenResponse }]);
+      setMessages((current) => [...current, playerMessage, { role: "katsu", expression: result.expression, text: result.spokenResponse, generatedBy: "gemini", model, generatedAt: new Date().toISOString() }]);
       setDiscoveries((current) => [...current, ...result.discoveries.filter((item) => !current.some((known) => known.id === item.id))]);
       setApiUsage((current) => ({ input: current.input + result.usage.input, output: current.output + result.usage.output, cached: current.cached + result.usage.cached }));
       setState(assessed.state); setDraft("");
       if (assessed.automaticEnding) setEndingId(assessed.automaticEnding);
     } catch (error) {
-      setApiError("応答の処理に失敗しました。入力は残っています。送信ボタンから再試行してください。");
+      setApiError(["safety_block", "generation_block"].includes(error?.validationCode) ? "AIの応答を生成できませんでした。表現を変えてもう一度お試しください。" : error?.validationCode === "provider_http_error" ? "Gemini APIに接続できませんでした。設定や利用状況を確認し、再試行してください。" : "応答の処理に失敗しました。入力は残っています。送信ボタンから再試行してください。");
       // No provider URLs, keys, raw responses, ledger contents or policy data.
       const diagnostic = { at: new Date().toISOString(), stage: "dialogue_response", code: error?.validationCode || (error?.name === "TimeoutError" ? "request_timeout" : "response_failure"), category: error?.validationCategory || (error?.validationCode === "fleet_phase_missing" ? "missing_information" : "processing_error"), ...error?.validationDetails };
       console.warn("[edo1868] response failure", diagnostic);
@@ -626,16 +650,18 @@ function Edo1868Page({ onNavigate, path }) {
     finally { setIsSending(false); }
   };
   const saveApiKey = () => {
+    if (!consent) { setApiError("API利用上の注意事項を確認し、同意チェックを入れてください。"); return; }
     const key = apiKey.trim();
     if (!key) { setApiError("保存するAPIキーを入力してください。"); return; }
     try {
-      window.localStorage.setItem(apiKeyStorageKey, key);
+      saveConsentedKey(window.localStorage, key, consent);
+      setConsentSaved(true);
       setApiKeySaved(true);
       setApiError("");
     } catch { setApiError("このブラウザではAPIキーを保存できませんでした。ブラウザの保存設定を確認してください。"); }
   };
   const concludeNegotiation = () => {
-    if (isSending || settlementFlow || !canContinueNegotiation(state)) return;
+    if (isSending || tutorial || settlementFlow || !canContinueNegotiation(state)) return;
     setPanel("");
     const assessment = evaluateSettlement(state, messages);
     setState(assessment.state);
@@ -701,7 +727,22 @@ function Edo1868Page({ onNavigate, path }) {
   const cost = estimateApiCost(apiUsage, model);
   const formatUsd = (value) => value < 0.01 ? `$${value.toFixed(4)}` : `$${value.toFixed(2)}`;
   const formatJpy = (value) => value < 1 ? `約¥${Math.max(0, value).toFixed(1)}` : `約¥${Math.round(value).toLocaleString()}`;
-  const settingsFields = <><h2>Gemini API設定</h2><label className="edo-key-field"><span>Gemini APIキー</span><input type="password" value={apiKey} onChange={(event) => { setApiKey(event.target.value); setApiKeySaved(false); }} autoComplete="off" placeholder="APIキーを入力" /></label><div className="edo-settings-actions"><button type="button" onClick={saveApiKey}>保存</button>{apiKeySaved && <span>この端末に保存済み</span>}</div><a className="edo-external-link" href="https://aistudio.google.com/app/apikey" target="_blank" rel="noreferrer">APIキーの取得はこちらから <ExternalLink size={15} /></a><label className="edo-key-field"><span>モデルID</span><input type="text" value={model} onChange={(event) => setModel(event.target.value.trim())} autoComplete="off" spellCheck="false" placeholder="gemini-3.1-flash-lite" /></label><p className="edo-modal-lead">既定は Gemini 3.1 Flash-Lite です。別のGeminiモデルを使う場合は、利用可能なモデルIDを直接入力できます。APIキーの権限・提供状況により利用できないIDでは対談を開始できません。</p>{apiError && <p className="edo-api-error">{apiError}</p>}<p className="edo-modal-lead">保存したキーはこの端末のブラウザストレージにのみ保持され、BYOKey Labのサーバーへ送信しません。ただし、この保存領域の暗号化は保証されません。Gemini APIへの対談リクエストにのみ使い、共有端末では保存しないでください。</p></>;
+  const settingsFields = <><h2>Gemini API設定</h2>
+    <section className="edo-api-notice"><h3>Gemini API利用上の注意</h3>
+      <p>このゲームは、あなた自身のGemini APIキーを使います。料金・クォータの管理はキーの所有者が行います。</p>
+      <p>APIキーはGoogleにアクセスする認証情報です。第三者への共有や、GitHub・SNS・スクリーンショットへの公開を避けてください。漏洩が疑われる場合はGoogle側で無効化・再発行してください。</p>
+      <p>AIは不正確・不適切な文章を生成することがあります。Googleの規約・ポリシーを確認してください。入力データの扱いはサービスや設定により異なります。</p>
+      <a href={IMPORTANT_URL} target="_blank" rel="noreferrer">API利用上の注意事項を確認する ↗</a><p><a href="https://ai.google.dev/gemini-api/terms" target="_blank" rel="noreferrer">Google公式の規約・データ取扱い ↗</a></p>
+    </section>
+    <label className="edo-consent"><input type="checkbox" checked={consent} onChange={e=>setConsent(e.target.checked)} /><span><a href={IMPORTANT_URL} target="_blank" rel="noreferrer">API利用上の注意事項</a>を確認し、料金・APIキー管理・Googleの規約およびデータ取扱いについて理解した上で利用します。</span></label>
+    <label className="edo-key-field"><span>Gemini APIキー</span><input type="password" ref={node=>{if(node && document.activeElement !== node) node.value=apiKey;}} onChange={event=>{setApiKey(event.target.value);setApiKeySaved(false);}} autoComplete="off" placeholder="APIキーを入力" /></label>
+    <div className="edo-settings-actions"><button type="button" onClick={saveApiKey} disabled={!consent || !apiKey.trim()}>保存</button>{apiKeySaved && <span>この端末に保存済み</span>}</div>
+    {!consent && <p className="edo-modal-lead">注意事項を確認し、同意チェックを入れてください。</p>}
+    <a className="edo-external-link" href="https://aistudio.google.com/app/apikey" target="_blank" rel="noreferrer">APIキーの取得はこちらから <ExternalLink size={15} /></a>
+    <label className="edo-key-field"><span>モデルID</span><input type="text" value={model} onChange={event=>setModel(event.target.value.trim())} autoComplete="off" spellCheck="false" placeholder="gemini-3.1-flash-lite" /></label>
+    <p className="edo-modal-lead">既定はGemini 3.1 Flash-Liteです。利用可能な別のモデルIDも指定できます。</p>{apiError && <p className="edo-api-error" role="alert">{apiError}</p>}
+    <p className="edo-modal-lead">キーはこのブラウザのlocalStorageに保存します。暗号化は保証されません。BYOKey Labのサーバーへ送信せず、Gemini APIへの通信にのみ使用します。共有端末では保存しないでください。</p>
+    <button type="button" className="edo-tutorial-replay" onClick={replayTutorial}>チュートリアルを表示</button></>;
   const intro = [
     { image: "prologue-01-edo.png", content: <><p><strong>慶応四年　三月十四日。</strong></p><p>夜の江戸は、静かだった。</p><p>町にはまだ灯があり、<br />人々は明日も今日と同じ朝が来ると信じている。</p><p>だが、その外では、<br />すでに兵が動いている。</p></> },
     { image: "prologue-02-troops.png", content: <><p>鳥羽・伏見で敗れた徳川の軍勢は、江戸へ退いた。</p><p>新政府軍は東へ進み、<br />ついに江戸を目前にしている。</p><p><strong>総攻撃は、明日。</strong></p><p>江戸城だけではない。</p><p>ひとたび火が放たれれば、<br />この巨大な町そのものが戦場になる。</p></> },
@@ -724,12 +765,12 @@ function Edo1868Page({ onNavigate, path }) {
       <section><h2>今回の結末</h2><p className="edo-ending-stars" aria-label={`5段階中${completedRun.stars}つ星`}>{endingStars(completedRun.endingId)}</p><h3>{completedRun.endingTitle}</h3><p>{completedRun.summary || completedRun.outcomeLine}</p></section>
       <section><h2>会談で交わした約定</h2><p>ここに記すのは約束の内容です。履行済みを意味するものではありません。</p><div className="edo-note-list">{describeAgreedTerms(completedRun.settlementSnapshot).map((terms,index)=><article key={index}><p style={{whiteSpace:"pre-wrap"}}>{terms}</p></article>)}</div></section>
       <section><h2>交渉ノート</h2><div className="edo-note-list">{completedRun.discoveredInformation.map((item, index) => <article key={`${item.id}-${index}`}><h3>{item.title}</h3><p>{item.text}</p></article>)}</div></section>
-      <section><h2>会話履歴</h2><button type="button" onClick={() => setAllHistoryOpen((value) => !value)}>{allHistoryOpen ? "すべて閉じる" : "すべて展開"}</button><div className="edo-review-history">{completedRun.conversationHistory.map((message, index) => <details key={`${index}-${allHistoryOpen}`} open={allHistoryOpen}><summary>{index + 1}. {message.role === "katsu" ? "勝海舟" : message.role === "government" ? "新政府" : "西郷隆盛（あなた）"}</summary><p>{message.text}</p></details>)}</div></section>
+      <section><h2>会話履歴</h2><button type="button" onClick={() => setAllHistoryOpen((value) => !value)}>{allHistoryOpen ? "すべて閉じる" : "すべて展開"}</button><div className="edo-review-history">{completedRun.conversationHistory.map((message, index) => <details key={`${index}-${allHistoryOpen}`} open={allHistoryOpen}><summary>{index + 1}. {message.role === "katsu" ? "勝海舟" : message.role === "government" ? "新政府" : "西郷隆盛（あなた）"}</summary><p>{message.text}</p>{reportButton(message)}</details>)}</div></section>
       {saveWarning && <p role="status">{saveWarning}</p>}
       <nav><button type="button" onClick={startNewGame}><RotateCcw size={17} />もう一度、三月十四日へ</button><button type="button" onClick={showTitle}>タイトルへ戻る</button></nav>
     </article>
-  </main>;
-  if (phase === "title" || (endingId && completedRun)) return <main className="edo-title" style={{ backgroundImage: "url('/images/edo-1868/edo-title-bay-v5.png')" }}><div className="edo-title-shade" /><section><h1><img src="/images/edo-1868/edo-1868-brush-title.png" alt="1868" /></h1><p>― 江戸焦土前夜 ―</p></section><nav>{hasSavedGame && <button onClick={() => endingId && completedRun ? onNavigate(ENDING_PATH) : setPhase("play")}>続きから始める <ArrowRight size={19} /></button>}<button onClick={startNewGame}>ゲームを始める <ArrowRight size={19} /></button>{completedRun && <button onClick={openReview}>前回の交渉を振り返る <ChevronRight size={19} /></button>}<button onClick={() => setPanel("settings")}>設定 <ChevronRight size={19} /></button><a href="/guide/api/">API設定ガイド <ChevronRight size={19} /></a><a href="/important/#edo-1868">注意事項 <ChevronRight size={19} /></a></nav>{panel === "settings" && <div className="edo-modal-backdrop"><section className="edo-modal"><button className="edo-modal-close" onClick={() => setPanel("")} aria-label="閉じる"><X size={22} /></button>{settingsFields}</section></div>}</main>;
+  {reportOverlay}</main>;
+  if (phase === "title" || (endingId && completedRun && !tutorial)) return <main className="edo-title" style={{ backgroundImage: "url('/images/edo-1868/edo-title-bay-v5.png')" }}><div className="edo-title-shade" /><section><h1><img src="/images/edo-1868/edo-1868-brush-title.png" alt="1868" /></h1><p>― 江戸焦土前夜 ―</p></section><nav>{hasSavedGame && <button onClick={() => endingId && completedRun ? onNavigate(ENDING_PATH) : setPhase("play")}>続きから始める <ArrowRight size={19} /></button>}<button onClick={startNewGame}>ゲームを始める <ArrowRight size={19} /></button>{completedRun && <button onClick={openReview}>前回の交渉を振り返る <ChevronRight size={19} /></button>}<button data-edo-tour="settings" onClick={() => setPanel("settings")}>設定 <ChevronRight size={19} /></button><a href="/guide/api/">API設定ガイド <ChevronRight size={19} /></a><a href="/important/#edo-1868">注意事項 <ChevronRight size={19} /></a></nav>{panel === "settings" && <div className="edo-modal-backdrop"><section className="edo-modal" role="dialog" aria-modal="true" aria-label="設定"><button className="edo-modal-close" onClick={() => setPanel("")} aria-label="閉じる"><X size={22} /></button>{settingsFields}</section></div>}</main>;
   if (phase === "intro") { const page = intro[introStep]; const lastPage = introStep === intro.length - 1; return <main className={`edo-intro-page edo-intro-page-${introStep + 1}`} key={introStep} style={{ backgroundImage: `url('/images/edo-1868/${page.image}')` }}><div className="edo-intro-page-shade" /><article className="edo-intro-copy">{page.content}<div className="edo-intro-controls">{introStep > 0 && <button type="button" className="edo-intro-back" onClick={() => setIntroStep((value) => value - 1)}>戻る</button>}<button type="button" onClick={() => lastPage ? beginDialogue() : setIntroStep((value) => value + 1)}>{lastPage ? "いざ、対談" : "次へ"} <ArrowRight size={19} /></button></div><p className="edo-intro-step">{introStep + 1} / {intro.length}</p></article></main>; }
   if (phase === "transition") return <main className="edo-transition" aria-label="対談の場面へ移動中" />;
 
@@ -737,11 +778,11 @@ function Edo1868Page({ onNavigate, path }) {
     <Header onNavigate={onNavigate} active="game" />
     <main className={`edo-stage edo-play-${playIntroStage}${keyboardInset ? " edo-keyboard-open" : ""}`} style={{ backgroundImage: "url('/images/edo-1868/edo-secret-study-v3.png')", "--edo-keyboard-inset": `${keyboardInset}px` }}>
       <div className="edo-stage-shade" />
-      <div className="edo-hud"><button onClick={() => { setIntroStep(0); setPhase("title"); }}><ChevronLeft size={18} />タイトルへ戻る</button><span>会話ターン {state.turns + 1}</span><div><button onClick={() => setPanel("mission")}><BookOpen size={18} />使命</button><button onClick={() => setPanel("notes")}><BookOpen size={18} />交渉ノート</button><button onClick={() => setPanel("history")}><MessageCircle size={18} />会話履歴</button><button onClick={() => setPanel("usage")}><Database size={18} />API使用量</button><button onClick={() => setPanel("settings")}><Settings size={18} />設定</button></div></div>
+      <div className="edo-hud"><button onClick={() => { setIntroStep(0); setPhase("title"); }}><ChevronLeft size={18} />タイトルへ戻る</button><span>会話ターン {state.turns + 1}</span><div><button data-edo-tour="mission" onClick={() => setPanel("mission")}><BookOpen size={18} />使命</button><button data-edo-tour="notes" onClick={() => setPanel("notes")}><BookOpen size={18} />交渉ノート</button><button data-edo-tour="history" onClick={() => setPanel("history")}><MessageCircle size={18} />会話履歴</button><button data-edo-tour="usage" onClick={() => setPanel("usage")}><Database size={18} />API使用量</button><button data-edo-tour="settings" onClick={() => setPanel("settings")}><Settings size={18} />設定</button></div></div>
       <div className="edo-scene-meta"><p>{GAME_DATE}</p><p>江戸・薩摩藩邸</p></div>
       <section className="edo-character-stage" aria-label="勝海舟"><img src={EXPRESSION_ASSETS[currentKatsu?.expression] || EXPRESSION_ASSETS.neutral} alt="交渉相手の勝海舟" /></section>
-      <section className="edo-dialogue-box" aria-live="polite"><div className="edo-nameplate">勝海舟</div><p>{visibleKatsuText}</p></section>
-      <form className="edo-stage-form" onSubmit={submit}>{apiError && <p className="edo-send-error" role="alert">{apiError}</p>}<div className="edo-input-field"><textarea aria-label="あなたの言葉" aria-describedby="edo-input-count" value={draft} onChange={(event) => setDraft(event.target.value)} onFocus={anchorMobileGame} maxLength={1000} placeholder="" disabled={isSending} /><span id="edo-input-count" className="edo-input-count">{draft.length} / 1000</span></div><button type="button" className="edo-conclude-button" onClick={() => setPanel("conclude")} disabled={isSending}>決着を求める</button><button type="submit" disabled={!draft.trim() || isSending} aria-label="言葉を交わす">{isSending ? <LoaderCircle className="edo-loading" size={25} /> : <Send size={28} />}</button></form>
+      <section className="edo-dialogue-box" aria-live="polite"><div className="edo-nameplate">勝海舟</div><p>{visibleKatsuText}</p>{reportButton(currentKatsu)}</section>
+      <form className="edo-stage-form" onSubmit={submit}>{apiError && <div className="edo-send-error" role="alert">{apiError}<button type="button" onClick={()=>setPanel("settings")}>設定を開く</button></div>}<div className="edo-input-field" data-edo-tour="input"><textarea aria-label="あなたの言葉" aria-describedby="edo-input-count" value={draft} onChange={(event) => setDraft(event.target.value)} onFocus={anchorMobileGame} maxLength={1000} placeholder="" disabled={isSending} /><span id="edo-input-count" className="edo-input-count">{draft.length} / 1000</span></div><button type="button" className="edo-conclude-button" data-edo-tour="conclude" onClick={() => setPanel("conclude")} disabled={isSending}>決着を求める</button><button type="submit" disabled={!draft.trim() || isSending} aria-label="言葉を交わす">{isSending ? <LoaderCircle className="edo-loading" size={25} /> : <Send size={28} />}</button></form>
       {settlementFlow && createPortal(<section className={`edo-settlement-overlay edo-settlement-${settlementFlow.stage}`} aria-live="polite">
         {settlementFlow.stage === "government" ? <div className="edo-settlement-copy edo-government-reflection"><p>勝の言葉は、ここで終わりではない。</p><p>西郷の約束を、新政府が引き受けるのか。</p><p>明日の軍勢を止める判断が、今、問われている。</p></div> : <div className="edo-settlement-copy">
           <p className="edo-settlement-kicker">勝は、しばらく黙っている。</p>
@@ -750,7 +791,7 @@ function Edo1868Page({ onNavigate, path }) {
         </div>}
       </section>, document.body)}
       {panel && createPortal(<div className="edo-modal-backdrop" role="presentation" onMouseDown={() => setPanel("")}><section className="edo-modal" role="dialog" aria-modal="true" aria-label={panel} onMouseDown={(event) => event.stopPropagation()}><button className="edo-modal-close" onClick={() => setPanel("")} aria-label="閉じる"><X size={22} /></button>
-        {panel === "history" && <><h2>会話履歴</h2><ol className="edo-history-list">{[...messages].reverse().map((message, reverseIndex) => { const index = messages.length - 1 - reverseIndex; return <li className={`edo-history-message ${message.role}`} key={`${message.role}-${index}`}><span>会話 {Math.floor(index / 2) + 1} · {message.role === "katsu" ? "勝海舟" : message.role === "government" ? "新政府" : "西郷隆盛"}</span><p>{message.text}</p></li>; })}</ol></>}
+        {panel === "history" && <><h2>会話履歴</h2><ol className="edo-history-list">{[...messages].reverse().map((message, reverseIndex) => { const index = messages.length - 1 - reverseIndex; return <li className={`edo-history-message ${message.role}`} key={`${message.role}-${index}`}><span>会話 {Math.floor(index / 2) + 1} · {message.role === "katsu" ? "勝海舟" : message.role === "government" ? "新政府" : "西郷隆盛"}</span><p>{message.text}</p>{reportButton(message)}</li>; })}</ol></>}
         {panel === "mission" && <><h2>使命</h2><div className="edo-note-list"><article><h3>江戸城の引渡し</h3><p>江戸城を新政府へ明け渡させる。</p></article><article><h3>軍事的脅威の除去</h3><p>旧幕府勢力が再び大規模な軍事行動を取れる状態を残さない。</p></article><article><h3>新政府が承認可能な合意</h3><p>西郷個人の情ではなく、新政府側へ持ち帰って成立させられる条件にする。</p></article></div><p className="edo-modal-lead">明日には総攻撃が予定されている。戦わずして目的を果たせるなら、それに越したことはない。</p></>}
         {panel === "notes" && <><h2>交渉ノート</h2><p className="edo-modal-lead">会談前に得た情報と、会話から引き出した情報だけが記録されます。</p><div className="edo-note-list">{discoveries.map((item) => <article key={item.id}><h3>{item.title}</h3><p>{item.text}</p></article>)}</div></>}
         {panel === "conclude" && <><h2>勝に決着を求めますか</h2><p className="edo-modal-lead">ここまでの条件について、勝に最終判断を求めます。勝がまだ受諾しなければ対談を続けられます。受諾した時点で約定は確定し、新政府の判断後も変更できません。</p><div className="edo-decision-actions"><button type="button" onClick={concludeNegotiation}>勝に答えを求める</button><button type="button" onClick={() => setPanel("")}>交渉を続ける</button></div></>}
@@ -758,6 +799,8 @@ function Edo1868Page({ onNavigate, path }) {
         {panel === "settings" && settingsFields}
       </section></div>, document.body)}
     </main>
+    {tutorial && <EdoTutorial onFinish={finishTutorial} />}
+    {reportOverlay}
     <Footer onNavigate={onNavigate} />
   </>;
 }

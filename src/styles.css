@@ -638,3 +638,18 @@ footer small { grid-column: 1 / -1; color: var(--muted); }
 .edo-send-error{flex:0 0 100%;box-sizing:border-box;margin:0;padding:6px 8px;background:#402426;color:#fff1df;font-size:13px;line-height:1.5}
 
 .edo-result .edo-ending-stars,.edo-review .edo-ending-stars{color:#dfc18b;font-size:clamp(24px,5vw,36px);letter-spacing:.14em;line-height:1.4;white-space:nowrap;margin:.7rem 0}
+
+/* Edo first-visit guide: the outline reveals the actual target without moving it. */
+.edo-tour-overlay{position:fixed;inset:0;z-index:150;isolation:isolate;color:#f3e4c7;font-family:system-ui,sans-serif}
+.edo-tour-spotlight{position:fixed;border:2px solid #e4c180;border-radius:4px;box-shadow:0 0 0 9999px rgba(0,5,10,.78);pointer-events:none;box-sizing:border-box}
+.edo-tour-card{position:fixed;box-sizing:border-box;padding:18px;background:#131e26;border:1px solid #dfbd7d;box-shadow:0 8px 32px #0008;max-height:calc(100dvh - 24px);overflow:auto;width:min(380px,calc(100vw - 24px));left:12px;top:12px;font-size:14px;line-height:1.65}
+.edo-tour-card h2{font-size:20px;margin:0 0 8px}.edo-tour-card p{margin:0 0 10px}.edo-tour-progress{font-size:12px;color:#dbc49b}
+.edo-tour-actions{display:flex;gap:8px;justify-content:space-between;margin-top:16px}.edo-tour-actions button,.edo-report-actions button,.edo-tutorial-replay{padding:9px 12px;border:1px solid #dec38c;background:#e3c78e;color:#17212a;font:inherit;cursor:pointer}
+.edo-tour-actions button:disabled,.edo-settings-actions button:disabled{opacity:.45;cursor:not-allowed}
+.edo-tour-card a,.edo-api-notice a,.edo-consent a,.edo-report-dialog a{color:#e9c98a;text-decoration:underline;text-underline-offset:3px}
+.edo-api-notice{font-size:14px;line-height:1.7;padding:12px;border:1px solid #b28b51;margin-bottom:16px}.edo-api-notice h3{margin:0}.edo-api-notice p{margin:8px 0}
+.edo-consent{display:flex;align-items:flex-start;gap:10px;line-height:1.7;margin:18px 0}.edo-consent input{flex:0 0 auto;width:20px;height:20px;accent-color:#d9b574;margin-top:5px}
+.edo-report-button{display:block;margin:8px 0 0 auto;padding:4px 8px;font-size:12px;line-height:1.5;color:inherit;border:1px solid currentColor;background:transparent;border-radius:2px;cursor:pointer}
+.edo-report-dialog textarea,.edo-report-dialog select{width:100%;box-sizing:border-box;color:#f3e4c7;background:#0b141b;border:1px solid #aa9062;padding:8px;font:inherit}.edo-report-dialog textarea{min-height:100px}.edo-report-dialog p{line-height:1.7;font-size:14px}.edo-report-actions{display:flex;flex-wrap:wrap;align-items:center;gap:16px;margin-top:18px}
+.edo-send-error button{width:auto;margin-left:10px;padding:3px 8px;font-size:13px}
+.edo-tour-card :focus-visible,.edo-modal :focus-visible{outline:3px solid #f7d996;outline-offset:3px}
