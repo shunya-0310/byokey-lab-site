@@ -1,104 +1,116 @@
 {
   "schemaVersion": 1,
   "status": "live",
-  "date": "2026-10-05",
-  "generatedAt": "2026-10-04T23:57:34.975Z",
+  "date": "2026-10-06",
+  "generatedAt": "2026-10-06T01:45:33.201Z",
   "model": "gemini-3.6-flash",
   "fallbackCategories": [],
   "items": [
     {
-      "id": "2026-10-05-politics_economy",
+      "id": "2026-10-06-politics_economy",
       "category": "politics_economy",
       "categoryLabel": "Politics & Economy",
-      "headline": "Brazil Holds High-Stakes Presidential Election as Lula and Flávio Bolsonaro Face Off",
-      "summary": "Voters across Brazil cast their ballots on October 4, 2026, in a tightly contested first-round presidential election between incumbent President Luiz Inácio Lula da Silva and Senator Flávio Bolsonaro. With neither frontrunner expected to secure over 50% of the vote, the election is set to head to a decisive October 25 runoff that will shape the political and economic direction of Latin America's largest nation.",
-      "question": "What key factors do you think voters consider most when deciding between experienced leaders and newer political figures in major elections?",
+      "headline": "2026 Nobel Prize in Medicine Awarded to Optogenetics Pioneers",
+      "summary": "On October 5, 2026, scientists Karl Deisseroth, Peter Hegemann, and Georg Nagel were awarded the Nobel Prize in Physiology or Medicine for their development of optogenetics. Their groundbreaking research uses light to control individual brain cells, revolutionizing neuroscience and paving the way for advanced treatments of brain disorders.",
+      "question": "How do you think breakthrough medical discoveries like optogenetics could impact our daily lives in the future?",
       "coachLeads": {
-        "friendly": "Hey, have you been following the big election news out of Latin America? Brazil just held its presidential vote, and it's shaping up to be a really fascinating race.",
-        "energetic": "Brazil's major presidential election is officially underway, and the vote is setting up an intense runoff! Let me know if you want to break down what's happening.",
-        "calm": "Brazil held the first round of its presidential election over the weekend, leading to a closely watched runoff. It's an important moment in global politics that is worth discussing together.",
-        "direct": "Brazil's voters just cast their ballots in a high-stakes presidential election that will determine the country's future direction. Let's talk about what this means for world politics."
+        "friendly": "Hey, have you heard about the big news from the Nobel Prize announcements today?",
+        "energetic": "Check out this incredible scientific breakthrough that just won the 2026 Nobel Prize in Medicine!",
+        "calm": "Let's take a look at a major milestone in modern neuroscience and medical research.",
+        "direct": "Three scientists just won the Nobel Prize in Medicine for using light to control brain cells."
       },
       "sources": [
         {
-          "title": "pbs.org",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEt0mZM_w6GzWYuWOiaIOvDcdXs_fCx7yagCaWUQtfJ13O0jMdDb-NG5Cl4aNUtlHqKXhhDngan4PTgysVWpsdbP_qpS0E2NY4HvZHO3-_mL3-t3YlQB8BCjaBE29hpyHsv7S1Fc_aOpdTvt5okEwb67Bjmds1it3JIkQYCDGIrRJGzSkH5PM-bXXJ579M8Mp80iyVckh9Rsg=="
+          "title": "nobelprize.org",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE_ASIhkeYFrpBHD8ynXkCwD77PE3fyDtXMr5SeMEip4X-FUztaa8OdrZ2tU1ZI7BVATcuGQoT7FvMrtPAY7W7mEdZZp-PoheNyBtMM94dIYCBq5704L4O1CCLEevrH2YBl3acvvMXtLihVOucbl2OMVzwtJA=="
         },
         {
-          "title": "hudson.org",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHYnwtojmCsWYCYPO6qpjeuGtKnHnrPOu_f_oG1XUtMJKJqt8i9vkkJEg2apy_F4P54REJyn7rTAMegXCM7nj8iUisriyNR_toB5H3dMjqyyaADdMtoJczb3S_YHCtoptcF4Ig0VwBwBrrxZ8TqfSPPeOvfjfLALVvI49P7tHzwzyOhGlAytEdqitY="
+          "title": "theguardian.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQER4UDWXT5sNGgo0rv3GSnScU8C2Yfqd5BAOVm7RQcdykLWolzH8nlOQJs3Ylc3XFpePShd8ZkUFtjO2C-vT3bAFdRJPPM9j4QVIOgWmhkMlTH5AU_47Btmfb5hpfLOTa0zkneZnGMz9y2mB4ATYagooXJMpha29ZDfKB-OgwetN5v9uzKmHg=="
+        },
+        {
+          "title": "nobelprize.org",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE_yqhM_HytcExf9weAIzZqv49UCdvgKf2IGO4jOzM-uBJT85jHh1qmA5sP5AuHS17VmARICPza6eGLypt64NZXTRQpL1TMeMIuVGORnet86TIhFNrp7sRpp-QWlL89Rf9RFgcxGI3w92NK9X2Wm2Rxjm9YD3FB2KqUhw=="
         }
       ]
     },
     {
-      "id": "2026-10-05-technology",
+      "id": "2026-10-06-technology",
       "category": "technology",
       "categoryLabel": "Technology",
-      "headline": "US Appoints Intelligence Chief Jay Clayton to Lead New White House AI Task Force",
-      "summary": "US President Donald Trump has appointed Director of National Intelligence Jay Clayton to lead a new federal task force called the Super Intelligence Force to coordinate artificial intelligence policy. The decision follows voluntary safety agreements between the administration and leading technology firms, bringing government oversight and national security concerns to center stage.",
-      "question": "Do you think government intelligence officials should oversee AI development, or should tech companies handle regulation themselves?",
+      "headline": "2026 Nobel Prize in Medicine Awarded to Optogenetics Pioneers",
+      "summary": "Scientists Karl Deisseroth, Peter Hegemann, and Georg Nagel were awarded the 2026 Nobel Prize in Physiology or Medicine on October 5 for developing optogenetics, a technology that uses light to control individual brain cells. The announcement marks the start of Nobel week, recognizing a breakthrough that enables researchers to map brain circuits and investigate treatments for neurological conditions.",
+      "question": "How do you think using light to study and control brain cells could change the future of healthcare?",
       "coachLeads": {
-        "friendly": "Hey, have you heard about the latest government move on artificial intelligence? This is definitely worth talking about!",
-        "energetic": "Check out this huge AI policy update! A brand-new government task force was just announced to guide artificial intelligence!",
-        "calm": "There is a notable shift in artificial intelligence governance today. Let's take a moment to discuss what this new task force means.",
-        "direct": "The US government just named an intelligence chief to lead a new AI task force. Let's talk about how this could impact tech policy."
+        "friendly": "Hey, have you heard about this year's Nobel Prize in Medicine? It's a fascinating scientific story that's definitely worth talking about!",
+        "energetic": "Check this out! The 2026 Nobel Prize in Medicine was just awarded for a mind-blowing technology that controls brain cells with light!",
+        "calm": "The 2026 Nobel Prize season has officially begun with a major milestone in neuroscience. It's an inspiring breakthrough that offers a deep look into how our brains work.",
+        "direct": "Three scientists won the 2026 Nobel Prize in Medicine on Monday for pioneering optogenetics. Let me know what you think about this major scientific milestone."
       },
       "sources": [
         {
-          "title": "Google News: Technology",
-          "url": "https://news.google.com/search?q=Technology%20top%20news%202026-10-05&hl=en-US&gl=US&ceid=US:en"
+          "title": "nobelprize.org",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG82p5k2ciySh3jKvwznTXke8W1aQw4zHj3S9BPXRve-45ch93HgSvNaYiL8T4z0Y4LTgM__N79ARFTCne8DFmP4oY5I2a6UiTPKNXD48gck5bsfEzNGve4kizsp5Ulkjj9y7YzuW12Ie93mOAi"
+        },
+        {
+          "title": "nobelprize.org",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFO5we21cLCtIQYcX6yGctaRqHHtNshKWf0VRV4mfUhZU3dsQ1MCRhLK-aMwNoMNa74VKaP3r0wOf9koqnWYi6lgKdYFH4CX0qfx5UQzkrILtniBN7PC3IsrNXfi9sYclhQVMVrGpo="
+        },
+        {
+          "title": "time.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFbGweV0UpOzrSZiIEJBRmh2kJOCUDsA2my8mQW-lEmBLwK8FzGqVjHcOiyZvAEzSYQ2yYNoFJwl8UR4k3Q3dWbaKUICbqYJDw7VPFaXkDJ0xb5DUflNOmnW9wu_b44LlCUIoU8TNT8QGVcDhsmxygJnpI="
         }
       ]
     },
     {
-      "id": "2026-10-05-sports",
+      "id": "2026-10-06-sports",
       "category": "sports",
       "categoryLabel": "Sports",
-      "headline": "Marc Marquez Wins Japanese Grand Prix to Narrow MotoGP Title Gap",
-      "summary": "Ducati rider Marc Marquez won the Japanese Grand Prix at Motegi on Sunday, completing a weekend sweep after winning Saturday's sprint race. By finishing ahead of title rival Jorge Martin, Marquez slashed Martin's championship lead to just two points heading into the next round.",
-      "question": "What do you think makes close championship battles so exciting for sports fans?",
+      "headline": "France Rallies with Late Goal Surge to Defeat Belgium in Nations League",
+      "summary": "France delivered a dramatic second-half comeback to beat Belgium 4–1 in their UEFA Nations League Group A1 fixture on October 5. After trailing for much of the match, the French squad scored four unanswered goals in the final quarter-hour at the Stade de France to solidify their place at the top of the group.",
+      "question": "How do you think a team can maintain focus and turn a match around when falling behind late in the game?",
       "coachLeads": {
-        "friendly": "Hey, have you heard about the big race in Japan this weekend? It turned into an incredible battle for the championship.",
-        "energetic": "Marc Marquez just swept the Japanese Grand Prix weekend, and the title race is down to two points!",
-        "calm": "Marc Marquez took victory at the Japanese Grand Prix on Sunday. It has set up an intense title battle for the remainder of the season.",
-        "direct": "Marc Marquez won the Japanese Grand Prix on Sunday, cutting Jorge Martin's championship lead to just two points."
+        "friendly": "Hey! Did you catch that dramatic football match between France and Belgium?",
+        "energetic": "What an unbelievable finish as France scored four late goals to surge past Belgium!",
+        "calm": "France showed remarkable patience yesterday, staging a late four-goal rally against Belgium.",
+        "direct": "France defeated Belgium 4–1 in the UEFA Nations League thanks to a flurry of late second-half goals."
       },
       "sources": [
         {
-          "title": "motogp.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHY-M2Rw4J4YcZCekagE4SBBpA3fTaeMRMEJJOz7-FUNEV0Wx2Obw54lEn26ILB9lVey6wbhQk-qV9JUcgTkyi7AFJ4CtcOmRO8A1gVsn3YQrE00ltBXKRCpB1LZGZ6pu0cHCMMEvPAFB5DcOLfpFLv2iWSR7239cvETtk1lq-Y_Qxqk4UPDct2G5O_3Wv_rS0iLWt_nG95nefDGcepkQ3gwluJaxyM4Ta7Z0Y="
+          "title": "aljazeera.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHdg4Jq9vmq3nY7veFE8ENVQ2UvLOC1nmDmaWCHgvLOC0yo_ZUSkPvnoql7GlH6o4ZovrMrHUX2aE459kMFUel8qYaz9LP970DVxJEAc3JAqKEISvzvan-o8XniLtxaTH50NYT163wTZXXHweqAgdzlQDxSG_aYB3xWVCHu_jwRklq3wsTpw4S8nFdZ6emUKkbhv0TW"
         },
         {
-          "title": "straitstimes.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGbRN7efaogMJg-zlmeC0jhg-SsMlUlsNR7ohTyznniJ0CsdCKPcz1l8aEv8ogS4UVt232igKdIa4hiA3rRAZ91wmrgsQa-9XosY89DBAgB54VuJ4cRuH9jiv88RZMNjCauQCPo7EQPMdlMcnV1KoldnCg5DEDEX0PuGSWt1zDs3ePYX1dxG4wwcz3gEw0WcBk="
+          "title": "theguardian.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEpgo_T89qify4hiHKWOi25sCXNSGSas1Wn_fGW6hOdPVvbdFLZkWbxsGckpwpGkpM-FyqJJJVjg_Vktn2aKEExe431guHMfpZrCLVsZQCu2TJpM3ZiHjw3Cd11AqM_gKzLahBxmHzzWw7-d-8tgfGh8sFX9WyqS4zfDXkLrzw2TiQLNKqze_pH8dDIK8md1Arjkqb-QFDDUwsE1dJSwPY7esijH-Fsl9jSHktYMEHgf2YhOQVdSAd77WDt"
         }
       ]
     },
     {
-      "id": "2026-10-05-entertainment",
+      "id": "2026-10-06-entertainment",
       "category": "entertainment",
       "categoryLabel": "Entertainment",
-      "headline": "Anne Hathaway's 'Verity' Tops Weekend Box Office as Tom Cruise's 'Digger' Stumbles",
-      "summary": "The psychological thriller 'Verity' claimed the top spot at the weekend box office with an estimated $32.6 million domestic debut. Meanwhile, Tom Cruise's high-budget dark comedy 'Digger' struggled during its opening weekend, generating just $8 million in North America.",
-      "question": "What kind of movies do you prefer watching at the theater compared to streaming at home?",
+      "headline": "Tom Cruise Satire 'Digger' Stumbles at Box Office as 'Verity' Wins Weekend",
+      "summary": "Amazon MGM's psychological thriller Verity topped the North American box office with a $32.6 million weekend debut. In contrast, Tom Cruise's big-budget satire Digger opened to just $8 million, marking a rare box office misfire during Warner Bros. Discovery's final release before its merger with Paramount Skydance.",
+      "question": "Why do you think major film stars are sometimes not enough to guarantee a movie's success at the box office?",
       "coachLeads": {
-        "friendly": "Hey! Have you seen any good movies lately? There is some big news about this weekend's box office results.",
-        "energetic": "What a surprising weekend at the movie theaters! You won't believe how these two major films performed at the box office!",
-        "calm": "There were some interesting developments at the box office over the weekend. Let me catch you up on the top movie news.",
-        "direct": "Here is the top entertainment story from this weekend's box office. Let's talk about how these star-studded films performed."
+        "friendly": "Hey, have you seen the latest box office results from the weekend? It is a really interesting topic to chat about!",
+        "energetic": "You will never guess what happened at the movies this weekend! Big Hollywood stars are making major headlines right now.",
+        "calm": "There is some surprising news from the film industry worth looking at today. Let's discuss what drove moviegoers to theaters this weekend.",
+        "direct": "This weekend's box office numbers brought a huge surprise for Hollywood. Let me fill you in on the details."
       },
       "sources": [
         {
-          "title": "boxofficepro.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFhzI5UsWoRLfK3xbHGn9ckTsRbTp8Bt9CuRUNQdGOCJjjqdHrfB_ijgnIxNxyYB0ICzdabdf_Y1UE_AXNweZxsdB4zvPapYOmgJOoD4rM3DQj16NcGgD2uWfWlGsuzjT1acMDOoOm3o3vZcNCGKMU89NYLILotS7Uqyt45UjvVsVu0PMF0qxbyUIa3MCKoiubXAebSjG8="
+          "title": "cocktailsandmovies.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGF7fj9s-yyL3AIDoBAlUHEJj844EuPnsS2naRynOjAMe0OmFKcyvp1_24WRFdggSbPdNFzo-cp2NrVnr0Rbf71d0eucfGqAIbAt8cf2mKPEdM5wXIWcO1g0BEfRAm7upqKdyoNMjxhyRHBVKXyeBQsNGRBU1xEZxJqy3AerfCk4rV9spZNHmzEDXyRhXp0FJfnFeCrmdqFocq0l7lK-da9yNqx"
         },
         {
-          "title": "tradingview.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFA_KDjHT6nNMFW2eEyQf7bMVNAyJ0ey-GPbjxLZ_-4dSB-XFytFum_A65eyjKzFSQaL_fR5kpOe6BeIm9c0i2tyqN6k00EaMqRrrQK6kjh3lVzZ6OTP615-Yap5dyIe9KhW_3_b7TNeUM3MVdbTNsHf-YkXVyr_3Wb6U20s8cljUZPYzNeZqFLmi-Ql6xW88woT0K5y90ueRdRXejgjHmyHoNoYNO0X2Us"
+          "title": "toynewsi.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQExQZOZz245UtHKvS0KG_fHyg3bnyBym0T-aBQ8awfTZz90WgcTz5GLluLG73I90PH1VGg4Q9WDEccVCpGoCR9IpaNeqx7fAK4PcIhMl_puZVrmh74="
         },
         {
-          "title": "mediaplaynews.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF2mQf_CEqWIbDRVENoXuXkzfT1wd9mwIZarWtIG8fbIDxc-NRoaGfxqbk7f_h0MDBk0SgAV-HEWHNHqQuJ-MvXhnedOZ10pNc64KqN2sqPhJF8xAkP0IMh8uKQjkrl6NG5bnEHF7-UGVyAf2B4rrRIoKz4jk0mR0FoG6krIlNdXFFc88HIKZVuqb4n1AphOPKNjX_FAGadHtYIV2vZMWvhsgg7om7AMxLtt82e"
+          "title": "washingtonpost.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF9gYYcsd4N8VFKwC8v608rkYOO5dPT0HCUvRJj7Dn7eI_MM05-X_8KMfhGYvqYxC9LmSJFchFqEcnKYT_F8Ib1Jrs8xqB-vVhi9ERCFNRKIigwIoic9eebJh-qPLe_Wg94aTU="
         }
       ]
     }
