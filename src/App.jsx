@@ -1552,6 +1552,7 @@ export function App() {
 
   if (path.startsWith("/speak/english")) return <SpeakPage onNavigate={navigate} />;
   if (path.startsWith("/games/edo-1868")) return <Edo1868Page onNavigate={navigate} path={path} />;
+  if (path.startsWith("/articles/edo-1868-history-ai-game")) return <ArticlePage slug="edo-1868-history-ai-game" onNavigate={navigate} />;
   if (path.startsWith("/articles/byokey-speak-api-english")) return <ArticlePage slug="byokey-speak-api-english" onNavigate={navigate} />;
   if (path.startsWith("/articles")) return <ArticleIndexPage onNavigate={navigate} />;
   if (path.startsWith("/guide/api")) return <GuidePage onNavigate={navigate} />;

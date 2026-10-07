@@ -52,6 +52,18 @@ export const seoRoutes = [
     schemaType: "CollectionPage",
   },
   {
+    path: "/articles/edo-1868-history-ai-game/",
+    title: "江戸無血開城を自分の言葉で目指す｜歴史AIゲーム「1868」の遊び方",
+    description: "1868年の江戸無血開城を、自分の言葉で追体験するブラウザゲーム「1868 -江戸焦土前夜-」。西郷隆盛として勝海舟と交渉する遊び方と開発経緯を、ゲーム画面とともに紹介します。",
+    priority: "0.8",
+    changefreq: "monthly",
+    schemaType: "Article",
+    image: "/images/articles/edo-1868/game-title.webp",
+    imageAlt: "1868 -江戸焦土前夜-のタイトル画面",
+    datePublished: "2026-10-08",
+    dateModified: "2026-10-08",
+  },
+  {
     path: "/articles/byokey-speak-api-english/",
     title: "AI英会話に料金革命｜自分のAPIキーで使う英会話アプリ「BYOKey Speak」",
     description:
