@@ -1,116 +1,108 @@
 {
   "schemaVersion": 1,
   "status": "live",
-  "date": "2026-10-06",
-  "generatedAt": "2026-10-06T01:45:33.201Z",
+  "date": "2026-10-07",
+  "generatedAt": "2026-10-07T00:43:04.043Z",
   "model": "gemini-3.6-flash",
   "fallbackCategories": [],
   "items": [
     {
-      "id": "2026-10-06-politics_economy",
+      "id": "2026-10-07-politics_economy",
       "category": "politics_economy",
       "categoryLabel": "Politics & Economy",
-      "headline": "2026 Nobel Prize in Medicine Awarded to Optogenetics Pioneers",
-      "summary": "On October 5, 2026, scientists Karl Deisseroth, Peter Hegemann, and Georg Nagel were awarded the Nobel Prize in Physiology or Medicine for their development of optogenetics. Their groundbreaking research uses light to control individual brain cells, revolutionizing neuroscience and paving the way for advanced treatments of brain disorders.",
-      "question": "How do you think breakthrough medical discoveries like optogenetics could impact our daily lives in the future?",
+      "headline": "Francis Halzen Wins 2026 Nobel Prize in Physics for Cosmic Neutrino Research",
+      "summary": "Belgian-born scientist Francis Halzen was awarded the 2026 Nobel Prize in Physics on Tuesday for his pivotal contributions to the IceCube Neutrino Observatory in Antarctica. The Royal Swedish Academy of Sciences recognized his breakthrough work in detecting high-energy astrophysical neutrinos, which provide fresh insight into the fundamental origins of the universe.",
+      "question": "How do you feel major scientific achievements like Nobel Prize discoveries influence our view of the universe?",
       "coachLeads": {
-        "friendly": "Hey, have you heard about the big news from the Nobel Prize announcements today?",
-        "energetic": "Check out this incredible scientific breakthrough that just won the 2026 Nobel Prize in Medicine!",
-        "calm": "Let's take a look at a major milestone in modern neuroscience and medical research.",
-        "direct": "Three scientists just won the Nobel Prize in Medicine for using light to control brain cells."
+        "friendly": "Hey, have you heard the exciting news about this year's Nobel Prize in Physics? It's a really fascinating story about exploring the far reaches of space.",
+        "energetic": "Big news out of Stockholm today! A major Nobel Prize victory in physics is making headlines around the globe!",
+        "calm": "A significant scientific milestone was announced today with the 2026 Nobel Prize in Physics. It offers a wonderful topic for us to explore together.",
+        "direct": "The 2026 Nobel Prize in Physics was awarded today for breakthrough research on cosmic particles. Here is why this story is leading the news right now."
       },
       "sources": [
         {
-          "title": "nobelprize.org",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE_ASIhkeYFrpBHD8ynXkCwD77PE3fyDtXMr5SeMEip4X-FUztaa8OdrZ2tU1ZI7BVATcuGQoT7FvMrtPAY7W7mEdZZp-PoheNyBtMM94dIYCBq5704L4O1CCLEevrH2YBl3acvvMXtLihVOucbl2OMVzwtJA=="
+          "title": "youtube.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHkfYepDWumQt-ge66Bwa5obAxPzMk6aoY3JZ74aAlyO1IxJxScZliXvUBxprQi338pyPxAOZiFJvE3giYU_5MTAgyI4W0nMcDgAr9-eZtlrj4ZqC7Sr2LYJ0K8uyApYNEF"
         },
         {
-          "title": "theguardian.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQER4UDWXT5sNGgo0rv3GSnScU8C2Yfqd5BAOVm7RQcdykLWolzH8nlOQJs3Ylc3XFpePShd8ZkUFtjO2C-vT3bAFdRJPPM9j4QVIOgWmhkMlTH5AU_47Btmfb5hpfLOTa0zkneZnGMz9y2mB4ATYagooXJMpha29ZDfKB-OgwetN5v9uzKmHg=="
-        },
-        {
-          "title": "nobelprize.org",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE_yqhM_HytcExf9weAIzZqv49UCdvgKf2IGO4jOzM-uBJT85jHh1qmA5sP5AuHS17VmARICPza6eGLypt64NZXTRQpL1TMeMIuVGORnet86TIhFNrp7sRpp-QWlL89Rf9RFgcxGI3w92NK9X2Wm2Rxjm9YD3FB2KqUhw=="
+          "title": "pbs.org",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFIiOKTg28dzZ34AHPbqRQQHMD7Xnzer1h3I0OtLRUDkfV3Oqv28TsRt3ZzWC4-f5XJrIcbluUCsUIbXknTFgEEtPYp-inq8LJLDx7A24NlaabPD8xE1roLy6HZm_-iKv-n7tC7jWuKtw9wIv9q9aREijNkVbL8oSeVLivWE6tEYq4wK7V6O8wzYhDkfpeC37Lr1g=="
         }
       ]
     },
     {
-      "id": "2026-10-06-technology",
+      "id": "2026-10-07-technology",
       "category": "technology",
       "categoryLabel": "Technology",
-      "headline": "2026 Nobel Prize in Medicine Awarded to Optogenetics Pioneers",
-      "summary": "Scientists Karl Deisseroth, Peter Hegemann, and Georg Nagel were awarded the 2026 Nobel Prize in Physiology or Medicine on October 5 for developing optogenetics, a technology that uses light to control individual brain cells. The announcement marks the start of Nobel week, recognizing a breakthrough that enables researchers to map brain circuits and investigate treatments for neurological conditions.",
-      "question": "How do you think using light to study and control brain cells could change the future of healthcare?",
+      "headline": "Physicist Francis Halzen Wins 2026 Nobel Prize in Physics for IceCube Observatory Breakthrough",
+      "summary": "Physicist Francis Halzen was awarded the 2026 Nobel Prize in Physics for his foundational work on the IceCube Neutrino Observatory in Antarctica and the discovery of high-energy cosmic neutrinos. The announcement highlights how converting a cubic kilometer of polar ice into a particle detector has unlocked a brand-new way to observe distant phenomena in the universe.",
+      "question": "What do you think motivates scientists to build massive research facilities in extreme places like the South Pole?",
       "coachLeads": {
-        "friendly": "Hey, have you heard about this year's Nobel Prize in Medicine? It's a fascinating scientific story that's definitely worth talking about!",
-        "energetic": "Check this out! The 2026 Nobel Prize in Medicine was just awarded for a mind-blowing technology that controls brain cells with light!",
-        "calm": "The 2026 Nobel Prize season has officially begun with a major milestone in neuroscience. It's an inspiring breakthrough that offers a deep look into how our brains work.",
-        "direct": "Three scientists won the 2026 Nobel Prize in Medicine on Monday for pioneering optogenetics. Let me know what you think about this major scientific milestone."
+        "friendly": "Hey! Have you caught the big news about this year's Nobel Prize in Physics yet?",
+        "energetic": "This scientific milestone is incredible! Scientists built a giant telescope inside Antarctic ice and just won a Nobel Prize for it!",
+        "calm": "The latest Nobel Prize in Physics was just announced, and it features a fascinating story about deep-space exploration. It is worth taking a moment to discuss.",
+        "direct": "Francis Halzen has won the 2026 Nobel Prize in Physics for detecting high-energy cosmic neutrinos in Antarctica. Let's break down why this discovery matters."
       },
       "sources": [
         {
           "title": "nobelprize.org",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG82p5k2ciySh3jKvwznTXke8W1aQw4zHj3S9BPXRve-45ch93HgSvNaYiL8T4z0Y4LTgM__N79ARFTCne8DFmP4oY5I2a6UiTPKNXD48gck5bsfEzNGve4kizsp5Ulkjj9y7YzuW12Ie93mOAi"
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHePvzxocQ0lQw01ORxXPzM7ygmFzmG6NF5XzeUxawM6p74APplR-mvUVHMWts0WJa8bnuXH_I_GNCxrZ8X2Iy2fuvY9eT_ymlS4oOIheVDuRqxbqmf4Fzbs_tIoTbpT7fi8JDVx0acGwvJyBg="
+        },
+        {
+          "title": "forbes.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEGltUchUuTaMISSAfh2q2vELNCy7cQ2I24fRxegCeUZaCjn_ZYEs4adJvL7HOJDuS0Exl0PHTz5_EgGIMUFyg3Apt10mGeN2_Cquif3NLhe3AIzxkv9-X6BWK_Yq9GtwCrtf7SXBESUJS5lkdGFsSIqZizMTPn0OUdGmdHHt0Cmr85IVpQMvtlydvogQSSCJXVdFdmtKBocOxgIOdQcd7Nlsjfo3pdBN4C3ShYv5lMfbRuVgM="
         },
         {
           "title": "nobelprize.org",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFO5we21cLCtIQYcX6yGctaRqHHtNshKWf0VRV4mfUhZU3dsQ1MCRhLK-aMwNoMNa74VKaP3r0wOf9koqnWYi6lgKdYFH4CX0qfx5UQzkrILtniBN7PC3IsrNXfi9sYclhQVMVrGpo="
-        },
-        {
-          "title": "time.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFbGweV0UpOzrSZiIEJBRmh2kJOCUDsA2my8mQW-lEmBLwK8FzGqVjHcOiyZvAEzSYQ2yYNoFJwl8UR4k3Q3dWbaKUICbqYJDw7VPFaXkDJ0xb5DUflNOmnW9wu_b44LlCUIoU8TNT8QGVcDhsmxygJnpI="
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGr_4bDWpu8_jH4S67pPFU87xVS3DyfI3AprfCLh-8zy_FdZMViIznkJOPHq7f0ArcD7c24YrVTcshSmjhWUIbU8Gop6OykxGBHIwU7PfQ9vctSZGl_PSXPVDwYigMenQUK7vumHaU="
         }
       ]
     },
     {
-      "id": "2026-10-06-sports",
+      "id": "2026-10-07-sports",
       "category": "sports",
       "categoryLabel": "Sports",
-      "headline": "France Rallies with Late Goal Surge to Defeat Belgium in Nations League",
-      "summary": "France delivered a dramatic second-half comeback to beat Belgium 4–1 in their UEFA Nations League Group A1 fixture on October 5. After trailing for much of the match, the French squad scored four unanswered goals in the final quarter-hour at the Stade de France to solidify their place at the top of the group.",
-      "question": "How do you think a team can maintain focus and turn a match around when falling behind late in the game?",
+      "headline": "Harry Kane Scores Twice on Record-Tying 125th Appearance for England",
+      "summary": "England captain Harry Kane equaled Peter Shilton's all-time men's record of 125 national caps during a UEFA Nations League victory over Czechia on October 6, 2026. The veteran striker marked the historic milestone at Wembley Stadium by scoring two goals in the match.",
+      "question": "What qualities do you think allow certain athletes to perform at the highest level for such a long time?",
       "coachLeads": {
-        "friendly": "Hey! Did you catch that dramatic football match between France and Belgium?",
-        "energetic": "What an unbelievable finish as France scored four late goals to surge past Belgium!",
-        "calm": "France showed remarkable patience yesterday, staging a late four-goal rally against Belgium.",
-        "direct": "France defeated Belgium 4–1 in the UEFA Nations League thanks to a flurry of late second-half goals."
+        "friendly": "Hey! Have you heard about Harry Kane's latest landmark performance for England?",
+        "energetic": "What an incredible game for Harry Kane! Let's talk about his massive milestone night!",
+        "calm": "England's captain reached a monumental career milestone today. When you're ready, let's chat about his achievement.",
+        "direct": "Harry Kane just tied England's all-time appearance record while scoring twice. Tell me what you think about his career."
       },
       "sources": [
         {
-          "title": "aljazeera.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHdg4Jq9vmq3nY7veFE8ENVQ2UvLOC1nmDmaWCHgvLOC0yo_ZUSkPvnoql7GlH6o4ZovrMrHUX2aE459kMFUel8qYaz9LP970DVxJEAc3JAqKEISvzvan-o8XniLtxaTH50NYT163wTZXXHweqAgdzlQDxSG_aYB3xWVCHu_jwRklq3wsTpw4S8nFdZ6emUKkbhv0TW"
+          "title": "2news.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH6u2ydewUPLTMvhj8ZfWAslboC5ecm0YA9gmyl1LYAcsG7h9cpIji2izJZPzgqtOXdvJuzDLvMOKDJpdx_VAroT6WlQhuAbB9l0jKKdqaBD-ljvNx4AIyBpb-Oihy16m8JvL2CaF_1Hzd3ekYWDrjE8e9iw4VZlmU4ObaxxcPcRLwWZh4gFp75jRqKo_ahPCu6RbA-RhxRSKdm9YAoUjWqifkpq0-hdUl0Yo6_cIaHDwQMPWv1jEuOjGXde6LbCNi6YVmUNWx_mtRt"
         },
         {
-          "title": "theguardian.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEpgo_T89qify4hiHKWOi25sCXNSGSas1Wn_fGW6hOdPVvbdFLZkWbxsGckpwpGkpM-FyqJJJVjg_Vktn2aKEExe431guHMfpZrCLVsZQCu2TJpM3ZiHjw3Cd11AqM_gKzLahBxmHzzWw7-d-8tgfGh8sFX9WyqS4zfDXkLrzw2TiQLNKqze_pH8dDIK8md1Arjkqb-QFDDUwsE1dJSwPY7esijH-Fsl9jSHktYMEHgf2YhOQVdSAd77WDt"
+          "title": "news4jax.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHO6LzMrunEscYpW-W28lU8WQeF5ziqyRNZuHyZ_wCpANHfNUUetcjlrV_DaLHAE1j9n28VNFrrs9CC7fsGyOTSadzSHwe2MjtSTyXEPWVRW0noB3STtYkH2EJ2O1LslaOKvfhgcKI8DojjhWqI2XOaHzgn0at3CXWeE04QHREDkQ1LLLy4cvsyNPG3qiYZfKuFvkIxPmp8yhCPSv2FlLfT"
         }
       ]
     },
     {
-      "id": "2026-10-06-entertainment",
+      "id": "2026-10-07-entertainment",
       "category": "entertainment",
       "categoryLabel": "Entertainment",
-      "headline": "Tom Cruise Satire 'Digger' Stumbles at Box Office as 'Verity' Wins Weekend",
-      "summary": "Amazon MGM's psychological thriller Verity topped the North American box office with a $32.6 million weekend debut. In contrast, Tom Cruise's big-budget satire Digger opened to just $8 million, marking a rare box office misfire during Warner Bros. Discovery's final release before its merger with Paramount Skydance.",
-      "question": "Why do you think major film stars are sometimes not enough to guarantee a movie's success at the box office?",
+      "headline": "Paramount Completes $110 Billion Acquisition of Warner Bros. Discovery",
+      "summary": "Paramount finalized its $110 billion acquisition of Warner Bros. Discovery on October 6, 2026, forming a consolidated media conglomerate named Skydance. The landmark deal brings historic film studios, streaming platforms like HBO Max and Paramount+, and news networks CNN and CBS News under a single corporate roof.",
+      "question": "What do you think are the potential benefits or drawbacks when major entertainment and news companies merge into one giant studio?",
       "coachLeads": {
-        "friendly": "Hey, have you seen the latest box office results from the weekend? It is a really interesting topic to chat about!",
-        "energetic": "You will never guess what happened at the movies this weekend! Big Hollywood stars are making major headlines right now.",
-        "calm": "There is some surprising news from the film industry worth looking at today. Let's discuss what drove moviegoers to theaters this weekend.",
-        "direct": "This weekend's box office numbers brought a huge surprise for Hollywood. Let me fill you in on the details."
+        "friendly": "Hey, have you heard about the big news in Hollywood today? It's a really interesting story to chat about.",
+        "energetic": "A massive entertainment deal just closed and it's making huge waves! Let's dive right into this giant Hollywood merger.",
+        "calm": "There is a significant update in the global media industry today. Let's take a moment to look at what this story means.",
+        "direct": "Paramount has officially completed its purchase of Warner Bros. Discovery. Here is why this entertainment deal matters right now."
       },
       "sources": [
         {
-          "title": "cocktailsandmovies.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGF7fj9s-yyL3AIDoBAlUHEJj844EuPnsS2naRynOjAMe0OmFKcyvp1_24WRFdggSbPdNFzo-cp2NrVnr0Rbf71d0eucfGqAIbAt8cf2mKPEdM5wXIWcO1g0BEfRAm7upqKdyoNMjxhyRHBVKXyeBQsNGRBU1xEZxJqy3AerfCk4rV9spZNHmzEDXyRhXp0FJfnFeCrmdqFocq0l7lK-da9yNqx"
-        },
-        {
-          "title": "toynewsi.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQExQZOZz245UtHKvS0KG_fHyg3bnyBym0T-aBQ8awfTZz90WgcTz5GLluLG73I90PH1VGg4Q9WDEccVCpGoCR9IpaNeqx7fAK4PcIhMl_puZVrmh74="
-        },
-        {
           "title": "washingtonpost.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF9gYYcsd4N8VFKwC8v608rkYOO5dPT0HCUvRJj7Dn7eI_MM05-X_8KMfhGYvqYxC9LmSJFchFqEcnKYT_F8Ib1Jrs8xqB-vVhi9ERCFNRKIigwIoic9eebJh-qPLe_Wg94aTU="
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHRJfPkWeSTFBX4BXv0YEZE_sPXDjjTTlzY7S8O-fhWGAzZS18AJQeKR7KvUvEQgfuKZuK0GLMM9V899U4vgb6lzSs0Uzge8HLbPKqXjNxf_hMqieFgBpLZysC3fOk7Ne9-w9HP6zosM521jFJjOl_LiMqla88Jn-lf_kMNkegtFWOyY3cboJCykbKYjguKS6lego78OEnNmPXYtdAicq87oDCyjaT8g3C1VoxSSS7MW5am6VNGF_4="
+        },
+        {
+          "title": "skydance.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEm06_bYxCxgJ_qQkKHbq2ZiW4xBv0wS22mK6vyZfQSzKezEJdY9I5cV9yVPdgYb9C1NY5E4IAXdesb61UFXF_ibKR1fxxtt3H8NOibx72IfQydKBvitv6Tvgp18FPjBwG55kMJEuGn4WMOBuJ8Tvfa6fWfIwo6-5JnguLo-TRZ7hebUHZN8cZeajEGcTEpmhumneexMccFC_TG2hVqYi31jnoyOCXZ3cZ8UuX8EN4ehUUJVdOahfa05pfoKkxlcvAa73F6eYlG"
         }
       ]
     }
