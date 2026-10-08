@@ -1,108 +1,104 @@
 {
   "schemaVersion": 1,
   "status": "live",
-  "date": "2026-10-07",
-  "generatedAt": "2026-10-07T00:43:04.043Z",
+  "date": "2026-10-08",
+  "generatedAt": "2026-10-08T01:00:50.136Z",
   "model": "gemini-3.6-flash",
   "fallbackCategories": [],
   "items": [
     {
-      "id": "2026-10-07-politics_economy",
+      "id": "2026-10-08-politics_economy",
       "category": "politics_economy",
       "categoryLabel": "Politics & Economy",
-      "headline": "Francis Halzen Wins 2026 Nobel Prize in Physics for Cosmic Neutrino Research",
-      "summary": "Belgian-born scientist Francis Halzen was awarded the 2026 Nobel Prize in Physics on Tuesday for his pivotal contributions to the IceCube Neutrino Observatory in Antarctica. The Royal Swedish Academy of Sciences recognized his breakthrough work in detecting high-energy astrophysical neutrinos, which provide fresh insight into the fundamental origins of the universe.",
-      "question": "How do you feel major scientific achievements like Nobel Prize discoveries influence our view of the universe?",
+      "headline": "2026 Nobel Prize in Chemistry Awarded for Discoveries in Mirror-Image Molecules",
+      "summary": "The 2026 Nobel Prize in Chemistry was awarded to scientists Henri B. Kagan and Kenso Soai for their work on non-linear effects and autocatalysis in asymmetric synthesis. Their discoveries solved a long-standing mystery about how molecular handedness develops, providing vital tools for modern pharmaceutical development.",
+      "question": "How do you think major scientific breakthroughs like this impact our daily lives and health?",
       "coachLeads": {
-        "friendly": "Hey, have you heard the exciting news about this year's Nobel Prize in Physics? It's a really fascinating story about exploring the far reaches of space.",
-        "energetic": "Big news out of Stockholm today! A major Nobel Prize victory in physics is making headlines around the globe!",
-        "calm": "A significant scientific milestone was announced today with the 2026 Nobel Prize in Physics. It offers a wonderful topic for us to explore together.",
-        "direct": "The 2026 Nobel Prize in Physics was awarded today for breakthrough research on cosmic particles. Here is why this story is leading the news right now."
+        "friendly": "Hey, have you heard the news about this year's Nobel Prize in Chemistry? It is a really neat story about how researchers solved a fundamental mystery in nature!",
+        "energetic": "Check this out—the 2026 Nobel Prize in Chemistry was just announced! Two pioneering scientists solved a century-old puzzle about mirror-image molecules!",
+        "calm": "This is worth taking a moment to discuss today. The 2026 Nobel Prize in Chemistry was awarded for major discoveries in molecular science.",
+        "direct": "The 2026 Nobel Prize in Chemistry was awarded today. Let's review why this discovery is so important for modern medicine."
       },
       "sources": [
         {
-          "title": "youtube.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHkfYepDWumQt-ge66Bwa5obAxPzMk6aoY3JZ74aAlyO1IxJxScZliXvUBxprQi338pyPxAOZiFJvE3giYU_5MTAgyI4W0nMcDgAr9-eZtlrj4ZqC7Sr2LYJ0K8uyApYNEF"
+          "title": "Google News: Politics & Economy",
+          "url": "https://news.google.com/search?q=Politics%20%26%20Economy%20top%20news%202026-10-08&hl=en-US&gl=US&ceid=US:en"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-08-technology",
+      "category": "technology",
+      "categoryLabel": "Technology",
+      "headline": "2026 Nobel Prize in Chemistry Awarded for Solving Century-Old Molecular Mystery",
+      "summary": "On October 7, the Royal Swedish Academy of Sciences awarded the 2026 Nobel Prize in Chemistry to scientists Henri B. Kagan and Kenso Soai. Their discoveries solved a century-old mystery explaining how single-handed mirror-image molecules form, a breakthrough with major applications in safer drug manufacturing.",
+      "question": "How do you think unseen scientific discoveries like molecular research affect our daily health and lives?",
+      "coachLeads": {
+        "friendly": "Hey, have you heard the exciting news about this year's Nobel Prize in Chemistry?",
+        "energetic": "Check this out—scientists just won the 2026 Nobel Prize for solving a century-old mystery in chemistry!",
+        "calm": "Take a moment to read about a remarkable scientific achievement that was just honored with the Nobel Prize.",
+        "direct": "The 2026 Nobel Prize in Chemistry was officially awarded today. Here is what made their discovery so significant."
+      },
+      "sources": [
+        {
+          "title": "nobelprize.org",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFz1sBDkC1t8BHB75pbXYY0U2AaPTqMgAvR8cOrgMRs7RQsH81Vr91W22BmCkW7Tc-z0xgMeemQR7wXtzl7sUyxF4xxhtYc8xIUWP7cK6mcIWmV6NyWagaGrRZLiaBVr_5FymVpyJZsPLO_MyvYpRkpd-l_8mU="
+        },
+        {
+          "title": "nobelprize.org",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHHoyyX3DbBUmoSSxX9J9IG3JHW6hbaYzQ6yLlX-dIuahl5482gRyCKb3qAk_MGRHQzb44Pd7pqdaBx9Y2OnjUzMZw40yH1OUaWGhmwywYcAeY4Df1aVFSm3sPFzhjcCpaDE4glqgou7r02dzbzbxY="
+        },
+        {
+          "title": "nobelprize.org",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGhVQjDyi9thzAJ9VFuCKEHYLOQtkGfs9y4GWc0B7xkqcRJkoruJQ7WpE3jr1NKkSl_PbSJvVGzE-12rCRSzYdxbwSwxJqZ3wZ6HCtGOiti7wOLsbCBHwTu-YPOVFKhRhAmCtVs_Z67ri2w8JzIymfA2feFFCv5xDf8ByGyQnsY"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-08-sports",
+      "category": "sports",
+      "categoryLabel": "Sports",
+      "headline": "Novak Djokovic Wins 102nd Career Title at China Open",
+      "summary": "Novak Djokovic secured his seventh China Open title in Beijing after opponent Alex de Minaur retired due to injury during the second set of the final. The victory gave the 39-year-old Serbian his 102nd career singles title, extending his record of winning at least one ATP trophy to 21 consecutive seasons.",
+      "question": "What do you think allows elite athletes like Djokovic to remain dominant so late in their careers?",
+      "coachLeads": {
+        "friendly": "Hey, did you catch the big tennis news about Novak Djokovic winning another title in China? It is a really inspiring story about staying power.",
+        "energetic": "Check this out! Novak Djokovic just bagged his 102nd career title and is still going strong on the tour!",
+        "calm": "Novak Djokovic reached another historical milestone in his career this week. It is worth reflecting on how he manages to stay at the top.",
+        "direct": "Novak Djokovic just won the China Open for his 102nd career title. Let's discuss what this milestone means for his legacy."
+      },
+      "sources": [
+        {
+          "title": "cgtn.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGHtLBXvGg6HNgNr6H7HC6QhRGyT26DVccihJg2BQfAeSIkQZ1EjhAw8cSRjA5BzBmuQG14uHXEBxqjG3_eOtUwXnN_nPnTh3Oe4GxeAU7xgj1lvDva-riCNdrU67_4SV7ZOU-VqnlO5t3Rs5FIOq6WPKlqA_EzPCIW9SLanEH7x6gRfMMtSpQRf4pAJBZ8XY0fzPK8-1E6vgUrHwdT21_k8GdFDVSuXuxa4MptGW7uOrIwZlme"
+        },
+        {
+          "title": "substack.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE8848nS6HSiN1_xavwVm8boJJRIAOEpxmUT9_g0o5gwZtQGosv5IosjdhcHIGZtSVivjNkdpGAG6jJhBP5qMLD6ynML01tGS9ppS70sl91j25AYFktDao3vZy992Jin_BYpyKq_vFq4TYPluGYA7-5YJkKkos_iIdn0g=="
+        }
+      ]
+    },
+    {
+      "id": "2026-10-08-entertainment",
+      "category": "entertainment",
+      "categoryLabel": "Entertainment",
+      "headline": "Emmy Awards to Move Exclusively to Prime Video in Historic Six-Year Streaming Deal",
+      "summary": "The Television Academy announced a landmark six-year agreement with Amazon Prime Video to exclusively stream the Emmy Awards live worldwide starting in 2027. This decision ends more than seven decades of traditional broadcast network coverage, making the annual event free to stream globally without requiring a paid subscription.",
+      "question": "Do you prefer watching major awards shows on traditional live television, or do you think streaming platforms are a better home for them?",
+      "coachLeads": {
+        "friendly": "Hey, have you heard the big news about the Emmy Awards moving online? It's a huge shift for television history, and I'd love to hear what you think!",
+        "energetic": "You won't believe how major awards shows are changing! The Emmys are officially leaving traditional TV for Prime Video starting in 2027!",
+        "calm": "A major piece of television history was made this week with the Emmy Awards moving to streaming. Take a look, and let's talk about how viewing habits are changing.",
+        "direct": "The Emmy Awards just signed a six-year deal to stream exclusively on Prime Video starting in 2027. Let's talk about what this means for live television."
+      },
+      "sources": [
+        {
+          "title": "televisionacademy.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG053tO1kDD1XJyBXqA8q6Db7vmZqg6AF0FQTKbbSBNTTw3rr_1c3K3bmiskWqti2JFSZC7bMAHjgv83n2O_uENWkRTbEgz--MiXMICyPK6k4YLajjmLb63RBjHZZPVsUQdP9_4iwqPSIMzO77L_faacCm-b0cW30P09PMG5ltWsiUy1YQeRVtUJ3yEJ0hZ8jVJ2lyIlhDa4d9e2pUMaA=="
         },
         {
           "title": "pbs.org",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFIiOKTg28dzZ34AHPbqRQQHMD7Xnzer1h3I0OtLRUDkfV3Oqv28TsRt3ZzWC4-f5XJrIcbluUCsUIbXknTFgEEtPYp-inq8LJLDx7A24NlaabPD8xE1roLy6HZm_-iKv-n7tC7jWuKtw9wIv9q9aREijNkVbL8oSeVLivWE6tEYq4wK7V6O8wzYhDkfpeC37Lr1g=="
-        }
-      ]
-    },
-    {
-      "id": "2026-10-07-technology",
-      "category": "technology",
-      "categoryLabel": "Technology",
-      "headline": "Physicist Francis Halzen Wins 2026 Nobel Prize in Physics for IceCube Observatory Breakthrough",
-      "summary": "Physicist Francis Halzen was awarded the 2026 Nobel Prize in Physics for his foundational work on the IceCube Neutrino Observatory in Antarctica and the discovery of high-energy cosmic neutrinos. The announcement highlights how converting a cubic kilometer of polar ice into a particle detector has unlocked a brand-new way to observe distant phenomena in the universe.",
-      "question": "What do you think motivates scientists to build massive research facilities in extreme places like the South Pole?",
-      "coachLeads": {
-        "friendly": "Hey! Have you caught the big news about this year's Nobel Prize in Physics yet?",
-        "energetic": "This scientific milestone is incredible! Scientists built a giant telescope inside Antarctic ice and just won a Nobel Prize for it!",
-        "calm": "The latest Nobel Prize in Physics was just announced, and it features a fascinating story about deep-space exploration. It is worth taking a moment to discuss.",
-        "direct": "Francis Halzen has won the 2026 Nobel Prize in Physics for detecting high-energy cosmic neutrinos in Antarctica. Let's break down why this discovery matters."
-      },
-      "sources": [
-        {
-          "title": "nobelprize.org",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHePvzxocQ0lQw01ORxXPzM7ygmFzmG6NF5XzeUxawM6p74APplR-mvUVHMWts0WJa8bnuXH_I_GNCxrZ8X2Iy2fuvY9eT_ymlS4oOIheVDuRqxbqmf4Fzbs_tIoTbpT7fi8JDVx0acGwvJyBg="
-        },
-        {
-          "title": "forbes.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEGltUchUuTaMISSAfh2q2vELNCy7cQ2I24fRxegCeUZaCjn_ZYEs4adJvL7HOJDuS0Exl0PHTz5_EgGIMUFyg3Apt10mGeN2_Cquif3NLhe3AIzxkv9-X6BWK_Yq9GtwCrtf7SXBESUJS5lkdGFsSIqZizMTPn0OUdGmdHHt0Cmr85IVpQMvtlydvogQSSCJXVdFdmtKBocOxgIOdQcd7Nlsjfo3pdBN4C3ShYv5lMfbRuVgM="
-        },
-        {
-          "title": "nobelprize.org",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGr_4bDWpu8_jH4S67pPFU87xVS3DyfI3AprfCLh-8zy_FdZMViIznkJOPHq7f0ArcD7c24YrVTcshSmjhWUIbU8Gop6OykxGBHIwU7PfQ9vctSZGl_PSXPVDwYigMenQUK7vumHaU="
-        }
-      ]
-    },
-    {
-      "id": "2026-10-07-sports",
-      "category": "sports",
-      "categoryLabel": "Sports",
-      "headline": "Harry Kane Scores Twice on Record-Tying 125th Appearance for England",
-      "summary": "England captain Harry Kane equaled Peter Shilton's all-time men's record of 125 national caps during a UEFA Nations League victory over Czechia on October 6, 2026. The veteran striker marked the historic milestone at Wembley Stadium by scoring two goals in the match.",
-      "question": "What qualities do you think allow certain athletes to perform at the highest level for such a long time?",
-      "coachLeads": {
-        "friendly": "Hey! Have you heard about Harry Kane's latest landmark performance for England?",
-        "energetic": "What an incredible game for Harry Kane! Let's talk about his massive milestone night!",
-        "calm": "England's captain reached a monumental career milestone today. When you're ready, let's chat about his achievement.",
-        "direct": "Harry Kane just tied England's all-time appearance record while scoring twice. Tell me what you think about his career."
-      },
-      "sources": [
-        {
-          "title": "2news.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH6u2ydewUPLTMvhj8ZfWAslboC5ecm0YA9gmyl1LYAcsG7h9cpIji2izJZPzgqtOXdvJuzDLvMOKDJpdx_VAroT6WlQhuAbB9l0jKKdqaBD-ljvNx4AIyBpb-Oihy16m8JvL2CaF_1Hzd3ekYWDrjE8e9iw4VZlmU4ObaxxcPcRLwWZh4gFp75jRqKo_ahPCu6RbA-RhxRSKdm9YAoUjWqifkpq0-hdUl0Yo6_cIaHDwQMPWv1jEuOjGXde6LbCNi6YVmUNWx_mtRt"
-        },
-        {
-          "title": "news4jax.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHO6LzMrunEscYpW-W28lU8WQeF5ziqyRNZuHyZ_wCpANHfNUUetcjlrV_DaLHAE1j9n28VNFrrs9CC7fsGyOTSadzSHwe2MjtSTyXEPWVRW0noB3STtYkH2EJ2O1LslaOKvfhgcKI8DojjhWqI2XOaHzgn0at3CXWeE04QHREDkQ1LLLy4cvsyNPG3qiYZfKuFvkIxPmp8yhCPSv2FlLfT"
-        }
-      ]
-    },
-    {
-      "id": "2026-10-07-entertainment",
-      "category": "entertainment",
-      "categoryLabel": "Entertainment",
-      "headline": "Paramount Completes $110 Billion Acquisition of Warner Bros. Discovery",
-      "summary": "Paramount finalized its $110 billion acquisition of Warner Bros. Discovery on October 6, 2026, forming a consolidated media conglomerate named Skydance. The landmark deal brings historic film studios, streaming platforms like HBO Max and Paramount+, and news networks CNN and CBS News under a single corporate roof.",
-      "question": "What do you think are the potential benefits or drawbacks when major entertainment and news companies merge into one giant studio?",
-      "coachLeads": {
-        "friendly": "Hey, have you heard about the big news in Hollywood today? It's a really interesting story to chat about.",
-        "energetic": "A massive entertainment deal just closed and it's making huge waves! Let's dive right into this giant Hollywood merger.",
-        "calm": "There is a significant update in the global media industry today. Let's take a moment to look at what this story means.",
-        "direct": "Paramount has officially completed its purchase of Warner Bros. Discovery. Here is why this entertainment deal matters right now."
-      },
-      "sources": [
-        {
-          "title": "washingtonpost.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHRJfPkWeSTFBX4BXv0YEZE_sPXDjjTTlzY7S8O-fhWGAzZS18AJQeKR7KvUvEQgfuKZuK0GLMM9V899U4vgb6lzSs0Uzge8HLbPKqXjNxf_hMqieFgBpLZysC3fOk7Ne9-w9HP6zosM521jFJjOl_LiMqla88Jn-lf_kMNkegtFWOyY3cboJCykbKYjguKS6lego78OEnNmPXYtdAicq87oDCyjaT8g3C1VoxSSS7MW5am6VNGF_4="
-        },
-        {
-          "title": "skydance.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEm06_bYxCxgJ_qQkKHbq2ZiW4xBv0wS22mK6vyZfQSzKezEJdY9I5cV9yVPdgYb9C1NY5E4IAXdesb61UFXF_ibKR1fxxtt3H8NOibx72IfQydKBvitv6Tvgp18FPjBwG55kMJEuGn4WMOBuJ8Tvfa6fWfIwo6-5JnguLo-TRZ7hebUHZN8cZeajEGcTEpmhumneexMccFC_TG2hVqYi31jnoyOCXZ3cZ8UuX8EN4ehUUJVdOahfa05pfoKkxlcvAa73F6eYlG"
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEXQGFJOkNLQ8YCXWxwfqm9CWcsTbqTAvEGgL99LJ19KXuHG6Cso00H8e2eMxg3qEHEycTdCdA8MlthqGxul1X1zuy6fv3UWfnzykWdrVDNnCHPUvHFbJCI73JAR-ydUdw2yLbvdk8rYfcZEI98wKsl_a8tL55KHbD3ELAL1EssgocKBctgHA=="
         }
       ]
     }
