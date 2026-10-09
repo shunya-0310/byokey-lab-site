@@ -1,104 +1,104 @@
 {
   "schemaVersion": 1,
   "status": "live",
-  "date": "2026-10-08",
-  "generatedAt": "2026-10-08T01:00:50.136Z",
+  "date": "2026-10-09",
+  "generatedAt": "2026-10-09T01:13:38.007Z",
   "model": "gemini-3.6-flash",
   "fallbackCategories": [],
   "items": [
     {
-      "id": "2026-10-08-politics_economy",
+      "id": "2026-10-09-politics_economy",
       "category": "politics_economy",
       "categoryLabel": "Politics & Economy",
-      "headline": "2026 Nobel Prize in Chemistry Awarded for Discoveries in Mirror-Image Molecules",
-      "summary": "The 2026 Nobel Prize in Chemistry was awarded to scientists Henri B. Kagan and Kenso Soai for their work on non-linear effects and autocatalysis in asymmetric synthesis. Their discoveries solved a long-standing mystery about how molecular handedness develops, providing vital tools for modern pharmaceutical development.",
-      "question": "How do you think major scientific breakthroughs like this impact our daily lives and health?",
+      "headline": "Canadian Poet Anne Carson Wins the 2026 Nobel Prize in Literature",
+      "summary": "Canadian poet and essayist Anne Carson was awarded the 2026 Nobel Prize in Literature on Thursday for her inventive work blending classical traditions with modern forms. The Swedish Academy praised her unique genre-crossing style, making her only the second Canadian author to receive the prestigious honor.",
+      "question": "What kind of books or writers have made the biggest impression on you in your life?",
       "coachLeads": {
-        "friendly": "Hey, have you heard the news about this year's Nobel Prize in Chemistry? It is a really neat story about how researchers solved a fundamental mystery in nature!",
-        "energetic": "Check this out—the 2026 Nobel Prize in Chemistry was just announced! Two pioneering scientists solved a century-old puzzle about mirror-image molecules!",
-        "calm": "This is worth taking a moment to discuss today. The 2026 Nobel Prize in Chemistry was awarded for major discoveries in molecular science.",
-        "direct": "The 2026 Nobel Prize in Chemistry was awarded today. Let's review why this discovery is so important for modern medicine."
+        "friendly": "Hey, have you heard about the big literary news today? It's a wonderful story that people around the world are talking about.",
+        "energetic": "Check this out! A major global honor was just awarded, and book lovers everywhere are celebrating!",
+        "calm": "There is a quiet but inspiring story making international headlines today. Let's take a look at it together.",
+        "direct": "Here is today's top story from the cultural world. Take a quick look at the details."
       },
       "sources": [
         {
-          "title": "Google News: Politics & Economy",
-          "url": "https://news.google.com/search?q=Politics%20%26%20Economy%20top%20news%202026-10-08&hl=en-US&gl=US&ceid=US:en"
+          "title": "theguardian.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGJ_BfuiTpwweGYGEcrv_Ow12LVlxpI-nHIZ_-lIqn8uLyq5FC7fA2H48y1FgKjfPCcMuee9WujeHJIfHgJSz8fn7ZDgmyXQWZtdDIDV5LjGpEmtVPfYOnqEV8Yd4wZiVVYqR-9C3lkOqojAekedd4wsreNgN_oIBEuWtYPrgQs3LGXckZiXn_88h4="
+        },
+        {
+          "title": "nobelprize.org",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFsTh-SbOzsZTNNA0mcFwYtH59zIyl4lesnQrTvvU7u0_begw68dtpIWbJWdCG6ulvhdUcRSD--lV0-Vpt1ISSPAPZKBivJXbJwXwNrSspdIW8gcIDUZtt0Vq_9k-LGq6d0SilyFwcs6SHjSiDXDy_Kz-1SZe4="
+        },
+        {
+          "title": "nhandan.vn",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE6VYJyo1bTQkLcnaiwUHMbAHgJeMmrqTBStPYey_-Ivi8II6-kZ3cGkos1aLe-_noTNS-m_2_9MrvwvxJdi_7RsKO9aMdRSV4Q86W6hMvyv0ug2pEsAMtEBEMQdvVPScMEIsb6guqqWD9NkzrkwLsT8K0NkgeIjxIf"
         }
       ]
     },
     {
-      "id": "2026-10-08-technology",
+      "id": "2026-10-09-technology",
       "category": "technology",
       "categoryLabel": "Technology",
-      "headline": "2026 Nobel Prize in Chemistry Awarded for Solving Century-Old Molecular Mystery",
-      "summary": "On October 7, the Royal Swedish Academy of Sciences awarded the 2026 Nobel Prize in Chemistry to scientists Henri B. Kagan and Kenso Soai. Their discoveries solved a century-old mystery explaining how single-handed mirror-image molecules form, a breakthrough with major applications in safer drug manufacturing.",
-      "question": "How do you think unseen scientific discoveries like molecular research affect our daily health and lives?",
+      "headline": "U.S. Awards Top Science Medals to Tech CEOs as Companies Pledge $2.4 Billion for AI",
+      "summary": "On October 8, U.S. President Donald Trump presented the National Medal of Science and National Medal of Technology to major tech leaders, including Elon Musk, Jensen Huang, and Satya Nadella. Alongside the awards, leading technology companies committed $2.4 billion in artificial intelligence computing resources to support government-backed scientific research through the Genesis Mission.",
+      "question": "Do you think government recognition and joint funding are effective ways to encourage technology companies to support scientific research?",
       "coachLeads": {
-        "friendly": "Hey, have you heard the exciting news about this year's Nobel Prize in Chemistry?",
-        "energetic": "Check this out—scientists just won the 2026 Nobel Prize for solving a century-old mystery in chemistry!",
-        "calm": "Take a moment to read about a remarkable scientific achievement that was just honored with the Nobel Prize.",
-        "direct": "The 2026 Nobel Prize in Chemistry was officially awarded today. Here is what made their discovery so significant."
+        "friendly": "Hey, did you catch the news about top tech CEOs receiving major science awards today?",
+        "energetic": "Check this out—leading tech executives just won top national honors while pledging billions for AI research!",
+        "calm": "You might find it interesting that key tech leaders were honored at the White House today alongside a massive AI research pledge.",
+        "direct": "Top tech CEOs were awarded National Medals of Science today as companies committed $2.4 billion in AI resources."
       },
       "sources": [
         {
-          "title": "nobelprize.org",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFz1sBDkC1t8BHB75pbXYY0U2AaPTqMgAvR8cOrgMRs7RQsH81Vr91W22BmCkW7Tc-z0xgMeemQR7wXtzl7sUyxF4xxhtYc8xIUWP7cK6mcIWmV6NyWagaGrRZLiaBVr_5FymVpyJZsPLO_MyvYpRkpd-l_8mU="
-        },
-        {
-          "title": "nobelprize.org",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHHoyyX3DbBUmoSSxX9J9IG3JHW6hbaYzQ6yLlX-dIuahl5482gRyCKb3qAk_MGRHQzb44Pd7pqdaBx9Y2OnjUzMZw40yH1OUaWGhmwywYcAeY4Df1aVFSm3sPFzhjcCpaDE4glqgou7r02dzbzbxY="
-        },
-        {
-          "title": "nobelprize.org",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGhVQjDyi9thzAJ9VFuCKEHYLOQtkGfs9y4GWc0B7xkqcRJkoruJQ7WpE3jr1NKkSl_PbSJvVGzE-12rCRSzYdxbwSwxJqZ3wZ6HCtGOiti7wOLsbCBHwTu-YPOVFKhRhAmCtVs_Z67ri2w8JzIymfA2feFFCv5xDf8ByGyQnsY"
+          "title": "Google News: Technology",
+          "url": "https://news.google.com/search?q=Technology%20top%20news%202026-10-09&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     },
     {
-      "id": "2026-10-08-sports",
+      "id": "2026-10-09-sports",
       "category": "sports",
       "categoryLabel": "Sports",
-      "headline": "Novak Djokovic Wins 102nd Career Title at China Open",
-      "summary": "Novak Djokovic secured his seventh China Open title in Beijing after opponent Alex de Minaur retired due to injury during the second set of the final. The victory gave the 39-year-old Serbian his 102nd career singles title, extending his record of winning at least one ATP trophy to 21 consecutive seasons.",
-      "question": "What do you think allows elite athletes like Djokovic to remain dominant so late in their careers?",
+      "headline": "Major League Baseball Proposes Shortening Regular Season to 154 Games",
+      "summary": "During collective bargaining negotiations on Thursday, Major League Baseball proposed reducing the regular season from 162 to 154 games starting in 2029 while expanding the Division Series to a best-of-seven format. The proposal also suggests allowing top playoff seeds to choose their postseason opponents to better prioritize player rest and broadcast schedules.",
+      "question": "Do you think playing fewer regular-season games would make professional sports more exciting and fair for athletes and fans?",
       "coachLeads": {
-        "friendly": "Hey, did you catch the big tennis news about Novak Djokovic winning another title in China? It is a really inspiring story about staying power.",
-        "energetic": "Check this out! Novak Djokovic just bagged his 102nd career title and is still going strong on the tour!",
-        "calm": "Novak Djokovic reached another historical milestone in his career this week. It is worth reflecting on how he manages to stay at the top.",
-        "direct": "Novak Djokovic just won the China Open for his 102nd career title. Let's discuss what this milestone means for his legacy."
+        "friendly": "Hey, have you heard about the big schedule changes Major League Baseball is proposing?",
+        "energetic": "Baseball fans, you won't believe the massive schedule shake-up MLB just put on the table!",
+        "calm": "Here is a notable shift in professional sports that is worth taking a look at today.",
+        "direct": "Major League Baseball just proposed cutting its regular season down to 154 games."
       },
       "sources": [
         {
-          "title": "cgtn.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGHtLBXvGg6HNgNr6H7HC6QhRGyT26DVccihJg2BQfAeSIkQZ1EjhAw8cSRjA5BzBmuQG14uHXEBxqjG3_eOtUwXnN_nPnTh3Oe4GxeAU7xgj1lvDva-riCNdrU67_4SV7ZOU-VqnlO5t3Rs5FIOq6WPKlqA_EzPCIW9SLanEH7x6gRfMMtSpQRf4pAJBZ8XY0fzPK8-1E6vgUrHwdT21_k8GdFDVSuXuxa4MptGW7uOrIwZlme"
-        },
-        {
-          "title": "substack.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE8848nS6HSiN1_xavwVm8boJJRIAOEpxmUT9_g0o5gwZtQGosv5IosjdhcHIGZtSVivjNkdpGAG6jJhBP5qMLD6ynML01tGS9ppS70sl91j25AYFktDao3vZy992Jin_BYpyKq_vFq4TYPluGYA7-5YJkKkos_iIdn0g=="
+          "title": "Google News: Sports",
+          "url": "https://news.google.com/search?q=Sports%20top%20news%202026-10-09&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     },
     {
-      "id": "2026-10-08-entertainment",
+      "id": "2026-10-09-entertainment",
       "category": "entertainment",
       "categoryLabel": "Entertainment",
-      "headline": "Emmy Awards to Move Exclusively to Prime Video in Historic Six-Year Streaming Deal",
-      "summary": "The Television Academy announced a landmark six-year agreement with Amazon Prime Video to exclusively stream the Emmy Awards live worldwide starting in 2027. This decision ends more than seven decades of traditional broadcast network coverage, making the annual event free to stream globally without requiring a paid subscription.",
-      "question": "Do you prefer watching major awards shows on traditional live television, or do you think streaming platforms are a better home for them?",
+      "headline": "Canadian Poet Anne Carson Awarded 2026 Nobel Prize in Literature",
+      "summary": "Canadian poet and essayist Anne Carson has been awarded the 2026 Nobel Prize in Literature by the Swedish Academy. The prestigious honor was announced on Thursday in recognition of her innovative body of work that blends classical traditions with modern literary forms.",
+      "question": "How do you think classical art and ancient stories can inspire modern creative writing?",
       "coachLeads": {
-        "friendly": "Hey, have you heard the big news about the Emmy Awards moving online? It's a huge shift for television history, and I'd love to hear what you think!",
-        "energetic": "You won't believe how major awards shows are changing! The Emmys are officially leaving traditional TV for Prime Video starting in 2027!",
-        "calm": "A major piece of television history was made this week with the Emmy Awards moving to streaming. Take a look, and let's talk about how viewing habits are changing.",
-        "direct": "The Emmy Awards just signed a six-year deal to stream exclusively on Prime Video starting in 2027. Let's talk about what this means for live television."
+        "friendly": "Hey there! Did you hear that Canadian writer Anne Carson just won the Nobel Prize in Literature?",
+        "energetic": "Huge news for book lovers today! Canadian poet Anne Carson has officially won the 2026 Nobel Prize in Literature!",
+        "calm": "The Swedish Academy has announced this year's Nobel Prize in Literature, awarding it to Canadian poet Anne Carson. It is a wonderful milestone for modern literature worth reflecting on.",
+        "direct": "Canadian author Anne Carson has won the 2026 Nobel Prize in Literature. Let's discuss her unique work and what this award means for modern writing."
       },
       "sources": [
         {
-          "title": "televisionacademy.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG053tO1kDD1XJyBXqA8q6Db7vmZqg6AF0FQTKbbSBNTTw3rr_1c3K3bmiskWqti2JFSZC7bMAHjgv83n2O_uENWkRTbEgz--MiXMICyPK6k4YLajjmLb63RBjHZZPVsUQdP9_4iwqPSIMzO77L_faacCm-b0cW30P09PMG5ltWsiUy1YQeRVtUJ3yEJ0hZ8jVJ2lyIlhDa4d9e2pUMaA=="
+          "title": "youtube.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGNl9T1fVDyUVpJJwrI-OtTnv6q_XOZOfP0tl1mLyKZjfXMoYw3Gb64uLyvj-GHHdoS_1OX3YxWdjk2q3liU5tv2NNXoJ7maDp7dqVwGKz0DEVTdoDhbkQt6mZCtQ3pl0hL"
         },
         {
-          "title": "pbs.org",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEXQGFJOkNLQ8YCXWxwfqm9CWcsTbqTAvEGgL99LJ19KXuHG6Cso00H8e2eMxg3qEHEycTdCdA8MlthqGxul1X1zuy6fv3UWfnzykWdrVDNnCHPUvHFbJCI73JAR-ydUdw2yLbvdk8rYfcZEI98wKsl_a8tL55KHbD3ELAL1EssgocKBctgHA=="
+          "title": "theguardian.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFgnM1wVUsNI6uUNL3aEQD-eMD8kZxtMEdS2eCutydO2Es5AzJeU5jQUdd584q2ui2BJkTr_Yl8ViyX5Q9wHwt24ZTd6xnLBgxCJXOZT2pAdQEJfwdjbXZ7K-JXTPPDGpscuqVhL-_n1GVKzbCk3J8E9H5xGr307DTQ_AaDwlj8KwwCGUv1IXPgq19n"
+        },
+        {
+          "title": "nobelprize.org",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHQEam9OaSXt1zQPRn-IXof22jpGAwJxUoIYFHn-E3AGfDdQ2PH6lHVA8zy0QziDok9f2wMvyCkZVwmUdi1gJC4lDnbowxB4x3GiasY6jhlTQKngA8qxEGeWOhUgRAM_6FevfDVHRli84s2yzFaPwHsqTyV6KRN"
         }
       ]
     }
