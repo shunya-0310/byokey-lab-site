@@ -1,104 +1,100 @@
 {
   "schemaVersion": 1,
   "status": "live",
-  "date": "2026-10-09",
-  "generatedAt": "2026-10-09T01:13:38.007Z",
+  "date": "2026-10-10",
+  "generatedAt": "2026-10-10T00:51:42.699Z",
   "model": "gemini-3.6-flash",
   "fallbackCategories": [],
   "items": [
     {
-      "id": "2026-10-09-politics_economy",
+      "id": "2026-10-10-politics_economy",
       "category": "politics_economy",
       "categoryLabel": "Politics & Economy",
-      "headline": "Canadian Poet Anne Carson Wins the 2026 Nobel Prize in Literature",
-      "summary": "Canadian poet and essayist Anne Carson was awarded the 2026 Nobel Prize in Literature on Thursday for her inventive work blending classical traditions with modern forms. The Swedish Academy praised her unique genre-crossing style, making her only the second Canadian author to receive the prestigious honor.",
-      "question": "What kind of books or writers have made the biggest impression on you in your life?",
+      "headline": "South African Jurist Navi Pillay Awarded 2026 Nobel Peace Prize",
+      "summary": "South African jurist and former United Nations human rights chief Navi Pillay was awarded the 2026 Nobel Peace Prize on Friday for her lifelong contributions to international law and human rights. The Norwegian Nobel Committee recognized her trailblazing legacy of defending anti-apartheid activists and serving as a judge on international tribunals.",
+      "question": "How do you think international honors like the Nobel Peace Prize impact global efforts to protect human rights?",
       "coachLeads": {
-        "friendly": "Hey, have you heard about the big literary news today? It's a wonderful story that people around the world are talking about.",
-        "energetic": "Check this out! A major global honor was just awarded, and book lovers everywhere are celebrating!",
-        "calm": "There is a quiet but inspiring story making international headlines today. Let's take a look at it together.",
-        "direct": "Here is today's top story from the cultural world. Take a quick look at the details."
+        "friendly": "Hey, have you heard about this year's Nobel Peace Prize winner? It is an inspiring story that would be great for us to talk about.",
+        "energetic": "Check this out—the 2026 Nobel Peace Prize was just announced! Let's dive right into why this major human rights figure won.",
+        "calm": "There is some remarkable news today regarding global justice and human rights. Whenever you are ready, let's take a look at it together.",
+        "direct": "The 2026 Nobel Peace Prize was awarded to jurist Navi Pillay. Let's discuss what this means for international law."
       },
       "sources": [
         {
-          "title": "theguardian.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGJ_BfuiTpwweGYGEcrv_Ow12LVlxpI-nHIZ_-lIqn8uLyq5FC7fA2H48y1FgKjfPCcMuee9WujeHJIfHgJSz8fn7ZDgmyXQWZtdDIDV5LjGpEmtVPfYOnqEV8Yd4wZiVVYqR-9C3lkOqojAekedd4wsreNgN_oIBEuWtYPrgQs3LGXckZiXn_88h4="
+          "title": "thehindu.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE5xXzHBzmg1tJuSiktzvJ7GbFBDbd2b__YOUWFUdqV6kHh4aVYcTkHuaT6-otrSo5XCdYpEaNeY8hu5ny61FWfRUwRk3GcoMb0j0N6zOEfEtabIrvHUwuPjl8xUt64UZWhPa9m9BNt8q2EleGkUZcy-wDIHx6dZm_YW-VRFjMHvZledMV-dr4WoaBvWhqF5zv92KNWpUVH7HBhIOAlOgCuseQFWSjwR3e85eQk1KSvSjdh5M_wTxexOKj9yGzPujDJKNQe6Fu60PSHp3yemKMrIozvEKISylYX1VinU61AxtTNQLIgfvfpUvpDOLW72W-ePbZ5kAl6gX6znh28P5aNbyY9iRLtMqv6XI4XBShmGqGNDRLErOOnE7O4ehaQbBrfIPx3r9ygvwkSTlvmEbst"
         },
         {
-          "title": "nobelprize.org",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFsTh-SbOzsZTNNA0mcFwYtH59zIyl4lesnQrTvvU7u0_begw68dtpIWbJWdCG6ulvhdUcRSD--lV0-Vpt1ISSPAPZKBivJXbJwXwNrSspdIW8gcIDUZtt0Vq_9k-LGq6d0SilyFwcs6SHjSiDXDy_Kz-1SZe4="
-        },
-        {
-          "title": "nhandan.vn",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE6VYJyo1bTQkLcnaiwUHMbAHgJeMmrqTBStPYey_-Ivi8II6-kZ3cGkos1aLe-_noTNS-m_2_9MrvwvxJdi_7RsKO9aMdRSV4Q86W6hMvyv0ug2pEsAMtEBEMQdvVPScMEIsb6guqqWD9NkzrkwLsT8K0NkgeIjxIf"
+          "title": "mathrubhumi.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFdLi8_lEaJB2CwPh5D7KRjJLw1S6EKfyoo-WuaVWBftzItv79FJ4Pxfr6a6-e9vLm1T5rtZrcZSxbbYXzgJ62qgOVNrQUo_0jxLFtrvSNN-cHI6D0zPwN78MuPnhwsn5Gu7ZXZBeonPyeLShS9yLOb5gQA-TiAXhqHxEDm92Yr0exRbtKpQR8kkle3VmTfs0oeqdnKM64="
         }
       ]
     },
     {
-      "id": "2026-10-09-technology",
+      "id": "2026-10-10-technology",
       "category": "technology",
       "categoryLabel": "Technology",
-      "headline": "U.S. Awards Top Science Medals to Tech CEOs as Companies Pledge $2.4 Billion for AI",
-      "summary": "On October 8, U.S. President Donald Trump presented the National Medal of Science and National Medal of Technology to major tech leaders, including Elon Musk, Jensen Huang, and Satya Nadella. Alongside the awards, leading technology companies committed $2.4 billion in artificial intelligence computing resources to support government-backed scientific research through the Genesis Mission.",
-      "question": "Do you think government recognition and joint funding are effective ways to encourage technology companies to support scientific research?",
+      "headline": "NASA and U.S. Energy Department Partner to Accelerate Space Nuclear Power",
+      "summary": "NASA and the U.S. Department of Energy signed a landmark agreement to jointly develop nuclear power and propulsion systems for space exploration. Announced at a Washington science summit, the initiative aims to launch a nuclear-powered spacecraft demonstrator by 2028 and establish a surface reactor on the Moon by 2030.",
+      "question": "How do you feel about using nuclear power to build permanent bases on the Moon and explore deeper into space?",
       "coachLeads": {
-        "friendly": "Hey, did you catch the news about top tech CEOs receiving major science awards today?",
-        "energetic": "Check this out—leading tech executives just won top national honors while pledging billions for AI research!",
-        "calm": "You might find it interesting that key tech leaders were honored at the White House today alongside a massive AI research pledge.",
-        "direct": "Top tech CEOs were awarded National Medals of Science today as companies committed $2.4 billion in AI resources."
+        "friendly": "Hey, have you heard about NASA's latest plan for deep space missions? They are partnering up to bring nuclear energy to the Moon, and it is worth talking about.",
+        "energetic": "NASA is making a huge leap toward nuclear-powered space travel! They just joined forces with the Energy Department to build reactors for the Moon and beyond.",
+        "calm": "NASA and the Department of Energy have officially teamed up to develop space nuclear systems. It marks a thoughtful shift in how future lunar missions will be powered.",
+        "direct": "NASA just signed a major deal to put nuclear reactors in orbit and on the lunar surface. Here are the main facts you should know."
       },
       "sources": [
         {
           "title": "Google News: Technology",
-          "url": "https://news.google.com/search?q=Technology%20top%20news%202026-10-09&hl=en-US&gl=US&ceid=US:en"
+          "url": "https://news.google.com/search?q=Technology%20top%20news%202026-10-10&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     },
     {
-      "id": "2026-10-09-sports",
+      "id": "2026-10-10-sports",
       "category": "sports",
       "categoryLabel": "Sports",
-      "headline": "Major League Baseball Proposes Shortening Regular Season to 154 Games",
-      "summary": "During collective bargaining negotiations on Thursday, Major League Baseball proposed reducing the regular season from 162 to 154 games starting in 2029 while expanding the Division Series to a best-of-seven format. The proposal also suggests allowing top playoff seeds to choose their postseason opponents to better prioritize player rest and broadcast schedules.",
-      "question": "Do you think playing fewer regular-season games would make professional sports more exciting and fair for athletes and fans?",
+      "headline": "Hubert Hurkacz Upsets Novak Djokovic at Shanghai Masters",
+      "summary": "Polish tennis star Hubert Hurkacz delivered a major shock at the Shanghai Masters by defeating Novak Djokovic in straight sets during their second-round match on October 9, 2026. The unexpected victory eliminates the 24-time Grand Slam champion early from the ATP Masters 1000 tournament.",
+      "question": "What factors do you think contribute most to major upsets in high-stakes sports tournaments?",
       "coachLeads": {
-        "friendly": "Hey, have you heard about the big schedule changes Major League Baseball is proposing?",
-        "energetic": "Baseball fans, you won't believe the massive schedule shake-up MLB just put on the table!",
-        "calm": "Here is a notable shift in professional sports that is worth taking a look at today.",
-        "direct": "Major League Baseball just proposed cutting its regular season down to 154 games."
+        "friendly": "Hey, did you hear about the huge upset at the Shanghai Masters today?",
+        "energetic": "You won't believe the massive shocker that just went down on the tennis court in Shanghai!",
+        "calm": "There was a noteworthy outcome in international tennis today worth looking into.",
+        "direct": "Hubert Hurkacz just defeated Novak Djokovic in straight sets at the Shanghai Masters."
       },
       "sources": [
         {
           "title": "Google News: Sports",
-          "url": "https://news.google.com/search?q=Sports%20top%20news%202026-10-09&hl=en-US&gl=US&ceid=US:en"
+          "url": "https://news.google.com/search?q=Sports%20top%20news%202026-10-10&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     },
     {
-      "id": "2026-10-09-entertainment",
+      "id": "2026-10-10-entertainment",
       "category": "entertainment",
       "categoryLabel": "Entertainment",
-      "headline": "Canadian Poet Anne Carson Awarded 2026 Nobel Prize in Literature",
-      "summary": "Canadian poet and essayist Anne Carson has been awarded the 2026 Nobel Prize in Literature by the Swedish Academy. The prestigious honor was announced on Thursday in recognition of her innovative body of work that blends classical traditions with modern literary forms.",
-      "question": "How do you think classical art and ancient stories can inspire modern creative writing?",
+      "headline": "Canadian Author Anne Carson Awarded the 2026 Nobel Prize in Literature",
+      "summary": "Canadian poet and classicist Anne Carson has been awarded the 2026 Nobel Prize in Literature by the Swedish Academy. She was recognized for her inventive body of work that reimagines classical Greek traditions for modern contemporary readers.",
+      "question": "What book or author has left a lasting impression on you, and what made it so memorable?",
       "coachLeads": {
-        "friendly": "Hey there! Did you hear that Canadian writer Anne Carson just won the Nobel Prize in Literature?",
-        "energetic": "Huge news for book lovers today! Canadian poet Anne Carson has officially won the 2026 Nobel Prize in Literature!",
-        "calm": "The Swedish Academy has announced this year's Nobel Prize in Literature, awarding it to Canadian poet Anne Carson. It is a wonderful milestone for modern literature worth reflecting on.",
-        "direct": "Canadian author Anne Carson has won the 2026 Nobel Prize in Literature. Let's discuss her unique work and what this award means for modern writing."
+        "friendly": "Hey, have you heard who won this year's Nobel Prize in Literature? It is a wonderful moment to chat about books and reading.",
+        "energetic": "Big news from the literary world! Canadian author Anne Carson was just named the 2026 Nobel laureate in Literature!",
+        "calm": "The Swedish Academy has officially named Anne Carson as the 2026 Nobel laureate in Literature. It is a nice occasion to reflect on the books that shape our world.",
+        "direct": "Canadian poet Anne Carson was awarded the 2026 Nobel Prize in Literature. Let's discuss what makes a literary work truly special."
       },
       "sources": [
         {
-          "title": "youtube.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGNl9T1fVDyUVpJJwrI-OtTnv6q_XOZOfP0tl1mLyKZjfXMoYw3Gb64uLyvj-GHHdoS_1OX3YxWdjk2q3liU5tv2NNXoJ7maDp7dqVwGKz0DEVTdoDhbkQt6mZCtQ3pl0hL"
-        },
-        {
           "title": "theguardian.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFgnM1wVUsNI6uUNL3aEQD-eMD8kZxtMEdS2eCutydO2Es5AzJeU5jQUdd584q2ui2BJkTr_Yl8ViyX5Q9wHwt24ZTd6xnLBgxCJXOZT2pAdQEJfwdjbXZ7K-JXTPPDGpscuqVhL-_n1GVKzbCk3J8E9H5xGr307DTQ_AaDwlj8KwwCGUv1IXPgq19n"
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHcxGCrayYyapXn4AVrQU0ZfAxY_8SPP5XE7vsMSlQRBFQVIynbnisqM2NGPllYyOscmPWtao-D7y-48cInWBwu2cQOEXGkoLe3nptmQZ697Wjn790b8MiOjXt3qH7My2Sf5-sZoEiqIG92V91uHVZS1U-EHjir9zt7L-_18W6wPx4P0j39qNb-86c="
         },
         {
           "title": "nobelprize.org",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHQEam9OaSXt1zQPRn-IXof22jpGAwJxUoIYFHn-E3AGfDdQ2PH6lHVA8zy0QziDok9f2wMvyCkZVwmUdi1gJC4lDnbowxB4x3GiasY6jhlTQKngA8qxEGeWOhUgRAM_6FevfDVHRli84s2yzFaPwHsqTyV6KRN"
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFBZA7rszhle2ReZ_gDB2B0GBuRnb3TBYnaaPxWtikqHmnqqbCWlX-HyUwAOgEHqYBLU2ytoqdtbWOiJjRGfAVn4UkDCHVTSL9lSfynTRGoomiokhbjiedEoo0Z4VxPKrvfH7hcVLwdItKn6jzlrCuZIyhWeb4="
+        },
+        {
+          "title": "youtube.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE9I1JKDOX2zk3Ot7SK0l3SmVcBP8naOyoRRUOWtu-29lMpL7iAe-JmI9vblkaBiu8irbmN_RPasNPCOnps3e0SqRYlh7prB2h3toPEcirDi5sRGMk7gPlxBL8lzmcW18E="
         }
       ]
     }
