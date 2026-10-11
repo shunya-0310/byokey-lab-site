@@ -1,100 +1,100 @@
 {
   "schemaVersion": 1,
   "status": "live",
-  "date": "2026-10-10",
-  "generatedAt": "2026-10-10T00:51:42.699Z",
+  "date": "2026-10-11",
+  "generatedAt": "2026-10-11T00:14:20.307Z",
   "model": "gemini-3.6-flash",
   "fallbackCategories": [],
   "items": [
     {
-      "id": "2026-10-10-politics_economy",
+      "id": "2026-10-11-politics_economy",
       "category": "politics_economy",
       "categoryLabel": "Politics & Economy",
-      "headline": "South African Jurist Navi Pillay Awarded 2026 Nobel Peace Prize",
-      "summary": "South African jurist and former United Nations human rights chief Navi Pillay was awarded the 2026 Nobel Peace Prize on Friday for her lifelong contributions to international law and human rights. The Norwegian Nobel Committee recognized her trailblazing legacy of defending anti-apartheid activists and serving as a judge on international tribunals.",
-      "question": "How do you think international honors like the Nobel Peace Prize impact global efforts to protect human rights?",
+      "headline": "U.S. Temporarily Waives Sanctions on Russian Diesel Following Trump-Putin Agreement",
+      "summary": "The United States Treasury Department issued a temporary waiver allowing millions of tons of Russian diesel to enter global markets following direct talks between U.S. President Donald Trump and Russian President Vladimir Putin. The policy shift aims to ease domestic fuel price pressures ahead of upcoming elections while signaling a significant turn in diplomatic relations.",
+      "question": "How do you think governments should balance national economic needs against international sanctions during ongoing conflicts?",
       "coachLeads": {
-        "friendly": "Hey, have you heard about this year's Nobel Peace Prize winner? It is an inspiring story that would be great for us to talk about.",
-        "energetic": "Check this out—the 2026 Nobel Peace Prize was just announced! Let's dive right into why this major human rights figure won.",
-        "calm": "There is some remarkable news today regarding global justice and human rights. Whenever you are ready, let's take a look at it together.",
-        "direct": "The 2026 Nobel Peace Prize was awarded to jurist Navi Pillay. Let's discuss what this means for international law."
+        "friendly": "Hey, have you heard about this major global news story today? It's a really interesting topic for us to talk about.",
+        "energetic": "Check out this huge shift in international energy policy making headlines right now! You'll definitely want to break this one down.",
+        "calm": "Here is an important development in world politics and energy markets today. Take a moment to look over the summary when you're ready.",
+        "direct": "This new energy deal between the U.S. and Russia is worth discussing. Let me know your thoughts on it."
       },
       "sources": [
         {
-          "title": "thehindu.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE5xXzHBzmg1tJuSiktzvJ7GbFBDbd2b__YOUWFUdqV6kHh4aVYcTkHuaT6-otrSo5XCdYpEaNeY8hu5ny61FWfRUwRk3GcoMb0j0N6zOEfEtabIrvHUwuPjl8xUt64UZWhPa9m9BNt8q2EleGkUZcy-wDIHx6dZm_YW-VRFjMHvZledMV-dr4WoaBvWhqF5zv92KNWpUVH7HBhIOAlOgCuseQFWSjwR3e85eQk1KSvSjdh5M_wTxexOKj9yGzPujDJKNQe6Fu60PSHp3yemKMrIozvEKISylYX1VinU61AxtTNQLIgfvfpUvpDOLW72W-ePbZ5kAl6gX6znh28P5aNbyY9iRLtMqv6XI4XBShmGqGNDRLErOOnE7O4ehaQbBrfIPx3r9ygvwkSTlvmEbst"
-        },
-        {
-          "title": "mathrubhumi.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFdLi8_lEaJB2CwPh5D7KRjJLw1S6EKfyoo-WuaVWBftzItv79FJ4Pxfr6a6-e9vLm1T5rtZrcZSxbbYXzgJ62qgOVNrQUo_0jxLFtrvSNN-cHI6D0zPwN78MuPnhwsn5Gu7ZXZBeonPyeLShS9yLOb5gQA-TiAXhqHxEDm92Yr0exRbtKpQR8kkle3VmTfs0oeqdnKM64="
+          "title": "Google News: Politics & Economy",
+          "url": "https://news.google.com/search?q=Politics%20%26%20Economy%20top%20news%202026-10-11&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     },
     {
-      "id": "2026-10-10-technology",
+      "id": "2026-10-11-technology",
       "category": "technology",
       "categoryLabel": "Technology",
-      "headline": "NASA and U.S. Energy Department Partner to Accelerate Space Nuclear Power",
-      "summary": "NASA and the U.S. Department of Energy signed a landmark agreement to jointly develop nuclear power and propulsion systems for space exploration. Announced at a Washington science summit, the initiative aims to launch a nuclear-powered spacecraft demonstrator by 2028 and establish a surface reactor on the Moon by 2030.",
-      "question": "How do you feel about using nuclear power to build permanent bases on the Moon and explore deeper into space?",
+      "headline": "NASA Releases Artemis II Data Revealing Lunar Meteoroid Impacts",
+      "summary": "NASA has released over 800 gigabytes of data from the Artemis II mission, revealing that astronauts observed five meteoroid impact flashes on the lunar surface. Scientists are analyzing the newly published dataset to better evaluate space debris hazards for future crewed moon bases.",
+      "question": "What kind of space research or lunar exploration project do you find most exciting?",
       "coachLeads": {
-        "friendly": "Hey, have you heard about NASA's latest plan for deep space missions? They are partnering up to bring nuclear energy to the Moon, and it is worth talking about.",
-        "energetic": "NASA is making a huge leap toward nuclear-powered space travel! They just joined forces with the Energy Department to build reactors for the Moon and beyond.",
-        "calm": "NASA and the Department of Energy have officially teamed up to develop space nuclear systems. It marks a thoughtful shift in how future lunar missions will be powered.",
-        "direct": "NASA just signed a major deal to put nuclear reactors in orbit and on the lunar surface. Here are the main facts you should know."
+        "friendly": "Hey, have you heard about the new space data NASA just published? It is really cool to see what astronauts saw during their lunar trip!",
+        "energetic": "Check this out! NASA just released massive data from Artemis II showing astronauts actually spotted meteorites slamming into the moon!",
+        "calm": "NASA has published a comprehensive dataset from the Artemis II lunar mission. The findings offer valuable insights into how space debris impacts the moon's surface.",
+        "direct": "NASA released 814 gigabytes of Artemis II mission data. The records document five meteoroid strikes observed by the crew to help protect future lunar missions."
       },
       "sources": [
         {
-          "title": "Google News: Technology",
-          "url": "https://news.google.com/search?q=Technology%20top%20news%202026-10-10&hl=en-US&gl=US&ceid=US:en"
+          "title": "instagram.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFkmpH4J21imVeqWILjTFpmMacOGe5dj-l_yBTyDbya1KnvozGDBGwtELHZ9Uju6E6M-jkGyUmq6AgFEvJqV7m2GbA0MVQ0r7acUh4lRqE-d5VR3oD2eTUxWC6AAqfznzAp"
+        },
+        {
+          "title": "mashable.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEECdsXFL6a5mCawpKuD33WBvUyBeZqjHuFS_sMAjN5l61FNj4pkDFp4J8HB4BT8-KcYRvmsBWJANdRMfZmOlhGVwMGeZU58YB-d4kASBuYz9N5NFgu9itWH-0IxSLAmpx4Kf0Knmu9W8Ew-3qVrxzaT2uoX3p2ZweNM7_PGSbuo-H-QS2B"
         }
       ]
     },
     {
-      "id": "2026-10-10-sports",
+      "id": "2026-10-11-sports",
       "category": "sports",
       "categoryLabel": "Sports",
-      "headline": "Hubert Hurkacz Upsets Novak Djokovic at Shanghai Masters",
-      "summary": "Polish tennis star Hubert Hurkacz delivered a major shock at the Shanghai Masters by defeating Novak Djokovic in straight sets during their second-round match on October 9, 2026. The unexpected victory eliminates the 24-time Grand Slam champion early from the ATP Masters 1000 tournament.",
-      "question": "What factors do you think contribute most to major upsets in high-stakes sports tournaments?",
+      "headline": "Carlos Alcaraz Debuts New Look with Dominant Shanghai Masters Win",
+      "summary": "Spanish tennis star Carlos Alcaraz defeated Juan Manuel Cerundolo 6-3, 6-3 on Saturday to advance to the third round of the Shanghai Masters. Sporting a new mustache following his recent victory at the Japan Open in Tokyo, Alcaraz extended his winning streak to seven matches with a swift 66-minute performance.",
+      "question": "What do you think about athletes changing their style or sporting unique looks during major tournaments?",
       "coachLeads": {
-        "friendly": "Hey, did you hear about the huge upset at the Shanghai Masters today?",
-        "energetic": "You won't believe the massive shocker that just went down on the tennis court in Shanghai!",
-        "calm": "There was a noteworthy outcome in international tennis today worth looking into.",
-        "direct": "Hubert Hurkacz just defeated Novak Djokovic in straight sets at the Shanghai Masters."
+        "friendly": "Hey, have you heard about Carlos Alcaraz's latest win in Shanghai while rocking a brand-new mustache? It is a fun sports story worth talking about today!",
+        "energetic": "Carlos Alcaraz is on fire right now! He just cruised through his Shanghai Masters opener to stretch his winning streak to seven matches!",
+        "calm": "Carlos Alcaraz delivered another convincing performance in Shanghai this weekend. His steady momentum on court is definitely worth discussing.",
+        "direct": "Carlos Alcaraz won his opening match at the Shanghai Masters in straight sets. Let's dive into his dominant performance and recent streak."
       },
       "sources": [
         {
           "title": "Google News: Sports",
-          "url": "https://news.google.com/search?q=Sports%20top%20news%202026-10-10&hl=en-US&gl=US&ceid=US:en"
+          "url": "https://news.google.com/search?q=Sports%20top%20news%202026-10-11&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     },
     {
-      "id": "2026-10-10-entertainment",
+      "id": "2026-10-11-entertainment",
       "category": "entertainment",
       "categoryLabel": "Entertainment",
-      "headline": "Canadian Author Anne Carson Awarded the 2026 Nobel Prize in Literature",
-      "summary": "Canadian poet and classicist Anne Carson has been awarded the 2026 Nobel Prize in Literature by the Swedish Academy. She was recognized for her inventive body of work that reimagines classical Greek traditions for modern contemporary readers.",
-      "question": "What book or author has left a lasting impression on you, and what made it so memorable?",
+      "headline": "Canadian Author Anne Carson Wins the 2026 Nobel Prize in Literature",
+      "summary": "Canadian poet and translator Anne Carson has been awarded the 2026 Nobel Prize in Literature by the Swedish Academy. The prestigious honor recognizes her inventive body of work that blends classical Greek traditions with contemporary literary forms.",
+      "question": "What is a book or piece of writing that has significantly influenced the way you view the world?",
       "coachLeads": {
-        "friendly": "Hey, have you heard who won this year's Nobel Prize in Literature? It is a wonderful moment to chat about books and reading.",
-        "energetic": "Big news from the literary world! Canadian author Anne Carson was just named the 2026 Nobel laureate in Literature!",
-        "calm": "The Swedish Academy has officially named Anne Carson as the 2026 Nobel laureate in Literature. It is a nice occasion to reflect on the books that shape our world.",
-        "direct": "Canadian poet Anne Carson was awarded the 2026 Nobel Prize in Literature. Let's discuss what makes a literary work truly special."
+        "friendly": "Hey there! Have you heard the news about this year's Nobel Prize in Literature winner yet?",
+        "energetic": "Big news from the literary world! Canadian author Anne Carson was just awarded the 2026 Nobel Prize in Literature!",
+        "calm": "If you are interested in a thoughtful conversation today, Canadian writer Anne Carson was recently named the 2026 Nobel laureate in literature.",
+        "direct": "Canadian poet Anne Carson has won the 2026 Nobel Prize in Literature. Let's discuss what makes a piece of writing truly memorable."
       },
       "sources": [
         {
-          "title": "theguardian.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHcxGCrayYyapXn4AVrQU0ZfAxY_8SPP5XE7vsMSlQRBFQVIynbnisqM2NGPllYyOscmPWtao-D7y-48cInWBwu2cQOEXGkoLe3nptmQZ697Wjn790b8MiOjXt3qH7My2Sf5-sZoEiqIG92V91uHVZS1U-EHjir9zt7L-_18W6wPx4P0j39qNb-86c="
+          "title": "pbs.org",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGD0abeV_kRK7BcNM36gVpl_JmQTNLqchLPGrur8552YI9Tx7P4zOi09aL4gT7lk-dawsHwDTzsrrChNApnwvpsb1zqiUL2FEAWAD22JShcecndWY_RxthJXgKht9IuMvtEKOkKRqS5Jn6UIBaNqh4jeFf69hANElzh0Gc3NFHHlg5v_xJFgXcvuVPTj9guQ3ewMg=="
         },
         {
-          "title": "nobelprize.org",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFBZA7rszhle2ReZ_gDB2B0GBuRnb3TBYnaaPxWtikqHmnqqbCWlX-HyUwAOgEHqYBLU2ytoqdtbWOiJjRGfAVn4UkDCHVTSL9lSfynTRGoomiokhbjiedEoo0Z4VxPKrvfH7hcVLwdItKn6jzlrCuZIyhWeb4="
+          "title": "theguardian.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGRtbX6z_H0rU4iZ-dKB9Af8QRnnFOH40tqkkeAWEWu_dJdQpDTNX-tC54wPF7XUNCqxeqNB_nBBIHIy6qVglYVjqAHTtQZ7XOEx6cqJRPwS63o8T2bhz22VHh1sAqmb2atI-5ttmz5qJYhgWT_hRoi73YGDaCnmdofE3Sm1QDlt1-HYy4ccdUdY7GI"
         },
         {
           "title": "youtube.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE9I1JKDOX2zk3Ot7SK0l3SmVcBP8naOyoRRUOWtu-29lMpL7iAe-JmI9vblkaBiu8irbmN_RPasNPCOnps3e0SqRYlh7prB2h3toPEcirDi5sRGMk7gPlxBL8lzmcW18E="
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFudgHGh4t5v9XiwGreLoNtW9ruI6I77fjfs-55JEn-zYFDZwNk5IDCuiY-yQntuHnA85ogelST0fmq1MmqSfTqmwPxue-m6poJrx2t0BOUAoCBxTyavO8DCMxy8aZ-aMF5"
         }
       ]
     }
