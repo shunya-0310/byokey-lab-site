@@ -1,100 +1,92 @@
 {
   "schemaVersion": 1,
   "status": "live",
-  "date": "2026-10-14",
-  "generatedAt": "2026-10-14T00:18:22.778Z",
+  "date": "2026-10-15",
+  "generatedAt": "2026-10-14T23:54:55.512Z",
   "model": "gemini-3.6-flash",
   "fallbackCategories": [],
   "items": [
     {
-      "id": "2026-10-14-politics_economy",
+      "id": "2026-10-15-politics_economy",
       "category": "politics_economy",
       "categoryLabel": "Politics & Economy",
-      "headline": "IMF Warns Global Economic Resilience Is Nearing Its Limits",
-      "summary": "The International Monetary Fund released its latest World Economic Outlook at its annual meeting, warning that global economic resilience is under strain as financial buffers wear thin. The Fund highlighted mounting risks to worldwide growth from escalating energy prices, high government debt, and persistent geopolitical conflicts.",
-      "question": "How do you think governments should balance fighting inflation with protecting vulnerable households during economic downturns?",
+      "headline": "U.S. Inflation Rebounds to 3.7% as Energy Costs Surge Ahead of Midterms",
+      "summary": "The U.S. Consumer Price Index rose to 3.7% year-over-year in September, driven higher by sharp increases in gasoline and energy prices. This unexpected uptick complicates upcoming interest rate decisions for the Federal Reserve and intensifies public debate over living costs just weeks before the U.S. midterm elections.",
+      "question": "How do rising prices or inflation affect daily consumer spending habits in your country?",
       "coachLeads": {
-        "friendly": "Hey, have you caught the latest updates from the IMF about the global economy? It's definitely something worth looking into.",
-        "energetic": "There's a major report out today from the IMF that is stirring up a lot of conversation! Let's dive right into what is happening with the global economy.",
-        "calm": "The International Monetary Fund just released its latest economic forecast. It highlights some important financial trends worth discussing today.",
-        "direct": "The IMF released its new global economic report warning that financial buffers are running low. Let's look at what this means for markets worldwide."
+        "friendly": "Hey, have you caught the latest economic news today? It's a really practical story to help practice talking about everyday financial topics.",
+        "energetic": "Check this out! U.S. inflation took an unexpected jump today, and it is creating major waves across global markets!",
+        "calm": "Inflation is back in the spotlight today following a fresh report on consumer prices. Let's take a quiet look at what these numbers mean.",
+        "direct": "U.S. inflation rose to 3.7% in September, putting immediate pressure on both markets and political debates. Here are the key facts you need to know."
       },
       "sources": [
         {
-          "title": "thehindu.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEBbanG5cuaS3x7of7OgcQozcH9OMe9YKHxoaaaMXwK0TvjgDLef9Sm6iLukJevaBSgaP_FxK0bVp3eRamhZ3oRY8FSKhAPtUaevQomqDqifcDL0V3slwO_EI3Wh1n4EbzQGkK_MJ9t6jBRaY8qlDR0N7esoPZO8p1Clmg2tZC4oB1OA37sRlF9uthTCVDLJ7AnqyM8DFTVRVKaAF2Rt048JIVRNZHQXIf55kIcijXHYAwamUGTwmhT1BLZcYj58PaS"
+          "title": "knsiradio.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHve5S_rPe3QPnRX1ygxKZBgp_TeDFPvzZK5bWm-2BfXUj0sMYD9WfddjJbKy4-WnwLm8fmQsAjuIUMjx1x_BPXfeuhrZLjfYp14CB2P9AFGhKrysS5u9y2k85tXQBjPHiRCketNwnxXw7rzMGqhTp2y_xdxI_1HnAC35oqJNADtmTbWmB0xKVRt2baEw6JIbRalzRFfFGxEALnCwtJY3BFcjlu-EvQatHBFdkLWH2Xd6wz5VwZN4h7PnI="
         },
         {
-          "title": "nationthailand.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE1Mh9FgjA4N1UPPmbMQAKOi4YuVCM9W3RmtoZiicyR6ZmMNQYGEV_PMn3fgIY5zAu6K2c5Oh-Elh7TgsAlYp12N-SLPT50nF5VzBZn2SRRvXv2ywotFTlfurcnGSKFP6rBkBEX3Wd75mLt6y5z"
-        },
-        {
-          "title": "economictimes.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGnAeYFm6rYpKQ-t79NhPnWO0VVcTDs-mxTiFE5R-8wW7yN74fdBk5PMOhZdguUY0KTQq9MMUDs-L4BLjUA8bwvxgzPppFMV6CX8JWD_0gMFhBsfegQ8wn_XEgOQtqbenqx0-EY6vA428x3mDEdvWU0PCX9IRR6G7sb_PvxFsO7eGg6mtuGzgXYxrfh2G1NPlchvV_wCn3MkI6-rVkmWFIaedel-7iCPlHc_GRFUy05l2g4lPj0Y9_tT_nrxFTrbD7uwXODOthCi15c_LUMAtk7QKZjndfMIkzEvnpIlN2DYdmRtymQ-9ojpyet9O6kTN0ZG6LKiVgL8N0e"
+          "title": "pbs.org",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF17rVaBHW7lQL4w8s-TDC4gzrIqoTWK4lGjuJebBlfrMgMtzEv9l4lp2ATOMvjJiUZUJZFTVfUOOhZiVHz4ZhUMMFSjEkKIfb2FwIaosUkTevHK-zyI5HZBoPHc_4gp09FJGCUziD_njx7UYwtTKECuQFJm0ZwB7XDJ2ieq1f2ZCozX-UrER_FSv7EQKrHM-gFMKcJitR5qg=="
         }
       ]
     },
     {
-      "id": "2026-10-14-technology",
+      "id": "2026-10-15-technology",
       "category": "technology",
       "categoryLabel": "Technology",
-      "headline": "SpaceX Launches NASA Resupply Mission Carrying Solar Arrays and Science Experiments",
-      "summary": "On October 13, 2026, SpaceX launched its 35th commercial resupply mission for NASA to the International Space Station from Cape Canaveral. The Falcon 9 rocket carried over 6,300 pounds of cargo, including the space station's final pair of roll-out solar arrays and new biological research experiments.",
-      "question": "What kind of scientific research or technology would you be most excited to see tested in zero gravity?",
+      "headline": "Researchers Use AI to Design 'Molecular Scissors' Targeting Alzheimer's and ALS Proteins",
+      "summary": "Scientists at the University of Washington used artificial intelligence models to design custom synthetic enzymes that act as molecular scissors targeting toxic proteins associated with neurodegenerative diseases like Alzheimer's and ALS. Published in the journal Nature on October 14, 2026, the breakthrough demonstrates that AI-designed proteins can dismantle target disease proteins up to 100 million times faster than uncatalyzed reactions.",
+      "question": "How do you think AI-designed proteins and medical treatments could change the future of healthcare?",
       "coachLeads": {
-        "friendly": "Hey, did you catch the news about today's SpaceX launch for NASA? It's worth checking out!",
-        "energetic": "Check this out—a SpaceX rocket just launched with tons of scientific experiments bound for the space station!",
-        "calm": "There was an interesting space delivery mission today that caught my attention.",
-        "direct": "SpaceX launched a major resupply mission to the International Space Station today. Let's discuss it."
+        "friendly": "Hey, have you seen this incredible science news today? Researchers are using AI to build synthetic enzymes that fight diseases like Alzheimer's.",
+        "energetic": "You've got to hear about this huge breakthrough in medical tech! Scientists just used AI to design molecular tools that break down Alzheimer's proteins at record speeds!",
+        "calm": "There is a promising development in biotechnology worth discussing today. Scientists have used artificial intelligence to create custom proteins aimed at targeting neurodegenerative diseases.",
+        "direct": "Artificial intelligence made a major leap in medical science today. Researchers successfully engineered synthetic enzymes designed to target proteins linked to Alzheimer's and ALS."
       },
       "sources": [
         {
-          "title": "spaceanddefense.io",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFS9WZTY4wt5EHR2mGLqwn0hQ0SG_qarJti9FSB-HBIIlFsm39AqhSEJvdl1Nr5Hq4_4IGnwJ1EKVnSTRwW8HPc-5dY_CvDlZXRS3N8z7U4sy98TKuo1KcdKosfAPPjtxaU8tc5POXhvLchDiyESJz7MT-hLSSFfPePJDwx7L2_ZRd44tzf7ou5C2EjXdMIQwERSiYoiAY3D3FhCO6KzRkWKQ=="
-        },
-        {
-          "title": "nasa.gov",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEqIkeyN44vyuxrQ5K-fHe9sxRwWvB99VlcfKN6bm6tiHakImyiGw5xi3E18AKIit1yfmqLjPTdYiNMIjVXyedTSuCCPYJWqrSFJoccH2btzG1ihYCiygiPNaEdqzZ5OgXALtpfsERfjpRWUykGNlCvDEwtoPxe-jxLd0IQQvjxS8yeDOf9vqwd_H68sS3Z737XOHHtPiUXH-6F6MtX9isy65BI7A7_jmV8NQ=="
+          "title": "Google News: Technology",
+          "url": "https://news.google.com/search?q=Technology%20top%20news%202026-10-15&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     },
     {
-      "id": "2026-10-14-sports",
+      "id": "2026-10-15-sports",
       "category": "sports",
       "categoryLabel": "Sports",
-      "headline": "Top Seed Alexander Zverev Edges Alexander Bublik in Shanghai Masters Thriller",
-      "summary": "World No. 1 Alexander Zverev secured a hard-fought 7-6, 4-6, 7-6 victory over Alexander Bublik on Tuesday to advance to the Shanghai Masters quarter-finals. The victory keeps the top-seeded German on track in the prestigious ATP Masters 1000 event as the hard-court swing reaches its closing stages.",
-      "question": "How do you think top athletes maintain their mental focus during high-stakes moments like a final-set tiebreak?",
+      "headline": "Ann Li Stuns Top Seed Aryna Sabalenka in Major Wuhan Open Upset",
+      "summary": "American tennis player Ann Li defeated top seed Aryna Sabalenka in three sets at the Wuhan Open after converting her tenth match point. The dramatic result coincided with second seed Jessica Pegula's loss to Jelena Ostapenko, eliminating the tournament's top two seeds on the same day.",
+      "question": "What qualities or mindset do you think help underdogs stay focused and pull off massive upsets against elite athletes?",
       "coachLeads": {
-        "friendly": "Hey, did you happen to catch the tennis from Shanghai today? It was an absolute nail-biter that went all the way to a final tiebreak.",
-        "energetic": "What incredible drama at the Shanghai Masters! Alexander Zverev just won a wild three-set battle to lock in his spot in the quarter-finals!",
-        "calm": "There was some fantastic resilience on display in Shanghai today. Alexander Zverev managed to pull through a very tense match to advance.",
-        "direct": "Alexander Zverev just survived a grueling three-set match in Shanghai to reach the quarter-finals. Let's break down how he handled the pressure."
+        "friendly": "Hey, have you heard about the big shake-up at the Wuhan Open? It's a fantastic story about resilience that is definitely worth discussing today.",
+        "energetic": "You won't believe the thriller that just took place on the tennis court! A huge upset knocked out the top seed, and we have to break it down!",
+        "calm": "Take a look at this major result from the world of tennis. An unexpected defeat at the Wuhan Open has sparked quite a few conversations today.",
+        "direct": "The top two seeds were both eliminated from the Wuhan Open in a single day. Let's talk about how this unexpected result unfolded."
       },
       "sources": [
         {
           "title": "Google News: Sports",
-          "url": "https://news.google.com/search?q=Sports%20top%20news%202026-10-14&hl=en-US&gl=US&ceid=US:en"
+          "url": "https://news.google.com/search?q=Sports%20top%20news%202026-10-15&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     },
     {
-      "id": "2026-10-14-entertainment",
+      "id": "2026-10-15-entertainment",
       "category": "entertainment",
       "categoryLabel": "Entertainment",
-      "headline": "Former Gang Leader Sentenced to 40 Years to Life in 1996 Murder of Tupac Shakur",
-      "summary": "On October 13, 2026, former gang leader Duane \"Keffe D\" Davis was sentenced in a Nevada court to 40 years to life in prison for orchestrating the 1996 drive-by shooting of rap icon Tupac Shakur. The ruling brings final legal accountability to one of the most famous cold cases in music history following Davis's conviction earlier this year.",
-      "question": "How do you think resolving long-unsolved cases like this one impacts a music legend's overall legacy and fanbase?",
+      "headline": "Original Choreographer Mandy Moore Joins 'La La Land' Broadway Musical Team",
+      "summary": "Three-time Emmy winner Mandy Moore has joined the creative team for the upcoming stage musical adaptation of La La Land as its choreographer. Announced on October 14, 2026, Moore and costume designer Mary Zophres are returning from the original 2016 Oscar-winning film to collaborate with Tony-winning director Bartlett Sher.",
+      "question": "How do you feel about movie musicals being adapted for the Broadway stage, and what is your favorite film soundtrack?",
       "coachLeads": {
-        "friendly": "Hey there! Have you heard about the big update in the Tupac Shakur case? It's a historic moment for the music world that's definitely worth talking about.",
-        "energetic": "Check this out! After nearly thirty years, a landmark court decision just brought closure to one of hip-hop's biggest mysteries! What are your thoughts on this news?",
-        "calm": "A major legal chapter in music history came to a close in court today. Let me know when you're ready to reflect on this story together.",
-        "direct": "A Nevada judge has sentenced the man convicted of arranging Tupac Shakur's 1996 murder to at least forty years in prison. Let's discuss what this verdict means for music culture."
+        "friendly": "Hey! Have you heard that the original choreographer from La La Land is coming back for its new Broadway show?",
+        "energetic": "Big news for movie and theater lovers! The La La Land stage adaptation just brought on key creators from the original film!",
+        "calm": "If you enjoyed the film La La Land, you might be interested to know its stage adaptation just took a major step forward.",
+        "direct": "The La La Land Broadway musical has officially added original movie choreographer Mandy Moore to its creative team."
       },
       "sources": [
         {
-          "title": "Google News: Entertainment",
-          "url": "https://news.google.com/search?q=Entertainment%20top%20news%202026-10-14&hl=en-US&gl=US&ceid=US:en"
+          "title": "playbill.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGNM-S2MkB-81qu42KfLVydn0gNX8ShqoCB612KrI5-mea8yqgp8TUnAWe_iX5V8jM3BYyMYgUki9waAOPHTFemoKKJqzjSNVer_wQmzvbe0z38F7WdFLhGiI1_K0cYnk0bsdizUuL8F6kUEAw3xIcKCG3rZNPZ0bQZDfUWda55H0cGYTmbY1cr"
         }
       ]
     }
