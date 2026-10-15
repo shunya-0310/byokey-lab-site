@@ -1,92 +1,108 @@
 {
   "schemaVersion": 1,
   "status": "live",
-  "date": "2026-10-15",
-  "generatedAt": "2026-10-14T23:54:55.512Z",
+  "date": "2026-10-16",
+  "generatedAt": "2026-10-15T23:41:33.910Z",
   "model": "gemini-3.6-flash",
   "fallbackCategories": [],
   "items": [
     {
-      "id": "2026-10-15-politics_economy",
+      "id": "2026-10-16-politics_economy",
       "category": "politics_economy",
       "categoryLabel": "Politics & Economy",
-      "headline": "U.S. Inflation Rebounds to 3.7% as Energy Costs Surge Ahead of Midterms",
-      "summary": "The U.S. Consumer Price Index rose to 3.7% year-over-year in September, driven higher by sharp increases in gasoline and energy prices. This unexpected uptick complicates upcoming interest rate decisions for the Federal Reserve and intensifies public debate over living costs just weeks before the U.S. midterm elections.",
-      "question": "How do rising prices or inflation affect daily consumer spending habits in your country?",
+      "headline": "IMF Warns AI Investment Surge Masks Deepening Global Economic Disparities",
+      "summary": "At the IMF and World Bank Annual Meetings in Bangkok, Managing Director Kristalina Georgieva warned that global economic resilience rests on a fragile foundation driven by an artificial intelligence investment boom. She cautioned that while AI spending boosts near-term growth in major tech-producing economies, it risks widening global inequality, disrupting labor markets, and failing to resolve mounting sovereign debt.",
+      "question": "Do you think rapid global investments in artificial intelligence will ultimately help narrow or widen economic gaps between nations?",
       "coachLeads": {
-        "friendly": "Hey, have you caught the latest economic news today? It's a really practical story to help practice talking about everyday financial topics.",
-        "energetic": "Check this out! U.S. inflation took an unexpected jump today, and it is creating major waves across global markets!",
-        "calm": "Inflation is back in the spotlight today following a fresh report on consumer prices. Let's take a quiet look at what these numbers mean.",
-        "direct": "U.S. inflation rose to 3.7% in September, putting immediate pressure on both markets and political debates. Here are the key facts you need to know."
+        "friendly": "Hey, have you caught the latest updates from the global economic summit in Bangkok? It's a really fascinating topic about how AI is changing the global economy.",
+        "energetic": "There's a huge story coming out of the IMF summit today that you've got to check out! World financial leaders are diving deep into how AI spending is impacting global markets!",
+        "calm": "Take a moment to look over this latest news from the IMF annual meeting in Bangkok. It offers a very thoughtful perspective on the economic risks and rewards of the current AI surge.",
+        "direct": "This is definitely worth talking about today. The IMF just issued a major warning on how the AI investment boom is affecting global debt and economic inequality."
       },
       "sources": [
         {
-          "title": "knsiradio.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHve5S_rPe3QPnRX1ygxKZBgp_TeDFPvzZK5bWm-2BfXUj0sMYD9WfddjJbKy4-WnwLm8fmQsAjuIUMjx1x_BPXfeuhrZLjfYp14CB2P9AFGhKrysS5u9y2k85tXQBjPHiRCketNwnxXw7rzMGqhTp2y_xdxI_1HnAC35oqJNADtmTbWmB0xKVRt2baEw6JIbRalzRFfFGxEALnCwtJY3BFcjlu-EvQatHBFdkLWH2Xd6wz5VwZN4h7PnI="
-        },
-        {
-          "title": "pbs.org",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF17rVaBHW7lQL4w8s-TDC4gzrIqoTWK4lGjuJebBlfrMgMtzEv9l4lp2ATOMvjJiUZUJZFTVfUOOhZiVHz4ZhUMMFSjEkKIfb2FwIaosUkTevHK-zyI5HZBoPHc_4gp09FJGCUziD_njx7UYwtTKECuQFJm0ZwB7XDJ2ieq1f2ZCozX-UrER_FSv7EQKrHM-gFMKcJitR5qg=="
+          "title": "Google News: Politics & Economy",
+          "url": "https://news.google.com/search?q=Politics%20%26%20Economy%20top%20news%202026-10-16&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     },
     {
-      "id": "2026-10-15-technology",
+      "id": "2026-10-16-technology",
       "category": "technology",
       "categoryLabel": "Technology",
-      "headline": "Researchers Use AI to Design 'Molecular Scissors' Targeting Alzheimer's and ALS Proteins",
-      "summary": "Scientists at the University of Washington used artificial intelligence models to design custom synthetic enzymes that act as molecular scissors targeting toxic proteins associated with neurodegenerative diseases like Alzheimer's and ALS. Published in the journal Nature on October 14, 2026, the breakthrough demonstrates that AI-designed proteins can dismantle target disease proteins up to 100 million times faster than uncatalyzed reactions.",
-      "question": "How do you think AI-designed proteins and medical treatments could change the future of healthcare?",
+      "headline": "Global Chip and AI Stocks Plunge Amid Rising Inflation and AI Debt Fears",
+      "summary": "Global artificial intelligence and semiconductor stocks suffered a sharp sell-off on October 15 following higher-than-expected U.S. inflation figures and growing worries over the heavy debt funding AI infrastructure. Major technology shares across Asia and the United States tumbled during the session, reflecting rising investor anxiety over elevated tech valuations and borrowing costs.",
+      "question": "Do you think tech companies are spending too much money on AI development, or is the heavy investment necessary for future innovation?",
       "coachLeads": {
-        "friendly": "Hey, have you seen this incredible science news today? Researchers are using AI to build synthetic enzymes that fight diseases like Alzheimer's.",
-        "energetic": "You've got to hear about this huge breakthrough in medical tech! Scientists just used AI to design molecular tools that break down Alzheimer's proteins at record speeds!",
-        "calm": "There is a promising development in biotechnology worth discussing today. Scientists have used artificial intelligence to create custom proteins aimed at targeting neurodegenerative diseases.",
-        "direct": "Artificial intelligence made a major leap in medical science today. Researchers successfully engineered synthetic enzymes designed to target proteins linked to Alzheimer's and ALS."
+        "friendly": "Hey! Did you catch the big story today about tech and AI stocks taking a sudden drop? I'd love to hear your take on what's happening in the tech world.",
+        "energetic": "Look at what's shaking up the tech world today! Global markets just took a huge hit over AI investments, and it makes for an incredible topic to practice talking about!",
+        "calm": "There is significant news in the technology market today regarding a sharp decline in AI and chip shares. Whenever you're ready, let's go over it together.",
+        "direct": "Major tech and AI stocks took a heavy global downturn today due to inflation and debt concerns. Let me know what you think about how tech companies are managing their growth."
       },
       "sources": [
         {
-          "title": "Google News: Technology",
-          "url": "https://news.google.com/search?q=Technology%20top%20news%202026-10-15&hl=en-US&gl=US&ceid=US:en"
+          "title": "theguardian.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFcLXa3mETnTjRbKj9m5A9Pm5y761j0-UGLaX9gTjYZws-09e2URHV0w_4ZbSxSq76RBA7xMZfSOWEclN9trxqsVyCJa7tbPwqTR-WhvDVF_SJkqYz_WVgYHFyceffmRcRagV1DcVtjXNf0i4yjNqwGQgI3Z7iaVUY982UCSasQL00Q9vy39z-lfhdNriHOI0fXAZneRDDZL1I8ltECFkVYTqzxcasNvhUlejId"
+        },
+        {
+          "title": "cnn.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHYv1RITZoyG_EYPaVkfbhGTg6TTNsj4CYbPAY_uWcgcutBSAdC6hqCfhpySpDelYb4MKqbksayDuCSQ-qqKScpqJLKSVyuya11ebjKwgAkBjl6k1tMHoMFahJtTIKWv1HAy0sTkSaF29ca_N4wBXgSR1n9EOVzDBRZ"
+        },
+        {
+          "title": "taipeitimes.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGUyYkUfcCVMOHTayKh3Ydyh2oeR3Ggn4plJ5dBnmEKp1tr66vKb6B_gHfDa5WBAbpAk3V8-iUvez8Y2nO_WMp6A0OYjf-aF-6zixv963F21yF6PFdHhumsexfbFf2-gyd6rR_x7V2fNM4RsTNvwl_QNlEIFgbIRYdr"
         }
       ]
     },
     {
-      "id": "2026-10-15-sports",
+      "id": "2026-10-16-sports",
       "category": "sports",
       "categoryLabel": "Sports",
-      "headline": "Ann Li Stuns Top Seed Aryna Sabalenka in Major Wuhan Open Upset",
-      "summary": "American tennis player Ann Li defeated top seed Aryna Sabalenka in three sets at the Wuhan Open after converting her tenth match point. The dramatic result coincided with second seed Jessica Pegula's loss to Jelena Ostapenko, eliminating the tournament's top two seeds on the same day.",
-      "question": "What qualities or mindset do you think help underdogs stay focused and pull off massive upsets against elite athletes?",
+      "headline": "Cleveland Guardians Defeat Tampa Bay Rays 3-2 to Take 2-1 ALCS Lead",
+      "summary": "The Cleveland Guardians defeated the Tampa Bay Rays 3-2 in Game 3 of the American League Championship Series on Thursday, October 15, taking a 2-1 lead in the playoff series. Outfielder Petey Halpin hit a go-ahead two-run home run in the fifth inning, while starting pitcher Gavin Williams struck out nine batters to secure the home victory.",
+      "question": "What strategy do you think is most crucial for a team trying to regain momentum during a high-stakes playoff series?",
       "coachLeads": {
-        "friendly": "Hey, have you heard about the big shake-up at the Wuhan Open? It's a fantastic story about resilience that is definitely worth discussing today.",
-        "energetic": "You won't believe the thriller that just took place on the tennis court! A huge upset knocked out the top seed, and we have to break it down!",
-        "calm": "Take a look at this major result from the world of tennis. An unexpected defeat at the Wuhan Open has sparked quite a few conversations today.",
-        "direct": "The top two seeds were both eliminated from the Wuhan Open in a single day. Let's talk about how this unexpected result unfolded."
+        "friendly": "Hey, did you happen to catch the playoff baseball game last night? Cleveland just pulled off a super exciting win!",
+        "energetic": "What an unbelievable game! That go-ahead home run totally turned the playoff series around!",
+        "calm": "A close playoff game yesterday shifted the momentum in the ALCS. Take a moment to review how Cleveland secured the win.",
+        "direct": "Cleveland took a 2-1 lead in the ALCS by defeating Tampa Bay 3-2 yesterday. Let me walk you through the key moments."
       },
       "sources": [
         {
-          "title": "Google News: Sports",
-          "url": "https://news.google.com/search?q=Sports%20top%20news%202026-10-15&hl=en-US&gl=US&ceid=US:en"
+          "title": "wsls.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF6LbqwMNFa5zzY3Tb77GbEWZT6Vr69cdFbBWAxe7lL1l06yco9CMTwzsMJs-H-wrl3Txoeiq0D7vHlKx7QvhD2leLe6o4MJ5vOUN5Z0cl01amSQMOVTZWRL425JpzoxtkrESREaVL3bXcufR5aEg55SGmiesLkZfjV9nbQk7RBWwB_6h4XLlBE8kjopydI7PieJTnnCCgwJ5T2ZskuTWBzrJLOjq7h0F0Bq3O3vyxRBxWxya9MWN0mFiWYLKR_qmcb"
+        },
+        {
+          "title": "cbssports.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH43dPinzilAhX3B5WYv4IzMNaaaTdzzdrhJLW86O6iAXosdTvrvsltVLEEALQbdqp28HC6dXFHK9SeKDNng2Rs_WfcrasyGxhY3rkRxGgyxL1gagbShBbNaC2vPvZ4ZITpMtrtFfOKe8BkCajKLCU3YbNuZRKEKZTRZAcKtqhdrfErwFJVgmwYN67utKtJEq0GcZtxA6Ve"
         }
       ]
     },
     {
-      "id": "2026-10-15-entertainment",
+      "id": "2026-10-16-entertainment",
       "category": "entertainment",
       "categoryLabel": "Entertainment",
-      "headline": "Original Choreographer Mandy Moore Joins 'La La Land' Broadway Musical Team",
-      "summary": "Three-time Emmy winner Mandy Moore has joined the creative team for the upcoming stage musical adaptation of La La Land as its choreographer. Announced on October 14, 2026, Moore and costume designer Mary Zophres are returning from the original 2016 Oscar-winning film to collaborate with Tony-winning director Bartlett Sher.",
-      "question": "How do you feel about movie musicals being adapted for the Broadway stage, and what is your favorite film soundtrack?",
+      "headline": "Zendaya to Star in Alex Garland's Next A24 Sci-Fi Film",
+      "summary": "Actress Zendaya has officially signed on to lead an untitled science-fiction feature written and directed by Alex Garland for indie studio A24. Production is scheduled to begin in 2027, making it one of Hollywood's most high-profile upcoming film announcements.",
+      "question": "What kind of role would you like to see Zendaya take on in a new science-fiction movie?",
       "coachLeads": {
-        "friendly": "Hey! Have you heard that the original choreographer from La La Land is coming back for its new Broadway show?",
-        "energetic": "Big news for movie and theater lovers! The La La Land stage adaptation just brought on key creators from the original film!",
-        "calm": "If you enjoyed the film La La Land, you might be interested to know its stage adaptation just took a major step forward.",
-        "direct": "The La La Land Broadway musical has officially added original movie choreographer Mandy Moore to its creative team."
+        "friendly": "Hey, did you catch the big film announcement today? Zendaya is teaming up with director Alex Garland for a new sci-fi project!",
+        "energetic": "This is huge news for movie fans! Zendaya has officially signed on to star in Alex Garland's next sci-fi film for A24!",
+        "calm": "There is an interesting movie story making headlines today. Zendaya has joined Alex Garland's upcoming science-fiction feature with studio A24.",
+        "direct": "A major Hollywood deal was announced today. Zendaya will star in a new A24 sci-fi movie written and directed by Alex Garland."
       },
       "sources": [
         {
-          "title": "playbill.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGNM-S2MkB-81qu42KfLVydn0gNX8ShqoCB612KrI5-mea8yqgp8TUnAWe_iX5V8jM3BYyMYgUki9waAOPHTFemoKKJqzjSNVer_wQmzvbe0z38F7WdFLhGiI1_K0cYnk0bsdizUuL8F6kUEAw3xIcKCG3rZNPZ0bQZDfUWda55H0cGYTmbY1cr"
+          "title": "darkhorizons.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGAEMD8ZGAxCBdQjPUBqvWSCMmUb1cMFRa50nMSpXtTiGjwOo6vQebytJWe1CUnfilwsYxNG7IB3CXXDUAvXwvNaFQL3qCRj2GoxjpWlc060v6Sq1kh2_054-NqZ-llRU0F1jYY9A0qg3Yv-Un77eKZGlPMLzwqDATz08wnMwmHww=="
+        },
+        {
+          "title": "wbal.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFcoCSIY1qQnFVpJXdZdH9tbxkqmqtEz33qeresFeo-TjxMZwL5o5dZ97REv-3_HEdl3VqSLNbSiJQ42muXd1mCtuzUWyINBrRJq-c5beh2zhiBTDpxllkBHucUbuWrXBCBPmIY99IGOimrRf42wJFv-UKOoXHrKINCQ7HUl-3cPwKVQspYCMag"
+        },
+        {
+          "title": "justjared.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEoFY8G8cB-xp5YqHdko44ErWWEg_Drt8ev2fzim7GUwP2fclyNXrH9uDPFCe4lgZQeZzpWWqX7u-lOyRTpKVk-eFBk2BbVbrzaBmWtRqjSvbPIlENeborz5fZXJPQUfHOzovXLvQczd5ojkQTbkc5aRtcT0gcLd6HNPghSMGZalJM="
         }
       ]
     }
