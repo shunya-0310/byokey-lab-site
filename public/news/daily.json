@@ -1,108 +1,96 @@
 {
   "schemaVersion": 1,
   "status": "live",
-  "date": "2026-10-16",
-  "generatedAt": "2026-10-15T23:41:33.910Z",
+  "date": "2026-10-17",
+  "generatedAt": "2026-10-16T23:36:05.953Z",
   "model": "gemini-3.6-flash",
   "fallbackCategories": [],
   "items": [
     {
-      "id": "2026-10-16-politics_economy",
+      "id": "2026-10-17-politics_economy",
       "category": "politics_economy",
       "categoryLabel": "Politics & Economy",
-      "headline": "IMF Warns AI Investment Surge Masks Deepening Global Economic Disparities",
-      "summary": "At the IMF and World Bank Annual Meetings in Bangkok, Managing Director Kristalina Georgieva warned that global economic resilience rests on a fragile foundation driven by an artificial intelligence investment boom. She cautioned that while AI spending boosts near-term growth in major tech-producing economies, it risks widening global inequality, disrupting labor markets, and failing to resolve mounting sovereign debt.",
-      "question": "Do you think rapid global investments in artificial intelligence will ultimately help narrow or widen economic gaps between nations?",
+      "headline": "Zelenskyy Requests $78 Billion in Aid at EU Summit in Brussels",
+      "summary": "Ukrainian President Volodymyr Zelenskyy asked European Union leaders for $78 billion in new aid during a summit in Brussels on October 16. The request comes as European nations face difficult internal budget debates and uncertain long-term military support from the United States.",
+      "question": "How do you think European nations should balance supporting international allies with managing their own domestic budgets?",
       "coachLeads": {
-        "friendly": "Hey, have you caught the latest updates from the global economic summit in Bangkok? It's a really fascinating topic about how AI is changing the global economy.",
-        "energetic": "There's a huge story coming out of the IMF summit today that you've got to check out! World financial leaders are diving deep into how AI spending is impacting global markets!",
-        "calm": "Take a moment to look over this latest news from the IMF annual meeting in Bangkok. It offers a very thoughtful perspective on the economic risks and rewards of the current AI surge.",
-        "direct": "This is definitely worth talking about today. The IMF just issued a major warning on how the AI investment boom is affecting global debt and economic inequality."
+        "friendly": "Hey, have you caught the latest updates from the EU summit in Brussels? President Zelenskyy has asked European leaders for a massive new aid package.",
+        "energetic": "There is major news breaking out of Brussels today! European leaders are currently debating a $78 billion aid request from Ukraine.",
+        "calm": "European Union leaders gathered in Brussels today to discuss long-term regional stability. President Zelenskyy formally requested $78 billion in new support.",
+        "direct": "Zelenskyy asked EU leaders for $78 billion at a summit in Brussels today. Let's discuss what this means for European politics and global aid."
       },
       "sources": [
         {
-          "title": "Google News: Politics & Economy",
-          "url": "https://news.google.com/search?q=Politics%20%26%20Economy%20top%20news%202026-10-16&hl=en-US&gl=US&ceid=US:en"
+          "title": "courthousenews.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQENdRVxBaCMtgWfeZol4f3qAjb8aWwdzXEO98utSOgnVMafdQyWQENsEtdmqgHjz1fWXn62Io_iqABL72h7NFn_xjM03Sm8QwsjhkLbqUKBHScvHeA0IKueFPfiU-ikSJ_y0lQKaykkNPEAVa-5-3xESqhJ4HqmJXPUycNvF7fZcmBJPgO1COvG2dCYm7cQ"
         }
       ]
     },
     {
-      "id": "2026-10-16-technology",
+      "id": "2026-10-17-technology",
       "category": "technology",
       "categoryLabel": "Technology",
-      "headline": "Global Chip and AI Stocks Plunge Amid Rising Inflation and AI Debt Fears",
-      "summary": "Global artificial intelligence and semiconductor stocks suffered a sharp sell-off on October 15 following higher-than-expected U.S. inflation figures and growing worries over the heavy debt funding AI infrastructure. Major technology shares across Asia and the United States tumbled during the session, reflecting rising investor anxiety over elevated tech valuations and borrowing costs.",
-      "question": "Do you think tech companies are spending too much money on AI development, or is the heavy investment necessary for future innovation?",
+      "headline": "Global Tech Stocks Slide as Investors Question AI Infrastructure Spending",
+      "summary": "Major technology and semiconductor stocks dropped sharply on Friday, triggering a market decline that pulled down global stock indexes. The sell-off comes as investors express growing concern over rising debt and massive spending on artificial intelligence infrastructure.",
+      "question": "Do you think tech companies are spending too much money on artificial intelligence right now, or will these investments pay off in the long run?",
       "coachLeads": {
-        "friendly": "Hey! Did you catch the big story today about tech and AI stocks taking a sudden drop? I'd love to hear your take on what's happening in the tech world.",
-        "energetic": "Look at what's shaking up the tech world today! Global markets just took a huge hit over AI investments, and it makes for an incredible topic to practice talking about!",
-        "calm": "There is significant news in the technology market today regarding a sharp decline in AI and chip shares. Whenever you're ready, let's go over it together.",
-        "direct": "Major tech and AI stocks took a heavy global downturn today due to inflation and debt concerns. Let me know what you think about how tech companies are managing their growth."
+        "friendly": "Hey! Have you seen the big news about major tech stocks dropping today?",
+        "energetic": "Check this out—tech stocks took a massive hit today as investors start second-guessing huge AI spending!",
+        "calm": "There is a notable shift happening in global markets today. Tech and semiconductor stocks fell as investors weigh the rising costs of AI development.",
+        "direct": "Big tech stocks dropped significantly today due to growing concerns over AI infrastructure spending. Here is what you should know."
       },
       "sources": [
         {
-          "title": "theguardian.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFcLXa3mETnTjRbKj9m5A9Pm5y761j0-UGLaX9gTjYZws-09e2URHV0w_4ZbSxSq76RBA7xMZfSOWEclN9trxqsVyCJa7tbPwqTR-WhvDVF_SJkqYz_WVgYHFyceffmRcRagV1DcVtjXNf0i4yjNqwGQgI3Z7iaVUY982UCSasQL00Q9vy39z-lfhdNriHOI0fXAZneRDDZL1I8ltECFkVYTqzxcasNvhUlejId"
+          "title": "bnnbloomberg.ca",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHOw-5g7x4NcAKqlhL-CsCYpbTLcv1kUg4rwzO1a940apAx51JiDOVeXG02kobuYuz3ZPTHD-QOVou6c_n6jK2GwNECDu1NxvWJ6JXn3bhyAfIh-ato3WGRrpR-keKWhuT8lFnUcEY79_Vsa_VLj9VKQoImAt0LeQ1GmKkTtAgOVEflxyPRsMJKofmLiXVzUEKPCJxj2dsWe4WAxWeVZ7eqs3X5-BApyCVA8jWVR-3E"
         },
         {
           "title": "cnn.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHYv1RITZoyG_EYPaVkfbhGTg6TTNsj4CYbPAY_uWcgcutBSAdC6hqCfhpySpDelYb4MKqbksayDuCSQ-qqKScpqJLKSVyuya11ebjKwgAkBjl6k1tMHoMFahJtTIKWv1HAy0sTkSaF29ca_N4wBXgSR1n9EOVzDBRZ"
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGgrQoVo3cQjIm4zC55_dmiDV8MgbIl0QXuz7qzQl-B_yMTEnCIBjeP61lYDY8RQVf6dxHF_NySeQW2YgC_OPBm3um1hxAWi6xIDp2iHgoTafuWM1jLtBbub7Acf5BTI9buXvAa3b-7ZS7o9JIM1_-m0ET6wRQjXPq_"
         },
         {
-          "title": "taipeitimes.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGUyYkUfcCVMOHTayKh3Ydyh2oeR3Ggn4plJ5dBnmEKp1tr66vKb6B_gHfDa5WBAbpAk3V8-iUvez8Y2nO_WMp6A0OYjf-aF-6zixv963F21yF6PFdHhumsexfbFf2-gyd6rR_x7V2fNM4RsTNvwl_QNlEIFgbIRYdr"
+          "title": "altoonamirror.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGkiTrqjvANgrfEt4EODki5YCoFuM6rJuFhzNsa4OeBVywAMm1KezSjrO_UxS4kWi3BdMoiRJZ_1WKfHbavfW4UcRe1Ypu0MnyeM0mx2tyk9kzXOw8CabKAISNLW9-wU9gEQNxBcQ_AyvsRdIT-Nl5iG6C8kQu7YSpH_IRUz17TmONbYJrYts-EPe0VI8NNfo2OkOqvfSNSmbIv0EkDI55LaL3Q4fKlSKxs1LEZSAkM"
         }
       ]
     },
     {
-      "id": "2026-10-16-sports",
+      "id": "2026-10-17-sports",
       "category": "sports",
       "categoryLabel": "Sports",
-      "headline": "Cleveland Guardians Defeat Tampa Bay Rays 3-2 to Take 2-1 ALCS Lead",
-      "summary": "The Cleveland Guardians defeated the Tampa Bay Rays 3-2 in Game 3 of the American League Championship Series on Thursday, October 15, taking a 2-1 lead in the playoff series. Outfielder Petey Halpin hit a go-ahead two-run home run in the fifth inning, while starting pitcher Gavin Williams struck out nine batters to secure the home victory.",
-      "question": "What strategy do you think is most crucial for a team trying to regain momentum during a high-stakes playoff series?",
+      "headline": "Milwaukee Brewers Sweep Dodgers to Reach First World Series Since 1982",
+      "summary": "The Milwaukee Brewers overcame an early four-run deficit to defeat the Los Angeles Dodgers 6-4, completing a four-game sweep in the National League Championship Series. The victory eliminates the two-time defending champions and sends Milwaukee to its first World Series appearance in 44 years.",
+      "question": "What do you think is the most important factor when an underdog team manages to sweep a major championship favorite?",
       "coachLeads": {
-        "friendly": "Hey, did you happen to catch the playoff baseball game last night? Cleveland just pulled off a super exciting win!",
-        "energetic": "What an unbelievable game! That go-ahead home run totally turned the playoff series around!",
-        "calm": "A close playoff game yesterday shifted the momentum in the ALCS. Take a moment to review how Cleveland secured the win.",
-        "direct": "Cleveland took a 2-1 lead in the ALCS by defeating Tampa Bay 3-2 yesterday. Let me walk you through the key moments."
+        "friendly": "Hey, did you catch the big sports story today? The Milwaukee Brewers just pulled off a huge upset to reach the World Series!",
+        "energetic": "What an incredible postseason result! The Brewers swept the defending champion Dodgers to book their ticket to the Fall Classic!",
+        "calm": "There is a notable sports milestone worth discussing today. Milwaukee just secured its first World Series spot in over four decades.",
+        "direct": "The Milwaukee Brewers just swept the Los Angeles Dodgers to reach the World Series. Let's talk about what made this matchup so surprising."
       },
       "sources": [
         {
-          "title": "wsls.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF6LbqwMNFa5zzY3Tb77GbEWZT6Vr69cdFbBWAxe7lL1l06yco9CMTwzsMJs-H-wrl3Txoeiq0D7vHlKx7QvhD2leLe6o4MJ5vOUN5Z0cl01amSQMOVTZWRL425JpzoxtkrESREaVL3bXcufR5aEg55SGmiesLkZfjV9nbQk7RBWwB_6h4XLlBE8kjopydI7PieJTnnCCgwJ5T2ZskuTWBzrJLOjq7h0F0Bq3O3vyxRBxWxya9MWN0mFiWYLKR_qmcb"
-        },
-        {
-          "title": "cbssports.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH43dPinzilAhX3B5WYv4IzMNaaaTdzzdrhJLW86O6iAXosdTvrvsltVLEEALQbdqp28HC6dXFHK9SeKDNng2Rs_WfcrasyGxhY3rkRxGgyxL1gagbShBbNaC2vPvZ4ZITpMtrtFfOKe8BkCajKLCU3YbNuZRKEKZTRZAcKtqhdrfErwFJVgmwYN67utKtJEq0GcZtxA6Ve"
+          "title": "Google News: Sports",
+          "url": "https://news.google.com/search?q=Sports%20top%20news%202026-10-17&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     },
     {
-      "id": "2026-10-16-entertainment",
+      "id": "2026-10-17-entertainment",
       "category": "entertainment",
       "categoryLabel": "Entertainment",
-      "headline": "Zendaya to Star in Alex Garland's Next A24 Sci-Fi Film",
-      "summary": "Actress Zendaya has officially signed on to lead an untitled science-fiction feature written and directed by Alex Garland for indie studio A24. Production is scheduled to begin in 2027, making it one of Hollywood's most high-profile upcoming film announcements.",
-      "question": "What kind of role would you like to see Zendaya take on in a new science-fiction movie?",
+      "headline": "Steven Soderbergh Steps In to Help Finish Filming 'The Batman Part II'",
+      "summary": "Oscar-winning filmmaker Steven Soderbergh has stepped in to assist director Matt Reeves in completing the final weeks of principal photography on 'The Batman Part II' while Reeves addresses a personal family matter. DC Studios and Reeves confirmed that Reeves remains the sequel's official director and will oversee post-production to fulfill his creative vision.",
+      "question": "How do you feel when a different director steps in during the production of a major film project?",
       "coachLeads": {
-        "friendly": "Hey, did you catch the big film announcement today? Zendaya is teaming up with director Alex Garland for a new sci-fi project!",
-        "energetic": "This is huge news for movie fans! Zendaya has officially signed on to star in Alex Garland's next sci-fi film for A24!",
-        "calm": "There is an interesting movie story making headlines today. Zendaya has joined Alex Garland's upcoming science-fiction feature with studio A24.",
-        "direct": "A major Hollywood deal was announced today. Zendaya will star in a new A24 sci-fi movie written and directed by Alex Garland."
+        "friendly": "Hey, have you heard the latest news about the new Batman movie? It is a really interesting movie story worth talking about.",
+        "energetic": "This is huge news for movie fans! A legendary director is stepping in to help finish shooting 'The Batman Part II'!",
+        "calm": "There is a notable story from Hollywood today. Director Steven Soderbergh is stepping in to help wrap up principal photography on 'The Batman Part II'.",
+        "direct": "Here is a major development in the film industry today. Steven Soderbergh is helping finish production on 'The Batman Part II'."
       },
       "sources": [
         {
-          "title": "darkhorizons.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGAEMD8ZGAxCBdQjPUBqvWSCMmUb1cMFRa50nMSpXtTiGjwOo6vQebytJWe1CUnfilwsYxNG7IB3CXXDUAvXwvNaFQL3qCRj2GoxjpWlc060v6Sq1kh2_054-NqZ-llRU0F1jYY9A0qg3Yv-Un77eKZGlPMLzwqDATz08wnMwmHww=="
-        },
-        {
-          "title": "wbal.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFcoCSIY1qQnFVpJXdZdH9tbxkqmqtEz33qeresFeo-TjxMZwL5o5dZ97REv-3_HEdl3VqSLNbSiJQ42muXd1mCtuzUWyINBrRJq-c5beh2zhiBTDpxllkBHucUbuWrXBCBPmIY99IGOimrRf42wJFv-UKOoXHrKINCQ7HUl-3cPwKVQspYCMag"
-        },
-        {
-          "title": "justjared.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEoFY8G8cB-xp5YqHdko44ErWWEg_Drt8ev2fzim7GUwP2fclyNXrH9uDPFCe4lgZQeZzpWWqX7u-lOyRTpKVk-eFBk2BbVbrzaBmWtRqjSvbPIlENeborz5fZXJPQUfHOzovXLvQczd5ojkQTbkc5aRtcT0gcLd6HNPghSMGZalJM="
+          "title": "Google News: Entertainment",
+          "url": "https://news.google.com/search?q=Entertainment%20top%20news%202026-10-17&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     }
