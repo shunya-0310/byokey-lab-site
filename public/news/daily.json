@@ -1,96 +1,96 @@
 {
   "schemaVersion": 1,
   "status": "live",
-  "date": "2026-10-17",
-  "generatedAt": "2026-10-16T23:36:05.953Z",
+  "date": "2026-10-18",
+  "generatedAt": "2026-10-17T23:08:04.472Z",
   "model": "gemini-3.6-flash",
   "fallbackCategories": [],
   "items": [
     {
-      "id": "2026-10-17-politics_economy",
+      "id": "2026-10-18-politics_economy",
       "category": "politics_economy",
       "categoryLabel": "Politics & Economy",
-      "headline": "Zelenskyy Requests $78 Billion in Aid at EU Summit in Brussels",
-      "summary": "Ukrainian President Volodymyr Zelenskyy asked European Union leaders for $78 billion in new aid during a summit in Brussels on October 16. The request comes as European nations face difficult internal budget debates and uncertain long-term military support from the United States.",
-      "question": "How do you think European nations should balance supporting international allies with managing their own domestic budgets?",
+      "headline": "Massive Nationwide Protests Erupt Across France Over Rising Living Costs",
+      "summary": "Over 550,000 people demonstrated across France on Saturday to protest rising living costs and education grievances, resulting in clashes with police and nearly 400 arrests. The nationwide rallies mark one of the country's largest waves of social unrest in recent years and have put intense political pressure on the French government.",
+      "question": "How do you think governments should balance economic policy when rising inflation leads to widespread public discontent?",
       "coachLeads": {
-        "friendly": "Hey, have you caught the latest updates from the EU summit in Brussels? President Zelenskyy has asked European leaders for a massive new aid package.",
-        "energetic": "There is major news breaking out of Brussels today! European leaders are currently debating a $78 billion aid request from Ukraine.",
-        "calm": "European Union leaders gathered in Brussels today to discuss long-term regional stability. President Zelenskyy formally requested $78 billion in new support.",
-        "direct": "Zelenskyy asked EU leaders for $78 billion at a summit in Brussels today. Let's discuss what this means for European politics and global aid."
+        "friendly": "Hey, have you heard about the massive protests in France? Over half a million people took to the streets to voice their frustration over rising living costs!",
+        "energetic": "Check this out—hundreds of thousands of people just swept through cities across France to protest rising prices! This is definitely worth talking about.",
+        "calm": "A significant story breaking today is the widespread public protest across France. It offers an insightful look at how economic pressures can trigger major social movement.",
+        "direct": "More than 500,000 people protested in France over living costs this weekend. Let's discuss how economic policy drives public discontent."
       },
       "sources": [
-        {
-          "title": "courthousenews.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQENdRVxBaCMtgWfeZol4f3qAjb8aWwdzXEO98utSOgnVMafdQyWQENsEtdmqgHjz1fWXn62Io_iqABL72h7NFn_xjM03Sm8QwsjhkLbqUKBHScvHeA0IKueFPfiU-ikSJ_y0lQKaykkNPEAVa-5-3xESqhJ4HqmJXPUycNvF7fZcmBJPgO1COvG2dCYm7cQ"
-        }
-      ]
-    },
-    {
-      "id": "2026-10-17-technology",
-      "category": "technology",
-      "categoryLabel": "Technology",
-      "headline": "Global Tech Stocks Slide as Investors Question AI Infrastructure Spending",
-      "summary": "Major technology and semiconductor stocks dropped sharply on Friday, triggering a market decline that pulled down global stock indexes. The sell-off comes as investors express growing concern over rising debt and massive spending on artificial intelligence infrastructure.",
-      "question": "Do you think tech companies are spending too much money on artificial intelligence right now, or will these investments pay off in the long run?",
-      "coachLeads": {
-        "friendly": "Hey! Have you seen the big news about major tech stocks dropping today?",
-        "energetic": "Check this out—tech stocks took a massive hit today as investors start second-guessing huge AI spending!",
-        "calm": "There is a notable shift happening in global markets today. Tech and semiconductor stocks fell as investors weigh the rising costs of AI development.",
-        "direct": "Big tech stocks dropped significantly today due to growing concerns over AI infrastructure spending. Here is what you should know."
-      },
-      "sources": [
-        {
-          "title": "bnnbloomberg.ca",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHOw-5g7x4NcAKqlhL-CsCYpbTLcv1kUg4rwzO1a940apAx51JiDOVeXG02kobuYuz3ZPTHD-QOVou6c_n6jK2GwNECDu1NxvWJ6JXn3bhyAfIh-ato3WGRrpR-keKWhuT8lFnUcEY79_Vsa_VLj9VKQoImAt0LeQ1GmKkTtAgOVEflxyPRsMJKofmLiXVzUEKPCJxj2dsWe4WAxWeVZ7eqs3X5-BApyCVA8jWVR-3E"
-        },
         {
           "title": "cnn.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGgrQoVo3cQjIm4zC55_dmiDV8MgbIl0QXuz7qzQl-B_yMTEnCIBjeP61lYDY8RQVf6dxHF_NySeQW2YgC_OPBm3um1hxAWi6xIDp2iHgoTafuWM1jLtBbub7Acf5BTI9buXvAa3b-7ZS7o9JIM1_-m0ET6wRQjXPq_"
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF3StY2atlfdSlJuKOSx-tyjwkuLhcILHsOIDuWEtBvvhhtjEYpxDUA9XutAKU37I-tcWVFyMvVRjVYfYL7YfL5lsgzudyV2rymMKr7xjNN6mMx3a-PhjzmYmPsofi_m8SI_zX4ZzU3hhIegZ3MNhgzRn5FgWYcAWWItUUNmQSV"
         },
         {
-          "title": "altoonamirror.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGkiTrqjvANgrfEt4EODki5YCoFuM6rJuFhzNsa4OeBVywAMm1KezSjrO_UxS4kWi3BdMoiRJZ_1WKfHbavfW4UcRe1Ypu0MnyeM0mx2tyk9kzXOw8CabKAISNLW9-wU9gEQNxBcQ_AyvsRdIT-Nl5iG6C8kQu7YSpH_IRUz17TmONbYJrYts-EPe0VI8NNfo2OkOqvfSNSmbIv0EkDI55LaL3Q4fKlSKxs1LEZSAkM"
+          "title": "clickorlando.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQENNYOjTKwD90W6h1ElsvaOW6J1D3sZvlG9hFvS7vPiGfvQeL2sl4r1M2Mxf4gPCKDCQTHh5p_GVAzNAtndX5oW_nfT8P4yORFkzhCTN-CUOFfnCE4LqyuTOTp2wcp_k981PVvVA0gsp3PqVfY1oNAZo4BT86PqpFsSESOMhZpVSRxBbIYbkJN9490M4Jy2gZokUT8VvaxesAxQAJeBvnsLCze1E9zCiktPABvPPt8-kpGI3kShy6SoxlGf6cyd"
         }
       ]
     },
     {
-      "id": "2026-10-17-sports",
-      "category": "sports",
-      "categoryLabel": "Sports",
-      "headline": "Milwaukee Brewers Sweep Dodgers to Reach First World Series Since 1982",
-      "summary": "The Milwaukee Brewers overcame an early four-run deficit to defeat the Los Angeles Dodgers 6-4, completing a four-game sweep in the National League Championship Series. The victory eliminates the two-time defending champions and sends Milwaukee to its first World Series appearance in 44 years.",
-      "question": "What do you think is the most important factor when an underdog team manages to sweep a major championship favorite?",
+      "id": "2026-10-18-technology",
+      "category": "technology",
+      "categoryLabel": "Technology",
+      "headline": "China Proposes New Export Controls Targeting Advanced Artificial Intelligence Technologies",
+      "summary": "China has introduced proposed export restrictions covering 40 critical technologies, including 23 related to artificial intelligence systems such as large models and autonomous agents. The development is making headlines now as immediate registration rules take effect while officials collect public feedback on the policy.",
+      "question": "How do you think international regulations on AI technology will affect global innovation and cooperation?",
       "coachLeads": {
-        "friendly": "Hey, did you catch the big sports story today? The Milwaukee Brewers just pulled off a huge upset to reach the World Series!",
-        "energetic": "What an incredible postseason result! The Brewers swept the defending champion Dodgers to book their ticket to the Fall Classic!",
-        "calm": "There is a notable sports milestone worth discussing today. Milwaukee just secured its first World Series spot in over four decades.",
-        "direct": "The Milwaukee Brewers just swept the Los Angeles Dodgers to reach the World Series. Let's talk about what made this matchup so surprising."
+        "friendly": "Hey there! Did you hear about China's new rules on exporting artificial intelligence tech?",
+        "energetic": "There is big news in the tech world today! China just announced major export controls on key AI technologies.",
+        "calm": "China has introduced new export controls for advanced artificial intelligence technologies. This is a very interesting topic to discuss.",
+        "direct": "China recently announced new export controls on artificial intelligence. Let's talk about what this means for global tech."
       },
       "sources": [
         {
-          "title": "Google News: Sports",
-          "url": "https://news.google.com/search?q=Sports%20top%20news%202026-10-17&hl=en-US&gl=US&ceid=US:en"
+          "title": "medium.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHu-m7dEPbqZOz-llx34UqMK_lgjttQHhl32USVUOKSkdoHXjuT0XInS5NOL6UFT61CdgN_-7V_rNifhSVz8ab6M9ADXicFlDqVYvM8LTNW-JI4K1xz_Eiv1Sht6AZbVtQz_4JfuU4IqoCoBatob6TXDgnBinMUjS7TLex8VEkktev7KJcGLx7X5W0pitcoh5FcE08BAjCx"
         }
       ]
     },
     {
-      "id": "2026-10-17-entertainment",
+      "id": "2026-10-18-sports",
+      "category": "sports",
+      "categoryLabel": "Sports",
+      "headline": "Milwaukee Brewers Sweep Dodgers to Advance to World Series",
+      "summary": "The Milwaukee Brewers completed a four-game sweep of the two-time defending champion Los Angeles Dodgers with a 6-4 victory in Game 4 of the National League Championship Series. The victory marks Milwaukee's first National League pennant and World Series appearance in 44 years while ending Los Angeles's bid for a three-peat.",
+      "question": "Why do you think sports fans often get so excited when an underdog team defeats a reigning champion?",
+      "coachLeads": {
+        "friendly": "Hey! Have you heard about the big sports shocker with the Milwaukee Brewers defeating the Dodgers to reach the World Series?",
+        "energetic": "What an unbelievable moment in sports! The Milwaukee Brewers just swept the two-time defending champion Dodgers to secure a spot in the World Series!",
+        "calm": "This is a remarkable outcome in baseball. The Milwaukee Brewers completed a four-game sweep against Los Angeles, ending the Dodgers' back-to-back title reign.",
+        "direct": "The Milwaukee Brewers just eliminated the Los Angeles Dodgers in a four-game sweep to advance to the World Series. Let's talk about this major upset."
+      },
+      "sources": [
+        {
+          "title": "mlb.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGy9AYe_GtTsxyNxIh-XmY5ayIrFZGYPuRe3ckYsQBVlVLBnDE5owma3qWJG8T4DpICJqFG1Djomfi0qtNx9CJKIQFLtof9ZKh9qunaFNirp3MPKtFthn50nGjBQhC4emGmPDVN2ewfYFk2TvHPgvGn57jwOhTZY0pj"
+        },
+        {
+          "title": "thesiliconreview.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHmjnFGGdAypJJ_odM9GhtljRiJNL_xJquphRSgY-vtNbeQBoqEb-hXczNuqp5qYtU8CMzN1z6SqS2W_leaeFr9LwmxcUa7sAnDGa7pJB_iNDi0XIY9BzcahMulV6LJkCF5mzrcey1DMI2o_1sAs_UFyxj2iYUfhCDw-fxl_LmYsWG8ZBkZNQ=="
+        }
+      ]
+    },
+    {
+      "id": "2026-10-18-entertainment",
       "category": "entertainment",
       "categoryLabel": "Entertainment",
-      "headline": "Steven Soderbergh Steps In to Help Finish Filming 'The Batman Part II'",
-      "summary": "Oscar-winning filmmaker Steven Soderbergh has stepped in to assist director Matt Reeves in completing the final weeks of principal photography on 'The Batman Part II' while Reeves addresses a personal family matter. DC Studios and Reeves confirmed that Reeves remains the sequel's official director and will oversee post-production to fulfill his creative vision.",
-      "question": "How do you feel when a different director steps in during the production of a major film project?",
+      "headline": "Dancing with the Stars Suspends Val Chmerkovskiy Over Social Media Post",
+      "summary": "Longtime professional dancer Val Chmerkovskiy was handed a one-week suspension by producers after making a social media post referencing the 2022 Oscars slap toward judge Carrie Ann Inaba. The disciplinary action marks the first official dancer suspension in the reality show's history and forces him to sit out the upcoming live episode.",
+      "question": "Do you think television networks should hold reality show performers accountable for their personal social media comments?",
       "coachLeads": {
-        "friendly": "Hey, have you heard the latest news about the new Batman movie? It is a really interesting movie story worth talking about.",
-        "energetic": "This is huge news for movie fans! A legendary director is stepping in to help finish shooting 'The Batman Part II'!",
-        "calm": "There is a notable story from Hollywood today. Director Steven Soderbergh is stepping in to help wrap up principal photography on 'The Batman Part II'.",
-        "direct": "Here is a major development in the film industry today. Steven Soderbergh is helping finish production on 'The Batman Part II'."
+        "friendly": "Hey, have you heard about the big headline from Dancing with the Stars? One of the show's favorite pro dancers was just suspended for the first time ever!",
+        "energetic": "You won't believe what just happened on Dancing with the Stars! A major pro dancer got suspended over a wild social media post, and everyone is talking about it!",
+        "calm": "There is a notable story in television news today. Dancing with the Stars has issued its first dancer suspension following a controversial online comment.",
+        "direct": "Dancing with the Stars just suspended pro dancer Val Chmerkovskiy for a week. Let's dive into what led to this historic moment for the show."
       },
       "sources": [
         {
           "title": "Google News: Entertainment",
-          "url": "https://news.google.com/search?q=Entertainment%20top%20news%202026-10-17&hl=en-US&gl=US&ceid=US:en"
+          "url": "https://news.google.com/search?q=Entertainment%20top%20news%202026-10-18&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     }
