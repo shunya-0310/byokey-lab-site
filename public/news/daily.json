@@ -1,96 +1,104 @@
 {
   "schemaVersion": 1,
   "status": "live",
-  "date": "2026-10-18",
-  "generatedAt": "2026-10-17T23:08:04.472Z",
+  "date": "2026-10-19",
+  "generatedAt": "2026-10-18T23:13:05.218Z",
   "model": "gemini-3.6-flash",
   "fallbackCategories": [],
   "items": [
     {
-      "id": "2026-10-18-politics_economy",
+      "id": "2026-10-19-politics_economy",
       "category": "politics_economy",
       "categoryLabel": "Politics & Economy",
-      "headline": "Massive Nationwide Protests Erupt Across France Over Rising Living Costs",
-      "summary": "Over 550,000 people demonstrated across France on Saturday to protest rising living costs and education grievances, resulting in clashes with police and nearly 400 arrests. The nationwide rallies mark one of the country's largest waves of social unrest in recent years and have put intense political pressure on the French government.",
-      "question": "How do you think governments should balance economic policy when rising inflation leads to widespread public discontent?",
+      "headline": "Global Oil Prices Surge Near $110 Amid Middle East Shipping Disruptions",
+      "summary": "Global crude oil prices spiked toward $110 per barrel following attacks on Middle East energy infrastructure and rising shipping risks in the Strait of Hormuz. The sudden jump in energy costs is raising concerns about persistent global inflation and complicating upcoming central bank interest rate decisions.",
+      "question": "How do rising energy prices usually impact your daily expenses or local economy?",
       "coachLeads": {
-        "friendly": "Hey, have you heard about the massive protests in France? Over half a million people took to the streets to voice their frustration over rising living costs!",
-        "energetic": "Check this out—hundreds of thousands of people just swept through cities across France to protest rising prices! This is definitely worth talking about.",
-        "calm": "A significant story breaking today is the widespread public protest across France. It offers an insightful look at how economic pressures can trigger major social movement.",
-        "direct": "More than 500,000 people protested in France over living costs this weekend. Let's discuss how economic policy drives public discontent."
+        "friendly": "Hey, have you heard about the sudden jump in global oil prices? It is a really timely topic for us to practice discussing together.",
+        "energetic": "Global energy markets are making major headlines today as oil prices surge! Let's jump right into what is driving this spike.",
+        "calm": "There is a significant story in global economics today regarding rising energy costs. Whenever you are ready, let's take a look and discuss it.",
+        "direct": "Crude oil prices have surged near $110 a barrel due to Middle East supply risks. Let's discuss how this could affect the broader global economy."
       },
       "sources": [
         {
-          "title": "cnn.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF3StY2atlfdSlJuKOSx-tyjwkuLhcILHsOIDuWEtBvvhhtjEYpxDUA9XutAKU37I-tcWVFyMvVRjVYfYL7YfL5lsgzudyV2rymMKr7xjNN6mMx3a-PhjzmYmPsofi_m8SI_zX4ZzU3hhIegZ3MNhgzRn5FgWYcAWWItUUNmQSV"
+          "title": "businesstoday.in",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHs9cvpG6j41vp_nuHzP5xtzpM0MBD_iQzEJzw0boLxTO9bADRWg48XFwj6XlniGYyx2TQ7c__R6YfbeEhoavGZcRi5TG0vFtgLs5dwPfCcn9VKtbForUy3ORm_Lm-BTEfL_hPRXHnwOQAIAvNAiFs_IrC5DZadFdf5z9sXfb20FPxqwweBq3882M99gS6CM_VsBzn-6mOfg8s1iVuXCh1F_zEHZHL1dEGW1P0Nl8jhmF9sa1I8VdRNQyH8JODs9PtS4fo="
         },
         {
-          "title": "clickorlando.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQENNYOjTKwD90W6h1ElsvaOW6J1D3sZvlG9hFvS7vPiGfvQeL2sl4r1M2Mxf4gPCKDCQTHh5p_GVAzNAtndX5oW_nfT8P4yORFkzhCTN-CUOFfnCE4LqyuTOTp2wcp_k981PVvVA0gsp3PqVfY1oNAZo4BT86PqpFsSESOMhZpVSRxBbIYbkJN9490M4Jy2gZokUT8VvaxesAxQAJeBvnsLCze1E9zCiktPABvPPt8-kpGI3kShy6SoxlGf6cyd"
+          "title": "dmarketforces.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEF2_jlRbAHAbq199QcxtGSzOMDB_VbpwhbeWBxWBdWOY-F2vonFBb2_-LTebbujeYsWwTBEm_6hCfyUDMVR-HwXFlrbtKjEjv1J3TpXnKq_2PCSifNCTk80xa9I6E2JGewgwuDhOwPUAEXH4Sm-PT-4YCdRye1C3BD7qiEnWzyORlRp7wvC_JHWkA="
+        },
+        {
+          "title": "fortuneprime.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEp09E4PzbVx3mdPrQ0DMQlxjw06gR8ISqfOCcLEIhnUwRygtZYwr0LNYM3OD07nzyYMFqnyr3C6QnJ3fbfY5LgWOfzvnGG2mYZi-8vysBa0FDqkdf68JufRmnbVP5F9XhVbmDdZUigoD_D11eNvIPX19fagLII3V1dXXosLLu5u9Ztq_EmRPvbI1YueKpMxCoNiltSum1_it0="
         }
       ]
     },
     {
-      "id": "2026-10-18-technology",
+      "id": "2026-10-19-technology",
       "category": "technology",
       "categoryLabel": "Technology",
-      "headline": "China Proposes New Export Controls Targeting Advanced Artificial Intelligence Technologies",
-      "summary": "China has introduced proposed export restrictions covering 40 critical technologies, including 23 related to artificial intelligence systems such as large models and autonomous agents. The development is making headlines now as immediate registration rules take effect while officials collect public feedback on the policy.",
-      "question": "How do you think international regulations on AI technology will affect global innovation and cooperation?",
+      "headline": "China Proposes New Export Controls on Artificial Intelligence Technologies",
+      "summary": "China's government has proposed new export controls covering 40 advanced technologies, including 23 artificial intelligence fields such as large language models and autonomous agents. Citing national security concerns, officials introduced immediate pre-export registration requirements while seeking public feedback on performance-based restrictions.",
+      "question": "How do you think government restrictions on sharing AI technology will impact global innovation in the coming years?",
       "coachLeads": {
-        "friendly": "Hey there! Did you hear about China's new rules on exporting artificial intelligence tech?",
-        "energetic": "There is big news in the tech world today! China just announced major export controls on key AI technologies.",
-        "calm": "China has introduced new export controls for advanced artificial intelligence technologies. This is a very interesting topic to discuss.",
-        "direct": "China recently announced new export controls on artificial intelligence. Let's talk about what this means for global tech."
+        "friendly": "Hey, have you caught the latest updates on global tech policy? China is moving to restrict exports of advanced AI tools.",
+        "energetic": "There is big news today in the international tech world! China just announced plans to put export controls on key AI technologies.",
+        "calm": "China has announced proposed export restrictions on advanced artificial intelligence models, citing national security. It is a significant policy shift worth discussing.",
+        "direct": "China is implementing new export registration requirements for 23 key artificial intelligence technologies. Let's look at why this step is making headlines."
       },
       "sources": [
         {
-          "title": "medium.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHu-m7dEPbqZOz-llx34UqMK_lgjttQHhl32USVUOKSkdoHXjuT0XInS5NOL6UFT61CdgN_-7V_rNifhSVz8ab6M9ADXicFlDqVYvM8LTNW-JI4K1xz_Eiv1Sht6AZbVtQz_4JfuU4IqoCoBatob6TXDgnBinMUjS7TLex8VEkktev7KJcGLx7X5W0pitcoh5FcE08BAjCx"
-        }
-      ]
-    },
-    {
-      "id": "2026-10-18-sports",
-      "category": "sports",
-      "categoryLabel": "Sports",
-      "headline": "Milwaukee Brewers Sweep Dodgers to Advance to World Series",
-      "summary": "The Milwaukee Brewers completed a four-game sweep of the two-time defending champion Los Angeles Dodgers with a 6-4 victory in Game 4 of the National League Championship Series. The victory marks Milwaukee's first National League pennant and World Series appearance in 44 years while ending Los Angeles's bid for a three-peat.",
-      "question": "Why do you think sports fans often get so excited when an underdog team defeats a reigning champion?",
-      "coachLeads": {
-        "friendly": "Hey! Have you heard about the big sports shocker with the Milwaukee Brewers defeating the Dodgers to reach the World Series?",
-        "energetic": "What an unbelievable moment in sports! The Milwaukee Brewers just swept the two-time defending champion Dodgers to secure a spot in the World Series!",
-        "calm": "This is a remarkable outcome in baseball. The Milwaukee Brewers completed a four-game sweep against Los Angeles, ending the Dodgers' back-to-back title reign.",
-        "direct": "The Milwaukee Brewers just eliminated the Los Angeles Dodgers in a four-game sweep to advance to the World Series. Let's talk about this major upset."
-      },
-      "sources": [
-        {
-          "title": "mlb.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGy9AYe_GtTsxyNxIh-XmY5ayIrFZGYPuRe3ckYsQBVlVLBnDE5owma3qWJG8T4DpICJqFG1Djomfi0qtNx9CJKIQFLtof9ZKh9qunaFNirp3MPKtFthn50nGjBQhC4emGmPDVN2ewfYFk2TvHPgvGn57jwOhTZY0pj"
+          "title": "cybernews.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE7NpgLyON-6mDUwBr4HIbpuaH13k2ynEfLuKZk-Io_0HDKYS5UyeLuGHuiMnZYqz_G8UKlKQ7ISo6n21tICM09eTCXYmXSzjgzEY-2SxIbw48Ch57I6WhvD5xhR9zWXYGcE2yh4JNtmk1oQKa8MmFhcW3zlZWjQ9X0azBHOs3X0mAM"
         },
         {
-          "title": "thesiliconreview.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHmjnFGGdAypJJ_odM9GhtljRiJNL_xJquphRSgY-vtNbeQBoqEb-hXczNuqp5qYtU8CMzN1z6SqS2W_leaeFr9LwmxcUa7sAnDGa7pJB_iNDi0XIY9BzcahMulV6LJkCF5mzrcey1DMI2o_1sAs_UFyxj2iYUfhCDw-fxl_LmYsWG8ZBkZNQ=="
+          "title": "forkast.news",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGRNUz-s3H4BUQxbyI1CCg9ZKEmVgZVMyp506pjj9bFF0rXnFoQEzONDsAK7tiXdgGoll-j2mOlkLyf-jFDDWQ2_9pwYdiCiI9p0TaYBYg8a96rLOPtmF7js7q9RVhA4pWKKFwVReWxYTvAPsi_6HPu71WGS4jsPdfj36vH0Kwz6WTMMllN7PNeCOc4XI4kx2xyhZbl"
         }
       ]
     },
     {
-      "id": "2026-10-18-entertainment",
-      "category": "entertainment",
-      "categoryLabel": "Entertainment",
-      "headline": "Dancing with the Stars Suspends Val Chmerkovskiy Over Social Media Post",
-      "summary": "Longtime professional dancer Val Chmerkovskiy was handed a one-week suspension by producers after making a social media post referencing the 2022 Oscars slap toward judge Carrie Ann Inaba. The disciplinary action marks the first official dancer suspension in the reality show's history and forces him to sit out the upcoming live episode.",
-      "question": "Do you think television networks should hold reality show performers accountable for their personal social media comments?",
+      "id": "2026-10-19-sports",
+      "category": "sports",
+      "categoryLabel": "Sports",
+      "headline": "2026 UCI Track World Championships Conclude in Shanghai as Harrie Lavreysen Claims 23rd Title",
+      "summary": "The 2026 UCI Track World Championships concluded in Shanghai on October 18, with Dutch sprinter Harrie Lavreysen securing his 23rd career world title by winning his eighth consecutive individual sprint. Great Britain finished at the top of the championship medal table after earning six gold medals across the five days of international competition.",
+      "question": "What qualities do you think allow elite athletes to maintain top-level dominance over several consecutive years?",
       "coachLeads": {
-        "friendly": "Hey, have you heard about the big headline from Dancing with the Stars? One of the show's favorite pro dancers was just suspended for the first time ever!",
-        "energetic": "You won't believe what just happened on Dancing with the Stars! A major pro dancer got suspended over a wild social media post, and everyone is talking about it!",
-        "calm": "There is a notable story in television news today. Dancing with the Stars has issued its first dancer suspension following a controversial online comment.",
-        "direct": "Dancing with the Stars just suspended pro dancer Val Chmerkovskiy for a week. Let's dive into what led to this historic moment for the show."
+        "friendly": "Hey, have you caught the latest updates from the Track World Championships in Shanghai? Harrie Lavreysen added another world title to his record, and it's a great story to chat about.",
+        "energetic": "What an incredible finish to the Track World Championships! Harrie Lavreysen just secured his 23rd world title, and Great Britain dominated the final medal tally!",
+        "calm": "The Track World Championships wrapped up in Shanghai today with some notable milestones. Harrie Lavreysen extended his record to 23 world titles, while Great Britain finished atop the standings.",
+        "direct": "The 2026 Track World Championships finished today in Shanghai. Harrie Lavreysen took his 23rd world title, and Great Britain led the overall medal table."
       },
       "sources": [
         {
-          "title": "Google News: Entertainment",
-          "url": "https://news.google.com/search?q=Entertainment%20top%20news%202026-10-18&hl=en-US&gl=US&ceid=US:en"
+          "title": "olympics.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG2j4OSM4XQ7GrdJTswHVw4eogMOXKIS7NLlWjWM2jaAs90skbgV8obSxFuEi7XE3mnXTJA7UnlD9e5nW5zU0I1Q_m9IpCm82yiJcXC0xCTXAHSAzZ540AEsZxbvZ2lkT8ZNz6AOiFDqbPMufkTHMB_KhdhGFHx1QtLCD1oRibPebFOS32IHOQ70ZV-CONJojI="
+        }
+      ]
+    },
+    {
+      "id": "2026-10-19-entertainment",
+      "category": "entertainment",
+      "categoryLabel": "Entertainment",
+      "headline": "A24's Elizabeth Holmes Documentary 'You Can See Everything' Delivers Historic $15 Million Debut",
+      "summary": "Directed by Nathan Fielder and Lance Oppenheim, A24's Elizabeth Holmes documentary 'You Can See Everything' grossed an estimated $15 million across 855 North American theaters during its opening weekend. The film achieved the biggest domestic debut for a non-music documentary in over twenty years, propelled by more than 2,000 sold-out screenings.",
+      "question": "Why do you think real-life corporate scandals and controversial public figures continue to attract such large movie audiences?",
+      "coachLeads": {
+        "friendly": "Hey, have you heard about the surprising movie news making headlines today? A new documentary is taking theaters by storm.",
+        "energetic": "You won't believe what just happened at the box office! A three-hour documentary is breaking multi-decade records!",
+        "calm": "There's a fascinating box office story making news today. It might be a great topic for us to discuss together.",
+        "direct": "A new documentary about Elizabeth Holmes just scored a historic opening weekend. Let's talk about why this film is generating so much attention."
+      },
+      "sources": [
+        {
+          "title": "justjared.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFVoPYcT7e81jJSMG0YiaaqtJ8SETuHJGQb_U8xOTUOUK70qVNUI7qnoifTZDD3nDWcCi0CEgNhiUZaN_puyaBJJXXwr0EyVtF2V0VYse-81_gG3jlUOrR6LQLK8RfwTNc5aE3oYZ490GJdsRV9s4hPh1IH0MOBrw2nIaMoRHXvqnArvH5EcNBQBJztDi0ArhQWF9QVtG_nQg=="
+        },
+        {
+          "title": "therepublic.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQELSxMZP3pj0QDYYZbnFKvMUrFA4gzTkIEeKOr5Q0AGY-O5ktVCGBe2Ctg9mzIm-qdFGBiLi64fewBA-GXjgqUXbUuibC0yxNBs05A3dXzr145y-nx7-qdCF0l05nQ8oyX2wc9CmBINy4JTFSmMtGxc6itdebTVqEDrICPbQ8-K_DQr6D42tzSvemY7HEGUc08wnswHEeHn_zZv9XPHhdfalUWY7ImcjDvdXKAi9-mXeFOjPg=="
         }
       ]
     }
