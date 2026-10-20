@@ -1,104 +1,96 @@
 {
   "schemaVersion": 1,
   "status": "live",
-  "date": "2026-10-19",
-  "generatedAt": "2026-10-18T23:13:05.218Z",
+  "date": "2026-10-20",
+  "generatedAt": "2026-10-20T00:20:27.883Z",
   "model": "gemini-3.6-flash",
   "fallbackCategories": [],
   "items": [
     {
-      "id": "2026-10-19-politics_economy",
+      "id": "2026-10-20-politics_economy",
       "category": "politics_economy",
       "categoryLabel": "Politics & Economy",
-      "headline": "Global Oil Prices Surge Near $110 Amid Middle East Shipping Disruptions",
-      "summary": "Global crude oil prices spiked toward $110 per barrel following attacks on Middle East energy infrastructure and rising shipping risks in the Strait of Hormuz. The sudden jump in energy costs is raising concerns about persistent global inflation and complicating upcoming central bank interest rate decisions.",
-      "question": "How do rising energy prices usually impact your daily expenses or local economy?",
+      "headline": "France Imposes Local Curfews Across Major Cities Following Nationwide Riots",
+      "summary": "French authorities ordered targeted nighttime curfews in Paris and several other cities on Monday following a weekend of widespread violent unrest sparked by cost-of-living protests. The government implemented these emergency measures after law enforcement made over 2,500 arrests and officials admitted police struggled to maintain control during the demonstrations.",
+      "question": "How do you think governments should balance protecting public safety with respecting citizens' right to peaceful protest?",
       "coachLeads": {
-        "friendly": "Hey, have you heard about the sudden jump in global oil prices? It is a really timely topic for us to practice discussing together.",
-        "energetic": "Global energy markets are making major headlines today as oil prices surge! Let's jump right into what is driving this spike.",
-        "calm": "There is a significant story in global economics today regarding rising energy costs. Whenever you are ready, let's take a look and discuss it.",
-        "direct": "Crude oil prices have surged near $110 a barrel due to Middle East supply risks. Let's discuss how this could affect the broader global economy."
+        "friendly": "Hey, have you heard about the new curfews in France after a weekend of nationwide protests? It's a really important story, so let's chat about it whenever you're ready!",
+        "energetic": "Check out this major story breaking today! France just put nighttime curfews in place across Paris and other cities, and I'd love to hear your perspective on it!",
+        "calm": "There's a significant story developing in France today regarding local curfews following recent civil unrest. Let me know what you think when you get a chance to read it.",
+        "direct": "France has introduced targeted curfews across several cities after nationwide weekend protests turned violent. Take a quick look at the summary, and let's discuss the situation."
       },
       "sources": [
         {
-          "title": "businesstoday.in",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHs9cvpG6j41vp_nuHzP5xtzpM0MBD_iQzEJzw0boLxTO9bADRWg48XFwj6XlniGYyx2TQ7c__R6YfbeEhoavGZcRi5TG0vFtgLs5dwPfCcn9VKtbForUy3ORm_Lm-BTEfL_hPRXHnwOQAIAvNAiFs_IrC5DZadFdf5z9sXfb20FPxqwweBq3882M99gS6CM_VsBzn-6mOfg8s1iVuXCh1F_zEHZHL1dEGW1P0Nl8jhmF9sa1I8VdRNQyH8JODs9PtS4fo="
-        },
-        {
-          "title": "dmarketforces.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEF2_jlRbAHAbq199QcxtGSzOMDB_VbpwhbeWBxWBdWOY-F2vonFBb2_-LTebbujeYsWwTBEm_6hCfyUDMVR-HwXFlrbtKjEjv1J3TpXnKq_2PCSifNCTk80xa9I6E2JGewgwuDhOwPUAEXH4Sm-PT-4YCdRye1C3BD7qiEnWzyORlRp7wvC_JHWkA="
-        },
-        {
-          "title": "fortuneprime.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEp09E4PzbVx3mdPrQ0DMQlxjw06gR8ISqfOCcLEIhnUwRygtZYwr0LNYM3OD07nzyYMFqnyr3C6QnJ3fbfY5LgWOfzvnGG2mYZi-8vysBa0FDqkdf68JufRmnbVP5F9XhVbmDdZUigoD_D11eNvIPX19fagLII3V1dXXosLLu5u9Ztq_EmRPvbI1YueKpMxCoNiltSum1_it0="
+          "title": "Google News: Politics & Economy",
+          "url": "https://news.google.com/search?q=Politics%20%26%20Economy%20top%20news%202026-10-20&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     },
     {
-      "id": "2026-10-19-technology",
+      "id": "2026-10-20-technology",
       "category": "technology",
       "categoryLabel": "Technology",
-      "headline": "China Proposes New Export Controls on Artificial Intelligence Technologies",
-      "summary": "China's government has proposed new export controls covering 40 advanced technologies, including 23 artificial intelligence fields such as large language models and autonomous agents. Citing national security concerns, officials introduced immediate pre-export registration requirements while seeking public feedback on performance-based restrictions.",
-      "question": "How do you think government restrictions on sharing AI technology will impact global innovation in the coming years?",
+      "headline": "Microsoft Pulls Out of Major UK AI Data Center Over Power Grid Shortages",
+      "summary": "Microsoft has canceled its agreement to serve as the main tenant for a flagship project building the United Kingdom's largest AI data center in Essex. The company withdrew after power grid operators estimated that sufficient electricity would not be available until the 2030s, highlighting growing energy bottlenecks for AI infrastructure.",
+      "question": "How do you think governments and tech companies should balance the high energy demands of AI with existing power grid limitations?",
       "coachLeads": {
-        "friendly": "Hey, have you caught the latest updates on global tech policy? China is moving to restrict exports of advanced AI tools.",
-        "energetic": "There is big news today in the international tech world! China just announced plans to put export controls on key AI technologies.",
-        "calm": "China has announced proposed export restrictions on advanced artificial intelligence models, citing national security. It is a significant policy shift worth discussing.",
-        "direct": "China is implementing new export registration requirements for 23 key artificial intelligence technologies. Let's look at why this step is making headlines."
+        "friendly": "Hey, have you heard about this latest tech update? Microsoft just stepped away from a massive UK data center project because of local power shortages.",
+        "energetic": "Check this out! Tech giant Microsoft had to pull out of a huge AI data center project in the UK because the power grid won't be ready for years!",
+        "calm": "Here is an interesting story to consider today. Power supply constraints forced Microsoft to abandon its plans for a flagship AI data center in the UK.",
+        "direct": "Microsoft just canceled its commitment to a major UK AI data center due to power grid delays. This news shows how energy limits are becoming a huge bottleneck for tech expansion."
       },
       "sources": [
         {
-          "title": "cybernews.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE7NpgLyON-6mDUwBr4HIbpuaH13k2ynEfLuKZk-Io_0HDKYS5UyeLuGHuiMnZYqz_G8UKlKQ7ISo6n21tICM09eTCXYmXSzjgzEY-2SxIbw48Ch57I6WhvD5xhR9zWXYGcE2yh4JNtmk1oQKa8MmFhcW3zlZWjQ9X0azBHOs3X0mAM"
+          "title": "theguardian.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGbwA45a8r7lYRXDOXGfYvhtH_M0qny7HtiGSzmMvfZTArwz67Y2HKOrjFzCmrtTRtfxwLyHHIt6mNrijnEEME8JXY9vcnW5pfV72GoY3RUhkahEcnOOsZwcu9MAWpUDTYakj_lHLXH5sgqveg4N7NdNsD_s34XMQdxGpBt4NuJIthJzwfiuS_sX_yt7ulcJYB2MNLsXXA4o28ZL-Im9TFeOsTT1OZV1k7-lp1GKST-oeGD-lI="
         },
         {
-          "title": "forkast.news",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGRNUz-s3H4BUQxbyI1CCg9ZKEmVgZVMyp506pjj9bFF0rXnFoQEzONDsAK7tiXdgGoll-j2mOlkLyf-jFDDWQ2_9pwYdiCiI9p0TaYBYg8a96rLOPtmF7js7q9RVhA4pWKKFwVReWxYTvAPsi_6HPu71WGS4jsPdfj36vH0Kwz6WTMMllN7PNeCOc4XI4kx2xyhZbl"
+          "title": "datacenterdynamics.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFv9HP8s3OOg2PyBR77q_C0XLFYAkHiBY23uOMzwFVLKuJDA35dNiLluCvWnIN_72cjb7iV1SBMhlHxDeAonylJaNL1KPI2LF-K9-fGNxC4-wL12dJncm54BrLTY1o7J6y5cxMUKiyya-pXmRHXsNFQTVbSks3PQ9PLhPgRsPXpruKAwftzAPv4Jm-p8vY-pKSBskuGN7PH_3tAvHIoyBGKmAJH0pg="
+        },
+        {
+          "title": "techradar.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEHmm56ETgxVMjvRD5hVIYylZk0Otiohdv3f4aVrGiRr2IRcEydcRxOVeN8Fi3Fq9DO0I3AphTTUD-_zMztYXEgfD5OkojWRNinlR5cRC0LpXX830BPIDfd8JqAZlH7sqVvgBQtJg2QOoP66AFxGIxW4nKhtIBRJJ3R3OAZ2HBLw2mhB0w1Ug3s93nEFTbXyvSabNPDeQM_iLmQSptu-MMEhWMg1MP6jtf4c8E="
         }
       ]
     },
     {
-      "id": "2026-10-19-sports",
+      "id": "2026-10-20-sports",
       "category": "sports",
       "categoryLabel": "Sports",
-      "headline": "2026 UCI Track World Championships Conclude in Shanghai as Harrie Lavreysen Claims 23rd Title",
-      "summary": "The 2026 UCI Track World Championships concluded in Shanghai on October 18, with Dutch sprinter Harrie Lavreysen securing his 23rd career world title by winning his eighth consecutive individual sprint. Great Britain finished at the top of the championship medal table after earning six gold medals across the five days of international competition.",
-      "question": "What qualities do you think allow elite athletes to maintain top-level dominance over several consecutive years?",
+      "headline": "James Maddison Scores in Return as Tottenham Claims First Premier League Victory",
+      "summary": "On October 19, 2026, Tottenham Hotspur secured their first English Premier League victory of the season by defeating Coventry City 3-1. Midfielder James Maddison scored in his first start in 536 days following a major knee injury, helping lift his club off the bottom of the league table.",
+      "question": "What do you think helps professional athletes stay motivated during long periods of recovery from serious injuries?",
       "coachLeads": {
-        "friendly": "Hey, have you caught the latest updates from the Track World Championships in Shanghai? Harrie Lavreysen added another world title to his record, and it's a great story to chat about.",
-        "energetic": "What an incredible finish to the Track World Championships! Harrie Lavreysen just secured his 23rd world title, and Great Britain dominated the final medal tally!",
-        "calm": "The Track World Championships wrapped up in Shanghai today with some notable milestones. Harrie Lavreysen extended his record to 23 world titles, while Great Britain finished atop the standings.",
-        "direct": "The 2026 Track World Championships finished today in Shanghai. Harrie Lavreysen took his 23rd world title, and Great Britain led the overall medal table."
+        "friendly": "Hey, did you happen to catch the inspiring football news from yesterday? It is a great story about patience and determination paying off on the field.",
+        "energetic": "What an incredible comeback story in top-flight football! James Maddison returned from a long injury layoff and immediately sparked a huge win for Tottenham!",
+        "calm": "An inspiring moment occurred in English football this week that is worth discussing. James Maddison returned after missing over a year of action to lead his team to victory.",
+        "direct": "Tottenham finally secured their first Premier League win of the season thanks to a major comeback performance. Let's look at how this result shifts their momentum."
       },
       "sources": [
         {
-          "title": "olympics.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG2j4OSM4XQ7GrdJTswHVw4eogMOXKIS7NLlWjWM2jaAs90skbgV8obSxFuEi7XE3mnXTJA7UnlD9e5nW5zU0I1Q_m9IpCm82yiJcXC0xCTXAHSAzZ540AEsZxbvZ2lkT8ZNz6AOiFDqbPMufkTHMB_KhdhGFHx1QtLCD1oRibPebFOS32IHOQ70ZV-CONJojI="
+          "title": "newsday.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFbq_11F9M9RogGtIqfxadJLR3lTGb8eh8rYKw91xJkTGVT7QfN_Z0sHLjHJKFXoxQhUyIbSok9pBUr2XysYmQ_-kBP93HExsOY0nfKQAHev-yRHfU-MGsRQlCfNn83TB539IUOfq_TRQhhh_lERtlOCDLytmYJWj3U7SZTXzP6eoX2cinEsQNvlBAUqkrttPvEhxI="
         }
       ]
     },
     {
-      "id": "2026-10-19-entertainment",
+      "id": "2026-10-20-entertainment",
       "category": "entertainment",
       "categoryLabel": "Entertainment",
-      "headline": "A24's Elizabeth Holmes Documentary 'You Can See Everything' Delivers Historic $15 Million Debut",
-      "summary": "Directed by Nathan Fielder and Lance Oppenheim, A24's Elizabeth Holmes documentary 'You Can See Everything' grossed an estimated $15 million across 855 North American theaters during its opening weekend. The film achieved the biggest domestic debut for a non-music documentary in over twenty years, propelled by more than 2,000 sold-out screenings.",
-      "question": "Why do you think real-life corporate scandals and controversial public figures continue to attract such large movie audiences?",
+      "headline": "Jon Stewart Extends 'The Daily Show' Hosting Deal Through 2028",
+      "summary": "Comedian Jon Stewart has signed a multi-year extension to remain host and executive producer of 'The Daily Show' through December 2028. Skydance Television announced the deal on Monday, ensuring he remains behind the anchor desk through the next United States presidential election cycle.",
+      "question": "Why do you think satirical news hosts often have such a strong influence on political discussions?",
       "coachLeads": {
-        "friendly": "Hey, have you heard about the surprising movie news making headlines today? A new documentary is taking theaters by storm.",
-        "energetic": "You won't believe what just happened at the box office! A three-hour documentary is breaking multi-decade records!",
-        "calm": "There's a fascinating box office story making news today. It might be a great topic for us to discuss together.",
-        "direct": "A new documentary about Elizabeth Holmes just scored a historic opening weekend. Let's talk about why this film is generating so much attention."
+        "friendly": "Hey, did you catch the latest TV news today? Jon Stewart is staying on 'The Daily Show' all the way through 2028!",
+        "energetic": "Huge news for late-night television fans today! Jon Stewart just locked in a deal to host 'The Daily Show' for two more years!",
+        "calm": "There was some notable television news announced today. Jon Stewart has agreed to keep hosting 'The Daily Show' through December 2028.",
+        "direct": "Jon Stewart just renewed his contract with 'The Daily Show' through 2028. Let's discuss why this host extension is a big deal."
       },
       "sources": [
         {
-          "title": "justjared.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFVoPYcT7e81jJSMG0YiaaqtJ8SETuHJGQb_U8xOTUOUK70qVNUI7qnoifTZDD3nDWcCi0CEgNhiUZaN_puyaBJJXXwr0EyVtF2V0VYse-81_gG3jlUOrR6LQLK8RfwTNc5aE3oYZ490GJdsRV9s4hPh1IH0MOBrw2nIaMoRHXvqnArvH5EcNBQBJztDi0ArhQWF9QVtG_nQg=="
-        },
-        {
-          "title": "therepublic.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQELSxMZP3pj0QDYYZbnFKvMUrFA4gzTkIEeKOr5Q0AGY-O5ktVCGBe2Ctg9mzIm-qdFGBiLi64fewBA-GXjgqUXbUuibC0yxNBs05A3dXzr145y-nx7-qdCF0l05nQ8oyX2wc9CmBINy4JTFSmMtGxc6itdebTVqEDrICPbQ8-K_DQr6D42tzSvemY7HEGUc08wnswHEeHn_zZv9XPHhdfalUWY7ImcjDvdXKAi9-mXeFOjPg=="
+          "title": "Google News: Entertainment",
+          "url": "https://news.google.com/search?q=Entertainment%20top%20news%202026-10-20&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     }
