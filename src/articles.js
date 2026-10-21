@@ -1,5 +1,14 @@
 export const articleCatalog = [
   {
+    slug: "real-estate-investment-byok-app",
+    source: "/articles/real-estate-investment-byok-app.md",
+    category: "個人開発・BYOK",
+    datePublished: "2026-10-21",
+    title: "不動産投資ツールは自作できる？サブスクを見直すAIアプリの実践例",
+    description: "物件管理、収支シミュレーション、Geminiへの相談をつなぐ自作アプリの実践例。画像からの物件登録や、Skill.mdで判断方針を共有する使い方を紹介します。",
+    image: "/images/articles/boso-real-estate/01-overview-v2.png",
+  },
+  {
     slug: "edo-1868-history-ai-game",
     source: "/articles/edo-1868-history-ai-game.md",
     category: "歴史ゲーム",

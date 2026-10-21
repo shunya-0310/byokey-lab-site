@@ -182,6 +182,7 @@ p { line-height: 1.85; }
 .article-body li { padding-left: 5px; line-height: 1.9; }
 .article-body li + li { margin-top: 8px; }
 .article-body strong { color: var(--ink); }
+.article-body .article-code { margin: 28px 0; padding: 24px; border: 1px solid var(--line); background: rgba(255, 255, 255, .75); white-space: pre-wrap; overflow-wrap: anywhere; font-size: .9rem; line-height: 1.9; }
 .article-body blockquote { margin: 48px 0 0; padding: 18px 20px; border-left: 3px solid var(--gold); background: var(--gold-soft); color: #5d512f; font-size: .88rem; line-height: 1.8; }
 .article-figure { margin: 42px 0 54px; padding: 10px; border: 1px solid var(--line); background: rgba(255, 255, 255, .85); box-shadow: 0 14px 38px rgba(14, 49, 31, .07); }
 .article-figure img { display: block; width: 100%; height: auto; border: 1px solid #e4dccb; }

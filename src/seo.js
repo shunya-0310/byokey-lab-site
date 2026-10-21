@@ -5,6 +5,18 @@ const logoImage = `${SITE_URL}/images/byokey-lab-logo.png`;
 
 export const seoRoutes = [
   {
+    path: "/articles/real-estate-investment-byok-app/",
+    title: "不動産投資ツールは自作できる？サブスクを見直すAIアプリの実践例",
+    description: "物件管理、収支シミュレーション、Geminiへの相談をつなぐ自作アプリの実践例。画像からの物件登録や、Skill.mdで判断方針を共有する使い方を紹介します。",
+    priority: "0.8",
+    changefreq: "monthly",
+    schemaType: "Article",
+    image: "/images/articles/boso-real-estate/01-overview-v2.png",
+    imageAlt: "物件一覧と収支試算画面からGeminiへの相談につなぐ流れ",
+    datePublished: "2026-10-21",
+    dateModified: "2026-10-21",
+  },
+  {
     path: "/",
     title: "BYOKey Lab | 自分のAPIキーで使うAIアプリ",
     description:

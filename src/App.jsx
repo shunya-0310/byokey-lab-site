@@ -823,7 +823,10 @@ function renderArticleInline(text, keyPrefix) {
 }
 
 function MarkdownArticle({ markdown }) {
-  const rawBlocks = markdown.replace(/^---[\s\S]*?---\s*/, "").trim().split(/\n\s*\n/);
+  const rawBlocks = markdown.replace(/^---[\s\S]*?---\s*/, "").trim()
+    .split(/(```[^\n]*\n[\s\S]*?\n```)/g)
+    .flatMap((part) => part.startsWith("```") ? [part] : part.split(/\n\s*\n/))
+    .filter((part) => part.trim());
   const blocks = rawBlocks.reduce((merged, block) => {
     const isBulletBlock = /^-\s+/.test(block.trim());
     const previousIsBulletBlock = merged.length > 0 && /^-\s+/.test(merged[merged.length - 1].trim());
@@ -834,6 +837,9 @@ function MarkdownArticle({ markdown }) {
 
   return blocks.map((block, index) => {
     const trimmed = block.trim();
+    const codeMatch = trimmed.match(/^```[^\n]*\n([\s\S]*?)\n```$/);
+    if (codeMatch) return <pre className="article-code" key={`code-${index}`}><code>{codeMatch[1]}</code></pre>;
+    if (/^\*[^*]+\*$/.test(trimmed)) return <p key={`caption-${index}`}><em>{trimmed.slice(1, -1)}</em></p>;
     const imageMatch = trimmed.match(/^!\[([^\]]*)\]\(([^\s)]+)\)$/);
     if (imageMatch) {
       return <figure className="article-figure" key={`image-${index}`}><img src={imageMatch[2]} alt={imageMatch[1]} loading="lazy" decoding="async" /></figure>;
@@ -1552,6 +1558,7 @@ export function App() {
 
   if (path.startsWith("/speak/english")) return <SpeakPage onNavigate={navigate} />;
   if (path.startsWith("/games/edo-1868")) return <Edo1868Page onNavigate={navigate} path={path} />;
+  if (path.startsWith("/articles/real-estate-investment-byok-app")) return <ArticlePage slug="real-estate-investment-byok-app" onNavigate={navigate} />;
   if (path.startsWith("/articles/edo-1868-history-ai-game")) return <ArticlePage slug="edo-1868-history-ai-game" onNavigate={navigate} />;
   if (path.startsWith("/articles/byokey-speak-api-english")) return <ArticlePage slug="byokey-speak-api-english" onNavigate={navigate} />;
   if (path.startsWith("/articles")) return <ArticleIndexPage onNavigate={navigate} />;
