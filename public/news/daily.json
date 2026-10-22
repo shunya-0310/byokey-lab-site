@@ -1,104 +1,96 @@
 {
   "schemaVersion": 1,
   "status": "live",
-  "date": "2026-10-21",
-  "generatedAt": "2026-10-20T23:52:54.611Z",
+  "date": "2026-10-22",
+  "generatedAt": "2026-10-22T00:00:13.557Z",
   "model": "gemini-3.6-flash",
   "fallbackCategories": [],
   "items": [
     {
-      "id": "2026-10-21-politics_economy",
+      "id": "2026-10-22-politics_economy",
       "category": "politics_economy",
       "categoryLabel": "Politics & Economy",
-      "headline": "Zelenskyy Meets U.S. Envoys in Oslo for High-Stakes Peace Talks",
-      "summary": "Ukrainian President Volodymyr Zelenskyy arrived in Oslo to hold talks with U.S. envoys and Nordic leaders regarding diplomatic options to end the war with Russia. The high-level summit comes amid rising diplomatic friction between Kyiv and Washington over military supply deliveries.",
-      "question": "How do you think holding high-level diplomatic talks in neutral foreign capitals impacts the chances of reaching a lasting peace agreement?",
+      "headline": "Putin Agrees to Resume Trilateral Peace Talks with Ukraine and U.S.",
+      "summary": "Russian President Vladimir Putin agreed in principle to resume trilateral peace negotiations with the United States and Ukraine after November 10 following a high-level meeting with a U.S. envoy. The diplomatic breakthrough also coincided with Russia releasing an American citizen who had been imprisoned for over four years.",
+      "question": "What factors do you think are most critical for diplomatic negotiations to successfully resolve international conflicts?",
       "coachLeads": {
-        "friendly": "Hey, have you heard about the new diplomatic talks happening in Oslo? It is a really interesting story to discuss today!",
-        "energetic": "There is a major diplomatic push taking place in Oslo right now! Let's jump into this top world story and talk about what it means.",
-        "calm": "A significant diplomatic summit is underway in Oslo today. Take a moment to review the main details, and we can share our thoughts.",
-        "direct": "Ukrainian leaders are meeting with U.S. envoys in Oslo for high-stakes peace discussions. Here is the key news story for us to talk through today."
+        "friendly": "Hey, have you heard about the latest diplomatic news regarding the war in Ukraine? It is a really timely topic to practice discussing global politics today.",
+        "energetic": "Check this out! Diplomatic peace talks between Russia, Ukraine, and the U.S. are set to resume next month, making this a fascinating story to dive into!",
+        "calm": "There is a notable diplomatic development on the world stage today. Russia has agreed to restart trilateral peace talks, making this worth reflecting on together.",
+        "direct": "Russia just agreed to resume three-way peace negotiations with the U.S. and Ukraine. Let's discuss what this move could mean for international relations."
       },
       "sources": [
         {
-          "title": "sana.sy",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFwzfhJ2qycXB9dz5evmDbd2k8ogm-2v4VHYfOITXWkupJiZTKC_ZhTv7drgbTa5NQTrT_e9edGbi70Eyw3s0m61agf34yUE18C-o068f_aq1TrpA24P08hYI0="
+          "title": "Google News: Politics & Economy",
+          "url": "https://news.google.com/search?q=Politics%20%26%20Economy%20top%20news%202026-10-22&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     },
     {
-      "id": "2026-10-21-technology",
+      "id": "2026-10-22-technology",
       "category": "technology",
       "categoryLabel": "Technology",
-      "headline": "Autonomous AI Agents Target Over 1,200 Corporate Websites in Automated Cyberattacks",
-      "summary": "Security researchers revealed that hackers recently used autonomous artificial intelligence software to target over 1,200 corporate websites, successfully breaching more than 100 organizations with minimal human guidance. The incident highlights growing concerns among cybersecurity experts as open-source AI tools are increasingly weaponized to conduct automated, large-scale cyberattacks.",
-      "question": "How do you think organizations should protect their systems as AI tools become capable of carrying out cyberattacks on their own?",
+      "headline": "AI Tools Uncover Critical Web Flaw Affecting Majority of Internet Systems",
+      "summary": "Cybersecurity researchers from OpenAI, Wiz, and Calif disclosed on October 21, 2026, that they used advanced AI models to identify a major vulnerability dubbed PHP2Shell. The disclosure marks a key moment in cybersecurity as artificial intelligence is actively leveraged to protect global web infrastructure before attackers exploit it.",
+      "question": "Do you think artificial intelligence will ultimately make our online data safer or more vulnerable?",
       "coachLeads": {
-        "friendly": "Hey, have you heard about the latest news on AI being used in cyberattacks? It is pretty surprising how autonomous these tools are becoming.",
-        "energetic": "Check this out! Security experts just caught autonomous AI agents attempting to breach over 1,200 websites automatically.",
-        "calm": "There is an important cybersecurity update today regarding autonomous AI agents used in recent website breaches. Let's take a look at what happened.",
-        "direct": "Hackers recently used autonomous AI tools to attack more than 1,200 company websites. Tell me what you think about this development."
+        "friendly": "Hey, have you heard about this new breakthrough in online security? It's amazing how AI is being used to protect the web.",
+        "energetic": "This is huge news for the tech world! AI just helped researchers discover a massive internet flaw before bad actors could exploit it.",
+        "calm": "This story is worth reflecting on today. It shows how AI tools can be used to strengthen global security.",
+        "direct": "Let me fill you in on today's top tech story. AI was just used to locate a major web vulnerability."
       },
       "sources": [
         {
-          "title": "Google News: Technology",
-          "url": "https://news.google.com/search?q=Technology%20top%20news%202026-10-21&hl=en-US&gl=US&ceid=US:en"
+          "title": "cnn.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH1Pd1Wk_d_MAKGGtIL6NNvP7MdjBEBUEkmrMVnHK2QirzNVpLfeMqGHMvvIMexxU-EATkOgWpYSFk7kIA8kDCDNiKaZEpkDKhEm89-XcdFKT6dqq5QGFiIa5QGGA57LRXTxOA4n131-Njs_uabK95iAHAjAA=="
         }
       ]
     },
     {
-      "id": "2026-10-21-sports",
+      "id": "2026-10-22-sports",
       "category": "sports",
       "categoryLabel": "Sports",
-      "headline": "PSG Defeats Barcelona 4-2 in Thrilling Champions League Clash",
-      "summary": "Defending European champions Paris Saint-Germain defeated Barcelona 4-2 in an action-packed UEFA Champions League match on Tuesday. Late second-half strikes from Vitinha and Fabián Ruiz secured the win for the French side, preserving their perfect start to the tournament's league phase.",
-      "question": "What factors do you think make high-stakes matches between elite football clubs so thrilling to watch?",
+      "headline": "Bayern Munich and Arsenal Play to 2-2 Champions League Draw",
+      "summary": "On October 21, 2026, Bayern Munich and Arsenal played to a 2-2 draw in matchday three of the UEFA Champions League league phase. Harry Kane scored in his tenth consecutive Champions League match before Declan Rice netted an 82nd-minute equalizer for the visiting English club.",
+      "question": "Do you think Harry Kane will continue his scoring streak and break Cristiano Ronaldo's record for consecutive Champions League games with a goal?",
       "coachLeads": {
-        "friendly": "Hey, did you get a chance to see the big football highlights from yesterday? PSG and Barcelona put on quite a show.",
-        "energetic": "What an incredible six-goal thriller in Paris last night! You've got to check out how that Champions League match went down.",
-        "calm": "If you follow European football, yesterday's Champions League match between PSG and Barcelona was certainly noteworthy.",
-        "direct": "Paris Saint-Germain beat Barcelona 4-2 in the Champions League yesterday. Let's discuss what this result means for both teams."
+        "friendly": "Hey, did you catch the big Champions League match yesterday? It was an exciting back-and-forth game between Bayern Munich and Arsenal!",
+        "energetic": "What an unbelievable match in Europe yesterday! Harry Kane and Declan Rice both delivered huge moments on the big stage!",
+        "calm": "Yesterday's Champions League clash between Bayern Munich and Arsenal ended in a hard-fought two-two draw. It is definitely a result worth talking about.",
+        "direct": "Bayern Munich and Arsenal drew two-two in the Champions League yesterday. Let's discuss Harry Kane's goal-scoring run and how the match unfolded."
       },
       "sources": [
         {
-          "title": "beinsports.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF4P_TEtEziFJ0SmSY-Z2ndfbt8XppgKTbx7NA17E2kh2nH6lI6B28gqIHYyQsCmx-rT1WT0ckeoHiXnM8LTx8Og3qdVida6GnlOcVeOnwurM0KeKFIRN3qBB-nIxSUDQ7rX8W8LaNQ0Mmv2dqUa3zZdjaiJgRGjI8b-8HEZAsMl31oI5AA9ZkgM2Ui7MNQxzbiP8oL0ZYhr58Z1lq8gogGWfg7NU4jrY86EHv0WvowlbU9iYVvyBPRaembUCMWeWbte3g_jupvL5Q="
-        },
-        {
-          "title": "nbcsports.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHHDOyYFjlvVUCdA4x86qSKpu1NEdI7b92NBNHYX0dNwC-H-Z7sLYoioFBghgdIpGlmGEhi8SihSPoCZ7x4aIMwkDBpz3h_9_Sa_vw9iMzq9NrSHF8eyHRslo06n9o-9Ob_a-BSJO67ggwfdJwa54LeVRf8s-_DRvDgz7znLa-6Fzg9BF6oadh4neRGbHrV6I1Z6WDv56OvXxMnIgCpH4Eg6zqt_lhwPa0SLCRHVhtm2_Ocqv9E448o"
-        },
-        {
-          "title": "uefa.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHVUFRk9khWp6ippLMiPFH2sTlf5pKe3wGJwhcw8FhpVHMbW-llG7IsRxp_hCwZepz84gUG-ZqOmuUGxutPQo2EmJvYkCeQ7ZIXXkdGtTr6tdQ4Dag9JyvQIQq_2NELjB9QhpNnqmW-LOnJNxDAY3yZN8VFOToDJMyiZQsnQuN6nNJNqlqcATc6A2l6zfh9bZLAp9wS5vgp1UCjPfDLOBLX9Cy_LjBlPXtFUYfaY5ZKcYVY6P6SURvRRmzdmiupfb6dT-sM47JM"
+          "title": "Google News: Sports",
+          "url": "https://news.google.com/search?q=Sports%20top%20news%202026-10-22&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     },
     {
-      "id": "2026-10-21-entertainment",
+      "id": "2026-10-22-entertainment",
       "category": "entertainment",
       "categoryLabel": "Entertainment",
-      "headline": "Spotify Filters 50 Million AI-Generated Tracks from User Recommendations",
-      "summary": "On October 20, 2026, Spotify announced it has filtered over 50 million AI-generated tracks out of its user recommendation systems to prioritize songs created by human artists. The streaming service also confirmed it has removed more than 75 million spammy tracks from its catalog entirely for repeated policy violations.",
-      "question": "How do you feel about AI-generated music, and should streaming platforms do more to highlight human-created songs?",
+      "headline": "Tom Cruise Named Recipient of 52nd AFI Life Achievement Award",
+      "summary": "The American Film Institute announced on Wednesday that Tom Cruise will receive its 52nd Life Achievement Award at a gala tribute in Los Angeles in April 2027. The prestigious honor recognizes Cruise's four-decade career as an actor and producer whose films have earned nearly $13 billion worldwide.",
+      "question": "Which Tom Cruise movie is your favorite, and do you feel his career deserves Hollywood's top honor?",
       "coachLeads": {
-        "friendly": "Hey, have you heard about Spotify's latest effort to clean up AI-generated music? It's a really interesting topic to chat about!",
-        "energetic": "Spotify just made a huge announcement about blocking millions of AI tracks! Let's jump right into what this means for music listeners.",
-        "calm": "Spotify recently shared an update on how it handles AI-generated songs on its platform. I'd love to hear your thoughts on how technology is affecting music.",
-        "direct": "Spotify has filtered millions of AI-generated tracks out of its recommendation systems. What's your take on AI songs on streaming services?"
+        "friendly": "Hey there! Did you hear that Tom Cruise was just chosen for a major lifetime achievement award?",
+        "energetic": "Big news out of Hollywood today! Tom Cruise is receiving the American Film Institute's highest honor for his legendary movie career!",
+        "calm": "The American Film Institute announced a major honor for Tom Cruise today. Let's talk about his impressive film legacy.",
+        "direct": "Tom Cruise has been named the recipient of the 52nd AFI Life Achievement Award. Here is a quick breakdown of the news."
       },
       "sources": [
         {
-          "title": "spotify.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGF-YKZRJtRP9-brFtDIsev2z9jfj1GWAtYl2lXZczGdjOek8fQvPOucUFznSppsLOas3z_1kgtTaiOkC7ALXTxUJsyN55GYjCApwqSeQTGqgpDJVZasFaOsESshz3Y-bXq3RckxAy0cT0hQ9OzUrH2xnK0I5SxFUU1XQ=="
+          "title": "laist.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFrjyLx0rp4wBLhvR2ZGm4pERcX-qqAyTn02SKIvymHqjejqzRVli7QaVkFVWhaBj4v2itjamPE5OTNR3GEpN4dWPz_DATnnAE8k9Ljg-6Be6Pv0qoA_1skab1-sGiOIfIc0bZf3Gdzz32n6RQUyvp8M0pBe6HhnOfwIxHPcCmm8PZBKcWvI8UUboD_jUY-SfJV7p3uvPuAWr_L3nGrLr71v2m_W1y7XCXfD9yyXciSljlv-8rylT4C"
         },
         {
-          "title": "gizmodo.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFgZC9X-D8xeB6_ze3RfrnXSa5JMmhqsp25140cAAh5SYJv5gdTS61fD2s9hhrhwe857pzEQYOA11hGhYpYh3fEY8KWM_AGoS5mjhRVamPDBU_fO6S5t4EiEcqXkFuTwXYEHihouC29Ydw8DURnN27qG_4bpaaFmlL5-i5H2UGD16QdSIj9Dkklltd2xyX_UdjaXza_hb8NpKdvARv9bUtWPUz8VA=="
+          "title": "screendaily.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHc9EHupf4Odv5QGnUA520UrEdcYnF47PLlrcGuTmGg18IooG_BqmhQ145OH_4myvrLM53aepwj6qnGsCKKKxue3nBf3y6hyonlYP7ofjFpXtpaxXqAw6NRSG7puNoXJ2N0QdjBl8Edlvp9uVcrKWm8KsgQs26aXtk1bM1FEqPDKdGRsIdK0g2HsdPxyxBk5wHf2hHrL9yrRMVkp_M="
         },
         {
-          "title": "rollingstone.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGUkyjulBsMy1iPF5xyJLtkpwuUQEVNDrTAhMsRqJNZrpU87dI8cVIJb6NQNC5Xh0o6sKwjxPKlqMWEurP87Vb2pWLVEcjAsb6aNAr69QhBvV6P36GqMprHoRix_X0BNX0DzzbCtNJ6ZXoNj_dL26hda8Xovok8_veBiMA1-59vUaiHQptxjowXCupb8un4vCs="
+          "title": "mynewsla.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHLVfnTPo1qk66cBwRJlCN8AlJpN-Lgm7-pQZRZFry31kKZNDGM_lPQeJfcIaCua5eLOG7XHA7sGq5BHdKNHs6FnWJoyxPKFClmGNn6VT0_55aNocxmNrgR4jqEPiTgX760SRh82nHqp9pQaYmXa0KboMqPrICXPTxZoG_b4MRDvDUfQjk_CIgjOxi6_O6e6PVnlWSs1krJ_aX8CA=="
         }
       ]
     }
