@@ -1,100 +1,88 @@
 {
   "schemaVersion": 1,
   "status": "live",
-  "date": "2026-10-23",
-  "generatedAt": "2026-10-22T23:59:02.938Z",
+  "date": "2026-10-24",
+  "generatedAt": "2026-10-23T23:51:22.332Z",
   "model": "gemini-3.6-flash",
   "fallbackCategories": [],
   "items": [
     {
-      "id": "2026-10-23-politics_economy",
+      "id": "2026-10-24-politics_economy",
       "category": "politics_economy",
       "categoryLabel": "Politics & Economy",
-      "headline": "U.S. Orders Non-Essential Diplomatic Staff to Evacuate Saudi Arabia Amid Regional Attacks",
-      "summary": "The U.S. State Department has ordered non-essential diplomatic staff and their family members to leave Saudi Arabia following recent drone and missile strikes targeting civilian airports and critical infrastructure. The mandatory departure highlights mounting security risks in the Middle East that are disrupting international travel, diplomatic operations, and global energy markets.",
-      "question": "How do you think escalating tensions in key energy-producing regions influence international politics and daily life?",
+      "headline": "Russia and Ukraine Agree to Local Ceasefire in Oleshky for Humanitarian Relief",
+      "summary": "Russia and Ukraine have agreed to a temporary localized ceasefire in the Russian-occupied city of Oleshky to allow humanitarian aid deliveries and civilian evacuations. The pause in military action comes as thousands of residents face severe shortages of essential supplies, marking a rare diplomatic agreement amid ongoing conflict.",
+      "question": "What role do you think international pressure plays in securing localized humanitarian agreements during prolonged conflicts?",
       "coachLeads": {
-        "friendly": "Hey, have you heard about the big diplomatic news coming out of the Middle East today? This is definitely worth talking about.",
-        "energetic": "Check out this major news story! The U.S. is pulling non-essential diplomatic staff from Saudi Arabia, and it's making headlines worldwide.",
-        "calm": "There's an important diplomatic situation unfolding in the Middle East right now. Let's take a look at what's happening and discuss its global impact.",
-        "direct": "The U.S. State Department ordered non-essential personnel to leave Saudi Arabia amid escalating regional threats. Let's discuss what this development means."
+        "friendly": "Hey, have you heard about the new local ceasefire agreement in Ukraine? It is a really significant story worth chatting about today.",
+        "energetic": "Check out this breaking diplomatic update! A local ceasefire was just agreed upon to deliver urgent relief, and I would love to hear your thoughts on it.",
+        "calm": "There is a notable humanitarian update today regarding a temporary ceasefire in Oleshky. Let's take a moment to discuss what this means.",
+        "direct": "Russia and Ukraine agreed to a local truce for humanitarian aid today. Take a look at the summary and tell me your initial thoughts."
       },
       "sources": [
         {
-          "title": "nhandan.vn",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFIZnTdIxFc2EEcJ2i0EK5Qgvg1WbRUtg63WnDOP_9V1yz3sLItrX3fZJQx_6RV0-BzqaltClr_7XtxBdPmJL0uKdvyq41IBf2ST9jmKhlmvTCimXxa09uPQrbml8TzLmvh6wQL9I_QLansUnKIj5Czo-TCoM0HjIclnA=="
-        },
-        {
-          "title": "taipeitimes.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEjw_OfD5iZ6lFEfbqTjPxCv9lk1zVH4u1DWhlbSLzQ3VU65yK0k2JZGphb8HJOs6pNk0guq9DttIn8xk3_eG7MWFxxtuCQ3XkN6EUlIVtUdRbIXR4V57zFR8EHHUSNNTCA1WWs5JHrAyfomyqeCEMw8E5k1JQDDGLWXCo="
-        },
-        {
-          "title": "411mania.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFlo1qYuU0IAIFPM8hoYIi9wKsP8ZjkYBKWLVyZK9vBdilz4EXDJRzpUkY19cr1l-3Uk22gud4syQifKJq7F-_boC38R_jOt1kru1Z44zmcIer-oxBwas4-DNLGwgvwKVsxalAwE3V5x8aximHEsDAWTUoLvci2foF-wGkG6VE6b8q4jBi0Gos="
+          "title": "Google News: Politics & Economy",
+          "url": "https://news.google.com/search?q=Politics%20%26%20Economy%20top%20news%202026-10-24&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     },
     {
-      "id": "2026-10-23-technology",
+      "id": "2026-10-24-technology",
       "category": "technology",
       "categoryLabel": "Technology",
-      "headline": "U.S. Proposes Limits on Foreign High-Tech Investments",
-      "summary": "On October 22, 2026, the U.S. Department of the Treasury proposed new restrictions targeting American investments in critical technology sectors across foreign adversary nations. The rule aims to limit capital flow into foreign artificial intelligence, supercomputing, and hypersonic systems over national security concerns.",
-      "question": "How do you think government restrictions on international tech investments might impact the global pace of artificial intelligence development?",
+      "headline": "Cybersecurity Experts Warn of 'Black October' After AI Discovers Major Web Vulnerability",
+      "summary": "Cybersecurity leaders and the NSA issued urgent advisories after AI tools uncovered critical, long-standing flaws in PHP, a programming language powering over 70 percent of the web. Dubbed 'Black October,' the incident has sparked widespread alarm that AI-driven bug discovery could soon outpace defenders' ability to patch vulnerable software.",
+      "question": "How do you think companies and governments should balance using AI for threat detection against the risk of hackers using it to exploit bugs?",
       "coachLeads": {
-        "friendly": "Hey, have you heard about the latest tech policy news today? The U.S. just proposed new rules on international tech investments that are making big headlines!",
-        "energetic": "There's a massive shift happening in global tech regulation today! The U.S. Treasury is cracking down on foreign investments in AI and supercomputing!",
-        "calm": "A significant policy update dropped today regarding high-tech investments. The U.S. is proposing tighter limits on funding foreign advanced technologies.",
-        "direct": "The U.S. Treasury announced new rules today restricting high-tech investments in foreign adversaries. This is definitely worth talking about."
+        "friendly": "Hey, have you heard about the recent 'Black October' cybersecurity warnings? It's a really fascinating story about how AI is changing digital safety.",
+        "energetic": "Check this out! AI just uncovered hidden security flaws across millions of websites, and tech leaders are sounding the alarm!",
+        "calm": "A major cybersecurity alert was raised recently after AI identified long-standing code vulnerabilities across the web. Let's chat about what this means when you're ready.",
+        "direct": "Tech executives are warning of a 'vulnerability tsunami' after AI exposed flaws in widespread web code. Let's jump into what this development implies for future security."
       },
       "sources": [
         {
           "title": "Google News: Technology",
-          "url": "https://news.google.com/search?q=Technology%20top%20news%202026-10-23&hl=en-US&gl=US&ceid=US:en"
+          "url": "https://news.google.com/search?q=Technology%20top%20news%202026-10-24&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     },
     {
-      "id": "2026-10-23-sports",
+      "id": "2026-10-24-sports",
       "category": "sports",
       "categoryLabel": "Sports",
-      "headline": "2026 World Series Begins as Brewers and Rays Battle for First Franchise Titles",
-      "summary": "The 2026 Major League Baseball World Series opens on October 23 at American Family Field, featuring a Game 1 matchup between the Milwaukee Brewers and the Tampa Bay Rays. Because neither organization has ever won a Fall Classic, this championship series is guaranteed to crown a first-time champion.",
-      "question": "Which team do you usually root for when two franchises chase their first-ever championship?",
+      "headline": "American Gymnast Skye Blakely Wins World All-Around Gold in Rotterdam",
+      "summary": "American gymnast Skye Blakely won the women's all-around gold medal at the 2026 World Artistic Gymnastics Championships in Rotterdam on Friday. The 21-year-old posted a total score of 55.733 points across four routines to capture her first individual world title after overcoming severe injuries that had sidelined her from previous Olympic trials.",
+      "question": "What do you think gives athletes the mental toughness to keep competing after experiencing major physical setbacks?",
       "coachLeads": {
-        "friendly": "Hey there! Are you excited for the World Series starting today?",
-        "energetic": "This World Series matchup is going to be amazing with both teams chasing their very first title!",
-        "calm": "A historic World Series begins today, and it is definitely worth following.",
-        "direct": "The World Series starts today as two franchises compete for their first championship."
+        "friendly": "Hey, have you heard about Skye Blakely's huge gymnastics victory today? It is such a moving story about perseverance and overcoming adversity.",
+        "energetic": "Check out this amazing comeback! Skye Blakely just won world championship gold in gymnastics after battling back from career-threatening injuries!",
+        "calm": "Take a moment to look at Skye Blakely's impressive achievement today. Her patience and determination through tough injuries really paid off.",
+        "direct": "Skye Blakely won the world all-around gymnastics title today in Rotterdam. Her remarkable journey back to the top is definitely worth discussing."
       },
       "sources": [
         {
           "title": "Google News: Sports",
-          "url": "https://news.google.com/search?q=Sports%20top%20news%202026-10-23&hl=en-US&gl=US&ceid=US:en"
+          "url": "https://news.google.com/search?q=Sports%20top%20news%202026-10-24&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     },
     {
-      "id": "2026-10-23-entertainment",
+      "id": "2026-10-24-entertainment",
       "category": "entertainment",
       "categoryLabel": "Entertainment",
-      "headline": "Emmy-Winning Actor Tom Skerritt Dies at Age 93",
-      "summary": "Emmy-winning actor Tom Skerritt, celebrated for his roles in iconic films such as Top Gun and Alien, has died at the age of 93. His family announced on October 22 that the Hollywood veteran passed away from natural causes.",
-      "question": "Which of Tom Skerritt's classic movie or television roles do you remember most, and what made his screen presence so memorable?",
+      "headline": "Netflix Appoints Former Disney Executive Peter Rice as Chief Content Officer",
+      "summary": "Netflix has appointed former Disney executive Peter Rice as its new Chief Content Officer, replacing long-standing content chief Bela Bajaria. The executive shakeup follows workforce layoffs and subscriber growth challenges as the streaming giant re-evaluates its film and television strategy.",
+      "question": "How do you think leadership changes at major streaming platforms might influence the types of movies and shows we see in the future?",
       "coachLeads": {
-        "friendly": "Hey, did you catch the news about veteran actor Tom Skerritt? He was such a memorable figure in cinema history.",
-        "energetic": "Check this out—we're honoring legendary actor Tom Skerritt today! What an incredible and long Hollywood career he built.",
-        "calm": "News was released today that acclaimed actor Tom Skerritt has passed away at age 93. It's a meaningful opportunity to reflect on his classic films.",
-        "direct": "Actor Tom Skerritt has passed away at age 93. Let me know which of his iconic roles meant the most to you."
+        "friendly": "Hey there! Have you heard about the big executive change happening at Netflix?",
+        "energetic": "Check this out! There's a major shakeup happening at Netflix right now that could change what we watch next!",
+        "calm": "There is a notable shift in entertainment industry leadership worth discussing today.",
+        "direct": "Netflix just replaced its content chief, and it might signal a big shift in their streaming strategy."
       },
       "sources": [
         {
-          "title": "cbsnews.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEb4-JcThNruB69b8iagJoyhwCle0S86MCJt17YVF6yutiGdpUIPrzxC5q0jP0wAdGk26swQa49suoh4l29cLZzQa_hpbw-t6UF5csQf3rv6akYIQv0aQXthITcOT1jKg-qP5ZUmcBtCIzdMWsn15TD1xVuXH3Ng-_qtWLe5npv--SWJ-7fAPeb"
-        },
-        {
-          "title": "mensjournal.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEXWzKs2MB7l4Yt_4xo230ArugGZ81EDUNN-rOCHLdhP3Rp0b67oUHbeYauMugIGKvkymUrUNf8mkO0-3iZX8IseNoyf3VOrSm9Xxp4xbf4J_Oid9nVmK54pe0odMVbR6hkWOnlKiHG_xXNOMTtfP6Zlj5l98reG8v9j2sXhbrJOnZ_pEil_AX3ANt4Fsfsqv6yqz8GTPNOf0NeAkkwc_ElgBwWnWUuD2U="
+          "title": "Google News: Entertainment",
+          "url": "https://news.google.com/search?q=Entertainment%20top%20news%202026-10-24&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     }
