@@ -1,104 +1,112 @@
 {
   "schemaVersion": 1,
   "status": "live",
-  "date": "2026-10-25",
-  "generatedAt": "2026-10-24T23:15:01.681Z",
+  "date": "2026-10-26",
+  "generatedAt": "2026-10-25T23:16:32.080Z",
   "model": "gemini-3.6-flash",
   "fallbackCategories": [],
   "items": [
     {
-      "id": "2026-10-25-politics_economy",
+      "id": "2026-10-26-politics_economy",
       "category": "politics_economy",
       "categoryLabel": "Politics & Economy",
-      "headline": "Over 400,000 Rally Across France in Mass Protests Over Soaring Living Costs",
-      "summary": "More than 400,000 people marched across France on October 24 to protest rising living costs and public service funding, presenting a fresh political challenge to President Emmanuel Macron. The nationwide union-led demonstrations triggered heavy security deployments and ended in clashes that led to nearly 1,000 arrests.",
-      "question": "How do you think governments should balance economic reform with public concerns over rising living costs?",
+      "headline": "Serbian President Concedes Defeat to Student Movement in Historic Election",
+      "summary": "Serbian President Aleksandar Vučić conceded defeat on Sunday after preliminary election results showed a student-led movement winning a parliamentary majority. The vote marks a major political shift in the Balkan nation following years of widespread anti-government protests against his twelve-year rule.",
+      "question": "What role do you think young voters and student movements should play in shaping a country's government?",
       "coachLeads": {
-        "friendly": "Hey, have you heard about the massive protests happening across France right now? It is a huge story about how inflation is impacting people's daily lives.",
-        "energetic": "Check out this major story from Europe today! Over 400,000 people took to the streets across France to demand policy changes on public spending and inflation.",
-        "calm": "There is a significant report today on public discontent in France. It provides a good opportunity to discuss how living costs shape modern economic policy.",
-        "direct": "Hundreds of thousands of citizens just protested across France over rising living costs and government spending. Let's talk about what this means for European politics."
+        "friendly": "Hey there! Have you heard about the historic election result that just happened in Serbia?",
+        "energetic": "This is a massive story! A student-led movement just won a landmark election in Serbia!",
+        "calm": "A major political shift unfolded in Serbia over the weekend, and it is definitely worth discussing.",
+        "direct": "Serbia's long-serving president has conceded defeat to a student-led coalition. Let's break down what happened."
       },
       "sources": [
         {
-          "title": "Google News: Politics & Economy",
-          "url": "https://news.google.com/search?q=Politics%20%26%20Economy%20top%20news%202026-10-25&hl=en-US&gl=US&ceid=US:en"
+          "title": "pbs.org",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEgqIivk7Ume3ugfZuKDNNDjdlRvTKGQtDi5nZRnwwjEVWsowOBYTDoMg9rPktrG_1hq80xZ1_whrxNCvx8nIg6Wj7ObndbYtd9qoAihEujS55oVw=="
+        },
+        {
+          "title": "theguardian.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE448wnzXNT9KxyfXZiwn5oBAuxncOK-dozGzBAcL-Ia749sxyKNYApv8jh6fpByLyq1gND_2v_TRPTLOK79ihTiZS374YNJqtvDteARa0kPlQ7Du9TuSrJcouaiM_oTWxcmmKOdJIwM5sk96Grz7nv2irOR__Jh1OxmUwn0vNVSMrwCo9-flL9cvqKPdoYwrwTp0uYPHQHimTlop7oqfFz7TU9koVJbofO6dFmcRF88wqSyQmPnoUQETflKLoJyUvb"
         }
       ]
     },
     {
-      "id": "2026-10-25-technology",
+      "id": "2026-10-26-technology",
       "category": "technology",
       "categoryLabel": "Technology",
-      "headline": "AI-Discovered Security Flaws in PHP Trigger Global Web Infrastructure Emergency",
-      "summary": "Security agencies worldwide issued urgent advisories after artificial intelligence tools uncovered critical vulnerabilities in PHP, a programming language that powers roughly 70 percent of websites. The disclosure triggered millions of automated exploitation attempts, forcing governments and tech companies to rapidly issue emergency patches and temporarily take vulnerable systems offline.",
-      "question": "How do you think society should handle the risk of AI systems finding software vulnerabilities before human programmers can fix them?",
+      "headline": "Elvis Presley Estate Sues AI Firm Anthropic Over Song Copyrights",
+      "summary": "The owners of Elvis Presley's music catalog filed a federal lawsuit against AI startup Anthropic, alleging the company trained its Claude model on 274 of the singer's copyrighted songs without permission. Seeking over $41 million in damages, the high-profile case marks one of the first major legal challenges brought directly by an iconic artist's estate against an AI developer.",
+      "question": "Do you think AI companies should be required to obtain permission and pay royalties before training their models on copyrighted music?",
       "coachLeads": {
-        "friendly": "Hey, have you caught the news about this major online security alert? It's a fascinating topic to discuss together!",
-        "energetic": "You won't believe what's happening with global cybersecurity right now! Let's dive straight into this huge tech story!",
-        "calm": "Take a moment to check out this major news story about web security and AI. It gives us plenty of interesting ideas to reflect on.",
-        "direct": "Artificial intelligence just exposed a major web vulnerability affecting millions of sites. Let's analyze what happened and why it matters."
+        "friendly": "Hey, have you heard about this new legal fight between Elvis Presley's estate and an AI company?",
+        "energetic": "Check this out—the King of Rock and Roll's music catalog is at the center of a massive new AI lawsuit!",
+        "calm": "Here is an important development in AI policy and copyright law to keep an eye on.",
+        "direct": "Let's discuss a major copyright lawsuit just filed against AI company Anthropic over unauthorized music training."
       },
       "sources": [
         {
-          "title": "exchange4media.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHlwwlGGPA3Oz70P_fbbMYmYV4T74JDn21VVdj4-iWlSaFW9R6stkKjszZkeuODB5GUtcMMNAQF-q0KF7iM16w4vII28iOC9CXmxR-DE5hCuQ7OLWDWDZvTBkgJCYnwxcUAWMv9fIOjjXkWb4k0Ail9V_ELxasSxz70ZTuvFQXFmHZYS0cxn-N3nDxIw8EREKSx1ZrQmwqvGAvIBlWebQjh6mRnGU1tnCAZv0OheukUxfYuybQVxgR3nOoQBs8bO_7Tzw=="
+          "title": "theguardian.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEl73CV3bSmxh6wD4HaidHYqp4_FrO2w8sejTreVu0BQKSUH5Cjv4SBYVkwWmnV468I89UP9THgzAkd2vw0fz7fXQTTI8f3k3sETX9jlmmi9AVhv1OieSB9QDkEbOHAXpJ8qT0l28o5UY00uFPM2ZefbAvZOVoWwQIPhMj8wYnslHD1ItYT68d0BrQXZM7BSnMLQ-jRnQ=="
         },
         {
-          "title": "cnn.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH2q7-NuZE1CTbzrVnVHke_NVfQqAXbIoIwAyNiEMBuqAXS7Mhi9yduxeSAn5eQoFkEG-oGYk7MGPuwfsDtbno3vorlo1kZcqqO_aVLawkPlwJISldg0CWXLSpGJH9hhyVoIIfPZMklc2JMrTlcxzcHU2MFbbNgyx9f"
+          "title": "mubert.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHH4ZazLmvKsdhmEzEyM3mHNtbeWndXsfG6CEFRiRC5OUkLl22Eqzp1BAtA_OzD86RL-iSA8aUs3XJtobcxxb51wetmiFpIbk804dwO4h0s5b2zDliVfdxz67quaOrAkAykUpZKerHIFpMCI8gAflA="
         },
         {
-          "title": "kgou.org",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHX10wLsOciq3Q282pBUqSWd_2biAFXUaYB3jqSyCgugHKVpDqQoK8FjXwXiCOixG_mLVcdmtMD5Ut_-kwIOemfuWX_5hoCCqvqsMID5pWMyPKANt_E8Nvh4zycJ-NFCQd1RGPAxa-TC1v4pL09-78_N6IaQ1W3WIM_D1oLpk4BiPI6rBh9zE5EAeiEOKQkZG5he9dpdN2v6kcZSHT4rlyWTU-VxQxHC1hBNlFlHf-dqvML4nxhphoAE__68yjr0NnnQSU_ag=="
+          "title": "pastemagazine.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGXvuVmO7wfvSPGGpwqjFO1uWdmAqAu1HIbO9opD6YRvLNvaHG36HDxrsOnmqvj4Ojyz3sQp4Nccnxk3RlHQxw3ZiTr1PXaiDMWVtvjRGyQITLssdW2nwDa9nJhoav-Z1GGRgKh7EV7zqwz3Cge40q88tGx0Uee3LcRYxA4OhL6tp-lgcswfVxmO0hE8zFsgxw1nSL1GOqiCqEq0E6SGFUCfn2R8Ki7pxIbyAz14A=="
         }
       ]
     },
     {
-      "id": "2026-10-25-sports",
+      "id": "2026-10-26-sports",
       "category": "sports",
       "categoryLabel": "Sports",
-      "headline": "Golden State Valkyries Beat Atlanta Dream in Game 4 to Even WNBA Finals",
-      "summary": "The Golden State Valkyries defeated the Atlanta Dream 67-62 on Saturday to level the WNBA Finals at 2-2. Gabby Williams scored 17 points and center Kiah Stokes set a WNBA Finals record for blocks to help Golden State push the best-of-seven championship series to Game 5.",
-      "question": "How do you think strong team defense and tactical adjustments can alter the momentum of a championship series?",
+      "headline": "Kylian Mbappé Scores Late Winner as Real Madrid Beats Barcelona in El Clásico",
+      "summary": "Real Madrid defeated arch-rivals Barcelona 2–1 at Camp Nou on Sunday in the first El Clásico match of the season. Kylian Mbappé scored twice, including an 87th-minute winning goal, handing Barcelona their first domestic league defeat of the campaign.",
+      "question": "What do you think makes rivalries like El Clásico so exciting for football fans around the world?",
       "coachLeads": {
-        "friendly": "Hey, have you caught the latest action from the WNBA Finals? It looks like we have an exciting tied series after Saturday's big game!",
-        "energetic": "What a thrilling battle in the WNBA Finals! Golden State just snatched a huge road victory to level the series at two wins apiece!",
-        "calm": "The WNBA Finals have taken an interesting turn with Golden State evening the series. It is a great moment to discuss how strong defense can decide a title.",
-        "direct": "Golden State evened the WNBA Finals at 2-2 with a 67-62 victory over Atlanta on Saturday. Let's break down what made the difference in Game 4."
+        "friendly": "Hey! Did you catch the big match between Real Madrid and Barcelona yesterday?",
+        "energetic": "What an unbelievable finish in El Clásico yesterday! Mbappé scored in the final minutes to pull off a huge victory!",
+        "calm": "Real Madrid secured a crucial win over Barcelona this weekend. It was a hard-fought match decided late in the game.",
+        "direct": "Real Madrid defeated Barcelona 2–1 yesterday behind a two-goal performance from Kylian Mbappé. Let's talk about what happened."
       },
       "sources": [
         {
-          "title": "Google News: Sports",
-          "url": "https://news.google.com/search?q=Sports%20top%20news%202026-10-25&hl=en-US&gl=US&ceid=US:en"
+          "title": "aljazeera.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHRGUE2ndpqhKKIPwlKfQyjt5FV2TqNurQ_KTyehLPKSzz3hgCD63uKy8MZl3Z50B-cV8nKvQD2I-T_XIO2YrTHk099NFk7sEk65EDvBnD_H9bJIj4J3zSBClX-WJerzQnKx3NNSjRIA1gTiF4MIvP-eotGCdNSVHJH4rAsSBuQXM_uFDbUUx89mCBBJsi1_WjCU8j4pEFTAmiKoA=="
+        },
+        {
+          "title": "ndtv.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE-MBOzAmf5HE04Ij-R48OirSfWg_4-_IReCueaQZoorEvfPKfWYNt4ZA5OXze4hw8qBj5_PaFp5zMsQK_rzpdeB2LyrMM05qgEcuJiB9YUqlXfev9UMyWopWiXclIOto3WmcWc3zYHihb8y8sMCCOoh7N4KmHzFwg7J4i3Hc7yp3qfxFXbd5grzusHAUHygURRfyFB5MXDrClf7rjWlStZ-ZmCjiy8MnG37SU_5L8w-itdIosb8JfvXCv1Uk5UZvtKTpuGUCb2vk0N4JpOcz5KKS09sORWfyHwfh-EJRmN8Q=="
+        },
+        {
+          "title": "independent.co.uk",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEi43x353U3r-SwOOiEQ9z1SAH3NzpnuNDj9iJ6jszq2eM_nrOpOkTkAXzb_B0Epn9-K1Lgn-mbU8kyodkb3VYSM66C5AJMGrlX7KGq4XCdrigLp1EpmguCP-u9mNzr0oDl70kqr1uIWzis-CKnhS1hLNHck44kswm5hSIWyClRNuyMLsUq_D19egpN7AVZtmw16oD-qmv6TXnNZ6ITkfJYTmPXB7CbpGwLpQ4="
         }
       ]
     },
     {
-      "id": "2026-10-25-entertainment",
+      "id": "2026-10-26-entertainment",
       "category": "entertainment",
       "categoryLabel": "Entertainment",
-      "headline": "DC Studios' Horror Spinoff 'Clayface' Claims Top Spot at Weekend Box Office",
-      "summary": "DC Studios' R-rated body-horror movie 'Clayface' opened at number one at the domestic box office, earning an estimated $24 million over its premiere weekend. Directed by James Watkins on a modest $44 million production budget, the villain origin story impressed audiences and earned a strong A- CinemaScore.",
-      "question": "Do you prefer standard superhero movies with high-stakes action, or do you like darker genre twists like horror and psychological thrillers?",
+      "headline": "DC Horror Thriller 'Clayface' Tops Box Office with $24 Million Debut",
+      "summary": "DC Studios' new R-rated horror movie 'Clayface' claimed the top spot at the weekend box office with an estimated $24 million debut in North America. Meanwhile, A24's Elizabeth Holmes documentary 'You Can See Everything' expanded to thousands of theaters and finished second with $19.5 million.",
+      "question": "Why do you think horror movies and true-life documentaries are drawing so many people to movie theaters right now?",
       "coachLeads": {
-        "friendly": "Hey there! Have you heard about the new DC movie that just took the top spot at the box office?",
-        "energetic": "A budget horror film about a Batman villain just smashed expectations at the box office this weekend!",
-        "calm": "This weekend's box office results offer an interesting look at how comic book movies are changing.",
-        "direct": "DC's new R-rated horror movie 'Clayface' led the North American box office this weekend."
+        "friendly": "Hey, have you checked out the latest movie news? DC's new horror film Clayface just opened at number one at the box office!",
+        "energetic": "The weekend box office numbers are in, and moviegoers showed up in big numbers! DC's Clayface just snatched the top spot in theaters!",
+        "calm": "There is some interesting news from the box office this weekend. DC's new film Clayface claimed the top spot, closely followed by a buzzy tech documentary.",
+        "direct": "DC's new movie Clayface led the weekend box office with a $24 million debut. Let's talk about what kind of films are getting people into theaters these days."
       },
       "sources": [
         {
-          "title": "thewrap.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHAZ3eeca_DaaiQLOMNd8pXfzu9rNtTk-bEyxQ9i-YQ1Tg3nWBh3v5LfgANGhu2iLZePyjSJ-9V0gcf24o1RHLhKXcPdOiXilRY2VDrhwmVkmXdFluJdjsGwAZgZjMhSKUMFEIrsDke93ZiAcclLPJsoXOUIwVRo0EosbfrWt_bdx8FI2v6PHvufODjgedmetTzbc_05sOoDZzpD4c="
+          "title": "wptf.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGP57xJ-6a3op9mRINbIuQk0BXLsC0jH2G7-A7ovmcATzZ1RoOeNVPdGB3kILeBHyCBrtzmOO4uXzUDFl4HlaMS3GbXddEA5cuw-T1YeuJp5y2yPm4AjZx8kqFCxu0Wm23ss96wGevF4rhYVZknK-4i1Z0aYvmy2Ls6s-7D85b9mkWczEYZEQsXL_rVO7Gj4Ii6uLpfxxpPqr4IV9jgf6goHJ2BIWtRMXOqKPRcDPO5PjIn-Q=="
         },
         {
-          "title": "comicbookmovie.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHnQLcOKBVv9Z4TKrFYvFOQE1ZPs8-SUP8b9HCntsWDlIXptU5laVqZMJcsqZycIiJKJE6UCNfFTQ54CXRfzMbnGoRnG3Xorjm0NLW9vvEcybha0d32uwtJ7p5qIE24ZvMvswEax3Pbf7vVDCsOg-MGM4TyR-8C3joEeAuyrkdFTmWhbjRfpv5LOVUxvCe0EbqerI5_MzJEhh0XPUl6jFVkb0Oinh4JlOF723IH_Yt74_9HWjljiMH0URrBh58ElSLef7s3Azv0"
-        },
-        {
-          "title": "murphysmultiverse.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEIcHPartAHeoyiAkvgtoxTbU1sbcS-HqnT-mQUUjpGcuL6S_yMRAt6DAwvYrD4x4XDunrvzguhTkpc19CvFpOdb44H5K2H0NalcvAnNoQfUCMMc_pNrZjuJKsHdpDEH7ZQ4eLHQmNMk-XHrrKWuvZa9g4S-0xq1CHJ7KrKCZ_VWkbvbTJfnmr2w5NvxHUO6nrQseSnL7Pn"
+          "title": "seekingalpha.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGabD_jfK7mZdXr0AdPEwgP39pB3iyAI1YCbn0sQ5IZ21QSHGMe2ueFjFcE455MR1SaPaWpeLT9t1024_XluK64fwie62b2J4Ly-wr_VwT38AFBDjNv-ZiBJs2J3gjJJkRzaX3R0HNGomYHL8MPz6yivzejnJnictnusHXN8FsAykcdtHwS3eCItMiCb7OrevgWWGpV5Cd9o9kPCSw0z3w_Q3Y6OD4="
         }
       ]
     }
