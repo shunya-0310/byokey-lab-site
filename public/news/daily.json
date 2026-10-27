@@ -1,112 +1,96 @@
 {
   "schemaVersion": 1,
   "status": "live",
-  "date": "2026-10-26",
-  "generatedAt": "2026-10-25T23:16:32.080Z",
+  "date": "2026-10-27",
+  "generatedAt": "2026-10-27T00:25:43.686Z",
   "model": "gemini-3.6-flash",
   "fallbackCategories": [],
   "items": [
     {
-      "id": "2026-10-26-politics_economy",
+      "id": "2026-10-27-politics_economy",
       "category": "politics_economy",
       "categoryLabel": "Politics & Economy",
-      "headline": "Serbian President Concedes Defeat to Student Movement in Historic Election",
-      "summary": "Serbian President Aleksandar Vučić conceded defeat on Sunday after preliminary election results showed a student-led movement winning a parliamentary majority. The vote marks a major political shift in the Balkan nation following years of widespread anti-government protests against his twelve-year rule.",
-      "question": "What role do you think young voters and student movements should play in shaping a country's government?",
+      "headline": "Lula Secures Re-Election in Brazil's Presidential Runoff",
+      "summary": "Brazilian President Luiz Inácio Lula da Silva won a historic re-election victory over right-wing rival Flávio Bolsonaro in a closely contested runoff vote. The outcome shapes the political and economic landscape of South America's largest nation as opposition allies challenge the final tally.",
+      "question": "How do you think election outcomes in major nations affect broader political stability and foreign relations?",
       "coachLeads": {
-        "friendly": "Hey there! Have you heard about the historic election result that just happened in Serbia?",
-        "energetic": "This is a massive story! A student-led movement just won a landmark election in Serbia!",
-        "calm": "A major political shift unfolded in Serbia over the weekend, and it is definitely worth discussing.",
-        "direct": "Serbia's long-serving president has conceded defeat to a student-led coalition. Let's break down what happened."
+        "friendly": "Hey! Have you heard the latest world news about the presidential vote in Brazil?",
+        "energetic": "This is big news—Brazil just wrapped up a major presidential election that everyone is talking about!",
+        "calm": "There is an important update regarding Brazil's presidential election that is worth reviewing today.",
+        "direct": "Brazil's latest election outcome is making front-page headlines across global news outlets right now."
       },
       "sources": [
         {
-          "title": "pbs.org",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEgqIivk7Ume3ugfZuKDNNDjdlRvTKGQtDi5nZRnwwjEVWsowOBYTDoMg9rPktrG_1hq80xZ1_whrxNCvx8nIg6Wj7ObndbYtd9qoAihEujS55oVw=="
+          "title": "youtube.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHZZC2I7Ygt3GkFO-LX2jsoFhiTuhRTZRJw9Bs_S0UzMdwXvD3jrvajpRaH7tHlwd41skmFq6h4fEBGz-fQ8r9C2N4G_xTsXdYG0RNCc-cRqdWua9p0pfW-pn3HvKWfrFF0"
         },
         {
-          "title": "theguardian.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE448wnzXNT9KxyfXZiwn5oBAuxncOK-dozGzBAcL-Ia749sxyKNYApv8jh6fpByLyq1gND_2v_TRPTLOK79ihTiZS374YNJqtvDteARa0kPlQ7Du9TuSrJcouaiM_oTWxcmmKOdJIwM5sk96Grz7nv2irOR__Jh1OxmUwn0vNVSMrwCo9-flL9cvqKPdoYwrwTp0uYPHQHimTlop7oqfFz7TU9koVJbofO6dFmcRF88wqSyQmPnoUQETflKLoJyUvb"
+          "title": "atlanticcouncil.org",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGUC1rMFfn6ymKmmbZ5frFg82KN4V9HqpYNi9RpPixvv1tjibe-WpGMqiu_GD5fjj7eyJQ6j3pXFbj4iXnHt9bbua4evhfU85ArKJzpAaPZZL8LzHgF3W5jlUULXKutevF5OBNbKvf0vGr1fSZ7ZqegLcHReuk3hAf8PUiy1ZjN_fDDfsHqd4NAfxTDOS9J5M2lIMC2JBzrXK6ykwTsRBWUIqU="
         }
       ]
     },
     {
-      "id": "2026-10-26-technology",
+      "id": "2026-10-27-technology",
       "category": "technology",
       "categoryLabel": "Technology",
-      "headline": "Elvis Presley Estate Sues AI Firm Anthropic Over Song Copyrights",
-      "summary": "The owners of Elvis Presley's music catalog filed a federal lawsuit against AI startup Anthropic, alleging the company trained its Claude model on 274 of the singer's copyrighted songs without permission. Seeking over $41 million in damages, the high-profile case marks one of the first major legal challenges brought directly by an iconic artist's estate against an AI developer.",
-      "question": "Do you think AI companies should be required to obtain permission and pay royalties before training their models on copyrighted music?",
+      "headline": "Cyberattack Forces New Mexico's Largest Hospital System to Divert Ambulances",
+      "summary": "On October 26, 2026, the University of New Mexico Health System suffered a major cybersecurity breach that forced emergency patients to be diverted and canceled appointments across more than 30 clinics. The incident temporarily disrupted operations at the state's only Level 1 trauma center, emphasizing the severe public safety risks of digital attacks on healthcare infrastructure.",
+      "question": "How do you think essential institutions like hospitals should balance digital technology with backup systems to prepare for cyber threats?",
       "coachLeads": {
-        "friendly": "Hey, have you heard about this new legal fight between Elvis Presley's estate and an AI company?",
-        "energetic": "Check this out—the King of Rock and Roll's music catalog is at the center of a massive new AI lawsuit!",
-        "calm": "Here is an important development in AI policy and copyright law to keep an eye on.",
-        "direct": "Let's discuss a major copyright lawsuit just filed against AI company Anthropic over unauthorized music training."
+        "friendly": "Hey, did you see the breaking news about the cyberattack affecting emergency medical services in New Mexico today?",
+        "energetic": "Check this out! A major cyberattack just forced a huge hospital network to divert ambulances and close its clinics!",
+        "calm": "There is a serious news story today about a major cybersecurity incident disrupting emergency medical care at a hospital system.",
+        "direct": "A major healthcare network in New Mexico was forced to divert emergency room patients today following a critical cyber breach."
       },
       "sources": [
         {
-          "title": "theguardian.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEl73CV3bSmxh6wD4HaidHYqp4_FrO2w8sejTreVu0BQKSUH5Cjv4SBYVkwWmnV468I89UP9THgzAkd2vw0fz7fXQTTI8f3k3sETX9jlmmi9AVhv1OieSB9QDkEbOHAXpJ8qT0l28o5UY00uFPM2ZefbAvZOVoWwQIPhMj8wYnslHD1ItYT68d0BrQXZM7BSnMLQ-jRnQ=="
+          "title": "wsls.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHswXKHjpRvVvCl8cuu2pbiFRHm4XA6tzJ2YdpCjtMXhQDk7H8OuJZGGZvGJ-ARmLt-h40AYQysh2L3mrPkF9BWtYYteXsW552K0ep0NHi3Rw36HgIpQxgLdpE9Q57_XYozjp0UuUZEuBYsqpDQzJOsCNWpvlB6E0wE1oAzYvJpzXRf4UsYYhUHfsOw0FrvUphdqlK5tWp_eNidadF_VA01pbEH-eCmtvtuKsPPyl6idtocNdtPehceZDv14A=="
         },
         {
-          "title": "mubert.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHH4ZazLmvKsdhmEzEyM3mHNtbeWndXsfG6CEFRiRC5OUkLl22Eqzp1BAtA_OzD86RL-iSA8aUs3XJtobcxxb51wetmiFpIbk804dwO4h0s5b2zDliVfdxz67quaOrAkAykUpZKerHIFpMCI8gAflA="
-        },
-        {
-          "title": "pastemagazine.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGXvuVmO7wfvSPGGpwqjFO1uWdmAqAu1HIbO9opD6YRvLNvaHG36HDxrsOnmqvj4Ojyz3sQp4Nccnxk3RlHQxw3ZiTr1PXaiDMWVtvjRGyQITLssdW2nwDa9nJhoav-Z1GGRgKh7EV7zqwz3Cge40q88tGx0Uee3LcRYxA4OhL6tp-lgcswfVxmO0hE8zFsgxw1nSL1GOqiCqEq0E6SGFUCfn2R8Ki7pxIbyAz14A=="
+          "title": "clickorlando.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGBfqxm64zpjATiGdO_Uywi-1zeu6jLAmcVrTmPHtekTu35oqHo8jtVAH95kQm7kzeB0aJ7bFXKhUW_OlWEPL3tx4OzL0rdFOPd0CJKJ8pLQwm0T8Y-mxmhC1OLVTxoVCSLn58o6tQhHecXADu5Wp8O1mHiiORXU5Av7LKWoFgMEwJ-69TAg944toJf2kBxMfYdX_CYXSnOZTDFQzbp5BQGErd8l41vADVrwCflFssfi0psIPRE3KvLMYgM3J-iflErZlpW"
         }
       ]
     },
     {
-      "id": "2026-10-26-sports",
+      "id": "2026-10-27-sports",
       "category": "sports",
       "categoryLabel": "Sports",
-      "headline": "Kylian Mbappé Scores Late Winner as Real Madrid Beats Barcelona in El Clásico",
-      "summary": "Real Madrid defeated arch-rivals Barcelona 2–1 at Camp Nou on Sunday in the first El Clásico match of the season. Kylian Mbappé scored twice, including an 87th-minute winning goal, handing Barcelona their first domestic league defeat of the campaign.",
-      "question": "What do you think makes rivalries like El Clásico so exciting for football fans around the world?",
+      "headline": "Harry Kane Wins 2026 Men's Ballon d'Or as Alexia Putellas Claims Women's Trophy",
+      "summary": "England captain Harry Kane won the 2026 Men's Ballon d'Or at the London Palladium on Monday, becoming the first English footballer to claim the award since Michael Owen in 2001. Spain's Alexia Putellas secured the Women's Ballon d'Or for the third time, highlighting a star-studded evening honoring football's top global performers.",
+      "question": "Do you think individual trophies like the Ballon d'Or fairly reflect a player's performance, or should team titles matter more?",
       "coachLeads": {
-        "friendly": "Hey! Did you catch the big match between Real Madrid and Barcelona yesterday?",
-        "energetic": "What an unbelievable finish in El Clásico yesterday! Mbappé scored in the final minutes to pull off a huge victory!",
-        "calm": "Real Madrid secured a crucial win over Barcelona this weekend. It was a hard-fought match decided late in the game.",
-        "direct": "Real Madrid defeated Barcelona 2–1 yesterday behind a two-goal performance from Kylian Mbappé. Let's talk about what happened."
+        "friendly": "Did you hear the big news from the world of football today? Harry Kane was just awarded the Ballon d'Or in London!",
+        "energetic": "What an exciting day for sports fans! Harry Kane just took home the top honor in global football at the Ballon d'Or gala!",
+        "calm": "There was a notable result in international sports today. England striker Harry Kane has been named the world's best player at the Ballon d'Or ceremony.",
+        "direct": "Harry Kane won the 2026 Men's Ballon d'Or on Monday night. Let's discuss what this achievement means for his career."
       },
       "sources": [
         {
-          "title": "aljazeera.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHRGUE2ndpqhKKIPwlKfQyjt5FV2TqNurQ_KTyehLPKSzz3hgCD63uKy8MZl3Z50B-cV8nKvQD2I-T_XIO2YrTHk099NFk7sEk65EDvBnD_H9bJIj4J3zSBClX-WJerzQnKx3NNSjRIA1gTiF4MIvP-eotGCdNSVHJH4rAsSBuQXM_uFDbUUx89mCBBJsi1_WjCU8j4pEFTAmiKoA=="
-        },
-        {
-          "title": "ndtv.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE-MBOzAmf5HE04Ij-R48OirSfWg_4-_IReCueaQZoorEvfPKfWYNt4ZA5OXze4hw8qBj5_PaFp5zMsQK_rzpdeB2LyrMM05qgEcuJiB9YUqlXfev9UMyWopWiXclIOto3WmcWc3zYHihb8y8sMCCOoh7N4KmHzFwg7J4i3Hc7yp3qfxFXbd5grzusHAUHygURRfyFB5MXDrClf7rjWlStZ-ZmCjiy8MnG37SU_5L8w-itdIosb8JfvXCv1Uk5UZvtKTpuGUCb2vk0N4JpOcz5KKS09sORWfyHwfh-EJRmN8Q=="
-        },
-        {
-          "title": "independent.co.uk",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEi43x353U3r-SwOOiEQ9z1SAH3NzpnuNDj9iJ6jszq2eM_nrOpOkTkAXzb_B0Epn9-K1Lgn-mbU8kyodkb3VYSM66C5AJMGrlX7KGq4XCdrigLp1EpmguCP-u9mNzr0oDl70kqr1uIWzis-CKnhS1hLNHck44kswm5hSIWyClRNuyMLsUq_D19egpN7AVZtmw16oD-qmv6TXnNZ6ITkfJYTmPXB7CbpGwLpQ4="
+          "title": "Google News: Sports",
+          "url": "https://news.google.com/search?q=Sports%20top%20news%202026-10-27&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     },
     {
-      "id": "2026-10-26-entertainment",
+      "id": "2026-10-27-entertainment",
       "category": "entertainment",
       "categoryLabel": "Entertainment",
-      "headline": "DC Horror Thriller 'Clayface' Tops Box Office with $24 Million Debut",
-      "summary": "DC Studios' new R-rated horror movie 'Clayface' claimed the top spot at the weekend box office with an estimated $24 million debut in North America. Meanwhile, A24's Elizabeth Holmes documentary 'You Can See Everything' expanded to thousands of theaters and finished second with $19.5 million.",
-      "question": "Why do you think horror movies and true-life documentaries are drawing so many people to movie theaters right now?",
+      "headline": "Final Screen Tests Reportedly Underway for Next James Bond",
+      "summary": "Amazon MGM Studios has reportedly begun final screen tests in London to select the actor who will portray the next James Bond in director Denis Villeneuve's upcoming film. Contenders including Jack Lowden, Callum Turner, and Josh O'Connor are participating in auditions evaluating their action stunts, camera presence, and dialogue.",
+      "question": "What qualities or characteristics do you think make an actor a great choice for James Bond?",
       "coachLeads": {
-        "friendly": "Hey, have you checked out the latest movie news? DC's new horror film Clayface just opened at number one at the box office!",
-        "energetic": "The weekend box office numbers are in, and moviegoers showed up in big numbers! DC's Clayface just snatched the top spot in theaters!",
-        "calm": "There is some interesting news from the box office this weekend. DC's new film Clayface claimed the top spot, closely followed by a buzzy tech documentary.",
-        "direct": "DC's new movie Clayface led the weekend box office with a $24 million debut. Let's talk about what kind of films are getting people into theaters these days."
+        "friendly": "Hey, have you heard the latest news about who might play the next James Bond? Auditions are finally happening in London right now!",
+        "energetic": "The race to name the next 007 is reaching its dramatic finale! Actors are in London right now doing final screen tests for the iconic role.",
+        "calm": "After years of speculation, the search for the next James Bond is narrowing down with final screen tests in London. Let's catch up on who is in the running.",
+        "direct": "Final auditions for the new James Bond are underway in London. Here is what you should know about the top contenders."
       },
       "sources": [
         {
-          "title": "wptf.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGP57xJ-6a3op9mRINbIuQk0BXLsC0jH2G7-A7ovmcATzZ1RoOeNVPdGB3kILeBHyCBrtzmOO4uXzUDFl4HlaMS3GbXddEA5cuw-T1YeuJp5y2yPm4AjZx8kqFCxu0Wm23ss96wGevF4rhYVZknK-4i1Z0aYvmy2Ls6s-7D85b9mkWczEYZEQsXL_rVO7Gj4Ii6uLpfxxpPqr4IV9jgf6goHJ2BIWtRMXOqKPRcDPO5PjIn-Q=="
-        },
-        {
-          "title": "seekingalpha.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGabD_jfK7mZdXr0AdPEwgP39pB3iyAI1YCbn0sQ5IZ21QSHGMe2ueFjFcE455MR1SaPaWpeLT9t1024_XluK64fwie62b2J4Ly-wr_VwT38AFBDjNv-ZiBJs2J3gjJJkRzaX3R0HNGomYHL8MPz6yivzejnJnictnusHXN8FsAykcdtHwS3eCItMiCb7OrevgWWGpV5Cd9o9kPCSw0z3w_Q3Y6OD4="
+          "title": "Google News: Entertainment",
+          "url": "https://news.google.com/search?q=Entertainment%20top%20news%202026-10-27&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     }
