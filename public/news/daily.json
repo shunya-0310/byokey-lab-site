@@ -1,100 +1,100 @@
 {
   "schemaVersion": 1,
   "status": "live",
-  "date": "2026-10-29",
-  "generatedAt": "2026-10-29T00:57:09.237Z",
+  "date": "2026-10-30",
+  "generatedAt": "2026-10-30T00:59:48.965Z",
   "model": "gemini-3.6-flash",
   "fallbackCategories": [],
   "items": [
     {
-      "id": "2026-10-29-politics_economy",
+      "id": "2026-10-30-politics_economy",
       "category": "politics_economy",
       "categoryLabel": "Politics & Economy",
-      "headline": "World Bank Forecasts 23 Percent Jump in Global Commodity Prices Due to Energy and Food Shocks",
-      "summary": "The World Bank released its latest Commodity Markets Outlook report warning that global commodity prices could surge by 23 percent in 2026. Heightened Middle East conflicts driving oil prices to four-year highs alongside severe weather disruptions threaten to push up food and energy costs worldwide.",
-      "question": "How do rising energy and food prices usually affect your personal budget or the economy in your country?",
+      "headline": "Israel's Election Ends in Deadlock as Netanyahu's Bloc Falls Short of Majority",
+      "summary": "Israel's Central Elections Committee finalized the national election results, showing Prime Minister Benjamin Netanyahu's coalition won 53 seats and fell short of the 61 needed for a parliamentary majority. The outcome creates a political deadlock as opposing political parties begin complex negotiations to form the next government.",
+      "question": "What key factors do you think political leaders should prioritize when attempting to build a governing coalition during a political stalemate?",
       "coachLeads": {
-        "friendly": "Hey there! The World Bank just published a major global economic report that could affect everyday costs, so let's chat about it.",
-        "energetic": "Check out this big financial story! Global commodity prices are projected to jump, so let's dive into what's driving the global markets today!",
-        "calm": "Let's review a new economic report from the World Bank concerning upcoming global energy and food price trends.",
-        "direct": "The World Bank released its latest forecast on rising commodity prices. Let's discuss what this means for global markets and consumers."
+        "friendly": "Hey, have you caught the latest updates on Israel's election results? It looks like we've got a fascinating political story to unpack together today!",
+        "energetic": "There's major news out of Israel as final election results reveal a complete deadlock! Let's dive right into how these coalition talks could unfold!",
+        "calm": "Final vote tallies from Israel's recent election show no clear majority for either major political bloc. Let me know when you're ready to discuss what this means for the country's political future.",
+        "direct": "Israel's election results are finalized, and neither side secured a governing majority. Let's discuss how this stalemate might affect coalition negotiations."
       },
       "sources": [
         {
-          "title": "Google News: Politics & Economy",
-          "url": "https://news.google.com/search?q=Politics%20%26%20Economy%20top%20news%202026-10-29&hl=en-US&gl=US&ceid=US:en"
+          "title": "timesofisrael.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQENOCw4tckvrFUfvy186xhUo-nd74BINNB4TkD0Xni8gmQpreShXEJh00sTxuPfepvyINXAiJwkmPF2EpRsDVeyjJxe88eoELKtaBz_tY_RUH814KOE4odNh0_yBEZ4UdeST7PPi-m4yhLDkbD6juiZ_Gmn_ftY-tIOQQyR6XZN6bvVQxNhGgGQGaAXpboP_sZbcLe1Pxg0EDxUe8YOM9zhElZvPjGv2GPAaeiqZUaWTyxkhmiYF6owBbFMRGo8jw=="
+        },
+        {
+          "title": "pbs.org",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHCindn7g3HZ8L5y5N92G2F1543upWNzgvnC0W3HugpjdpgQ5qDnYW-ChRJ2YRoOTr4DF61GaXL4xrdsoisVDDs8XnjjGi5Si2JncP_etsLCaJX86JTEs6gflmmxwTxhX-Xk2pqEfOXWv49sfa6wVgPk52cPO9xw6ji2usdR_4wqWmkWqR3He9dqPtU3gzQvEQN8VgrMe9gRNjE3_lNI7Cu7nZ-eZDoWb5RP08h"
+        },
+        {
+          "title": "ajc.org",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEjGE88Vb_9xCE0CVIjb4Mfpn0ILri7gfl9c_0UpYoqyB_yBHZBC0jepBJzFyBD3CrHWE-1ScyTDUM4-0J3qF7KrjlTIGpXcnoHZdWhjfVXWZkN1bCLnq0ybn79hPwextumGCCJreRdhnoLN7-WSw5KD1QJ1A3YzyVB4xMDT0VFo5B_Jh6c6ZbOOEhZEK6_RsWJ5HsmoLVnDHw="
         }
       ]
     },
     {
-      "id": "2026-10-29-technology",
+      "id": "2026-10-30-technology",
       "category": "technology",
       "categoryLabel": "Technology",
-      "headline": "NASA Assembles SLS Core Stage for Artemis III Lunar Mission",
-      "summary": "On October 28, 2026, NASA engineers at Kennedy Space Center successfully stacked the 212-foot core stage of the Space Launch System rocket between its twin solid rocket boosters inside the Vehicle Assembly Building. This major hardware integration marks a key step forward as the agency prepares for the Artemis III mission to return humans to the Moon.",
-      "question": "How do you feel about humanity returning to explore the Moon after so many decades?",
+      "headline": "Astronauts Complete Historic 100th U.S. Spacewalk to Upgrade Space Station Power",
+      "summary": "Astronauts Anil Menon and Joshua Kutryk completed a seven-hour spacewalk on October 29, 2026, to unroll a new 63-foot solar array on the International Space Station. The successful mission marked the 100th U.S. spacewalk conducted without a space shuttle docked and will help increase the station's overall electrical supply.",
+      "question": "How do you think international teamwork on major science missions like the space station inspires people back on Earth?",
       "coachLeads": {
-        "friendly": "Hey, have you heard the latest news about humanity returning to the Moon? NASA just reached a huge milestone!",
-        "energetic": "We're one giant step closer to landing on the Moon again! Have you seen the latest update on NASA's mega-rocket assembly?",
-        "calm": "NASA reached an important milestone today in assembling its Artemis III rocket. It's a fascinating moment to consider the future of space exploration.",
-        "direct": "NASA just stacked its massive SLS rocket stage for the Artemis III mission. Let me know your thoughts on deep space travel."
+        "friendly": "Hey, did you catch the latest news from high above Earth? Two astronauts just completed a major milestone on the space station!",
+        "energetic": "Check this out! Astronauts just finished a massive seven-hour spacewalk to upgrade the space station's power grid!",
+        "calm": "Astronauts recently wrapped up a historic spacewalk to install a new solar array on the International Space Station. It is a great reminder of how much progress we continue to make in orbit.",
+        "direct": "Astronauts just completed the 100th U.S. spacewalk without a shuttle to install new solar panels on the space station. Let's talk about why this orbital milestone matters."
       },
       "sources": [
         {
-          "title": "nasa.gov",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHYgiAKIm1gNAyK3I8-TDw4xqDEXBtp17LPKgQI2vyTsfeWSLHvWHw_NzHn-ZvOq-g8-nY8J0igdPMijYtEsiPSR_JxLA7prXFFPM-AC5BJdSm8X1r3mEK3ZFDwjLDvWhWbj-wu-pBP3bzo88ke4Qr9A86xGmeQWSu9q_g20HgJ3vLueHYyC3_kYr8mSnBN"
-        },
-        {
-          "title": "rocketcitynow.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEnByVeN30L3b4PdfdxtaoF5FX4_3rGHWeB-fj3edup9E0n2ID8DheegMwVMWS0QVe8_wPOOSpZkVeEGNOxSWkB6fTBBLBsg-6jptcXP7XnkXewYiwjZuzFdwhdgvtpl67kfSKL9BXX86QiOaSyF7fpnTm6oWr_SVEMpkvOa-mKBAVHAf_zmuwLbK04mswTE9CTlr4_nW5uVR3f4x4wK8M5qsGS43KGJEk-TZvGw5f-oMc4_CFWdw1pZOxmlznqqgWANi3ca-CgzQKP2ntlwnMFNvDoG9fU9q3H5HlOp9uyQKVB5yWy"
+          "title": "aroundprague.cz",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFOdK39m4yBF37NhbuIgntaizRx-aoVH2H59OKVDj0UIir39prrogeAGNvigsuJlZ4QKPzMuz1BNmvO5PQDQsMf0dRCP7wbKyl8WsZl6bnuFf_ExuF6i5rOIdGKvV02oXdG84bI0TVdk8E6lQWdDQ5Udl7jtQz7ZGdI5LjniCLuXmZqSagtPd2KR_5ve5DFNALl_OMeM3D4_pojYhA2mMK5TM2wsaB0"
         }
       ]
     },
     {
-      "id": "2026-10-29-sports",
+      "id": "2026-10-30-sports",
       "category": "sports",
       "categoryLabel": "Sports",
-      "headline": "Rays Stun Brewers with 12th-Inning Walk-Off Rally to Force World Series Game 5",
-      "summary": "The Tampa Bay Rays kept their season alive with a dramatic 4-3 walk-off victory in 12 innings against the Milwaukee Brewers in Game 4 of the World Series. Facing elimination down three games to none, Tampa Bay capitalized on a late fielding error and consecutive hits to prevent a championship sweep and force Game 5.",
-      "question": "What do you think makes comeback wins in high-stakes championship games so thrilling to watch?",
+      "headline": "Milwaukee Brewers Win First World Series Title in Franchise History",
+      "summary": "The Milwaukee Brewers defeated the Tampa Bay Rays 4-1 in Game 5 to secure the first World Series championship in franchise history. Catcher William Contreras was named World Series MVP after hitting .381 across the five-game series.",
+      "question": "Why do you think small-market sports teams face such big challenges when competing for major titles?",
       "coachLeads": {
-        "friendly": "Did you catch that wild finish in baseball last night? The Rays pulled off an incredible late comeback to keep the World Series going!",
-        "energetic": "What an unbelievable 12th-inning rally by Tampa Bay! They refused to get swept and pushed this World Series to Game 5!",
-        "calm": "If you follow baseball, Game 4 of the World Series had quite the finish. Tampa Bay stayed patient in extra innings and kept their championship hopes alive.",
-        "direct": "The Rays beat the Brewers 4-3 in 12 innings to avoid a World Series sweep. They have forced a Game 5."
+        "friendly": "Hey, have you heard the big sports news today? The Milwaukee Brewers just won their very first World Series championship!",
+        "energetic": "What an incredible historic moment in baseball! The Milwaukee Brewers finally captured their first World Series trophy after five decades!",
+        "calm": "The Milwaukee Brewers concluded their season with a Game 5 victory to claim their first World Series title. It's a memorable moment for the franchise and its fans.",
+        "direct": "The Milwaukee Brewers defeated the Tampa Bay Rays to win their first World Series in team history. Let's talk about what made this championship victory so special."
       },
       "sources": [
         {
-          "title": "tsn.ca",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFI8uIRmvhA5cFqYsBy2GXyH8N08VojtGP9bL0xFCsnas0jnXgr0uiu8WbylfVqRB7BtlXyrm-Q3zNYFxBKQemE721Hg3AMkPglEdHCkP9oSX8E27oD7gs7dxWfEJxDJN6R_sXeOQzBmwYqoc3JAgH83DTw_RKzQ2DlURagCUWj-cd7PTZ6b1I7S58723q40A9zpaxVUe8L3LNexj9MiMO027mrlSgOjNv_cTen"
+          "title": "cnn.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQErWdFrdMcSzVU9Sk4vOt3-llujfINccftRk4gYx5v9IYRAA6xyEVp3I6XLVVq7769v4wRyhMNm-SdV-2ciCDmsAIWMJwdLuzbtTcm7EV85lhYOZqLOgFjdnFo5nVbqaaPqB9jzB3HoxVowDe1Y88GaiEL3B-sJGSQ="
         },
         {
-          "title": "wtsp.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFa4-JJbYTFjodKIeN7Jw3kZV6DZAJOxgzhOZRJzBw0hJsANZ8OeSD3E7GVl1mvwmvmhJZnIGBlare_1knejojMGCXIF_umI9cjBcu5Q9rWxkpmUUTHLgWLmQK4ZRcXb48IL5I4tJ579N8e0eg4Gy_aoPMrPcub-QNzOckPZmioP9FL-E48f2JsU1HPdN_-OSwthfxC8mVcYi2bTUGnXSo2IEHydJtR5M14ln3MB7MZNZtPPDs2"
+          "title": "wtmj.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFGN02BfD2gjotYz1fPqlWy9SAksDlKRgVaxYpzT3z8_ZofTwcN3jVFghQLIhggJxTL5hazZP8ciIogQNlHjFbctgbKQAgrYH02pmTM8Zlqvurnak_IrEqhOTbFD4jIYzZqbEgAM-1Zf0BV36fFznITBf4V4xbh3QA_pJvO-ycm5q8wL5E7xOH1o98EeAJIPQ8tmTG3sJkKbfwQw7TJ4bO__-8AkIYGrnvx3w=="
         }
       ]
     },
     {
-      "id": "2026-10-29-entertainment",
+      "id": "2026-10-30-entertainment",
       "category": "entertainment",
       "categoryLabel": "Entertainment",
-      "headline": "Kathleen Kennedy Appointed to Lead Ceremonies for LA 2028 Olympics",
-      "summary": "Veteran film producer Kathleen Kennedy has been named head of ceremonies and content for the 2028 Los Angeles Olympic and Paralympic Games. The former Lucasfilm chief will direct the creative vision for the opening and closing events, stepping into the role after Peter Rice departed for Netflix.",
-      "question": "What kind of entertainment or cultural elements would you like to see featured in an Olympic opening ceremony?",
+      "headline": "Legendary Actor Sir Patrick Stewart Dies at Age 86",
+      "summary": "Acclaimed British actor Sir Patrick Stewart, celebrated globally for playing Captain Jean-Luc Picard in Star Trek and Professor Charles Xavier in the X-Men franchise, has died at age 86. Tributes from across the world are honoring his decades-long legacy following the announcement of his passing at his Los Angeles home.",
+      "question": "Which of Sir Patrick Stewart's iconic roles or performances left the biggest impression on you, and why?",
       "coachLeads": {
-        "friendly": "Hey, did you catch the big entertainment news today? A legendary Hollywood producer was just chosen to run the ceremonies for the 2028 Los Angeles Olympics.",
-        "energetic": "This is huge news for both movie fans and sports lovers! The former head of Lucasfilm is stepping up to direct the entire show for the 2028 LA Olympics!",
-        "calm": "There was an interesting cultural announcement today regarding the 2028 Los Angeles Olympics. Veteran movie producer Kathleen Kennedy will be taking charge of the major ceremonies.",
-        "direct": "Hollywood veteran Kathleen Kennedy has officially been named head of ceremonies for the LA 2028 Olympic Games. Let's discuss what she might bring to the global stage."
+        "friendly": "Hey, did you catch the news about Sir Patrick Stewart today? He brought so many unforgettable characters to life over his incredible career.",
+        "energetic": "Sir Patrick Stewart was a true icon of stage and screen! Which of his legendary roles is your absolute favorite to look back on?",
+        "calm": "Sir Patrick Stewart has passed away at age 86, leaving behind a profound legacy in acting. It feels like a moment to reflect on his remarkable work.",
+        "direct": "Actor Sir Patrick Stewart has passed away at age 86. Let's talk about his career and his most memorable performances."
       },
       "sources": [
         {
-          "title": "avclub.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHrcp4c9Rr-yjWBjiFCfBo1_zUl8ijLmqPe-iJPYvj2ymdINYRs8vCn5jgWQ3sf5ygLw5pC91LtAH8Obt9ctGfTTohZIiNRpdAkeCyvQz7TTFpXB6NYOX8Lq4O_6UFC4pf-YXrqOZwwTjNqbevN9dS1vw2ATreeeNpkXAht5JpSlpmKAg_R"
-        },
-        {
-          "title": "piratesandprincesses.net",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEH1-aURe2bR9XciQg34iduwH81sA70-18hbq-3Wc3gDRtvZNYPVcFTUvH61edgsM6lsT0XkGURvc9QUsuGisuRLj-zHnmTmCjj5W2iXXEOeI-skCyq-IYPSiuQfqbGZvZrUIF3y7pwNgmaZIFw5ktD1UA8iCLewbW_7k9KK6b21ZMKE8JayMGgVUGTAhg_"
+          "title": "Google News: Entertainment",
+          "url": "https://news.google.com/search?q=Entertainment%20top%20news%202026-10-30&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     }
