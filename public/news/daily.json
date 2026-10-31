@@ -1,100 +1,108 @@
 {
   "schemaVersion": 1,
   "status": "live",
-  "date": "2026-10-30",
-  "generatedAt": "2026-10-30T00:59:48.965Z",
+  "date": "2026-10-31",
+  "generatedAt": "2026-10-31T00:47:47.040Z",
   "model": "gemini-3.6-flash",
   "fallbackCategories": [],
   "items": [
     {
-      "id": "2026-10-30-politics_economy",
+      "id": "2026-10-31-politics_economy",
       "category": "politics_economy",
       "categoryLabel": "Politics & Economy",
-      "headline": "Israel's Election Ends in Deadlock as Netanyahu's Bloc Falls Short of Majority",
-      "summary": "Israel's Central Elections Committee finalized the national election results, showing Prime Minister Benjamin Netanyahu's coalition won 53 seats and fell short of the 61 needed for a parliamentary majority. The outcome creates a political deadlock as opposing political parties begin complex negotiations to form the next government.",
-      "question": "What key factors do you think political leaders should prioritize when attempting to build a governing coalition during a political stalemate?",
+      "headline": "US Cancels G20 Group Photo After Allies Object to Russian Presence",
+      "summary": "The United States cancelled the traditional group photograph at the G20 foreign ministers meeting in Atlanta after multiple countries threatened a boycott. Diplomats from Australia, the United Kingdom, and European Union nations refused to pose alongside Russian Foreign Minister Sergei Lavrov because of Russia's war in Ukraine.",
+      "question": "How do you think international summits should handle group meetings when member nations are in deep conflict?",
       "coachLeads": {
-        "friendly": "Hey, have you caught the latest updates on Israel's election results? It looks like we've got a fascinating political story to unpack together today!",
-        "energetic": "There's major news out of Israel as final election results reveal a complete deadlock! Let's dive right into how these coalition talks could unfold!",
-        "calm": "Final vote tallies from Israel's recent election show no clear majority for either major political bloc. Let me know when you're ready to discuss what this means for the country's political future.",
-        "direct": "Israel's election results are finalized, and neither side secured a governing majority. Let's discuss how this stalemate might affect coalition negotiations."
+        "friendly": "Hey, have you heard about the unusual diplomatic drama at the G20 summit today?",
+        "energetic": "You won't believe why world diplomats refused to take a traditional photo together today!",
+        "calm": "There is a notable diplomatic development from the G20 summit in Atlanta worth discussing.",
+        "direct": "Let's examine why the G20 summit had to cancel its customary group photograph."
       },
       "sources": [
         {
-          "title": "timesofisrael.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQENOCw4tckvrFUfvy186xhUo-nd74BINNB4TkD0Xni8gmQpreShXEJh00sTxuPfepvyINXAiJwkmPF2EpRsDVeyjJxe88eoELKtaBz_tY_RUH814KOE4odNh0_yBEZ4UdeST7PPi-m4yhLDkbD6juiZ_Gmn_ftY-tIOQQyR6XZN6bvVQxNhGgGQGaAXpboP_sZbcLe1Pxg0EDxUe8YOM9zhElZvPjGv2GPAaeiqZUaWTyxkhmiYF6owBbFMRGo8jw=="
-        },
-        {
-          "title": "pbs.org",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHCindn7g3HZ8L5y5N92G2F1543upWNzgvnC0W3HugpjdpgQ5qDnYW-ChRJ2YRoOTr4DF61GaXL4xrdsoisVDDs8XnjjGi5Si2JncP_etsLCaJX86JTEs6gflmmxwTxhX-Xk2pqEfOXWv49sfa6wVgPk52cPO9xw6ji2usdR_4wqWmkWqR3He9dqPtU3gzQvEQN8VgrMe9gRNjE3_lNI7Cu7nZ-eZDoWb5RP08h"
-        },
-        {
-          "title": "ajc.org",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEjGE88Vb_9xCE0CVIjb4Mfpn0ILri7gfl9c_0UpYoqyB_yBHZBC0jepBJzFyBD3CrHWE-1ScyTDUM4-0J3qF7KrjlTIGpXcnoHZdWhjfVXWZkN1bCLnq0ybn79hPwextumGCCJreRdhnoLN7-WSw5KD1QJ1A3YzyVB4xMDT0VFo5B_Jh6c6ZbOOEhZEK6_RsWJ5HsmoLVnDHw="
+          "title": "Google News: Politics & Economy",
+          "url": "https://news.google.com/search?q=Politics%20%26%20Economy%20top%20news%202026-10-31&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     },
     {
-      "id": "2026-10-30-technology",
+      "id": "2026-10-31-technology",
       "category": "technology",
       "categoryLabel": "Technology",
-      "headline": "Astronauts Complete Historic 100th U.S. Spacewalk to Upgrade Space Station Power",
-      "summary": "Astronauts Anil Menon and Joshua Kutryk completed a seven-hour spacewalk on October 29, 2026, to unroll a new 63-foot solar array on the International Space Station. The successful mission marked the 100th U.S. spacewalk conducted without a space shuttle docked and will help increase the station's overall electrical supply.",
-      "question": "How do you think international teamwork on major science missions like the space station inspires people back on Earth?",
+      "headline": "Hackers Steal $6.3 Billion from Binance in Largest Crypto Breach in History",
+      "summary": "Cryptocurrency exchange Binance disclosed that cyberattackers compromised internal systems and stole approximately $6.3 billion in digital assets. Security researchers linked the record-setting heist to North Korean state-sponsored hackers, making this major incident a primary global cybersecurity story today.",
+      "question": "What measures do you think financial platforms should implement to defend against increasingly sophisticated state-sponsored cyberattacks?",
       "coachLeads": {
-        "friendly": "Hey, did you catch the latest news from high above Earth? Two astronauts just completed a major milestone on the space station!",
-        "energetic": "Check this out! Astronauts just finished a massive seven-hour spacewalk to upgrade the space station's power grid!",
-        "calm": "Astronauts recently wrapped up a historic spacewalk to install a new solar array on the International Space Station. It is a great reminder of how much progress we continue to make in orbit.",
-        "direct": "Astronauts just completed the 100th U.S. spacewalk without a shuttle to install new solar panels on the space station. Let's talk about why this orbital milestone matters."
+        "friendly": "Hey there! Have you heard about the massive cyberattack on Binance that everyone is talking about today?",
+        "energetic": "You won't believe the huge story breaking in cybersecurity right now! Let's dive straight into what happened!",
+        "calm": "There is a major update in cybersecurity today regarding a record-breaking breach at Binance. Shall we take a look at the details together?",
+        "direct": "Binance just reported the largest cryptocurrency hack in history, with losses exceeding six billion dollars. Here is what you should know."
       },
       "sources": [
         {
-          "title": "aroundprague.cz",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFOdK39m4yBF37NhbuIgntaizRx-aoVH2H59OKVDj0UIir39prrogeAGNvigsuJlZ4QKPzMuz1BNmvO5PQDQsMf0dRCP7wbKyl8WsZl6bnuFf_ExuF6i5rOIdGKvV02oXdG84bI0TVdk8E6lQWdDQ5Udl7jtQz7ZGdI5LjniCLuXmZqSagtPd2KR_5ve5DFNALl_OMeM3D4_pojYhA2mMK5TM2wsaB0"
-        }
-      ]
-    },
-    {
-      "id": "2026-10-30-sports",
-      "category": "sports",
-      "categoryLabel": "Sports",
-      "headline": "Milwaukee Brewers Win First World Series Title in Franchise History",
-      "summary": "The Milwaukee Brewers defeated the Tampa Bay Rays 4-1 in Game 5 to secure the first World Series championship in franchise history. Catcher William Contreras was named World Series MVP after hitting .381 across the five-game series.",
-      "question": "Why do you think small-market sports teams face such big challenges when competing for major titles?",
-      "coachLeads": {
-        "friendly": "Hey, have you heard the big sports news today? The Milwaukee Brewers just won their very first World Series championship!",
-        "energetic": "What an incredible historic moment in baseball! The Milwaukee Brewers finally captured their first World Series trophy after five decades!",
-        "calm": "The Milwaukee Brewers concluded their season with a Game 5 victory to claim their first World Series title. It's a memorable moment for the franchise and its fans.",
-        "direct": "The Milwaukee Brewers defeated the Tampa Bay Rays to win their first World Series in team history. Let's talk about what made this championship victory so special."
-      },
-      "sources": [
-        {
-          "title": "cnn.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQErWdFrdMcSzVU9Sk4vOt3-llujfINccftRk4gYx5v9IYRAA6xyEVp3I6XLVVq7769v4wRyhMNm-SdV-2ciCDmsAIWMJwdLuzbtTcm7EV85lhYOZqLOgFjdnFo5nVbqaaPqB9jzB3HoxVowDe1Y88GaiEL3B-sJGSQ="
+          "title": "cybersecuritydive.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGDi9Gq59440TpEYJKnL8qIZdxg1XxruqVsDNT-xQFFuAqjz46ynvYhTnwu0IYNYzwiAamlDUmD7w6m80pP2pq4Yl4xxeQoQEvmrSpOo7oWv16Hl4RIGr5TuGdUSVMlGAOiImW5YaEjPwKE0Q6Ro_dtuIFjAfQLuuitZDMzHsCCQBJ126UtjFHBVxGTucp7-0Q="
         },
         {
-          "title": "wtmj.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFGN02BfD2gjotYz1fPqlWy9SAksDlKRgVaxYpzT3z8_ZofTwcN3jVFghQLIhggJxTL5hazZP8ciIogQNlHjFbctgbKQAgrYH02pmTM8Zlqvurnak_IrEqhOTbFD4jIYzZqbEgAM-1Zf0BV36fFznITBf4V4xbh3QA_pJvO-ycm5q8wL5E7xOH1o98EeAJIPQ8tmTG3sJkKbfwQw7TJ4bO__-8AkIYGrnvx3w=="
+          "title": "inc.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEqCl56Sn556nFFwWiMvr6x3idJQ_RRVFqOGCVPTeiag7swn8pamH_WLdfQhcZzjBFyZxzBnGBp2Skwk89HeWQijzsJNAiz8By3Y8xFpR4vdKD6hW7uLJsK8CFuc2mxtwQJcKBG1JxodG1Vti8PMc719k7yLCV2Oo45BiRhfF62ALMYnAfjRuGceZrRv__9w7Z5_ecfydarh4nIIQW0vDES6_F1oRDf8hinhsVJAh7MDt0kJqi5_Uz_"
         }
       ]
     },
     {
-      "id": "2026-10-30-entertainment",
-      "category": "entertainment",
-      "categoryLabel": "Entertainment",
-      "headline": "Legendary Actor Sir Patrick Stewart Dies at Age 86",
-      "summary": "Acclaimed British actor Sir Patrick Stewart, celebrated globally for playing Captain Jean-Luc Picard in Star Trek and Professor Charles Xavier in the X-Men franchise, has died at age 86. Tributes from across the world are honoring his decades-long legacy following the announcement of his passing at his Los Angeles home.",
-      "question": "Which of Sir Patrick Stewart's iconic roles or performances left the biggest impression on you, and why?",
+      "id": "2026-10-31-sports",
+      "category": "sports",
+      "categoryLabel": "Sports",
+      "headline": "Court Overturns Ban on Russian Teams in International Ice Hockey",
+      "summary": "On October 30, 2026, the Court of Arbitration for Sport ruled that the International Ice Hockey Federation must readmit Russian national teams to five upcoming tournaments in the 2026–2027 season. The decision represents a major legal turning point in international sports governance following the broad suspensions imposed after the 2022 invasion of Ukraine.",
+      "question": "Do you believe international sports governing bodies should separate athletic competitions from global political conflicts?",
       "coachLeads": {
-        "friendly": "Hey, did you catch the news about Sir Patrick Stewart today? He brought so many unforgettable characters to life over his incredible career.",
-        "energetic": "Sir Patrick Stewart was a true icon of stage and screen! Which of his legendary roles is your absolute favorite to look back on?",
-        "calm": "Sir Patrick Stewart has passed away at age 86, leaving behind a profound legacy in acting. It feels like a moment to reflect on his remarkable work.",
-        "direct": "Actor Sir Patrick Stewart has passed away at age 86. Let's talk about his career and his most memorable performances."
+        "friendly": "Hey there! Have you heard about the big international sports court decision that just came out?",
+        "energetic": "Check this out—a major court ruling just shook up the world of international sports!",
+        "calm": "There is a significant legal update from the Court of Arbitration for Sport that is worth reviewing today.",
+        "direct": "The sports arbitration court just overturned the ban on Russian ice hockey teams, and it is a major decision worth discussing."
       },
       "sources": [
         {
-          "title": "Google News: Entertainment",
-          "url": "https://news.google.com/search?q=Entertainment%20top%20news%202026-10-30&hl=en-US&gl=US&ceid=US:en"
+          "title": "tas-cas.org",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGae8E6UEgej5t7DKAYgOQa7RQyQmDdr4f9Fxj_UCHQI-OZLh4qJn6SzNAtowJyN0ifCxYMEQcFupurg26S0n0bS77JwKicFQbmNkWmvkpDMswmodVrb6Tqk792WEHpxLorTauRhQxuUCpT34ujf4Vo5xfXuEiyX-tzjl7y2OIjaTA6deWuPZEXi2OTlZEQFGrDEXA75-Mp7-r4sXTHQR1x4Pwh3gH58I-rE5kEeAMgFB0kjIsQaFzoTw=="
+        },
+        {
+          "title": "meduza.io",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHtODwDWL4UCQOmDezqIS2saGWLjMvPK6kWiWjDvluXjyjqNWjYBvI6bOTYDpCfNnyaVzhxbNTBN51xEZTkmElV8K3fSIq5Usc7GDiKC5ni6IEs4UPDK1t8foEbDccij2QtM_MbmYDSAfX_WDQo6F14UwzCTG3dENnr3tfqGhRGB2oOUfqsmPuXYBZsS-uOOEH-vMFyUGsd4Voa7JHvHWQvZ15llSUHuH08gCUYw8b8zAXI17de4fWeXR7KSZdrRTFdnamHgPtb9UKZ1J_iFDHB270_-9CiJGM="
+        },
+        {
+          "title": "russianmachineneverbreaks.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHgHkU80V_GaCP0mnYwGGeAjZoYr3ZJV9sddtA1vgai4ZRoJnxpOKYKZ7TJfWz0A462_KEsl4is1lNl76-ct0_WWBP_OMN0TTFKIl-HK7uqErpeyW3u6WqX_oGhcDqIz2Y53p9eN7xrAqS-FXjk8JQr3jUQK8633rX5Ncng4Vu4h1CB6pE2cantXY_oh7cApzN9asjZkAKv5M0QDZ5aZjoGagxrZ9j9Ht0Gp8IgmUGl"
+        }
+      ]
+    },
+    {
+      "id": "2026-10-31-entertainment",
+      "category": "entertainment",
+      "categoryLabel": "Entertainment",
+      "headline": "Global Tributes Pour In Following the Death of Acting Legend Sir Patrick Stewart at 86",
+      "summary": "Acclaimed stage and screen actor Sir Patrick Stewart, beloved for his iconic roles as Captain Jean-Luc Picard in Star Trek and Professor Charles Xavier in X-Men, has died at age 86 following a battle with Alzheimer's disease and Lewy body dementia. Tributes have flooded in from co-stars, filmmakers, and fans worldwide as the global entertainment community honors his extraordinary six-decade career.",
+      "question": "Which of Sir Patrick Stewart's famous roles or performances made the strongest impression on you, and why do you think he was so universally respected?",
+      "coachLeads": {
+        "friendly": "Hey! Have you heard the news about Sir Patrick Stewart's passing? So many people around the world are sharing their favorite memories of his legendary acting career today.",
+        "energetic": "Did you see the huge wave of tributes pouring in for Sir Patrick Stewart today? From Star Trek to X-Men, his impact on pop culture and theater is incredible to talk about!",
+        "calm": "Sir Patrick Stewart has passed away at eighty-six, bringing a reflective moment to the film and television world. It is a good time to look back on his remarkable legacy.",
+        "direct": "Sir Patrick Stewart has died at age eighty-six. Let's discuss his iconic career and what made his work so memorable to fans across generations."
+      },
+      "sources": [
+        {
+          "title": "theguardian.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGKF91LZBk1jOEZHex2_RZWwnQZp65FcVIFMt2t6n7TElZ0NwYY5tTbEEbtmOSS8y_WWwrANmc1eaPN5Fq10kj9qxYZGm37huoN9j1qG4Fx4ReceXa8q3Y26iuiAXqW-eHe_CG8v1Z241TMc_w7EQwS_vB1DrpYVsKQ"
+        },
+        {
+          "title": "legacy.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGPP54ahK1WnzjwkmBbLlSgNNu-AJYgIN49iU4zm31LJ9VqVu3z49hbXj6IMlAMCUKWsfZ88k5tbtUNTE9rf2PthDl-Qu-UBxxJP80RX8szLAsW5nfAcErwkI9WFuLyzo14G3ItD-Nx8m_Ej5o_Hnwocw=="
+        },
+        {
+          "title": "variety.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHHA1iqrZ-chxZ0-_Io58botkS9upgfUyAR5czLOMNtqTnEc-FLLcpWTOYhU9jIfvsexAYcZ5O509TuyYNX4pkyuVcqcpPc2eDS1P4dowZ1Zt14teiJvwGmcO129YU-MC2eUQz14TyafGYaxgg04E4OWe_TDDasAGagIryEvkjaMWFcuhpNfBO6-lCqrR3g-P8eZnqsjp9tmvua"
         }
       ]
     }
