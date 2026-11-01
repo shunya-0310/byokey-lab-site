@@ -1,108 +1,112 @@
 {
   "schemaVersion": 1,
   "status": "live",
-  "date": "2026-10-31",
-  "generatedAt": "2026-10-31T00:47:47.040Z",
+  "date": "2026-11-01",
+  "generatedAt": "2026-11-01T00:08:10.603Z",
   "model": "gemini-3.6-flash",
   "fallbackCategories": [],
   "items": [
     {
-      "id": "2026-10-31-politics_economy",
+      "id": "2026-11-01-politics_economy",
       "category": "politics_economy",
       "categoryLabel": "Politics & Economy",
-      "headline": "US Cancels G20 Group Photo After Allies Object to Russian Presence",
-      "summary": "The United States cancelled the traditional group photograph at the G20 foreign ministers meeting in Atlanta after multiple countries threatened a boycott. Diplomats from Australia, the United Kingdom, and European Union nations refused to pose alongside Russian Foreign Minister Sergei Lavrov because of Russia's war in Ukraine.",
-      "question": "How do you think international summits should handle group meetings when member nations are in deep conflict?",
+      "headline": "U.S. Approves $2.1 Billion Patriot Missile Sale to Ukraine",
+      "summary": "The U.S. State Department has approved a potential $2.1 billion sale of 500 Patriot air defense missiles to Ukraine, with funding provided by European allies and Canada. Ukrainian President Volodymyr Zelenskyy welcomed the decision but warned that deliveries could take years when interceptors are urgently needed to defend against winter attacks.",
+      "question": "How do you think international allies should balance long-term military supply contracts with immediate defensive needs during a conflict?",
       "coachLeads": {
-        "friendly": "Hey, have you heard about the unusual diplomatic drama at the G20 summit today?",
-        "energetic": "You won't believe why world diplomats refused to take a traditional photo together today!",
-        "calm": "There is a notable diplomatic development from the G20 summit in Atlanta worth discussing.",
-        "direct": "Let's examine why the G20 summit had to cancel its customary group photograph."
+        "friendly": "Hey, have you heard about the latest defense deal between the U.S. and Ukraine? It's a really interesting international story worth chatting about today.",
+        "energetic": "Big news in world diplomacy just broke! The U.S. approved a major missile package for Ukraine, and there's a lot to unpack here.",
+        "calm": "A major decision on global defense policy was announced today. It highlights some important challenges in international diplomacy that are worth reflecting on.",
+        "direct": "The U.S. just approved a $2.1 billion missile sale to Ukraine. Let's look at the facts and talk about why the timing is causing debate."
       },
       "sources": [
         {
-          "title": "Google News: Politics & Economy",
-          "url": "https://news.google.com/search?q=Politics%20%26%20Economy%20top%20news%202026-10-31&hl=en-US&gl=US&ceid=US:en"
+          "title": "cbsnews.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGP8-oic5jD74pcQA5USiXD6WHNkJDluGjefowey8m10lV-49Z8KIvWri3e1M-k6xqDKhdeovZ57M59JFlvV4m9Tl0bwZeyhR6Mg5Cosa4mxZeC29A8M_NhnIknvF9RD6itDNA2dlm58LRYcI0dnxKjSVulBjkfbPcpfail3kFt4tTEYJvHdqGhmt_T4YQ="
+        },
+        {
+          "title": "breakingdefense.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFu6An8kzJA0uJ401m5ECNXtIp1RgmPciSblxBnti9sLWfzuhvvqaTnzfCVklQu_tzaExzPmdlcuHGZl7mrRatZ6rEvzhPw8kUzydHoRffE9K-fwef8J34ClcjR97G_D4rwhYHHyXKLdwLk614DHQQQBUXeK39mP1Epz1Y_9-PmTNkG4BUQT4YAXbwahb1GT3lLtP96vxs0d7SDJ9Rsl96cstSvw6eztl8S7yE23rUN"
+        },
+        {
+          "title": "kyivindependent.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFO8W4H3Tn5hyc2X-F-2h89hU3ZjTp-45X0wQtFQndGV1m3s9sniRzRvG9cA_H1WJUjtEqxruLT28x6wtM41LXkwwaHnnNgMvLXxoKn7z4lKX4jlpZRTfyFwe5ox-fY1SHyg8nahBjHUf0wl1VzyTgVygqsBttV1YoNAmM1PfNR-qfhvksqLuQbpS1hutbhHMXeKuRk0EJ3PY0a5FTqYmWvguUSoYc_WTCb5_mNXSf-c8q51S86EkM2"
         }
       ]
     },
     {
-      "id": "2026-10-31-technology",
+      "id": "2026-11-01-technology",
       "category": "technology",
       "categoryLabel": "Technology",
-      "headline": "Hackers Steal $6.3 Billion from Binance in Largest Crypto Breach in History",
-      "summary": "Cryptocurrency exchange Binance disclosed that cyberattackers compromised internal systems and stole approximately $6.3 billion in digital assets. Security researchers linked the record-setting heist to North Korean state-sponsored hackers, making this major incident a primary global cybersecurity story today.",
-      "question": "What measures do you think financial platforms should implement to defend against increasingly sophisticated state-sponsored cyberattacks?",
+      "headline": "Hackers Steal Record $6.3 Billion from Binance in Massive Cyberattack",
+      "summary": "Cryptocurrency exchange Binance temporarily suspended withdrawals after cybercriminals stole over six billion dollars in digital assets in the largest cyber theft on record. The platform pledged to fully reimburse affected users as cybersecurity experts investigate how attackers breached the exchange's security framework.",
+      "question": "Do you think cryptocurrency platforms can ever become completely safe from sophisticated cyberattacks?",
       "coachLeads": {
-        "friendly": "Hey there! Have you heard about the massive cyberattack on Binance that everyone is talking about today?",
-        "energetic": "You won't believe the huge story breaking in cybersecurity right now! Let's dive straight into what happened!",
-        "calm": "There is a major update in cybersecurity today regarding a record-breaking breach at Binance. Shall we take a look at the details together?",
-        "direct": "Binance just reported the largest cryptocurrency hack in history, with losses exceeding six billion dollars. Here is what you should know."
+        "friendly": "Hey! Have you heard about the massive crypto heist making headlines today?",
+        "energetic": "You won't believe this breaking news—hackers just pulled off a record-breaking multi-billion dollar cyber theft!",
+        "calm": "There is an important cybersecurity story developing right now regarding a major breach in the crypto market.",
+        "direct": "Hackers just stole over six billion dollars from Binance in the largest crypto heist in history."
       },
       "sources": [
         {
-          "title": "cybersecuritydive.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGDi9Gq59440TpEYJKnL8qIZdxg1XxruqVsDNT-xQFFuAqjz46ynvYhTnwu0IYNYzwiAamlDUmD7w6m80pP2pq4Yl4xxeQoQEvmrSpOo7oWv16Hl4RIGr5TuGdUSVMlGAOiImW5YaEjPwKE0Q6Ro_dtuIFjAfQLuuitZDMzHsCCQBJ126UtjFHBVxGTucp7-0Q="
-        },
-        {
-          "title": "inc.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEqCl56Sn556nFFwWiMvr6x3idJQ_RRVFqOGCVPTeiag7swn8pamH_WLdfQhcZzjBFyZxzBnGBp2Skwk89HeWQijzsJNAiz8By3Y8xFpR4vdKD6hW7uLJsK8CFuc2mxtwQJcKBG1JxodG1Vti8PMc719k7yLCV2Oo45BiRhfF62ALMYnAfjRuGceZrRv__9w7Z5_ecfydarh4nIIQW0vDES6_F1oRDf8hinhsVJAh7MDt0kJqi5_Uz_"
+          "title": "japantimes.co.jp",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEluEiC-PdOGV4e9xiPBS20zddxRBMxnXt7FPzTmfHhCSigqEazOCfubjF7AVDB1AppyTd0SJhe2zsHwpwRcnACbIRmcOrsU1SMtKbFKDyabUYVU-VkdMP3fYF7b3-uUdZ-PhzZoMFYCMxAPOO6aVdNuHLttxHEnsiAZp_v2LVPHXMIjUdfkjY="
         }
       ]
     },
     {
-      "id": "2026-10-31-sports",
+      "id": "2026-11-01-sports",
       "category": "sports",
       "categoryLabel": "Sports",
-      "headline": "Court Overturns Ban on Russian Teams in International Ice Hockey",
-      "summary": "On October 30, 2026, the Court of Arbitration for Sport ruled that the International Ice Hockey Federation must readmit Russian national teams to five upcoming tournaments in the 2026–2027 season. The decision represents a major legal turning point in international sports governance following the broad suspensions imposed after the 2022 invasion of Ukraine.",
-      "question": "Do you believe international sports governing bodies should separate athletic competitions from global political conflicts?",
+      "headline": "Milwaukee Brewers Win First World Series Championship in Franchise History",
+      "summary": "The Milwaukee Brewers defeated the Tampa Bay Rays 4-1 in Game 5 to secure the first World Series title in their 57-year history. Catcher William Contreras earned Series MVP honors after helping lead the team through a dominant 11-2 postseason run.",
+      "question": "Why do you think sports victories mean so much to fans who have waited decades for a championship?",
       "coachLeads": {
-        "friendly": "Hey there! Have you heard about the big international sports court decision that just came out?",
-        "energetic": "Check this out—a major court ruling just shook up the world of international sports!",
-        "calm": "There is a significant legal update from the Court of Arbitration for Sport that is worth reviewing today.",
-        "direct": "The sports arbitration court just overturned the ban on Russian ice hockey teams, and it is a major decision worth discussing."
+        "friendly": "Hey, have you heard the big sports news yet? A major championship drought was just broken!",
+        "energetic": "What an incredible moment for sports fans everywhere! The Milwaukee Brewers just won their first-ever World Series title!",
+        "calm": "A historic sports victory just wrapped up this week. It is a great story about long-term dedication finally paying off.",
+        "direct": "The Milwaukee Brewers just captured their first World Series in franchise history. Let's discuss why this win is such a big deal."
       },
       "sources": [
         {
-          "title": "tas-cas.org",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGae8E6UEgej5t7DKAYgOQa7RQyQmDdr4f9Fxj_UCHQI-OZLh4qJn6SzNAtowJyN0ifCxYMEQcFupurg26S0n0bS77JwKicFQbmNkWmvkpDMswmodVrb6Tqk792WEHpxLorTauRhQxuUCpT34ujf4Vo5xfXuEiyX-tzjl7y2OIjaTA6deWuPZEXi2OTlZEQFGrDEXA75-Mp7-r4sXTHQR1x4Pwh3gH58I-rE5kEeAMgFB0kjIsQaFzoTw=="
+          "title": "cnn.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEmRBH6efbua6goRNq8oiQcimCv8a2Hs118wVmcLaS07_FcBHsdNVY43Rb9Pj6zlGARkdVmLBIGuJPDmBo-UPBaa_YcqZ6gFPxqFf3nznoCaY6MovlMqsBo8aaQ7I1oOEfHaeqruJEXqUxBF9A-tW6yE-bkykY79XE="
         },
         {
-          "title": "meduza.io",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHtODwDWL4UCQOmDezqIS2saGWLjMvPK6kWiWjDvluXjyjqNWjYBvI6bOTYDpCfNnyaVzhxbNTBN51xEZTkmElV8K3fSIq5Usc7GDiKC5ni6IEs4UPDK1t8foEbDccij2QtM_MbmYDSAfX_WDQo6F14UwzCTG3dENnr3tfqGhRGB2oOUfqsmPuXYBZsS-uOOEH-vMFyUGsd4Voa7JHvHWQvZ15llSUHuH08gCUYw8b8zAXI17de4fWeXR7KSZdrRTFdnamHgPtb9UKZ1J_iFDHB270_-9CiJGM="
+          "title": "a47news.ai",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEMnhZiPF910HtnbDK8X7gYoywqTsW7PonGw50zvmCC-a4TMrNehXkLf1glcWi6g25KwtkzRLFucYJ5SKMnT7wopsG0lrQa_ARYmlATDAn7MRXuxiyVx6AoPdJG3f98Wvvc4Jm8Zlwi66RsgJVrAdSU3PxCOQfKFwXXHpkPuLRNk08GQh2QxPBPU4Y="
         },
         {
-          "title": "russianmachineneverbreaks.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHgHkU80V_GaCP0mnYwGGeAjZoYr3ZJV9sddtA1vgai4ZRoJnxpOKYKZ7TJfWz0A462_KEsl4is1lNl76-ct0_WWBP_OMN0TTFKIl-HK7uqErpeyW3u6WqX_oGhcDqIz2Y53p9eN7xrAqS-FXjk8JQr3jUQK8633rX5Ncng4Vu4h1CB6pE2cantXY_oh7cApzN9asjZkAKv5M0QDZ5aZjoGagxrZ9j9Ht0Gp8IgmUGl"
+          "title": "pbswisconsin.org",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE1Nf8Hc0HoGhvPtzT5_bN1rsTXTq2qzvdrXUakrWO233r273xbJaaOKR4KVuPSjbn7q2sxBeFtioAmexY7a-rhxJMjB59jII_841upGI4ywjiq0pw83RtYAYyaaDKl3li5yiaAZT84Dd9LaOPj2DlL72GY-BqkRZW44xD5fknBEQasFVgjxfT5JNlBoYPvXph-6FEU4-otMvquQYnv2khONtzenc3_PyFAAhE="
         }
       ]
     },
     {
-      "id": "2026-10-31-entertainment",
+      "id": "2026-11-01-entertainment",
       "category": "entertainment",
       "categoryLabel": "Entertainment",
-      "headline": "Global Tributes Pour In Following the Death of Acting Legend Sir Patrick Stewart at 86",
-      "summary": "Acclaimed stage and screen actor Sir Patrick Stewart, beloved for his iconic roles as Captain Jean-Luc Picard in Star Trek and Professor Charles Xavier in X-Men, has died at age 86 following a battle with Alzheimer's disease and Lewy body dementia. Tributes have flooded in from co-stars, filmmakers, and fans worldwide as the global entertainment community honors his extraordinary six-decade career.",
-      "question": "Which of Sir Patrick Stewart's famous roles or performances made the strongest impression on you, and why do you think he was so universally respected?",
+      "headline": "General Hospital and The Kelly Clarkson Show Win Big at the 53rd Daytime Emmy Awards",
+      "summary": "The 53rd Daytime Emmy Awards took place in Los Angeles, with ABC's long-running soap opera General Hospital taking home Outstanding Daytime Drama Series for the sixth consecutive year. The Kelly Clarkson Show captured Outstanding Daytime Talk Series, alongside key lead acting victories for Tamara Tunie and Scott Clifton.",
+      "question": "Do you enjoy watching television drama series or award shows, and what makes a show stay popular for decades?",
       "coachLeads": {
-        "friendly": "Hey! Have you heard the news about Sir Patrick Stewart's passing? So many people around the world are sharing their favorite memories of his legendary acting career today.",
-        "energetic": "Did you see the huge wave of tributes pouring in for Sir Patrick Stewart today? From Star Trek to X-Men, his impact on pop culture and theater is incredible to talk about!",
-        "calm": "Sir Patrick Stewart has passed away at eighty-six, bringing a reflective moment to the film and television world. It is a good time to look back on his remarkable legacy.",
-        "direct": "Sir Patrick Stewart has died at age eighty-six. Let's discuss his iconic career and what made his work so memorable to fans across generations."
+        "friendly": "Hey, did you catch the news about the Daytime Emmy Awards this weekend?",
+        "energetic": "The Daytime Emmys just wrapped up, and there were some incredible historic wins!",
+        "calm": "If you follow entertainment news, the results of the 53rd Daytime Emmy Awards were just announced.",
+        "direct": "The 53rd Daytime Emmy Award winners were revealed, with General Hospital and The Kelly Clarkson Show topping the major categories."
       },
       "sources": [
         {
-          "title": "theguardian.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGKF91LZBk1jOEZHex2_RZWwnQZp65FcVIFMt2t6n7TElZ0NwYY5tTbEEbtmOSS8y_WWwrANmc1eaPN5Fq10kj9qxYZGm37huoN9j1qG4Fx4ReceXa8q3Y26iuiAXqW-eHe_CG8v1Z241TMc_w7EQwS_vB1DrpYVsKQ"
+          "title": "wikipedia.org",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF7XgdftqgFpUXWi-SvzjQitK0GtC6QF5xHDem60DfeEumTYA_4wzg0T-LYgmni9Bof_a5Wej0n1pb2CDkoCVj1VM14kYQayj00tDGe4ORsknzbiLzbJPsWuSFlQ4VqWcNf5iWItv9Hm6ysx8M="
         },
         {
-          "title": "legacy.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGPP54ahK1WnzjwkmBbLlSgNNu-AJYgIN49iU4zm31LJ9VqVu3z49hbXj6IMlAMCUKWsfZ88k5tbtUNTE9rf2PthDl-Qu-UBxxJP80RX8szLAsW5nfAcErwkI9WFuLyzo14G3ItD-Nx8m_Ej5o_Hnwocw=="
+          "title": "tvline.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHtutQ1JS5Yvbf9C7CJIr-dvHFiEYaElUs0SoEn9f3Z5osbSwj0u3a1Dk-g-GYVy4F-w1Qgfae6lXBaxf_CqHTTG-kVKyhJrr3-kS6xjhiODORrIAAHVncfkCIztrATs3hOjolQRCqKysbmP7D0hlbhZaiPq2HGMH7sHFgQt0NDkpKCxezafg=="
         },
         {
-          "title": "variety.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHHA1iqrZ-chxZ0-_Io58botkS9upgfUyAR5czLOMNtqTnEc-FLLcpWTOYhU9jIfvsexAYcZ5O509TuyYNX4pkyuVcqcpPc2eDS1P4dowZ1Zt14teiJvwGmcO129YU-MC2eUQz14TyafGYaxgg04E4OWe_TDDasAGagIryEvkjaMWFcuhpNfBO6-lCqrR3g-P8eZnqsjp9tmvua"
+          "title": "justjared.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHZoRMKZpsFSDCw5eaQRNj3Ja9ZApcgj2dv5UNSdHHZTtWBa-vkXPIMORlcN-42dMyjmH7DqxWSLsRDnS5x90-sq8Ik3AfkVCTcfAqt8m8AI7nsmsoyhfhZxtPa77AgAf4dioyBCB-o5duTy0-Ehnm_gEuakg8BCLMSzZk9wz-l036OubxTW5qWI7H1rf-CHdTn1w=="
         }
       ]
     }
