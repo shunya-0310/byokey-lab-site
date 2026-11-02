@@ -1,112 +1,108 @@
 {
   "schemaVersion": 1,
   "status": "live",
-  "date": "2026-11-01",
-  "generatedAt": "2026-11-01T00:08:10.603Z",
+  "date": "2026-11-02",
+  "generatedAt": "2026-11-02T00:44:52.256Z",
   "model": "gemini-3.6-flash",
   "fallbackCategories": [],
   "items": [
     {
-      "id": "2026-11-01-politics_economy",
+      "id": "2026-11-02-politics_economy",
       "category": "politics_economy",
       "categoryLabel": "Politics & Economy",
-      "headline": "U.S. Approves $2.1 Billion Patriot Missile Sale to Ukraine",
-      "summary": "The U.S. State Department has approved a potential $2.1 billion sale of 500 Patriot air defense missiles to Ukraine, with funding provided by European allies and Canada. Ukrainian President Volodymyr Zelenskyy welcomed the decision but warned that deliveries could take years when interceptors are urgently needed to defend against winter attacks.",
-      "question": "How do you think international allies should balance long-term military supply contracts with immediate defensive needs during a conflict?",
+      "headline": "G20 Foreign Ministers Conclude Atlanta Summit Without Consensus on Key Issues",
+      "summary": "Group of 20 foreign ministers concluded a two-day diplomatic summit in Atlanta without issuing a joint communique due to persistent disagreements over geopolitical conflicts and economic security. Hosted by U.S. Secretary of State Marco Rubio, the high-level talks focused on supply chain resilience and navigation rights but underscored deep global divisions.",
+      "question": "How do you think global leaders should balance competing national interests with international cooperation during diplomatic summits?",
       "coachLeads": {
-        "friendly": "Hey, have you heard about the latest defense deal between the U.S. and Ukraine? It's a really interesting international story worth chatting about today.",
-        "energetic": "Big news in world diplomacy just broke! The U.S. approved a major missile package for Ukraine, and there's a lot to unpack here.",
-        "calm": "A major decision on global defense policy was announced today. It highlights some important challenges in international diplomacy that are worth reflecting on.",
-        "direct": "The U.S. just approved a $2.1 billion missile sale to Ukraine. Let's look at the facts and talk about why the timing is causing debate."
+        "friendly": "Hey, have you heard about the latest G20 diplomatic gathering in Atlanta? It is a really interesting story about how world leaders navigate global trade and political differences.",
+        "energetic": "Check this out! Top diplomats from the world's major economies just wrapped up G20 talks in Atlanta, and the outcome is sparking big conversations!",
+        "calm": "This is a meaningful diplomatic update worth considering. Foreign ministers from the G20 recently met in Atlanta to address complex global economic and security issues.",
+        "direct": "G20 foreign ministers just finished their two-day meeting in Atlanta without reaching a consensus. Let's talk about what this means for international relations."
       },
       "sources": [
         {
-          "title": "cbsnews.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGP8-oic5jD74pcQA5USiXD6WHNkJDluGjefowey8m10lV-49Z8KIvWri3e1M-k6xqDKhdeovZ57M59JFlvV4m9Tl0bwZeyhR6Mg5Cosa4mxZeC29A8M_NhnIknvF9RD6itDNA2dlm58LRYcI0dnxKjSVulBjkfbPcpfail3kFt4tTEYJvHdqGhmt_T4YQ="
+          "title": "nhandan.vn",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGObAQRcpHWxFEJ4oplK0y1v2yMxAHpshHwUgpRklDE-Xs0zQv6oj9g0Vwzam3nWAnIAZ9XvVHgAS56YV2eTvrTwPacxv5-uXl4Exsc9qrMpjs4WSL23fuuSvwpXiekzjBGpAO19IqzDVOwVPWSappqY2flPnYY70Z5kw=="
         },
         {
-          "title": "breakingdefense.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFu6An8kzJA0uJ401m5ECNXtIp1RgmPciSblxBnti9sLWfzuhvvqaTnzfCVklQu_tzaExzPmdlcuHGZl7mrRatZ6rEvzhPw8kUzydHoRffE9K-fwef8J34ClcjR97G_D4rwhYHHyXKLdwLk614DHQQQBUXeK39mP1Epz1Y_9-PmTNkG4BUQT4YAXbwahb1GT3lLtP96vxs0d7SDJ9Rsl96cstSvw6eztl8S7yE23rUN"
+          "title": "apnews.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFhGiF1pJ_RPHoyWKFBVtgdM1vT5rha61_x_jNYNwaeP_1iQcDKy-unJ5nrmuNQUyf-GZVFVS4HG8IetcSDA4MGZa_u3eiSYqL8E50fx1sXj-3xa17Lq4PYdliBC-4BPDZB1zzf1wfa39BLM1crZp4ykZVkmKUV9JZAijDn36oKoFU9lZDJGDYiehC7xSvRl1_g"
         },
         {
-          "title": "kyivindependent.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFO8W4H3Tn5hyc2X-F-2h89hU3ZjTp-45X0wQtFQndGV1m3s9sniRzRvG9cA_H1WJUjtEqxruLT28x6wtM41LXkwwaHnnNgMvLXxoKn7z4lKX4jlpZRTfyFwe5ox-fY1SHyg8nahBjHUf0wl1VzyTgVygqsBttV1YoNAmM1PfNR-qfhvksqLuQbpS1hutbhHMXeKuRk0EJ3PY0a5FTqYmWvguUSoYc_WTCb5_mNXSf-c8q51S86EkM2"
+          "title": "scmp.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFux8brCcNKt5oWJxib2TlKoWHB9TkL39uCPSHN_nDTLKYfP7JMadXXSgVeLdBS1T7PnLfHwNjUkD5YcjNawu5IpdC2r7xAIUGqlaxxwXhPc1B4tRnh56KI571GL-ZIczd4epFa2K2TJ3bJ7K9Wl1dO9jj8uYcQvAIXInd0YkDr5XQYoxWoQ5so_lHyBY8ectG2yiWAq5sbmuuS3CMpFWucHfQyZENLZf2BNfDLOKZPlMubeIckgc0="
         }
       ]
     },
     {
-      "id": "2026-11-01-technology",
+      "id": "2026-11-02-technology",
       "category": "technology",
       "categoryLabel": "Technology",
-      "headline": "Hackers Steal Record $6.3 Billion from Binance in Massive Cyberattack",
-      "summary": "Cryptocurrency exchange Binance temporarily suspended withdrawals after cybercriminals stole over six billion dollars in digital assets in the largest cyber theft on record. The platform pledged to fully reimburse affected users as cybersecurity experts investigate how attackers breached the exchange's security framework.",
-      "question": "Do you think cryptocurrency platforms can ever become completely safe from sophisticated cyberattacks?",
+      "headline": "NASA Volunteers Exit 378-Day Simulated Mars Habitat in Houston",
+      "summary": "Four volunteer crew members emerged from a 3D-printed facility at NASA's Johnson Space Center after spending 378 days living in simulated Martian conditions. The completion of the yearlong CHAPEA mission provides researchers with essential data on crew health, isolation stress, and resource management for future deep space exploration.",
+      "question": "Would you be willing to spend over a year inside a isolated habitat to help scientists prepare for space travel?",
       "coachLeads": {
-        "friendly": "Hey! Have you heard about the massive crypto heist making headlines today?",
-        "energetic": "You won't believe this breaking news—hackers just pulled off a record-breaking multi-billion dollar cyber theft!",
-        "calm": "There is an important cybersecurity story developing right now regarding a major breach in the crypto market.",
-        "direct": "Hackers just stole over six billion dollars from Binance in the largest crypto heist in history."
+        "friendly": "Hey, have you heard about this amazing space study? Four volunteers just finished spending over a year inside a simulated Mars habitat!",
+        "energetic": "Imagine spending 378 days inside a 3D-printed home to test life on Mars! NASA just wrapped up a major yearlong simulation, and it's incredible to think about.",
+        "calm": "NASA's second long-term Mars ground simulation officially concluded after 378 days. The experiment offers fascinating insights into how humans adapt to long-term isolation.",
+        "direct": "Four volunteers just emerged from NASA's 378-day simulated Mars habitat in Houston. This is a major milestone for preparing astronauts for real planetary missions."
       },
       "sources": [
         {
-          "title": "japantimes.co.jp",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEluEiC-PdOGV4e9xiPBS20zddxRBMxnXt7FPzTmfHhCSigqEazOCfubjF7AVDB1AppyTd0SJhe2zsHwpwRcnACbIRmcOrsU1SMtKbFKDyabUYVU-VkdMP3fYF7b3-uUdZ-PhzZoMFYCMxAPOO6aVdNuHLttxHEnsiAZp_v2LVPHXMIjUdfkjY="
+          "title": "Google News: Technology",
+          "url": "https://news.google.com/search?q=Technology%20top%20news%202026-11-02&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     },
     {
-      "id": "2026-11-01-sports",
+      "id": "2026-11-02-sports",
       "category": "sports",
       "categoryLabel": "Sports",
-      "headline": "Milwaukee Brewers Win First World Series Championship in Franchise History",
-      "summary": "The Milwaukee Brewers defeated the Tampa Bay Rays 4-1 in Game 5 to secure the first World Series title in their 57-year history. Catcher William Contreras earned Series MVP honors after helping lead the team through a dominant 11-2 postseason run.",
-      "question": "Why do you think sports victories mean so much to fans who have waited decades for a championship?",
+      "headline": "Kimi Antonelli Becomes Youngest-Ever Formula 1 Champion at Mexico City Grand Prix",
+      "summary": "Twenty-year-old Mercedes driver Kimi Antonelli finished third at the Mexico City Grand Prix on Sunday to secure his maiden Formula 1 Drivers' Championship. By clinching the title with four races remaining, Antonelli broke Sebastian Vettel's long-standing record to become the youngest world champion in Formula 1 history.",
+      "question": "How do you think exceptionally young athletes handle the immense pressure of competing at the pinnacle of international sports?",
       "coachLeads": {
-        "friendly": "Hey, have you heard the big sports news yet? A major championship drought was just broken!",
-        "energetic": "What an incredible moment for sports fans everywhere! The Milwaukee Brewers just won their first-ever World Series title!",
-        "calm": "A historic sports victory just wrapped up this week. It is a great story about long-term dedication finally paying off.",
-        "direct": "The Milwaukee Brewers just captured their first World Series in franchise history. Let's discuss why this win is such a big deal."
+        "friendly": "Hey, have you heard the big news from the motorsport world today? A 20-year-old driver just made history by becoming the youngest Formula 1 champion ever!",
+        "energetic": "You won't believe what just happened in Mexico City! Kimi Antonelli smashed an all-time Formula 1 record to claim the world title at just 20 years old!",
+        "calm": "There was a historic moment in international sports today worth discussing. A young driver named Kimi Antonelli officially clinched his first Formula 1 world championship.",
+        "direct": "Kimi Antonelli just made history as the youngest Formula 1 world champion. Let me know your thoughts on this milestone."
       },
       "sources": [
         {
-          "title": "cnn.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEmRBH6efbua6goRNq8oiQcimCv8a2Hs118wVmcLaS07_FcBHsdNVY43Rb9Pj6zlGARkdVmLBIGuJPDmBo-UPBaa_YcqZ6gFPxqFf3nznoCaY6MovlMqsBo8aaQ7I1oOEfHaeqruJEXqUxBF9A-tW6yE-bkykY79XE="
+          "title": "formula1.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHz0503eC0mXcGlx9Fgbpt8wibHw0BEYGHCu-HfSPoqs1YVNgPnOhXNvY2BJpeQ8fNYOhimuHkaDTWMTmx2g5uPjqDRX3xokfUsgEaskX04_IikqYrJcE3IF-8-uLmfKixZ2ZHiDABM4Lhbe5yYz8RiEg1mJBtnSNDTFVPSI4CLDiTgv-QX5zSYsKjeRE89Hw8vhSAT_HLRSRFNaNf-0Cc9-_B4Wa10tkZqZ7pwyKkk_yAdPIPwE_JkfGTu76goCtdq-SUG89VQv2PYw1xtf3b1MgSkiGpk"
         },
         {
-          "title": "a47news.ai",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEMnhZiPF910HtnbDK8X7gYoywqTsW7PonGw50zvmCC-a4TMrNehXkLf1glcWi6g25KwtkzRLFucYJ5SKMnT7wopsG0lrQa_ARYmlATDAn7MRXuxiyVx6AoPdJG3f98Wvvc4Jm8Zlwi66RsgJVrAdSU3PxCOQfKFwXXHpkPuLRNk08GQh2QxPBPU4Y="
+          "title": "theguardian.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFaejcRN3qrqkZsRjBsNdk7P5a0mwfH6n_4hgsFnWN7uLZ9cKNs7l1aObisk9fiNi4l6zIY3ZdM9aZwkMs2Ex_Xt6-RYd2CU5-7bj5BtKobCYaF-toTPFuJ46URoikZpq1ruo4XQVhg_SsPtFfr0W_V_CzrIYSZGR1gOT7SjTRbeEeLUylYw_0xYG1fxeM1xcnjlw=="
         },
         {
-          "title": "pbswisconsin.org",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE1Nf8Hc0HoGhvPtzT5_bN1rsTXTq2qzvdrXUakrWO233r273xbJaaOKR4KVuPSjbn7q2sxBeFtioAmexY7a-rhxJMjB59jII_841upGI4ywjiq0pw83RtYAYyaaDKl3li5yiaAZT84Dd9LaOPj2DlL72GY-BqkRZW44xD5fknBEQasFVgjxfT5JNlBoYPvXph-6FEU4-otMvquQYnv2khONtzenc3_PyFAAhE="
+          "title": "racingnews365.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFssb-rgFOhOA6N13gMAkQY-vJ9qJPVzS40VU95zwzfbU47VP1BQRsxfTSkOT_Kfy0vqV1VqNfAGtDphH8veQhxABGACfoaWWRMFfWNykA3WFrqoY1n3p9xg610pF4Qkz7QHslgYTzbaPt-nzriY0uH4lBhIuZ5"
         }
       ]
     },
     {
-      "id": "2026-11-01-entertainment",
+      "id": "2026-11-02-entertainment",
       "category": "entertainment",
       "categoryLabel": "Entertainment",
-      "headline": "General Hospital and The Kelly Clarkson Show Win Big at the 53rd Daytime Emmy Awards",
-      "summary": "The 53rd Daytime Emmy Awards took place in Los Angeles, with ABC's long-running soap opera General Hospital taking home Outstanding Daytime Drama Series for the sixth consecutive year. The Kelly Clarkson Show captured Outstanding Daytime Talk Series, alongside key lead acting victories for Tamara Tunie and Scott Clifton.",
-      "question": "Do you enjoy watching television drama series or award shows, and what makes a show stay popular for decades?",
+      "headline": "Wu-Tang Clan to Headline Detroit Lions Thanksgiving Halftime Show Produced by Eminem",
+      "summary": "The Detroit Lions announced that legendary hip-hop group Wu-Tang Clan will headline the halftime show for the 87th annual Thanksgiving Day game on November 26. Executive produced by Eminem and Paul Rosenberg, the high-profile performance comes as the group wraps its global farewell tour and prepares for induction into the Rock and Roll Hall of Fame.",
+      "question": "What do you think makes a sports halftime show performance memorable for music fans?",
       "coachLeads": {
-        "friendly": "Hey, did you catch the news about the Daytime Emmy Awards this weekend?",
-        "energetic": "The Daytime Emmys just wrapped up, and there were some incredible historic wins!",
-        "calm": "If you follow entertainment news, the results of the 53rd Daytime Emmy Awards were just announced.",
-        "direct": "The 53rd Daytime Emmy Award winners were revealed, with General Hospital and The Kelly Clarkson Show topping the major categories."
+        "friendly": "Hey there! Have you heard the big music news about this year's Thanksgiving halftime show?",
+        "energetic": "Check this out! Legendary rap group Wu-Tang Clan is taking over the Thanksgiving halftime stage!",
+        "calm": "There's an interesting piece of music news today about the upcoming Thanksgiving halftime show.",
+        "direct": "Wu-Tang Clan was just announced as the halftime headliner for the Detroit Lions Thanksgiving game."
       },
       "sources": [
         {
-          "title": "wikipedia.org",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF7XgdftqgFpUXWi-SvzjQitK0GtC6QF5xHDem60DfeEumTYA_4wzg0T-LYgmni9Bof_a5Wej0n1pb2CDkoCVj1VM14kYQayj00tDGe4ORsknzbiLzbJPsWuSFlQ4VqWcNf5iWItv9Hm6ysx8M="
+          "title": "nfl.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQExBiAfZcy0dlu0WKHhrjrAu_GZrtybN0f68iEwmHw6GqAkRSzPQQBDj8tkKSxvZSXdOL90844mPR9-YL66fgkzgpJkPdVelDmIUwIOYGGkDIRXa67PSUFT0LFDOWuD1kczv9t6rWP9MhaHfOyaMdrfuHJSdwt6mXcDIe89_Ck7p050u-9TRpkv63TNXWw="
         },
         {
-          "title": "tvline.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHtutQ1JS5Yvbf9C7CJIr-dvHFiEYaElUs0SoEn9f3Z5osbSwj0u3a1Dk-g-GYVy4F-w1Qgfae6lXBaxf_CqHTTG-kVKyhJrr3-kS6xjhiODORrIAAHVncfkCIztrATs3hOjolQRCqKysbmP7D0hlbhZaiPq2HGMH7sHFgQt0NDkpKCxezafg=="
-        },
-        {
-          "title": "justjared.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHZoRMKZpsFSDCw5eaQRNj3Ja9ZApcgj2dv5UNSdHHZTtWBa-vkXPIMORlcN-42dMyjmH7DqxWSLsRDnS5x90-sq8Ik3AfkVCTcfAqt8m8AI7nsmsoyhfhZxtPa77AgAf4dioyBCB-o5duTy0-Ehnm_gEuakg8BCLMSzZk9wz-l036OubxTW5qWI7H1rf-CHdTn1w=="
+          "title": "consequence.net",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEjlJ59sX6HM9wFkVmIQYQepb10Xf3iZXWvH6kY9gcbJacGaEaxxa1xaXfs_RBhyIqyrPkrBuutaxhiD0p-wY2svyOtjsCwMLJcrVtcvS0XEFQ7R3D_spBqNEMlY7QIlwRaIeKHkcOuQj5ODUrO6HxPACgPqwUP6XXphPb7me9CHnaYoyZ3XbUy"
         }
       ]
     }
