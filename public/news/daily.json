@@ -1,108 +1,104 @@
 {
   "schemaVersion": 1,
   "status": "live",
-  "date": "2026-11-02",
-  "generatedAt": "2026-11-02T00:44:52.256Z",
+  "date": "2026-11-03",
+  "generatedAt": "2026-11-03T02:55:13.219Z",
   "model": "gemini-3.6-flash",
   "fallbackCategories": [],
   "items": [
     {
-      "id": "2026-11-02-politics_economy",
+      "id": "2026-11-03-politics_economy",
       "category": "politics_economy",
       "categoryLabel": "Politics & Economy",
-      "headline": "G20 Foreign Ministers Conclude Atlanta Summit Without Consensus on Key Issues",
-      "summary": "Group of 20 foreign ministers concluded a two-day diplomatic summit in Atlanta without issuing a joint communique due to persistent disagreements over geopolitical conflicts and economic security. Hosted by U.S. Secretary of State Marco Rubio, the high-level talks focused on supply chain resilience and navigation rights but underscored deep global divisions.",
-      "question": "How do you think global leaders should balance competing national interests with international cooperation during diplomatic summits?",
+      "headline": "Global Oil Prices Drop as U.S.-Iran Diplomatic Hopes Rise",
+      "summary": "Global crude oil prices fell over six percent after reports indicated the United States is pursuing diplomatic avenues rather than immediate military action regarding Iran. The price drop reflects market relief over potential easing of conflict and shipping disruptions in the Strait of Hormuz.",
+      "question": "How do changing oil prices typically affect daily life or consumer decisions in your country?",
       "coachLeads": {
-        "friendly": "Hey, have you heard about the latest G20 diplomatic gathering in Atlanta? It is a really interesting story about how world leaders navigate global trade and political differences.",
-        "energetic": "Check this out! Top diplomats from the world's major economies just wrapped up G20 talks in Atlanta, and the outcome is sparking big conversations!",
-        "calm": "This is a meaningful diplomatic update worth considering. Foreign ministers from the G20 recently met in Atlanta to address complex global economic and security issues.",
-        "direct": "G20 foreign ministers just finished their two-day meeting in Atlanta without reaching a consensus. Let's talk about what this means for international relations."
+        "friendly": "Hey, have you caught today's news about global oil prices dropping? It is really interesting to see how diplomatic talks can shift global markets so fast.",
+        "energetic": "Check this out! Oil prices just took a huge dive thanks to fresh hopes for diplomatic progress!",
+        "calm": "Global crude prices fell significantly as diplomatic efforts regarding Iran took center stage today. It feels like a meaningful moment to discuss how international diplomacy shapes the world economy.",
+        "direct": "Crude oil prices dropped over six percent following news of potential diplomatic efforts between the U.S. and Iran. What is your take on how energy prices influence global stability?"
       },
       "sources": [
         {
-          "title": "nhandan.vn",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGObAQRcpHWxFEJ4oplK0y1v2yMxAHpshHwUgpRklDE-Xs0zQv6oj9g0Vwzam3nWAnIAZ9XvVHgAS56YV2eTvrTwPacxv5-uXl4Exsc9qrMpjs4WSL23fuuSvwpXiekzjBGpAO19IqzDVOwVPWSappqY2flPnYY70Z5kw=="
-        },
-        {
-          "title": "apnews.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFhGiF1pJ_RPHoyWKFBVtgdM1vT5rha61_x_jNYNwaeP_1iQcDKy-unJ5nrmuNQUyf-GZVFVS4HG8IetcSDA4MGZa_u3eiSYqL8E50fx1sXj-3xa17Lq4PYdliBC-4BPDZB1zzf1wfa39BLM1crZp4ykZVkmKUV9JZAijDn36oKoFU9lZDJGDYiehC7xSvRl1_g"
-        },
-        {
-          "title": "scmp.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFux8brCcNKt5oWJxib2TlKoWHB9TkL39uCPSHN_nDTLKYfP7JMadXXSgVeLdBS1T7PnLfHwNjUkD5YcjNawu5IpdC2r7xAIUGqlaxxwXhPc1B4tRnh56KI571GL-ZIczd4epFa2K2TJ3bJ7K9Wl1dO9jj8uYcQvAIXInd0YkDr5XQYoxWoQ5so_lHyBY8ectG2yiWAq5sbmuuS3CMpFWucHfQyZENLZf2BNfDLOKZPlMubeIckgc0="
-        }
-      ]
-    },
-    {
-      "id": "2026-11-02-technology",
-      "category": "technology",
-      "categoryLabel": "Technology",
-      "headline": "NASA Volunteers Exit 378-Day Simulated Mars Habitat in Houston",
-      "summary": "Four volunteer crew members emerged from a 3D-printed facility at NASA's Johnson Space Center after spending 378 days living in simulated Martian conditions. The completion of the yearlong CHAPEA mission provides researchers with essential data on crew health, isolation stress, and resource management for future deep space exploration.",
-      "question": "Would you be willing to spend over a year inside a isolated habitat to help scientists prepare for space travel?",
-      "coachLeads": {
-        "friendly": "Hey, have you heard about this amazing space study? Four volunteers just finished spending over a year inside a simulated Mars habitat!",
-        "energetic": "Imagine spending 378 days inside a 3D-printed home to test life on Mars! NASA just wrapped up a major yearlong simulation, and it's incredible to think about.",
-        "calm": "NASA's second long-term Mars ground simulation officially concluded after 378 days. The experiment offers fascinating insights into how humans adapt to long-term isolation.",
-        "direct": "Four volunteers just emerged from NASA's 378-day simulated Mars habitat in Houston. This is a major milestone for preparing astronauts for real planetary missions."
-      },
-      "sources": [
-        {
-          "title": "Google News: Technology",
-          "url": "https://news.google.com/search?q=Technology%20top%20news%202026-11-02&hl=en-US&gl=US&ceid=US:en"
-        }
-      ]
-    },
-    {
-      "id": "2026-11-02-sports",
-      "category": "sports",
-      "categoryLabel": "Sports",
-      "headline": "Kimi Antonelli Becomes Youngest-Ever Formula 1 Champion at Mexico City Grand Prix",
-      "summary": "Twenty-year-old Mercedes driver Kimi Antonelli finished third at the Mexico City Grand Prix on Sunday to secure his maiden Formula 1 Drivers' Championship. By clinching the title with four races remaining, Antonelli broke Sebastian Vettel's long-standing record to become the youngest world champion in Formula 1 history.",
-      "question": "How do you think exceptionally young athletes handle the immense pressure of competing at the pinnacle of international sports?",
-      "coachLeads": {
-        "friendly": "Hey, have you heard the big news from the motorsport world today? A 20-year-old driver just made history by becoming the youngest Formula 1 champion ever!",
-        "energetic": "You won't believe what just happened in Mexico City! Kimi Antonelli smashed an all-time Formula 1 record to claim the world title at just 20 years old!",
-        "calm": "There was a historic moment in international sports today worth discussing. A young driver named Kimi Antonelli officially clinched his first Formula 1 world championship.",
-        "direct": "Kimi Antonelli just made history as the youngest Formula 1 world champion. Let me know your thoughts on this milestone."
-      },
-      "sources": [
-        {
-          "title": "formula1.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHz0503eC0mXcGlx9Fgbpt8wibHw0BEYGHCu-HfSPoqs1YVNgPnOhXNvY2BJpeQ8fNYOhimuHkaDTWMTmx2g5uPjqDRX3xokfUsgEaskX04_IikqYrJcE3IF-8-uLmfKixZ2ZHiDABM4Lhbe5yYz8RiEg1mJBtnSNDTFVPSI4CLDiTgv-QX5zSYsKjeRE89Hw8vhSAT_HLRSRFNaNf-0Cc9-_B4Wa10tkZqZ7pwyKkk_yAdPIPwE_JkfGTu76goCtdq-SUG89VQv2PYw1xtf3b1MgSkiGpk"
+          "title": "youtube.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH_Y9Vj6aL9eBmxgmyjcdX40zQUK3Tr7Qnb-SgUf5Yab1HwQN86zmkhxHxmIcbKo7MqBGTKC-SonicnlGAuJps5MpFG6-Dn1bIHyxkiBqsXludcIcplIDbp3xFMxPV-q_BmskWuow-PBfYtgBLdfYmNC0bMfIc23A=="
         },
         {
           "title": "theguardian.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFaejcRN3qrqkZsRjBsNdk7P5a0mwfH6n_4hgsFnWN7uLZ9cKNs7l1aObisk9fiNi4l6zIY3ZdM9aZwkMs2Ex_Xt6-RYd2CU5-7bj5BtKobCYaF-toTPFuJ46URoikZpq1ruo4XQVhg_SsPtFfr0W_V_CzrIYSZGR1gOT7SjTRbeEeLUylYw_0xYG1fxeM1xcnjlw=="
-        },
-        {
-          "title": "racingnews365.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFssb-rgFOhOA6N13gMAkQY-vJ9qJPVzS40VU95zwzfbU47VP1BQRsxfTSkOT_Kfy0vqV1VqNfAGtDphH8veQhxABGACfoaWWRMFfWNykA3WFrqoY1n3p9xg610pF4Qkz7QHslgYTzbaPt-nzriY0uH4lBhIuZ5"
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEX9Z0HXPLTukjwHiJcfone0UWxkEYXCUYKpbuu8Hh-A5sSmMdCs1d8LIvC4BKLMub6e6QMs0kLyZ-adVrc-IzfL4eA4f4loh3OCrMkr8JGHld_eA0BYQEy_66UotAqOhY2tvFDyg6ua8PamsU4UNVJOt5rL6NK4EPaZlaJ6DEhh7LmqxxslPqpYdpjBM9mGHZ6pryEyk2kqyxdEW9jNsdB5rY="
         }
       ]
     },
     {
-      "id": "2026-11-02-entertainment",
-      "category": "entertainment",
-      "categoryLabel": "Entertainment",
-      "headline": "Wu-Tang Clan to Headline Detroit Lions Thanksgiving Halftime Show Produced by Eminem",
-      "summary": "The Detroit Lions announced that legendary hip-hop group Wu-Tang Clan will headline the halftime show for the 87th annual Thanksgiving Day game on November 26. Executive produced by Eminem and Paul Rosenberg, the high-profile performance comes as the group wraps its global farewell tour and prepares for induction into the Rock and Roll Hall of Fame.",
-      "question": "What do you think makes a sports halftime show performance memorable for music fans?",
+      "id": "2026-11-03-technology",
+      "category": "technology",
+      "categoryLabel": "Technology",
+      "headline": "White House Withholds Documents on How It Vets AI Security Threats",
+      "summary": "The White House refused to disclose documents detailing how it evaluates national security risks from emerging artificial intelligence tools, citing security concerns in response to a watchdog lawsuit. The decision has drawn criticism from transparency advocates who are demanding public accounting of how government authorities oversee advanced AI models before public release.",
+      "question": "How do you think governments should balance national security secrets with public transparency when regulating AI?",
       "coachLeads": {
-        "friendly": "Hey there! Have you heard the big music news about this year's Thanksgiving halftime show?",
-        "energetic": "Check this out! Legendary rap group Wu-Tang Clan is taking over the Thanksgiving halftime stage!",
-        "calm": "There's an interesting piece of music news today about the upcoming Thanksgiving halftime show.",
-        "direct": "Wu-Tang Clan was just announced as the halftime headliner for the Detroit Lions Thanksgiving game."
+        "friendly": "Hey, have you seen this story about government secrecy and artificial intelligence? It really gets you thinking about who is keeping AI safe.",
+        "energetic": "Check this out! The White House just refused to reveal how it tests new AI models for security risks, sparking a big debate!",
+        "calm": "Here is a thought-provoking topic to discuss today regarding government oversight and artificial intelligence regulation.",
+        "direct": "The White House is keeping its AI security vetting process secret, raising serious questions about government transparency."
       },
       "sources": [
         {
-          "title": "nfl.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQExBiAfZcy0dlu0WKHhrjrAu_GZrtybN0f68iEwmHw6GqAkRSzPQQBDj8tkKSxvZSXdOL90844mPR9-YL66fgkzgpJkPdVelDmIUwIOYGGkDIRXa67PSUFT0LFDOWuD1kczv9t6rWP9MhaHfOyaMdrfuHJSdwt6mXcDIe89_Ck7p050u-9TRpkv63TNXWw="
+          "title": "washingtonpost.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEpnqia1c5OjpREPVkd3kc0_lmfUTf4jM4TZw98APQjaPmbxmpvrZ1qq2V2EgAYQUvGJB3Lkq6N_nxwXCrgvhOm5YB5A2QNYDXKJBktG1mevF6FPPMN3ovQ9qlJ58sdLPvr-ClaL5flw5BWJhHd02DBSxiR9Y02o2wZDB-3VfqwDVrYkfl5w6WFo10lFOM7iF4yvyj5O5liLA0ZcupnpWQJ5AFyrpH3NQ=="
+        }
+      ]
+    },
+    {
+      "id": "2026-11-03-sports",
+      "category": "sports",
+      "categoryLabel": "Sports",
+      "headline": "Andreas Almgren Wins NYC Marathon on Debut as Sheila Chepkirui Reclaims Women's Title",
+      "summary": "Sweden's Andreas Almgren made history by winning the 2026 New York City Marathon in 2:06:01 during his distance debut, becoming the first Swedish runner to win a major marathon. In the women's division, Kenya's Sheila Chepkirui reclaimed her title in 2:24:36, narrowly edging past American runner Jessica McClain in Central Park.",
+      "question": "How do you think someone mentally prepares to run and win a 26.2-mile marathon on their very first attempt?",
+      "coachLeads": {
+        "friendly": "Hey, have you heard about the big results from the New York City Marathon? It turned out to be a historic race with an amazing story at the finish line.",
+        "energetic": "What an incredible race in New York! A distance runner won the marathon on his very first attempt, and the women's race came right down to the wire!",
+        "calm": "There was a noteworthy breakthrough at the New York City Marathon this week. A runner won one of the world's premier marathons in his debut at the distance.",
+        "direct": "The 2026 New York City Marathon produced big headlines with a debut winner and a tense finish. Let's talk about what made this race so unique."
+      },
+      "sources": [
+        {
+          "title": "theguardian.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG6r2b71wlXo6_sp20tIGkqRJ71Hd6T6luYq9RK8iKFDUsZcIKsrlLTEwULhyLX4iEkUm6yAMEKyU7iBPb4gEC9S_QWoqcV2YGXAe8QcqUA5b9sHoQF1haYM9ssSZzCe6vTMAgUPRu2xVf69xTukNSMNCUN_gfnGk_oksjfiGtsLj3_aeYAx6D-xJivqUM4jT1JDkfY7hP4PekWIt7NtHaPvpueH6Bsw80SQTLxDUUETbasfh7SzsvTiyzkwg=="
         },
         {
-          "title": "consequence.net",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEjlJ59sX6HM9wFkVmIQYQepb10Xf3iZXWvH6kY9gcbJacGaEaxxa1xaXfs_RBhyIqyrPkrBuutaxhiD0p-wY2svyOtjsCwMLJcrVtcvS0XEFQ7R3D_spBqNEMlY7QIlwRaIeKHkcOuQj5ODUrO6HxPACgPqwUP6XXphPb7me9CHnaYoyZ3XbUy"
+          "title": "nbcsports.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH8j2zM8uzeBizj5WWJWNkZt3KraF3_rSVnMGT2DnoBrZXdEuavsMNubWPadss0tGHibb0Ktoi1DUPqp3bCtgGE19zGLjNEr1IeupAObDhz-waVKQtjXkVG31HLeCvnpFCEKxOo93w3_1yZwQDqvZGxmktf2xYKju9wS83Sy2hwQ1LcGTdEm3__rsxgbs0TXesFPAIR8URDCAvS"
+        },
+        {
+          "title": "world-track.org",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHNSNLHiQLvBAzAD6oQQg_PWjqLOdHbGX_816Bmq4el0Y7jsnOwgQd_fhDKSxzmNizluxhfs9N6Cu9YwsKz0ilCAoh5EiSczIB-5U3Qf1gSATmSUcdQ6jhqfGNUHnlMccQo9Tr-qVVY3Qnm-0TyEYfP4M7k_5-NsPfJVr3ATeLgY5vPrYwt1_-fz9wXptBQKKUs1IXr0JRsWxRSEjWO9ng="
+        }
+      ]
+    },
+    {
+      "id": "2026-11-03-entertainment",
+      "category": "entertainment",
+      "categoryLabel": "Entertainment",
+      "headline": "2026 Kennedy Center Honorees Announced for Dec. 7 Off-Site Ceremony",
+      "summary": "The John F. Kennedy Center for the Performing Arts announced on November 2, 2026, that Paul Anka, David Foster, Andy Garcia, David Mamet, and Barbara Mandrell will receive the 49th Kennedy Center Honors. The announcement is drawing broad attention because the December 7 gala will be held off-site at Capital One Arena for the first time in the event's history.",
+      "question": "What kind of artistic or cultural achievements do you think deserve lifetime honors?",
+      "coachLeads": {
+        "friendly": "Hey, have you heard about this year's Kennedy Center Honors announcement? I'd love to get your take on the artists being recognized!",
+        "energetic": "Big cultural news just broke today! The 2026 Kennedy Center Honorees were officially named, and there is plenty to talk about!",
+        "calm": "There is a notable story in the arts world today regarding the 2026 Kennedy Center Honors. Let's chat about it whenever you're ready.",
+        "direct": "The 2026 Kennedy Center Honorees have just been revealed. Let me know what you think of this year's lineup."
+      },
+      "sources": [
+        {
+          "title": "acrossthecountry.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFViHDq2R2H8j8Yihdz2wbKa8c7JaKkKnUbSAkzjPZ3gwkoAOcfQJrGTyjfF5Z-1Jahrmm5OqP6Atdt0BTwCM0pq9R-Kk1n1sfegT7CjpxuGRpJE5wQgqT49GukNRzpJ8qAPnJk3GZ2uft1AFTseiOctjATuEwCaYJ6U5PCUL2cZixabQ=="
+        },
+        {
+          "title": "notus.org",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGZ5a9THKurgMOdMrF1nJCmBsctQySixXF7coslCHsSkg20rDobsYMkNUwPECVIoT4ggx43uz60riYmpO2YduxWuWy3Q7MZ6wWcAfoYHq3yg9bHJhfmWxZeM5Q_t6zAyTaZWgmu377IbBL6RDbJQgbOMiYNIk-5"
         }
       ]
     }
