@@ -1,104 +1,112 @@
 {
   "schemaVersion": 1,
   "status": "live",
-  "date": "2026-11-03",
-  "generatedAt": "2026-11-03T02:55:13.219Z",
+  "date": "2026-11-04",
+  "generatedAt": "2026-11-04T01:21:29.977Z",
   "model": "gemini-3.6-flash",
   "fallbackCategories": [],
   "items": [
     {
-      "id": "2026-11-03-politics_economy",
+      "id": "2026-11-04-politics_economy",
       "category": "politics_economy",
       "categoryLabel": "Politics & Economy",
-      "headline": "Global Oil Prices Drop as U.S.-Iran Diplomatic Hopes Rise",
-      "summary": "Global crude oil prices fell over six percent after reports indicated the United States is pursuing diplomatic avenues rather than immediate military action regarding Iran. The price drop reflects market relief over potential easing of conflict and shipping disruptions in the Strait of Hormuz.",
-      "question": "How do changing oil prices typically affect daily life or consumer decisions in your country?",
+      "headline": "US Voters Cast Ballots in 2026 Midterm Elections to Determine Control of Congress",
+      "summary": "Millions of Americans voted on November 3 in high-stakes midterm elections that will determine control of both the House of Representatives and the Senate. The election outcomes will shape federal legislative priorities and executive oversight for the remaining two years of President Donald Trump's term.",
+      "question": "How do you think major election outcomes in key countries influence international relations and global economic stability?",
       "coachLeads": {
-        "friendly": "Hey, have you caught today's news about global oil prices dropping? It is really interesting to see how diplomatic talks can shift global markets so fast.",
-        "energetic": "Check this out! Oil prices just took a huge dive thanks to fresh hopes for diplomatic progress!",
-        "calm": "Global crude prices fell significantly as diplomatic efforts regarding Iran took center stage today. It feels like a meaningful moment to discuss how international diplomacy shapes the world economy.",
-        "direct": "Crude oil prices dropped over six percent following news of potential diplomatic efforts between the U.S. and Iran. What is your take on how energy prices influence global stability?"
+        "friendly": "Hey, have you been following the news about the US midterm elections today? It is definitely a huge topic worth talking about together!",
+        "energetic": "The US midterm election results are rolling in, and control of Congress is on the line! Are you ready to dive into what this means for the world?",
+        "calm": "Voting in the US midterm elections has just wrapped up across the country. It is a good moment to reflect on how major political events shape global affairs.",
+        "direct": "The US midterm elections are happening right now with major policy decisions on the line. Let's discuss your take on how this impacts global politics."
       },
       "sources": [
         {
-          "title": "youtube.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH_Y9Vj6aL9eBmxgmyjcdX40zQUK3Tr7Qnb-SgUf5Yab1HwQN86zmkhxHxmIcbKo7MqBGTKC-SonicnlGAuJps5MpFG6-Dn1bIHyxkiBqsXludcIcplIDbp3xFMxPV-q_BmskWuow-PBfYtgBLdfYmNC0bMfIc23A=="
+          "title": "thehindu.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEg5J4r7mN5crEHjQQcFRCc5-sJ6aUGK0mlBzcS9QSnMd_pPrORmLu9xS-4_Kb8U6S7yxi_a-qm_Ybg1foiOO6h9q25OEN1IfRHVFOX-4juwNI-6FXN3kVCkfoKAE4LBT7KJmLM7GtVhyN0NhMs_78MiIJiaRBFyoqY-5jhOtykQLSJ_RrWaWIBdLU0pLhg01QlX2KQl71mFbgW1qHtb7RGqGLgeq_AS-EyOGX8oi6VhfnbYwZu1JKd9xUU6mp6GQ27BmOPY_chEu1x5OC2wj10K3kYtrr1y28gfoUIMXy9OAcL6Q=="
         },
         {
-          "title": "theguardian.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEX9Z0HXPLTukjwHiJcfone0UWxkEYXCUYKpbuu8Hh-A5sSmMdCs1d8LIvC4BKLMub6e6QMs0kLyZ-adVrc-IzfL4eA4f4loh3OCrMkr8JGHld_eA0BYQEy_66UotAqOhY2tvFDyg6ua8PamsU4UNVJOt5rL6NK4EPaZlaJ6DEhh7LmqxxslPqpYdpjBM9mGHZ6pryEyk2kqyxdEW9jNsdB5rY="
+          "title": "wikipedia.org",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGT7ZJyjx4IKcOcbnXw4rJ5y064-ym5krBHIzSKj29V7uy3EDttJzbBQxI48_OUvRDR6DgK-y9-HmRlwK-73sDoV-baitwtSd6W_lMN6pnxunrUNpUy1_akrdQh26DJqPkwOCwMwRZT3tJnl_aSZUo="
+        },
+        {
+          "title": "indianexpress.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFI6h78UonkKI7E8jgj1klU11RkPXJmfwV5j0Ml_Avni2baKy1b9Z2RfWNEdVFqhT_4721dx7xMJxJ4FuvAlGM00ar6X5rrg2g-LEs1X9RsFAp6I8m0opQVVxlizerS6_Z20X8zLKwadw-GMfGhleSreyffW_Vv0I5UZss9wCeXA42WaB4kV3Gui4B9IAvworG-WULlHGxXrm_t9P0feplEJti9ZHqr5ppU0eqnQT-bjc6hgw=="
         }
       ]
     },
     {
-      "id": "2026-11-03-technology",
+      "id": "2026-11-04-technology",
       "category": "technology",
       "categoryLabel": "Technology",
-      "headline": "White House Withholds Documents on How It Vets AI Security Threats",
-      "summary": "The White House refused to disclose documents detailing how it evaluates national security risks from emerging artificial intelligence tools, citing security concerns in response to a watchdog lawsuit. The decision has drawn criticism from transparency advocates who are demanding public accounting of how government authorities oversee advanced AI models before public release.",
-      "question": "How do you think governments should balance national security secrets with public transparency when regulating AI?",
+      "headline": "NASA's 20-Year-Old Swift Space Telescope Plunges Back to Earth in Uncontrolled Reentry",
+      "summary": "NASA's 3,200-pound Neil Gehrels Swift Observatory, launched in 2004 to study high-energy cosmic explosions, is re-entering Earth's atmosphere on November 4, 2026. Space agencies predict that most of the satellite will safely burn up during reentry, concluding a historic two-decade astrophysics mission.",
+      "question": "How do you feel about old satellites and space debris falling back to Earth after completing their scientific missions?",
       "coachLeads": {
-        "friendly": "Hey, have you seen this story about government secrecy and artificial intelligence? It really gets you thinking about who is keeping AI safe.",
-        "energetic": "Check this out! The White House just refused to reveal how it tests new AI models for security risks, sparking a big debate!",
-        "calm": "Here is a thought-provoking topic to discuss today regarding government oversight and artificial intelligence regulation.",
-        "direct": "The White House is keeping its AI security vetting process secret, raising serious questions about government transparency."
+        "friendly": "Hey, did you hear about NASA's famous space telescope? It's making a dramatic final return to Earth today after two decades of studying cosmic explosions!",
+        "energetic": "Check this out! NASA's massive 20-year-old Swift observatory is re-entering Earth's atmosphere today after an incredible scientific journey!",
+        "calm": "NASA's Swift space telescope is ending its 20-year mission with an atmospheric reentry today. It is a good moment to reflect on two decades of space exploration.",
+        "direct": "NASA's 3,200-pound Swift observatory is re-entering Earth's atmosphere today, ending a 20-year mission. Let's talk about space exploration and satellite debris."
       },
       "sources": [
         {
-          "title": "washingtonpost.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEpnqia1c5OjpREPVkd3kc0_lmfUTf4jM4TZw98APQjaPmbxmpvrZ1qq2V2EgAYQUvGJB3Lkq6N_nxwXCrgvhOm5YB5A2QNYDXKJBktG1mevF6FPPMN3ovQ9qlJ58sdLPvr-ClaL5flw5BWJhHd02DBSxiR9Y02o2wZDB-3VfqwDVrYkfl5w6WFo10lFOM7iF4yvyj5O5liLA0ZcupnpWQJ5AFyrpH3NQ=="
-        }
-      ]
-    },
-    {
-      "id": "2026-11-03-sports",
-      "category": "sports",
-      "categoryLabel": "Sports",
-      "headline": "Andreas Almgren Wins NYC Marathon on Debut as Sheila Chepkirui Reclaims Women's Title",
-      "summary": "Sweden's Andreas Almgren made history by winning the 2026 New York City Marathon in 2:06:01 during his distance debut, becoming the first Swedish runner to win a major marathon. In the women's division, Kenya's Sheila Chepkirui reclaimed her title in 2:24:36, narrowly edging past American runner Jessica McClain in Central Park.",
-      "question": "How do you think someone mentally prepares to run and win a 26.2-mile marathon on their very first attempt?",
-      "coachLeads": {
-        "friendly": "Hey, have you heard about the big results from the New York City Marathon? It turned out to be a historic race with an amazing story at the finish line.",
-        "energetic": "What an incredible race in New York! A distance runner won the marathon on his very first attempt, and the women's race came right down to the wire!",
-        "calm": "There was a noteworthy breakthrough at the New York City Marathon this week. A runner won one of the world's premier marathons in his debut at the distance.",
-        "direct": "The 2026 New York City Marathon produced big headlines with a debut winner and a tense finish. Let's talk about what made this race so unique."
-      },
-      "sources": [
+          "title": "livescience.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGMDzBnKcKXgVhk-gTYyYKxTtyXnOfdUNMcJqtjTIiqc59-SeXJmOETT59hAl9PtIfSkg7OFMn78Rnoxuj_yNtzjWY7K6PpMGGBhU86e0SLG3BTL89EWUDlUJb-iXXkcrXSraRnZ7-Pd0YspVwRpCKDW5oh2Qr5xVzyqKMZi3dmIetYfLNMM4tjByihbWF5ABddyy5UWDr4dO2Y6YaAD2ewIO7BObaq_CkBsB8R6_spo_Q_JWn4QWMsZgbfjCZ1fA=="
+        },
         {
           "title": "theguardian.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG6r2b71wlXo6_sp20tIGkqRJ71Hd6T6luYq9RK8iKFDUsZcIKsrlLTEwULhyLX4iEkUm6yAMEKyU7iBPb4gEC9S_QWoqcV2YGXAe8QcqUA5b9sHoQF1haYM9ssSZzCe6vTMAgUPRu2xVf69xTukNSMNCUN_gfnGk_oksjfiGtsLj3_aeYAx6D-xJivqUM4jT1JDkfY7hP4PekWIt7NtHaPvpueH6Bsw80SQTLxDUUETbasfh7SzsvTiyzkwg=="
-        },
-        {
-          "title": "nbcsports.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH8j2zM8uzeBizj5WWJWNkZt3KraF3_rSVnMGT2DnoBrZXdEuavsMNubWPadss0tGHibb0Ktoi1DUPqp3bCtgGE19zGLjNEr1IeupAObDhz-waVKQtjXkVG31HLeCvnpFCEKxOo93w3_1yZwQDqvZGxmktf2xYKju9wS83Sy2hwQ1LcGTdEm3__rsxgbs0TXesFPAIR8URDCAvS"
-        },
-        {
-          "title": "world-track.org",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHNSNLHiQLvBAzAD6oQQg_PWjqLOdHbGX_816Bmq4el0Y7jsnOwgQd_fhDKSxzmNizluxhfs9N6Cu9YwsKz0ilCAoh5EiSczIB-5U3Qf1gSATmSUcdQ6jhqfGNUHnlMccQo9Tr-qVVY3Qnm-0TyEYfP4M7k_5-NsPfJVr3ATeLgY5vPrYwt1_-fz9wXptBQKKUs1IXr0JRsWxRSEjWO9ng="
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFeynKoooZIJa0hnOAy8IJFhLajJhKtTYXBem3mmkdJVS0Zcl_w29ARXwjvFrKVSOgQ3R0fb7bqsXlFsMvady_2lIfFwN0Cr0Hz7SqWc0eelXRBs0CRJa7-nIGsAt08sFZdpqfyksxST5t0EU3e92YFs4JVQiSs8AB1VSypNCeEozEH8LMfsCsLNPhzb3Iq1CDl_rM="
         }
       ]
     },
     {
-      "id": "2026-11-03-entertainment",
-      "category": "entertainment",
-      "categoryLabel": "Entertainment",
-      "headline": "2026 Kennedy Center Honorees Announced for Dec. 7 Off-Site Ceremony",
-      "summary": "The John F. Kennedy Center for the Performing Arts announced on November 2, 2026, that Paul Anka, David Foster, Andy Garcia, David Mamet, and Barbara Mandrell will receive the 49th Kennedy Center Honors. The announcement is drawing broad attention because the December 7 gala will be held off-site at Capital One Arena for the first time in the event's history.",
-      "question": "What kind of artistic or cultural achievements do you think deserve lifetime honors?",
+      "id": "2026-11-04-sports",
+      "category": "sports",
+      "categoryLabel": "Sports",
+      "headline": "Manchester United Mounts Dramatic Champions League Comeback to Defeat AS Roma 3-2",
+      "summary": "Manchester United staged a dramatic 3-2 comeback victory over AS Roma in the UEFA Champions League at Old Trafford after trailing by two goals early in the match. The victory on Tuesday snapped a nine-game winless streak for the English club and provided crucial relief for manager Michael Carrick.",
+      "question": "What do you think enables a team to stay focused and turn a game around after falling behind early?",
       "coachLeads": {
-        "friendly": "Hey, have you heard about this year's Kennedy Center Honors announcement? I'd love to get your take on the artists being recognized!",
-        "energetic": "Big cultural news just broke today! The 2026 Kennedy Center Honorees were officially named, and there is plenty to talk about!",
-        "calm": "There is a notable story in the arts world today regarding the 2026 Kennedy Center Honors. Let's chat about it whenever you're ready.",
-        "direct": "The 2026 Kennedy Center Honorees have just been revealed. Let me know what you think of this year's lineup."
+        "friendly": "Hey, did you catch the big Champions League match yesterday? Manchester United pulled off an incredible comeback at Old Trafford.",
+        "energetic": "What an unbelievable match! Manchester United fought back from two goals down to lock in a wild 3-2 victory.",
+        "calm": "This match is worth looking into. Manchester United managed to overcome a tough early start and turn their season's momentum around.",
+        "direct": "Manchester United just broke their long winless streak with a dramatic European comeback. Let's talk about how they pulled it off."
       },
       "sources": [
         {
-          "title": "acrossthecountry.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFViHDq2R2H8j8Yihdz2wbKa8c7JaKkKnUbSAkzjPZ3gwkoAOcfQJrGTyjfF5Z-1Jahrmm5OqP6Atdt0BTwCM0pq9R-Kk1n1sfegT7CjpxuGRpJE5wQgqT49GukNRzpJ8qAPnJk3GZ2uft1AFTseiOctjATuEwCaYJ6U5PCUL2cZixabQ=="
+          "title": "clickondetroit.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEFo_pQ5dnRXQGASQwIuRiROJ6QYHFk6q6jILhiykJfnhxASG7sLY7e7ps06n8V0-D34fIDId5eglUuS5czCP1impaEZvR8IsLifZrBr5wIOYulqYPM335V-Q7K1lkoiaEZU324GDhGnja0X808T0nUATaWYt22xHIhksar9g2XE6N8n_DuOsm2BpkOnPOaW480pKXW6v1IPJb6y4q0t46o4QQW630sixll3b0wJyTTYAMYzK_C72Tdvte4Arkv9VsF98Hi2NYQ"
         },
         {
-          "title": "notus.org",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGZ5a9THKurgMOdMrF1nJCmBsctQySixXF7coslCHsSkg20rDobsYMkNUwPECVIoT4ggx43uz60riYmpO2YduxWuWy3Q7MZ6wWcAfoYHq3yg9bHJhfmWxZeM5Q_t6zAyTaZWgmu377IbBL6RDbJQgbOMiYNIk-5"
+          "title": "foxsports.com.au",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG2ktoSmPc_qKLRx4T1IGf082aZjbyKJ4DxqpjwtVjYius-JagBvkrjLwPDcLNyNkvLRWqcxmtGVN8QCwgDX38144momTOVHpzTQZYjS-tdZjc5M0YDdehXhj5Lbi6XNKTkxHiZnQXi4XFp0JbzwbM5Hsx_xw98L3AoxlPoI-YKPXhh_hMnGev6Wgw9ajqT0EKPfzvgT3yK9kCfJUA9BkSi1mpmCMx4dnLdbIzP4Un2A-VEySXYEC_y5TbT7ZQfFT_mtOGzBSFEn_6Qc7-67zidOADmQNIa8hsegL8lISBfnAfqA7mBF7EsDOEtMlkW6hGD0q87zR1Ms85PWi6sAAeCrqCcoCRNO1y-LnPcc5JH_tOol84EmwIkHdAmRwwmoTysGQvALwOIosoOuapEX5pwJZpR-a422RIisdqPxqv3ENHFxeUWdKYTLhTdCwWtIcV2iHI="
+        }
+      ]
+    },
+    {
+      "id": "2026-11-04-entertainment",
+      "category": "entertainment",
+      "categoryLabel": "Entertainment",
+      "headline": "Bethesda Officially Unveils 'The Elder Scrolls VI: Sentinel' Title",
+      "summary": "Bethesda Game Studios announced 'The Elder Scrolls VI: Sentinel' as the official name of the long-awaited role-playing game during a video celebrating the developer's 40th anniversary on November 3, 2026. The brief teaser highlighted desert landscapes and lore hints that indicate the game will be set in the region of Hammerfell.",
+      "question": "How do you feel when long-awaited entertainment projects or video games finally share official updates after years of waiting?",
+      "coachLeads": {
+        "friendly": "Hey, have you heard the huge news in the gaming world today? After years of waiting, we finally got a real update!",
+        "energetic": "You won't believe this—Bethesda just officially revealed the title for the next Elder Scrolls game! Let's chat about it!",
+        "calm": "After years of silence, gaming fans received a big announcement today. Take a moment to check this out and let me know your thoughts.",
+        "direct": "Bethesda officially named the next Elder Scrolls game today. What is your take on long-delayed releases?"
+      },
+      "sources": [
+        {
+          "title": "pcgamer.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFgMIFQRqUlFSaCiymu3TSQbAUCTBIZgqQ__pllk8GQuiVuG1V6EnkkwU-eDhB7b5xVEBdmn6Gd6O1ARDv5nx1Ke0I1WF_eWMWnhrPu5d2np_O8qwK-bn3BZXmMGRbPwx3_nLmO4kCP045TaHYB1U3SrmFUX63eDV1aCC508YhMsq-lKQ0h1qwOD-oglvtiW1OS7LXDbRLOyffldXI="
+        },
+        {
+          "title": "avclub.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEtXD38AcHl7K3RokC_SHn0aBLyCi8FY-m04WQ5GP_yi7jfjhzVk4LwmzvqfGYS_OBcUde-5MD95pMPTLkMqjqvvaHQIlG6ieSODoyHU_4ETjT52WwjDr1oyHNL_wXBvfrdcrkm4MPhTKB-v9wb3vzEKDy_Vws="
+        },
+        {
+          "title": "nerdist.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEaVvWqsFe8_Po1HEjlRjwd_1Ec4Sy6_AKWVxwxtRBhaxlTc_IWRYbXIsv0_-N4m-A8xoLZwvJpm6C2ZSUd1Syrla4ylI_KXrmOiyPfqpCip2HC-LcobDkZBmllcHBYYvMIA5bazXNyHhsRgaWDLgVewgZS3dfvekWaB47mwKpHaxmEvqbbjmU="
         }
       ]
     }
