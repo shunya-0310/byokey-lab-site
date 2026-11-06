@@ -1,108 +1,96 @@
 {
   "schemaVersion": 1,
   "status": "live",
-  "date": "2026-11-05",
-  "generatedAt": "2026-11-05T01:27:34.339Z",
+  "date": "2026-11-06",
+  "generatedAt": "2026-11-06T01:33:21.613Z",
   "model": "gemini-3.6-flash",
   "fallbackCategories": [],
   "items": [
     {
-      "id": "2026-11-05-politics_economy",
+      "id": "2026-11-06-politics_economy",
       "category": "politics_economy",
       "categoryLabel": "Politics & Economy",
-      "headline": "Democrats Take Control of U.S. Congress in Historic Midterm Election Shift",
-      "summary": "In the 2026 U.S. midterm elections, the Democratic Party secured majorities in both the House of Representatives and the Senate. This legislative shift creates a divided government in Washington for the remaining two years of President Donald Trump's term, directly influencing upcoming domestic policy decisions and international relations.",
-      "question": "How do you think a major shift in legislative power like this might impact a nation's economy and foreign policy?",
+      "headline": "California Governor Commutes Sentences of All 548 Death Row Inmates",
+      "summary": "California Governor Gavin Newsom announced the commutation of all 548 death sentences in the state to life imprisonment without the possibility of parole. This historic decision represents the largest mass clemency in modern U.S. history, reducing the nation's total death row population by nearly a third.",
+      "question": "What are your thoughts on a government deciding to replace capital punishment with life imprisonment without parole?",
       "coachLeads": {
-        "friendly": "Hey, have you heard about the big midterm election results in the United States? It is a major political shift that is definitely worth discussing today.",
-        "energetic": "Did you catch the massive news about the U.S. election results? This shift in power is already making waves across Washington and global markets!",
-        "calm": "There was a significant development in global politics today with the U.S. midterm election outcomes. Let's take a look at what this change means moving forward.",
-        "direct": "Democrats have won control of both houses of the U.S. Congress in the midterm elections. Let's break down why this is a major story right now."
+        "friendly": "Hey! Have you heard about the historic news out of California today? It is definitely worth talking about.",
+        "energetic": "Check out this major story from today's headlines! California just made a huge decision that is causing a big stir nationwide.",
+        "calm": "There was a major legal policy announcement in California today. It presents a thoughtful topic for our chat.",
+        "direct": "Let me share a key front-page story from today's news. A groundbreaking legal decision in California is making national headlines."
       },
       "sources": [
         {
-          "title": "ballotpedia.org",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFe9c14n2qpdEShQzlGBlVafrGQisvo2Fn77N7DeQdjeu1ACQNmPgozlXsAsorbH1WJ_nl1DMI5lT-giiQ5KPWG9YU8mCiehGBMXneRtJfh3dFeykLgEE73PpPB764RU_H0inediNSYCu4nttbsoFUQ"
+          "title": "deathpenaltyinfo.org",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGQvp2Ji7Ku4GGbeFp1C8k1qI7qePBe2munojg0MeZOjdCMJzOyM2ennpMt_B9DcUr6LlfBVUUgbEglQ8TtBuHAbFzKS8zKwOKZM2vcUAPqdorRuAg3IqVftZMp4J0B5oK4pRIgoHPLFTdqNeyR_0CYkKRyXipEld_Z5olezu9cua-cfn2epaAq24f6hTqvzRftpM8p98TihdVeoOfiFmLqy_gwv1PQYZWD7iYDoSdVnfpV3dUAMO51aiUaHKuXn-Atq0dEK1itlA=="
         },
         {
-          "title": "aljazeera.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG0U5vzQpGC6XTSjnUfSKmD1XbwZ6Y4zlTx5W4AlYfVr5QfcBG8yxXCM6YXFQkqcAsqlQXrqMZ90SKiXjz0lRrXVUzGtrSabAaDEpQcqvL9mXVBkyo9S6ri2EjctccaYavXXmbi3E3dAnPvgpJUkhc-RzI="
+          "title": "kqed.org",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHIh9MvriSuky2ELFaeFwSdcxaaiAIWA6-q0exRwaQdigV8IUGGa6Qv1im8aSo4vvZqkKMSHRqIVAH2rFu5QuZz-1LO-mh8-q_SW7FRdlPgLoPhFOSBkXntoF0zE_wa8ICPVEhhMmfrpxDqbar4xN1XPbrKfhevlBtXb4z-1c9Xt9Hv_dFfrCw5aWQO8SYIlGqie8a_uic7csVkGgZWvx4="
         },
         {
-          "title": "theguardian.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGySQR1NpQvwwig19PrYE2ysuIxhJT_3i40m-plI9udxAKKCe7_p78oMeReN5abEtORgN8oplcF9lO4t_EA8nydAN6oWNiy5viWsBFLoBRFIhqVVUQeLPpt-e6YixbFhRq158RcgoOhoXt39VLgFbbzO7Hbw1b2k4PL9Ys_1Axx5EVoRe2ULizo_4MjMuJirsSQ1DHnVD1K7J_PI3Wg7T0njQ0xKPpEgMZvkl2W_oLw"
+          "title": "themarshallproject.org",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE1aQfHqN2qck5whKw15sdm68ngdVC8QDkYESkE2TPEa56lQbeVmmvmR1jx10g0IYXZcOb8E3G5Z4QxRIGcKj7mvIjXS3HyxZmAvDYEvSAVKH4dPKDkIur0kykNn4yEqd-_6jTEdwJfofUL5cyt7qs10LfHiLgAZ-lQnmZOzeP3YFN8tRV7UF_e8H8DvzQ7Rja0"
         }
       ]
     },
     {
-      "id": "2026-11-05-technology",
+      "id": "2026-11-06-technology",
       "category": "technology",
       "categoryLabel": "Technology",
-      "headline": "NASA Seeks Commercial Help to Save the Hubble Space Telescope",
-      "summary": "NASA has formally requested proposals from private space companies to boost the Hubble Space Telescope into a higher orbit and extend its scientific mission. The 35-year-old observatory is gradually losing altitude and risks re-entering Earth's atmosphere around 2033 without commercial servicing or an orbital boost.",
-      "question": "Do you think private companies should take on a bigger role in maintaining government-owned space missions like Hubble?",
+      "headline": "Tech Stocks Plunge as Regulatory Concerns Trigger Major AI Market Sell-Off",
+      "summary": "Technology stocks experienced a massive sell-off on November 5, wiping out over $2 trillion in market value and driving the Nasdaq into correction territory. Investors reacted with alarm to potential regulatory hurdles and tighter oversight for AI data centers following recent U.S. midterm election results.",
+      "question": "How do you think increased government regulation might influence the speed of artificial intelligence development in the coming years?",
       "coachLeads": {
-        "friendly": "Hey, have you heard about NASA's latest plan to save the Hubble Space Telescope?",
-        "energetic": "Check this out! NASA is turning to private space companies to help rescue Hubble from falling back to Earth.",
-        "calm": "NASA is exploring commercial partnerships to extend the operational life of the Hubble Space Telescope.",
-        "direct": "This is worth talking about: NASA wants private companies to re-boost Hubble before its orbit decays."
+        "friendly": "Hey, have you seen the news about today's big drop in tech stocks? It really gets you thinking about how regulations might shape the future of AI.",
+        "energetic": "Did you catch today's huge market shake-up? Tech shares just took a massive dive as Wall Street reacts to new policy uncertainty surrounding AI!",
+        "calm": "Markets saw a notable drop today as tech investors responded to potential changes in AI policy. It's a good moment to look at how technology and government regulations intersect.",
+        "direct": "A major market drop just hit technology stocks over fears of new AI regulations. Let's talk about what this shift could mean for tech companies going forward."
       },
       "sources": [
         {
-          "title": "sciencedaily.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG0d0r30zMib3tT-LQigro07sB_baH6urzXClnliKMzs17XQB_eod5aFNQKcaQCpc3gF4qLJZ4UY3-fSRCt-mr_HZWsGSAoF01l-JggRLcgzCmkN-JM8--8wCvdDvNcNDw-XgHN5uOJD0C7yW8YCb3WL505tQ=="
+          "title": "Google News: Technology",
+          "url": "https://news.google.com/search?q=Technology%20top%20news%202026-11-06&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     },
     {
-      "id": "2026-11-05-sports",
+      "id": "2026-11-06-sports",
       "category": "sports",
       "categoryLabel": "Sports",
-      "headline": "Real Madrid Claims Late Champions League Win as Liverpool Suffers First Loss",
-      "summary": "On November 4, 2026, Real Madrid pulled off a dramatic 3-2 comeback victory against AEK Athens thanks to a stoppage-time goal from Federico Valverde. Meanwhile, Liverpool suffered their first Champions League loss of the season in a 3-2 defeat to Fenerbahce in Istanbul.",
-      "question": "What do you think makes dramatic late-game comebacks in soccer so thrilling for fans to watch?",
+      "headline": "Ferencváros Stuns AC Milan with 2-0 Europa League Victory",
+      "summary": "Hungarian side Ferencváros secured a surprising 2-0 win against AC Milan at San Siro during Thursday's UEFA Europa League match. Forward Lenny Joseph scored twice in the second half, handing the Italian hosts their third defeat in four European games this season.",
+      "question": "What factors do you think cause elite football clubs to occasionally stumble against underdog teams in tournament play?",
       "coachLeads": {
-        "friendly": "Hey, have you heard about the crazy Champions League matches from yesterday? Real Madrid pulled off another wild late win, and it is definitely worth talking about!",
-        "energetic": "What an unbelievable night of European soccer! Real Madrid scored in stoppage time to win while Liverpool suffered a shock defeat—let's dive into it!",
-        "calm": "Yesterday brought some big moments in the UEFA Champions League. Real Madrid snatched a late victory while Liverpool took their first loss of the European campaign.",
-        "direct": "Real Madrid won with a 92nd-minute goal and Liverpool got upset on Wednesday. Let's break down the latest Champions League results."
+        "friendly": "Hey, did you hear about the major Europa League surprise yesterday? AC Milan dropped a home match to Ferencváros, and football fans are stunned!",
+        "energetic": "What an incredible shock in European football! Ferencváros went right into San Siro and beat AC Milan with two second-half goals!",
+        "calm": "Yesterday brought an unexpected result in European football when AC Milan lost at home to Ferencváros. It shows how unpredictable international cup competitions can be.",
+        "direct": "Ferencváros pulled off a 2-0 victory against AC Milan in Italy yesterday. Let's talk about what this result means for both clubs."
       },
       "sources": [
         {
-          "title": "ksat.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH73Zr1UG3qH7eXuta8dWkzCfCHUa56a8PbuNhbbQP-h1FBVFzIC1bLfScXY16aCXueIzR2h_vCLXUtaZSmjT3Shfvkjo_vt1YYmk4OXMw3X14tUboM_pt7-YEmJgM2EQ04UWifM1wJUrJo3zZd-sZM4tAUGRj2JdNECZ1I0BSCRrY7x0fOwI26TtO1a6f3OEQt1PqVw5eZmmiBy_PA5bcA"
-        },
-        {
-          "title": "clickondetroit.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGVclEZgouPz7K6XrIUImZZj2ZGZBxvjRLpWf1EjDjP3d_86hHUln6WjR0o70WYvp2tsH9UJWkL3_1D-_BE2uoYZBvuFr7863rMdJk86zs_ZNT-XtrM-WgewghlHnPJU8L6JwIQsZgV2c72vgBHX8ZenEFqOfygTroR9378QUmyQ-9bjvJpF6O71JCbUG4rOgmklo8R7k6FYDMO1KLJGG8EMP3rZsd2pyJUCg=="
+          "title": "dawn.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEYN_JT-X0h0R3pibZb4PFh4-IkXA5tYBf5dbw5UriyLMETETNkA3SXh5r3rzFIqmw5pNRTVP6zWapTq0GAVglJh5QmNYGJPzYAUlweKK47p6D2xIznQLojMtciy_DALyHnc3crj10CrzViX0gGVOb0bT_OPjaYjYxKXuduIspYDSSg6lVhIk_fFCM8gNbNfpaRixgCuAVbGQ=="
         }
       ]
     },
     {
-      "id": "2026-11-05-entertainment",
+      "id": "2026-11-06-entertainment",
       "category": "entertainment",
       "categoryLabel": "Entertainment",
-      "headline": "Netflix Acquires Joel Coen's Gothic Mystery 'Jack of Spades' Co-Written with Ethan Coen",
-      "summary": "Netflix has secured global rights to Joel Coen's upcoming feature \"Jack of Spades,\" a gothic mystery set in 1880s Scotland. The project is making entertainment headlines because it marks a writing reunion between brothers Joel and Ethan Coen and stars Patsy Ferran alongside Josh O'Connor.",
-      "question": "Do you prefer watching mystery movies at home on streaming platforms or in a movie theater, and why?",
+      "headline": "Pixar President Jim Morris Steps Down as Jonathan Garson Is Named Successor",
+      "summary": "Longtime Pixar Animation Studios President Jim Morris announced he is stepping down after 12 years in the top executive role to become president emeritus. Disney veteran Jonathan Garson will officially succeed Morris as the studio's next president on January 4, 2027.",
+      "question": "How do you think leadership changes at major film studios like Pixar impact the kinds of movies they produce?",
       "coachLeads": {
-        "friendly": "Hey there! A major new movie project was just announced, and I'd love to hear your thoughts on it.",
-        "energetic": "Exciting news for movie lovers! Two legendary filmmakers are teaming back up for a dark new mystery film!",
-        "calm": "If you follow film news, there is a noteworthy story today about an acclaimed director pair reuniting for a new project.",
-        "direct": "Netflix just acquired a major new film project written by the Coen brothers. Let's look at the details."
+        "friendly": "Hey, have you heard about the big executive change happening over at Pixar?",
+        "energetic": "Pixar just announced a major leadership shuffle! Ready to talk about what this means for the future of animation?",
+        "calm": "There is notable industry news about Pixar's executive transition today that is worth reflecting on.",
+        "direct": "Pixar is appointing a new studio president. Let me break down the news so we can discuss it."
       },
       "sources": [
         {
-          "title": "northeasttimes.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHsNKV4sdUpPZnMq6uYuFc4Dw14ZZa_z5LSxAApsha_FLLvIU_rb09bg2_SMWOFH_dWG5phr_4z8sgu6_0pGFo182G8aht_IANwd1r9FYJf-6jgpgHEVXKZ_qIFlR2KRi-OxgtzZj1AApZQSpAcS6PnhfaLHTMNWM6YO_KV5YF940oHOKBbW7wCdIWw1_idBTIZ5MTlWFq39A=="
-        },
-        {
-          "title": "thewrap.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHT2wCJZPa98vP_1gC3ZQsnMzpbOYPa9jjAPNZgoHbTvSuBzhBdF8TFGCL72ixmVscs8K37eYOHpcASghXFHJCybMT4nh6_KFA7zvzfrjfY6G5Bfe60F708I0MsL28TMLu__Yu44U8l8r0xCeXpuD-PM261eFAS-gei1jI2p150DBsR3VL8m_gxfyev1uLx1ZjFm94CmLFmgM7f"
-        },
-        {
-          "title": "worldofreel.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFqcgUiiUXnmO1rDAj7_XDfX8U5YLsLt4CiH1yAuJjf9q-RNXfNPYbOuuD6U-21FpeZ3gI_j340JV_ONSg1jjeFtdyYeC2f-SSKHAAX77v8aDDL92wD0kzns119gD86ysHhYGaiKO-irhMDYaQrr2idwfZjFa7dihBdbGXe7Qg0Sp7pA6trHDyicXQBVvm_MhvmS4sWw_IK_nOJH9o7Q6OOLCO0kZXb48vY3eYIRU2WViR-8dA="
+          "title": "Google News: Entertainment",
+          "url": "https://news.google.com/search?q=Entertainment%20top%20news%202026-11-06&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     }
