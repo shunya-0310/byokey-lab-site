@@ -1,96 +1,96 @@
 {
   "schemaVersion": 1,
   "status": "live",
-  "date": "2026-11-06",
-  "generatedAt": "2026-11-06T01:33:21.613Z",
+  "date": "2026-11-07",
+  "generatedAt": "2026-11-07T00:56:34.345Z",
   "model": "gemini-3.6-flash",
   "fallbackCategories": [],
   "items": [
     {
-      "id": "2026-11-06-politics_economy",
+      "id": "2026-11-07-politics_economy",
       "category": "politics_economy",
       "categoryLabel": "Politics & Economy",
-      "headline": "California Governor Commutes Sentences of All 548 Death Row Inmates",
-      "summary": "California Governor Gavin Newsom announced the commutation of all 548 death sentences in the state to life imprisonment without the possibility of parole. This historic decision represents the largest mass clemency in modern U.S. history, reducing the nation's total death row population by nearly a third.",
-      "question": "What are your thoughts on a government deciding to replace capital punishment with life imprisonment without parole?",
+      "headline": "Paraguayan President Faces Impeachment Following Major Bank Collapse",
+      "summary": "Paraguayan President Santiago Peña offered to resign after the central bank seized digital lender Ueno Bank, freezing millions of customer accounts and triggering widespread protests. Lawmakers rejected his resignation attempt in order to proceed with an impeachment trial, while financial authorities have begun issuing emergency fund advances to affected depositors.",
+      "question": "How can governments better protect citizens' savings when major digital financial institutions fail?",
       "coachLeads": {
-        "friendly": "Hey! Have you heard about the historic news out of California today? It is definitely worth talking about.",
-        "energetic": "Check out this major story from today's headlines! California just made a huge decision that is causing a big stir nationwide.",
-        "calm": "There was a major legal policy announcement in California today. It presents a thoughtful topic for our chat.",
-        "direct": "Let me share a key front-page story from today's news. A groundbreaking legal decision in California is making national headlines."
+        "friendly": "Hey, have you heard about the sudden political crisis in Paraguay? It is a really important story about public trust and financial stability.",
+        "energetic": "Check out this major breaking story from South America! A digital bank failure just threw Paraguay into chaos, and now the president is facing an impeachment trial!",
+        "calm": "Here is a significant international story worth reflecting on today. A banking collapse in Paraguay has sparked nationwide protests and led to an impeachment process for the president.",
+        "direct": "Take a look at the developing situation in Paraguay. A major bank failure has frozen millions of accounts and forced an emergency impeachment trial for the country's leader."
       },
       "sources": [
         {
-          "title": "deathpenaltyinfo.org",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGQvp2Ji7Ku4GGbeFp1C8k1qI7qePBe2munojg0MeZOjdCMJzOyM2ennpMt_B9DcUr6LlfBVUUgbEglQ8TtBuHAbFzKS8zKwOKZM2vcUAPqdorRuAg3IqVftZMp4J0B5oK4pRIgoHPLFTdqNeyR_0CYkKRyXipEld_Z5olezu9cua-cfn2epaAq24f6hTqvzRftpM8p98TihdVeoOfiFmLqy_gwv1PQYZWD7iYDoSdVnfpV3dUAMO51aiUaHKuXn-Atq0dEK1itlA=="
+          "title": "kyuk.org",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEEyd1OsBfvHJxZESQZcUxzl4tK2WnahNDLRCP5Pk2c3NQ23MQIgr9GaKXUKDYN7vJH5BTbItBCILGQPrkD7rl0yf1MwtRakGw3WEwegjsfQjvEMihYnXa7c6-E1dOPphly8LttvMKfgpIEOtC_wrunUmFUzC_RzKiTEoqTof_AxU3WMCByUu645B9sD28SZzNh_r4tyeatDvF3Mw53VboP2CEcdGDGmyw="
         },
         {
-          "title": "kqed.org",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHIh9MvriSuky2ELFaeFwSdcxaaiAIWA6-q0exRwaQdigV8IUGGa6Qv1im8aSo4vvZqkKMSHRqIVAH2rFu5QuZz-1LO-mh8-q_SW7FRdlPgLoPhFOSBkXntoF0zE_wa8ICPVEhhMmfrpxDqbar4xN1XPbrKfhevlBtXb4z-1c9Xt9Hv_dFfrCw5aWQO8SYIlGqie8a_uic7csVkGgZWvx4="
+          "title": "theguardian.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEh1eOX5y0EEeI_oQQUFPTb0mS2GKN5UTtl3Gy12-6_fRAa968mhWOAnG8x7_oeC9cG_Q_mxAwpRfEhZffnTTf7hd0CAMfUa--v5uhaT9zD1pM4J9r86mBAyx-xm82qN2izJix4XIQDjTWgrwZSH07rr_TFWpwLG3IWuHy5pxQVb4UfK4uym2o-1iH83A=="
         },
         {
-          "title": "themarshallproject.org",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE1aQfHqN2qck5whKw15sdm68ngdVC8QDkYESkE2TPEa56lQbeVmmvmR1jx10g0IYXZcOb8E3G5Z4QxRIGcKj7mvIjXS3HyxZmAvDYEvSAVKH4dPKDkIur0kykNn4yEqd-_6jTEdwJfofUL5cyt7qs10LfHiLgAZ-lQnmZOzeP3YFN8tRV7UF_e8H8DvzQ7Rja0"
+          "title": "ktvb.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFCsXXoqCufZgC-u-IDEnjTkL6Wyajwo2u8VCuCzIdy9fuY8AKGD7eIJYT9BjwmnNArqDNpRdD4jMWTYzmYmOZgvFDlBIIFlR8w_m-B9eyJPdq16OwF9JRSno0l0V7KWt8xuKolyk5HyrqE9wzvWk67z-YDo5vnWtjwjlG3mOG5hJyZeSpiiQS8bhzfD9rEoNvwZ52cstuiu_EtVy86SUuFDQYQAeukDqmugAEbBzOYUrj84b78liO-Mu3zo-Qha2dCS2voyNB-XqdrdwPRrppezQ5rMlL1N12PExroyTOGjokp9MU="
         }
       ]
     },
     {
-      "id": "2026-11-06-technology",
+      "id": "2026-11-07-technology",
       "category": "technology",
       "categoryLabel": "Technology",
-      "headline": "Tech Stocks Plunge as Regulatory Concerns Trigger Major AI Market Sell-Off",
-      "summary": "Technology stocks experienced a massive sell-off on November 5, wiping out over $2 trillion in market value and driving the Nasdaq into correction territory. Investors reacted with alarm to potential regulatory hurdles and tighter oversight for AI data centers following recent U.S. midterm election results.",
-      "question": "How do you think increased government regulation might influence the speed of artificial intelligence development in the coming years?",
+      "headline": "Japan Launches $63 Million Cybersecurity Package to Combat AI-Driven Threats",
+      "summary": "Japan announced a 10 billion yen emergency cybersecurity initiative on Friday following a series of data breaches that compromised corporate and government systems. The package introduces artificial intelligence tools, active cyber defense measures, and expert rapid-response teams to counter increasingly sophisticated digital attacks.",
+      "question": "How do you think governments should balance rapid artificial intelligence adoption with digital security risks?",
       "coachLeads": {
-        "friendly": "Hey, have you seen the news about today's big drop in tech stocks? It really gets you thinking about how regulations might shape the future of AI.",
-        "energetic": "Did you catch today's huge market shake-up? Tech shares just took a massive dive as Wall Street reacts to new policy uncertainty surrounding AI!",
-        "calm": "Markets saw a notable drop today as tech investors responded to potential changes in AI policy. It's a good moment to look at how technology and government regulations intersect.",
-        "direct": "A major market drop just hit technology stocks over fears of new AI regulations. Let's talk about what this shift could mean for tech companies going forward."
+        "friendly": "Hey, have you heard about Japan's new cybersecurity package? It is a really interesting story to chat about today!",
+        "energetic": "Check this out! Japan is stepping up its tech defenses big time with a massive new AI-focused initiative!",
+        "calm": "There is a notable development in cybersecurity today worth discussing. Japan is introducing AI tools and expert teams to protect its national infrastructure.",
+        "direct": "Japan just launched a $63 million cybersecurity emergency package. Let's look at why this is such big news."
       },
       "sources": [
         {
-          "title": "Google News: Technology",
-          "url": "https://news.google.com/search?q=Technology%20top%20news%202026-11-06&hl=en-US&gl=US&ceid=US:en"
+          "title": "news4jax.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH6qCM8jo4vvfnyNKDICImztk9pRQjeKl5GoGETvkfvVKlI2A7EveTFiRjSXpthwH5Yl3Ey8uz9fr-Ql4DwHetgxnY3xRRh2qyrx1K3nrEPqzlZqrrsJCqKVF2VkAmgC4dJgomo2jMd8xP2EFyy2elzdufzjIIrV209ZA5bRIznXtGBm7Lc8Sumv3bp7d3XEs3dw8iIQM5wL6Fgr8f-Mg0bPZ8bjsJPWNaVZuw="
         }
       ]
     },
     {
-      "id": "2026-11-06-sports",
+      "id": "2026-11-07-sports",
       "category": "sports",
       "categoryLabel": "Sports",
-      "headline": "Ferencváros Stuns AC Milan with 2-0 Europa League Victory",
-      "summary": "Hungarian side Ferencváros secured a surprising 2-0 win against AC Milan at San Siro during Thursday's UEFA Europa League match. Forward Lenny Joseph scored twice in the second half, handing the Italian hosts their third defeat in four European games this season.",
-      "question": "What factors do you think cause elite football clubs to occasionally stumble against underdog teams in tournament play?",
+      "headline": "Kimi Antonelli Tops Second Practice at São Paulo Grand Prix in Senna Tribute Helmet",
+      "summary": "Formula 1 champion Kimi Antonelli recorded the fastest lap time during Friday's second practice session at the São Paulo Grand Prix in Brazil. The Mercedes driver led rivals Lando Norris and Max Verstappen while wearing a special helmet paying tribute to legendary Brazilian driver Ayrton Senna.",
+      "question": "If you could design a piece of sports gear to pay tribute to someone who inspires you, what would it look like?",
       "coachLeads": {
-        "friendly": "Hey, did you hear about the major Europa League surprise yesterday? AC Milan dropped a home match to Ferencváros, and football fans are stunned!",
-        "energetic": "What an incredible shock in European football! Ferencváros went right into San Siro and beat AC Milan with two second-half goals!",
-        "calm": "Yesterday brought an unexpected result in European football when AC Milan lost at home to Ferencváros. It shows how unpredictable international cup competitions can be.",
-        "direct": "Ferencváros pulled off a 2-0 victory against AC Milan in Italy yesterday. Let's talk about what this result means for both clubs."
+        "friendly": "Hey, have you caught the latest updates from the Formula 1 track in Brazil? This story is definitely worth checking out!",
+        "energetic": "Check this out! Kimi Antonelli just zoomed to the top of the practice leaderboard in São Paulo wearing a fantastic tribute helmet!",
+        "calm": "Here is a notable sports story from Friday's practice runs in Brazil. Kimi Antonelli set the quickest time while honoring racing legend Ayrton Senna.",
+        "direct": "Kimi Antonelli posted the fastest lap in Friday's second practice session for the São Paulo Grand Prix. He finished ahead of Lando Norris and Max Verstappen."
       },
       "sources": [
         {
-          "title": "dawn.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEYN_JT-X0h0R3pibZb4PFh4-IkXA5tYBf5dbw5UriyLMETETNkA3SXh5r3rzFIqmw5pNRTVP6zWapTq0GAVglJh5QmNYGJPzYAUlweKK47p6D2xIznQLojMtciy_DALyHnc3crj10CrzViX0gGVOb0bT_OPjaYjYxKXuduIspYDSSg6lVhIk_fFCM8gNbNfpaRixgCuAVbGQ=="
+          "title": "washingtonpost.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFedHQF_P68Ce4OeHZPRvvBjcabSALbl1xMRqHgzmYEagQhm_bAQrj8DPVw36805G9x0yWXWq0FH0ZIcKOIG8O1lprSgdhrlRBHB8bezR5nNosH0iQr07CYyhfGTCJL-KbdSTrHfTcCsLuVnSkD8-L-ZcESotLkSc8XDjVVxwdBk9K5pkDjEwYU36JnIJZqQ787sFzb9FRJI2xWj7-7p22ZbU2A0IQjKdih_8q3WMET0wAILvAG3iqlNg=="
         }
       ]
     },
     {
-      "id": "2026-11-06-entertainment",
+      "id": "2026-11-07-entertainment",
       "category": "entertainment",
       "categoryLabel": "Entertainment",
-      "headline": "Pixar President Jim Morris Steps Down as Jonathan Garson Is Named Successor",
-      "summary": "Longtime Pixar Animation Studios President Jim Morris announced he is stepping down after 12 years in the top executive role to become president emeritus. Disney veteran Jonathan Garson will officially succeed Morris as the studio's next president on January 4, 2027.",
-      "question": "How do you think leadership changes at major film studios like Pixar impact the kinds of movies they produce?",
+      "headline": "Britney Spears Reissues 2001 Album with 5 Unreleased Songs",
+      "summary": "On November 6, 2026, Legacy Recordings released a 25th-anniversary expanded edition of Britney Spears' self-titled 2001 album. The new release features five previously unreleased songs, giving listeners access to vault tracks from the pop star after she announced her departure from the music industry in 2024.",
+      "question": "What is a favorite album or song from your past, and why does it still hold special meaning for you?",
       "coachLeads": {
-        "friendly": "Hey, have you heard about the big executive change happening over at Pixar?",
-        "energetic": "Pixar just announced a major leadership shuffle! Ready to talk about what this means for the future of animation?",
-        "calm": "There is notable industry news about Pixar's executive transition today that is worth reflecting on.",
-        "direct": "Pixar is appointing a new studio president. Let me break down the news so we can discuss it."
+        "friendly": "Hey, did you hear about the new Britney Spears release? Five unreleased songs from 2001 just came out today!",
+        "energetic": "You won't believe this pop music update! Five unheard Britney Spears tracks from her peak era were officially released today!",
+        "calm": "If you follow music news, there is an interesting story today. Legacy Recordings released five unreleased Britney Spears songs recorded back in 2001.",
+        "direct": "Legacy Recordings just dropped five previously unheard Britney Spears tracks. Let's chat about what this release means for fans and pop culture history."
       },
       "sources": [
         {
-          "title": "Google News: Entertainment",
-          "url": "https://news.google.com/search?q=Entertainment%20top%20news%202026-11-06&hl=en-US&gl=US&ceid=US:en"
+          "title": "triblive.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHeab1pSMa4XQp2xJhsxh895Yp-9fUYhsUqOP5F0gvgtnXss-SjlABh9wGpLtPvrn9U-XaNffyXc6_9jFDwqLt6o0y7lRp34TOVFytA61BTg2Fg0388vCq7K2dqD1ku-AThkoHzS2w_02lBhKY9bCUg7husQXoPcn4_DEDmcxCCZw_UxDrG2I_3kd4huFGAoRGqr9bT3fESIzo4YtIMJECwsIZzOfe7LIxZa0LFfOV6oBKq14JmVYH3VQ=="
         }
       ]
     }
