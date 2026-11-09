@@ -1,104 +1,96 @@
 {
   "schemaVersion": 1,
   "status": "live",
-  "date": "2026-11-08",
-  "generatedAt": "2026-11-08T00:36:27.689Z",
+  "date": "2026-11-09",
+  "generatedAt": "2026-11-09T00:54:54.019Z",
   "model": "gemini-3.6-flash",
   "fallbackCategories": [],
   "items": [
     {
-      "id": "2026-11-08-politics_economy",
+      "id": "2026-11-09-politics_economy",
       "category": "politics_economy",
       "categoryLabel": "Politics & Economy",
-      "headline": "Israel's President Taps Opposition Leader Gadi Eisenkot to Form New Government",
-      "summary": "Israel's president has asked former military chief and opposition leader Gadi Eisenkot to form a new government after recent elections left Prime Minister Benjamin Netanyahu without a clear majority. This decision marks a major political setback for Netanyahu and opens the door to a potential shift in the nation's leadership.",
-      "question": "How do you think a change in a country's top leadership can affect its foreign policies and international relationships?",
+      "headline": "Israeli President Grants Opposition Leader Gadi Eisenkot Mandate to Form Government",
+      "summary": "Israeli President Isaac Herzog formally gave opposition politician Gadi Eisenkot the first opportunity to form a new government following recent elections. The former military chief now has six weeks to assemble a coalition, marking a significant potential leadership transition from long-serving Prime Minister Benjamin Netanyahu.",
+      "question": "What key factors do you think help political leaders build successful coalition governments during times of division?",
       "coachLeads": {
-        "friendly": "Hey there! Have you seen the big political news coming out of Israel today?",
-        "energetic": "There's a huge political shake-up happening right now in Israel! Let's dive into what's going on.",
-        "calm": "A major political shift is taking place in Israel today. It's a key story worth looking at together.",
-        "direct": "Israel's president has chosen an opposition candidate to attempt to form the next government. Here's why this is a major headline."
+        "friendly": "Hey, have you caught up on the latest news from Israel today? The country just took a major step toward a potential change in leadership.",
+        "energetic": "This is a big story in world politics! Israel's president just tasked opposition leader Gadi Eisenkot with building the next government!",
+        "calm": "There is a significant political shift unfolding in Israel. President Herzog officially gave opposition figure Gadi Eisenkot the first opportunity to assemble a coalition.",
+        "direct": "Israeli President Isaac Herzog gave opposition leader Gadi Eisenkot the mandate to form a new government today. It is a key moment for the country's political future."
       },
       "sources": [
         {
-          "title": "cbsnews.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEcL8nUll9OIgL4D1DVhcnMA0Hfi175fV3Zh0tK4g1MiF5iNqn2Yxxzflld-l87iiQ1oIAWSiRvvucaT1IIexS31Kw49J5O6ptzcVRqTczQT-Qji4s="
-        },
-        {
-          "title": "aljazeera.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH-T_nqmRe_voTKkaE67KOm6tenp96aXWGhdhVFPuYQDzKeZy_cNjv46kC6yRNrHmc07YlBRG-p-09X-CwPx4eUBLsjEhDJh83R0pm3MqJ4Gw=="
-        },
-        {
-          "title": "apnews.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEuop1KLSrxXfHByj0Hmj4IOfPVmmg9uf7JEcMSeYMMrLS9l9eATfSyMSqppqJS3Q2dYKBa7dk5MHjIG_sZkCg9RHwmnBv6vMYlYUOM72J_g7Avfg=="
+          "title": "pbs.org",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGWjAZUtq6vrWgCXtCt6Lu56iBeVnP_MhxpA91d-FXvXBMrNc5F3jYGKXE0fJVe5TDspCTHMvol7-10i-eUaADK7wIBXHQKbJsjCT_GDgZV5vWr2HJX6qxV2m7XWVaklLJ6zbTQaufP8stvks0JNcT0wu28_03FCvrwY0MdXgaWhCOPbVoHLNMkKNzhjGzvifDxyxJSGHLEzwyccZNtZifaLIXAui0KdSimFgzDTm4="
         }
       ]
     },
     {
-      "id": "2026-11-08-technology",
+      "id": "2026-11-09-technology",
       "category": "technology",
       "categoryLabel": "Technology",
-      "headline": "OpenAI Secures $11 Billion in New Funding at $1.25 Trillion Valuation",
-      "summary": "Artificial intelligence startup OpenAI has secured an initial $11 billion in fresh funding as part of a major investment round. The deal values the company at approximately $1.25 trillion, demonstrating huge investor interest in frontier AI development despite broader market volatility.",
-      "question": "Do you think massive financial investments in artificial intelligence will lead to positive changes for regular users?",
+      "headline": "Anthropic Agrees to $3.4 Billion Energy Deal for AI Data Centers",
+      "summary": "Artificial intelligence developer Anthropic has struck a $3.4 billion deal with Texas-based OnePWR Solutions to secure 1.7 gigawatts of natural gas generators for its data centers. The multi-billion-dollar agreement highlights how the exponential growth of advanced AI models is forcing tech firms to acquire massive dedicated energy supplies.",
+      "question": "What do you think about tech companies relying on natural gas to meet the massive power demands of artificial intelligence?",
       "coachLeads": {
-        "friendly": "Hey, have you seen the latest big news in tech? OpenAI just secured another $11 billion in funding, and it is a great topic for us to talk about today.",
-        "energetic": "This is a massive news story today! OpenAI raised $11 billion at a trillion-dollar valuation, so let's break down what this big move means!",
-        "calm": "Here is an interesting headline worth discussing today. OpenAI has raised $11 billion in new capital, highlighting the massive scale of current AI investments.",
-        "direct": "OpenAI has just raised $11 billion in new funding at a $1.25 trillion valuation. Let's discuss whether these huge tech investments are worth talking about."
+        "friendly": "Hey, have you heard about this massive AI news? It really shows how much electricity these modern systems actually need!",
+        "energetic": "This is huge news! Anthropic is spending over three billion dollars just to keep its AI servers powered up!",
+        "calm": "This story is worth taking a look at. It shows how the rapid expansion of AI is creating unprecedented energy challenges.",
+        "direct": "AI computing demand is surging, and Anthropic just made a multi-billion-dollar deal to secure its power supply."
       },
       "sources": [
         {
-          "title": "medium.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEgsuL-OK4o3rPpOGHOlC7mtTWbJulGDQEe3N-vl5dJYZso6EY2iTOBRVCiZlpcZNyqiGr2H1pV9edfTwxRq7kqf4TKjv9YAh1roKvXO2MqnRRlVzq3EsxcDG8RWcD1Prdbf-2rxKVX28CT7Q1QhPh5Do39KaSMFmwpS51WYgi-rcWBrf1kc0MM-1T0RKE6D1smUB7f01fcseXJD9IInN0="
-        },
-        {
-          "title": "youtube.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG5HBSWf-oDTnHFr44eeb1jIf-lyg9DFivNh1XosmVOYD4FDbPmYU6d7Ai6X_KUeahZ4K5H_Z6bprYA2MagkG4gxtirVfnkUYxxrR0SCiGA8Ek50kHQg95qtOrtdzyQP-kK"
+          "title": "foxnews.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHs5xPL3FTpza8RPGybFfb-B3aXRD2RJtYWC6UvPF5K7oClpCq8Uuz6tfkftOFLifiM1Na92_zPdgW1eoaZyLokFA1sICBprH_sS8Utr7_a4vak_7FGxoKMivWWpSxLmxWx4ONxW8U8glkJq2EQSvE="
         }
       ]
     },
     {
-      "id": "2026-11-08-sports",
+      "id": "2026-11-09-sports",
       "category": "sports",
       "categoryLabel": "Sports",
-      "headline": "Arsenal Extends Premier League Lead as Manchester City Suffers Third Straight Loss",
-      "summary": "Arsenal expanded their lead at the top of the Premier League to six points with a 1-0 victory over Hull City on Saturday. The result came as title rivals Manchester City suffered a surprise 3-1 defeat to Nottingham Forest, marking their third consecutive league loss.",
-      "question": "Do you think Manchester City can recover from this slump and challenge Arsenal for the title?",
+      "headline": "Mercedes Clinches F1 Constructors' Title as Lando Norris Wins in São Paulo",
+      "summary": "McLaren driver Lando Norris won a rain-affected São Paulo Grand Prix on November 8, 2026, beating Max Verstappen to take victory from pole position. Mercedes officially clinched the 2026 Formula 1 Constructors' Championship after team drivers George Russell and Kimi Antonelli secured top-five finishes.",
+      "question": "What qualities do you think are most essential for a team to maintain top performance throughout a long championship season?",
       "coachLeads": {
-        "friendly": "Hey there! Have you been following the latest Premier League action? There was a huge shakeup at the top of the standings this weekend.",
-        "energetic": "What a dramatic day of English football! Manchester City just dropped their third straight match while Arsenal surged further ahead at the top!",
-        "calm": "If you follow international sports, today's Premier League results are worth reviewing. The title race has taken an unexpected turn following Manchester City's latest setback.",
-        "direct": "Arsenal expanded their Premier League lead to six points today after Manchester City lost another match. Let's break down what this means for the championship race."
+        "friendly": "Hey, did you catch the big Formula 1 race in Brazil over the weekend? There was a major team title celebration at the finish line!",
+        "energetic": "What an unbelievable day of racing in São Paulo! Mercedes just locked up the team championship, and Lando Norris mastered the rain to win!",
+        "calm": "There was a major milestone in international motorsport today. Mercedes officially secured the Formula 1 Constructors' Championship after a tactical race in Brazil.",
+        "direct": "Mercedes has officially clinched the 2026 F1 Constructors' Championship after the São Paulo Grand Prix. Let's talk about what made their season so strong."
       },
       "sources": [
         {
-          "title": "foxsports.com.au",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGWGWxfNmYKa8cEUea8vbImCslXWgB5CkfERE-zAD9T26YD5pLLm3EuizwxhvC4rEWaDXan0HmzN9y2-OFfcq704ms2-Bz-3TmYdXeXritPGPQUI4GjLeD9xE8MzkgJbU2C96u5E2aJMeR5FK6CvChzJWiqYqaUprrdqp7uR8WZE-IbzRI0YbTGCahaHfpZWqTsPEl0xbWp40YYAGwkcWPhgd_Lgk9M9OvFaCwTJS9akcQ_fREAwAtjzVd_2lgBwt7c6rISkte--mK4Iq-N4eV2vH3j77cBNKXZNVFKGX67odMhNaez3TCzI56-ZOrbkpEcq9eQP2enbcgtRScdI5EqDr6l7I_AVTgPfwuqv3iP8Z9vIeOWhh4jGq3Vz8S2zs39fTx8UzBTjMUBkl914Hh6uYgdPqxPi-OqxZbZzENmewZ4w5kKiLtfumJDKgU="
+          "title": "ledger-enquirer.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFrfAKufM_HjQ7tzsu1L42ataqu24qDyZkZBSToFBBwJisCtraq4FJeeHtx9Q2zeZg68gXtdEK4w_zxJ0TDy6KHW-ik8ts3l8jiu6lKFC6yggZweJ6saQL8RWgSASaJ_rtxbodr70fOpeU0PLBXFPUegfG_KW3NdiXk7BwyBsqro-oaDJyA"
         },
         {
-          "title": "clickorlando.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHQYUuyNVIHkty-UviiMLKHJSZhrjuPH0d1T6lEAya7eKbjLZ9c9QsyEEOYpbG1qHdTUtkNh2UAbiSlg1JAYWGjOXakMvLINUTH77_egpKuWsHI3Xm9ixXEvIQrLCm3Rg1IWbmbW9z3d72pAyA4uHTP2JndKO-gAYU36AIHdROmEmnBuMG06rFQAiQ0_Oz5L3cViBaucps5boRZ69sRE_oBTXGdNeBFgdpLNBXWqTfaUbCKugqi6qIbIP1T_LwKuFg9_Fw="
+          "title": "beinsure.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFNUPBCBn-J9f5mV1NG1KHRA8T4r3jWSj7putlhyf9yZCMAe0MIWKx23Jsown5pQ1toBJCE7NKvnVOlkQ4uYPa6P4geBS1nXUwS9sxvdgfbEDNROAB3ib06GSj0PzH7aM7tUFLKdooz6VGCGK4cTjo1fXzGzBCrzr7-Hz04dtEbQ96amB5ot-Pau0QwBkDtJ-upoPzGgf7t_aadv-79"
         }
       ]
     },
     {
-      "id": "2026-11-08-entertainment",
+      "id": "2026-11-09-entertainment",
       "category": "entertainment",
       "categoryLabel": "Entertainment",
-      "headline": "Godzilla Minus Zero Sets Record with $32 Million Box Office Debut",
-      "summary": "Godzilla Minus Zero took the top spot at the box office this weekend with a projected $32 million debut in North America. The film set the record for the biggest North American opening weekend ever for a live-action foreign-language movie.",
-      "question": "Why do you think international films like Godzilla are attracting such massive global audiences today?",
+      "headline": "Godzilla Minus Zero Sets Box Office Record with $31.6 Million Debut",
+      "summary": "Director Takashi Yamazaki's sci-fi sequel Godzilla Minus Zero topped the North American box office with an estimated $31.6 million opening weekend. This milestone marks the highest-grossing domestic opening weekend debut in history for a live-action foreign-language film.",
+      "question": "Why do you think foreign-language films are finding such massive success with global audiences today?",
       "coachLeads": {
-        "friendly": "Hey, have you heard the exciting box office news about the new Godzilla movie? It is breaking huge records this weekend!",
-        "energetic": "Check this out—Godzilla Minus Zero just stomped into theaters and smashed box office records! It's incredible to see how well it's doing.",
-        "calm": "If you're looking for an interesting story today, the latest Godzilla film is making big headlines at the box office. Let's talk about why it's such a hit.",
-        "direct": "The new Godzilla film just set a major box office record for foreign-language releases. Let's dive into what makes this story so noteworthy."
+        "friendly": "Hey, have you heard about Godzilla's latest box office milestone?",
+        "energetic": "Godzilla just smashed another historic movie record, and the numbers are incredible!",
+        "calm": "It is fascinating to see international cinema achieving such major success at the North American box office.",
+        "direct": "Godzilla Minus Zero just set a new box office record for foreign-language films."
       },
       "sources": [
         {
-          "title": "Google News: Entertainment",
-          "url": "https://news.google.com/search?q=Entertainment%20top%20news%202026-11-08&hl=en-US&gl=US&ceid=US:en"
+          "title": "wptf.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEZy6DgITVIVRTiRw-dN1p9q95VvnF2t5bJKCTvR0gzBRidCiLnvF_uPz0pe6GDrGqlNNp1LwwgqEJ2hJRCtC7fiR68fphb0zIp4fuPwyL308bKuQNg7vypZgdwYwLFmo75ZQT6xCHczVi_rvfQ5YBQ1KUfwjiCHccry6EmK3KdOsFF8M0MUCKfPqg4ZRCFIGlrisDoEdeviB3eD_m0Hkgv9_mJYosLDpi6JO-bNT1uL3CbMZsKac_zj2N1vY5UkWt3eg=="
+        },
+        {
+          "title": "news.cn",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGG4-YBgGUMM5pyzKGxIv2IXkXNA9ezQ1auGhoIqawASmHZfg8BJHKY7DnlslSyHHSflsCCznvtZI-GGUpYoS4eGENsMHgAvB-_UOuXk9uVtyXc5cB-e0vG_A0rr2j9m5d4a2JkqWPRBuC0fB-4UPB0pVkNvj1Mnul9201a4vBIjNUCipGMX8PysLp4"
         }
       ]
     }
