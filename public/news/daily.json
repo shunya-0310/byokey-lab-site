@@ -1,96 +1,112 @@
 {
   "schemaVersion": 1,
   "status": "live",
-  "date": "2026-11-09",
-  "generatedAt": "2026-11-09T00:54:54.019Z",
+  "date": "2026-11-10",
+  "generatedAt": "2026-11-10T03:34:26.417Z",
   "model": "gemini-3.6-flash",
   "fallbackCategories": [],
   "items": [
     {
-      "id": "2026-11-09-politics_economy",
+      "id": "2026-11-10-politics_economy",
       "category": "politics_economy",
       "categoryLabel": "Politics & Economy",
-      "headline": "Israeli President Grants Opposition Leader Gadi Eisenkot Mandate to Form Government",
-      "summary": "Israeli President Isaac Herzog formally gave opposition politician Gadi Eisenkot the first opportunity to form a new government following recent elections. The former military chief now has six weeks to assemble a coalition, marking a significant potential leadership transition from long-serving Prime Minister Benjamin Netanyahu.",
-      "question": "What key factors do you think help political leaders build successful coalition governments during times of division?",
+      "headline": "U.S.-Mediated Peace Talks on Ukraine War Resume in Abu Dhabi",
+      "summary": "Delegations from the United States, Ukraine, and Russia are convening in Abu Dhabi on November 10 for two days of trilateral negotiations focused on post-war security guarantees and ending the conflict. The summit comes as G7 foreign ministers meet in Paris to press for diplomatic terms that protect Ukrainian sovereignty and European security.",
+      "question": "What key factors do you think are necessary for a diplomatic peace agreement to succeed in ending a long-running conflict?",
       "coachLeads": {
-        "friendly": "Hey, have you caught up on the latest news from Israel today? The country just took a major step toward a potential change in leadership.",
-        "energetic": "This is a big story in world politics! Israel's president just tasked opposition leader Gadi Eisenkot with building the next government!",
-        "calm": "There is a significant political shift unfolding in Israel. President Herzog officially gave opposition figure Gadi Eisenkot the first opportunity to assemble a coalition.",
-        "direct": "Israeli President Isaac Herzog gave opposition leader Gadi Eisenkot the mandate to form a new government today. It is a key moment for the country's political future."
+        "friendly": "Hey, have you caught the news about the peace talks starting today in Abu Dhabi? It feels like a crucial moment for global diplomacy worth taking a look at.",
+        "energetic": "Check this out! Negotiators from the US, Ukraine, and Russia are back at the table today for high-stakes peace talks in Abu Dhabi!",
+        "calm": "Delegations are gathering in Abu Dhabi today to discuss potential post-war security guarantees. It is a quiet moment of diplomacy that could have significant implications.",
+        "direct": "Trilateral peace talks between the US, Ukraine, and Russia are restarting today in Abu Dhabi. Let's discuss what this means for international relations."
       },
       "sources": [
         {
-          "title": "pbs.org",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGWjAZUtq6vrWgCXtCt6Lu56iBeVnP_MhxpA91d-FXvXBMrNc5F3jYGKXE0fJVe5TDspCTHMvol7-10i-eUaADK7wIBXHQKbJsjCT_GDgZV5vWr2HJX6qxV2m7XWVaklLJ6zbTQaufP8stvks0JNcT0wu28_03FCvrwY0MdXgaWhCOPbVoHLNMkKNzhjGzvifDxyxJSGHLEzwyccZNtZifaLIXAui0KdSimFgzDTm4="
+          "title": "apnews.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEJf70Uomdv8QFgOk5HaW9JIZIuxX_Ib0SWWW64tE_RBCLp-UV0qfE4Tvjc7diCeKlsEG1-c0pTqZuTd3CjAZRpHvF6hHpdqUdv9WWgZwgUGMfOqrp4pJkNNqMhqfIk6r1o7DfEGcGekh16L0j5P2w2IKd6FUyj2MT3nSHniJJ1Qw9UkcGwFIpjnAAa_RqhqpO7qRXGYLQisQ=="
+        },
+        {
+          "title": "axios.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEH_SjFdXCTDoLrVObm7io8SEviCd8GYXoVpKcxMfL0AYEi2lJ6cCu48kVLk85WD90aM2_uoskUkJuh-8AaKfdOn-M7xbB83SajmZNtr6ldcw95obFAhh6kLZLhMqBw_BaslQ4Hvcwa1FaMr3011bM7dDq4XUrNTZZQDZkgGxpRZYaoWp5KaGbysaUjxU6J"
+        },
+        {
+          "title": "courthousenews.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGiYmL9K5jkI_xSKu9baSTRT9seDJhOFXEWxikGxOgq3DM_VEhlcXqQTfxij646a_oe9Tc_4dK_S2Qxaopf56DL6joQTNICh-wECJ7P9ZJjjiiJ6eOsvFaA63oUDXq6Ace4knZlqQDVS72bxWb1_KrRwK4EUi1rC-Ku4lbhFNnTR_NmhDKdnTwpIVnUbz0="
         }
       ]
     },
     {
-      "id": "2026-11-09-technology",
+      "id": "2026-11-10-technology",
       "category": "technology",
       "categoryLabel": "Technology",
-      "headline": "Anthropic Agrees to $3.4 Billion Energy Deal for AI Data Centers",
-      "summary": "Artificial intelligence developer Anthropic has struck a $3.4 billion deal with Texas-based OnePWR Solutions to secure 1.7 gigawatts of natural gas generators for its data centers. The multi-billion-dollar agreement highlights how the exponential growth of advanced AI models is forcing tech firms to acquire massive dedicated energy supplies.",
-      "question": "What do you think about tech companies relying on natural gas to meet the massive power demands of artificial intelligence?",
+      "headline": "Nvidia Launches Probe Into CEO Jensen Huang Over Foreign Intelligence Concerns",
+      "summary": "Nvidia opened an internal investigation after Chief Executive Jensen Huang disclosed an extramarital relationship with a businesswoman suspected by intelligence officials of ties to foreign state security. The story is making global headlines today as U.S. federal authorities also inquire into potential corporate and national security risks at the world's leading AI chipmaker.",
+      "question": "How do you think major technology companies should balance personal privacy with national security responsibilities for their executives?",
       "coachLeads": {
-        "friendly": "Hey, have you heard about this massive AI news? It really shows how much electricity these modern systems actually need!",
-        "energetic": "This is huge news! Anthropic is spending over three billion dollars just to keep its AI servers powered up!",
-        "calm": "This story is worth taking a look at. It shows how the rapid expansion of AI is creating unprecedented energy challenges.",
-        "direct": "AI computing demand is surging, and Anthropic just made a multi-billion-dollar deal to secure its power supply."
+        "friendly": "Hey, have you heard about the huge story involving Nvidia's CEO today? It's really worth talking about!",
+        "energetic": "You won't believe the massive tech story breaking right now! Nvidia is investigating its own CEO over a potential spy scandal.",
+        "calm": "There is a major development in the tech industry today concerning Nvidia's corporate leadership. It's a good topic for us to explore together.",
+        "direct": "Nvidia's CEO is under internal and federal scrutiny over foreign intelligence concerns. Let's break down why this is such a major story today."
       },
       "sources": [
         {
-          "title": "foxnews.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHs5xPL3FTpza8RPGybFfb-B3aXRD2RJtYWC6UvPF5K7oClpCq8Uuz6tfkftOFLifiM1Na92_zPdgW1eoaZyLokFA1sICBprH_sS8Utr7_a4vak_7FGxoKMivWWpSxLmxWx4ONxW8U8glkJq2EQSvE="
+          "title": "aljazeera.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHewzAycWdW3qGBOU2la84V7cxHgesCRiY9pLq8HvGtkY9-XS8PNBBPOYz1vC1pFlc8pk_xUJwe2PNROzBSG6moCB-vY2C2aEfJ77owbrkikZZ6qHXpfp_y168wRKAuXLofW-GnQXb8UBz6NP7s2le8yd9BOZQP9wiEZe9OMl9BEpia8ncRnJSD6M1llOQP-AcnUVPHY2HW0_ie1AI="
+        },
+        {
+          "title": "aiweekly.co",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHbv-_W_uli1wWgPqC_YdJ_k7QPWYgt6VKTWwI6_yKWjSWabUlrvPcrhijFm6b9PZHgF221NTDfJy5631NjV7EN2fu-TUAskuOady0ZlJtquxg471yy8snrCT0-oitMIk3telVHwTU_tso="
+        },
+        {
+          "title": "youtube.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFDrmv1Xgw92J5iAG656_BfE8vEit-TAUiErhNTpBgX2XaDGleR1uZwF_EDAiawSorkL0gWK0F-0DeiYz2uvyBRxgS7M9UakmHcc0ctnk5x-2wZP20hgEMVXWZe9LqG-8w="
         }
       ]
     },
     {
-      "id": "2026-11-09-sports",
+      "id": "2026-11-10-sports",
       "category": "sports",
       "categoryLabel": "Sports",
-      "headline": "Mercedes Clinches F1 Constructors' Title as Lando Norris Wins in São Paulo",
-      "summary": "McLaren driver Lando Norris won a rain-affected São Paulo Grand Prix on November 8, 2026, beating Max Verstappen to take victory from pole position. Mercedes officially clinched the 2026 Formula 1 Constructors' Championship after team drivers George Russell and Kimi Antonelli secured top-five finishes.",
-      "question": "What qualities do you think are most essential for a team to maintain top performance throughout a long championship season?",
+      "headline": "Trinity Rodman and Ashley Sanchez Named Finalists for 2026 NWSL MVP Award",
+      "summary": "On November 9, 2026, the National Women's Soccer League officially announced the finalists for its end-of-year awards, headlined by Washington Spirit star Trinity Rodman and Golden Boot winner Ashley Sanchez. The shortlist release officially kicked off the final voting round across players, coaches, media, and fans before the winners are crowned on November 18.",
+      "question": "Which player do you think deserves to win a league MVP title, and what qualities make an athlete stand out the most?",
       "coachLeads": {
-        "friendly": "Hey, did you catch the big Formula 1 race in Brazil over the weekend? There was a major team title celebration at the finish line!",
-        "energetic": "What an unbelievable day of racing in São Paulo! Mercedes just locked up the team championship, and Lando Norris mastered the rain to win!",
-        "calm": "There was a major milestone in international motorsport today. Mercedes officially secured the Formula 1 Constructors' Championship after a tactical race in Brazil.",
-        "direct": "Mercedes has officially clinched the 2026 F1 Constructors' Championship after the São Paulo Grand Prix. Let's talk about what made their season so strong."
+        "friendly": "Hey, did you catch the big news about the NWSL award nominees today? It is going to be such an exciting MVP race!",
+        "energetic": "Check this out—the finalists for the NWSL MVP were just announced, and the lineup is stacked! Who are you rooting for?",
+        "calm": "The NWSL released its list of MVP finalists today. It is worth taking a look at how these incredible athletes performed this season.",
+        "direct": "The NWSL announced its 2026 MVP finalists today. Let's talk about who has the best chance to take home the trophy."
       },
       "sources": [
         {
-          "title": "ledger-enquirer.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFrfAKufM_HjQ7tzsu1L42ataqu24qDyZkZBSToFBBwJisCtraq4FJeeHtx9Q2zeZg68gXtdEK4w_zxJ0TDy6KHW-ik8ts3l8jiu6lKFC6yggZweJ6saQL8RWgSASaJ_rtxbodr70fOpeU0PLBXFPUegfG_KW3NdiXk7BwyBsqro-oaDJyA"
+          "title": "washingtonspirit.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGkqZv1RPO3cI_TGJblBXkiXNnbbnotPcSy4VNFd4qI-YLDLHjA_rtkoMoRg5byZTzK1G1JCKYyVk6HAiSOy8FnJOUDb7IhfEOEIREo1Oymym71-E6ZxbjeWXE8tzBHgIQWZ3jVXvjBtM-O1yaH53NA9IR5YM7qP5WviQNIlx3jsrSsUMQgwQP_MPlurDc0eJv4Z6QKgTrAzxDlVsO-_o1OkCmu-X0="
         },
         {
-          "title": "beinsure.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFNUPBCBn-J9f5mV1NG1KHRA8T4r3jWSj7putlhyf9yZCMAe0MIWKx23Jsown5pQ1toBJCE7NKvnVOlkQ4uYPa6P4geBS1nXUwS9sxvdgfbEDNROAB3ib06GSj0PzH7aM7tUFLKdooz6VGCGK4cTjo1fXzGzBCrzr7-Hz04dtEbQ96amB5ot-Pau0QwBkDtJ-upoPzGgf7t_aadv-79"
+          "title": "nccourage.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGtOculjs-jIRi_N4mKXicq6yGTPaaF5yDzJGfJB3W3EjOc81MPQvfFTieUhYsy6xyUI1bN2nXFH1wo1_rmvogirfGQzQ14X_qYekJm0mnwRbYJ9ymsL2TquJAGmFS9ygDSlSGpNfNq8Zkmvv5OJcS0txUHpyaFrzh2-52sCWyjxu_7zWl_4T2l-5X8CBPa_Sg1Kzg="
+        },
+        {
+          "title": "rsl.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFP8wGhqvQRWv-zvOPat_RySNuo4RCCNVYbtrWNhuiF0BB-ZkCX6bcwuaVHKlLV1FrwHbQ9YU5Wxe3HOqC7mdZqEIhwW1RGzm-3GTFfMSyEIEBcVEorFyogcsJovdeeSqjaXmNjVkfQNzVIahWkxhQIg9MRp3uxgTgAEFrMeBAURbPoU0IHK5qxhf0rUuISgk1WY1fKrX2GMFQ="
         }
       ]
     },
     {
-      "id": "2026-11-09-entertainment",
+      "id": "2026-11-10-entertainment",
       "category": "entertainment",
       "categoryLabel": "Entertainment",
-      "headline": "Godzilla Minus Zero Sets Box Office Record with $31.6 Million Debut",
-      "summary": "Director Takashi Yamazaki's sci-fi sequel Godzilla Minus Zero topped the North American box office with an estimated $31.6 million opening weekend. This milestone marks the highest-grossing domestic opening weekend debut in history for a live-action foreign-language film.",
-      "question": "Why do you think foreign-language films are finding such massive success with global audiences today?",
+      "headline": "\"Godzilla Minus Zero\" Sets North American Box Office Record for Foreign-Language Live-Action Film",
+      "summary": "Director Takashi Yamazaki's \"Godzilla Minus Zero\" topped the North American box office with an estimated $31.6 million weekend opening. The release set a new record for the highest opening weekend by a live-action foreign-language movie in North America, outperforming its Oscar-winning predecessor.",
+      "question": "Why do you think giant monster movies like Godzilla continue to attract large audiences around the world?",
       "coachLeads": {
-        "friendly": "Hey, have you heard about Godzilla's latest box office milestone?",
-        "energetic": "Godzilla just smashed another historic movie record, and the numbers are incredible!",
-        "calm": "It is fascinating to see international cinema achieving such major success at the North American box office.",
-        "direct": "Godzilla Minus Zero just set a new box office record for foreign-language films."
+        "friendly": "Hey, have you heard about the big movie news today? The latest Godzilla sequel just set a huge box office record in North America!",
+        "energetic": "Monster news at the movies! \"Godzilla Minus Zero\" smashed box office records with a massive opening weekend!",
+        "calm": "There is some notable news in film today. The new Godzilla movie achieved a record-breaking debut at the North American box office.",
+        "direct": "\"Godzilla Minus Zero\" just set a box office record for a live-action foreign-language film. Let's discuss why it's performing so well."
       },
       "sources": [
         {
-          "title": "wptf.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEZy6DgITVIVRTiRw-dN1p9q95VvnF2t5bJKCTvR0gzBRidCiLnvF_uPz0pe6GDrGqlNNp1LwwgqEJ2hJRCtC7fiR68fphb0zIp4fuPwyL308bKuQNg7vypZgdwYwLFmo75ZQT6xCHczVi_rvfQ5YBQ1KUfwjiCHccry6EmK3KdOsFF8M0MUCKfPqg4ZRCFIGlrisDoEdeviB3eD_m0Hkgv9_mJYosLDpi6JO-bNT1uL3CbMZsKac_zj2N1vY5UkWt3eg=="
-        },
-        {
-          "title": "news.cn",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGG4-YBgGUMM5pyzKGxIv2IXkXNA9ezQ1auGhoIqawASmHZfg8BJHKY7DnlslSyHHSflsCCznvtZI-GGUpYoS4eGENsMHgAvB-_UOuXk9uVtyXc5cB-e0vG_A0rr2j9m5d4a2JkqWPRBuC0fB-4UPB0pVkNvj1Mnul9201a4vBIjNUCipGMX8PysLp4"
+          "title": "radionwtn.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEn4ihoN3bPkXYe6IFeM4z5lM8A9MmLqG24J0oLLHeejfWjei2MAO3vMeUhka0jalUoDQhjPW7CXfTeitRbxEGe2lBJV0fqWwrIjQlQ4cBcmiSi8hArAfpztuHcy4uxLmKfzq5AQUrQeBBElNBM_AQ4wE_dHwJwMzYyJHdTskb9kp9I6A3mIIZZQ7GgEgJCta-n0seWEKyaIj8SCOjYzXdqiB-lE9FJNFS08VYT2ZM="
         }
       ]
     }
