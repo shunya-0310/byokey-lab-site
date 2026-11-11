@@ -1,112 +1,104 @@
 {
   "schemaVersion": 1,
   "status": "live",
-  "date": "2026-11-10",
-  "generatedAt": "2026-11-10T03:34:26.417Z",
+  "date": "2026-11-11",
+  "generatedAt": "2026-11-11T01:14:00.403Z",
   "model": "gemini-3.6-flash",
   "fallbackCategories": [],
   "items": [
     {
-      "id": "2026-11-10-politics_economy",
+      "id": "2026-11-11-politics_economy",
       "category": "politics_economy",
       "categoryLabel": "Politics & Economy",
-      "headline": "U.S.-Mediated Peace Talks on Ukraine War Resume in Abu Dhabi",
-      "summary": "Delegations from the United States, Ukraine, and Russia are convening in Abu Dhabi on November 10 for two days of trilateral negotiations focused on post-war security guarantees and ending the conflict. The summit comes as G7 foreign ministers meet in Paris to press for diplomatic terms that protect Ukrainian sovereignty and European security.",
-      "question": "What key factors do you think are necessary for a diplomatic peace agreement to succeed in ending a long-running conflict?",
+      "headline": "U.S.-Brokered Russia-Ukraine Peace Talks Resume in Abu Dhabi",
+      "summary": "Delegations from Russia and Ukraine convened in Abu Dhabi for U.S.-mediated negotiations, marking their first direct talks in nine months. U.S. Secretary of State Marco Rubio described the initial sessions as very productive as negotiators discussed long-term security arrangements and humanitarian issues like prisoner exchanges.",
+      "question": "What key diplomatic compromises do you think will be necessary for both sides to achieve a lasting peace agreement?",
       "coachLeads": {
-        "friendly": "Hey, have you caught the news about the peace talks starting today in Abu Dhabi? It feels like a crucial moment for global diplomacy worth taking a look at.",
-        "energetic": "Check this out! Negotiators from the US, Ukraine, and Russia are back at the table today for high-stakes peace talks in Abu Dhabi!",
-        "calm": "Delegations are gathering in Abu Dhabi today to discuss potential post-war security guarantees. It is a quiet moment of diplomacy that could have significant implications.",
-        "direct": "Trilateral peace talks between the US, Ukraine, and Russia are restarting today in Abu Dhabi. Let's discuss what this means for international relations."
+        "friendly": "Hey there! Have you heard about the new diplomatic peace talks taking place in Abu Dhabi?",
+        "energetic": "Big news today! Russia and Ukraine are sitting down for U.S.-mediated talks in the UAE for the first time in months.",
+        "calm": "There is a significant diplomatic effort unfolding right now in Abu Dhabi. It's worth taking a moment to discuss where peace negotiations stand.",
+        "direct": "Russia and Ukraine just held their first direct peace talks in nine months. Let's talk about what this means for global politics."
       },
       "sources": [
         {
-          "title": "apnews.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEJf70Uomdv8QFgOk5HaW9JIZIuxX_Ib0SWWW64tE_RBCLp-UV0qfE4Tvjc7diCeKlsEG1-c0pTqZuTd3CjAZRpHvF6hHpdqUdv9WWgZwgUGMfOqrp4pJkNNqMhqfIk6r1o7DfEGcGekh16L0j5P2w2IKd6FUyj2MT3nSHniJJ1Qw9UkcGwFIpjnAAa_RqhqpO7qRXGYLQisQ=="
+          "title": "theguardian.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEyJKz161WT3AbmARGhrJCvuV5ZOF8yh9HeKouE1grwFy6Oo2XmzjWSuBEVzjA-j7Gxgbo4FFCzAThiozK-Xa5GndvPqt2NlmBDjwgfejFROIde8lIAe4zHUW5UvG9WFko50rgpSHPaXYEf_NHCPbeYv6urtkIg4RK8ZkmPK3UKeeYBCBBcD7pbOU2yYSNhGyGnyw=="
         },
         {
-          "title": "axios.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEH_SjFdXCTDoLrVObm7io8SEviCd8GYXoVpKcxMfL0AYEi2lJ6cCu48kVLk85WD90aM2_uoskUkJuh-8AaKfdOn-M7xbB83SajmZNtr6ldcw95obFAhh6kLZLhMqBw_BaslQ4Hvcwa1FaMr3011bM7dDq4XUrNTZZQDZkgGxpRZYaoWp5KaGbysaUjxU6J"
+          "title": "pbs.org",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG13wpxgFImMY5C42mbC1m7XbLvv1cdG8SfCnJ2FgcCIPkq6kw4fMETQXpYXspzhnoRQoPG73ILroBANYuktr8v4MIPRe-wPmPhX1LDMl3QQgjeUk1o-ZSAL8hAGiIcfWQIZ-71qIvFWIcE4zR-9G_qse0dLpqqX936BSv_bD-WUkjJ3GdPp5EN4xv3O-480TYczKZtqz67ZAMmvG42zycdUg=="
         },
         {
-          "title": "courthousenews.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGiYmL9K5jkI_xSKu9baSTRT9seDJhOFXEWxikGxOgq3DM_VEhlcXqQTfxij646a_oe9Tc_4dK_S2Qxaopf56DL6joQTNICh-wECJ7P9ZJjjiiJ6eOsvFaA63oUDXq6Ace4knZlqQDVS72bxWb1_KrRwK4EUi1rC-Ku4lbhFNnTR_NmhDKdnTwpIVnUbz0="
+          "title": "hindustantimes.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEoELCUkSEeVAsI0rHnbMhMzj0pWejH17qL_gFx0rdVMN9LoPQNa7jAVuNWMEQdLqwloeor5ZH2ZydN0Mu4DMtUV3MJL-TbY7EbeeGOiKYRRRf58qT6OK2g9sAHFaJ_e9ZgptsXYTh_Jpqj6PMUZZkpmKYIuywAtN9Peinra4ESP1F3aLZzyq1SZEbLzCAgUTWBWx8nj5SxvzEGEFUULx2pCSpokJSu28a8pe0M0Y-Ns8VGnzEnQfRtS-BOMZBEK7IcCC0P8UhX1alzSLM8TEFmVQ=="
         }
       ]
     },
     {
-      "id": "2026-11-10-technology",
+      "id": "2026-11-11-technology",
       "category": "technology",
       "categoryLabel": "Technology",
-      "headline": "Nvidia Launches Probe Into CEO Jensen Huang Over Foreign Intelligence Concerns",
-      "summary": "Nvidia opened an internal investigation after Chief Executive Jensen Huang disclosed an extramarital relationship with a businesswoman suspected by intelligence officials of ties to foreign state security. The story is making global headlines today as U.S. federal authorities also inquire into potential corporate and national security risks at the world's leading AI chipmaker.",
-      "question": "How do you think major technology companies should balance personal privacy with national security responsibilities for their executives?",
+      "headline": "IBM and Microsoft Partner to Launch Imagine Enterprise AI Agent Platform",
+      "summary": "On November 10, tech giants IBM and Microsoft announced a major joint platform called Imagine Enterprise to help businesses deploy and govern artificial intelligence agents. The initiative combines over 6,000 prebuilt IBM AI agents with Microsoft's cloud and security infrastructure to automate complex industry workflows.",
+      "question": "How do you think autonomous AI agents will change daily tasks and roles in corporate workplaces?",
       "coachLeads": {
-        "friendly": "Hey, have you heard about the huge story involving Nvidia's CEO today? It's really worth talking about!",
-        "energetic": "You won't believe the massive tech story breaking right now! Nvidia is investigating its own CEO over a potential spy scandal.",
-        "calm": "There is a major development in the tech industry today concerning Nvidia's corporate leadership. It's a good topic for us to explore together.",
-        "direct": "Nvidia's CEO is under internal and federal scrutiny over foreign intelligence concerns. Let's break down why this is such a major story today."
+        "friendly": "Hey! IBM and Microsoft just teamed up on a huge new AI platform—have you heard about it yet?",
+        "energetic": "This is huge news in tech! IBM and Microsoft are joining forces to roll out thousands of AI agents for big businesses!",
+        "calm": "IBM and Microsoft have announced a major joint platform to help enterprise companies manage AI agents. It is definitely worth discussing today.",
+        "direct": "IBM and Microsoft just launched Imagine Enterprise to scale AI automation across major industries. Let's break down what this means for workplace technology."
       },
       "sources": [
         {
-          "title": "aljazeera.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHewzAycWdW3qGBOU2la84V7cxHgesCRiY9pLq8HvGtkY9-XS8PNBBPOYz1vC1pFlc8pk_xUJwe2PNROzBSG6moCB-vY2C2aEfJ77owbrkikZZ6qHXpfp_y168wRKAuXLofW-GnQXb8UBz6NP7s2le8yd9BOZQP9wiEZe9OMl9BEpia8ncRnJSD6M1llOQP-AcnUVPHY2HW0_ie1AI="
-        },
-        {
-          "title": "aiweekly.co",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHbv-_W_uli1wWgPqC_YdJ_k7QPWYgt6VKTWwI6_yKWjSWabUlrvPcrhijFm6b9PZHgF221NTDfJy5631NjV7EN2fu-TUAskuOady0ZlJtquxg471yy8snrCT0-oitMIk3telVHwTU_tso="
-        },
-        {
-          "title": "youtube.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFDrmv1Xgw92J5iAG656_BfE8vEit-TAUiErhNTpBgX2XaDGleR1uZwF_EDAiawSorkL0gWK0F-0DeiYz2uvyBRxgS7M9UakmHcc0ctnk5x-2wZP20hgEMVXWZe9LqG-8w="
+          "title": "Google News: Technology",
+          "url": "https://news.google.com/search?q=Technology%20top%20news%202026-11-11&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     },
     {
-      "id": "2026-11-10-sports",
+      "id": "2026-11-11-sports",
       "category": "sports",
       "categoryLabel": "Sports",
-      "headline": "Trinity Rodman and Ashley Sanchez Named Finalists for 2026 NWSL MVP Award",
-      "summary": "On November 9, 2026, the National Women's Soccer League officially announced the finalists for its end-of-year awards, headlined by Washington Spirit star Trinity Rodman and Golden Boot winner Ashley Sanchez. The shortlist release officially kicked off the final voting round across players, coaches, media, and fans before the winners are crowned on November 18.",
-      "question": "Which player do you think deserves to win a league MVP title, and what qualities make an athlete stand out the most?",
+      "headline": "FIFPRO Unveils 2026 World 11 Roster as Messi and Bronze Break Selection Records",
+      "summary": "Global football union FIFPRO announced its 2026 Men's and Women's World 11 lineups after receiving votes from over 26,000 professional players worldwide. Lionel Messi extended his record with an 18th Men's World 11 selection, while England defender Lucy Bronze set a women's record with her ninth career appearance.",
+      "question": "Do you think an award voted on exclusively by fellow players is more meaningful to athletes than awards chosen by journalists or fans?",
       "coachLeads": {
-        "friendly": "Hey, did you catch the big news about the NWSL award nominees today? It is going to be such an exciting MVP race!",
-        "energetic": "Check this out—the finalists for the NWSL MVP were just announced, and the lineup is stacked! Who are you rooting for?",
-        "calm": "The NWSL released its list of MVP finalists today. It is worth taking a look at how these incredible athletes performed this season.",
-        "direct": "The NWSL announced its 2026 MVP finalists today. Let's talk about who has the best chance to take home the trophy."
+        "friendly": "Hey, have you checked out the new FIFPRO World 11 team of the year? It is always fun to see which players earn the respect of their fellow pros!",
+        "energetic": "Check this out! The global players' union just revealed the World 11 lineups, and some incredible records were broken!",
+        "calm": "Take a moment to look at the newly released FIFPRO World 11 rosters. It offers a neat glimpse into how elite athletes view their peers.",
+        "direct": "The 2026 FIFPRO World 11 teams are out. Let's talk about who made the list and why player-voted awards matter."
       },
       "sources": [
         {
-          "title": "washingtonspirit.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGkqZv1RPO3cI_TGJblBXkiXNnbbnotPcSy4VNFd4qI-YLDLHjA_rtkoMoRg5byZTzK1G1JCKYyVk6HAiSOy8FnJOUDb7IhfEOEIREo1Oymym71-E6ZxbjeWXE8tzBHgIQWZ3jVXvjBtM-O1yaH53NA9IR5YM7qP5WviQNIlx3jsrSsUMQgwQP_MPlurDc0eJv4Z6QKgTrAzxDlVsO-_o1OkCmu-X0="
-        },
-        {
-          "title": "nccourage.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGtOculjs-jIRi_N4mKXicq6yGTPaaF5yDzJGfJB3W3EjOc81MPQvfFTieUhYsy6xyUI1bN2nXFH1wo1_rmvogirfGQzQ14X_qYekJm0mnwRbYJ9ymsL2TquJAGmFS9ygDSlSGpNfNq8Zkmvv5OJcS0txUHpyaFrzh2-52sCWyjxu_7zWl_4T2l-5X8CBPa_Sg1Kzg="
-        },
-        {
-          "title": "rsl.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFP8wGhqvQRWv-zvOPat_RySNuo4RCCNVYbtrWNhuiF0BB-ZkCX6bcwuaVHKlLV1FrwHbQ9YU5Wxe3HOqC7mdZqEIhwW1RGzm-3GTFfMSyEIEBcVEorFyogcsJovdeeSqjaXmNjVkfQNzVIahWkxhQIg9MRp3uxgTgAEFrMeBAURbPoU0IHK5qxhf0rUuISgk1WY1fKrX2GMFQ="
+          "title": "fifpro.org",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFnfC1l6JxEuArftzPLjMzAiIPgMFaIY-57DkPT3qto6bCSFZ-m2bD_mh5jYs0v0qBdE-lJt5rshoYDzCKFSqmio3gX-ifLZ0j3iC-W72GCPQWoUgr4Zd5U3RD7WPKncphVRg-57TfNRjOcN09GWCWTa0Jc4SJ9yziEi7mPhV-72mKahVw9nw=="
         }
       ]
     },
     {
-      "id": "2026-11-10-entertainment",
+      "id": "2026-11-11-entertainment",
       "category": "entertainment",
       "categoryLabel": "Entertainment",
-      "headline": "\"Godzilla Minus Zero\" Sets North American Box Office Record for Foreign-Language Live-Action Film",
-      "summary": "Director Takashi Yamazaki's \"Godzilla Minus Zero\" topped the North American box office with an estimated $31.6 million weekend opening. The release set a new record for the highest opening weekend by a live-action foreign-language movie in North America, outperforming its Oscar-winning predecessor.",
-      "question": "Why do you think giant monster movies like Godzilla continue to attract large audiences around the world?",
+      "headline": "Media Investigation Accuses British TV Personality and Author David Walliams of Misconduct",
+      "summary": "A joint investigation by The Guardian and ITV News published allegations accusing British television star and children's author David Walliams of sexual misconduct and grooming young women over two decades. The report was released after London's High Court rejected a legal injunction attempt by Walliams, who strongly denies any wrongdoing.",
+      "question": "How do you think severe public allegations against high-profile figures change the way audiences view their television shows or books?",
       "coachLeads": {
-        "friendly": "Hey, have you heard about the big movie news today? The latest Godzilla sequel just set a huge box office record in North America!",
-        "energetic": "Monster news at the movies! \"Godzilla Minus Zero\" smashed box office records with a massive opening weekend!",
-        "calm": "There is some notable news in film today. The new Godzilla movie achieved a record-breaking debut at the North American box office.",
-        "direct": "\"Godzilla Minus Zero\" just set a box office record for a live-action foreign-language film. Let's discuss why it's performing so well."
+        "friendly": "Hey, have you caught up on the major UK entertainment news breaking today? There is a significant legal and investigative story we can talk about.",
+        "energetic": "A massive investigative story in the British entertainment media just broke today! It is raising huge discussions across television and publishing.",
+        "calm": "A major story involving a prominent UK television personality and author broke today following a court ruling. Let's take a moment to discuss it whenever you are ready.",
+        "direct": "A long-running UK media investigation was published today after court injunction attempts failed. Let's discuss what happened."
       },
       "sources": [
         {
-          "title": "radionwtn.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEn4ihoN3bPkXYe6IFeM4z5lM8A9MmLqG24J0oLLHeejfWjei2MAO3vMeUhka0jalUoDQhjPW7CXfTeitRbxEGe2lBJV0fqWwrIjQlQ4cBcmiSi8hArAfpztuHcy4uxLmKfzq5AQUrQeBBElNBM_AQ4wE_dHwJwMzYyJHdTskb9kp9I6A3mIIZZQ7GgEgJCta-n0seWEKyaIj8SCOjYzXdqiB-lE9FJNFS08VYT2ZM="
+          "title": "theguardian.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGlZn6mdjWEilzLN7AQXPCiRudnsepJ2P87ah0LMmek6Y4QbCuV2t_AifBDM0Njk9gcgo76EEcIrZGGvUtqYb22XlMyolN5rswDfgRsf43XL7snji3WhvB4JfSHq34ZUW4GNl9hWoYsPoeiiwv6dwajCGuzZ42j6Nx_dPN6nY3HTltO6Sd_JtIuko6xt8H22ujEJDh8L8QxtKLeBv1kU5c="
+        },
+        {
+          "title": "itv.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGj-Kw_waicWP2ggAOpbIuHh2qs_W-buzNegyW7hbMRnORvnHqNHoNnXxsD8atoDnOcoh4FhNQ16aj4sNdZ7L4bt9uroKzsa0cKIaMcDkhweLmt47FDO4AghC4am8iJgg-mr7cxsuyAASqWZBm48KUj7zbOYkgHLfgCwvwI0bvma4tWUCp4B_vU6qiW649S1UQzkeU="
+        },
+        {
+          "title": "thejournal.ie",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE6syCLqlCtIhAhsPb2K1i9mpE-IUKyy8ptZEEwFRKnAMA-P_SQw8rLh8Ypdogq7-4sEt9nQ5jSEWK63pg3SbgR5SdABe26PHcHzfC3hvLZ9F40eXhHFRtGHHAIotRYACiqPY5iO6_hTwC1Qg9e37olrH4CQFrMI0-62ygTHZ-WSln76Aw="
         }
       ]
     }
