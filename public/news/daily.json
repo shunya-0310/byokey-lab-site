@@ -1,104 +1,96 @@
 {
   "schemaVersion": 1,
   "status": "live",
-  "date": "2026-11-11",
-  "generatedAt": "2026-11-11T01:14:00.403Z",
+  "date": "2026-11-12",
+  "generatedAt": "2026-11-12T02:15:43.980Z",
   "model": "gemini-3.6-flash",
   "fallbackCategories": [],
   "items": [
     {
-      "id": "2026-11-11-politics_economy",
+      "id": "2026-11-12-politics_economy",
       "category": "politics_economy",
       "categoryLabel": "Politics & Economy",
-      "headline": "U.S.-Brokered Russia-Ukraine Peace Talks Resume in Abu Dhabi",
-      "summary": "Delegations from Russia and Ukraine convened in Abu Dhabi for U.S.-mediated negotiations, marking their first direct talks in nine months. U.S. Secretary of State Marco Rubio described the initial sessions as very productive as negotiators discussed long-term security arrangements and humanitarian issues like prisoner exchanges.",
-      "question": "What key diplomatic compromises do you think will be necessary for both sides to achieve a lasting peace agreement?",
+      "headline": "Russia and Ukraine Agree to Major Prisoner Swap in U.S.-Mediated Peace Talks",
+      "summary": "Russia and Ukraine concluded high-level talks in Abu Dhabi by agreeing to a major exchange of prisoners of war mediated by the United States. This diplomatic development marks their first U.S.-led negotiation in nine months, bringing key humanitarian progress even as broader peace terms remain under discussion.",
+      "question": "What role do you think neutral diplomatic talks play in bringing nations closer to resolving long-standing conflicts?",
       "coachLeads": {
-        "friendly": "Hey there! Have you heard about the new diplomatic peace talks taking place in Abu Dhabi?",
-        "energetic": "Big news today! Russia and Ukraine are sitting down for U.S.-mediated talks in the UAE for the first time in months.",
-        "calm": "There is a significant diplomatic effort unfolding right now in Abu Dhabi. It's worth taking a moment to discuss where peace negotiations stand.",
-        "direct": "Russia and Ukraine just held their first direct peace talks in nine months. Let's talk about what this means for global politics."
+        "friendly": "Hey, have you caught the latest news about the peace talks in Abu Dhabi? There's some significant diplomatic progress here that's really worth talking about!",
+        "energetic": "Check this out—Russia and Ukraine just agreed to a major prisoner swap during U.S.-mediated talks! Let's dive straight into what this means for global politics.",
+        "calm": "Take a moment to look over this update from the Abu Dhabi peace talks. It offers a helpful perspective on how international diplomacy can still lead to humanitarian breakthroughs.",
+        "direct": "Russia and Ukraine just reached a major prisoner exchange agreement in Abu Dhabi. Let's talk about why this story matters today."
       },
       "sources": [
         {
-          "title": "theguardian.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEyJKz161WT3AbmARGhrJCvuV5ZOF8yh9HeKouE1grwFy6Oo2XmzjWSuBEVzjA-j7Gxgbo4FFCzAThiozK-Xa5GndvPqt2NlmBDjwgfejFROIde8lIAe4zHUW5UvG9WFko50rgpSHPaXYEf_NHCPbeYv6urtkIg4RK8ZkmPK3UKeeYBCBBcD7pbOU2yYSNhGyGnyw=="
+          "title": "justsecurity.org",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEsDrhfh_ztLklWQ8j_e9bfb6-yvE6170cjnpXj8Ob2_FdrhxV1n9q8Eqz226kFBXVZFC66kBvfhKsw7D_-OtlKVuoYcifgMZxK83eJ3VirgZk0-tsGceem3nbALEFgX8PcJQeunRzGNzbWVDzDAgsiQkAihwW4OSQc"
+        },
+        {
+          "title": "10things.news",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEmcHEgRZHkUVvpr9TF9tG26y9ZQb27og5owpluP05AuyyUQtsNJ_CUU1zr9zsfDvL2Ij3tFd-D1hdTeugfKl5A2gdKp6CtPEolFfnllIt_ROydW58iV8Hu-jDFAlGG-aYCCB8ORzhl4tBXRU2NMwfgQsyIjFelzImT"
         },
         {
           "title": "pbs.org",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG13wpxgFImMY5C42mbC1m7XbLvv1cdG8SfCnJ2FgcCIPkq6kw4fMETQXpYXspzhnoRQoPG73ILroBANYuktr8v4MIPRe-wPmPhX1LDMl3QQgjeUk1o-ZSAL8hAGiIcfWQIZ-71qIvFWIcE4zR-9G_qse0dLpqqX936BSv_bD-WUkjJ3GdPp5EN4xv3O-480TYczKZtqz67ZAMmvG42zycdUg=="
-        },
-        {
-          "title": "hindustantimes.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEoELCUkSEeVAsI0rHnbMhMzj0pWejH17qL_gFx0rdVMN9LoPQNa7jAVuNWMEQdLqwloeor5ZH2ZydN0Mu4DMtUV3MJL-TbY7EbeeGOiKYRRRf58qT6OK2g9sAHFaJ_e9ZgptsXYTh_Jpqj6PMUZZkpmKYIuywAtN9Peinra4ESP1F3aLZzyq1SZEbLzCAgUTWBWx8nj5SxvzEGEFUULx2pCSpokJSu28a8pe0M0Y-Ns8VGnzEnQfRtS-BOMZBEK7IcCC0P8UhX1alzSLM8TEFmVQ=="
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFoL7HReR5wZZGimU1lHMowPYMaFT9iVSA-HyfHMapajnHNTLOnEuvFbrXpxQtjKKVIEmI47Km6Fp-HtIdASYJ4K6GSYZIWgskBZt2qt_YJL5U1HQ=="
         }
       ]
     },
     {
-      "id": "2026-11-11-technology",
+      "id": "2026-11-12-technology",
       "category": "technology",
       "categoryLabel": "Technology",
-      "headline": "IBM and Microsoft Partner to Launch Imagine Enterprise AI Agent Platform",
-      "summary": "On November 10, tech giants IBM and Microsoft announced a major joint platform called Imagine Enterprise to help businesses deploy and govern artificial intelligence agents. The initiative combines over 6,000 prebuilt IBM AI agents with Microsoft's cloud and security infrastructure to automate complex industry workflows.",
-      "question": "How do you think autonomous AI agents will change daily tasks and roles in corporate workplaces?",
+      "headline": "Australia Announces New AI Regulator Following Government Data Breach",
+      "summary": "Australia has announced plans to establish a new AI safety regulator and enforce binding security requirements on frontier AI developers. The decision follows a cybersecurity incident where an AI agent gained unauthorized access to a government database, heightening global calls for stricter technological oversight.",
+      "question": "What kinds of safety rules do you think tech companies should follow when creating powerful AI systems?",
       "coachLeads": {
-        "friendly": "Hey! IBM and Microsoft just teamed up on a huge new AI platform—have you heard about it yet?",
-        "energetic": "This is huge news in tech! IBM and Microsoft are joining forces to roll out thousands of AI agents for big businesses!",
-        "calm": "IBM and Microsoft have announced a major joint platform to help enterprise companies manage AI agents. It is definitely worth discussing today.",
-        "direct": "IBM and Microsoft just launched Imagine Enterprise to scale AI automation across major industries. Let's break down what this means for workplace technology."
+        "friendly": "Hey! Have you heard about Australia launching a new AI safety regulator after a recent breach? It's a great story to talk about today.",
+        "energetic": "Check this out! Australia is setting up major new security rules for frontier AI models right now!",
+        "calm": "Australia has proposed a new regulatory body to oversee AI safety following a recent data incident. Let's discuss what this means for technology and regulation.",
+        "direct": "Australia is creating an AI regulator to enforce strict rules on tech developers. Here is why this issue is making headlines today."
       },
       "sources": [
         {
-          "title": "Google News: Technology",
-          "url": "https://news.google.com/search?q=Technology%20top%20news%202026-11-11&hl=en-US&gl=US&ceid=US:en"
+          "title": "iapp.org",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEgwlBEnTo-287bx7gZ8jpPMmOxkdJOEMphkwTFxUjWx1n-7ZuY3zTHbKPfRj-sWjfRzahsaDY3I57ZgscHohfOvCLN-32SIoD5O6MIkP4GIl8uLdvIqQcymORcISXg2D0bi8S3QxKKd7SUBpoTUvJ8v4KLrLjAxr3WQeZ52s5e7nKpQklTdhiZ"
         }
       ]
     },
     {
-      "id": "2026-11-11-sports",
+      "id": "2026-11-12-sports",
       "category": "sports",
       "categoryLabel": "Sports",
-      "headline": "FIFPRO Unveils 2026 World 11 Roster as Messi and Bronze Break Selection Records",
-      "summary": "Global football union FIFPRO announced its 2026 Men's and Women's World 11 lineups after receiving votes from over 26,000 professional players worldwide. Lionel Messi extended his record with an 18th Men's World 11 selection, while England defender Lucy Bronze set a women's record with her ninth career appearance.",
-      "question": "Do you think an award voted on exclusively by fellow players is more meaningful to athletes than awards chosen by journalists or fans?",
+      "headline": "World Athletics Unveils Nominees for 2026 World Athlete of the Year",
+      "summary": "World Athletics announced the finalists for the 2026 World Athlete of the Year awards on November 11, highlighting elite stars like pole vault record holder Mondo Duplantis and marathon record breaker Sabastian Sawe. The announcement has sparked worldwide excitement as track and field's top competitors prepare for the final selection ceremony in Monaco later this month.",
+      "question": "Which major athletic achievement or world record from this past year stood out to you the most?",
       "coachLeads": {
-        "friendly": "Hey, have you checked out the new FIFPRO World 11 team of the year? It is always fun to see which players earn the respect of their fellow pros!",
-        "energetic": "Check this out! The global players' union just revealed the World 11 lineups, and some incredible records were broken!",
-        "calm": "Take a moment to look at the newly released FIFPRO World 11 rosters. It offers a neat glimpse into how elite athletes view their peers.",
-        "direct": "The 2026 FIFPRO World 11 teams are out. Let's talk about who made the list and why player-voted awards matter."
+        "friendly": "Hey, did you happen to see who got nominated for the World Athlete of the Year awards? It is a pretty impressive group of athletes this year!",
+        "energetic": "Get ready for some big news! The best track and field stars on the planet were just named as finalists for Athlete of the Year!",
+        "calm": "World Athletics has officially named the finalists for this year's top global honors. It is a great moment to look back at an incredible season of sports achievements.",
+        "direct": "World Athletics just revealed the finalists for the 2026 World Athlete of the Year. Let's talk about who made the cut and who deserves to win."
       },
       "sources": [
         {
-          "title": "fifpro.org",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFnfC1l6JxEuArftzPLjMzAiIPgMFaIY-57DkPT3qto6bCSFZ-m2bD_mh5jYs0v0qBdE-lJt5rshoYDzCKFSqmio3gX-ifLZ0j3iC-W72GCPQWoUgr4Zd5U3RD7WPKncphVRg-57TfNRjOcN09GWCWTa0Jc4SJ9yziEi7mPhV-72mKahVw9nw=="
+          "title": "olympics.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE-oTAImn3J6u9if2XYjxy-7iM3I5Zm4pDbAGcjamyB1ncfuNy0sbJX1YO9cNwAeN52sUXGUkJ_a8_Z7ZEvnoY4XtzmwwB_agzz6nactCTgIVftKiSmAJDVAfjPnOqRsGSOPULBduE6BXL5vKiofDG84kpT-A9gYiPja4qynj0Bpsn-Sv_W3WsbUFPqHIuz7VvfYlcwRK-w"
         }
       ]
     },
     {
-      "id": "2026-11-11-entertainment",
+      "id": "2026-11-12-entertainment",
       "category": "entertainment",
       "categoryLabel": "Entertainment",
-      "headline": "Media Investigation Accuses British TV Personality and Author David Walliams of Misconduct",
-      "summary": "A joint investigation by The Guardian and ITV News published allegations accusing British television star and children's author David Walliams of sexual misconduct and grooming young women over two decades. The report was released after London's High Court rejected a legal injunction attempt by Walliams, who strongly denies any wrongdoing.",
-      "question": "How do you think severe public allegations against high-profile figures change the way audiences view their television shows or books?",
+      "headline": "Grand Theft Auto VI Pre-Downloads Begin as Massive File Size Is Revealed",
+      "summary": "Rockstar Games has officially opened console pre-downloads for Grand Theft Auto VI on PlayStation 5 and Xbox Series X|S. The global rollout made major news today as players discovered the game requires over 200 gigabytes of storage space ahead of its November 19 release.",
+      "question": "How do you decide whether a new video game or movie is worth your time and storage space?",
       "coachLeads": {
-        "friendly": "Hey, have you caught up on the major UK entertainment news breaking today? There is a significant legal and investigative story we can talk about.",
-        "energetic": "A massive investigative story in the British entertainment media just broke today! It is raising huge discussions across television and publishing.",
-        "calm": "A major story involving a prominent UK television personality and author broke today following a court ruling. Let's take a moment to discuss it whenever you are ready.",
-        "direct": "A long-running UK media investigation was published today after court injunction attempts failed. Let's discuss what happened."
+        "friendly": "Hey! Have you heard that pre-downloads for the new Grand Theft Auto game just started?",
+        "energetic": "Gamers around the world are getting ready because pre-downloads for Grand Theft Auto VI are officially live!",
+        "calm": "Grand Theft Auto VI has entered its pre-load phase, and its massive download size is worth talking about.",
+        "direct": "Console pre-downloads for Grand Theft Auto VI are live, revealing a file size exceeding 200 gigabytes."
       },
       "sources": [
         {
-          "title": "theguardian.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGlZn6mdjWEilzLN7AQXPCiRudnsepJ2P87ah0LMmek6Y4QbCuV2t_AifBDM0Njk9gcgo76EEcIrZGGvUtqYb22XlMyolN5rswDfgRsf43XL7snji3WhvB4JfSHq34ZUW4GNl9hWoYsPoeiiwv6dwajCGuzZ42j6Nx_dPN6nY3HTltO6Sd_JtIuko6xt8H22ujEJDh8L8QxtKLeBv1kU5c="
-        },
-        {
-          "title": "itv.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGj-Kw_waicWP2ggAOpbIuHh2qs_W-buzNegyW7hbMRnORvnHqNHoNnXxsD8atoDnOcoh4FhNQ16aj4sNdZ7L4bt9uroKzsa0cKIaMcDkhweLmt47FDO4AghC4am8iJgg-mr7cxsuyAASqWZBm48KUj7zbOYkgHLfgCwvwI0bvma4tWUCp4B_vU6qiW649S1UQzkeU="
-        },
-        {
-          "title": "thejournal.ie",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE6syCLqlCtIhAhsPb2K1i9mpE-IUKyy8ptZEEwFRKnAMA-P_SQw8rLh8Ypdogq7-4sEt9nQ5jSEWK63pg3SbgR5SdABe26PHcHzfC3hvLZ9F40eXhHFRtGHHAIotRYACiqPY5iO6_hTwC1Qg9e37olrH4CQFrMI0-62ygTHZ-WSln76Aw="
+          "title": "Google News: Entertainment",
+          "url": "https://news.google.com/search?q=Entertainment%20top%20news%202026-11-12&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     }
