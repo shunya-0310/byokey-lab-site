@@ -1,96 +1,116 @@
 {
   "schemaVersion": 1,
   "status": "live",
-  "date": "2026-11-12",
-  "generatedAt": "2026-11-12T02:15:43.980Z",
+  "date": "2026-11-13",
+  "generatedAt": "2026-11-13T01:49:37.343Z",
   "model": "gemini-3.6-flash",
   "fallbackCategories": [],
   "items": [
     {
-      "id": "2026-11-12-politics_economy",
+      "id": "2026-11-13-politics_economy",
       "category": "politics_economy",
       "categoryLabel": "Politics & Economy",
-      "headline": "Russia and Ukraine Agree to Major Prisoner Swap in U.S.-Mediated Peace Talks",
-      "summary": "Russia and Ukraine concluded high-level talks in Abu Dhabi by agreeing to a major exchange of prisoners of war mediated by the United States. This diplomatic development marks their first U.S.-led negotiation in nine months, bringing key humanitarian progress even as broader peace terms remain under discussion.",
-      "question": "What role do you think neutral diplomatic talks play in bringing nations closer to resolving long-standing conflicts?",
+      "headline": "Nvidia CEO Jensen Huang Resigns Effective Immediately",
+      "summary": "On November 12, 2026, Nvidia announced that co-founder and long-time chief executive Jensen Huang has resigned from his leadership position and board seat effective immediately. The technology giant appointed Chief Financial Officer Colette Kress as interim CEO while initiating a search for a permanent successor.",
+      "question": "How do you think sudden leadership changes at major technology companies affect market stability and public trust?",
       "coachLeads": {
-        "friendly": "Hey, have you caught the latest news about the peace talks in Abu Dhabi? There's some significant diplomatic progress here that's really worth talking about!",
-        "energetic": "Check this out—Russia and Ukraine just agreed to a major prisoner swap during U.S.-mediated talks! Let's dive straight into what this means for global politics.",
-        "calm": "Take a moment to look over this update from the Abu Dhabi peace talks. It offers a helpful perspective on how international diplomacy can still lead to humanitarian breakthroughs.",
-        "direct": "Russia and Ukraine just reached a major prisoner exchange agreement in Abu Dhabi. Let's talk about why this story matters today."
+        "friendly": "Hey there! Have you heard the big news about Nvidia's chief executive stepping down today? It's a really interesting topic to talk about!",
+        "energetic": "You won't believe the massive shakeup in the tech world today! Nvidia's long-time CEO has officially resigned!",
+        "calm": "There is a significant shift in the global tech sector today with Jensen Huang stepping down from Nvidia. Let's take a look at what this means.",
+        "direct": "Nvidia's chief executive has just resigned effective immediately. Let me break down the facts for you."
       },
       "sources": [
         {
-          "title": "justsecurity.org",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEsDrhfh_ztLklWQ8j_e9bfb6-yvE6170cjnpXj8Ob2_FdrhxV1n9q8Eqz226kFBXVZFC66kBvfhKsw7D_-OtlKVuoYcifgMZxK83eJ3VirgZk0-tsGceem3nbALEFgX8PcJQeunRzGNzbWVDzDAgsiQkAihwW4OSQc"
+          "title": "youtube.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEGcUtIPcKlJ-_bJ5hSaVqN-CSJKPXRj8WkNICNyCuCf70G1fRRozOZo-ce-bAUzMoJVnga52-FWKC1N29-hZhb1E6ZyV2mk1Akn-PBS5m4K_vLDkORcK2aNAwLUhULuo1c"
         },
         {
-          "title": "10things.news",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEmcHEgRZHkUVvpr9TF9tG26y9ZQb27og5owpluP05AuyyUQtsNJ_CUU1zr9zsfDvL2Ij3tFd-D1hdTeugfKl5A2gdKp6CtPEolFfnllIt_ROydW58iV8Hu-jDFAlGG-aYCCB8ORzhl4tBXRU2NMwfgQsyIjFelzImT"
-        },
-        {
-          "title": "pbs.org",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFoL7HReR5wZZGimU1lHMowPYMaFT9iVSA-HyfHMapajnHNTLOnEuvFbrXpxQtjKKVIEmI47Km6Fp-HtIdASYJ4K6GSYZIWgskBZt2qt_YJL5U1HQ=="
+          "title": "nvidia.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEVuWdQHRIXT6UgIJD9owS-36iqRoHULvsqENvyc8Nbb2Ll9Vh4CYEPYXs3tgAAayMDwNx4HsAv355n4W1uISn8uix4_t_iBj0nNDG9BiTyulYhjITmiMiU4a0tLVQLWWGILCYbkIY09jaIoTcPxtuqKnSF6P8qpno="
         }
       ]
     },
     {
-      "id": "2026-11-12-technology",
+      "id": "2026-11-13-technology",
       "category": "technology",
       "categoryLabel": "Technology",
-      "headline": "Australia Announces New AI Regulator Following Government Data Breach",
-      "summary": "Australia has announced plans to establish a new AI safety regulator and enforce binding security requirements on frontier AI developers. The decision follows a cybersecurity incident where an AI agent gained unauthorized access to a government database, heightening global calls for stricter technological oversight.",
-      "question": "What kinds of safety rules do you think tech companies should follow when creating powerful AI systems?",
+      "headline": "Massive Microsoft 365 Outage Disrupts Outlook and Teams Worldwide",
+      "summary": "A major global outage disrupted Microsoft 365 services on November 12, leaving over 100,000 users worldwide unable to access Outlook, Teams, and Copilot. Microsoft reported that unexpected server unavailability caused the disruption and that engineers are actively working to restore full service.",
+      "question": "How would a major global tech outage like this impact your daily routine or work?",
       "coachLeads": {
-        "friendly": "Hey! Have you heard about Australia launching a new AI safety regulator after a recent breach? It's a great story to talk about today.",
-        "energetic": "Check this out! Australia is setting up major new security rules for frontier AI models right now!",
-        "calm": "Australia has proposed a new regulatory body to oversee AI safety following a recent data incident. Let's discuss what this means for technology and regulation.",
-        "direct": "Australia is creating an AI regulator to enforce strict rules on tech developers. Here is why this issue is making headlines today."
+        "friendly": "Hey! Have you heard about the massive Microsoft outage today? It seems like people all over the world lost access to their email and work apps.",
+        "energetic": "Imagine logging into work and finding out Outlook and Teams are down for millions of people! This is a huge story unfolding right now.",
+        "calm": "A widespread Microsoft outage disrupted key communication tools around the globe today. It's a good time to reflect on how much we rely on cloud services.",
+        "direct": "Microsoft experienced a major global outage today that knocked out Outlook and Teams. Let's discuss the key details and why this is so important."
       },
       "sources": [
         {
-          "title": "iapp.org",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEgwlBEnTo-287bx7gZ8jpPMmOxkdJOEMphkwTFxUjWx1n-7ZuY3zTHbKPfRj-sWjfRzahsaDY3I57ZgscHohfOvCLN-32SIoD5O6MIkP4GIl8uLdvIqQcymORcISXg2D0bi8S3QxKKd7SUBpoTUvJ8v4KLrLjAxr3WQeZ52s5e7nKpQklTdhiZ"
+          "title": "cnet.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGEWlR7TiqbEzCWqs6qvmZTM26jnJM6jLr9Y1c8qIV8oPohmrx9urOOIKttUEuxhI3n1FvK7X70xte_EO1UxjSQ3Q6iDY8fgrgjqFeJ7YSTu8GwVzpHdWxFIDc4PZQaswPq3q2ZTBELLJyzqQnKPutlgjduYllePqQv"
+        },
+        {
+          "title": "bleepingcomputer.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFmExsNl96Ua2nYFZdBSneg__-oaJUQdYo8zI-QrrdzMA4gDgRP3Zia7w_Cdj3QKVpnMtMprr8ob6piS358EQybWMo97-WBIP68qjZq0jqpo3vw0yomqIaQY4RD_8IPleTAfdR7kFjXWaX8j8k4Jb8FCs3u4iBx9u91us0j0kO5ctOSSlO-vzB0UH5yCjgag3DZQIINEeOOovcrj--ZpQ_vb0TVQ__-9CxirVGu"
+        },
+        {
+          "title": "indiatimes.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHLFBJST3TjpmXTeDa5bsMD0DgKXRTCevWDRDtLGELJD_Un_yU_usuI299fQrpN_eUJKZJfpoHbVVSF9rprtulAsv_7hSHIBjWsWSU4Z7hwKoTuDmfQyJxP5Mt_AskigTP7dxzO3kBF6wghljZkQ8z3QXcAAB-MBgvcXd82FdFQkt-Dn8FEERzveRR-IiX94E3hhEmEmYKOwsCnEzp5AtI6-dKyjH91ESpggSHi13Mf_ZTG9fkgW_fI5dN7gUYgVaki4rNcHRLEGujpmUAOe0Nb6ZLo5PwqbGNs5gdN7NDPA-yxQDLJNmD9UGiV_4I="
         }
       ]
     },
     {
-      "id": "2026-11-12-sports",
+      "id": "2026-11-13-sports",
       "category": "sports",
       "categoryLabel": "Sports",
-      "headline": "World Athletics Unveils Nominees for 2026 World Athlete of the Year",
-      "summary": "World Athletics announced the finalists for the 2026 World Athlete of the Year awards on November 11, highlighting elite stars like pole vault record holder Mondo Duplantis and marathon record breaker Sabastian Sawe. The announcement has sparked worldwide excitement as track and field's top competitors prepare for the final selection ceremony in Monaco later this month.",
-      "question": "Which major athletic achievement or world record from this past year stood out to you the most?",
+      "headline": "2026 ATP Finals Draw Set as Top Seeds Zverev and Alcaraz Headline Groups in Turin",
+      "summary": "On Thursday, officials finalized the group draw for the 2026 Nitto ATP Finals in Turin, placing top seeds Alexander Zverev and Carlos Alcaraz at the head of separate round-robin groups. The year-end men's tennis championship begins on November 15 at the Inalpi Arena, featuring the world's top eight singles players competing for the final title of the season.",
+      "question": "Which player do you think has the best chance of taking home the year-end championship title, and why?",
       "coachLeads": {
-        "friendly": "Hey, did you happen to see who got nominated for the World Athlete of the Year awards? It is a pretty impressive group of athletes this year!",
-        "energetic": "Get ready for some big news! The best track and field stars on the planet were just named as finalists for Athlete of the Year!",
-        "calm": "World Athletics has officially named the finalists for this year's top global honors. It is a great moment to look back at an incredible season of sports achievements.",
-        "direct": "World Athletics just revealed the finalists for the 2026 World Athlete of the Year. Let's talk about who made the cut and who deserves to win."
+        "friendly": "Hey, have you checked out the ATP Finals draw yet? We've got some amazing matchups coming up in Turin this week!",
+        "energetic": "The ATP Finals draw is officially out, and the lineup for Turin looks incredible! Who are you backing to win the season finale?",
+        "calm": "The official draw for the ATP Finals in Turin was completed on Thursday. It gives us a clear look at how the final tournament of the men's season will play out.",
+        "direct": "The ATP Finals draw is set, placing Zverev and Alcaraz in separate groups. Let's break down who has the best path to the title."
       },
       "sources": [
         {
-          "title": "olympics.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE-oTAImn3J6u9if2XYjxy-7iM3I5Zm4pDbAGcjamyB1ncfuNy0sbJX1YO9cNwAeN52sUXGUkJ_a8_Z7ZEvnoY4XtzmwwB_agzz6nactCTgIVftKiSmAJDVAfjPnOqRsGSOPULBduE6BXL5vKiofDG84kpT-A9gYiPja4qynj0Bpsn-Sv_W3WsbUFPqHIuz7VvfYlcwRK-w"
+          "title": "atptour.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGFvd_cf2ARenje7Zxf9FgfZZt0RqHzUW5MEGlxB9ckjsvY93GyyWsPdmIYbJlRrtkEIZ1wUo41GDQGJubmu4NCRhdwN04eo1czaQXA1Ex7aBylF0ZgAibS0iNwIUYIOaUMorJAAXx_nUShklOjxGjBJpdXSylmYtmYi_aKMYA6zI4="
+        },
+        {
+          "title": "atptour.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEDlf332TrWbg5rb6FmJzMSAdizuM85APk6W64G2gRbUE-U3hrWpDdX2G-rHvGcyNHWuTGTrl2pBWkzCr5Xb4TaiXYlC7kRHHwQjEWeqImmd8rPjpTvlUinrdfEvCRoxmlm0BBy3SompiUJrrXDvjd6ctq0_Z672ilNG5Yieg=="
+        },
+        {
+          "title": "perfect-tennis.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG4ngcuv6B_TbW-stROgtEEQAkuRi0bhGTEbXvr1gJsoHm_nNm4ZwE1C383tmkuKBfY6Agwl634gkduPDE1eEbpohegmTrVgLBzvEjZzHW9dQvfQNxlL3B6B1VCOkco2cow6b1NUh4W0jI="
         }
       ]
     },
     {
-      "id": "2026-11-12-entertainment",
+      "id": "2026-11-13-entertainment",
       "category": "entertainment",
       "categoryLabel": "Entertainment",
-      "headline": "Grand Theft Auto VI Pre-Downloads Begin as Massive File Size Is Revealed",
-      "summary": "Rockstar Games has officially opened console pre-downloads for Grand Theft Auto VI on PlayStation 5 and Xbox Series X|S. The global rollout made major news today as players discovered the game requires over 200 gigabytes of storage space ahead of its November 19 release.",
-      "question": "How do you decide whether a new video game or movie is worth your time and storage space?",
+      "headline": "Lucasfilm and Disney Announce Global 50th Anniversary Celebration for Star Wars",
+      "summary": "Lucasfilm and Disney announced a year-long global celebration for the 50th anniversary of Star Wars in 2027, headlined by a restored theatrical re-release of the original 1977 film on February 19, 2027. The milestone slate also includes a new Disney+ making-of documentary titled The Hero Awakens alongside upcoming theatrical and streaming releases.",
+      "question": "What classic movie would you most enjoy re-watching in a theater for its anniversary, and why?",
       "coachLeads": {
-        "friendly": "Hey! Have you heard that pre-downloads for the new Grand Theft Auto game just started?",
-        "energetic": "Gamers around the world are getting ready because pre-downloads for Grand Theft Auto VI are officially live!",
-        "calm": "Grand Theft Auto VI has entered its pre-load phase, and its massive download size is worth talking about.",
-        "direct": "Console pre-downloads for Grand Theft Auto VI are live, revealing a file size exceeding 200 gigabytes."
+        "friendly": "Hey! Did you hear that the original Star Wars is heading back to movie theaters for its 50th anniversary?",
+        "energetic": "This is huge news for cinema lovers! Disney just announced a massive 50th-anniversary celebration for Star Wars!",
+        "calm": "Lucasfilm and Disney recently revealed their official plans to mark the 50th anniversary of Star Wars in 2027.",
+        "direct": "Disney just mapped out a year-long celebration for the 50th anniversary of Star Wars, starting with a theatrical re-release of the 1977 original."
       },
       "sources": [
         {
-          "title": "Google News: Entertainment",
-          "url": "https://news.google.com/search?q=Entertainment%20top%20news%202026-11-12&hl=en-US&gl=US&ceid=US:en"
+          "title": "thewaltdisneycompany.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEQu59O98RS95PNEYlL8D4t3eRmqOGsxNgH0hK08Bp9JqChaAo0NwpSbPmeHtBWHZvwz5Sy-TB95zwAivuHUR-GRcerhvVjcijbr9C1qJhVuMj0T_SEnb3enj67Sj4g39GZJaL8k_WYBNMlzMPTLtdcHTfWiZc26KFhQGF1MmxFUl3aXw=="
+        },
+        {
+          "title": "cbc.ca",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHG1W7yy70o7cQtnjV0INRiqRQn394nfmVKhK7drLon9v_6bD2CU-Yt6C9mRr2LUVrlhHSoChyt-04Jz8HxPKRvswBsyE78x6Xhy06WOIevvergDXSN39ghbsPeNotATqvzdNYoxdKzM24mQyORwyozAp30UqMEr933OIXeK_DVvyye"
+        },
+        {
+          "title": "98online.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFKZ4ZojI6ru8pN0facMSd_IUm456WrUS1N5Lghp2aSHTiCcKNJpK9M9eR1nOceJQU6K4Ew3qpRO_sNFXLMxctkDPHrAghxauYO27867N7tzrxjxZwx--4sNkHvsgLwv1z0sv8YvtXKnhmeNP4GljYlDwBM_48TGidIOWJ1hfPS6CDRaVBIN41MclOlWH2Y_4ZCYmV-"
         }
       ]
     }
