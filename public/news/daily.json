@@ -1,116 +1,104 @@
 {
   "schemaVersion": 1,
   "status": "live",
-  "date": "2026-11-13",
-  "generatedAt": "2026-11-13T01:49:37.343Z",
+  "date": "2026-11-14",
+  "generatedAt": "2026-11-14T01:26:43.177Z",
   "model": "gemini-3.6-flash",
   "fallbackCategories": [],
   "items": [
     {
-      "id": "2026-11-13-politics_economy",
+      "id": "2026-11-14-politics_economy",
       "category": "politics_economy",
       "categoryLabel": "Politics & Economy",
-      "headline": "Nvidia CEO Jensen Huang Resigns Effective Immediately",
-      "summary": "On November 12, 2026, Nvidia announced that co-founder and long-time chief executive Jensen Huang has resigned from his leadership position and board seat effective immediately. The technology giant appointed Chief Financial Officer Colette Kress as interim CEO while initiating a search for a permanent successor.",
-      "question": "How do you think sudden leadership changes at major technology companies affect market stability and public trust?",
+      "headline": "FAA Orders Rare Nationwide Ground Stop Following U.S. Air Traffic System Outage",
+      "summary": "The U.S. Federal Aviation Administration issued a nationwide ground stop on Friday after a critical telecommunications outage impacted air traffic control centers across the country. The sudden system failure disrupted over 11,000 flights and stranded thousands of travelers, though officials reported no evidence of a cyberattack.",
+      "question": "How would you handle your travel plans if a sudden technical outage grounded all flights at your airport?",
       "coachLeads": {
-        "friendly": "Hey there! Have you heard the big news about Nvidia's chief executive stepping down today? It's a really interesting topic to talk about!",
-        "energetic": "You won't believe the massive shakeup in the tech world today! Nvidia's long-time CEO has officially resigned!",
-        "calm": "There is a significant shift in the global tech sector today with Jensen Huang stepping down from Nvidia. Let's take a look at what this means.",
-        "direct": "Nvidia's chief executive has just resigned effective immediately. Let me break down the facts for you."
+        "friendly": "Hey, have you heard about the sudden flight shutdown across the U.S. today? It's a really interesting topic for us to talk about!",
+        "energetic": "Imagine thousands of flights getting grounded all at once—this major story just broke! Let's jump in and discuss how people handle unexpected travel chaos.",
+        "calm": "A major technical failure brought U.S. air travel to a standstill today. This gives us a great real-world story to practice talking about modern technology and transport.",
+        "direct": "The FAA just grounded all U.S. flight departures because of a nationwide network failure. Tell me what you think about this situation."
       },
       "sources": [
         {
-          "title": "youtube.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEGcUtIPcKlJ-_bJ5hSaVqN-CSJKPXRj8WkNICNyCuCf70G1fRRozOZo-ce-bAUzMoJVnga52-FWKC1N29-hZhb1E6ZyV2mk1Akn-PBS5m4K_vLDkORcK2aNAwLUhULuo1c"
-        },
-        {
-          "title": "nvidia.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEVuWdQHRIXT6UgIJD9owS-36iqRoHULvsqENvyc8Nbb2Ll9Vh4CYEPYXs3tgAAayMDwNx4HsAv355n4W1uISn8uix4_t_iBj0nNDG9BiTyulYhjITmiMiU4a0tLVQLWWGILCYbkIY09jaIoTcPxtuqKnSF6P8qpno="
+          "title": "Google News: Politics & Economy",
+          "url": "https://news.google.com/search?q=Politics%20%26%20Economy%20top%20news%202026-11-14&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     },
     {
-      "id": "2026-11-13-technology",
+      "id": "2026-11-14-technology",
       "category": "technology",
       "categoryLabel": "Technology",
-      "headline": "Massive Microsoft 365 Outage Disrupts Outlook and Teams Worldwide",
-      "summary": "A major global outage disrupted Microsoft 365 services on November 12, leaving over 100,000 users worldwide unable to access Outlook, Teams, and Copilot. Microsoft reported that unexpected server unavailability caused the disruption and that engineers are actively working to restore full service.",
-      "question": "How would a major global tech outage like this impact your daily routine or work?",
+      "headline": "Widespread Microsoft Outage Disrupts Business and Cloud Services Globally",
+      "summary": "A major technical issue at Microsoft caused a global outage that disrupted email, communication tools, and enterprise services for millions of users across dozens of countries. Microsoft confirmed it has addressed the core problem and ruled out a cyberattack as recovery efforts continue.",
+      "question": "How would a widespread technology outage like this affect your daily work or lifestyle?",
       "coachLeads": {
-        "friendly": "Hey! Have you heard about the massive Microsoft outage today? It seems like people all over the world lost access to their email and work apps.",
-        "energetic": "Imagine logging into work and finding out Outlook and Teams are down for millions of people! This is a huge story unfolding right now.",
-        "calm": "A widespread Microsoft outage disrupted key communication tools around the globe today. It's a good time to reflect on how much we rely on cloud services.",
-        "direct": "Microsoft experienced a major global outage today that knocked out Outlook and Teams. Let's discuss the key details and why this is so important."
+        "friendly": "Hey, have you heard about the massive Microsoft outage that hit millions of people today? It really highlights how much we rely on modern cloud services.",
+        "energetic": "You won't believe how big this tech story is today! A major Microsoft outage just disrupted critical services around the world!",
+        "calm": "Microsoft experienced a widespread service disruption today that affected businesses worldwide. It is a good opportunity to talk about our reliance on global software infrastructure.",
+        "direct": "A massive technical issue at Microsoft impacted millions of users and businesses globally today. Let's take a look at what happened and why it matters."
       },
       "sources": [
         {
-          "title": "cnet.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGEWlR7TiqbEzCWqs6qvmZTM26jnJM6jLr9Y1c8qIV8oPohmrx9urOOIKttUEuxhI3n1FvK7X70xte_EO1UxjSQ3Q6iDY8fgrgjqFeJ7YSTu8GwVzpHdWxFIDc4PZQaswPq3q2ZTBELLJyzqQnKPutlgjduYllePqQv"
-        },
-        {
-          "title": "bleepingcomputer.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFmExsNl96Ua2nYFZdBSneg__-oaJUQdYo8zI-QrrdzMA4gDgRP3Zia7w_Cdj3QKVpnMtMprr8ob6piS358EQybWMo97-WBIP68qjZq0jqpo3vw0yomqIaQY4RD_8IPleTAfdR7kFjXWaX8j8k4Jb8FCs3u4iBx9u91us0j0kO5ctOSSlO-vzB0UH5yCjgag3DZQIINEeOOovcrj--ZpQ_vb0TVQ__-9CxirVGu"
-        },
-        {
-          "title": "indiatimes.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHLFBJST3TjpmXTeDa5bsMD0DgKXRTCevWDRDtLGELJD_Un_yU_usuI299fQrpN_eUJKZJfpoHbVVSF9rprtulAsv_7hSHIBjWsWSU4Z7hwKoTuDmfQyJxP5Mt_AskigTP7dxzO3kBF6wghljZkQ8z3QXcAAB-MBgvcXd82FdFQkt-Dn8FEERzveRR-IiX94E3hhEmEmYKOwsCnEzp5AtI6-dKyjH91ESpggSHi13Mf_ZTG9fkgW_fI5dN7gUYgVaki4rNcHRLEGujpmUAOe0Nb6ZLo5PwqbGNs5gdN7NDPA-yxQDLJNmD9UGiV_4I="
+          "title": "cnn.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF7qMq9GM9wZuG93owxU5wzRuE0LNGi_bZS4A1pNsOZlp9wAyxx3TNTqPAPyiampBZFWfAWw_Jqyj6-cnfy1c_167Xu_FGVhwVgKmuEITxh9RL1DcyNHFxvzL5T6Libi0AJa3wigbp53wYSokLHzin83vW9dFbHJHyy2zm7hKXBuXXBXNFsizSz"
         }
       ]
     },
     {
-      "id": "2026-11-13-sports",
+      "id": "2026-11-14-sports",
       "category": "sports",
       "categoryLabel": "Sports",
-      "headline": "2026 ATP Finals Draw Set as Top Seeds Zverev and Alcaraz Headline Groups in Turin",
-      "summary": "On Thursday, officials finalized the group draw for the 2026 Nitto ATP Finals in Turin, placing top seeds Alexander Zverev and Carlos Alcaraz at the head of separate round-robin groups. The year-end men's tennis championship begins on November 15 at the Inalpi Arena, featuring the world's top eight singles players competing for the final title of the season.",
-      "question": "Which player do you think has the best chance of taking home the year-end championship title, and why?",
+      "headline": "Rory McIlroy Shares Lead at Season-Ending DP World Tour Championship",
+      "summary": "Rory McIlroy shot a second-round 70 at Jumeirah Golf Estates in Dubai to share the 36-hole lead at 5-under par alongside Tyrrell Hatton. The strong halfway finish keeps the Northern Irishman on track for both the tournament victory and a record-equalling eighth Race to Dubai crown.",
+      "question": "How do you think elite athletes handle pressure and recover when things start going wrong during a high-stakes competition?",
       "coachLeads": {
-        "friendly": "Hey, have you checked out the ATP Finals draw yet? We've got some amazing matchups coming up in Turin this week!",
-        "energetic": "The ATP Finals draw is officially out, and the lineup for Turin looks incredible! Who are you backing to win the season finale?",
-        "calm": "The official draw for the ATP Finals in Turin was completed on Thursday. It gives us a clear look at how the final tournament of the men's season will play out.",
-        "direct": "The ATP Finals draw is set, placing Zverev and Alcaraz in separate groups. Let's break down who has the best path to the title."
+        "friendly": "Hey, have you seen the latest golf news? Rory McIlroy just pulled off a great finish in Dubai to stay right in the fight for the season title.",
+        "energetic": "You've got to check this out! Rory McIlroy bounced back on the final hole in Dubai to grab a share of the lead and keep his record-chasing run alive!",
+        "calm": "Here is an interesting sports story worth looking at today. Rory McIlroy overcame a tough back nine in Dubai to remain tied at the top of the leaderboard.",
+        "direct": "Rory McIlroy is tied for the lead at the midway point of the DP World Tour Championship. He remains in prime position to claim a record-tying eighth Race to Dubai title."
       },
       "sources": [
         {
-          "title": "atptour.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGFvd_cf2ARenje7Zxf9FgfZZt0RqHzUW5MEGlxB9ckjsvY93GyyWsPdmIYbJlRrtkEIZ1wUo41GDQGJubmu4NCRhdwN04eo1czaQXA1Ex7aBylF0ZgAibS0iNwIUYIOaUMorJAAXx_nUShklOjxGjBJpdXSylmYtmYi_aKMYA6zI4="
+          "title": "sfgate.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFs-Q-wR3MY76GjlkzH39WUKls9LzPZXnGQr9oJYi3XqQexsRrj8Ymp89WN-tnGyb78s2VgABSUAC9jTBlbU-eqGCzcSSN4YQWvIvsPoHI22RqUT5WfBk6qn5rzZIBkpyQNhBspReRLwPP-m6VDPhnhJZ6bJp4kGscBliKgSpxMdGw4W8qcxRofV5NcxT61CWAUiySHZxXC2OE="
         },
         {
-          "title": "atptour.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEDlf332TrWbg5rb6FmJzMSAdizuM85APk6W64G2gRbUE-U3hrWpDdX2G-rHvGcyNHWuTGTrl2pBWkzCr5Xb4TaiXYlC7kRHHwQjEWeqImmd8rPjpTvlUinrdfEvCRoxmlm0BBy3SompiUJrrXDvjd6ctq0_Z672ilNG5Yieg=="
+          "title": "golftoday.co.uk",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFyPSxmmALZ-ov1_8bseeu4S1KeUqSVlxMiGVuPcmexag8c2I7ZGJvXGiVDWBxVYr6oPoTlYlpuSRxq0KIt0nw4hZ9ZNLBevr9K7EZdMOSVw4pKUYu69eum0tDgE5W8SW28urufQVxZJpPBrh6iPh0AbykuYPDFKgKHK4izaTMTshM5LQq3VYZpP3-N4aRO6pKzl-s="
         },
         {
-          "title": "perfect-tennis.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG4ngcuv6B_TbW-stROgtEEQAkuRi0bhGTEbXvr1gJsoHm_nNm4ZwE1C383tmkuKBfY6Agwl634gkduPDE1eEbpohegmTrVgLBzvEjZzHW9dQvfQNxlL3B6B1VCOkco2cow6b1NUh4W0jI="
+          "title": "skysports.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHiUbfABEryliE3dAiAnTzcVLrd78Y2QwY_6b3D224hHODBVGKFSpImLj6VFMvkLh6MmZdlLS7g6lhWBYpExqA4aYNuwvs8JMWdINpaQbB39mrEZJ0yoFM4Eb_4FioTnoVPNB6cy1mbew2iOjLFGf2jQDp5QrCCm33AffKV0hG3W64Kg4BuBfY9fvVtlN-lYNMJNtikvfb5xCL3HE5DHS-U0iaNUoS88Pka6b2_SSkhe1d9T8sxEI6XjcAk2KGSCwrxP-ls7piLQxtCImzt8PoZLxgh6pIlOyuuU43EuruE"
         }
       ]
     },
     {
-      "id": "2026-11-13-entertainment",
+      "id": "2026-11-14-entertainment",
       "category": "entertainment",
       "categoryLabel": "Entertainment",
-      "headline": "Lucasfilm and Disney Announce Global 50th Anniversary Celebration for Star Wars",
-      "summary": "Lucasfilm and Disney announced a year-long global celebration for the 50th anniversary of Star Wars in 2027, headlined by a restored theatrical re-release of the original 1977 film on February 19, 2027. The milestone slate also includes a new Disney+ making-of documentary titled The Hero Awakens alongside upcoming theatrical and streaming releases.",
-      "question": "What classic movie would you most enjoy re-watching in a theater for its anniversary, and why?",
+      "headline": "Rosalía Makes History with Third Album of the Year Win at the Latin Grammys",
+      "summary": "At the 27th Annual Latin Grammy Awards in Las Vegas, Spanish singer Rosalía won Album of the Year for her project LUX, along with Song of the Year for La Perla. The victory makes her the first female artist in Latin Grammy history to claim Album of the Year three times.",
+      "question": "How do you think winning major music awards affects an artist's creative choices for future albums?",
       "coachLeads": {
-        "friendly": "Hey! Did you hear that the original Star Wars is heading back to movie theaters for its 50th anniversary?",
-        "energetic": "This is huge news for cinema lovers! Disney just announced a massive 50th-anniversary celebration for Star Wars!",
-        "calm": "Lucasfilm and Disney recently revealed their official plans to mark the 50th anniversary of Star Wars in 2027.",
-        "direct": "Disney just mapped out a year-long celebration for the 50th anniversary of Star Wars, starting with a theatrical re-release of the 1977 original."
+        "friendly": "Hey, have you caught up on the big highlights from the Latin Grammy Awards yet?",
+        "energetic": "Check this out—Rosalía just made music history at the Latin Grammys!",
+        "calm": "Here is a notable achievement from the music world that is worth reflecting on today.",
+        "direct": "Rosalía just won Album of the Year at the Latin Grammys for a historic third time."
       },
       "sources": [
         {
-          "title": "thewaltdisneycompany.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEQu59O98RS95PNEYlL8D4t3eRmqOGsxNgH0hK08Bp9JqChaAo0NwpSbPmeHtBWHZvwz5Sy-TB95zwAivuHUR-GRcerhvVjcijbr9C1qJhVuMj0T_SEnb3enj67Sj4g39GZJaL8k_WYBNMlzMPTLtdcHTfWiZc26KFhQGF1MmxFUl3aXw=="
+          "title": "gpb.org",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF_QikmNEU4CbRqmZEd-K04FZjwLWLchSjXfCwrToFE1YiBAZgAsoM7sBjqXPr_qpzMhSBU37ljTUxuiTJDF4SGuQmUe2GZq2rVKt9ZyJO2IQAWdM3xfN_DhOtIH3QPGWAh4x4VUTDM0Gobkp8gjxhLrhpx9putkTKftWJRYTHpeetsHEHm2-TQjgAdy5r12VcI5u4iyiyzhOGgVdzxZduCoRQqhgzW_g=="
         },
         {
-          "title": "cbc.ca",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHG1W7yy70o7cQtnjV0INRiqRQn394nfmVKhK7drLon9v_6bD2CU-Yt6C9mRr2LUVrlhHSoChyt-04Jz8HxPKRvswBsyE78x6Xhy06WOIevvergDXSN39ghbsPeNotATqvzdNYoxdKzM24mQyORwyozAp30UqMEr933OIXeK_DVvyye"
+          "title": "justjared.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFQajqXEEwMgNZ57khpe5FGbbJbRbFIUJTAlwpIafpmCgVawlCnOIGBKbEgiKpuZUGxkr8b3xuZjI4Q6osJD6RL9VBfj_3uSzwuxUBtBN_9JekK18p1-7g0wIG43nTLh6DzZa1UCfMeCQ2ku0-9zH6BAXEDFTMC1BBPaX_cdDNY1vBiEUcBjWO1GxFDkw7ds0Q3Yw=="
         },
         {
-          "title": "98online.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFKZ4ZojI6ru8pN0facMSd_IUm456WrUS1N5Lghp2aSHTiCcKNJpK9M9eR1nOceJQU6K4Ew3qpRO_sNFXLMxctkDPHrAghxauYO27867N7tzrxjxZwx--4sNkHvsgLwv1z0sv8YvtXKnhmeNP4GljYlDwBM_48TGidIOWJ1hfPS6CDRaVBIN41MclOlWH2Y_4ZCYmV-"
+          "title": "wikipedia.org",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHm9WTz1WeBcdlEBrfXvirEyGjicWcf_OB5Q6PpqF124gvWDTC2pwf6bqIXBFtjFJfBIBwabJn5_WAmXUCn4uuIyfWXU3H34usZSXqOkUOx8PE1xu-7IEDrt1NkO6QujLa9XneRlDFz"
         }
       ]
     }
