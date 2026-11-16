@@ -1,100 +1,100 @@
 {
   "schemaVersion": 1,
   "status": "live",
-  "date": "2026-11-15",
-  "generatedAt": "2026-11-15T01:03:28.771Z",
+  "date": "2026-11-16",
+  "generatedAt": "2026-11-16T01:01:43.017Z",
   "model": "gemini-3.6-flash",
   "fallbackCategories": [],
   "items": [
     {
-      "id": "2026-11-15-politics_economy",
+      "id": "2026-11-16-politics_economy",
       "category": "politics_economy",
       "categoryLabel": "Politics & Economy",
-      "headline": "Ukrainian President Warns Proposed U.S. European Security Plan Could Benefit Russia",
-      "summary": "Ukrainian President Volodymyr Zelenskyy stated that a broad European security framework floated by U.S. envoys could play into Moscow's interests by weakening NATO. He urged international negotiators to focus specifically on ending the war in Ukraine rather than reopening continental security agreements.",
-      "question": "How do you think international security negotiations should balance reaching a quick peace deal with preserving long-standing military alliances?",
+      "headline": "49th ASEAN Summit Opens in Manila to Focus on Regional Unity and Economic Growth",
+      "summary": "On November 15, 2026, Philippine President Ferdinand Marcos Jr. officially opened the 49th ASEAN Summit in Manila, bringing together Southeast Asian leaders to address pressing regional challenges. The high-level gathering focuses on strengthening economic integration, navigating geopolitical tensions, and fostering collective security across the Asia-Pacific region.",
+      "question": "How do you think regional summits like ASEAN influence economic stability and international diplomacy?",
       "coachLeads": {
-        "friendly": "Hey! Have you seen the latest diplomatic updates about the U.S. peace talks involving Ukraine?",
-        "energetic": "Check this out—President Zelenskyy just voiced major concerns over new European security ideas proposed by U.S. envoys!",
-        "calm": "Here is an important diplomatic story unfolding right now regarding Ukraine and the future of European security guarantees.",
-        "direct": "This is a key diplomatic update: President Zelenskyy warned that a proposed U.S. security framework might inadvertently benefit Russia."
+        "friendly": "Hey! Have you heard about the ASEAN Summit starting in Manila? It's a great story for talking about world news and global trade.",
+        "energetic": "Leaders from across Southeast Asia are meeting right now in Manila for the 49th ASEAN Summit! Let's dive into what this means for international relations.",
+        "calm": "Southeast Asian leaders have gathered in Manila for the 49th ASEAN Summit to discuss regional cooperation. Take a look at the details, and we can chat about it when you're ready.",
+        "direct": "The 49th ASEAN Summit opened in Manila on November 15 to address trade and security. Tell me what aspect of this story you'd like to discuss."
       },
       "sources": [
         {
-          "title": "ksat.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG4Z1M4S0CXT7Gk5I74JZHvoyWw3AAyIbCL7aefdYM4sBetDHAGo2qHfjInuneWK4NnCuOT7oJ-hpT9aLq1qjuktoLv5e30qAXor2dSG1eYEplnzm8Aw6Vy2LsdjTkfsTjNBiVSyx2S9ZF2snhD2c4Wg9Ihh6XKiZaz0vIxOTAUVlDd45YgEkujeSFiY2ha7tJTZGKBMC6B3rjrW-7SGoSrhVIKwmUeX0x9Zr62ARWZOXHhYro="
+          "title": "pna.gov.ph",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGy9BUjozLndibOoKbCfR8mj67g3RV4gTb8Img9xeSCOG7YeQCtdsXGDCAYYtVaWYC7aOD6nvVsi-2qLzi6SXBkXtdK_b5Od_vJ7i9iE4CjXF645h1n4RZVoc84baO04beQaNiiGJAK3dxPk-Gbta1tYJLRSuJ9eEG6We0WRA46xSRTGHMplNVd7UxTfIDvfLQ="
         },
         {
-          "title": "therepublic.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFj8-PkXdz5a-wVqh_KP8DURPPEiGHmxt06CC9Q70D_6ZLIV5s-6o2LYYawF-dMh1-57E8WO27Qe73ppz2Wqa3WYRUJspIfhpyvoP8HGBiOlJcuhoq_amWDzcc0YaYCicSK9B2uNsAv4LpmDatGorxNGR69mGd-9QZphmU7tJH7jhESMUfxK1-XoFzYK09SFbyMDYbMX9cVwhrDws_Q2UKxw0rVnI1kKDe15jkmCxcz"
+          "title": "asean.org",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHnK0Hps3tSDQWrfuyoePj0W_bFgA-Zdrva6OrfdXnuk9Q6TqjbX-YD8VI5HC7gKmTngdITEGxDssBhQC_HqRrQN8G6LgTPiIsev6gMT8tuF8E2UfsEQwcdFd6dF2HQ0devQ_e1pgtV1Ta9ybFljn7SJt9dOQ9uj3POW8kQvHQi1Rl-DB2h1BpnlXJC88KxTeSS5Pl1U2x3dHcV1Hhyh0EEnBWz3KSTq3d8qg_kxxccSciCARq6ykeC4l0="
         },
         {
-          "title": "gazettextra.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH6HDqOHcjJDP3mfUEwx8dK2Qs_PpRYqdMj0oJ7gxFEOKk6OFY9wJcWNXog7eN25PgqpsiKRd8kWNc2AfWyIyIWexV8R2yFleLJlOCCFM02fOc5MKSeOgVhHR_PQach3MsTv4zqWKCieCfXkVBkHiHBvz42EnctCmYNA6LGIEVvzv_rx8d3wT-RMVZlXcCNaFgwWh0UtyIeitPyKXWNGPkPvuWk8Kc3Tj1kP2mbv6xJokU5VeqIIbQVx1bUVdRKy79_gshxHdW8n2VfhokFAQzV3BvE9uczMStHfFMXz0dPomwIXHUNewBR"
+          "title": "pmo.gov.sg",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGBUdYBUZokEr7B2PCWu4LD5oLwBQO0euetBxhao9FAvrUcfebbhyAmohLQj5-BiuhJ2C4rlIOKfZx_CwToFku9Kn5MQJtV_YhwVi0Wou6v2Kyy2hlRjPkN8C9tyTtm4L7G7xRp2bv5y7UsPRia0V_Fm1VfO_ltUiKIipLqxBCAlezlcShUkX2aCcxPIdrVJwqecO5htfYMTj8h7FUBlL96au1Wxxn_M1wQNj2fXUaHR0vuWQwwBo-ISQ8iTZqJ"
         }
       ]
     },
     {
-      "id": "2026-11-15-technology",
+      "id": "2026-11-16-technology",
       "category": "technology",
       "categoryLabel": "Technology",
-      "headline": "Microsoft Restores Global Services After Massive Hourslong Outage",
-      "summary": "Microsoft confirmed on Saturday that it has fully restored its global online services following a major, hourslong outage that disrupted communication tools and business operations worldwide. The company stated that the widespread disruption stemmed from a technical issue during a network capacity upgrade rather than a cyberattack.",
-      "question": "How would your daily work or routine be affected if a major tech platform suddenly went offline for a full day?",
+      "headline": "NASA's Voyager 1 Reaches Historic One Light-Day Distance Record",
+      "summary": "NASA's Voyager 1 spacecraft is reaching a historic milestone by becoming the first human-made object to travel a distance of one light-day from Earth. NASA is celebrating this interstellar achievement by inviting the public to shine Morse code light signals into the night sky.",
+      "question": "If you could send a short message into deep space for future generations to discover, what would it say?",
       "coachLeads": {
-        "friendly": "Hey, have you heard about the massive Microsoft outage that was just resolved? It really shows how much our daily routines depend on cloud technology!",
-        "energetic": "Microsoft just restored its global systems after a huge worldwide disruption! Let's dive into what happened and how tech outages impact everyone!",
-        "calm": "Microsoft has successfully restored its global services following a significant outage today. It offers a great opportunity to reflect on our reliance on digital tools.",
-        "direct": "Microsoft fully resolved a major outage that impacted services across dozens of countries. What are your thoughts on how vulnerable our tech infrastructure is?"
+        "friendly": "Hey there! Have you heard about NASA's amazing new milestone in space exploration?",
+        "energetic": "You won't believe how far Voyager 1 has traveled—this news is out of this world!",
+        "calm": "NASA reached a quiet but monumental milestone in interstellar space today.",
+        "direct": "Voyager 1 just set an extraordinary distance record, and it is definitely worth talking about."
       },
       "sources": [
         {
-          "title": "ksat.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGlvpZ90aKMXkMlJFzhGE3uJWogCMdhh3k8S1CPJxMCzN-Qv1iJhJedbkQHzMdVZ3vgmDWFpsmLPnKFvd7Ski_QS_4RompVtAEi7E2rFTR4mhcGsSADsnRkfb7xXh1gK_BsUOtliVIRnrPOffktvcN972gW9VFIN6glGojCo7B1z3bs4umBOnoPqlczIu-qMUlF_AGHnZ0lmr0A4oKGb4lufMLDSw=="
+          "title": "Google News: Technology",
+          "url": "https://news.google.com/search?q=Technology%20top%20news%202026-11-16&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     },
     {
-      "id": "2026-11-15-sports",
+      "id": "2026-11-16-sports",
       "category": "sports",
       "categoryLabel": "Sports",
-      "headline": "German Skier Emma Aicher Wins First Career World Cup Slalom Victory",
-      "summary": "On November 14, 2026, German skier Emma Aicher achieved her first FIS Alpine Ski World Cup slalom victory in Levi, Finland, just one day after turning 23 years old. She posted a combined time of 1 minute 52.62 seconds across two runs to defeat Albania's Lara Colturi by 0.43 seconds.",
-      "question": "What personal milestone or athletic achievement has given you the greatest sense of accomplishment?",
+      "headline": "England Defeats Spain 3-2 to End Historic 43-Match Unbeaten Streak",
+      "summary": "England defeated reigning World and European champion Spain 3-2 in a UEFA Nations League match in Madrid on November 15, 2026. The victory ended Spain's record 43-game unbeaten streak across all competitions and gave England their first-ever away victory against a top-ranked FIFA nation.",
+      "question": "What do you think this major result means for both teams as they prepare for the rest of the tournament?",
       "coachLeads": {
-        "friendly": "Did you hear the exciting news from the slopes this weekend? A rising international athlete just celebrated her birthday with a major milestone victory!",
-        "energetic": "Check out this incredible sports story! Emma Aicher celebrated her birthday weekend by dominating the course and taking home her first career World Cup slalom title!",
-        "calm": "There was a notable result in international alpine skiing today. Emma Aicher managed to secure her very first World Cup slalom victory in Finland.",
-        "direct": "Emma Aicher has captured her first career World Cup slalom victory in Levi, Finland. Let's discuss this major athletic breakthrough."
+        "friendly": "Hey, have you heard about the big soccer match yesterday? England just pulled off an incredible win against Spain!",
+        "energetic": "What an unbelievable match! England defeated Spain 3-2 and broke their historic 43-game unbeaten streak!",
+        "calm": "If you follow international sports, yesterday's football match is definitely worth talking about. England handed Spain their first defeat since 2024.",
+        "direct": "England beat Spain 3-2 in Madrid to snap Spain's 43-game unbeaten streak. Let's discuss what made this match so significant."
       },
       "sources": [
         {
-          "title": "olympics.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGNcOKf1iB7RNMzY6Rven-HA-JGfTLOdb_vBDAMPSumaEyMvou-_0BuMzuVASjrQd8rxgaZf2NZF4Be4Bv70A_ecqZ048xxaCmzlteB3Lr9CUKZmSdxJFT0CQkOvdwcoMjd7irfHDvSqVTMhbt31wNNsSYpelnaeNsXFNPT82JTL-w="
+          "title": "aljazeera.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEbTe_dFB5KL5j65zvF7NnQwIMqir_gO7b2eUFSVguJyMHrSMFNCxEJ3X29E_k_fDxdKW-02SYutdVRFnoKtM4sUcOOQFycDiOAF33tYtT4DAnZFkp4yiOdIbSkLKdrS4YxgNck0O34iexyNsUuVU5gGfxXLXo3ZRbSC5XZdGK9ZPDtikgGQn6nJBurTqNjG4fzwOh9"
         },
         {
-          "title": "skiracing.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGI_wHdS_CjaMD34M60VgAp3ND6FF4b0fazpxaVe6b1V7ZVzdAm6hTJ0W_K-mXYmjjv_KvNL8V_2TIiz1Mtv8sxwKWV6hWpSzTBAO_mIdzEEJ_pLhW-Qea66WHeu34URQCkuxevABKbBw=="
+          "title": "ksat.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGLq6d2w2TYNYd-pZBc-JdOQZ1RSKY4LzY5qMsxLC0LQoxHww0Bp4no0Fc0muI25mkPjCBsYxrGSuSIw3MC3ReUKAeASAPY4b7S8wEWJm_9lW3EHiAlLEQSjzMPtW23eOvH8iQNGr9unDBN3ZsDHpuiHvt6nOwtBAAHJ9SIEiJuWqaWmaaRHaYdh6PY2wtIxG0LlFcVF4AIQ7a6Kp5RWEAGb5ABwVRaCfXvTkqZrTZIeBs4tW3X5iXdK_7GOHQR"
         }
       ]
     },
     {
-      "id": "2026-11-15-entertainment",
+      "id": "2026-11-16-entertainment",
       "category": "entertainment",
       "categoryLabel": "Entertainment",
-      "headline": "Filipino Singer Carmelle Wins Inaugural Eurovision Asia Song Contest in Bangkok",
-      "summary": "Vocalist Carmelle from the Philippines won the first-ever Eurovision Asia Song Contest in Bangkok with her performance of \"Sobra-Sobra\". This historic victory marks a major milestone as the iconic song competition successfully launched its first official Asian edition.",
-      "question": "What kind of song or musical style do you think best represents your country on an international stage?",
+      "headline": "BTS and IVE Win Top Grand Prizes at the 2026 Melon Music Awards",
+      "summary": "South Korean group BTS won major grand prizes, including Artist of the Year and Album of the Year, at the 2026 Melon Music Awards in Seoul on November 15. The ceremony concluded a two-day celebration of the year's top music achievements, with girl group IVE also taking home Song of the Year.",
+      "question": "What role do major music awards play in helping you discover new songs and artists?",
       "coachLeads": {
-        "friendly": "Hey! Have you heard about the big music victory over in Bangkok?",
-        "energetic": "Did you catch the news about the very first Eurovision Asia winner? It was an amazing milestone for regional music!",
-        "calm": "There is some interesting culture news today about a major new music contest in Asia. Let's discuss it whenever you have a moment.",
-        "direct": "The inaugural Eurovision Asia winner was just crowned in Bangkok. Let's talk about what this means for global pop culture."
+        "friendly": "Hey! Did you hear about the big wins at the Melon Music Awards this weekend? BTS and IVE took home some of the top honors of the night!",
+        "energetic": "Huge news in global music today! BTS just added to their historic streak with major grand prize wins at the 2026 Melon Music Awards!",
+        "calm": "The 2026 Melon Music Awards recently concluded in Seoul with BTS taking top honors. It's a great opportunity to talk about global music culture.",
+        "direct": "BTS and IVE claimed top grand prizes at the 2026 Melon Music Awards today. Let me know your thoughts on global music awards."
       },
       "sources": [
         {
-          "title": "clickorlando.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGq4Be0qSDb5bziJz-1A75TfVz8jSd-MrwZ-ke9NinFc-f19FUUzBm20nWaetJ17BZtyYEnLQX7R70S0r7bqxTM0wuA3LpsBFloNJWLuB31j5KAKTXHWGB4wKX29hpG6kQq3R2QB4MhG27ZPgHlR4Nz8j2GDcBLCGOCB1MjGZOGRDMuUvrZM06POsmsloW05VWiY2_BO7WE_TrCMzYLcyv-W5r72HEfgAvTqOayePWKXMlJJaDkjU0_AiuG4w=="
+          "title": "koreajoongangdaily.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFxm3vnPdOE55mbJ11MD-VS5r5UdI9ELBSeTLp37efU3iy2KNjNwTBiSgREhue8q6Z97-cbFyy-dDEshfv6XqlWqRm0530Nv1HHkMUWNITkF5bls8PKA9HI-UUYaogIYD2zb_HmHDaLbUhmB76tGj0Y2ypnZudyXVRNW98z0OTbxs5tzWCxgJuOWE486L_pDHh0nCb4ThjibcKgnZZhAqut4oRYr_y7bcAxXC5IxMFeIu_7DUPSKDGAfqA1-8BNodI0iIuQEw=="
         }
       ]
     }
