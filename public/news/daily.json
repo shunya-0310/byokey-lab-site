@@ -1,100 +1,104 @@
 {
   "schemaVersion": 1,
   "status": "live",
-  "date": "2026-11-16",
-  "generatedAt": "2026-11-16T01:01:43.017Z",
+  "date": "2026-11-17",
+  "generatedAt": "2026-11-17T03:54:09.843Z",
   "model": "gemini-3.6-flash",
   "fallbackCategories": [],
   "items": [
     {
-      "id": "2026-11-16-politics_economy",
+      "id": "2026-11-17-politics_economy",
       "category": "politics_economy",
       "categoryLabel": "Politics & Economy",
-      "headline": "49th ASEAN Summit Opens in Manila to Focus on Regional Unity and Economic Growth",
-      "summary": "On November 15, 2026, Philippine President Ferdinand Marcos Jr. officially opened the 49th ASEAN Summit in Manila, bringing together Southeast Asian leaders to address pressing regional challenges. The high-level gathering focuses on strengthening economic integration, navigating geopolitical tensions, and fostering collective security across the Asia-Pacific region.",
-      "question": "How do you think regional summits like ASEAN influence economic stability and international diplomacy?",
+      "headline": "Global Leaders Gather in Manila for 49th ASEAN Summit",
+      "summary": "Southeast Asian leaders and international partners gathered in Manila for the 49th ASEAN Summit to address regional security and economic cooperation. High-level discussions focused on maritime disputes in the South China Sea, regional trade resilience, and diplomatic responses to the crisis in Myanmar.",
+      "question": "What steps do you think international leaders should prioritize to foster peaceful cooperation during regional summits?",
       "coachLeads": {
-        "friendly": "Hey! Have you heard about the ASEAN Summit starting in Manila? It's a great story for talking about world news and global trade.",
-        "energetic": "Leaders from across Southeast Asia are meeting right now in Manila for the 49th ASEAN Summit! Let's dive into what this means for international relations.",
-        "calm": "Southeast Asian leaders have gathered in Manila for the 49th ASEAN Summit to discuss regional cooperation. Take a look at the details, and we can chat about it when you're ready.",
-        "direct": "The 49th ASEAN Summit opened in Manila on November 15 to address trade and security. Tell me what aspect of this story you'd like to discuss."
+        "friendly": "Hey! Have you heard about world leaders meeting in Manila right now for the ASEAN Summit?",
+        "energetic": "Check out this major international story! World leaders are gathering in Manila to tackle big security and economic issues!",
+        "calm": "This is a key moment in global diplomacy. Leaders are meeting in Manila to discuss peace, security, and trade in Southeast Asia.",
+        "direct": "World leaders have convened in Manila for the 49th ASEAN Summit to address South China Sea disputes and economic issues. Let's discuss what this means for global diplomacy."
       },
       "sources": [
         {
-          "title": "pna.gov.ph",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGy9BUjozLndibOoKbCfR8mj67g3RV4gTb8Img9xeSCOG7YeQCtdsXGDCAYYtVaWYC7aOD6nvVsi-2qLzi6SXBkXtdK_b5Od_vJ7i9iE4CjXF645h1n4RZVoc84baO04beQaNiiGJAK3dxPk-Gbta1tYJLRSuJ9eEG6We0WRA46xSRTGHMplNVd7UxTfIDvfLQ="
-        },
-        {
-          "title": "asean.org",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHnK0Hps3tSDQWrfuyoePj0W_bFgA-Zdrva6OrfdXnuk9Q6TqjbX-YD8VI5HC7gKmTngdITEGxDssBhQC_HqRrQN8G6LgTPiIsev6gMT8tuF8E2UfsEQwcdFd6dF2HQ0devQ_e1pgtV1Ta9ybFljn7SJt9dOQ9uj3POW8kQvHQi1Rl-DB2h1BpnlXJC88KxTeSS5Pl1U2x3dHcV1Hhyh0EEnBWz3KSTq3d8qg_kxxccSciCARq6ykeC4l0="
-        },
-        {
-          "title": "pmo.gov.sg",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGBUdYBUZokEr7B2PCWu4LD5oLwBQO0euetBxhao9FAvrUcfebbhyAmohLQj5-BiuhJ2C4rlIOKfZx_CwToFku9Kn5MQJtV_YhwVi0Wou6v2Kyy2hlRjPkN8C9tyTtm4L7G7xRp2bv5y7UsPRia0V_Fm1VfO_ltUiKIipLqxBCAlezlcShUkX2aCcxPIdrVJwqecO5htfYMTj8h7FUBlL96au1Wxxn_M1wQNj2fXUaHR0vuWQwwBo-ISQ8iTZqJ"
+          "title": "inquirer.net",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEptX0-c--786S88MYpYi42-u1x-D-zCrNGCBBvB1faH7RUD65MK1zV8Vm_TXcsAC2szmBWIx4KGBNLcZ3XbH5W5neilxgUY6Qe4oddw-fcIBkzbl42bZWgF51fRevP5-_83Uh_Or79RAHldWckLuDZ2dKkavfvEezEXYMszicQO8WVdKK9e4CryZ3eWM9WZ0WoKVakCsU="
         }
       ]
     },
     {
-      "id": "2026-11-16-technology",
+      "id": "2026-11-17-technology",
       "category": "technology",
       "categoryLabel": "Technology",
-      "headline": "NASA's Voyager 1 Reaches Historic One Light-Day Distance Record",
-      "summary": "NASA's Voyager 1 spacecraft is reaching a historic milestone by becoming the first human-made object to travel a distance of one light-day from Earth. NASA is celebrating this interstellar achievement by inviting the public to shine Morse code light signals into the night sky.",
-      "question": "If you could send a short message into deep space for future generations to discover, what would it say?",
+      "headline": "Tesla Opens Orders for Steering-Wheel-Free Cybercab to Private Buyers",
+      "summary": "Tesla has started inviting select U.S. customers to order its two-seater Cybercab for personal use at a base price of $29,990, with initial deliveries estimated to begin in December. This development is making major news as it marks the first time an automaker is selling a pedal-free, steering-wheel-free autonomous vehicle directly to individual consumers.",
+      "question": "Would you feel comfortable riding in or purchasing a car that relies entirely on artificial intelligence and has no steering wheel or pedals?",
       "coachLeads": {
-        "friendly": "Hey there! Have you heard about NASA's amazing new milestone in space exploration?",
-        "energetic": "You won't believe how far Voyager 1 has traveled—this news is out of this world!",
-        "calm": "NASA reached a quiet but monumental milestone in interstellar space today.",
-        "direct": "Voyager 1 just set an extraordinary distance record, and it is definitely worth talking about."
+        "friendly": "Hey, have you heard about Tesla's latest car announcement? It's definitely a fascinating topic to discuss!",
+        "energetic": "You won't believe this—a car without any steering wheel or pedals is officially available for individual buyers!",
+        "calm": "There is a notable shift happening in the autonomous vehicle industry that is worth looking into today.",
+        "direct": "Tesla has started taking orders for a steering-wheel-free vehicle from everyday consumers. Let's talk about what this means."
       },
       "sources": [
         {
-          "title": "Google News: Technology",
-          "url": "https://news.google.com/search?q=Technology%20top%20news%202026-11-16&hl=en-US&gl=US&ceid=US:en"
-        }
-      ]
-    },
-    {
-      "id": "2026-11-16-sports",
-      "category": "sports",
-      "categoryLabel": "Sports",
-      "headline": "England Defeats Spain 3-2 to End Historic 43-Match Unbeaten Streak",
-      "summary": "England defeated reigning World and European champion Spain 3-2 in a UEFA Nations League match in Madrid on November 15, 2026. The victory ended Spain's record 43-game unbeaten streak across all competitions and gave England their first-ever away victory against a top-ranked FIFA nation.",
-      "question": "What do you think this major result means for both teams as they prepare for the rest of the tournament?",
-      "coachLeads": {
-        "friendly": "Hey, have you heard about the big soccer match yesterday? England just pulled off an incredible win against Spain!",
-        "energetic": "What an unbelievable match! England defeated Spain 3-2 and broke their historic 43-game unbeaten streak!",
-        "calm": "If you follow international sports, yesterday's football match is definitely worth talking about. England handed Spain their first defeat since 2024.",
-        "direct": "England beat Spain 3-2 in Madrid to snap Spain's 43-game unbeaten streak. Let's discuss what made this match so significant."
-      },
-      "sources": [
-        {
-          "title": "aljazeera.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEbTe_dFB5KL5j65zvF7NnQwIMqir_gO7b2eUFSVguJyMHrSMFNCxEJ3X29E_k_fDxdKW-02SYutdVRFnoKtM4sUcOOQFycDiOAF33tYtT4DAnZFkp4yiOdIbSkLKdrS4YxgNck0O34iexyNsUuVU5gGfxXLXo3ZRbSC5XZdGK9ZPDtikgGQn6nJBurTqNjG4fzwOh9"
+          "title": "bytesprint.io",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFG_12-nWy9i2XGWDgcW86jWf1nzU0Y72Ht9ym2UTnyuSIX9feYyHAdFgVywEneY9cVn1NqDuwfQAAEvu0cJKtgH6zy-iOsTZPgOln2HkRNcNT9EjkhCnXwv1DA7Rhujz2vKM_5JEWuEWk="
         },
         {
-          "title": "ksat.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGLq6d2w2TYNYd-pZBc-JdOQZ1RSKY4LzY5qMsxLC0LQoxHww0Bp4no0Fc0muI25mkPjCBsYxrGSuSIw3MC3ReUKAeASAPY4b7S8wEWJm_9lW3EHiAlLEQSjzMPtW23eOvH8iQNGr9unDBN3ZsDHpuiHvt6nOwtBAAHJ9SIEiJuWqaWmaaRHaYdh6PY2wtIxG0LlFcVF4AIQ7a6Kp5RWEAGb5ABwVRaCfXvTkqZrTZIeBs4tW3X5iXdK_7GOHQR"
+          "title": "briefs.co",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHf6zYz1wnImHtFwYsX2Z9XjrBRzKG8Md4DQvHpgNOguKkQHQclCP09CYz8PZ2Wwl6YynA2RWXZjywvzX02bpOqM7eDtyrDNmK7iZU6cGpNd4filR23K2RLwfp-D1POLqhbmMndTbc9gMvb7OzsB_gkrhDFEMJpoJve8tnT8HVvxdP9tGRrXzOpm2TR"
+        },
+        {
+          "title": "247wallst.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGUFh_a-ic3ld-maBjglaK0hF1ZkE1s-NxYV2mlOd3_L4a8nNp03coIGGN0J8sWzratMY_i6u_bcUgkwsRzU8AoUo076nNUKEGTExf9ES4SsgUE29WJikNdjh_KVDBiwrpD0fTOIeCUcvktvCWWBDX5kdhgrNlPjfq3DQkliqv5oI41_uABWQuqdEGtFbfAA8z8c0YoB_U9Marml2p6LRZxRe4="
         }
       ]
     },
     {
-      "id": "2026-11-16-entertainment",
-      "category": "entertainment",
-      "categoryLabel": "Entertainment",
-      "headline": "BTS and IVE Win Top Grand Prizes at the 2026 Melon Music Awards",
-      "summary": "South Korean group BTS won major grand prizes, including Artist of the Year and Album of the Year, at the 2026 Melon Music Awards in Seoul on November 15. The ceremony concluded a two-day celebration of the year's top music achievements, with girl group IVE also taking home Song of the Year.",
-      "question": "What role do major music awards play in helping you discover new songs and artists?",
+      "id": "2026-11-17-sports",
+      "category": "sports",
+      "categoryLabel": "Sports",
+      "headline": "Alexander Zverev Presented With ATP Year-End No. 1 Trophy",
+      "summary": "German tennis star Alexander Zverev was officially presented with the ATP Year-End No. 1 trophy in Turin on Monday after winning his first two Grand Slam titles at Roland Garros and the US Open this season. The award makes him the first German player in ATP history to finish a season as world number one.",
+      "question": "What do you think it takes for an athlete to maintain consistency at the top of their sport throughout an entire year?",
       "coachLeads": {
-        "friendly": "Hey! Did you hear about the big wins at the Melon Music Awards this weekend? BTS and IVE took home some of the top honors of the night!",
-        "energetic": "Huge news in global music today! BTS just added to their historic streak with major grand prize wins at the 2026 Melon Music Awards!",
-        "calm": "The 2026 Melon Music Awards recently concluded in Seoul with BTS taking top honors. It's a great opportunity to talk about global music culture.",
-        "direct": "BTS and IVE claimed top grand prizes at the 2026 Melon Music Awards today. Let me know your thoughts on global music awards."
+        "friendly": "Hey, did you catch the news about Alexander Zverev? He was just awarded the trophy for finishing the year as tennis's world number one!",
+        "energetic": "What an incredible milestone in tennis right now! Alexander Zverev officially lifted the year-end World No. 1 trophy in Turin after a fantastic season!",
+        "calm": "Alexander Zverev officially received the year-end number-one trophy in Turin on Monday. It caps off a historic season for the German tennis star.",
+        "direct": "Alexander Zverev was presented with the trophy for finishing 2026 as tennis's World No. 1. Let's discuss what made his season so successful."
       },
       "sources": [
         {
-          "title": "koreajoongangdaily.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFxm3vnPdOE55mbJ11MD-VS5r5UdI9ELBSeTLp37efU3iy2KNjNwTBiSgREhue8q6Z97-cbFyy-dDEshfv6XqlWqRm0530Nv1HHkMUWNITkF5bls8PKA9HI-UUYaogIYD2zb_HmHDaLbUhmB76tGj0Y2ypnZudyXVRNW98z0OTbxs5tzWCxgJuOWE486L_pDHh0nCb4ThjibcKgnZZhAqut4oRYr_y7bcAxXC5IxMFeIu_7DUPSKDGAfqA1-8BNodI0iIuQEw=="
+          "title": "atptour.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEI8OoJooYTJzbhwuBiFXIKn50wnfKXSB9Z0V09uQMRi1BRoB3evRQ7pKYLqfJqBC5BwKKEekT0Z_DCe8eZ--1jwzCRAfXO3rJm-1NLbkG6dPGZj1tEwRvceOIN774fvgxZeW5A2wRQPW7NPFWGzU5SK3dqpGs3ydmITucPKu_6YoE6KCWUndKqYkvpuvZq"
+        },
+        {
+          "title": "nbcsports.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHzYQm0oXyRzhx1-kL6h41tKMRDq-nG1i7QZzPUlqekD58WBkxxL_fWS-zEQq5HRUDvp0pTbNlFxCjabgCAmKEuepPpvqHdo8S0mtl9bBYOZ9E0Mjv3cvtYGKDxN3f15ZeUCxLqpYYaLoO3H5wD-T7VlGiQwYblzdAssDCAcThdt6pOaaaFlNKDt07KRCWPL2bERBvnX1BbVXosviTy8hzCl6j206-yeD44cSyp2OWH6pI7aPlp51a8"
+        },
+        {
+          "title": "atptour.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHSBguupfutMmgWsNsnf1RSKiyWG3XMA8FKVT8uLIPvtxhwK9y4lNPjh7ix5WlLpoGUiqIjbNMxLZk2HCUjkQclyvR7-s0TLyCdCZsm_fSMqH8Los11WyIPkUfY_46zGQxrN3qQZ0ASrTAsyIAhYF-E57FZf9C03qehPKXO5C2wnnz7"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-17-entertainment",
+      "category": "entertainment",
+      "categoryLabel": "Entertainment",
+      "headline": "Robert Pattinson Officially Cast as the Next James Bond in Upcoming Denis Villeneuve Film",
+      "summary": "Amazon MGM Studios announced that actor Robert Pattinson will star as the seventh official James Bond in a new film directed by Denis Villeneuve. The casting decision marks a major milestone for the six-decade-old franchise as it officially enters its next era following Daniel Craig's final 007 film in 2021.",
+      "question": "What qualities do you think are most important for an actor taking on an iconic role like James Bond?",
+      "coachLeads": {
+        "friendly": "Hey! Have you heard the big movie news today about who is stepping into the role of James Bond?",
+        "energetic": "You won't believe this massive cinema update—Robert Pattinson has officially been cast as 007!",
+        "calm": "There is a major film announcement worth talking about today. Robert Pattinson is taking over as the next James Bond.",
+        "direct": "Amazon MGM Studios just announced Robert Pattinson as the new James Bond in an upcoming film directed by Denis Villeneuve."
+      },
+      "sources": [
+        {
+          "title": "Google News: Entertainment",
+          "url": "https://news.google.com/search?q=Entertainment%20top%20news%202026-11-17&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     }
