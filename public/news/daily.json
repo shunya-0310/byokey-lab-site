@@ -1,104 +1,108 @@
 {
   "schemaVersion": 1,
   "status": "live",
-  "date": "2026-11-17",
-  "generatedAt": "2026-11-17T03:54:09.843Z",
+  "date": "2026-11-18",
+  "generatedAt": "2026-11-18T02:54:06.569Z",
   "model": "gemini-3.6-flash",
   "fallbackCategories": [],
   "items": [
     {
-      "id": "2026-11-17-politics_economy",
+      "id": "2026-11-18-politics_economy",
       "category": "politics_economy",
       "categoryLabel": "Politics & Economy",
-      "headline": "Global Leaders Gather in Manila for 49th ASEAN Summit",
-      "summary": "Southeast Asian leaders and international partners gathered in Manila for the 49th ASEAN Summit to address regional security and economic cooperation. High-level discussions focused on maritime disputes in the South China Sea, regional trade resilience, and diplomatic responses to the crisis in Myanmar.",
-      "question": "What steps do you think international leaders should prioritize to foster peaceful cooperation during regional summits?",
+      "headline": "Quad Leaders Meet in Manila to Launch New Indo-Pacific Security and Tech Initiatives",
+      "summary": "Leaders from the United States, Australia, India, and Japan gathered in Manila for a Quad summit on November 17, marking their first leader-level meeting in two years. The four nations announced key initiatives, including a joint maritime patrol exercise planned for 2027 alongside expanded partnerships in cybersecurity and undersea cable resilience.",
+      "question": "How do you think joint diplomatic and security agreements affect trade and political stability in the Indo-Pacific region?",
       "coachLeads": {
-        "friendly": "Hey! Have you heard about world leaders meeting in Manila right now for the ASEAN Summit?",
-        "energetic": "Check out this major international story! World leaders are gathering in Manila to tackle big security and economic issues!",
-        "calm": "This is a key moment in global diplomacy. Leaders are meeting in Manila to discuss peace, security, and trade in Southeast Asia.",
-        "direct": "World leaders have convened in Manila for the 49th ASEAN Summit to address South China Sea disputes and economic issues. Let's discuss what this means for global diplomacy."
+        "friendly": "Hey, have you caught the news about the Quad summit in Manila yet? It's a really interesting moment for global diplomacy.",
+        "energetic": "Check out this major update from Manila where four world leaders just teamed up on big new security plans! Let me know what you think about it.",
+        "calm": "There's an important diplomatic story unfolding right now as Quad leaders gather in Manila. Take a moment to look over the summary and share your thoughts.",
+        "direct": "Quad leaders just announced new military and tech initiatives at their summit in Manila. Let's discuss how this shapes regional security."
       },
       "sources": [
         {
-          "title": "inquirer.net",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEptX0-c--786S88MYpYi42-u1x-D-zCrNGCBBvB1faH7RUD65MK1zV8Vm_TXcsAC2szmBWIx4KGBNLcZ3XbH5W5neilxgUY6Qe4oddw-fcIBkzbl42bZWgF51fRevP5-_83Uh_Or79RAHldWckLuDZ2dKkavfvEezEXYMszicQO8WVdKK9e4CryZ3eWM9WZ0WoKVakCsU="
+          "title": "pna.gov.ph",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFJ_vNg0zt9PXVQI27ZTMe02wMrNNsGbc6Ria9axM1K2XqKdU1-4Mu0YXO1kbs4UXugciJGBrHG1eMi1tFYqI_Mr17RbR7lFuFtEXxpmtgGXvzT7rwMbZp3KoSh-6hzAnho_2uPqbSC0g0To1G8N4FK2ff5tdCxhp2dDEFKsHxzdvf-4o3eJJoWn1BDguccV6IhJi-N8p3i-DaVQMCyMw=="
+        },
+        {
+          "title": "rediff.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGw3FZN9FhLqu4uIKAt_Zpv5FRpKPga5R7MYshEvAW0xn9Q1tCszsLDCiDf5Wh0HBWbYFHrlnYphtx2CLcIr4IcrnKv0AYuvEvOh0pu-j6AFTSqqmHu-swLg7u7PVCLJ0A7qAb0SIHTzp1FVWhfoUY3eW6S_I_bFtg6MNPTQZrs4RuXrObZrE0pOEXdRKGtxuJ85SMnIueOT-uJv6MQ9RYbTya4GjFFZccHsP0e"
         }
       ]
     },
     {
-      "id": "2026-11-17-technology",
+      "id": "2026-11-18-technology",
       "category": "technology",
       "categoryLabel": "Technology",
-      "headline": "Tesla Opens Orders for Steering-Wheel-Free Cybercab to Private Buyers",
-      "summary": "Tesla has started inviting select U.S. customers to order its two-seater Cybercab for personal use at a base price of $29,990, with initial deliveries estimated to begin in December. This development is making major news as it marks the first time an automaker is selling a pedal-free, steering-wheel-free autonomous vehicle directly to individual consumers.",
-      "question": "Would you feel comfortable riding in or purchasing a car that relies entirely on artificial intelligence and has no steering wheel or pedals?",
+      "headline": "NASA's Voyager 1 Becomes First Spacecraft to Reach One Light-Day From Earth",
+      "summary": "NASA's Voyager 1 probe has reached a historic distance of one light-day from Earth, placing it over 16 billion miles away from our planet. This milestone means radio signals now take 24 hours to travel each way, creating a 48-hour round-trip communication delay for mission engineers.",
+      "question": "What kind of challenges or possibilities do you think super long-distance space communication presents for the future of human exploration?",
       "coachLeads": {
-        "friendly": "Hey, have you heard about Tesla's latest car announcement? It's definitely a fascinating topic to discuss!",
-        "energetic": "You won't believe this—a car without any steering wheel or pedals is officially available for individual buyers!",
-        "calm": "There is a notable shift happening in the autonomous vehicle industry that is worth looking into today.",
-        "direct": "Tesla has started taking orders for a steering-wheel-free vehicle from everyday consumers. Let's talk about what this means."
+        "friendly": "Hey, have you heard the latest space news today? Voyager 1 just crossed an unbelievable new milestone in deep space!",
+        "energetic": "This is huge news for science lovers! Humanity's most distant spacecraft officially reached one full light-day away from Earth!",
+        "calm": "There is a remarkable update from space exploration today. Voyager 1 has reached a landmark distance of one light-day from Earth.",
+        "direct": "Voyager 1 is now one light-day away from Earth, setting a brand-new space record. Let's talk about why this is worth discussing."
       },
       "sources": [
         {
-          "title": "bytesprint.io",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFG_12-nWy9i2XGWDgcW86jWf1nzU0Y72Ht9ym2UTnyuSIX9feYyHAdFgVywEneY9cVn1NqDuwfQAAEvu0cJKtgH6zy-iOsTZPgOln2HkRNcNT9EjkhCnXwv1DA7Rhujz2vKM_5JEWuEWk="
-        },
-        {
-          "title": "briefs.co",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHf6zYz1wnImHtFwYsX2Z9XjrBRzKG8Md4DQvHpgNOguKkQHQclCP09CYz8PZ2Wwl6YynA2RWXZjywvzX02bpOqM7eDtyrDNmK7iZU6cGpNd4filR23K2RLwfp-D1POLqhbmMndTbc9gMvb7OzsB_gkrhDFEMJpoJve8tnT8HVvxdP9tGRrXzOpm2TR"
-        },
-        {
-          "title": "247wallst.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGUFh_a-ic3ld-maBjglaK0hF1ZkE1s-NxYV2mlOd3_L4a8nNp03coIGGN0J8sWzratMY_i6u_bcUgkwsRzU8AoUo076nNUKEGTExf9ES4SsgUE29WJikNdjh_KVDBiwrpD0fTOIeCUcvktvCWWBDX5kdhgrNlPjfq3DQkliqv5oI41_uABWQuqdEGtFbfAA8z8c0YoB_U9Marml2p6LRZxRe4="
+          "title": "nextgov.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHFmBu4SZQiB6sQEZgG1TViqywDOn7qRpI3ZCva0qoSIK4sQ_xfNPpify1SE4Mjfiqu75olz1pYRy3esihA-tD_bDxlssthh_NR6i0u0IwtR78AZtW3KEIjz3jTCi_8fuLVlWAig2T3SmEA5rsslWxxCUlcNHqin0iO_lv-5GsGmDhM4HyZFgRibf2p0a_SSELiPOm6brOEdtaxVrUkGaTGOtKc4W5Xfuc="
         }
       ]
     },
     {
-      "id": "2026-11-17-sports",
+      "id": "2026-11-18-sports",
       "category": "sports",
       "categoryLabel": "Sports",
-      "headline": "Alexander Zverev Presented With ATP Year-End No. 1 Trophy",
-      "summary": "German tennis star Alexander Zverev was officially presented with the ATP Year-End No. 1 trophy in Turin on Monday after winning his first two Grand Slam titles at Roland Garros and the US Open this season. The award makes him the first German player in ATP history to finish a season as world number one.",
-      "question": "What do you think it takes for an athlete to maintain consistency at the top of their sport throughout an entire year?",
+      "headline": "World Rugby Bans South Africa Head Coach Rassie Erasmus for Six Matches",
+      "summary": "World Rugby suspended South Africa head coach Rassie Erasmus for six international matches after he publicly questioned whether refereeing decisions in a recent match amounted to match-fixing. The immediate sanction prohibits Erasmus from match-day coaching and entering stadiums, starting with South Africa's upcoming test against Ireland.",
+      "question": "Do you think sports governing bodies should impose strict bans on head coaches who publicly criticize referees?",
       "coachLeads": {
-        "friendly": "Hey, did you catch the news about Alexander Zverev? He was just awarded the trophy for finishing the year as tennis's world number one!",
-        "energetic": "What an incredible milestone in tennis right now! Alexander Zverev officially lifted the year-end World No. 1 trophy in Turin after a fantastic season!",
-        "calm": "Alexander Zverev officially received the year-end number-one trophy in Turin on Monday. It caps off a historic season for the German tennis star.",
-        "direct": "Alexander Zverev was presented with the trophy for finishing 2026 as tennis's World No. 1. Let's discuss what made his season so successful."
+        "friendly": "Hey, have you heard about South Africa's rugby coach getting banned for six games? It is a pretty interesting story worth chatting about.",
+        "energetic": "Big breaking news in world sports today! South Africa's head rugby coach just got slapped with a six-match ban over his controversial comments about officials!",
+        "calm": "World Rugby has suspended South Africa head coach Rassie Erasmus for six matches following his criticism of referees. This is a good opportunity to discuss discipline and respect in professional sports.",
+        "direct": "World Rugby handed Springboks head coach Rassie Erasmus an immediate six-game suspension. Let's talk about whether sports organizations should punish coaches so strictly for their comments."
       },
       "sources": [
         {
-          "title": "atptour.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEI8OoJooYTJzbhwuBiFXIKn50wnfKXSB9Z0V09uQMRi1BRoB3evRQ7pKYLqfJqBC5BwKKEekT0Z_DCe8eZ--1jwzCRAfXO3rJm-1NLbkG6dPGZj1tEwRvceOIN774fvgxZeW5A2wRQPW7NPFWGzU5SK3dqpGs3ydmITucPKu_6YoE6KCWUndKqYkvpuvZq"
+          "title": "1news.co.nz",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF5cX7o8m3AQAV7G8_T0YZgQ4hRH9MUOXFu5XYApF4qqSd3X9JIHLx3qcSAqJs3IL41WUHoJENdZxo8dzO30NDkolMYms1xNagB5uryIOpIsRkWiFY1HO2GmMRvBHMQqgyiGqgwistumXHyFWVaOf23G3sPwSjuh6qGeRG8L7G0_pYyxK-0Nxu_LdKpbRJSOrAI-9LYMkB7jUBw8Zhf3g=="
         },
         {
-          "title": "nbcsports.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHzYQm0oXyRzhx1-kL6h41tKMRDq-nG1i7QZzPUlqekD58WBkxxL_fWS-zEQq5HRUDvp0pTbNlFxCjabgCAmKEuepPpvqHdo8S0mtl9bBYOZ9E0Mjv3cvtYGKDxN3f15ZeUCxLqpYYaLoO3H5wD-T7VlGiQwYblzdAssDCAcThdt6pOaaaFlNKDt07KRCWPL2bERBvnX1BbVXosviTy8hzCl6j206-yeD44cSyp2OWH6pI7aPlp51a8"
+          "title": "supersport.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFIY__I_5cPbYAu9nLowkHeIyA2is1UbcoPtFXs42gZtAMOYWaY8Bd8YV4sn7aEWnnXOcUC5CEBL3ywXTicKNTwAlX9tBpYzJ-UYUB9wzGs0aYabUR8gU2a4cedoKJB5GyRN78xogri5LYP9m8u446xzmNaOg8SwyURsm9jRu0CNGcQaM4xlvqSkwMs-Ncqxe9VXbY51mhaF8T4-yEx-IDqpfxnhN5WM71ZkIJUkUbBRHNPh8_Wi9-zQXw="
         },
         {
-          "title": "atptour.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHSBguupfutMmgWsNsnf1RSKiyWG3XMA8FKVT8uLIPvtxhwK9y4lNPjh7ix5WlLpoGUiqIjbNMxLZk2HCUjkQclyvR7-s0TLyCdCZsm_fSMqH8Los11WyIPkUfY_46zGQxrN3qQZ0ASrTAsyIAhYF-E57FZf9C03qehPKXO5C2wnnz7"
+          "title": "rugbypass.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEKn9IbF3DOrLoqgYUmc8-UPKgQ0-_oS0W7Sr4gbCr0X5TEoRqbcdFf9JcF4MOdWozVr82aw0fkJMR2eyklkiRtG2_g4M_I2CpKi61bbQQeHaqPBwyGTbQerP1sVehHaBsoFbvguDpeHfF9zC7NxGe28TQCTc8ZtpRMKAi4ZCkyA0tUC_glhxs3_tfhnnyWhe1u_0XGCIa-a6Mz9LJ3lUmSeDViCXNCsDX_lfGjq4TOoXmtCxjDbGg_"
         }
       ]
     },
     {
-      "id": "2026-11-17-entertainment",
+      "id": "2026-11-18-entertainment",
       "category": "entertainment",
       "categoryLabel": "Entertainment",
-      "headline": "Robert Pattinson Officially Cast as the Next James Bond in Upcoming Denis Villeneuve Film",
-      "summary": "Amazon MGM Studios announced that actor Robert Pattinson will star as the seventh official James Bond in a new film directed by Denis Villeneuve. The casting decision marks a major milestone for the six-decade-old franchise as it officially enters its next era following Daniel Craig's final 007 film in 2021.",
-      "question": "What qualities do you think are most important for an actor taking on an iconic role like James Bond?",
+      "headline": "British Singer RAYE Leads 2027 Grammy Nominations With 11 Nods",
+      "summary": "The Recording Academy officially unveiled the nominations for the 69th Annual Grammy Awards, with British singer-songwriter RAYE leading all artists with 11 total nominations. Her album 'This Music May Contain Hope' earned an Album of the Year nod, topping a list dominated by female musicians including Rosalía and Olivia Rodrigo.",
+      "question": "Which musical artist or song do you think created the biggest impact over the past year?",
       "coachLeads": {
-        "friendly": "Hey! Have you heard the big movie news today about who is stepping into the role of James Bond?",
-        "energetic": "You won't believe this massive cinema update—Robert Pattinson has officially been cast as 007!",
-        "calm": "There is a major film announcement worth talking about today. Robert Pattinson is taking over as the next James Bond.",
-        "direct": "Amazon MGM Studios just announced Robert Pattinson as the new James Bond in an upcoming film directed by Denis Villeneuve."
+        "friendly": "Hey, have you seen the latest Grammy nominations yet? It looks like RAYE is having an incredible year with 11 nods!",
+        "energetic": "Big news from the music world! The Grammy nominations are officially out, and RAYE is leading the entire pack with 11 nominations!",
+        "calm": "The nominations for the upcoming Grammy Awards were recently released. RAYE leads this year's lineup with 11 nominations across major categories.",
+        "direct": "The new Grammy nominations are out, with RAYE receiving 11 nods. Let's talk about who you think deserves to win."
       },
       "sources": [
         {
-          "title": "Google News: Entertainment",
-          "url": "https://news.google.com/search?q=Entertainment%20top%20news%202026-11-17&hl=en-US&gl=US&ceid=US:en"
+          "title": "cnn.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHt_l-K0SlM2bdMZF-OpucUqD7muwDgV6kTfWY4st-IZcPOz5If06gSExZdF-kS0ACH4xcI2nVf-E-Jj8w9j2b01a3BgNSqt4fHj5NndvypguJriuISaANYuhXRh4SrAzUwHdJwKx53zlA4x2xBexqv3XyGIGpYM5lxSL5Czf8iFA=="
+        },
+        {
+          "title": "iheart.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGFpvhNYPY_HciSySj8R_eBuBuGJ6ilor-S5ys275E2oyfqm07I4MoaFy7E-oTpnztgPk8bLaOSLGaW-CZcVCt5Z7dCQ3pyc8WeJ3uvWkX022kxRMXG4mz8SZLTGSV7LYpSWkrM0sh1VtK8xGb1dWiVskO01tGiY43CQlc8NysvBNc50uRqCrX_qH1aJoAmvmT5CG4YENLYMsmV3LtytqTPEC6z-HDMmGKqeq2F0_A0atfOnocHlx3ox4ssNcIK2vea"
+        },
+        {
+          "title": "consequence.net",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFCDZiU9-PB3ubgLs1Bq_vcuetj3xjr2zP-36eIWlMhufhWoYeu3hv-1E8I9OdiVOMFtY5ddkv9MF7fgy2LZyEwtMKWpxwGs3-n6S58-YJTW2OmrhQ51GpTdJmO50MNbtjm0FGsQPbNRdekVxKAomzSOumYhQ=="
         }
       ]
     }
