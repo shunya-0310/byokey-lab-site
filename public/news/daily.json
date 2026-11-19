@@ -1,108 +1,116 @@
 {
   "schemaVersion": 1,
   "status": "live",
-  "date": "2026-11-18",
-  "generatedAt": "2026-11-18T02:54:06.569Z",
+  "date": "2026-11-19",
+  "generatedAt": "2026-11-19T02:33:58.032Z",
   "model": "gemini-3.6-flash",
   "fallbackCategories": [],
   "items": [
     {
-      "id": "2026-11-18-politics_economy",
+      "id": "2026-11-19-politics_economy",
       "category": "politics_economy",
       "categoryLabel": "Politics & Economy",
-      "headline": "Quad Leaders Meet in Manila to Launch New Indo-Pacific Security and Tech Initiatives",
-      "summary": "Leaders from the United States, Australia, India, and Japan gathered in Manila for a Quad summit on November 17, marking their first leader-level meeting in two years. The four nations announced key initiatives, including a joint maritime patrol exercise planned for 2027 alongside expanded partnerships in cybersecurity and undersea cable resilience.",
-      "question": "How do you think joint diplomatic and security agreements affect trade and political stability in the Indo-Pacific region?",
+      "headline": "World Leaders Gather in China for the 33rd APEC Summit",
+      "summary": "Global leaders, including U.S. President Donald Trump, Chinese President Xi Jinping, and Russian President Vladimir Putin, have arrived in Shenzhen for the 33rd Asia-Pacific Economic Cooperation summit. The high-stakes summit has drawn international attention as leaders hold diplomatic meetings to discuss regional trade, economic stability, and international cooperation.",
+      "question": "How do you think high-level summits like APEC influence international relations and global trade agreements?",
       "coachLeads": {
-        "friendly": "Hey, have you caught the news about the Quad summit in Manila yet? It's a really interesting moment for global diplomacy.",
-        "energetic": "Check out this major update from Manila where four world leaders just teamed up on big new security plans! Let me know what you think about it.",
-        "calm": "There's an important diplomatic story unfolding right now as Quad leaders gather in Manila. Take a moment to look over the summary and share your thoughts.",
-        "direct": "Quad leaders just announced new military and tech initiatives at their summit in Manila. Let's discuss how this shapes regional security."
+        "friendly": "Hey! Have you heard about the big APEC summit taking place right now with world leaders meeting in China?",
+        "energetic": "Check this out! Top leaders from around the world are gathering in Shenzhen for high-stakes trade and diplomacy talks!",
+        "calm": "World leaders are meeting today in China for the annual APEC summit. It's a great opportunity to look at how international diplomacy works.",
+        "direct": "Major global leaders are meeting in Shenzhen for the APEC summit today. Let me know your thoughts on these international trade talks."
       },
       "sources": [
         {
-          "title": "pna.gov.ph",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFJ_vNg0zt9PXVQI27ZTMe02wMrNNsGbc6Ria9axM1K2XqKdU1-4Mu0YXO1kbs4UXugciJGBrHG1eMi1tFYqI_Mr17RbR7lFuFtEXxpmtgGXvzT7rwMbZp3KoSh-6hzAnho_2uPqbSC0g0To1G8N4FK2ff5tdCxhp2dDEFKsHxzdvf-4o3eJJoWn1BDguccV6IhJi-N8p3i-DaVQMCyMw=="
+          "title": "thestandard.com.hk",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH2YnLJ92GfkiWo-_hBhOqpLK9bdw1qGZ41HbqgUwXWMEEN6zr-gkGI0g1ycPUXm3p6EwRoBQB8byNQtu4sOfYs9VSvVyCPh5gEbxPzuFeHgLOnBo3asuQs5C8u5DtQA8THT6F_I5-HarOpMlC966qIpyVP6WvE3roBf_cn2uAbW5A5f66lmII="
         },
         {
-          "title": "rediff.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGw3FZN9FhLqu4uIKAt_Zpv5FRpKPga5R7MYshEvAW0xn9Q1tCszsLDCiDf5Wh0HBWbYFHrlnYphtx2CLcIr4IcrnKv0AYuvEvOh0pu-j6AFTSqqmHu-swLg7u7PVCLJ0A7qAb0SIHTzp1FVWhfoUY3eW6S_I_bFtg6MNPTQZrs4RuXrObZrE0pOEXdRKGtxuJ85SMnIueOT-uJv6MQ9RYbTya4GjFFZccHsP0e"
+          "title": "fmprc.gov.cn",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGVrLOVZL-wVGr543Cm1_3xFXQ2KEnFeVKvXOg2LLhO4848VmYwB2XkkD_3QzmI-va94bS8mMXFubBH0Yvvi6ZKk7QCg25GDGI8_kdbJO9PtncurAyTE4bgldtbZtIjuN7hznRb7WyB7Z0AskgHkoROmwXZuBC5MV3XFA=="
         }
       ]
     },
     {
-      "id": "2026-11-18-technology",
+      "id": "2026-11-19-technology",
       "category": "technology",
       "categoryLabel": "Technology",
-      "headline": "NASA's Voyager 1 Becomes First Spacecraft to Reach One Light-Day From Earth",
-      "summary": "NASA's Voyager 1 probe has reached a historic distance of one light-day from Earth, placing it over 16 billion miles away from our planet. This milestone means radio signals now take 24 hours to travel each way, creating a 48-hour round-trip communication delay for mission engineers.",
-      "question": "What kind of challenges or possibilities do you think super long-distance space communication presents for the future of human exploration?",
+      "headline": "NASA's Voyager 1 Becomes First Human-Made Object One Light-Day From Earth",
+      "summary": "NASA's Voyager 1 spacecraft has reached a historic milestone by traveling one light-day, or roughly 16 billion miles, away from Earth. This news marks the first time a human-made probe has achieved this distance, meaning radio signals traveling at the speed of light now require a full 24 hours each way to communicate with Earth.",
+      "question": "If you could send a message on a space probe for a future civilization to find, what would you want to tell them?",
       "coachLeads": {
-        "friendly": "Hey, have you heard the latest space news today? Voyager 1 just crossed an unbelievable new milestone in deep space!",
-        "energetic": "This is huge news for science lovers! Humanity's most distant spacecraft officially reached one full light-day away from Earth!",
-        "calm": "There is a remarkable update from space exploration today. Voyager 1 has reached a landmark distance of one light-day from Earth.",
-        "direct": "Voyager 1 is now one light-day away from Earth, setting a brand-new space record. Let's talk about why this is worth discussing."
-      },
-      "sources": [
-        {
-          "title": "nextgov.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHFmBu4SZQiB6sQEZgG1TViqywDOn7qRpI3ZCva0qoSIK4sQ_xfNPpify1SE4Mjfiqu75olz1pYRy3esihA-tD_bDxlssthh_NR6i0u0IwtR78AZtW3KEIjz3jTCi_8fuLVlWAig2T3SmEA5rsslWxxCUlcNHqin0iO_lv-5GsGmDhM4HyZFgRibf2p0a_SSELiPOm6brOEdtaxVrUkGaTGOtKc4W5Xfuc="
-        }
-      ]
-    },
-    {
-      "id": "2026-11-18-sports",
-      "category": "sports",
-      "categoryLabel": "Sports",
-      "headline": "World Rugby Bans South Africa Head Coach Rassie Erasmus for Six Matches",
-      "summary": "World Rugby suspended South Africa head coach Rassie Erasmus for six international matches after he publicly questioned whether refereeing decisions in a recent match amounted to match-fixing. The immediate sanction prohibits Erasmus from match-day coaching and entering stadiums, starting with South Africa's upcoming test against Ireland.",
-      "question": "Do you think sports governing bodies should impose strict bans on head coaches who publicly criticize referees?",
-      "coachLeads": {
-        "friendly": "Hey, have you heard about South Africa's rugby coach getting banned for six games? It is a pretty interesting story worth chatting about.",
-        "energetic": "Big breaking news in world sports today! South Africa's head rugby coach just got slapped with a six-match ban over his controversial comments about officials!",
-        "calm": "World Rugby has suspended South Africa head coach Rassie Erasmus for six matches following his criticism of referees. This is a good opportunity to discuss discipline and respect in professional sports.",
-        "direct": "World Rugby handed Springboks head coach Rassie Erasmus an immediate six-game suspension. Let's talk about whether sports organizations should punish coaches so strictly for their comments."
-      },
-      "sources": [
-        {
-          "title": "1news.co.nz",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF5cX7o8m3AQAV7G8_T0YZgQ4hRH9MUOXFu5XYApF4qqSd3X9JIHLx3qcSAqJs3IL41WUHoJENdZxo8dzO30NDkolMYms1xNagB5uryIOpIsRkWiFY1HO2GmMRvBHMQqgyiGqgwistumXHyFWVaOf23G3sPwSjuh6qGeRG8L7G0_pYyxK-0Nxu_LdKpbRJSOrAI-9LYMkB7jUBw8Zhf3g=="
-        },
-        {
-          "title": "supersport.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFIY__I_5cPbYAu9nLowkHeIyA2is1UbcoPtFXs42gZtAMOYWaY8Bd8YV4sn7aEWnnXOcUC5CEBL3ywXTicKNTwAlX9tBpYzJ-UYUB9wzGs0aYabUR8gU2a4cedoKJB5GyRN78xogri5LYP9m8u446xzmNaOg8SwyURsm9jRu0CNGcQaM4xlvqSkwMs-Ncqxe9VXbY51mhaF8T4-yEx-IDqpfxnhN5WM71ZkIJUkUbBRHNPh8_Wi9-zQXw="
-        },
-        {
-          "title": "rugbypass.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEKn9IbF3DOrLoqgYUmc8-UPKgQ0-_oS0W7Sr4gbCr0X5TEoRqbcdFf9JcF4MOdWozVr82aw0fkJMR2eyklkiRtG2_g4M_I2CpKi61bbQQeHaqPBwyGTbQerP1sVehHaBsoFbvguDpeHfF9zC7NxGe28TQCTc8ZtpRMKAi4ZCkyA0tUC_glhxs3_tfhnnyWhe1u_0XGCIa-a6Mz9LJ3lUmSeDViCXNCsDX_lfGjq4TOoXmtCxjDbGg_"
-        }
-      ]
-    },
-    {
-      "id": "2026-11-18-entertainment",
-      "category": "entertainment",
-      "categoryLabel": "Entertainment",
-      "headline": "British Singer RAYE Leads 2027 Grammy Nominations With 11 Nods",
-      "summary": "The Recording Academy officially unveiled the nominations for the 69th Annual Grammy Awards, with British singer-songwriter RAYE leading all artists with 11 total nominations. Her album 'This Music May Contain Hope' earned an Album of the Year nod, topping a list dominated by female musicians including Rosalía and Olivia Rodrigo.",
-      "question": "Which musical artist or song do you think created the biggest impact over the past year?",
-      "coachLeads": {
-        "friendly": "Hey, have you seen the latest Grammy nominations yet? It looks like RAYE is having an incredible year with 11 nods!",
-        "energetic": "Big news from the music world! The Grammy nominations are officially out, and RAYE is leading the entire pack with 11 nominations!",
-        "calm": "The nominations for the upcoming Grammy Awards were recently released. RAYE leads this year's lineup with 11 nominations across major categories.",
-        "direct": "The new Grammy nominations are out, with RAYE receiving 11 nods. Let's talk about who you think deserves to win."
+        "friendly": "Hey, have you heard about this amazing space story today? NASA just announced a huge milestone for Voyager 1!",
+        "energetic": "You won't believe how far Voyager 1 has traveled! It is officially one light-day away from Earth, which is completely mind-blowing!",
+        "calm": "Here is a fascinating milestone to reflect on today. NASA's Voyager 1 probe is now a full light-day away from home.",
+        "direct": "NASA confirmed that Voyager 1 is officially one light-day away from Earth. This is definitely worth talking about."
       },
       "sources": [
         {
           "title": "cnn.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHt_l-K0SlM2bdMZF-OpucUqD7muwDgV6kTfWY4st-IZcPOz5If06gSExZdF-kS0ACH4xcI2nVf-E-Jj8w9j2b01a3BgNSqt4fHj5NndvypguJriuISaANYuhXRh4SrAzUwHdJwKx53zlA4x2xBexqv3XyGIGpYM5lxSL5Czf8iFA=="
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGrn9LlOWw41sz7jaqJcuo66XUbxpNRppdAR1Ybe_H6-BqGjS7iQPj7fZdg-Qckv8HsRgxPeLdqnijuvk1Y0Pnu-fixBv_qkFTV_rwVBVKhOUozcgIRfbjUMIDu2BjIrDoAQmsYK2KXa-0NNdkxFWE="
         },
         {
-          "title": "iheart.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGFpvhNYPY_HciSySj8R_eBuBuGJ6ilor-S5ys275E2oyfqm07I4MoaFy7E-oTpnztgPk8bLaOSLGaW-CZcVCt5Z7dCQ3pyc8WeJ3uvWkX022kxRMXG4mz8SZLTGSV7LYpSWkrM0sh1VtK8xGb1dWiVskO01tGiY43CQlc8NysvBNc50uRqCrX_qH1aJoAmvmT5CG4YENLYMsmV3LtytqTPEC6z-HDMmGKqeq2F0_A0atfOnocHlx3ox4ssNcIK2vea"
+          "title": "pbs.org",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG892X9JPLl8zjKQi6i_0dbKF5-8OCMbvJZGTkm8xaSP9ulnrrRby63jobPrEJhq83KICOMg03s2GJT8JOZV3QPSXcLc5fUdPJe8Px_tjBxWiQ5zYLfnj_elk5NAhyTKi7anBzPi_pdAwOcF6v5WiISVnr-bqaJDeUeasAKa8WPuae0FkBxCqPoFYHXpJo68DCx7NP0sHkHJT93DOkFMI6jPMQ_M_-ILt-_9Z4VZCQHmIDiLUfDB-Hb_g=="
         },
         {
-          "title": "consequence.net",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFCDZiU9-PB3ubgLs1Bq_vcuetj3xjr2zP-36eIWlMhufhWoYeu3hv-1E8I9OdiVOMFtY5ddkv9MF7fgy2LZyEwtMKWpxwGs3-n6S58-YJTW2OmrhQ51GpTdJmO50MNbtjm0FGsQPbNRdekVxKAomzSOumYhQ=="
+          "title": "wfaa.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG7YOjSwgb9WlQfvVdqHKQfpj8XPN8TcGXUSlC7wUhuzinemm7ScI1jF2MXqfUJBeHglwFN8wEaQN2PLN6iStUVbpqgu3elLC7JRS3kMZ-8mWVe7eeDXTBYOo5KtBkq1EWkwuki-o83y2xnuMcSlq-rsWWac_zoTmIr3YJ9cTFR4wfdyWNrxKH9vfrOHK8jSCvm4Qt2IoSVcnwM6tVhdLuTn3kH_4OjR5pScetANHm1g-Bmzqw6nldsoP4fFr8="
+        }
+      ]
+    },
+    {
+      "id": "2026-11-19-sports",
+      "category": "sports",
+      "categoryLabel": "Sports",
+      "headline": "Carlos Alcaraz Defeats Daniil Medvedev at the ATP Finals in Turin",
+      "summary": "Spanish tennis star Carlos Alcaraz defeated Daniil Medvedev 6-2, 6-4 on November 18 at the Nitto ATP Finals in Turin, Italy. The straight-sets victory extended Alcaraz's winning streak to 11 matches and brought him to the brink of qualifying for the tournament's semi-finals.",
+      "question": "Do you enjoy watching high-stakes tennis tournaments, and who is your favorite athlete to follow right now?",
+      "coachLeads": {
+        "friendly": "Hey, have you heard about the latest action from Turin? Carlos Alcaraz just put on a fantastic performance at the ATP Finals.",
+        "energetic": "What an incredible match in Turin! Carlos Alcaraz kept his hot streak alive with a big win over Daniil Medvedev!",
+        "calm": "This is worth taking a look at if you follow tennis. Carlos Alcaraz delivered a solid straight-sets victory to move closer to the ATP Finals semi-finals.",
+        "direct": "Carlos Alcaraz defeated Daniil Medvedev 6-2, 6-4 at the ATP Finals in Turin. The victory extended his current winning streak to 11 matches."
+      },
+      "sources": [
+        {
+          "title": "nittoatpfinals.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFWpx3TweM7bV46ha2KQtixXXJZrEVCIMdFSPbR3yzxWPB3YsAm7487QJ52jZFjlhnonqzXzeUH4zUDuXClsRa_N0mHhCf2LiIOc3SAdpByGLhymgS4VL_7yMeHrR_hNKXLHIxZSG41e2Miuf62-BQ9JBfsEfALGpb2ULeoPXPAAAiXV9vFVinYUYWT-sQ="
+        },
+        {
+          "title": "bignewsnetwork.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF_z1mdt4Ij0aw5_5Q2apfOxXaD-CdtihufV_jiLH2tvM5yMRMyP4tTT2JbwCWl7hES3bIqTO8_ytOz6mD72JJx1-mtZxAjWXcQD9rZgpjl6QbEUKyrAO0nnl4AuauTL3sN4KX4VN4oZaLO2WYmXRpIjLQnmoQpz6QU77OAOw5eMc_pYWol0gOqIZ0lIsHPH-Or1Cqed3vYgm6QJ5gPdvCPRrR-BtlYcRJ462IP8GjLWD1ZVk5dIig="
+        },
+        {
+          "title": "olympics.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFeKNx2EbCHowlsValyGhnL-LvRN9ebRMPhIjesstn06gusPfAQUvCEjb_SG3hJSH9BrdrX37kmDrjAEfi9FV9IlkYd45X_C1bMLJ3uX0ruFMBA4VxRcYwaYoHzVdogt7kNXcfMdM3jallHUTyOcEF8cg3W13_iYUgi3B7PP_Z_lxiF2GqqAh4CVAvDPjSo0DTrO-WLzK4wgyrioY50"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-19-entertainment",
+      "category": "entertainment",
+      "categoryLabel": "Entertainment",
+      "headline": "Grand Theft Auto VI Launches Worldwide After a 13-Year Wait",
+      "summary": "Rockstar Games has officially launched Grand Theft Auto VI, ending a 13-year gap since the franchise's previous entry in 2013. Industry analysts estimate the title generated over $1.5 billion in pre-orders, creating one of the largest entertainment launches in history.",
+      "question": "Why do you think certain video games or movies generate so much global excitement even after a decade-long wait?",
+      "coachLeads": {
+        "friendly": "Hey, have you heard about the massive video game launch happening today? It's been 13 years in the making, so I'd love to hear your thoughts on it!",
+        "energetic": "Check this out—one of the biggest entertainment releases in history just dropped today! Let's talk about why this new game is breaking global pre-order records.",
+        "calm": "A major piece of pop culture news happened today with the release of Grand Theft Auto VI after a 13-year gap. Whenever you have a moment, let me know what you think.",
+        "direct": "Grand Theft Auto VI launched worldwide today after more than a decade of development. Tell me your perspective on why releases of this scale capture so much attention."
+      },
+      "sources": [
+        {
+          "title": "cnn.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE_t64Uv1aV2ZtjwMg33wgfG99IevTnaSd17yjbAMoya-rkIjQTbYsuUxnuz3JS7qbEgPeRT892GQ7m1JtY7DIe_CWkA0Q16cmCK5tKHvvps6HJVGY9YjZ_877yeChKACfZaERAj6ANRcmyvw3MztLO1zKcHCVPKm70bBLLCXHJoiN6"
+        },
+        {
+          "title": "news4jax.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGsWPeIPdB32o_HSw065YlS7WxVU-4LbHHbFt_uNWSc-LmDvHn2OMisEszazEsSbaij0sD7PYMlIyCGrNm0B1sSaN1QATT9NNroNUnX-R9uwcZ_ZkH_iTk_Ehov6bEloBo79P4CwEpJUGfjBy6y64yRN8VUirk2qQokcMgSpgCrcEpy1c6xRwJuXoY-WUWfLY8r6_4Q2iGJW5xI6HfqUxcDAxL7BAFwDV82Fk8imyKVVhhvRUeP-M8IhQ=="
+        },
+        {
+          "title": "forbes.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGGN0UN0jykROWo6TUbrY-m7rVFiMBG_WaXLCTZyJYzQHw1p8uZLkyI0WBDdBFcb8-OXzzzqkqFt5vJtL7RgjpQcayKWJMOLHuNQLMMg14u3_yOKxsQmjNOYgFleasDkPNJ5SyYYTh9mvkjkgOZfm9rsSqdDOCgEtGHmzIApNyfmeU5sw6152xZjE2_lxtEVeKGRYvwhSlS-UrokeTjZa7rEl_2OjJXGtZRFbuI2puUe6n0YBkTaKRwuKMHIA=="
         }
       ]
     }
