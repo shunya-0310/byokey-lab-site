@@ -1,116 +1,104 @@
 {
   "schemaVersion": 1,
   "status": "live",
-  "date": "2026-11-19",
-  "generatedAt": "2026-11-19T02:33:58.032Z",
+  "date": "2026-11-20",
+  "generatedAt": "2026-11-20T02:19:09.654Z",
   "model": "gemini-3.6-flash",
   "fallbackCategories": [],
   "items": [
     {
-      "id": "2026-11-19-politics_economy",
+      "id": "2026-11-20-politics_economy",
       "category": "politics_economy",
       "categoryLabel": "Politics & Economy",
-      "headline": "World Leaders Gather in China for the 33rd APEC Summit",
-      "summary": "Global leaders, including U.S. President Donald Trump, Chinese President Xi Jinping, and Russian President Vladimir Putin, have arrived in Shenzhen for the 33rd Asia-Pacific Economic Cooperation summit. The high-stakes summit has drawn international attention as leaders hold diplomatic meetings to discuss regional trade, economic stability, and international cooperation.",
-      "question": "How do you think high-level summits like APEC influence international relations and global trade agreements?",
+      "headline": "Trump, Xi, and Putin Hold Historic Trilateral Summit in China",
+      "summary": "U.S. President Donald Trump, Chinese President Xi Jinping, and Russian President Vladimir Putin held their first-ever joint trilateral summit in Shenzhen on Thursday. The three leaders signed a global declaration addressing nuclear risk reduction, energy security, and international cooperation.",
+      "question": "What impact do you think direct diplomatic talks between major world powers have on global stability?",
       "coachLeads": {
-        "friendly": "Hey! Have you heard about the big APEC summit taking place right now with world leaders meeting in China?",
-        "energetic": "Check this out! Top leaders from around the world are gathering in Shenzhen for high-stakes trade and diplomacy talks!",
-        "calm": "World leaders are meeting today in China for the annual APEC summit. It's a great opportunity to look at how international diplomacy works.",
-        "direct": "Major global leaders are meeting in Shenzhen for the APEC summit today. Let me know your thoughts on these international trade talks."
+        "friendly": "Hey, have you heard about the big meeting between world leaders in China? It's making headlines everywhere today.",
+        "energetic": "Check this out! The leaders of the U.S., China, and Russia just held an unprecedented summit together!",
+        "calm": "There was a major diplomatic event as the leaders of three top world powers met face-to-face. This is worth talking about when you have a moment.",
+        "direct": "The leaders of the U.S., China, and Russia just concluded their first-ever three-way summit. Let's look at what they discussed."
       },
       "sources": [
         {
-          "title": "thestandard.com.hk",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH2YnLJ92GfkiWo-_hBhOqpLK9bdw1qGZ41HbqgUwXWMEEN6zr-gkGI0g1ycPUXm3p6EwRoBQB8byNQtu4sOfYs9VSvVyCPh5gEbxPzuFeHgLOnBo3asuQs5C8u5DtQA8THT6F_I5-HarOpMlC966qIpyVP6WvE3roBf_cn2uAbW5A5f66lmII="
+          "title": "www.gov.cn",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG4JuIVPI2_JXoJtdI1bdsNvEnuVC7uUYQLijLYo0xBpB2A7n58Fv3HMM50xjvsTWvY4SA9Kz0ow59m51qylPEgZikbgtXvCfffTS6aBAHXxyjeEtgdAKRCTmhojJQYwPqJWG8yq7V6pjc196mBeX9D8bhUsn81WWu5EQtB6MHuYQB8C4tft0Y="
         },
         {
-          "title": "fmprc.gov.cn",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGVrLOVZL-wVGr543Cm1_3xFXQ2KEnFeVKvXOg2LLhO4848VmYwB2XkkD_3QzmI-va94bS8mMXFubBH0Yvvi6ZKk7QCg25GDGI8_kdbJO9PtncurAyTE4bgldtbZtIjuN7hznRb7WyB7Z0AskgHkoROmwXZuBC5MV3XFA=="
+          "title": "antigojournal.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFDTW2Gc3V08UhEfXuyH6QXFjEdJAR6EL-WrODiD1W07zodgeDCJRQTENv_OUSzIaHRXuGTBa8Nb_KF7NmZcXneVIdmHJVJi0IFzSPNqoNTZVdYrT-01-7txXJIIi3pRsMhT7FJdQQ40VD7tT09jsgYJOK0yOO6PsptHlznfZgn0uB5qcuDl-ZvKjnz5w-3GsDPfe0EyJS27l7Gav3nGcaJoXpsyE7yO2NS-_a-mZFSLR9GVVs="
         }
       ]
     },
     {
-      "id": "2026-11-19-technology",
+      "id": "2026-11-20-technology",
       "category": "technology",
       "categoryLabel": "Technology",
-      "headline": "NASA's Voyager 1 Becomes First Human-Made Object One Light-Day From Earth",
-      "summary": "NASA's Voyager 1 spacecraft has reached a historic milestone by traveling one light-day, or roughly 16 billion miles, away from Earth. This news marks the first time a human-made probe has achieved this distance, meaning radio signals traveling at the speed of light now require a full 24 hours each way to communicate with Earth.",
-      "question": "If you could send a message on a space probe for a future civilization to find, what would you want to tell them?",
+      "headline": "Anthropic Makes Wall Street History as First Frontier AI Developer to Go Public",
+      "summary": "AI developer Anthropic officially began trading on the Nasdaq exchange on November 19, making history as the first frontier artificial intelligence company to go public. The landmark debut saw shares open well above the initial offering price before paring gains, serving as a major test of Wall Street's long-term faith in the AI boom.",
+      "question": "How do you think going public might change the way AI companies balance commercial profit with technology safety?",
       "coachLeads": {
-        "friendly": "Hey, have you heard about this amazing space story today? NASA just announced a huge milestone for Voyager 1!",
-        "energetic": "You won't believe how far Voyager 1 has traveled! It is officially one light-day away from Earth, which is completely mind-blowing!",
-        "calm": "Here is a fascinating milestone to reflect on today. NASA's Voyager 1 probe is now a full light-day away from home.",
-        "direct": "NASA confirmed that Voyager 1 is officially one light-day away from Earth. This is definitely worth talking about."
+        "friendly": "Hey, have you heard about Anthropic's big debut on the stock market? It is a really interesting story to chat about today!",
+        "energetic": "Anthropic just made Wall Street history with its massive public debut! Are you ready to dive into what this means for the tech world?",
+        "calm": "Anthropic officially began trading on the Nasdaq, marking a historic milestone for artificial intelligence. Let's take a look at why this financial story is so important.",
+        "direct": "Anthropic launched its historic stock market debut yesterday. Let's discuss how this landmark event could shape the future of the AI industry."
       },
       "sources": [
         {
-          "title": "cnn.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGrn9LlOWw41sz7jaqJcuo66XUbxpNRppdAR1Ybe_H6-BqGjS7iQPj7fZdg-Qckv8HsRgxPeLdqnijuvk1Y0Pnu-fixBv_qkFTV_rwVBVKhOUozcgIRfbjUMIDu2BjIrDoAQmsYK2KXa-0NNdkxFWE="
+          "title": "aiweekly.co",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFD5opo6ltRL9fLzqkXKaXFFIPRn-3t-gmOATdwOwBV9SCxaE4EvGHyrhX8grC9zrSQqQMPEPfNfaAVW6fNvANI3lHIccYLC-qltQ2Fd7otZvxEGXyM0gT1gBR85RCAh0Mxq2M0NM6GRH_i"
         },
         {
-          "title": "pbs.org",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG892X9JPLl8zjKQi6i_0dbKF5-8OCMbvJZGTkm8xaSP9ulnrrRby63jobPrEJhq83KICOMg03s2GJT8JOZV3QPSXcLc5fUdPJe8Px_tjBxWiQ5zYLfnj_elk5NAhyTKi7anBzPi_pdAwOcF6v5WiISVnr-bqaJDeUeasAKa8WPuae0FkBxCqPoFYHXpJo68DCx7NP0sHkHJT93DOkFMI6jPMQ_M_-ILt-_9Z4VZCQHmIDiLUfDB-Hb_g=="
-        },
-        {
-          "title": "wfaa.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG7YOjSwgb9WlQfvVdqHKQfpj8XPN8TcGXUSlC7wUhuzinemm7ScI1jF2MXqfUJBeHglwFN8wEaQN2PLN6iStUVbpqgu3elLC7JRS3kMZ-8mWVe7eeDXTBYOo5KtBkq1EWkwuki-o83y2xnuMcSlq-rsWWac_zoTmIr3YJ9cTFR4wfdyWNrxKH9vfrOHK8jSCvm4Qt2IoSVcnwM6tVhdLuTn3kH_4OjR5pScetANHm1g-Bmzqw6nldsoP4fFr8="
+          "title": "bworldonline.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHTNuo8YLo8NhSBp7iYBrQ62BERC6Gb_YQWaLyW0N5OX-poHhZBkitj7Q4bLXFPSlYo4YiiHlAqz8c85ZluGD7qbCuHikpYIOfJvGwIe3cQZQHH90bytIxvwwJHEbohk256m9Y600XDcH2LR2kMeT3zRVrmUY-Oteh4K1J9c0A3IvU39tp2vHTKD6heXFhgDJiPvgnr552Lnvo5FVagVXxB0sgoGDys920="
         }
       ]
     },
     {
-      "id": "2026-11-19-sports",
+      "id": "2026-11-20-sports",
       "category": "sports",
       "categoryLabel": "Sports",
-      "headline": "Carlos Alcaraz Defeats Daniil Medvedev at the ATP Finals in Turin",
-      "summary": "Spanish tennis star Carlos Alcaraz defeated Daniil Medvedev 6-2, 6-4 on November 18 at the Nitto ATP Finals in Turin, Italy. The straight-sets victory extended Alcaraz's winning streak to 11 matches and brought him to the brink of qualifying for the tournament's semi-finals.",
-      "question": "Do you enjoy watching high-stakes tennis tournaments, and who is your favorite athlete to follow right now?",
+      "headline": "Alexander Zverev and Ben Shelton Reach ATP Finals Semifinals in Turin",
+      "summary": "Top-seeded Alexander Zverev completed an undefeated group stage at the ATP Finals in Turin by defeating Arthur Fils in straight sets on Thursday. American Ben Shelton also secured his spot in the season-ending semifinals for the first time after earning a victory over Rafael Jodar.",
+      "question": "What do you think enables tennis players to perform at their best during high-pressure year-end tournaments?",
       "coachLeads": {
-        "friendly": "Hey, have you heard about the latest action from Turin? Carlos Alcaraz just put on a fantastic performance at the ATP Finals.",
-        "energetic": "What an incredible match in Turin! Carlos Alcaraz kept his hot streak alive with a big win over Daniil Medvedev!",
-        "calm": "This is worth taking a look at if you follow tennis. Carlos Alcaraz delivered a solid straight-sets victory to move closer to the ATP Finals semi-finals.",
-        "direct": "Carlos Alcaraz defeated Daniil Medvedev 6-2, 6-4 at the ATP Finals in Turin. The victory extended his current winning streak to 11 matches."
+        "friendly": "Hey, did you hear the big news from the ATP Finals in Turin? It's definitely worth chatting about!",
+        "energetic": "Check out this huge update from the tennis world! Ben Shelton and Alexander Zverev just punched their tickets to the semifinals!",
+        "calm": "There is some notable news from the tennis tour today as the semifinal field takes shape in Turin.",
+        "direct": "Alexander Zverev and Ben Shelton have officially advanced to the ATP Finals semifinals in Turin."
       },
       "sources": [
         {
+          "title": "atptour.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHfIjksXOGSOndD41Ecg4pblqrW6iNaFOJriJSReX8KWxcSjaywAW2_5eRRIG41EP6seJszhWHSKmTGstIww_Q9_wnd2Jw_ybkS0MRlRBU_WYbC8dHUZr0NCaK959lU_Lc31fET9j-SNWPSXWDdjYH_OuQ="
+        },
+        {
           "title": "nittoatpfinals.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFWpx3TweM7bV46ha2KQtixXXJZrEVCIMdFSPbR3yzxWPB3YsAm7487QJ52jZFjlhnonqzXzeUH4zUDuXClsRa_N0mHhCf2LiIOc3SAdpByGLhymgS4VL_7yMeHrR_hNKXLHIxZSG41e2Miuf62-BQ9JBfsEfALGpb2ULeoPXPAAAiXV9vFVinYUYWT-sQ="
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFSkCRmDoDmYb3UtVmGmwnmNmVBBiwz5e0ioDcmneKsaFRvbsF3LlHqPqAdNxEigvVJp1jveexGaX8FJ3gBX1rycJWnmMzyaIlSHlJqaaKiPYvFhwF2R0wbHiviFM5-enymNi07Qi4WyH6H3g7KNLG7hrMywS7cResA"
         },
         {
-          "title": "bignewsnetwork.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF_z1mdt4Ij0aw5_5Q2apfOxXaD-CdtihufV_jiLH2tvM5yMRMyP4tTT2JbwCWl7hES3bIqTO8_ytOz6mD72JJx1-mtZxAjWXcQD9rZgpjl6QbEUKyrAO0nnl4AuauTL3sN4KX4VN4oZaLO2WYmXRpIjLQnmoQpz6QU77OAOw5eMc_pYWol0gOqIZ0lIsHPH-Or1Cqed3vYgm6QJ5gPdvCPRrR-BtlYcRJ462IP8GjLWD1ZVk5dIig="
-        },
-        {
-          "title": "olympics.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFeKNx2EbCHowlsValyGhnL-LvRN9ebRMPhIjesstn06gusPfAQUvCEjb_SG3hJSH9BrdrX37kmDrjAEfi9FV9IlkYd45X_C1bMLJ3uX0ruFMBA4VxRcYwaYoHzVdogt7kNXcfMdM3jallHUTyOcEF8cg3W13_iYUgi3B7PP_Z_lxiF2GqqAh4CVAvDPjSo0DTrO-WLzK4wgyrioY50"
+          "title": "atptour.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGz38mQrHlBd3QdhE4QAD8dCuIpV2CQeE5qplJgDjn7kn3NXrGQRjUcZ2ck7i89HG5OcaXOA9F5K2Qq0GBgyZ-45XHQUvsbP2PMk8UXTiL4QLgmPzRdbbBVnghz3Nqe-eIS14nlhtrct4QDCcGINcZTvd8SS0ci5zdHmO7Q1zIY5-4="
         }
       ]
     },
     {
-      "id": "2026-11-19-entertainment",
+      "id": "2026-11-20-entertainment",
       "category": "entertainment",
       "categoryLabel": "Entertainment",
-      "headline": "Grand Theft Auto VI Launches Worldwide After a 13-Year Wait",
-      "summary": "Rockstar Games has officially launched Grand Theft Auto VI, ending a 13-year gap since the franchise's previous entry in 2013. Industry analysts estimate the title generated over $1.5 billion in pre-orders, creating one of the largest entertainment launches in history.",
-      "question": "Why do you think certain video games or movies generate so much global excitement even after a decade-long wait?",
+      "headline": "Grand Theft Auto VI Launches Worldwide to Record Review Scores After 13-Year Wait",
+      "summary": "Rockstar Games officially released Grand Theft Auto VI worldwide on November 19, marking the franchise's first flagship entry in thirteen years. The open-world action title debuted to critical acclaim, achieving a record-tying 99 score on review aggregator Metacritic and sparking massive global excitement.",
+      "question": "What factors do you think turn a entertainment release into a massive global cultural event?",
       "coachLeads": {
-        "friendly": "Hey, have you heard about the massive video game launch happening today? It's been 13 years in the making, so I'd love to hear your thoughts on it!",
-        "energetic": "Check this out—one of the biggest entertainment releases in history just dropped today! Let's talk about why this new game is breaking global pre-order records.",
-        "calm": "A major piece of pop culture news happened today with the release of Grand Theft Auto VI after a 13-year gap. Whenever you have a moment, let me know what you think.",
-        "direct": "Grand Theft Auto VI launched worldwide today after more than a decade of development. Tell me your perspective on why releases of this scale capture so much attention."
+        "friendly": "Hey there! Have you seen the huge buzz around the release of Grand Theft Auto VI today?",
+        "energetic": "This is huge entertainment news! Grand Theft Auto VI just launched after a thirteen-year wait, and the hype is unbelievable!",
+        "calm": "After more than a decade in development, Grand Theft Auto VI has officially arrived to widespread acclaim. It is definitely worth taking a look at why this launch is making headlines everywhere.",
+        "direct": "Grand Theft Auto VI is finally out and setting major review records. Let's discuss why this release is such a big deal for global media."
       },
       "sources": [
         {
-          "title": "cnn.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE_t64Uv1aV2ZtjwMg33wgfG99IevTnaSd17yjbAMoya-rkIjQTbYsuUxnuz3JS7qbEgPeRT892GQ7m1JtY7DIe_CWkA0Q16cmCK5tKHvvps6HJVGY9YjZ_877yeChKACfZaERAj6ANRcmyvw3MztLO1zKcHCVPKm70bBLLCXHJoiN6"
-        },
-        {
-          "title": "news4jax.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGsWPeIPdB32o_HSw065YlS7WxVU-4LbHHbFt_uNWSc-LmDvHn2OMisEszazEsSbaij0sD7PYMlIyCGrNm0B1sSaN1QATT9NNroNUnX-R9uwcZ_ZkH_iTk_Ehov6bEloBo79P4CwEpJUGfjBy6y64yRN8VUirk2qQokcMgSpgCrcEpy1c6xRwJuXoY-WUWfLY8r6_4Q2iGJW5xI6HfqUxcDAxL7BAFwDV82Fk8imyKVVhhvRUeP-M8IhQ=="
-        },
-        {
-          "title": "forbes.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGGN0UN0jykROWo6TUbrY-m7rVFiMBG_WaXLCTZyJYzQHw1p8uZLkyI0WBDdBFcb8-OXzzzqkqFt5vJtL7RgjpQcayKWJMOLHuNQLMMg14u3_yOKxsQmjNOYgFleasDkPNJ5SyYYTh9mvkjkgOZfm9rsSqdDOCgEtGHmzIApNyfmeU5sw6152xZjE2_lxtEVeKGRYvwhSlS-UrokeTjZa7rEl_2OjJXGtZRFbuI2puUe6n0YBkTaKRwuKMHIA=="
+          "title": "Google News: Entertainment",
+          "url": "https://news.google.com/search?q=Entertainment%20top%20news%202026-11-20&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     }
