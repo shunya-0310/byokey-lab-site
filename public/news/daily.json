@@ -1,104 +1,100 @@
 {
   "schemaVersion": 1,
   "status": "live",
-  "date": "2026-11-20",
-  "generatedAt": "2026-11-20T02:19:09.654Z",
+  "date": "2026-11-21",
+  "generatedAt": "2026-11-21T02:15:30.664Z",
   "model": "gemini-3.6-flash",
   "fallbackCategories": [],
   "items": [
     {
-      "id": "2026-11-20-politics_economy",
+      "id": "2026-11-21-politics_economy",
       "category": "politics_economy",
       "categoryLabel": "Politics & Economy",
-      "headline": "Trump, Xi, and Putin Hold Historic Trilateral Summit in China",
-      "summary": "U.S. President Donald Trump, Chinese President Xi Jinping, and Russian President Vladimir Putin held their first-ever joint trilateral summit in Shenzhen on Thursday. The three leaders signed a global declaration addressing nuclear risk reduction, energy security, and international cooperation.",
-      "question": "What impact do you think direct diplomatic talks between major world powers have on global stability?",
+      "headline": "US Enacts Common Cents Act to End Penny Production",
+      "summary": "On November 20, 2026, the United States officially signed the Common Cents Act into law, halting the production of the penny for general circulation. The legislation establishes federal guidance allowing businesses to round cash transactions to the nearest nickel while keeping existing pennies as legal tender.",
+      "question": "What are your thoughts on countries phasing out low-value coins, and how often do you still use physical cash?",
       "coachLeads": {
-        "friendly": "Hey, have you heard about the big meeting between world leaders in China? It's making headlines everywhere today.",
-        "energetic": "Check this out! The leaders of the U.S., China, and Russia just held an unprecedented summit together!",
-        "calm": "There was a major diplomatic event as the leaders of three top world powers met face-to-face. This is worth talking about when you have a moment.",
-        "direct": "The leaders of the U.S., China, and Russia just concluded their first-ever three-way summit. Let's look at what they discussed."
+        "friendly": "Hey, have you heard that the U.S. is officially stopping the production of pennies? It is a great moment to chat about how our daily payment habits are changing.",
+        "energetic": "Check this out! The penny is officially being phased out in the U.S. following a brand-new law! I would love to hear your take on going coinless!",
+        "calm": "There was a notable policy update in the United States today regarding physical currency. The government officially enacted a law to discontinue minting pennies for general circulation.",
+        "direct": "The U.S. signed the Common Cents Act today, ending penny production and introducing cash-rounding rules. Let's discuss whether small coins are still useful in today's economy."
       },
       "sources": [
         {
-          "title": "www.gov.cn",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG4JuIVPI2_JXoJtdI1bdsNvEnuVC7uUYQLijLYo0xBpB2A7n58Fv3HMM50xjvsTWvY4SA9Kz0ow59m51qylPEgZikbgtXvCfffTS6aBAHXxyjeEtgdAKRCTmhojJQYwPqJWG8yq7V6pjc196mBeX9D8bhUsn81WWu5EQtB6MHuYQB8C4tft0Y="
-        },
-        {
-          "title": "antigojournal.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFDTW2Gc3V08UhEfXuyH6QXFjEdJAR6EL-WrODiD1W07zodgeDCJRQTENv_OUSzIaHRXuGTBa8Nb_KF7NmZcXneVIdmHJVJi0IFzSPNqoNTZVdYrT-01-7txXJIIi3pRsMhT7FJdQQ40VD7tT09jsgYJOK0yOO6PsptHlznfZgn0uB5qcuDl-ZvKjnz5w-3GsDPfe0EyJS27l7Gav3nGcaJoXpsyE7yO2NS-_a-mZFSLR9GVVs="
+          "title": "Google News: Politics & Economy",
+          "url": "https://news.google.com/search?q=Politics%20%26%20Economy%20top%20news%202026-11-21&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     },
     {
-      "id": "2026-11-20-technology",
+      "id": "2026-11-21-technology",
       "category": "technology",
       "categoryLabel": "Technology",
-      "headline": "Anthropic Makes Wall Street History as First Frontier AI Developer to Go Public",
-      "summary": "AI developer Anthropic officially began trading on the Nasdaq exchange on November 19, making history as the first frontier artificial intelligence company to go public. The landmark debut saw shares open well above the initial offering price before paring gains, serving as a major test of Wall Street's long-term faith in the AI boom.",
-      "question": "How do you think going public might change the way AI companies balance commercial profit with technology safety?",
+      "headline": "Global Tech Stocks Plunge as Anthropic IPO Fails to Calm AI Market Fears",
+      "summary": "On November 20, 2026, global technology stocks suffered a severe sell-off that dragged the Nasdaq Composite down over five percent and erased its annual gains. The market slide deepened even as AI firm Anthropic completed its landmark public debut, highlighting growing investor skepticism about heavy artificial intelligence spending.",
+      "question": "Do you think the massive financial investments in artificial intelligence will ultimately pay off for the global economy?",
       "coachLeads": {
-        "friendly": "Hey, have you heard about Anthropic's big debut on the stock market? It is a really interesting story to chat about today!",
-        "energetic": "Anthropic just made Wall Street history with its massive public debut! Are you ready to dive into what this means for the tech world?",
-        "calm": "Anthropic officially began trading on the Nasdaq, marking a historic milestone for artificial intelligence. Let's take a look at why this financial story is so important.",
-        "direct": "Anthropic launched its historic stock market debut yesterday. Let's discuss how this landmark event could shape the future of the AI industry."
+        "friendly": "Hey, have you caught the latest news about the big shakeup in the tech world today?",
+        "energetic": "Check this out! Tech stocks just took a massive dive despite one of the biggest AI debuts of the year!",
+        "calm": "Here is a significant development in the global technology market worth reflecting on today.",
+        "direct": "Let's dive straight into today's top story about the global tech stock sell-off."
       },
       "sources": [
         {
-          "title": "aiweekly.co",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFD5opo6ltRL9fLzqkXKaXFFIPRn-3t-gmOATdwOwBV9SCxaE4EvGHyrhX8grC9zrSQqQMPEPfNfaAVW6fNvANI3lHIccYLC-qltQ2Fd7otZvxEGXyM0gT1gBR85RCAh0Mxq2M0NM6GRH_i"
+          "title": "cnn.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFcmGWr1DIb0I2lhDLrv388TG13L_7WhNjE-wqV1QnYYIW80oBoBwAShOgRJWKOHAxRSbpLJj8feAjwipJDWlkuq8VTuyYv1eA3iis52Ta4UxlkNKHKwY6bf9m2mOTzcpz3lpBHls-iJFT5al0AjXE0ZIlV004="
         },
         {
-          "title": "bworldonline.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHTNuo8YLo8NhSBp7iYBrQ62BERC6Gb_YQWaLyW0N5OX-poHhZBkitj7Q4bLXFPSlYo4YiiHlAqz8c85ZluGD7qbCuHikpYIOfJvGwIe3cQZQHH90bytIxvwwJHEbohk256m9Y600XDcH2LR2kMeT3zRVrmUY-Oteh4K1J9c0A3IvU39tp2vHTKD6heXFhgDJiPvgnr552Lnvo5FVagVXxB0sgoGDys920="
+          "title": "taipeitimes.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGtzE0Z8Gb_l-GD3_s9NW-x9BYZke45hKJt21FcF4tNTKwC7IWr4-gn1JwwDz4L5msSmQxccIJNdS3j2vA9dyYRl1NQ5Jdzk7vsOhFInvq6EOWg6i2McFd4Jiv1wztOuK3SfI3jZ6FWy9Hp9PljfKOr7byp3ezYpjec39U="
         }
       ]
     },
     {
-      "id": "2026-11-20-sports",
+      "id": "2026-11-21-sports",
       "category": "sports",
       "categoryLabel": "Sports",
-      "headline": "Alexander Zverev and Ben Shelton Reach ATP Finals Semifinals in Turin",
-      "summary": "Top-seeded Alexander Zverev completed an undefeated group stage at the ATP Finals in Turin by defeating Arthur Fils in straight sets on Thursday. American Ben Shelton also secured his spot in the season-ending semifinals for the first time after earning a victory over Rafael Jodar.",
-      "question": "What do you think enables tennis players to perform at their best during high-pressure year-end tournaments?",
+      "headline": "A Lim Kim Hits Ace to Lead LPGA Season Finale as Nelly Korda Stays in Hunt",
+      "summary": "South Korea's A Lim Kim fired an eight-under-par 64, featuring a hole-in-one on the 16th hole, to take a three-shot lead after Friday's second round at the CME Group Tour Championship in Florida. World No. 1 Nelly Korda shot a 67 to stay three strokes back in pursuit of the tournament's $4 million winner's payout and a potential LPGA Hall of Fame berth.",
+      "question": "What do you think makes pressure-packed season finales in sports so exciting to watch?",
       "coachLeads": {
-        "friendly": "Hey, did you hear the big news from the ATP Finals in Turin? It's definitely worth chatting about!",
-        "energetic": "Check out this huge update from the tennis world! Ben Shelton and Alexander Zverev just punched their tickets to the semifinals!",
-        "calm": "There is some notable news from the tennis tour today as the semifinal field takes shape in Turin.",
-        "direct": "Alexander Zverev and Ben Shelton have officially advanced to the ATP Finals semifinals in Turin."
+        "friendly": "Hey there! Are you following the LPGA season finale this weekend?",
+        "energetic": "Did you see that incredible hole-in-one by A Lim Kim at the LPGA Tour Championship? It completely lit up the leaderboard!",
+        "calm": "Let me bring you up to speed on the LPGA season finale in Florida, where the world's top golfers are facing high stakes.",
+        "direct": "A Lim Kim seized the lead at the LPGA Tour Championship with a hole-in-one, but Nelly Korda remains right behind her."
       },
       "sources": [
         {
-          "title": "atptour.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHfIjksXOGSOndD41Ecg4pblqrW6iNaFOJriJSReX8KWxcSjaywAW2_5eRRIG41EP6seJszhWHSKmTGstIww_Q9_wnd2Jw_ybkS0MRlRBU_WYbC8dHUZr0NCaK959lU_Lc31fET9j-SNWPSXWDdjYH_OuQ="
+          "title": "cmegrouptourchampionship.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFgtqj1d9yNITr17Dbsfl8Q_DCVNEOrwcCU1Ocd9D7ed_jC7X-R5QYJk4-nMnQGU5uhSEtfVAU9ptU4DHisPPL8Ange-c9DGkd8OuaJQOBIjfa7IIIp71WOucW3omIQQQ=="
         },
         {
-          "title": "nittoatpfinals.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFSkCRmDoDmYb3UtVmGmwnmNmVBBiwz5e0ioDcmneKsaFRvbsF3LlHqPqAdNxEigvVJp1jveexGaX8FJ3gBX1rycJWnmMzyaIlSHlJqaaKiPYvFhwF2R0wbHiviFM5-enymNi07Qi4WyH6H3g7KNLG7hrMywS7cResA"
+          "title": "lpga.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFiLRDjj0bdATO6yxT2DGjr4bVKjdHoI2CV96SmZ2HY49WvGyL7GfIDkw2GWpcQnp6dKvnG2MnNlYcUlWjuQrQKfDCRDrY6sunf4cO9K07DavhUtWXXmGP_Pcx7iNlTt3vbKIGs9qr8xGC1rFtJmBvYdPSlFRL-pSI9qYEcoYPXVrI3X4AHwHjI6S0BXoRufCABVQPXWGEeWCPgOsKtOD9WY7t-9eoXt5EYWTQoYEawHf9dRA=="
         },
         {
-          "title": "atptour.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGz38mQrHlBd3QdhE4QAD8dCuIpV2CQeE5qplJgDjn7kn3NXrGQRjUcZ2ck7i89HG5OcaXOA9F5K2Qq0GBgyZ-45XHQUvsbP2PMk8UXTiL4QLgmPzRdbbBVnghz3Nqe-eIS14nlhtrct4QDCcGINcZTvd8SS0ci5zdHmO7Q1zIY5-4="
+          "title": "cmegrouptourchampionship.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHP9y3qDY0Jo1abAxjHWLp7Q3ePyXguoRxDyzlC6ZeSHD-vOWQwdmC9F83npvycs4kuTtx-AN2stOSZAC18ogo3oWtn044v8iWBG1RRABMU8Q1vlj2yJADukDys9t4BdW8Xatj-kcBPsEPgDgqDJpoqdR7wznyKfcRZRDZEeMDCO1EZVfvgprV3hbWlZcx5uO_B6GybU2fTzoA="
         }
       ]
     },
     {
-      "id": "2026-11-20-entertainment",
+      "id": "2026-11-21-entertainment",
       "category": "entertainment",
       "categoryLabel": "Entertainment",
-      "headline": "Grand Theft Auto VI Launches Worldwide to Record Review Scores After 13-Year Wait",
-      "summary": "Rockstar Games officially released Grand Theft Auto VI worldwide on November 19, marking the franchise's first flagship entry in thirteen years. The open-world action title debuted to critical acclaim, achieving a record-tying 99 score on review aggregator Metacritic and sparking massive global excitement.",
-      "question": "What factors do you think turn a entertainment release into a massive global cultural event?",
+      "headline": "Grand Theft Auto VI Sets Entertainment Record With $3.79 Billion in Day-One Sales",
+      "summary": "Rockstar Games announced that Grand Theft Auto VI generated $3.79 billion in retail sales on its first day, driven by more than 32 million pre-ordered copies. The historic opening makes the title the highest-grossing debut across all entertainment media in history.",
+      "question": "Why do you think video games are now outgrossing major Hollywood films and music releases?",
       "coachLeads": {
-        "friendly": "Hey there! Have you seen the huge buzz around the release of Grand Theft Auto VI today?",
-        "energetic": "This is huge entertainment news! Grand Theft Auto VI just launched after a thirteen-year wait, and the hype is unbelievable!",
-        "calm": "After more than a decade in development, Grand Theft Auto VI has officially arrived to widespread acclaim. It is definitely worth taking a look at why this launch is making headlines everywhere.",
-        "direct": "Grand Theft Auto VI is finally out and setting major review records. Let's discuss why this release is such a big deal for global media."
+        "friendly": "Hey, have you seen the huge news about the new Grand Theft Auto game today? It is breaking all kinds of entertainment records!",
+        "energetic": "Grand Theft Auto VI just made history with a unbelievable launch! You won't believe how much money it brought in on day one!",
+        "calm": "A major milestone in global entertainment unfolded today with the release of Grand Theft Auto VI. Let's take a look at the impressive numbers behind its launch.",
+        "direct": "Grand Theft Auto VI officially set the record for the biggest entertainment launch ever. Let me know what you think about this huge release."
       },
       "sources": [
         {
           "title": "Google News: Entertainment",
-          "url": "https://news.google.com/search?q=Entertainment%20top%20news%202026-11-20&hl=en-US&gl=US&ceid=US:en"
+          "url": "https://news.google.com/search?q=Entertainment%20top%20news%202026-11-21&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     }
