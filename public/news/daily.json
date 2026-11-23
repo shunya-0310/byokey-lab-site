@@ -1,100 +1,100 @@
 {
   "schemaVersion": 1,
   "status": "live",
-  "date": "2026-11-22",
-  "generatedAt": "2026-11-22T01:19:33.212Z",
+  "date": "2026-11-23",
+  "generatedAt": "2026-11-23T01:43:35.593Z",
   "model": "gemini-3.6-flash",
   "fallbackCategories": [],
   "items": [
     {
-      "id": "2026-11-22-politics_economy",
+      "id": "2026-11-23-politics_economy",
       "category": "politics_economy",
       "categoryLabel": "Politics & Economy",
-      "headline": "COP31 Climate Summit Extended in Turkey Over Fossil Fuel Impasse",
-      "summary": "The COP31 UN climate summit in Antalya, Turkey, went into overtime after delegates failed to reach an agreement before the scheduled deadline. Negotiators are holding extended talks to bridge deep divisions between nations pushing to phase out fossil fuels and oil-producing states resisting those terms.",
-      "question": "What do you think is the biggest obstacle world leaders face when trying to reach global agreements on climate policy?",
+      "headline": "UN Climate Summit Collapses in Turkey Without Global Accord",
+      "summary": "The COP31 climate negotiations in Antalya, Turkey, ended on Sunday after extended talks failed to produce a consensus agreement. Key delegations rejected the proposed final draft due to disagreements over fossil fuel phase-outs, marking a rare complete breakdown of the annual UN climate summit.",
+      "question": "What steps do you think international leaders should take when global consensus on major issues fails to materialize?",
       "coachLeads": {
-        "friendly": "Hey, have you seen the news about the international climate talks today? It is a really interesting story worth discussing.",
-        "energetic": "This is a major story breaking right now! World leaders are locked in overtime negotiations at the COP31 climate summit!",
-        "calm": "There is a notable diplomatic development today as the global climate summit ran past its official deadline without a final deal.",
-        "direct": "The UN climate summit in Turkey just went into overtime after failing to reach a deal on fossil fuels. Let's discuss what this means."
+        "friendly": "Hey there! Have you heard about the big UN climate summit in Turkey ending without a deal? It's a really interesting story to talk through together.",
+        "energetic": "Did you see the latest breaking news? Global negotiators in Turkey just walked away from COP31 without an agreement, and it's sparking huge debates worldwide!",
+        "calm": "A major international climate summit recently concluded without reaching a final agreement. Let's examine what happened and share our thoughts on it.",
+        "direct": "The UN climate talks in Turkey have officially collapsed after failing to reach a deal. Let's discuss why this happened and what it means for future diplomacy."
       },
       "sources": [
         {
-          "title": "Google News: Politics & Economy",
-          "url": "https://news.google.com/search?q=Politics%20%26%20Economy%20top%20news%202026-11-22&hl=en-US&gl=US&ceid=US:en"
-        }
-      ]
-    },
-    {
-      "id": "2026-11-22-technology",
-      "category": "technology",
-      "categoryLabel": "Technology",
-      "headline": "Independent Groups Verify Claim That AI Helped Prove the Riemann Hypothesis",
-      "summary": "On November 21, two independent organizations verified a claim by an Anthropic mathematician that the AI model Claude assisted him in proving the 167-year-old Riemann hypothesis. The verification represents a landmark milestone in using artificial intelligence to solve complex, long-unsolved scientific problems.",
-      "question": "How do you feel about artificial intelligence helping humans solve long-standing scientific and mathematical mysteries?",
-      "coachLeads": {
-        "friendly": "Hey, have you heard about this major AI breakthrough? A mathematician used AI to help solve a math problem that has been open for over 160 years.",
-        "energetic": "This is incredible news in the technology world! Researchers just confirmed that an AI model helped crack one of history's most famous unsolved math problems!",
-        "calm": "This development is definitely worth reflecting on. Experts have now verified that AI assisted in generating a proof for a legendary mathematical hypothesis.",
-        "direct": "Independent groups just verified that an AI tool helped solve the Riemann hypothesis. Let's discuss what this means for the future."
-      },
-      "sources": [
-        {
-          "title": "theguardian.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG-39a44YsST_2Z1dub4pZHQbrOK90eVzQtX-VTJr_XEwucR3PZK4jbd4coZ4beXLb5DyYR0GFD7pU3vS2S-uRmHEd0_n0ybvpxEklhqA3EmZu27tehbJ8eUf0ExMiAcaTqNOrDyj4vPhzqVa0wm6S4-_vZV4tft0X8hourT8hMeeyvDfbTBclo4M0poPWMb8Pu6Q1L9YY="
-        }
-      ]
-    },
-    {
-      "id": "2026-11-22-sports",
-      "category": "sports",
-      "categoryLabel": "Sports",
-      "headline": "Tyler Herro Scores Career-High 50 Points in Heartbreaking Bucks Loss to 76ers",
-      "summary": "Milwaukee Bucks guard Tyler Herro scored a career-high 50 points on Saturday, but his potential game-tying three-pointer at the final horn was ruled to have been released just after the buzzer. The Philadelphia 76ers held on for a 132-129 victory, overshadowing Herro's historic night as he became the first NBA player to record 50 points, 11 rebounds, seven three-pointers, and 65% shooting in a single game.",
-      "question": "How would you handle the frustration of delivering a career-best individual performance only to fall just short of a team victory?",
-      "coachLeads": {
-        "friendly": "Hey, have you caught up on the latest NBA news yet? Tyler Herro had an unbelievable 50-point game that ended in the most dramatic way possible.",
-        "energetic": "You have to check out the finish to Saturday's Bucks-76ers game! Tyler Herro dropped a career-high 50 points and almost pulled off an incredible buzzer-beater!",
-        "calm": "There was a really compelling sports story yesterday that is worth discussing. A player delivered a historic individual performance, but a fraction of a second cost his team the game.",
-        "direct": "Here is a front-page story worth taking a look at today. Tyler Herro put up 50 points in the NBA, but a disallowed buzzer-beater left his team with a narrow loss."
-      },
-      "sources": [
-        {
-          "title": "washingtonpost.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFrSD--fsVHk3DpcOxp5o-Dxlg-b8Gh7N1QZpUiNwqN5nHrVs4GtgNCCv6Qymtz_rR-EjLPCP7jBoXs9CQ848Gn7FWcYflg76XpcjmeG68n3TFydUSJB7X7LHCWXauos6NzYJDxjhGk0kq6FXgraltZhSSMxux14k6w3XDAGyO55_TTBaQE1rLN49F6QG-9tLrKGbQYZeSeo8oPqgqWofb2D1gEi4t-wLDS3fLnxTlmQA2KYW_4whrKyg=="
+          "title": "news.cn",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEF6_iB86rGXMoVhph363RTqP1eAbzLYmz4Gmlh8xkafUn0ccLaXMY12W_srqmfm_resnGh4-Yc9tuQTVitpHVcks0temDRFI3YPYhejF-6WRk7U9lPGGhPBQyjQyAMdtmUt5Rt1j5FGgZCkT2I2jB62o5RclyE9jp8ziJT7Uk="
         },
-        {
-          "title": "thescore790.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGyGXq_QP4OxyoRXAKpSw63p13eWxYO2fCeQspNasBGLQZ0eWzXkG_6kMRkjvwBDTtXwWZ7d05751frxsuCqPTKFPASNiCz0IJGXvADXaN7PyuoIlsZtGFiEPLqgdb9FmVS3giM2KsT0OJcA56U1vT0q4uINivePH-XrEJcvkj2uZJrcG-MGTnOIYU8v0QfFT27xIjzD3nvjk3N3W9eEq0="
-        },
-        {
-          "title": "si.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE19xZziK0YbN8uW3WxHwFQ607hjHdvmd-0zZ6CiQO3J4dk70itqdrLE5iAjkdimD2V4x3DLpUCRLjYTGE7bQ7b3nKwlCQPjyD_PPFFqoea844_Kn0twSsLjj3speL7-HYfFin57KTzwFna9zoHtYyJayqEZ-Cpkc1zq8Q35U3OZ19b1OwAFYY3-ebCNLg_HRRohjf-9OAE1GxqFvXnpkt1t1bmux7FSNmm1SqbpliMbA=="
-        }
-      ]
-    },
-    {
-      "id": "2026-11-22-entertainment",
-      "category": "entertainment",
-      "categoryLabel": "Entertainment",
-      "headline": "Grand Theft Auto VI Sets Entertainment Record With $3.79 Billion First-Day Sales",
-      "summary": "Rockstar Games announced that Grand Theft Auto VI generated $3.79 billion in worldwide retail sales on its first day, making it the largest launch for any entertainment product in history. The video game sold over 32 million copies prior to release and surpassed the total lifetime box office earnings of major Hollywood blockbusters in just 24 hours.",
-      "question": "Why do you think video games are now able to generate higher launch revenue than major Hollywood movies?",
-      "coachLeads": {
-        "friendly": "Hey, did you catch the news about the new Grand Theft Auto game breaking huge sales records?",
-        "energetic": "You won't believe how big this story is—GTA VI just made nearly four billion dollars in a single day!",
-        "calm": "A major financial milestone was reached in the entertainment industry this weekend that is worth looking into.",
-        "direct": "Grand Theft Auto VI officially had the biggest entertainment launch in history, so let's discuss why that matters."
-      },
-      "sources": [
         {
           "title": "taipeitimes.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEOv3u9EKp11j5qLPNhVZPz8l0VXEyXdEccCtTL9YO_5_FcpHKBChWhTw9BOXOBixraQkW4foNC3ElX-0L9hltXDeYM_xUj7Bas55Xv7S3M9eSIF9FAb3EzOgYw8SrEcC4jIaVlTK2SUjAtKiUStHLzB-sTBbqbQ6BN7Q=="
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEPaGvTuT2Cfk858KGKnmCK_hVFuma3bCP_K-pY7jTbtYsfET6YtLqGXEQevKzxYaYytlESh3gsXWzf4YmRxpCSEMoD5ET3yp5bTR8gsOG5YASLePV3COPkPKisuK0v6OwsbVAUsQq5pXItWedLCby6DArXBztraKqm6H8="
+        }
+      ]
+    },
+    {
+      "id": "2026-11-23-technology",
+      "category": "technology",
+      "categoryLabel": "Technology",
+      "headline": "US Intelligence Chief Warns of Continued Tech Outages During Critical Infrastructure Upgrades",
+      "summary": "Top United States intelligence officials announced that ongoing upgrades to aging digital infrastructure will lead to temporary service disruptions across essential public and private networks. The warning comes immediately after a recent series of high-profile technology failures affected commercial airlines, banking systems, and government operations.",
+      "question": "How dependent are you on digital services in your daily routine, and how do you usually deal with unexpected technology disruptions?",
+      "coachLeads": {
+        "friendly": "Hey there! Did you hear about the government warning regarding all these recent tech outages?",
+        "energetic": "Check this out! We are facing a massive wave of technology upgrades, and it is going to impact everyday digital tools!",
+        "calm": "It seems we can expect a few more digital hiccups as major computer networks undergo essential upgrades. It is a good time to reflect on how we handle these interruptions.",
+        "direct": "US intelligence officials just announced that tech outages will continue as aging infrastructure gets updated. Let's get right into discussing this topic."
+      },
+      "sources": [
+        {
+          "title": "Google News: Technology",
+          "url": "https://news.google.com/search?q=Technology%20top%20news%202026-11-23&hl=en-US&gl=US&ceid=US:en"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-23-sports",
+      "category": "sports",
+      "categoryLabel": "Sports",
+      "headline": "Max Verstappen Wins Thrilling Las Vegas Grand Prix After 35 Lead Changes",
+      "summary": "Red Bull driver Max Verstappen won the Formula 1 Las Vegas Grand Prix on Sunday, holding off McLaren's Lando Norris and Oscar Piastri in an intense race featuring 35 lead changes. The dramatic victory marks Verstappen's third win in Las Vegas over the last four years as the motorsport season approaches its conclusion.",
+      "question": "What do you think makes a high-stakes motor race exciting or fun to watch?",
+      "coachLeads": {
+        "friendly": "Hey, did you catch the wild Formula 1 race in Las Vegas over the weekend?",
+        "energetic": "You won't believe how crazy the Las Vegas Grand Prix was with 35 lead changes!",
+        "calm": "There was some impressive racing action in Las Vegas this weekend that is worth taking a look at.",
+        "direct": "Max Verstappen just took first place in a high-intensity Las Vegas Grand Prix."
+      },
+      "sources": [
+        {
+          "title": "Google News: Sports",
+          "url": "https://news.google.com/search?q=Sports%20top%20news%202026-11-23&hl=en-US&gl=US&ceid=US:en"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-23-entertainment",
+      "category": "entertainment",
+      "categoryLabel": "Entertainment",
+      "headline": "\"The Hunger Games: Sunrise on the Reaping\" Dominates Box Office with $225 Million Global Debut",
+      "summary": "Lionsgate's \"The Hunger Games: Sunrise on the Reaping\" dominated the weekend box office with an estimated $120 million North American debut and $225 million worldwide. The impressive performance makes it one of the largest film launches of 2026 and revitalizes the iconic dystopian franchise in theaters.",
+      "question": "What factors do you think drive audiences to keep returning to long-running film franchises like The Hunger Games?",
+      "coachLeads": {
+        "friendly": "Hey there! The new Hunger Games prequel just crushed the box office this weekend. Have you been following the series?",
+        "energetic": "The Hunger Games is back in a huge way! It just pulled in $225 million worldwide in its opening weekend!",
+        "calm": "The latest Hunger Games film had a massive debut at the box office this weekend. It makes for an interesting topic if you enjoy movies and pop culture.",
+        "direct": "The new Hunger Games prequel topped the global box office with a $120 million domestic opening. Let me know what you think about big franchise releases like this."
+      },
+      "sources": [
+        {
+          "title": "forbes.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF7kjxKfWyFaikHF5igVRjZXHuxcoQst5bE7mToJ6R6jEzU87cUXoie7_m6IxFlh51Z9hpjyvqXnN3kA4aoi5soMnzw8RSdK3BJJg3ObsIgg1As16QsL9LXzYT4gL7T7TPyw5eV0Jnf81pNR0ZlGz31HHo1fHl0I5M970lCIxLFw0iWuIqT63tKLzsgESPUn2E0Vj28a4QFe28sqNEmtCWwR_2Nq46SWkkE8P7kQw9nXYqsq9RoVt3zfOxMReDeU3OfD91xNDyEjbE="
         },
         {
-          "title": "theguardian.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGVC8xRknNjEYKOcNX2da0R5_pXhhCm6F6zlj1S0butT9DEPKPyq6zZAcTWIf4z16U4CAx2yeaaO4_wdasuocu-ojGPJuzvsNpBi-sCq4v_FPa8d7EbNfwzUJ6RNWi4OUkFnQRJV9V2cqzYrKqaZpCzD8NE6Fy9kzolDSA4JLVohvR6KFUNDf9fzgGVFwZDcO-LEfSxvNVP5h-JM1TP-7uv_vWz9NHA6aE4VPwz7-RKoGI-ns-rlSbTGHyxz3m1DvwD5vWlWYvinvit21s="
+          "title": "mediaplaynews.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEtD4qGNJrL5ZGpoUOJ0zvpdpj5yQdShH4e9KIRjmNsCFdMEGvWhm5UIlRJlAYWDilwaDnHWx2boD47sgApjVUquk-KwnJBcvfrhhr7kLKEVUruWR56ls_SWxMwYU3xAIz4WGvDq38rcIncaI_TAgR8XA6lcWzDEBE03IF4O2o9Yh5g3HY8rGb3iFV0hgGFYr2ym4tEROPn8zHqv5a3-0jq8CNY0sDxopWabsJ7-cLYWKgc5b3SgvqyThFPVg=="
+        },
+        {
+          "title": "the-independent.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFGv3Mm-dDMgJnIbzTtrf2cHWSUVU2qCr07IIyf7Heq9jo1iBQ1abeFICgKRsPHvm1y96qSeba7vmgrvb3-8GBEHG_e_y4kjLH3_ViMKcyWGAd1Fc4Z58oK8DVLm8lYF9fDk7G1pqt1DqUODWOxl_Y8FGaGHfJkFdRVkV1RwS7gbuhCMVGM38eq49wVeuRqdZKt3BaCZNlC0tQVmRKseJhEQxQyxMN2sytXsBU5"
         }
       ]
     }
