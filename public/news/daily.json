@@ -1,100 +1,100 @@
 {
   "schemaVersion": 1,
   "status": "live",
-  "date": "2026-11-23",
-  "generatedAt": "2026-11-23T01:43:35.593Z",
+  "date": "2026-11-24",
+  "generatedAt": "2026-11-24T05:19:05.304Z",
   "model": "gemini-3.6-flash",
   "fallbackCategories": [],
   "items": [
     {
-      "id": "2026-11-23-politics_economy",
+      "id": "2026-11-24-politics_economy",
       "category": "politics_economy",
       "categoryLabel": "Politics & Economy",
-      "headline": "UN Climate Summit Collapses in Turkey Without Global Accord",
-      "summary": "The COP31 climate negotiations in Antalya, Turkey, ended on Sunday after extended talks failed to produce a consensus agreement. Key delegations rejected the proposed final draft due to disagreements over fossil fuel phase-outs, marking a rare complete breakdown of the annual UN climate summit.",
-      "question": "What steps do you think international leaders should take when global consensus on major issues fails to materialize?",
+      "headline": "UN COP31 Climate Talks Collapse in Turkey Without Final Agreement",
+      "summary": "The United Nations COP31 climate summit in Antalya, Turkey, concluded without participating nations reaching a final agreement. This marks the first failure of a UN climate conference to reach a consensus in seventeen years, signaling growing political and economic friction over global energy policies.",
+      "question": "What measures do you think international diplomats could take to restore cooperation and rebuild trust in global climate negotiations?",
       "coachLeads": {
-        "friendly": "Hey there! Have you heard about the big UN climate summit in Turkey ending without a deal? It's a really interesting story to talk through together.",
-        "energetic": "Did you see the latest breaking news? Global negotiators in Turkey just walked away from COP31 without an agreement, and it's sparking huge debates worldwide!",
-        "calm": "A major international climate summit recently concluded without reaching a final agreement. Let's examine what happened and share our thoughts on it.",
-        "direct": "The UN climate talks in Turkey have officially collapsed after failing to reach a deal. Let's discuss why this happened and what it means for future diplomacy."
+        "friendly": "Hey, have you heard about what happened at the latest UN climate summit in Turkey? It's a really significant story, and I'd love to hear your thoughts on it.",
+        "energetic": "Did you see the big breaking news from the COP31 climate conference today? It's making major front-page headlines all over the world!",
+        "calm": "The international climate negotiations in Turkey concluded today without reaching a consensus deal. Take a look at the details whenever you're ready to chat.",
+        "direct": "The COP31 climate summit ended without an agreement today. Let's discuss what this breakdown means for future global policy."
       },
       "sources": [
         {
-          "title": "news.cn",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEF6_iB86rGXMoVhph363RTqP1eAbzLYmz4Gmlh8xkafUn0ccLaXMY12W_srqmfm_resnGh4-Yc9tuQTVitpHVcks0temDRFI3YPYhejF-6WRk7U9lPGGhPBQyjQyAMdtmUt5Rt1j5FGgZCkT2I2jB62o5RclyE9jp8ziJT7Uk="
+          "title": "atlanticcouncil.org",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGPKSLMO9ujVu4NeWzNwtQTwqWJZDQHGK-Q3HhyFBtYoALrhmFt5Do6e-5IouEiJFxwM_EQlJXVOoz9EIA9to9pyLPHWfCtyEPXum74x4EWGsYFtWoeMJ6Fqw4YAfDYxo1qIr2juso-NnKgpDJ2B62z1FKPse0tYXo8TE_dg7iEqRNX-MmnWOuKGJOUs3-_iP4w3iYU2zSbJVGWZQ=="
         },
         {
-          "title": "taipeitimes.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEPaGvTuT2Cfk858KGKnmCK_hVFuma3bCP_K-pY7jTbtYsfET6YtLqGXEQevKzxYaYytlESh3gsXWzf4YmRxpCSEMoD5ET3yp5bTR8gsOG5YASLePV3COPkPKisuK0v6OwsbVAUsQq5pXItWedLCby6DArXBztraKqm6H8="
+          "title": "kathmandupost.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF4nIXBxJQz_uXu2K3yRtXtJJdUU2ma6feldLM9v8doQAvVoLZuHb2y_YnZVG8YKyZTfqhcDp60traGntlJsR4bPGEhSEuV-fLi520PnwvTseYR_J1Ht-XpEM9y06V8wFApcrcEeO4gwrjMsRJEwpydsBX79-cMOdTpzVqKMiF-lwaluewLW4aYFvEb9MfjGQ69NL6MjQ=="
         }
       ]
     },
     {
-      "id": "2026-11-23-technology",
+      "id": "2026-11-24-technology",
       "category": "technology",
       "categoryLabel": "Technology",
-      "headline": "US Intelligence Chief Warns of Continued Tech Outages During Critical Infrastructure Upgrades",
-      "summary": "Top United States intelligence officials announced that ongoing upgrades to aging digital infrastructure will lead to temporary service disruptions across essential public and private networks. The warning comes immediately after a recent series of high-profile technology failures affected commercial airlines, banking systems, and government operations.",
-      "question": "How dependent are you on digital services in your daily routine, and how do you usually deal with unexpected technology disruptions?",
+      "headline": "Cybersecurity Giant CrowdStrike Agrees to Acquire Zscaler in $43.9 Billion Deal",
+      "summary": "Cybersecurity firm CrowdStrike announced an agreement to acquire cloud security provider Zscaler in an all-stock transaction valued at $43.9 billion. The landmark deal stands among the largest acquisitions in cybersecurity history, aiming to unify endpoint protection with network security to safeguard emerging AI infrastructure.",
+      "question": "How do you think mega-mergers between major technology companies will impact the future of online safety and digital privacy?",
       "coachLeads": {
-        "friendly": "Hey there! Did you hear about the government warning regarding all these recent tech outages?",
-        "energetic": "Check this out! We are facing a massive wave of technology upgrades, and it is going to impact everyday digital tools!",
-        "calm": "It seems we can expect a few more digital hiccups as major computer networks undergo essential upgrades. It is a good time to reflect on how we handle these interruptions.",
-        "direct": "US intelligence officials just announced that tech outages will continue as aging infrastructure gets updated. Let's get right into discussing this topic."
+        "friendly": "Hey, have you seen the big news in technology today? Two major cybersecurity companies are joining forces in a massive deal!",
+        "energetic": "You won't believe the huge deal that just broke in tech! CrowdStrike is acquiring Zscaler for nearly forty-four billion dollars!",
+        "calm": "There is a notable development in the technology sector today. CrowdStrike has agreed to acquire Zscaler in a historic cybersecurity transaction.",
+        "direct": "CrowdStrike just announced a forty-four billion dollar acquisition of Zscaler. Here is why this major cybersecurity news matters right now."
       },
       "sources": [
         {
-          "title": "Google News: Technology",
-          "url": "https://news.google.com/search?q=Technology%20top%20news%202026-11-23&hl=en-US&gl=US&ceid=US:en"
+          "title": "frontier-enterprise.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEp38Fmz1zX5Utao5n5NADqPYEpRC2--TC7vSR16xn4M7Yd5gKFfKyhLvcYu_0jVZKKnFxwdkB4ry40eu95nYBjc1RpZ57NQvAkbvE1DRrewNtjEiM3cJSEIfsj9yY3MYjC7WmLd2OsKAgYJKQTyvz_UywxjXGhhiS2Z46_OMIP15IrpjoM4nLLSA=="
         }
       ]
     },
     {
-      "id": "2026-11-23-sports",
+      "id": "2026-11-24-sports",
       "category": "sports",
       "categoryLabel": "Sports",
-      "headline": "Max Verstappen Wins Thrilling Las Vegas Grand Prix After 35 Lead Changes",
-      "summary": "Red Bull driver Max Verstappen won the Formula 1 Las Vegas Grand Prix on Sunday, holding off McLaren's Lando Norris and Oscar Piastri in an intense race featuring 35 lead changes. The dramatic victory marks Verstappen's third win in Las Vegas over the last four years as the motorsport season approaches its conclusion.",
-      "question": "What do you think makes a high-stakes motor race exciting or fun to watch?",
+      "headline": "2026 Davis Cup Final 8 Starts Today in Bologna",
+      "summary": "The 2026 Davis Cup Final 8, the knockout stage of the men's international team tennis championship, officially begins today in Bologna, Italy. Opening the week-long tournament on Tuesday is a quarterfinal tie between former champions Canada and Czechia as eight top nations battle for the trophy.",
+      "question": "Do you prefer watching team-based international sports tournaments like the Davis Cup or individual competitions, and why?",
       "coachLeads": {
-        "friendly": "Hey, did you catch the wild Formula 1 race in Las Vegas over the weekend?",
-        "energetic": "You won't believe how crazy the Las Vegas Grand Prix was with 35 lead changes!",
-        "calm": "There was some impressive racing action in Las Vegas this weekend that is worth taking a look at.",
-        "direct": "Max Verstappen just took first place in a high-intensity Las Vegas Grand Prix."
+        "friendly": "Hey there! The Davis Cup Final 8 is kicking off in Italy today, so it is a great time to talk about team tennis.",
+        "energetic": "Big tennis news today! The Davis Cup Final 8 has officially begun in Bologna with the world's top national teams competing for the championship!",
+        "calm": "The Davis Cup Final 8 starts today in Bologna, bringing together eight top national teams for the final tournament of the season.",
+        "direct": "The 2026 Davis Cup Final 8 begins today in Bologna, starting with an exciting quarterfinal matchup between Canada and Czechia."
       },
       "sources": [
         {
-          "title": "Google News: Sports",
-          "url": "https://news.google.com/search?q=Sports%20top%20news%202026-11-23&hl=en-US&gl=US&ceid=US:en"
+          "title": "daviscup.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFfmdyn0w1OTDJVfP6IoecOR3UTDbjBweZKGnHsDgtqVHBChwStoJE5mS0vd0cvBx5sX-5GNgI0H7xugm-krHlTqSD3gTFBY3o19YEh6xDzO33UE_k1IckYLmvuM3DNLN-PA1_D"
+        },
+        {
+          "title": "olympics.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHyRec1c7m29RklNRMcewvt_fQD1pFRNoisoW-FAEJHrgPH9juIEQil2gti5_Qo8Xxe6JxA9qcjDmaL6a8yGJKQQKELiXI4UdeUdYOEwAYM9oMVEwrbXnnQvWsPT6DZUIcIghMgGV24XRvK2Fueoi_jZEPY8CYf3wjdnfuoUOC7MO0V8NSa2Z6KxIbpqcZu15_8"
+        },
+        {
+          "title": "daviscup.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE1jTmX7cp88hJZIFeiSE9IvxIMvqFNob7-896g3PeSoaZRSfcbnNpQYwxLIijjYBzdMmwIFxus7WxfcAuPs2K9n0PX1BFSdVf30xr87oae3yqjMj0N9W_r4qOpn67FTMGdYLs77LMqmzoujBpsuvbOphG2n4GVymgM5KkXF3kvfmjDfA=="
         }
       ]
     },
     {
-      "id": "2026-11-23-entertainment",
+      "id": "2026-11-24-entertainment",
       "category": "entertainment",
       "categoryLabel": "Entertainment",
-      "headline": "\"The Hunger Games: Sunrise on the Reaping\" Dominates Box Office with $225 Million Global Debut",
-      "summary": "Lionsgate's \"The Hunger Games: Sunrise on the Reaping\" dominated the weekend box office with an estimated $120 million North American debut and $225 million worldwide. The impressive performance makes it one of the largest film launches of 2026 and revitalizes the iconic dystopian franchise in theaters.",
-      "question": "What factors do you think drive audiences to keep returning to long-running film franchises like The Hunger Games?",
+      "headline": "\"The Hunger Games: Sunrise on the Reaping\" Tops Global Box Office with $225 Million Debut",
+      "summary": "\"The Hunger Games: Sunrise on the Reaping\" earned $225 million globally during its opening weekend, taking the top spot at movie theaters worldwide. Driven by strong international turnout and large-format screenings, the film delivered the studio's largest theatrical debut of the year.",
+      "question": "Why do you think dystopian franchises like \"The Hunger Games\" continue to attract huge audiences years after the original stories came out?",
       "coachLeads": {
-        "friendly": "Hey there! The new Hunger Games prequel just crushed the box office this weekend. Have you been following the series?",
-        "energetic": "The Hunger Games is back in a huge way! It just pulled in $225 million worldwide in its opening weekend!",
-        "calm": "The latest Hunger Games film had a massive debut at the box office this weekend. It makes for an interesting topic if you enjoy movies and pop culture.",
-        "direct": "The new Hunger Games prequel topped the global box office with a $120 million domestic opening. Let me know what you think about big franchise releases like this."
+        "friendly": "Hey, did you see the box office news about the new Hunger Games movie? It had a massive opening weekend worldwide!",
+        "energetic": "The Hunger Games franchise is back in a big way! The new prequel just dominated the global box office with a huge $225 million opening!",
+        "calm": "The latest Hunger Games prequel made a significant splash at the global box office this weekend. It is worth discussing why these stories continue to draw large crowds.",
+        "direct": "The new Hunger Games prequel opened to $225 million globally over the weekend. Let's talk about what keeps this franchise so successful."
       },
       "sources": [
         {
-          "title": "forbes.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF7kjxKfWyFaikHF5igVRjZXHuxcoQst5bE7mToJ6R6jEzU87cUXoie7_m6IxFlh51Z9hpjyvqXnN3kA4aoi5soMnzw8RSdK3BJJg3ObsIgg1As16QsL9LXzYT4gL7T7TPyw5eV0Jnf81pNR0ZlGz31HHo1fHl0I5M970lCIxLFw0iWuIqT63tKLzsgESPUn2E0Vj28a4QFe28sqNEmtCWwR_2Nq46SWkkE8P7kQw9nXYqsq9RoVt3zfOxMReDeU3OfD91xNDyEjbE="
-        },
-        {
-          "title": "mediaplaynews.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEtD4qGNJrL5ZGpoUOJ0zvpdpj5yQdShH4e9KIRjmNsCFdMEGvWhm5UIlRJlAYWDilwaDnHWx2boD47sgApjVUquk-KwnJBcvfrhhr7kLKEVUruWR56ls_SWxMwYU3xAIz4WGvDq38rcIncaI_TAgR8XA6lcWzDEBE03IF4O2o9Yh5g3HY8rGb3iFV0hgGFYr2ym4tEROPn8zHqv5a3-0jq8CNY0sDxopWabsJ7-cLYWKgc5b3SgvqyThFPVg=="
-        },
-        {
-          "title": "the-independent.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFGv3Mm-dDMgJnIbzTtrf2cHWSUVU2qCr07IIyf7Heq9jo1iBQ1abeFICgKRsPHvm1y96qSeba7vmgrvb3-8GBEHG_e_y4kjLH3_ViMKcyWGAd1Fc4Z58oK8DVLm8lYF9fDk7G1pqt1DqUODWOxl_Y8FGaGHfJkFdRVkV1RwS7gbuhCMVGM38eq49wVeuRqdZKt3BaCZNlC0tQVmRKseJhEQxQyxMN2sytXsBU5"
+          "title": "Google News: Entertainment",
+          "url": "https://news.google.com/search?q=Entertainment%20top%20news%202026-11-24&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     }
