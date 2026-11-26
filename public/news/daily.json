@@ -1,104 +1,100 @@
 {
   "schemaVersion": 1,
   "status": "live",
-  "date": "2026-11-25",
-  "generatedAt": "2026-11-25T04:12:05.012Z",
+  "date": "2026-11-26",
+  "generatedAt": "2026-11-26T03:34:10.426Z",
   "model": "gemini-3.6-flash",
   "fallbackCategories": [],
   "items": [
     {
-      "id": "2026-11-25-politics_economy",
+      "id": "2026-11-26-politics_economy",
       "category": "politics_economy",
       "categoryLabel": "Politics & Economy",
-      "headline": "Australia and Solomon Islands Sign Security Pact Excluding Foreign Bases",
-      "summary": "On November 25, Australian Prime Minister Anthony Albanese and Solomon Islands Prime Minister Matthew Wale signed a new bilateral security treaty in Canberra. The agreement establishes Australia as the island nation's primary security partner and explicitly bans foreign military bases, marking a significant diplomatic shift in the South Pacific.",
-      "question": "How do you think strategic security agreements like this influence stability and diplomatic relations across the Pacific region?",
+      "headline": "US Proposes New Tariffs on 14 Nations, Shaking Global Financial Markets",
+      "summary": "The United States proposed new trade tariffs targeting 14 major trading partners, including China and members of the European Union, to combat foreign industrial overcapacity. The sudden policy announcement sparked widespread volatility across global financial markets as investors weighed the risks to trade and economic growth.",
+      "question": "How do you think new international tariffs might affect consumer prices and trade relationships in your country?",
       "coachLeads": {
-        "friendly": "Hey, have you heard about the new security deal signed between Australia and Solomon Islands today? It is a really interesting topic to practice talking about international affairs!",
-        "energetic": "Check out this major geopolitical update from the Pacific! Australia and Solomon Islands just signed a big security treaty that is grabbing headlines worldwide!",
-        "calm": "There is a notable diplomatic development today regarding security in the South Pacific. It provides a meaningful topic to practice discussing global politics together.",
-        "direct": "Australia and Solomon Islands just finalized a strategic security treaty banning foreign military bases. Let's talk about what this means for regional diplomacy."
+        "friendly": "Hey, did you catch the news about the new U.S. trade tariffs? It looks like international trade policy is back in the spotlight.",
+        "energetic": "Check this out! A major U.S. tariff proposal targeting 14 countries just sent shockwaves through global markets!",
+        "calm": "There is a notable story today about the U.S. proposing tariffs on 14 trading partners. It is worth reflecting on how global trade rules impact daily life.",
+        "direct": "The U.S. announced plans to hit 14 major economies with new tariffs. Let's talk about what this means for international business."
       },
       "sources": [
         {
-          "title": "clickorlando.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGJ0vwQCIvXsjVp2uFjzkTPtbeRUCmDDTJO7mJF_wSyWjt5XuZ0m0ZwP5oGdVBcICk0_LaN0C3o1hVIbii5xF9bfsNVJitZw5_t2E0plYwcF9z4xRDkZCWrzEbxX2xWOoiM6iICWnq_IkTrp9HZ4o-9b017QGE1k1n_q6N0JJr6e3zD0XDD5C9WB2ggIlvLirojuVJv-kscEwVevTPgzCcJu-Lqw868HwUeIu8gcYpa7HO68rSklxCT1k6B69-azaurdB_yslRJl6aHeoIuZw=="
+          "title": "investing.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEGVr_tSOEVWXEH-nXi9NLmX5EvwOjDERuCRQ3cogVaU8T-HK_Dlzv96cZR6zf8X5NKHZWF5rZmESR8ghst8RfjpfuTvh6YtM5k-ZZREWt1aACPNcBsppJKR7FG7peunhzGPIEBXb0eaT63faz9PQxKvSdt0z1NzCpFMHe5vqxpShN-nMUYP0PKBNSnGiOdLS1D4Tw6JglED57OvNRu3Hr0CrWJNCbr02wew4kx"
+        },
+        {
+          "title": "mlq.ai",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHymzccsGmCUva8Ac85YvUEyfyEJ5Gw-L7Sa7Qwz4wnY-ijVzKokQcQATGeSFv1uTda-6ey3oXg-gpvWj97yIiFMafnNXNQsUrpO4U12xvghspOS88WoHDmYqxqZYjk3XN2Qq3PON0dIEYWy3LakX1x-TtPDhVuHpmqPgmrcNefMciOBG75OXStsRJNOP2F4hrDebg0pyL8eq_iLbGCSD0zY_7VomEyE6YRhviAaquGKiTGUpamZQbD2IqPix4jCjJB"
+        },
+        {
+          "title": "koreatimes.co.kr",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEd5sud-3U3QwgYe_AOKG-SrDZQNpQQ5ixzzU1iz_DyF5XGjJhCSSnalFXreBRZA64s1J_898FeUIt82g-HjXhMcL6YxDolOxszJwxhv4IGqXaLnntV5tJfh_Thx_VSrPeY3biteaprE4OFQ7p9JKOyypLNAhL5oloCnlzHZlSkRs6HaqkmhI3qZNycpYfq87xldh-qzPSEu6J1M6ObDXiyET80NP6KKrg="
         }
       ]
     },
     {
-      "id": "2026-11-25-technology",
+      "id": "2026-11-26-technology",
       "category": "technology",
       "categoryLabel": "Technology",
-      "headline": "China Launches Shenzhou-24 Spacecraft Carrying Pakistan's First Astronaut",
-      "summary": "China successfully launched the Shenzhou-24 crewed spacecraft on Wednesday to send a three-person crew to the Tiangong space station. The flight marks a milestone in space cooperation as Pakistani astronaut Muhammad Zeeshan Ali became the first foreign national to board China's orbital outpost.",
-      "question": "How do you think international collaboration in space missions will influence future science and global politics?",
+      "headline": "First Close-Up Images Reveal Aftermath of NASA Asteroid Deflection Mission",
+      "summary": "The European Space Agency has released the first detailed photos of asteroid Dimorphos captured by its Hera spacecraft, revealing a massive crater left by NASA's 2022 impact experiment. The new images provide scientists with critical data to evaluate and refine future planetary defense systems against potential space threats.",
+      "question": "How do you feel about humanity building and testing technology to defend Earth from asteroid impacts?",
       "coachLeads": {
-        "friendly": "Hey, have you heard about the latest space mission? China just launched a crew to its space station, including its first foreign astronaut!",
-        "energetic": "This is huge news! China launched the Shenzhou-24 spacecraft today with a historic international crew member onboard!",
-        "calm": "China launched the Shenzhou-24 mission today, marking a noteworthy step in international space cooperation. It is definitely a story worth discussing.",
-        "direct": "China successfully launched the Shenzhou-24 spacecraft today, sending Pakistan's first astronaut to the Tiangong space station. Let's talk about what this means for space exploration."
-      },
-      "sources": [
-        {
-          "title": "news4jax.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEjDufscsRurni0v8o8Acf7u1CEIuzeuLGhYckwODXZ467j6ZrTKrS8gJyy2Z2FJU7FfXn9_dO5X4w_cb-XaoSFm65Nq8wse1G-ChF_xt0X_7vcfQXoUshWgLkc672vvc5xxQWNVxD8vwkpguzz7diH5Esxc8wGtjDJw8WEu-kh236L23jlmtzJ2wYJ-eOfmffc58dzsxuG6C4FOjsaYi5i2uzLLSIc9KYgo2JEZKaaZ8g="
-        },
-        {
-          "title": "aa.com.tr",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHrxiY2U-J1v4VsOQ6f5-vAorOpbsSvYYb0YXDfK4ftBRWo558VCO_-dRlIsYIpxzhPvJp_Oko21EEWHzs0GcMyfzzBjN9ROp2VcgxPzpAM4kCN-eMmIBgyaowZKcbZJydD8D7XH5w2J65xVFisUfebLVTQ45XVsjvNTEx6YGomcWmpfouS_eYi9DoyPZRbRs_1XQrXd-o_A7in3iG2ROdzGT4v-jYPXYE4m6xZ"
-        }
-      ]
-    },
-    {
-      "id": "2026-11-25-sports",
-      "category": "sports",
-      "categoryLabel": "Sports",
-      "headline": "Baltimore Orioles Sign Pitcher Freddy Peralta to Record $125 Million Deal",
-      "summary": "The Baltimore Orioles officially announced a five-year, $125 million contract with right-handed starting pitcher Freddy Peralta. This historic signing marks the largest financial commitment to a pitcher in the franchise's history.",
-      "question": "How do you feel about sports franchises spending record-breaking amounts of money to secure elite talent?",
-      "coachLeads": {
-        "friendly": "Hey, have you heard about the big splash the Baltimore Orioles just made in baseball free agency?",
-        "energetic": "Check this out! The Orioles just shattered their franchise records by dropping 125 million dollars on ace pitcher Freddy Peralta!",
-        "calm": "This is worth taking a look at if you follow sports news. The Baltimore Orioles just agreed to the biggest pitching deal in team history.",
-        "direct": "The Orioles signed pitcher Freddy Peralta to a five-year, $125 million contract. Let's talk about what this means for major league baseball."
-      },
-      "sources": [
-        {
-          "title": "mlbtraderumors.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHLoMo_4RX9xyv6P6wKa4RG0kFUUZIx7_4OidV3URi567Ci0Wl5TmvXH2YnlCRc-pEzCzIYwHi8pTSDFDu0aoGJBzsfORF9wRjeseWp63wv1F0sw0pYIE_0NpqgCd9XWnvxUSCWsvrhbI1qXp2_olAzpPuj9BbE26QaIftEGQ=="
-        },
-        {
-          "title": "thebanner.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEGuujaNr3TR2mQ2vFdzNT3R81krff37zQt-txQgjv_4EDmJIzSBgvt3-kXbX_lI3FxXqRibFMUjfHP5xoJvp0NYjFeQAP-8-Zq8WbbM8v6cuwF2zA43aCAr5KMt5HxUWCMXqAC7bz6qvUU34wEhbcxxKyrl9W9j_LZxesOZo7QKpTxBRUV_845s6yL8p9tQHHtMb3hsZHrDhGKHdC-URe4ktfWBClufwCc"
-        }
-      ]
-    },
-    {
-      "id": "2026-11-25-entertainment",
-      "category": "entertainment",
-      "categoryLabel": "Entertainment",
-      "headline": "Tidal Becomes First Major Music Streamer to Ban Fully AI-Generated Songs",
-      "summary": "Music streaming service Tidal announced a total ban on songs created entirely by artificial intelligence and plans to remove up to 29 million AI-generated tracks from its platform. The company made the decision after discovering that over 40 percent of recent music uploads were fully synthetic, making it the first major streaming app to enact such a policy.",
-      "question": "Do you think streaming services should ban AI-created content, or should listeners be allowed to decide for themselves?",
-      "coachLeads": {
-        "friendly": "Hey, have you heard about Tidal's latest move? They are completely banning songs made entirely by AI.",
-        "energetic": "This is huge news for the music world! Tidal is deleting 29 million AI-generated tracks to protect real artists!",
-        "calm": "Tidal has announced plans to purge fully AI-generated music from its library starting in December. It raises some interesting questions about the future of digital media.",
-        "direct": "Tidal is banning 100 percent AI-generated music and taking down millions of synthetic tracks. Let's talk about what this means for artists and listeners."
+        "friendly": "Hey, have you seen the incredible new photos of that smashed asteroid in deep space?",
+        "energetic": "Check out this amazing space news! We finally have front-row pictures showing the aftermath of humanity's asteroid deflection test!",
+        "calm": "This is a fascinating moment in space exploration that is definitely worth talking about today.",
+        "direct": "The European Space Agency just published the first close-up images of NASA's asteroid collision."
       },
       "sources": [
         {
           "title": "theguardian.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFxF0mFdufoR3wHCuWNmSle3tSyJy2CvpYnjmN0dH5OztCzN-1GcRhM8FLxXVnevs2iI3CUMoegKlscPm703ic_OYoajXg96KtgxL7pQIkKxdJh7q13qswo4xYH1RAxcyoexiCaGhvkRUPWLnMX6R4RAUpVD4l_p5qlFblIqt9dKnyMDRCY1LJrRMP-4tJPfdqsKRw="
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG2louYnZ1QBlyAseUHOMTcPaVczmxnUR2UN_WxgA0vyaoT0D9b9iKCvfAtjVgykXXGJ6mA4qhFudV7rmuj9Xq54glWhCpR6HPmbmjCc9ES0NH6_Cw1SVpoIpnpmJf1mIwtsw3OupvhUh9u7QyHqUmyjRwjf8u68Uu5EgjWjGHpFM2uY5V94s5JmrGi3rtsg1aaAGKKXy_cMw=="
+        }
+      ]
+    },
+    {
+      "id": "2026-11-26-sports",
+      "category": "sports",
+      "categoryLabel": "Sports",
+      "headline": "Lille Upset Bayern Munich 2-1 in UEFA Champions League Upset",
+      "summary": "French club Lille delivered a major surprise by coming from behind to defeat Bayern Munich 2-1 in the UEFA Champions League league phase on Wednesday. The defeat handed the German powerhouse their first loss of the season and ended a 12-game winning streak across all competitions.",
+      "question": "What do you think makes unexpected upset victories so thrilling to watch in international sports tournaments?",
+      "coachLeads": {
+        "friendly": "Hey, have you caught the latest Champions League scores yet? Lille just pulled off a huge upset against Bayern Munich!",
+        "energetic": "What an unbelievable match! Lille came from behind to defeat undefeated Bayern Munich in a massive Champions League shocker!",
+        "calm": "Bayern Munich suffered their first defeat of the season yesterday, losing 2-1 to Lille in European soccer action.",
+        "direct": "Lille defeated Bayern Munich 2-1 in the Champions League on Wednesday, handing the German side their first loss this season."
+      },
+      "sources": [
+        {
+          "title": "theguardian.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH6qMbCoC6y-ECdpZXbczIjA4BfyKDXg8yDzNmAbBh07ZlQxb2PD44SuV60Oc8wywqOy3sZHL7K_l1qPMvFdfDykowKnkP7Y417RWHwirjTQDx_XpCySiPtSXa20vyhvMjETzayOcBu5q_mz7ZKT4KlgAzQK1nHQGBmhLiYEjXH8s1Q7F3LCissR5vL5s4WamR6io2IFkSQBGcqvqa1Qd_tDG8zYoROWJjn"
+        }
+      ]
+    },
+    {
+      "id": "2026-11-26-entertainment",
+      "category": "entertainment",
+      "categoryLabel": "Entertainment",
+      "headline": "Brad Pitt and Angelina Jolie Settle Years-Long Winery Lawsuit Out of Court",
+      "summary": "Actors Brad Pitt and Angelina Jolie released a joint statement announcing an out-of-court settlement in their contentious, multi-year legal battle over the French winery Château Miraval. The resolution officially ends the high-profile legal dispute that began in 2022 after Jolie sold her stake in the estate.",
+      "question": "Why do you think high-profile celebrity legal disputes tend to attract so much global media attention?",
+      "coachLeads": {
+        "friendly": "Hey, have you heard that Brad Pitt and Angelina Jolie finally settled their long legal battle over their French winery? It is definitely worth talking about today.",
+        "energetic": "Big Hollywood news just broke! Brad Pitt and Angelina Jolie have officially reached a settlement in their massive lawsuit over Château Miraval!",
+        "calm": "Brad Pitt and Angelina Jolie have reached an out-of-court settlement regarding their French estate. It seems a major legal chapter between them has finally come to a close.",
+        "direct": "Brad Pitt and Angelina Jolie just settled their years-long legal dispute over their French winery. Let's dive into the details."
+      },
+      "sources": [
+        {
+          "title": "latimes.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH3bUQS9xZ7nmoE5Hdt8PZ8qT3XBJcD9pnVth1jFoeh5_oHvOJi8GYTAG__D2Vv8GMExBqzGv4WY91KN1nckapHYfKBwhT7WIn3R42F1iJ7lWmGfyoBp5D3Q3hR3VQVekcFZnchPbHhBGbAN3Xih4nIDCV3GQuhCss7qTDJ5tljC2fy26dQxDumhqQjMTVeq9RcLIr7P_Y9_SqfTZKs0BBhqjtVllCdDgHcIzq5fhB-hnnTcLX25QiuKA=="
         },
         {
-          "title": "techcrunch.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHCtDnQiERXz43FOgada7QrLFIezaKXeeJ8kLlZxEbTVCXOoY1Xoa7mw6ltEss7RoLko1tmGTaDtq66PZsciB-2fHLPuAAg97SSbw7jH78VNUirR70XZtHo0Li1uUuwFw9xHwQS0Jpkat2VnMVdzOh-RHon8Jx67N8eZANyQS3imZAKKT7s_SQ5srybEnLGo8lk5uB7ysyFyAOEGbWbCKR9JTrKGBEywjv0REozbrAGm7Xhqt8F"
-        },
-        {
-          "title": "mashable.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFRwqClEqFUzV4kVSBWh7soubcOip5rM9sa2zY42P_-r2YojIayVONvZqxE8nN_fKWo5QJfA8d6r4OOXVK2LuSwdnCrPul1LyJg4r2cFspPYqTZHHJuv-Lmw0pgNZyabMnQjiIWqWImjjF6Vd5kG3PYnZzD-6nu"
+          "title": "theguardian.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHUPHuTbs0wowRGPqIg5MFzbkibf1BgaFBTAr6TUOtKej6_VOcH44hVC-B_xt6UxdzPX7bRNqdcIIY6HB0_ihsxQ3Hbl9saFuYKQYB5JJm2fFd3_9xcBjahvI0yxunTslBlCjUzaIFjryPwcNue8VuxNMDEh6iA2WjidGsGLxtdB2-_Y1XTdzM9WX6N55_se3xgBmoUqLXrDg=="
         }
       ]
     }
