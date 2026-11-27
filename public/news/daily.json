@@ -1,100 +1,104 @@
 {
   "schemaVersion": 1,
   "status": "live",
-  "date": "2026-11-26",
-  "generatedAt": "2026-11-26T03:34:10.426Z",
+  "date": "2026-11-27",
+  "generatedAt": "2026-11-27T03:38:09.308Z",
   "model": "gemini-3.6-flash",
   "fallbackCategories": [],
   "items": [
     {
-      "id": "2026-11-26-politics_economy",
+      "id": "2026-11-27-politics_economy",
       "category": "politics_economy",
       "categoryLabel": "Politics & Economy",
-      "headline": "US Proposes New Tariffs on 14 Nations, Shaking Global Financial Markets",
-      "summary": "The United States proposed new trade tariffs targeting 14 major trading partners, including China and members of the European Union, to combat foreign industrial overcapacity. The sudden policy announcement sparked widespread volatility across global financial markets as investors weighed the risks to trade and economic growth.",
-      "question": "How do you think new international tariffs might affect consumer prices and trade relationships in your country?",
+      "headline": "European Union Leaders Nominate Pablo Hernández de Cos as Next ECB President",
+      "summary": "European Union leaders meeting in Brussels agreed to nominate former Bank of Spain governor Pablo Hernández de Cos to succeed Christine Lagarde as President of the European Central Bank. The selection occurred during an extraordinary EU summit focused on key leadership transitions, long-term budget negotiations, and financial support for Ukraine.",
+      "question": "What qualities do you think are most important for someone leading a major central bank during uncertain economic times?",
       "coachLeads": {
-        "friendly": "Hey, did you catch the news about the new U.S. trade tariffs? It looks like international trade policy is back in the spotlight.",
-        "energetic": "Check this out! A major U.S. tariff proposal targeting 14 countries just sent shockwaves through global markets!",
-        "calm": "There is a notable story today about the U.S. proposing tariffs on 14 trading partners. It is worth reflecting on how global trade rules impact daily life.",
-        "direct": "The U.S. announced plans to hit 14 major economies with new tariffs. Let's talk about what this means for international business."
+        "friendly": "Hey, have you heard the latest news about Europe's financial leadership? EU leaders just agreed on the next head of the European Central Bank, and it is a major story worth checking out.",
+        "energetic": "Big moves are happening in global finance today! European leaders have selected who will take over the European Central Bank, so let's dive into why this matters.",
+        "calm": "European Union leaders reached a key decision on the future of the European Central Bank today. Take a moment to consider how this leadership change could influence global economic policy.",
+        "direct": "EU leaders have nominated Pablo Hernández de Cos as the next European Central Bank president. Here is why this major financial decision is making headlines today."
       },
       "sources": [
         {
-          "title": "investing.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEGVr_tSOEVWXEH-nXi9NLmX5EvwOjDERuCRQ3cogVaU8T-HK_Dlzv96cZR6zf8X5NKHZWF5rZmESR8ghst8RfjpfuTvh6YtM5k-ZZREWt1aACPNcBsppJKR7FG7peunhzGPIEBXb0eaT63faz9PQxKvSdt0z1NzCpFMHe5vqxpShN-nMUYP0PKBNSnGiOdLS1D4Tw6JglED57OvNRu3Hr0CrWJNCbr02wew4kx"
+          "title": "clickondetroit.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHqK7fagHD8H3RUV2jVcMP9E4EWrxN9kmgC6XfRQetYkwfqaNuzuY9fDiNUUzrAFZsuBwBYDx0oozMwW4U-tmk82FszCaV1VcI5RzZAqslaVfr7uzx7sbnQggtnkQL0JWtkzkyZYmqUuJ1ER3IJFVUgA4rbD1rpD5SLKfWxbfYYcMPWnMCqmx0Nk5d_C8UxmjaXLq1UVJtwhLVZnr4Qb0UF0KQIze6w8ZGTJAL21f6o9aWg-ukKeRfkyyjbcOwOfp4="
         },
         {
-          "title": "mlq.ai",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHymzccsGmCUva8Ac85YvUEyfyEJ5Gw-L7Sa7Qwz4wnY-ijVzKokQcQATGeSFv1uTda-6ey3oXg-gpvWj97yIiFMafnNXNQsUrpO4U12xvghspOS88WoHDmYqxqZYjk3XN2Qq3PON0dIEYWy3LakX1x-TtPDhVuHpmqPgmrcNefMciOBG75OXStsRJNOP2F4hrDebg0pyL8eq_iLbGCSD0zY_7VomEyE6YRhviAaquGKiTGUpamZQbD2IqPix4jCjJB"
+          "title": "scmp.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHSeMKyGx3V7rPM_lAwzvIVIyEKBlCo1FyJVmBsF5KIDkfT-85tUp2qhF5wzQVIXIPESxtWckQ4cZ3aKT0nIiZ0p4lkpy0qaRjVUtxrO4H2inpCldGMPqXIfZVrfu_IwQ7fZGWtF0K53laYwsuv5awujwKE0rZfX7VkLixRvWoz1dGfM0AYvtOG-wbNSvKo5UaY1ap128zbTIk39qrHYROJRnSfFTC6Y0veR_5pq6-l__zoBNiWQA=="
         },
         {
-          "title": "koreatimes.co.kr",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEd5sud-3U3QwgYe_AOKG-SrDZQNpQQ5ixzzU1iz_DyF5XGjJhCSSnalFXreBRZA64s1J_898FeUIt82g-HjXhMcL6YxDolOxszJwxhv4IGqXaLnntV5tJfh_Thx_VSrPeY3biteaprE4OFQ7p9JKOyypLNAhL5oloCnlzHZlSkRs6HaqkmhI3qZNycpYfq87xldh-qzPSEu6J1M6ObDXiyET80NP6KKrg="
+          "title": "europa.eu",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFqvr8ZpBPjib37Itm6wdln9df3lBxgGLIyE47yU78HnsMU5Ndnwu6WXsC5icSJQwfD92gUdSiIS3XayU1GRA2ZHUdv4nOIegdVzgSmm86gaYK2uxVzzvK20M2TpLUapwKyZDKSub2hNRyXHyA8uRshm_ElrY-xjWx0cW7hIB1btZJrctBLV7c1lxOXNfZlAwWnrFlhKQmv6ekhEF8_3j04gR0nBdL6vwaymgFqW-NraxejuzDYg8u8bve6C0id5X0axWe_7_eu9iKgf8X-vJHM1HA71jkqvZYNGyc_ec3wgiDn7R6Oo3CPCD3fbgfzEbk3Z281P5AW"
         }
       ]
     },
     {
-      "id": "2026-11-26-technology",
+      "id": "2026-11-27-technology",
       "category": "technology",
       "categoryLabel": "Technology",
-      "headline": "First Close-Up Images Reveal Aftermath of NASA Asteroid Deflection Mission",
-      "summary": "The European Space Agency has released the first detailed photos of asteroid Dimorphos captured by its Hera spacecraft, revealing a massive crater left by NASA's 2022 impact experiment. The new images provide scientists with critical data to evaluate and refine future planetary defense systems against potential space threats.",
-      "question": "How do you feel about humanity building and testing technology to defend Earth from asteroid impacts?",
+      "headline": "US Regulators Approve SpaceX Plan to Deploy One Million AI Data Center Satellites",
+      "summary": "The Federal Communications Commission has authorized SpaceX to launch up to one million satellites designed to operate as orbital data centers for artificial intelligence. This major regulatory decision enables the company to explore space-based computing to meet rising AI processing demands and reduce strain on terrestrial power grids.",
+      "question": "Do you think moving energy-intensive computing into space is a practical solution for the growing power demands of artificial intelligence?",
       "coachLeads": {
-        "friendly": "Hey, have you seen the incredible new photos of that smashed asteroid in deep space?",
-        "energetic": "Check out this amazing space news! We finally have front-row pictures showing the aftermath of humanity's asteroid deflection test!",
-        "calm": "This is a fascinating moment in space exploration that is definitely worth talking about today.",
-        "direct": "The European Space Agency just published the first close-up images of NASA's asteroid collision."
+        "friendly": "Hey! Have you heard about SpaceX's new project to launch AI data centers into space?",
+        "energetic": "SpaceX just got the green light for a massive orbital project, and it could completely transform how we handle AI processing!",
+        "calm": "US regulators have approved a significant space and technology initiative that is worth taking a look at today.",
+        "direct": "The US government just authorized SpaceX to deploy one million AI satellites. Let's talk about what this means for the tech industry."
       },
       "sources": [
         {
-          "title": "theguardian.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG2louYnZ1QBlyAseUHOMTcPaVczmxnUR2UN_WxgA0vyaoT0D9b9iKCvfAtjVgykXXGJ6mA4qhFudV7rmuj9Xq54glWhCpR6HPmbmjCc9ES0NH6_Cw1SVpoIpnpmJf1mIwtsw3OupvhUh9u7QyHqUmyjRwjf8u68Uu5EgjWjGHpFM2uY5V94s5JmrGi3rtsg1aaAGKKXy_cMw=="
+          "title": "cnn.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGTkI7rPNpXt_7uVjMNoTg8aj1BhQKc96Okrlg2PMQ__ekf5_h_ZWMPY4JSHBzWOZqX43UD-9hMcCddMTMffmnDCdf1hJQwAZ17csWzbTO1OvoGZI3Ywq0XQ0QNSv5eF0fWPXbRPBxP4wehT1JCZwRve9xTtzZyWupzJ85ZBCMUdup0MAecGLQ="
         }
       ]
     },
     {
-      "id": "2026-11-26-sports",
+      "id": "2026-11-27-sports",
       "category": "sports",
       "categoryLabel": "Sports",
-      "headline": "Lille Upset Bayern Munich 2-1 in UEFA Champions League Upset",
-      "summary": "French club Lille delivered a major surprise by coming from behind to defeat Bayern Munich 2-1 in the UEFA Champions League league phase on Wednesday. The defeat handed the German powerhouse their first loss of the season and ended a 12-game winning streak across all competitions.",
-      "question": "What do you think makes unexpected upset victories so thrilling to watch in international sports tournaments?",
+      "headline": "Philadelphia Eagles Stage Record 21-Point Thanksgiving Comeback to Defeat Dallas Cowboys",
+      "summary": "On Thanksgiving Day, the Philadelphia Eagles staged a historic 21-point comeback to defeat their NFC East rival Dallas Cowboys 39-38. Quarterback Joe Milton III threw three touchdown passes before kicker Jake Elliott sealed the win with a 59-yard field goal with two seconds remaining, completing the largest comeback in NFL Thanksgiving history.",
+      "question": "What is the most exciting comeback win you have ever witnessed in sports, and what made it so memorable to you?",
       "coachLeads": {
-        "friendly": "Hey, have you caught the latest Champions League scores yet? Lille just pulled off a huge upset against Bayern Munich!",
-        "energetic": "What an unbelievable match! Lille came from behind to defeat undefeated Bayern Munich in a massive Champions League shocker!",
-        "calm": "Bayern Munich suffered their first defeat of the season yesterday, losing 2-1 to Lille in European soccer action.",
-        "direct": "Lille defeated Bayern Munich 2-1 in the Champions League on Wednesday, handing the German side their first loss this season."
+        "friendly": "Hey, did you catch that incredible Thanksgiving game where the Eagles rallied back from 21 points down to beat the Cowboys?",
+        "energetic": "What an unbelievable Thanksgiving finish! The Eagles erased a massive 21-point deficit and won it with a clutch 59-yard field goal in the final seconds!",
+        "calm": "It is always fascinating to see how poise under pressure can turn a game around. The Eagles showed remarkable resilience as they engineered the largest Thanksgiving comeback in NFL history.",
+        "direct": "The Eagles just pulled off the biggest Thanksgiving comeback ever, overcoming a 21-point deficit to defeat Dallas 39-38. Let's break down what made this game so remarkable."
       },
       "sources": [
         {
-          "title": "theguardian.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH6qMbCoC6y-ECdpZXbczIjA4BfyKDXg8yDzNmAbBh07ZlQxb2PD44SuV60Oc8wywqOy3sZHL7K_l1qPMvFdfDykowKnkP7Y417RWHwirjTQDx_XpCySiPtSXa20vyhvMjETzayOcBu5q_mz7ZKT4KlgAzQK1nHQGBmhLiYEjXH8s1Q7F3LCissR5vL5s4WamR6io2IFkSQBGcqvqa1Qd_tDG8zYoROWJjn"
+          "title": "philadelphiaeagles.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGTMUDjV4eajfDsue_xhRQwnj5vMX5JdRfMYShLEzM9zi4XbomTppdzWcke6ulz_rrqkG-_AhhmTbFbsl4dpTQJoLbFkWg2lKGYWcK1WHWAdwjyxWVX8krP8Bdmi2LJ7UQeg3GnWQ1KiR_jbBGhBglVP1p3ER5nhSWgU1Q1YmOqIBfw7NpjSXQ3OfyImlD_M5DrR8pJytdER8SpMDAQh8GTDgZXn17KWRtGmk7ThD3UJby7SoKW3qcRovm95SLMuIWGlChC2hAcIO6-nfvTAg=="
+        },
+        {
+          "title": "nbcsports.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEcNteStPAzSLHa5CTvezzcIckjZirntTElH82xIz7ZxvzjB2b-EzvshyTkdd7QUEcG2yFTYgEPTSuOXqkcJCFzfIPokVMe-_4R7ON30BFCRXxM6VtxWuPO7u60kYuB9tCre0wZW2RL-yPIxK-Wqv9cQdz4kVvR1zsA6R10o_TFYPf9SLpyry40gR7cXVyBoP9EROaUdgfdOQN0T9Xl3yrBdTZdxiXQYkl_kqRC3nFSQC4WOkAYEXTyNf3fFQU="
+        },
+        {
+          "title": "cbssports.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGXhHi4I4oTVjXxixE7xLE0pqK3moiELQlxYcd5AmaCiDSARICKQJ776JnnR2ODiVUaErmamCjTNHXW_8QMNZ2d2-Cia1lVNKSCuhjr_yFLSORoZmN0MTrNyHcS2YGMUnuklON3rOvEQBf7ZasKg226IekxLBa7SD5njuc="
         }
       ]
     },
     {
-      "id": "2026-11-26-entertainment",
+      "id": "2026-11-27-entertainment",
       "category": "entertainment",
       "categoryLabel": "Entertainment",
-      "headline": "Brad Pitt and Angelina Jolie Settle Years-Long Winery Lawsuit Out of Court",
-      "summary": "Actors Brad Pitt and Angelina Jolie released a joint statement announcing an out-of-court settlement in their contentious, multi-year legal battle over the French winery Château Miraval. The resolution officially ends the high-profile legal dispute that began in 2022 after Jolie sold her stake in the estate.",
-      "question": "Why do you think high-profile celebrity legal disputes tend to attract so much global media attention?",
+      "headline": "\"The Hunger Games: Sunrise on the Reaping\" Dominates Thanksgiving Box Office",
+      "summary": "Lionsgate's dystopian prequel \"The Hunger Games: Sunrise on the Reaping\" dominated the North American Thanksgiving box office after setting a franchise Tuesday record of nearly 16 million dollars. The film is on track to earn around 85 million dollars across the five-day holiday window, easily outperforming major new studio releases like Disney's animated film \"Hexed\".",
+      "question": "Why do you think moviegoers continue to show such strong interest in long-running film franchises and prequels?",
       "coachLeads": {
-        "friendly": "Hey, have you heard that Brad Pitt and Angelina Jolie finally settled their long legal battle over their French winery? It is definitely worth talking about today.",
-        "energetic": "Big Hollywood news just broke! Brad Pitt and Angelina Jolie have officially reached a settlement in their massive lawsuit over Château Miraval!",
-        "calm": "Brad Pitt and Angelina Jolie have reached an out-of-court settlement regarding their French estate. It seems a major legal chapter between them has finally come to a close.",
-        "direct": "Brad Pitt and Angelina Jolie just settled their years-long legal dispute over their French winery. Let's dive into the details."
+        "friendly": "Hey, have you heard about the big holiday box office numbers? The new Hunger Games prequel is completely taking over theaters right now!",
+        "energetic": "Check this out—the latest Hunger Games movie is crushing the Thanksgiving box office competition! Are you excited to see it in theaters?",
+        "calm": "It looks like the new Hunger Games prequel is leading the holiday box office by a wide margin. It is a great topic to discuss if you enjoy cinema news.",
+        "direct": "The new Hunger Games prequel just set a franchise box office record ahead of Thanksgiving. Let's talk about why franchise films are still so popular."
       },
       "sources": [
         {
-          "title": "latimes.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH3bUQS9xZ7nmoE5Hdt8PZ8qT3XBJcD9pnVth1jFoeh5_oHvOJi8GYTAG__D2Vv8GMExBqzGv4WY91KN1nckapHYfKBwhT7WIn3R42F1iJ7lWmGfyoBp5D3Q3hR3VQVekcFZnchPbHhBGbAN3Xih4nIDCV3GQuhCss7qTDJ5tljC2fy26dQxDumhqQjMTVeq9RcLIr7P_Y9_SqfTZKs0BBhqjtVllCdDgHcIzq5fhB-hnnTcLX25QiuKA=="
-        },
-        {
-          "title": "theguardian.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHUPHuTbs0wowRGPqIg5MFzbkibf1BgaFBTAr6TUOtKej6_VOcH44hVC-B_xt6UxdzPX7bRNqdcIIY6HB0_ihsxQ3Hbl9saFuYKQYB5JJm2fFd3_9xcBjahvI0yxunTslBlCjUzaIFjryPwcNue8VuxNMDEh6iA2WjidGsGLxtdB2-_Y1XTdzM9WX6N55_se3xgBmoUqLXrDg=="
+          "title": "Google News: Entertainment",
+          "url": "https://news.google.com/search?q=Entertainment%20top%20news%202026-11-27&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     }
