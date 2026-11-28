@@ -1,104 +1,108 @@
 {
   "schemaVersion": 1,
   "status": "live",
-  "date": "2026-11-27",
-  "generatedAt": "2026-11-27T03:38:09.308Z",
+  "date": "2026-11-28",
+  "generatedAt": "2026-11-28T03:18:39.033Z",
   "model": "gemini-3.6-flash",
   "fallbackCategories": [],
   "items": [
     {
-      "id": "2026-11-27-politics_economy",
+      "id": "2026-11-28-politics_economy",
       "category": "politics_economy",
       "categoryLabel": "Politics & Economy",
-      "headline": "European Union Leaders Nominate Pablo Hernández de Cos as Next ECB President",
-      "summary": "European Union leaders meeting in Brussels agreed to nominate former Bank of Spain governor Pablo Hernández de Cos to succeed Christine Lagarde as President of the European Central Bank. The selection occurred during an extraordinary EU summit focused on key leadership transitions, long-term budget negotiations, and financial support for Ukraine.",
-      "question": "What qualities do you think are most important for someone leading a major central bank during uncertain economic times?",
+      "headline": "EU Leaders Fail to Reach Agreement on Long-Term Budget and Ukraine Aid",
+      "summary": "European Union leaders ended an extraordinary summit in Brussels on November 27 without reaching a consensus on the bloc's long-term budget for 2028 to 2034. The deadlock leaves a proposed 45 billion euro financial loan for Ukraine in limbo as member states clash over spending cuts ahead of a year-end deadline.",
+      "question": "How do you think European nations should balance supporting regional stability with managing their own domestic budget priorities?",
       "coachLeads": {
-        "friendly": "Hey, have you heard the latest news about Europe's financial leadership? EU leaders just agreed on the next head of the European Central Bank, and it is a major story worth checking out.",
-        "energetic": "Big moves are happening in global finance today! European leaders have selected who will take over the European Central Bank, so let's dive into why this matters.",
-        "calm": "European Union leaders reached a key decision on the future of the European Central Bank today. Take a moment to consider how this leadership change could influence global economic policy.",
-        "direct": "EU leaders have nominated Pablo Hernández de Cos as the next European Central Bank president. Here is why this major financial decision is making headlines today."
+        "friendly": "Hey, have you heard about the latest EU summit? European leaders just wrapped up intense talks in Brussels without reaching an agreement on their future budget.",
+        "energetic": "Check out this major development in European politics! EU leaders just failed to reach a deal on their multi-year budget and crucial financial aid for Ukraine.",
+        "calm": "This is a story worth reflecting on today. European Union leaders recently ended high-stakes budget negotiations in Brussels without a consensus.",
+        "direct": "European leaders just ended their summit early after failing to agree on their long-term budget. Let me know what you think about this diplomatic stalemate."
       },
       "sources": [
         {
-          "title": "clickondetroit.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHqK7fagHD8H3RUV2jVcMP9E4EWrxN9kmgC6XfRQetYkwfqaNuzuY9fDiNUUzrAFZsuBwBYDx0oozMwW4U-tmk82FszCaV1VcI5RzZAqslaVfr7uzx7sbnQggtnkQL0JWtkzkyZYmqUuJ1ER3IJFVUgA4rbD1rpD5SLKfWxbfYYcMPWnMCqmx0Nk5d_C8UxmjaXLq1UVJtwhLVZnr4Qb0UF0KQIze6w8ZGTJAL21f6o9aWg-ukKeRfkyyjbcOwOfp4="
+          "title": "pbs.org",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEIgtAZKZPegKZqzUML9i1QBQd8IkylBNVnPnklHQ7zKnT2FsZtjhb_2Qub0Hhy33xzp2e4Qr7yAbyz2HO2C__dn3ed2Mgb8bVXvqG4FYUDgh4UMYf8jm9N6fVFV7_XFmYq3-yGAS61_iDWEoU8g8sLkh2zvz1N4AjhceHYAOL5DQPWBVZ0vMN-WAYvV4S2KvL9gvFWt098QAv2fLmC7DTO3NyMS5LG"
         },
         {
-          "title": "scmp.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHSeMKyGx3V7rPM_lAwzvIVIyEKBlCo1FyJVmBsF5KIDkfT-85tUp2qhF5wzQVIXIPESxtWckQ4cZ3aKT0nIiZ0p4lkpy0qaRjVUtxrO4H2inpCldGMPqXIfZVrfu_IwQ7fZGWtF0K53laYwsuv5awujwKE0rZfX7VkLixRvWoz1dGfM0AYvtOG-wbNSvKo5UaY1ap128zbTIk39qrHYROJRnSfFTC6Y0veR_5pq6-l__zoBNiWQA=="
+          "title": "sfgate.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGxcuCkfE1LNmhiEYnErvH03vn1rTL4Wja8-bJ53y1CokN54wqvqFx_nN9289gOknDQlKGWKt6bdGdKwqI-lsdjctV_rOoYoWlpcRCx4DPdfPLj2loLgaPVBuhCix64YviqSPargjz6vOa1747Yi9FbfagMkcqajLu-9PYw2kwzbM2mIHAFZQRQkSvW6Jv7MXqBBsbk3eMZzpU07jk-"
         },
         {
-          "title": "europa.eu",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFqvr8ZpBPjib37Itm6wdln9df3lBxgGLIyE47yU78HnsMU5Ndnwu6WXsC5icSJQwfD92gUdSiIS3XayU1GRA2ZHUdv4nOIegdVzgSmm86gaYK2uxVzzvK20M2TpLUapwKyZDKSub2hNRyXHyA8uRshm_ElrY-xjWx0cW7hIB1btZJrctBLV7c1lxOXNfZlAwWnrFlhKQmv6ekhEF8_3j04gR0nBdL6vwaymgFqW-NraxejuzDYg8u8bve6C0id5X0axWe_7_eu9iKgf8X-vJHM1HA71jkqvZYNGyc_ec3wgiDn7R6Oo3CPCD3fbgfzEbk3Z281P5AW"
+          "title": "theguardian.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG6Jpr7Ghgj_e4p7osrTsBUNNEJPuuTzVdYt_jy_9JzgPfJqHBDZeVjPU1sc3yxKdxd-wSXE3qbRmaIkrM2Zk9aVQy4gORMjVdtoU4267wup0iSEsDLtry0j5ekVqY6mRaCpLntNMHVDfRvMGyXyJhWYcRiN5OG97DqwOrMS2vPNst681iQqeG9WdZ8Pne_8sPMIDVMEweSI1qZBZnLvs9k5QQ="
         }
       ]
     },
     {
-      "id": "2026-11-27-technology",
+      "id": "2026-11-28-technology",
       "category": "technology",
       "categoryLabel": "Technology",
-      "headline": "US Regulators Approve SpaceX Plan to Deploy One Million AI Data Center Satellites",
-      "summary": "The Federal Communications Commission has authorized SpaceX to launch up to one million satellites designed to operate as orbital data centers for artificial intelligence. This major regulatory decision enables the company to explore space-based computing to meet rising AI processing demands and reduce strain on terrestrial power grids.",
-      "question": "Do you think moving energy-intensive computing into space is a practical solution for the growing power demands of artificial intelligence?",
+      "headline": "German Software Giant SAP Confirms Cyberattack Target Infiltrating Source Code",
+      "summary": "Enterprise software vendor SAP confirmed it is responding to a major cybersecurity incident after intruders used stolen employee access tokens to enter its internal GitHub repositories. The company has restricted developer access and updated security credentials while reporting no indication that customer business data was compromised.",
+      "question": "What measures do you think technology companies should prioritize to stop hackers from stealing developer credentials?",
       "coachLeads": {
-        "friendly": "Hey! Have you heard about SpaceX's new project to launch AI data centers into space?",
-        "energetic": "SpaceX just got the green light for a massive orbital project, and it could completely transform how we handle AI processing!",
-        "calm": "US regulators have approved a significant space and technology initiative that is worth taking a look at today.",
-        "direct": "The US government just authorized SpaceX to deploy one million AI satellites. Let's talk about what this means for the tech industry."
+        "friendly": "Hey, have you heard about the recent cyberattack targeting enterprise software giant SAP?",
+        "energetic": "This is a huge cybersecurity story today—attackers managed to reach SAP's internal source code repositories!",
+        "calm": "There is a notable cybersecurity development involving SAP that is worth taking a moment to look at.",
+        "direct": "Take a look at this recent report about stolen developer credentials leading to a breach at SAP."
       },
       "sources": [
         {
-          "title": "cnn.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGTkI7rPNpXt_7uVjMNoTg8aj1BhQKc96Okrlg2PMQ__ekf5_h_ZWMPY4JSHBzWOZqX43UD-9hMcCddMTMffmnDCdf1hJQwAZ17csWzbTO1OvoGZI3Ywq0XQ0QNSv5eF0fWPXbRPBxP4wehT1JCZwRve9xTtzZyWupzJ85ZBCMUdup0MAecGLQ="
+          "title": "cybersecuritydive.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGiXAuIxYyjjnsKudUymUDXCy2xZQe4BcgPyV2tS_XVXyalonkY9ZCX6rz8DHTGHNl5vM8M1tT5INmcG-PpoPY199nn7wPQ0mBtRVK-WiBELVvK0djhyKDTYL93LvLrFQa7L6Awxx-vDnDN5lHjzIdBd_4ofQTHGftit6kk2LuLzBgChLM0evA="
+        },
+        {
+          "title": "therecord.media",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGNHlZJhDmLOAkUsXd1JqjAGd7vNng6nq6AsZeSHkJI5h7AToApuWSPpMQPpKgzy18I4d7rxEzq8RLdcovySoRjwXapJuR0cpWrs0JuAQtqjOPRTqMkbutJmtcy7WWSMO__qidH2NrPQYmlvw=="
         }
       ]
     },
     {
-      "id": "2026-11-27-sports",
+      "id": "2026-11-28-sports",
       "category": "sports",
       "categoryLabel": "Sports",
-      "headline": "Philadelphia Eagles Stage Record 21-Point Thanksgiving Comeback to Defeat Dallas Cowboys",
-      "summary": "On Thanksgiving Day, the Philadelphia Eagles staged a historic 21-point comeback to defeat their NFC East rival Dallas Cowboys 39-38. Quarterback Joe Milton III threw three touchdown passes before kicker Jake Elliott sealed the win with a 59-yard field goal with two seconds remaining, completing the largest comeback in NFL Thanksgiving history.",
-      "question": "What is the most exciting comeback win you have ever witnessed in sports, and what made it so memorable to you?",
+      "headline": "MotoGP Legend Marc Márquez Announces Retirement at End of 2026 Season",
+      "summary": "Eight-time MotoGP world champion Marc Márquez announced during practice at the Valencia Grand Prix on November 27, 2026, that he will retire at the conclusion of the season. The unexpected announcement is making international news as one of motorcycling's most decorated riders prepares to end his legendary career.",
+      "question": "What kind of legacy do you think Marc Márquez leaves behind in motorcycle racing?",
       "coachLeads": {
-        "friendly": "Hey, did you catch that incredible Thanksgiving game where the Eagles rallied back from 21 points down to beat the Cowboys?",
-        "energetic": "What an unbelievable Thanksgiving finish! The Eagles erased a massive 21-point deficit and won it with a clutch 59-yard field goal in the final seconds!",
-        "calm": "It is always fascinating to see how poise under pressure can turn a game around. The Eagles showed remarkable resilience as they engineered the largest Thanksgiving comeback in NFL history.",
-        "direct": "The Eagles just pulled off the biggest Thanksgiving comeback ever, overcoming a 21-point deficit to defeat Dallas 39-38. Let's break down what made this game so remarkable."
+        "friendly": "Hey, did you catch the huge sports news today? Marc Márquez just announced he is retiring from MotoGP!",
+        "energetic": "What an absolute bombshell in motorsport today! Marc Márquez is calling it a career at the end of this season!",
+        "calm": "Marc Márquez has announced he will step away from MotoGP after this season. It really marks the conclusion of an extraordinary era in racing.",
+        "direct": "Marc Márquez is officially retiring from MotoGP at the end of the season. Let's discuss what his career has meant to the sport."
       },
       "sources": [
         {
-          "title": "philadelphiaeagles.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGTMUDjV4eajfDsue_xhRQwnj5vMX5JdRfMYShLEzM9zi4XbomTppdzWcke6ulz_rrqkG-_AhhmTbFbsl4dpTQJoLbFkWg2lKGYWcK1WHWAdwjyxWVX8krP8Bdmi2LJ7UQeg3GnWQ1KiR_jbBGhBglVP1p3ER5nhSWgU1Q1YmOqIBfw7NpjSXQ3OfyImlD_M5DrR8pJytdER8SpMDAQh8GTDgZXn17KWRtGmk7ThD3UJby7SoKW3qcRovm95SLMuIWGlChC2hAcIO6-nfvTAg=="
-        },
-        {
-          "title": "nbcsports.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEcNteStPAzSLHa5CTvezzcIckjZirntTElH82xIz7ZxvzjB2b-EzvshyTkdd7QUEcG2yFTYgEPTSuOXqkcJCFzfIPokVMe-_4R7ON30BFCRXxM6VtxWuPO7u60kYuB9tCre0wZW2RL-yPIxK-Wqv9cQdz4kVvR1zsA6R10o_TFYPf9SLpyry40gR7cXVyBoP9EROaUdgfdOQN0T9Xl3yrBdTZdxiXQYkl_kqRC3nFSQC4WOkAYEXTyNf3fFQU="
-        },
-        {
-          "title": "cbssports.com",
-          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGXhHi4I4oTVjXxixE7xLE0pqK3moiELQlxYcd5AmaCiDSARICKQJ776JnnR2ODiVUaErmamCjTNHXW_8QMNZ2d2-Cia1lVNKSCuhjr_yFLSORoZmN0MTrNyHcS2YGMUnuklON3rOvEQBf7ZasKg226IekxLBa7SD5njuc="
+          "title": "Google News: Sports",
+          "url": "https://news.google.com/search?q=Sports%20top%20news%202026-11-28&hl=en-US&gl=US&ceid=US:en"
         }
       ]
     },
     {
-      "id": "2026-11-27-entertainment",
+      "id": "2026-11-28-entertainment",
       "category": "entertainment",
       "categoryLabel": "Entertainment",
-      "headline": "\"The Hunger Games: Sunrise on the Reaping\" Dominates Thanksgiving Box Office",
-      "summary": "Lionsgate's dystopian prequel \"The Hunger Games: Sunrise on the Reaping\" dominated the North American Thanksgiving box office after setting a franchise Tuesday record of nearly 16 million dollars. The film is on track to earn around 85 million dollars across the five-day holiday window, easily outperforming major new studio releases like Disney's animated film \"Hexed\".",
-      "question": "Why do you think moviegoers continue to show such strong interest in long-running film franchises and prequels?",
+      "headline": "Macy's 100th Thanksgiving Parade Takes Place on Saturday Following Historic Weather Delay",
+      "summary": "For the first time in its 100-year history, severe weather forced organizers to postpone the Macy's Thanksgiving Day Parade to Saturday, November 28, 2026. The iconic New York City procession is bringing its giant balloons, floats, and live star performances to audiences on its rescheduled date.",
+      "question": "How would you react if a major national tradition or event in your country had to be rescheduled at the last minute?",
       "coachLeads": {
-        "friendly": "Hey, have you heard about the big holiday box office numbers? The new Hunger Games prequel is completely taking over theaters right now!",
-        "energetic": "Check this out—the latest Hunger Games movie is crushing the Thanksgiving box office competition! Are you excited to see it in theaters?",
-        "calm": "It looks like the new Hunger Games prequel is leading the holiday box office by a wide margin. It is a great topic to discuss if you enjoy cinema news.",
-        "direct": "The new Hunger Games prequel just set a franchise box office record ahead of Thanksgiving. Let's talk about why franchise films are still so popular."
+        "friendly": "Hey, have you heard about the big schedule change for New York's famous Thanksgiving parade? It's taking place today after a historic weather delay!",
+        "energetic": "History was just made in holiday culture! Bad weather pushed the giant 100th Macy's parade to Saturday for the first time ever!",
+        "calm": "A major holiday tradition adapted to extreme weather this week by moving to Saturday. It's a great example of how large cultural events handle unexpected disruptions.",
+        "direct": "The 100th Macy's parade is marching today after its first-ever storm postponement. Let me fill you in on what happened."
       },
       "sources": [
         {
-          "title": "Google News: Entertainment",
-          "url": "https://news.google.com/search?q=Entertainment%20top%20news%202026-11-27&hl=en-US&gl=US&ceid=US:en"
+          "title": "cbsnews.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQH2X8mDu5M7JSUnmITSaX7AWCigqd4YT69kckz7msuqeCaQk2Qap7kicx-JMzdFsMIKt2DSbFICs-9a4jtrzf-fhAuIURWPbtHQSt5SJK0Z_KPMTJ7ilB9k2g2Tcf0aPY3vBrWsGEaOHSv0NqvsDkShKveJzDaWhsrk8uKTnn1pl5wmOg=="
+        },
+        {
+          "title": "963xke.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQGZqyt5344Ey-GlhR1GWX6UotiKtES8LVEr4eprgbQOHuXAjo8XOG5HtvJjmRUtJx5i6WwNYIEfjR-TzKKBca_assxX4PQTy6Vc-dBuo9FS8iRoieK7k_JW8oO-pYLhIJodu2IiIJSWuuWanJUy6zhasnLJa405ACXlR0KZpHoJHO-dUsYxwXt9ZCuDVVGD8mm55Q=="
+        },
+        {
+          "title": "apnews.com",
+          "url": "https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFZ2nNl3eny2l5M2176sM3e-ryUCrWwrgBti0JiSa_meNKI35futEu9cJgSqSt8jdQbksTD_UpqsJ8aamfJlQUI0KA-54DZmMolPjxtugwwilxAYtTUYj54pIYMgPf7DOhfqf7-76snjiq0UlPH6Zx-DcE6mmLCa7jOXQoWAUJJ8lPb-VL7LepURBfPn4CTh_NINzDh_t5ptMv6zw=="
         }
       ]
     }
